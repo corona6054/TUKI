@@ -1,9 +1,8 @@
 #include "../includes/consola.h"
 
 int main(void){
-	saludar("Juani");
 
-	/*char* ip_kernel;
+	char* ip_kernel;
 	char *puerto_kernel;
 	t_log* logger;
 	t_config* config;
@@ -25,10 +24,10 @@ int main(void){
 
 	//conexion = crear_conexion(ip_kernel, puerto_kernel);
 
-	*/
+
 	return 0;
 }
-/*
+
 t_log* iniciar_logger(void)
 {
 	t_log* nuevo_logger;
@@ -56,4 +55,4 @@ t_config* iniciar_config(void)
 
 	return nuevo_config;
 }
-*/
+
