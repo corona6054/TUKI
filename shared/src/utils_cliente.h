@@ -9,6 +9,8 @@
 #include<netdb.h>
 #include<string.h>
 #include<commons/log.h>
+#include<commons/string.h>
+
 
 typedef enum
 {
@@ -30,7 +32,7 @@ typedef struct
 
 
 
-int crear_conexion(char* ip, char* puerto);
+int crear_conexion(char* ip, int puerto);
 void enviar_mensaje(char* mensaje, int socket_cliente);
 t_paquete* crear_paquete(void);
 t_paquete* crear_super_paquete(void);

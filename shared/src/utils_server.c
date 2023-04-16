@@ -1,8 +1,7 @@
 #include "utils_server.h"
 
-//t_log* logger;
 
-int iniciar_servidor(void)
+int iniciar_servidor(t_log* logger, int puerto)
 {
 	int socket_servidor;
 
@@ -13,7 +12,7 @@ int iniciar_servidor(void)
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_flags = AI_PASSIVE;
 
-	getaddrinfo(NULL, PUERTO, &hints, &servinfo);
+	getaddrinfo(NULL, string_itoa(puerto), &hints, &servinfo);
 
 	// Creamos el socket de escucha del servidor
 
@@ -29,21 +28,17 @@ int iniciar_servidor(void)
 
 	listen(socket_servidor, SOMAXCONN);
 
-
 	freeaddrinfo(servinfo);
-	//log_trace(logger, "Listo para escuchar a mi cliente");
-	printf("Listo para escuchar a mi cliente\n");
+	log_trace(logger, "Listo para escuchar a mi cliente");
 	return socket_servidor;
 }
 
-int esperar_cliente(int socket_servidor)
+int esperar_cliente(int socket_servidor, t_log* logger)
 {
-
 
 	int socket_cliente;
 	socket_cliente = accept(socket_servidor, NULL, NULL);
-	//log_info(logger, "Se conecto un cliente!");
-	printf("Se conecto un cliente\n");
+	log_info(logger, "Se conecto un cliente!");
 
 	return socket_cliente;
 }

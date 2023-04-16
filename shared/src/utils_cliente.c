@@ -16,7 +16,7 @@ void* serializar_paquete(t_paquete* paquete, int bytes)
 	return magic;
 }
 
-int crear_conexion(char *ip, char* puerto)
+int crear_conexion(char *ip, int puerto)
 {
 	struct addrinfo hints;
 	struct addrinfo *server_info;
@@ -26,7 +26,7 @@ int crear_conexion(char *ip, char* puerto)
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_flags = AI_PASSIVE;
 
-	getaddrinfo(ip, puerto, &hints, &server_info);
+	getaddrinfo(ip, string_itoa(puerto), &hints, &server_info);
 
 	// Ahora vamos a crear el socket.
 	int socket_cliente = 0;

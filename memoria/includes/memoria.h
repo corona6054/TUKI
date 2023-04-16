@@ -5,9 +5,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "commons/log.h"
+#include "commons/config.h"
 #include "utils_server.h"
 
-int iniciar_servidor(void);
-int esperar_cliente(int socket_servidor);
+t_config* iniciar_config(void);
+
 
 #endif /* INCLUDES_MEMORIA_H_ */

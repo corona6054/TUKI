@@ -6,20 +6,21 @@
 #include<sys/socket.h>
 #include<unistd.h>
 #include<netdb.h>
+#include<commons/string.h>
 #include<commons/log.h>
 #include<commons/collections/list.h>
 #include<string.h>
 #include<assert.h>
 
-#define PUERTO "4444"
+//#define PUERTO "4444"
 
 //extern t_log* logger;
 
 void* recibir_buffer(int*, int);
 
 
-int iniciar_servidor(void);
-int esperar_cliente(int);
+int iniciar_servidor(t_log*, int);
+int esperar_cliente(int, t_log*);
 t_list* recibir_paquete(int);
 void recibir_mensaje(int);
 int recibir_operacion(int);
