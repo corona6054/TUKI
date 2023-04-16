@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "commons/config.h"
 #include "commons/log.h"
-#include "../../shared/src/utils_cliente.h"
+#include "utils_cliente.h"
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);

@@ -31,7 +31,7 @@ int main(void){
 t_log* iniciar_logger(void)
 {
 	t_log* nuevo_logger;
-	nuevo_logger = log_create("/home/utnso/Documents/tp-2023-1c-aLaGrandeLePuseCuca/consola/consola.log", "Conectar consola a kernel", true, LOG_LEVEL_INFO);
+	nuevo_logger = log_create("../consola.log", "Conectar consola a kernel", true, LOG_LEVEL_INFO);
 
 	if (nuevo_logger == NULL)
 	{
@@ -46,7 +46,7 @@ t_config* iniciar_config(void)
 {
 	t_config* nuevo_config;
 
-	nuevo_config = config_create("/home/utnso/Documents/tp-2023-1c-aLaGrandeLePuseCuca/consola/consola.config");
+	nuevo_config = config_create("../consola.config");
 
 	if (nuevo_config == NULL){
 		printf("Error al crear el nuevo config\n");

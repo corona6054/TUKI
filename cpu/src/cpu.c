@@ -28,7 +28,7 @@ int main(void){
 t_log* iniciar_logger(void)
 {
 	t_log* nuevo_logger;
-	nuevo_logger = log_create("/home/utnso/tp-2023-1c-aLaGrandeLePuseCuca/cpu/cpu.log", "Conectar cpu a memoria", 1, LOG_LEVEL_INFO);
+	nuevo_logger = log_create("../cpu.log", "Conectar cpu a memoria", 1, LOG_LEVEL_INFO);
 
 	if (nuevo_logger == NULL)
 	{
@@ -43,7 +43,7 @@ t_config* iniciar_config(void)
 {
 	t_config* nuevo_config;
 
-	nuevo_config = config_create("/home/utnso/tp-2023-1c-aLaGrandeLePuseCuca/cpu/cpu.config");
+	nuevo_config = config_create("../cpu.config");
 
 	if (nuevo_config == NULL){
 		printf("Error al crear el nuevo config\n");

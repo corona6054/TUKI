@@ -5,6 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <commons/log.h>
-#include "../../shared/src/utils_server.h"
+#include "utils_server.h"
 
 #endif /* INCLUDES_KERNEL_H_ */

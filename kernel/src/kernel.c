@@ -1,5 +1,7 @@
 #include "../includes/kernel.h"
 
+//t_log* logger;
+
 int main(void){
 	t_log* logger = log_create("kernel.log", "Kernel Servidor", 1, LOG_LEVEL_INFO);
 
