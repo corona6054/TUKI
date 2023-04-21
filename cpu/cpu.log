@@ -23,3 +23,7 @@
 [INFO] 18:13:36:233 Conectar cpu a memoria/(2450:2450): Puerto Memoria 8002
 [INFO] 18:36:17:979 Conectar cpu a memoria/(3664:3664): Ip Memoria: 127.0.0.1
 [INFO] 18:36:17:984 Conectar cpu a memoria/(3664:3664): Puerto Memoria 8002
+[INFO] 23:11:42:250 Conectar cpu a memoria/(6946:6946): Ip Memoria: 127.0.0.1
+[INFO] 23:11:42:250 Conectar cpu a memoria/(6946:6946): Puerto Memoria 8002
+[INFO] 23:11:42:251 Conectar cpu a memoria/(6946:6946): Servidor listo para recibir al cliente
+[INFO] 23:11:49:182 Conectar cpu a memoria/(6946:6946): Se conecto un cliente!

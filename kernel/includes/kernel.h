@@ -5,6 +5,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <commons/log.h>
+#include <commons/config.h>
 #include "utils_server.h"
+#include "utils_cliente.h"
+
+
+t_log* iniciar_logger(void);
+t_config* iniciar_config(void);
+
 
 #endif /* INCLUDES_KERNEL_H_ */

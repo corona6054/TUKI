@@ -3,3 +3,11 @@
 [INFO] 23:50:28:534 Kernel Servidor/(4670:4670): Servidor listo para recibir al cliente
 [INFO] 23:59:56:063 Kernel Servidor/(5523:5523): Servidor listo para recibir al cliente
 [INFO] 19:20:09:006 Kernel Servidor/(2406:2406): Servidor listo para recibir al cliente
+[INFO] 23:11:49:181 Kernel/(6958:6958): Ip Memoria: 127.0.0.1
+[INFO] 23:11:49:181 Kernel/(6958:6958): Puerto Memoria 8002
+[INFO] 23:11:49:182 Kernel/(6958:6958): Ip FileSystem: 127.0.0.1
+[INFO] 23:11:49:182 Kernel/(6958:6958): Puerto FileSystem 8003
+[INFO] 23:11:49:182 Kernel/(6958:6958): Ip Cpu: 127.0.0.1
+[INFO] 23:11:49:182 Kernel/(6958:6958): Puerto  8001
+[INFO] 23:11:49:183 Kernel/(6958:6958): Servidor listo para recibir al cliente
+[INFO] 23:12:04:435 Kernel/(6958:6958): Se conecto un cliente!

@@ -17,3 +17,15 @@
 [INFO] 18:37:47:634 Memoria/(3724:3724): Servidor listo para recibir al cliente
 [INFO] 18:37:57:440 Memoria/(3724:3724): Se conecto un cliente!
 [INFO] 18:37:57:440 Memoria/(3724:3724): Servidor escuchando al cliente
+[INFO] 23:09:59:855 Memoria/(6845:6845): Puerto escucha: 8002 
+[INFO] 23:09:59:855 Memoria/(6845:6845): Servidor listo para recibir al cliente
+[INFO] 23:10:09:309 Memoria/(6845:6845): Se conecto un cliente!
+[INFO] 23:10:09:309 Memoria/(6845:6845): Servidor escuchando al cliente
+[INFO] 23:11:27:232 Memoria/(6924:6924): Puerto escucha: 8002 
+[INFO] 23:11:27:233 Memoria/(6924:6924): Servidor listo para recibir al cliente
+[INFO] 23:11:34:847 Memoria/(6924:6924): Se conecto un cliente!
+[INFO] 23:11:34:847 Memoria/(6924:6924): Servidor escuchando al cliente 1
+[INFO] 23:11:42:250 Memoria/(6924:6924): Se conecto un cliente!
+[INFO] 23:11:42:250 Memoria/(6924:6924): Servidor escuchando al cliente 2
+[INFO] 23:11:49:181 Memoria/(6924:6924): Se conecto un cliente!
+[INFO] 23:11:49:181 Memoria/(6924:6924): Servidor escuchando al cliente 3

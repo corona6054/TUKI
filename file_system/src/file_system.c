@@ -1,26 +1,31 @@
 #include "../includes/file_system.h"
 
 t_log* logger;
+t_config* config;
 
 int main(void){
-	char* ip_memoria;
-	int puerto_memoria;
-	t_config* config;
-	int conexion;
 
 	logger = iniciar_logger();
-
 	config = iniciar_config();
+
+	// Hacerlo cliente de memoria:
+	char* ip_memoria;
+	int puerto_memoria;
+	int socket_memoria;
 
 	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
 	puerto_memoria = config_get_int_value(config, "PUERTO_MEMORIA");
-
-	//Logueamos los valores
-
 	log_info(logger, "Ip Memoria: %s", ip_memoria);
 	log_info(logger, "Puerto Memoria %d", puerto_memoria);
 
-	conexion = crear_conexion(ip_memoria, puerto_memoria);
+	socket_memoria = crear_conexion(ip_memoria, puerto_memoria);
+
+	// Para que sea servidor:
+	int puerto_escucha;
+	puerto_escucha = config_get_int_value(config, "PUERTO_ESCUCHA");
+	int server_fd = iniciar_servidor(logger, puerto_escucha);
+	log_info(logger, "Servidor listo para recibir al cliente");
+	int cliente_fd = esperar_cliente(server_fd, logger);
 
 	return 0;
 }

@@ -8,6 +8,8 @@
 #include "commons/config.h"
 #include "utils_server.h"
 
+
+t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 
 
