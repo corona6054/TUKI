@@ -3,30 +3,23 @@
 t_log* logger;
 t_config* config;
 
+int server_fd;
+
+// Clientes
+int cpu_fd;
+int fileSystem_fd;
+int kernel_fd;
+
 int main(void){
-
-	logger = iniciar_logger();
-	config = iniciar_config();
-
-	int puerto_escucha;
-
-	puerto_escucha = config_get_int_value(config, "PUERTO_ESCUCHA");
-
-	log_info(logger, "Puerto escucha: %d ", puerto_escucha);
-
-	int server_fd = iniciar_servidor(logger, puerto_escucha);
-	log_info(logger, "Servidor listo para recibir al cliente");
-
-	int fileSystem_fd = esperar_cliente(server_fd, logger);
-	log_info(logger, "Servidor escuchando al cliente 1");
-
-	int cpu_fd = esperar_cliente(server_fd, logger);
-	log_info(logger, "Servidor escuchando al cliente 2");
-
-	int kernel_fd = esperar_cliente(server_fd, logger);
-	log_info(logger, "Servidor escuchando al cliente 3");
+	levantar_modulo();
 
 	return 0;
+}
+
+void levantar_modulo(){
+	logger = iniciar_logger();
+	config = iniciar_config();
+	establecer_conexiones();
 }
 
 t_log* iniciar_logger(void)
@@ -55,4 +48,13 @@ t_config* iniciar_config(void)
 	}
 
 	return nuevo_config;
+}
+
+void establecer_conexiones()
+{
+	server_fd = abrir_servidor(logger, config);
+
+	cpu_fd = esperar_cliente(server_fd, logger);
+	fileSystem_fd = esperar_cliente(server_fd, logger);
+	kernel_fd = esperar_cliente(server_fd, logger);
 }

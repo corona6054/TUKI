@@ -8,6 +8,7 @@
 #include<netdb.h>
 #include<commons/string.h>
 #include<commons/log.h>
+#include<commons/config.h>
 #include<commons/collections/list.h>
 #include<string.h>
 #include<assert.h>
@@ -25,6 +26,7 @@ t_list* recibir_paquete(int);
 void recibir_mensaje(int);
 int recibir_operacion(int);
 
+int abrir_servidor(t_log*,t_config*);
 
 
 #endif /* UTILS_SERVER_H_ */

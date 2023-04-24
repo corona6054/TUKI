@@ -110,3 +110,46 @@ void liberar_conexion(int socket_cliente)
 {
 	close(socket_cliente);
 }
+
+
+
+// FUNCIONES CREADAS POR NOSOTROS
+
+int conectarse_a(char* modulo, t_config* config)
+{
+	char *ip;
+	int puerto;
+
+	char *ip_clave = "IP_";
+	char *puerto_clave = "PUERTO_";
+
+	ip_clave = concatenar(ip_clave,modulo);
+	puerto_clave = concatenar(puerto_clave,modulo);
+
+	ip = config_get_string_value(config, ip_clave);
+	puerto = config_get_int_value(config, puerto_clave);
+
+	return crear_conexion(ip,puerto);
+}
+
+char *concatenar(char *str1, char *str2)
+{
+  int largo_str1 = strlen(str1);
+  int largo_str2 = strlen(str2);
+  char *str3 = malloc(largo_str1 + largo_str2 + 1);
+
+  for(int i = 0; i < largo_str1; i++)
+  {
+  	  str3[i]=*(str1+i);
+  }
+
+  for(int i = 0; i < strlen(str2); i++)
+  {
+	  str3[i + largo_str1]=*(str2+i);
+  }
+
+  str3[largo_str1 + largo_str2]='\0';
+
+
+  return str3;
+}

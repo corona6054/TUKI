@@ -3,36 +3,29 @@
 t_log* logger;
 t_config* config;
 
+int kernel_fd;
+int socket_memoria;
+
+int server_fd;
+
 int main(void){
-	logger = iniciar_logger();
-	config = iniciar_config();
-
-	// Hacerlo cliente de memoria:
-	char* ip_memoria;
-	int puerto_memoria;
-	int socket_memoria;
-
-	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
-	puerto_memoria = config_get_int_value(config, "PUERTO_MEMORIA");
-	log_info(logger, "Ip Memoria: %s", ip_memoria);
-	log_info(logger, "Puerto Memoria %d", puerto_memoria);
-
-	socket_memoria = crear_conexion(ip_memoria, puerto_memoria);
-
-	// Para que sea servidor:
-	int puerto_escucha;
-	puerto_escucha = config_get_int_value(config, "PUERTO_ESCUCHA");
-	int server_fd = iniciar_servidor(logger, puerto_escucha);
-	log_info(logger, "Servidor listo para recibir al cliente");
-	int cliente_fd = esperar_cliente(server_fd, logger);
+	levantar_modulo();
 
 	return 0;
+}
+
+// SUBPROGRAMAS
+
+void levantar_modulo(){
+	logger = iniciar_logger();
+	config = iniciar_config();
+	establecer_conexiones();
 }
 
 t_log* iniciar_logger(void)
 {
 	t_log* nuevo_logger;
-	nuevo_logger = log_create("cpu.log", "Conectar cpu a memoria", 1, LOG_LEVEL_INFO);
+	nuevo_logger = log_create("cpu.log", "Cpu", 1, LOG_LEVEL_INFO);
 
 	if (nuevo_logger == NULL)
 	{
@@ -55,5 +48,13 @@ t_config* iniciar_config(void)
 	}
 
 	return nuevo_config;
+}
+
+void establecer_conexiones()
+{
+	socket_memoria = conectarse_a("MEMORIA",config);
+
+	server_fd = abrir_servidor(logger,config);
+	kernel_fd = esperar_cliente(server_fd, logger);
 }
 

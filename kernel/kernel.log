@@ -11,3 +11,23 @@
 [INFO] 23:11:49:182 Kernel/(6958:6958): Puerto  8001
 [INFO] 23:11:49:183 Kernel/(6958:6958): Servidor listo para recibir al cliente
 [INFO] 23:12:04:435 Kernel/(6958:6958): Se conecto un cliente!
+[INFO] 19:25:26:881 Kernel/(2334:2334): Ip Memoria: 127.0.0.1
+[INFO] 19:25:26:883 Kernel/(2334:2334): Puerto Memoria 8002
+[INFO] 19:25:26:883 Kernel/(2334:2334): Ip FileSystem: 127.0.0.1
+[INFO] 19:25:26:883 Kernel/(2334:2334): Puerto FileSystem 8003
+[INFO] 19:25:26:885 Kernel/(2334:2334): Ip Cpu: 127.0.0.1
+[INFO] 19:25:26:885 Kernel/(2334:2334): Puerto  8001
+[INFO] 19:25:26:894 Kernel/(2334:2334): Servidor listo para recibir al cliente
+[INFO] 19:26:23:942 Kernel/(2334:2334): Se conecto un cliente!
+[INFO] 19:42:26:114 Kernel/(3327:3327): Servidor listo para recibir al cliente
+[INFO] 19:47:50:918 Kernel/(3585:3585): Servidor listo para recibir al cliente
+[INFO] 19:49:41:392 Kernel/(3698:3698): Servidor listo para recibir al cliente
+[INFO] 20:13:45:698 Kernel/(4847:4847): Servidor listo para recibir al cliente
+[INFO] 20:15:09:314 Kernel/(4847:4847): Se conecto un cliente!
+[INFO] 20:22:09:873 Kernel/(5310:5310): Servidor listo para recibir al cliente
+[INFO] 20:22:20:120 Kernel/(5310:5310): Se conecto un cliente!
+[INFO] 20:40:33:502 Kernel/(6170:6170): Servidor listo para recibir al cliente
+[INFO] 20:40:40:652 Kernel/(6170:6170): Se conecto un cliente!
+[INFO] 20:48:15:991 Kernel/(6777:6777): Servidor listo para recibir al cliente
+[INFO] 21:07:21:072 Kernel/(8723:8723): Listo para escuchar a mi cliente
+[INFO] 21:11:40:534 Kernel/(8952:8952): Se conecto un cliente!

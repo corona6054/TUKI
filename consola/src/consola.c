@@ -3,26 +3,19 @@
 t_log* logger;
 t_config* config;
 
-int main(void){
+int socket_kernel;
 
+int main(void){
+	levantar_modulo();
+	return 0;
+}
+
+// SUBPROGRAMAS
+
+void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
-
-	// Hacerlo cliente de kernel
-	char* ip_kernel;
-	int puerto_kernel;
-	int conexion;
-
-	ip_kernel = config_get_string_value(config, "IP_KERNEL");
-	puerto_kernel = config_get_int_value(config, "PUERTO_KERNEL");
-
-	log_info(logger, "Ip Kernel: %s", ip_kernel);
-	log_info(logger, "Puerto Kernel %d", puerto_kernel);
-
-	conexion = crear_conexion(ip_kernel, puerto_kernel);
-
-
-	return 0;
+	establecer_conexiones();
 }
 
 t_log* iniciar_logger(void)
@@ -53,3 +46,7 @@ t_config* iniciar_config(void)
 	return nuevo_config;
 }
 
+void establecer_conexiones()
+{
+	socket_kernel = conectarse_a("KERNEL",config);
+}

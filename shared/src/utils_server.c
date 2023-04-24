@@ -96,3 +96,14 @@ t_list* recibir_paquete(int socket_cliente)
 	free(buffer);
 	return valores;
 }
+
+int abrir_servidor(t_log* logger,t_config* config)
+{
+	int puerto_escucha;
+	puerto_escucha = config_get_int_value(config, "PUERTO_ESCUCHA");
+
+	return iniciar_servidor(logger, puerto_escucha);
+}
+
+
+

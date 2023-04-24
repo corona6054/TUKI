@@ -10,4 +10,7 @@
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 
+void levantar_modulo();
+void establecer_conexiones();
+
 #endif /* INCLUDES_FILE_SYSTEM_H_ */
