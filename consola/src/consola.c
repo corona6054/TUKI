@@ -5,16 +5,20 @@ t_config* config;
 
 int socket_kernel;
 
-int main(void){
-	levantar_modulo();
+int main(int argc, char** argv){
+	char* config_path=argv[1];
+	char* instruccion_path=argv[2];
+	levantar_modulo(config_path);
+	//parsear_archivo(instruccion_path);
 	return 0;
 }
 
 // SUBPROGRAMAS
 
-void levantar_modulo(){
+
+void levantar_modulo(char* config_path){
 	logger = iniciar_logger();
-	config = iniciar_config();
+	config = iniciar_config(config_path);
 	establecer_conexiones();
 }
 
@@ -32,11 +36,11 @@ t_log* iniciar_logger(void)
 	return nuevo_logger;
 }
 
-t_config* iniciar_config(void)
+t_config* iniciar_config(char* config_path)
 {
 	t_config* nuevo_config;
 
-	nuevo_config = config_create("consola.config");
+	nuevo_config = config_create(config_path);
 
 	if (nuevo_config == NULL){
 		printf("Error al crear el nuevo config\n");

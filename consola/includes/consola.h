@@ -10,9 +10,9 @@
 
 
 t_log* iniciar_logger(void);
-t_config* iniciar_config(void);
+t_config* iniciar_config(char* );
 
-void levantar_modulo();
+void levantar_modulo(char*);
 void establecer_conexiones();
 
 #endif /* INCLUDES_CONSOLA_H_ */
