@@ -13,7 +13,6 @@
 #include<string.h>
 #include<assert.h>
 
-//#define PUERTO "4444"
 
 //extern t_log* logger;
 

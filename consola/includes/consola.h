@@ -12,6 +12,8 @@
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char* );
 
+t_config* iniciar_config2();
+
 void levantar_modulo(char*);
 void establecer_conexiones();
 

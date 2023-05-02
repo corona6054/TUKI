@@ -5,7 +5,7 @@ int iniciar_servidor(t_log* logger, int puerto)
 {
 	int socket_servidor;
 
-	struct addrinfo hints, *servinfo, *p;
+	struct addrinfo hints, *servinfo;// *p
 
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = AF_UNSPEC;
@@ -29,7 +29,7 @@ int iniciar_servidor(t_log* logger, int puerto)
 	listen(socket_servidor, SOMAXCONN);
 
 	freeaddrinfo(servinfo);
-	log_trace(logger, "Listo para escuchar a mi cliente");
+	log_info(logger, "Listo para escuchar a mi cliente");
 	return socket_servidor;
 }
 
