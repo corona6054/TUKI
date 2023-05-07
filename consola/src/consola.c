@@ -9,8 +9,8 @@ int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
 	//levantar_modulo(config_path);
-	system("./TEST");
-	//parsear_archivo(instruccion_path);
+	t_list *lista;
+	lista = crearLista();
 	return 0;
 }
 

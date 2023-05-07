@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include "commons/config.h"
 #include "commons/log.h"
+#include "commons/collections/list.h"
+#include "bison.tab.h"
 #include "utils_cliente.h"
 #include <string.h>
 
