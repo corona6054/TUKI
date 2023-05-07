@@ -8,7 +8,8 @@ int socket_kernel;
 int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
-	levantar_modulo(config_path);
+	//levantar_modulo(config_path);
+	system("./TEST");
 	//parsear_archivo(instruccion_path);
 	return 0;
 }
