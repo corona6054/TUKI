@@ -10,7 +10,7 @@ int main(int argc, char** argv){
 	char* instruccion_path=argv[2];
 	//levantar_modulo(config_path);
 	t_list *lista;
-	lista = crearLista();
+	lista = crearLista(instruccion_path);
 	return 0;
 }
 
