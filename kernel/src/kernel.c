@@ -11,16 +11,22 @@ int server_fd;
 
 int consola_fd;
 
+sem_t* sem_debug;
+
 int main(void){
 
+	sem_init(&sem_debug, 0, 0);
+
 	levantar_modulo();
+	while(1);
+	//sleep(10000);
 	/*
 	procesosNuevos;
 	procesosReady;
 	procesosExec;
 	procesosBloqueados;
 	procesosFinalizados;
-*/
+	*/
 
 	finalizar_modulo();
 	return 0;
@@ -81,6 +87,7 @@ void establecer_conexiones()
 	pthread_t manejo_consolas;
 	pthread_create(&manejo_consolas, NULL, (void *) manejar_clientes, (void *) server_fd);
 	pthread_detach(manejo_consolas);
+	//sem_wait(&sem_debug);
 	
 
 }
@@ -91,19 +98,32 @@ void manejar_clientes(int server_fd){
 	while(1){
 		t_conexiones conexiones;
 		conexiones.socket = esperar_cliente(server_fd, logger);
+		log_info("Salio de esperar cliente",logger);
 		conexiones.socket_anterior = 0;
 		// threads para recepcion de info de las consolas
+		manejar_conexion_con_consola(&conexiones);
+		/*
 		pthread_t t;
 		pthread_create(&t, NULL, (void *) manejar_conexion_con_consola, (void *) &conexiones);
 		pthread_detach(t);
+		*/
 	}
+	//sem_post(&sem_debug);
 }
 
 void manejar_conexion_con_consola(t_conexiones* conexiones){
+	printf("Abrio el hilo de manejar conexion con consola");
 	int socket = conexiones->socket;
 	int socket_anterior = conexiones->socket_anterior;
-
+	printf("Antes de recibir operacion");
 	int cod_op = recibir_operacion(socket);
+	log_info("Recibimos operacion: %s", cod_op, logger);
+	
+
+
+
+	// Aca recibiriamos lo de conosola, que nos tiene que mandar ...
+	/*
 	t_list* lista_de_instrucciones = list_create();
 
 	switch(cod_op){
@@ -116,19 +136,35 @@ void manejar_conexion_con_consola(t_conexiones* conexiones){
 		default:
 			break;
 	}
+	*/
+}
+
+
+void establecer_conexiones_2()
+{
+	//socket_memoria = conectarse_a("MEMORIA",config);
+	//socket_fileSystem = conectarse_a("FILESYSTEM",config);
+	//socket_cpu = conectarse_a("CPU",config);
+
+	server_fd = abrir_servidor(logger,config);
 	
+	while (1){
+		pthread_t manejo_consolas;
+		pthread_create(&manejo_consolas, NULL, (void *) manejar_cliente, (void *) server_fd);
+		pthread_detach(manejo_consolas);
+	}
+}
+
+// Se conecta con el servidor y maneja los mensajes
+void manejar_cliente(t_conexiones conexiones){
+	conexiones.socket = esperar_cliente(server_fd, logger);
+	char* cod_op = recibir_operacion_2(conexiones.socket);
+	
+	//printf()
 }
 
 
 pcb crear_pcb(t_list *instrucciones){
 	pcb pcb;
 	return pcb;
-/*
-Program_counter: Número de la próxima instrucción a ejecutar.
-Registros de la CPU: Estructura que contendrá los valores de los registros de uso general de la CPU.
-Tabla de Segmentos: Contendrá ids, direcciones base y tamaños de los segmentos de datos del proceso.
-Estimado de próxima ráfaga: Estimación utilizada para planificar los procesos en el algoritmo HRRN, la misma tendrá un valor inicial definido por archivo de configuración y será recalculada bajo la fórmula de promedio ponderado vista en clases.
-Tiempo de llegada a ready: Timestamp en que el proceso llegó a ready por última vez (utilizado para el cálculo de tiempo de espera del algoritmo HRRN).
-Tabla de archivos abiertos: Contendrá la lista de archivos abiertos del proceso con la posición del puntero de cada uno de ellos.
-*/
 }

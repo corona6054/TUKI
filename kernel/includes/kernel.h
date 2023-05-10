@@ -9,8 +9,12 @@
 #include <commons/config.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <unistd.h>
 #include "utils_server.h"
 #include "utils_cliente.h"
+#include <unistd.h>
+
+
 
 typedef struct{
     int socket;
@@ -53,5 +57,9 @@ void manejar_conexion_con_consola(t_conexiones*);
 pcb crear_pcb(t_list*);
 void finalizar_modulo();
 void manejar_clientes(int);
+
+void establecer_conexiones_2();
+void manejar_cliente(t_conexiones);
+
 
 #endif /* INCLUDES_KERNEL_H_ */

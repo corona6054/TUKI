@@ -8,10 +8,11 @@ int socket_kernel;
 int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
-	//levantar_modulo(config_path);
-	t_list *lista;
-	lista = crearLista(instruccion_path);
+	levantar_modulo(config_path);
+	//t_list *lista;
+	//lista = crearLista(instruccion_path);
 
+	enviar_mensaje("SET",socket_kernel);
 	finalizar_modulo();
 	return 0;
 }
