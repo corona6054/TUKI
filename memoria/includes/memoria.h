@@ -14,5 +14,6 @@ t_config* iniciar_config(void);
 
 void levantar_modulo();
 void establecer_conexiones();
+void finalizar_modulo();
 
 #endif /* INCLUDES_MEMORIA_H_ */

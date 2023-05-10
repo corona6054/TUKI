@@ -11,6 +11,8 @@ int main(int argc, char** argv){
 	//levantar_modulo(config_path);
 	t_list *lista;
 	lista = crearLista(instruccion_path);
+
+	finalizar_modulo();
 	return 0;
 }
 
@@ -22,6 +24,12 @@ void levantar_modulo(char* config_path){
 	logger = iniciar_logger();
 	config = iniciar_config2();
 	establecer_conexiones();
+}
+
+void finalizar_modulo(){
+	log_destroy(logger);
+	config_destroy(config);
+	return;
 }
 
 t_log* iniciar_logger(void)

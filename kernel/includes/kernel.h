@@ -17,11 +17,30 @@ typedef struct{
     int socket_anterior;
 } t_conexiones;
 
+typedef enum{
+	NEW,
+	READY,
+	EXEC,
+	BLOCK,
+	EXIT
+}estados;
+
+typedef struct{
+	char AX[4], BX[4], CX[4], DX[4];
+	char EAX[8], EBX[8], ECX[8], EDX[8];
+	char RAX[16], RBX[16], RCX[16], RDX[16];
+}registros;
+
 typedef struct{
     int pid;
     t_list* lista_de_instrucciones;
     int program_counter;
-    
+    registros registro_cpu;
+    t_list* tabla_segmentos;
+    int estimado_prox_rafaga;
+    int tiempo_llegada_ready;
+    t_list* archivos_abiertos;
+    estados estado;
 }pcb;
 
 t_log* iniciar_logger(void);

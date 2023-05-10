@@ -18,5 +18,6 @@ t_config* iniciar_config2();
 
 void levantar_modulo(char*);
 void establecer_conexiones();
+void finalizar_modulo();
 
 #endif /* INCLUDES_CONSOLA_H_ */

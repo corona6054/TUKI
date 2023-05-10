@@ -12,6 +12,7 @@ t_config* iniciar_config(void);
 
 void levantar_modulo();
 void establecer_conexiones();
+void finalizar_modulo();
 
 void ejecutar_set(char[], char[], int);
 void ejecutar_exit();

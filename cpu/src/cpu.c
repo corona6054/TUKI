@@ -35,6 +35,8 @@ int main(void){
 		break;
 	}
 
+	finalizar_modulo();
+
 	return 0;
 }
 
@@ -44,6 +46,12 @@ void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	establecer_conexiones();
+}
+
+void finalizar_modulo(){
+	log_destroy(logger);
+	config_destroy(config);
+	return;
 }
 
 t_log* iniciar_logger(void)
