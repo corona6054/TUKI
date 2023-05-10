@@ -13,4 +13,8 @@ t_config* iniciar_config(void);
 void levantar_modulo();
 void establecer_conexiones();
 
+void ejecutar_set(char[], char[], int);
+void ejecutar_exit();
+void ejecutar_yield();
+
 #endif /* INCLUDES_CPU_H_ */
