@@ -28,7 +28,4 @@ int recibir_operacion(int);
 int abrir_servidor(t_log*,t_config*);
 
 
-char* recibir_operacion_2(int);
-
-
 #endif /* UTILS_SERVER_H_ */

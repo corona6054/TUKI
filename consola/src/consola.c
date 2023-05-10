@@ -12,7 +12,6 @@ int main(int argc, char** argv){
 	//t_list *lista;
 	//lista = crearLista(instruccion_path);
 
-	enviar_mensaje("SET",socket_kernel);
 	finalizar_modulo();
 	return 0;
 }

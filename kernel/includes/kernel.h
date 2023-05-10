@@ -58,8 +58,6 @@ pcb crear_pcb(t_list*);
 void finalizar_modulo();
 void manejar_clientes(int);
 
-void establecer_conexiones_2();
-void manejar_cliente(t_conexiones);
 
 
 #endif /* INCLUDES_KERNEL_H_ */

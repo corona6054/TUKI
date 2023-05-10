@@ -104,17 +104,3 @@ int abrir_servidor(t_log* logger,t_config* config)
 
 	return iniciar_servidor(logger, puerto_escucha);
 }
-
-
-
-char* recibir_operacion_2(int socket_cliente)
-{
-	char* cod_op;
-	if(recv(socket_cliente, &cod_op, strlen(cod_op)+1, MSG_WAITALL) > 0)
-		return cod_op;
-	else
-	{
-		close(socket_cliente);
-		return "Error";
-	}
-}
