@@ -9,15 +9,31 @@ int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
 	levantar_modulo(config_path);
-	//t_list *lista;
-	//lista = crearLista(instruccion_path);
-
+	t_list *lista;
+	lista = crearLista(instruccion_path);
+    enviarLista(lista);
 	finalizar_modulo();
 	return 0;
 }
 
 
 // SUBPROGRAMAS
+
+void enviarLista(t_list * lista){
+
+	t_paquete *paquete;
+	paquete = crear_paquete();
+	int tamanio_lista;
+	tamanio_lista = list_size(lista);
+
+	char buffer[sizeof(tablaInstr)];
+	for(int i=0;i<tamanio_lista;i++){
+		memcpy(buffer, list_get(lista,i), sizeof(tablaInstr));
+		agregar_a_paquete(paquete,buffer,sizeof(buffer));
+	}
+
+	enviar_paquete(paquete,socket_kernel);
+}
 
 
 void levantar_modulo(char* config_path){
