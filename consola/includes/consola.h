@@ -29,7 +29,6 @@ t_config* iniciar_config(char* );
 
 t_config* iniciar_config2();
 
-void enviarLista(t_list*);
 void levantar_modulo(char*);
 void establecer_conexiones();
 void finalizar_modulo();

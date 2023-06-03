@@ -36,21 +36,47 @@ int socket_kernel;
 Instruction instructions[MAX_INSTRUCTIONS];
 int instructionCount = 0;
 InstructionType getNextInstruction(FILE *file);
-
-
+int enviarLista();
+void serializeInstruction(Instruction* instruction, void* stream, int offset);
 
 int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
 	levantar_modulo(config_path);
 	crearLista(instruccion_path);
+	enviarLista();
 	finalizar_modulo();
 	return 0;
 }
 
 
 // SUBPROGRAMAS
+void serializeInstruction(Instruction* instruction, void* stream, int offset) {
+	memcpy(stream + offset, &instruction->instruccion, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &instruction->numero1, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &instruction->numero2, sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &instruction->string1, sizeof(int));
+	offset += sizeof(char[15]);
+	memcpy(stream + offset, &instruction->string2, sizeof(int));
+	offset += sizeof(char[15]);
+	}
 
+int enviarLista(){
+t_paquete* paquete = crear_paquete();
+char serialized[42];
+int offset=0;
+for (int i = 0; i < instructionCount; i++) {
+	            serializeInstruction(&instructions[i], &serialized,offset);
+				agregar_a_paquete(paquete,serialized,42);
+	        }
+		enviar_paquete(paquete,socket_kernel);
+		printf("Paquete enviado \n");
+		eliminar_paquete(paquete);
+		return 1;
+}
 
 
 void levantar_modulo(char* config_path){
