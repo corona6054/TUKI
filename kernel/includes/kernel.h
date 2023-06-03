@@ -15,7 +15,6 @@
 #include <unistd.h>
 
 
-
 typedef struct{
     int socket;
     int socket_anterior;
@@ -35,6 +34,13 @@ typedef struct{
 	char RAX[16], RBX[16], RCX[16], RDX[16];
 }registros;
 
+
+typedef struct{
+	int id;
+	int direccion_base;
+	int tamanio_segmentos;
+}segmento;
+
 typedef struct{
     int pid;
     t_list* lista_de_instrucciones;
@@ -46,6 +52,24 @@ typedef struct{
     t_list* archivos_abiertos;
     estados estado;
 }pcb;
+
+typedef struct{
+	char* ip_memoria;
+	int puerto_memoria;
+	char* ip_cpu;
+	int puerto_cpu;
+	char* ip_file_system;
+	int puerto_file_system;
+	int puerto_escucha;
+	char* algoritmo;
+	int est_inicial;
+	int alpha_hrrn;
+	int grado_max_multi;
+	t_list* recursos_compartidos;
+	t_list* instancias;
+}app_config_kernel;
+
+app_config_kernel config_kernel;
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);

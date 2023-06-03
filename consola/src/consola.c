@@ -65,10 +65,10 @@ void serializeInstruction(Instruction* instruction, void* stream, int offset) {
 	}
 
 int enviarLista(){
-t_paquete* paquete = crear_paquete();
-char serialized[42];
-int offset=0;
-for (int i = 0; i < instructionCount; i++) {
+	t_paquete* paquete = crear_paquete();
+	char serialized[42];
+	int offset=0;
+	for (int i = 0; i < instructionCount; i++){
 	            serializeInstruction(&instructions[i], &serialized,offset);
 				agregar_a_paquete(paquete,serialized,42);
 	        }
