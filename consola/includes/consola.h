@@ -23,6 +23,35 @@
 
 }tablaInstr;
 
+typedef struct
+{
+    int instruccion;
+    int numero1;
+    int numero2;
+    char string1[15];
+    char string2[15];
+} Instruction;
+
+typedef enum
+{
+    F_READ,
+    F_WRITE,
+    SET,
+    MOV_IN,
+    MOV_OUT,
+    F_TRUNCATE,
+    F_SEEK,
+    CREATE_SEGMENT,
+    IO,
+    WAIT,
+    SIGNAL,
+    F_OPEN,
+    F_CLOSE,
+    DELETE_SEGMENT,
+    YIELD,
+    EXIT,
+    INVALID
+} InstructionType;
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char* );
@@ -39,5 +68,8 @@ void match(FILE *file, const char *expected);
 void error();
 int crearLista(char* filename);
 
+InstructionType getNextInstruction(FILE *file);
+int enviarLista();
+void serializeInstruction(Instruction* instruction, void* stream, int offset);
 
 #endif /* INCLUDES_CONSOLA_H_ */

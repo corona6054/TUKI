@@ -18,17 +18,20 @@ int pid = 0;
 
 int ejecutando = 0;
 
-t_list* procesosNuevos = list_create();
-t_list*	procesosReady = list_create();
-t_list*	procesosBloqueados = list_create();
-t_list*	procesosFinalizados = list_create();
+t_list* procesosNuevos;
+t_list*	procesosReady;
+t_list*	procesosBloqueados;
+t_list*	procesosFinalizados;
 
 int main(void){
 
 	sem_init(&sem_debug, 0, 0);
 
 	levantar_modulo();
+	procesosNuevos = list_create();
+	procesosReady = list_create();
 	while(1);
+
 	//sleep(10000);
 
 	finalizar_modulo();
@@ -48,6 +51,7 @@ void levantar_modulo(){
 void finalizar_modulo(){
 	log_destroy(logger);
 	config_destroy(config);
+	levantar_config();
 	return;
 }
 
@@ -125,45 +129,47 @@ void manejar_clientes(int server_fd){
 void manejar_conexion_con_consola(t_conexiones* conexiones){
 	t_list* instrucciones = list_create();
 	instrucciones = recibir_paquete(conexiones->socket);
-
+	int estado_anterior = -1;
 	pcb pcb = crear_pcb(instrucciones);
-
-	list_add(procesosNuevos,pcb);
+	list_add(procesosNuevos,&pcb);
 
 	if(ejecutando < config_kernel.grado_max_multi){
 		ejecutando++;
 		list_remove(procesosNuevos,0);
+		estado_anterior = pcb.estado;
 		pcb.estado = READY;
-		list_add(procesosReady,pcb);
+		list_add(procesosReady,&pcb);
+		//log_info("Cola Ready %s: , ")
+		//mandar msje a memoria para que inicialice sus estructuras necesarias y obtenga la tabla de segmentos inicial
+		log_info("PID: %d - Estado Anterior: %d - Estado Actual: %d", logger, pcb.pid, estado_anterior, pcb.estado); //no va a terminar estando aca este log info
 	}
 
-	switch(config_kernel.algoritmo){
-		case "FIFO":
-			planificacionFifo();
-			break;
-		case "HHRN":
-			planificacionHHRN();
-			break;
+	if (strcmp(config_kernel.algoritmo, "FIFO") == 0){
+		planificacionFIFO();
+	}
+	else if(strcmp(config_kernel.algoritmo, "HRRN") == 0){
+		planificacionHRRN();
 	}
 }
-
 pcb crear_pcb(t_list *instrucciones){
 	pcb pcb;
 
 	pcb.pid = pid;
 	pcb.lista_de_instrucciones = instrucciones;
 	pcb.program_counter = 0;
-	pcb.registro_cpu = inicializar_registros();
+	//pcb.registro_cpu = inicializar_registros();
     pcb.tabla_segmentos = list_create();
 	pcb.estimado_prox_rafaga = config_kernel.est_inicial;
 	pcb.tiempo_llegada_ready = -1;
 	t_list* archivos_abiertos = list_create();
 	pcb.estado = NEW;
 
+	log_info("Se crea el proceso %d en NEW", logger, pcb.pid);
+
 	pid++;
 	return pcb;
 }
-
+/*
 registros inicializar_registros(){
 	registros registros;
 
@@ -184,27 +190,23 @@ registros inicializar_registros(){
 
 	return registros;
 }
-
+*/
 void planificacionFIFO(){
-	pcb pcb_a_ejecutar = list_remove(procesosReady,0);
+	pcb *pcb_a_ejecutar = list_remove(procesosReady,0);
 
-	while(!list_is_empty(pcb_a_ejecutar.lista_de_instrucciones)){
-		int instruccion_a_ejecutar = list_remove(pcb_a_ejecutar.lista_de_instrucciones,0);
+	while(!list_is_empty(pcb_a_ejecutar->lista_de_instrucciones)){
+		Instruction *instruccion_a_ejecutar = list_remove(pcb_a_ejecutar->lista_de_instrucciones,0);
 
-		switch(instruccion_a_ejectutar){
-		case F_READ:
-		            readNextWordFromFile(file, 1);
-		            readIntegerFromFile(file, 1);
-		            readIntegerFromFile(file, 2);
+
+		switch(instruccion_a_ejecutar->instruccion){
+				case F_READ:
+
 		            break;
 		        case F_WRITE:
-		            readNextWordFromFile(file, 1);
-		            readIntegerFromFile(file, 1);
-		            readIntegerFromFile(file, 2);
+
 		            break;
 		        case SET:
-		            readNextWordFromFile(file, 1);
-		            readNextWordFromFile(file, 2);
+		        	printf("entro en set");
 		            break;
 		        case MOV_IN:
 		            break;
@@ -232,7 +234,7 @@ void planificacionFIFO(){
 
 		            break;
 		        case EXIT:
-		            instructionCount++;
+		            //instructionCount++;
 		            return;
 
 		            break;
@@ -242,6 +244,8 @@ void planificacionFIFO(){
 		        }
 
 		}
-	}
+}
 
+void planificacionHRRN(){
+	return;
 }

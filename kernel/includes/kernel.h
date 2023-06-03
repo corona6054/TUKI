@@ -25,8 +25,38 @@ typedef enum{
 	READY,
 	EXEC,
 	BLOCK,
-	EXIT
+	EXIT1
 }estados;
+
+typedef enum
+{
+    F_READ,
+    F_WRITE,
+    SET,
+    MOV_IN,
+    MOV_OUT,
+    F_TRUNCATE,
+    F_SEEK,
+    CREATE_SEGMENT,
+    IO,
+    WAIT,
+    SIGNAL,
+    F_OPEN,
+    F_CLOSE,
+    DELETE_SEGMENT,
+    YIELD,
+    EXIT,
+    INVALID
+} InstructionType;
+
+typedef struct
+{
+    int instruccion;
+    int numero1;
+    int numero2;
+    char string1[15];
+    char string2[15];
+} Instruction;
 
 typedef struct{
 	char AX[4], BX[4], CX[4], DX[4];
@@ -52,6 +82,13 @@ typedef struct{
     t_list* archivos_abiertos;
     estados estado;
 }pcb;
+
+typedef struct{
+	int pid;
+	int pc; // no creo q sea int
+	registros registrosCpu;
+	t_list* tabla_segmentos;
+}contexto_de_ejecucion;
 
 typedef struct{
 	char* ip_memoria;
@@ -82,6 +119,6 @@ pcb crear_pcb(t_list*);
 void finalizar_modulo();
 void manejar_clientes(int);
 
-
-
+void planificacionFIFO();
+void planificacionHRRN();
 #endif /* INCLUDES_KERNEL_H_ */

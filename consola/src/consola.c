@@ -1,5 +1,5 @@
 #include "../includes/consola.h"
-typedef struct
+/*typedef struct
 {
     int instruccion;
     int numero1;
@@ -28,17 +28,19 @@ typedef enum
     EXIT,
     INVALID
 } InstructionType;
-
+*/
 t_log* logger;
 t_config* config;
 
 int socket_kernel;
 Instruction instructions[MAX_INSTRUCTIONS];
 int instructionCount = 0;
+
+/*
 InstructionType getNextInstruction(FILE *file);
 int enviarLista();
 void serializeInstruction(Instruction* instruction, void* stream, int offset);
-
+*/
 int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
