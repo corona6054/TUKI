@@ -151,6 +151,10 @@ void manejar_conexion_con_consola(t_conexiones* conexiones){
 	int a = recibir_operacion(conexiones->socket);
 	instrucciones = recibir_paquete(conexiones->socket);
 	log_info(logger, "size %d", list_size(instrucciones));
+	void *instr = list_get(instrucciones,0);
+	int primera;
+	memcpy(&primera, instr, sizeof(int));
+	log_info(logger, "primera instr %d", primera);
 
 	int estado_anterior = -1;
 	pcb pcb = crear_pcb(instrucciones);

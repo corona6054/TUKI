@@ -34,3 +34,10 @@
 [INFO] 20:22:06:202 Kernel/(63212:63212): Listo para escuchar a mi cliente
 [INFO] 20:22:08:807 Kernel/(63212:63227): Se conecto un cliente!
 [INFO] 20:22:08:809 Kernel/(63212:63258): size 16
+[INFO] 20:33:38:317 Kernel/(63739:63739): Listo para escuchar a mi cliente
+[INFO] 20:33:41:799 Kernel/(63739:63749): Se conecto un cliente!
+[INFO] 20:33:41:813 Kernel/(63739:63764): size 16
+[INFO] 20:34:15:620 Kernel/(63845:63845): Listo para escuchar a mi cliente
+[INFO] 20:34:17:893 Kernel/(63845:63856): Se conecto un cliente!
+[INFO] 20:34:17:901 Kernel/(63845:63863): size 16
+[INFO] 20:34:17:901 Kernel/(63845:63863): primera instr 2
