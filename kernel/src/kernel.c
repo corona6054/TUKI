@@ -124,11 +124,34 @@ void manejar_clientes(int server_fd){
 		pthread_detach(t);
 	}
 	//sem_post(&sem_debug);
+}t_list* recibir_paquete(int socket_cliente)
+{
+	int size;
+	int desplazamiento = 0;
+	void * buffer;
+	t_list* valores = list_create();
+	int tamanio;
+
+	buffer = recibir_buffer(&size, socket_cliente);
+	while(desplazamiento < size)
+	{
+		memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
+		desplazamiento+=sizeof(int);
+		char* valor = malloc(tamanio);
+		memcpy(valor, buffer+desplazamiento, tamanio);
+		desplazamiento+=tamanio;
+		list_add(valores, valor);
+	}
+	free(buffer);
+	return valores;
 }
 
 void manejar_conexion_con_consola(t_conexiones* conexiones){
-	t_list* instrucciones = list_create();
+	t_list* instrucciones ;
+	int a = recibir_operacion(conexiones->socket);
 	instrucciones = recibir_paquete(conexiones->socket);
+	log_info(logger, "size %d", list_size(instrucciones));
+
 	int estado_anterior = -1;
 	pcb pcb = crear_pcb(instrucciones);
 	list_add(procesosNuevos,&pcb);
