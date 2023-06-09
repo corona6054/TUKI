@@ -1,15 +1,5 @@
 #include "../includes/memoria.h"
 
-t_log* logger;
-t_config* config;
-
-int server_fd;
-
-// Clientes
-int cpu_fd;
-int fileSystem_fd;
-int kernel_fd;
-
 int main(void){
 	levantar_modulo();
 
@@ -53,6 +43,14 @@ t_config* iniciar_config(void)
 		printf("Error al crear el nuevo config\n");
 		exit(2);
 	}
+
+	config_memoria.puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
+	config_memoria.tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
+	config_memoria.tam_segmento_0 = config_get_int_value(config,"TAM_SEGMENTO_0");
+	config_memoria.cant_segmentos = config_get_int_value(config,"CANT_SEGMENTOS");
+	config_memoria.retardo_memoria = config_get_int_value(config,"RETARDO_MEMORIA");
+	config_memoria.retardo_compactacion = config_get_int_value(config,"RETARDO_COMPACTACION");
+	config_memoria.algoritmos_asignacion = config_get_string_value(config,"ALGORITMO_ASIGNACION");
 
 	return nuevo_config;
 }

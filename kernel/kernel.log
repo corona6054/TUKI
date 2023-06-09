@@ -41,3 +41,35 @@
 [INFO] 20:34:17:893 Kernel/(63845:63856): Se conecto un cliente!
 [INFO] 20:34:17:901 Kernel/(63845:63863): size 16
 [INFO] 20:34:17:901 Kernel/(63845:63863): primera instr 2
+[INFO] 20:01:33:233 Kernel/(2882:2882): Listo para escuchar a mi cliente
+[INFO] 19:11:30:865 Kernel/(1961:1961): Listo para escuchar a mi cliente
+[INFO] 19:14:50:223 Kernel/(2146:2146): Levantando Config
+[INFO] 19:14:50:224 Kernel/(2146:2146): Rompi Levantar Config
+[INFO] 19:15:46:094 Kernel/(2208:2208): Levantando Config
+[INFO] 19:15:54:170 Kernel/(2226:2226): Levantando Config
+[INFO] 19:16:12:750 Kernel/(2269:2269): Levantando Config
+[INFO] 19:16:12:750 Kernel/(2269:2269): Rompi Levantar Config
+[INFO] 19:33:00:109 Kernel/(2796:2796): Levantando Config
+[INFO] 19:33:15:564 Kernel/(2826:2826): Levantando Config
+[INFO] 19:33:15:565 Kernel/(2826:2826): Listo para escuchar a mi cliente
+[INFO] 19:33:36:505 Kernel/(2826:2831): Se conecto un cliente!
+[INFO] 19:33:36:505 Kernel/(2826:2843): size 0
+[INFO] 19:34:46:177 Kernel/(2856:2856): Levantando Config
+[INFO] 19:34:46:178 Kernel/(2856:2856): Listo para escuchar a mi cliente
+[INFO] 19:34:52:408 Kernel/(2856:2861): Se conecto un cliente!
+[INFO] 19:34:52:409 Kernel/(2856:2873): size 16
+[INFO] 19:34:52:409 Kernel/(2856:2873): primera instr 2
+[INFO] 20:00:31:084 Kernel/(4629:4629): Levantando Config
+[INFO] 20:00:31:095 Kernel/(4629:4629): Listo para escuchar a mi cliente
+[INFO] 20:00:41:761 Kernel/(4629:4634): Se conecto un cliente!
+[INFO] 20:00:41:761 Kernel/(4629:4660): Se crea el proceso 0 en NEW
+[INFO] 20:00:41:761 Kernel/(4629:4660): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 20:01:05:553 Kernel/(4629:4634): Se conecto un cliente!
+[INFO] 20:01:05:554 Kernel/(4629:4677): Se crea el proceso 1 en NEW
+[INFO] 20:01:05:554 Kernel/(4629:4677): PID: 1 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 21:22:42:201 Kernel/(6144:6144): Levantando Config
+[INFO] 21:22:42:201 Kernel/(6144:6144): Listo para escuchar a mi cliente
+[INFO] 21:27:46:276 Kernel/(6499:6499): Levantando Config
+[INFO] 21:27:46:276 Kernel/(6499:6499): Listo para escuchar a mi cliente
+[INFO] 21:30:34:802 Kernel/(6596:6596): Levantando Config
+[INFO] 21:30:34:803 Kernel/(6596:6596): Listo para escuchar a mi cliente

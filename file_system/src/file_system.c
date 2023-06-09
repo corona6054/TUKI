@@ -1,12 +1,5 @@
 #include "../includes/file_system.h"
 
-t_log* logger;
-t_config* config;
-
-int kernel_fd;
-int socket_memoria;
-
-int server_fd;
 
 int main(void){
 
@@ -55,12 +48,27 @@ t_config* iniciar_config(void)
 		exit(2);
 	}
 
+	config_file_system.ip_memoria = config_get_string_value(config,"IP_MEMORIA");
+	config_file_system.puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
+	config_file_system.puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
+	config_file_system.path_superbloque = config_get_string_value(config,"PATH_SUPERBLOQUE");
+	config_file_system.path_bitmap = config_get_string_value(config,"PATH_BITMAP");
+	config_file_system.path_bloques = config_get_string_value(config,"PATH_BLOQUES");
+	config_file_system.path_fcb = config_get_string_value(config,"PATH_FCB");
+	config_file_system.retardo_acceso_bloque = config_get_int_value(config,"RETARDO_ACCESO_BLOQUE");
+
 	return nuevo_config;
+}
+
+void conectarse_con_memoria(){
+	socket_memoria = crear_conexion(config_file_system.ip_memoria, config_file_system.puerto_memoria);
 }
 
 void establecer_conexiones()
 {
-	socket_memoria = conectarse_a("MEMORIA",config);
+	pthread_t conexion_memoria;
+	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
+	pthread_detach(conexion_memoria);
 
 	server_fd = abrir_servidor(logger,config);
 	kernel_fd = esperar_cliente(server_fd, logger);

@@ -1,46 +1,6 @@
 #include "../includes/consola.h"
-/*typedef struct
-{
-    int instruccion;
-    int numero1;
-    int numero2;
-    char string1[15];
-    char string2[15];
-} Instruction;
 
-typedef enum
-{
-    F_READ,
-    F_WRITE,
-    SET,
-    MOV_IN,
-    MOV_OUT,
-    F_TRUNCATE,
-    F_SEEK,
-    CREATE_SEGMENT,
-    IO,
-    WAIT,
-    SIGNAL,
-    F_OPEN,
-    F_CLOSE,
-    DELETE_SEGMENT,
-    YIELD,
-    EXIT,
-    INVALID
-} InstructionType;
-*/
-t_log* logger;
-t_config* config;
 
-int socket_kernel;
-Instruction instructions[MAX_INSTRUCTIONS];
-int instructionCount = 0;
-
-/*
-InstructionType getNextInstruction(FILE *file);
-int enviarLista();
-void serializeInstruction(Instruction* instruction, void* stream, int offset);
-*/
 int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
@@ -53,6 +13,7 @@ int main(int argc, char** argv){
 
 
 // SUBPROGRAMAS
+
 void serializeInstruction(Instruction* instruction, void* stream, int offset) {
 	memcpy(stream + offset, &instruction->instruccion, sizeof(int));
 	offset += sizeof(int);
@@ -83,7 +44,7 @@ int enviarLista(){
 
 void levantar_modulo(char* config_path){
 	logger = iniciar_logger();
-	config = iniciar_config2();
+	config = iniciar_config(config_path);
 	establecer_conexiones();
 }
 
@@ -118,26 +79,21 @@ t_config* iniciar_config(char* config_path)
 		exit(2);
 	}
 
-	return nuevo_config;
-}
-
-t_config* iniciar_config2(void)
-{
-	t_config* nuevo_config;
-
-	nuevo_config = config_create("consola.config");
-
-	if (nuevo_config == NULL){
-		printf("Error al crear el nuevo config\n");
-		exit(2);
-	}
+	config_consola.ip_kernel = config_get_string_value(config,"IP_KERNEL");
+	config_consola.puerto_kernel = config_get_string_value(config,"PUERTO_KERNEL");
 
 	return nuevo_config;
 }
 
 void establecer_conexiones()
 {
-	socket_kernel = conectarse_a("KERNEL",config);
+	pthread_t conexion_kernel;
+	pthread_create(&conexion_kernel, NULL, (void *) conectarse_con_kernel, NULL);
+	pthread_detach(conexion_kernel);
+}
+
+void conectarse_con_kernel(){
+	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
 }
 
 InstructionType getNextInstruction(FILE *file)

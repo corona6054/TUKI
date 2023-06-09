@@ -12,6 +12,7 @@
 #include "commons/collections/list.h"
 #include "utils_cliente.h"
 #include <string.h>
+#include <pthread.h>
 
  typedef struct
 {
@@ -53,23 +54,44 @@ typedef enum
     INVALID
 } InstructionType;
 
+
+typedef struct{
+	char *ip_kernel;
+	int puerto_kernel;
+}Config_consola;
+
+//Variables globales
+t_log* logger;
+t_config* config;
+
+Config_consola config_consola;
+
+int socket_kernel;
+Instruction instructions[MAX_INSTRUCTIONS];
+int instructionCount = 0;
+
+
+// Prototipos funciones
+void serializeInstruction(Instruction* instruction, void* stream, int offset);
+int enviarLista();
+
+void levantar_modulo(char*);
+void finalizar_modulo();
+
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char* );
 
-t_config* iniciar_config2();
-
-void levantar_modulo(char*);
 void establecer_conexiones();
-void finalizar_modulo();
-void readNextWordFromFile(FILE *file, int index);
+void conectarse_con_kernel();
+
+InstructionType getNextInstruction(FILE *file);
+
 void readIntegerFromFile(FILE *file, int index);
+void readNextWordFromFile(FILE *file, int index);
 void parseInstructions(FILE *file);
 void match(FILE *file, const char *expected);
 void error();
 int crearLista(char* filename);
 
-InstructionType getNextInstruction(FILE *file);
-int enviarLista();
-void serializeInstruction(Instruction* instruction, void* stream, int offset);
 
 #endif /* INCLUDES_CONSOLA_H_ */

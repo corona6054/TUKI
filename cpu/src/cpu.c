@@ -1,21 +1,5 @@
 #include "../includes/cpu.h"
 
-t_log* logger;
-t_config* config;
-
-int kernel_fd;
-int socket_memoria;
-
-int server_fd;
-
-typedef enum{
-	SET,
-	YIELD,
-	EXIT
-}op_code;
-
-
-
 int main(void){
 	levantar_modulo();
 
@@ -79,12 +63,24 @@ t_config* iniciar_config(void)
 		exit(2);
 	}
 
+	config_cpu.retardo = config_get_int_value(config,"RETARDO");
+	config_cpu.ip_memoria = config_get_string_value(config,"IP_MEMORIA");
+	config_cpu.puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
+	config_cpu.puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
+	config_cpu.tam_max_segmento = config_get_int_value(config,"TAM_MAX_SEGMENTO");
+
 	return nuevo_config;
+}
+
+void conectarse_con_memoria(){
+	socket_memoria = crear_conexion(config_cpu.ip_memoria, config_cpu.puerto_memoria);
 }
 
 void establecer_conexiones()
 {
-	socket_memoria = conectarse_a("MEMORIA",config);
+	pthread_t conexion_memoria;
+	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
+	pthread_detach(conexion_memoria);
 
 	server_fd = abrir_servidor(logger,config);
 	kernel_fd = esperar_cliente(server_fd, logger);

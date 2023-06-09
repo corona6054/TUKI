@@ -16,3 +16,6 @@
 [INFO] 20:47:25:741 Conectar file System a memoria/(6765:6765): Servidor listo para recibir al cliente
 [INFO] 20:48:15:991 Conectar file System a memoria/(6765:6765): Se conecto un cliente!
 [INFO] 21:10:38:229 Conectar file System a memoria/(8897:8897): Se conecto un cliente!
+[INFO] 21:27:19:407 FileSystem/(6442:6442): Listo para escuchar a mi cliente
+[INFO] 21:30:20:002 FileSystem/(6554:6554): Listo para escuchar a mi cliente
+[INFO] 21:30:34:807 FileSystem/(6554:6554): Se conecto un cliente!
