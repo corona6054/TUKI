@@ -80,6 +80,7 @@ void finalizar_modulo();
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char* );
+void levantar_config();
 
 void establecer_conexiones();
 void conectarse_con_kernel();

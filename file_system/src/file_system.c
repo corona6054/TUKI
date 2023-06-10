@@ -14,6 +14,7 @@ int main(void){
 void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
+	levantar_config();
 	establecer_conexiones();
 }
 void finalizar_modulo(){
@@ -48,6 +49,10 @@ t_config* iniciar_config(void)
 		exit(2);
 	}
 
+	return nuevo_config;
+}
+
+void levantar_config(){
 	config_file_system.ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 	config_file_system.puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
 	config_file_system.puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
@@ -56,12 +61,11 @@ t_config* iniciar_config(void)
 	config_file_system.path_bloques = config_get_string_value(config,"PATH_BLOQUES");
 	config_file_system.path_fcb = config_get_string_value(config,"PATH_FCB");
 	config_file_system.retardo_acceso_bloque = config_get_int_value(config,"RETARDO_ACCESO_BLOQUE");
-
-	return nuevo_config;
 }
 
 void conectarse_con_memoria(){
 	socket_memoria = crear_conexion(config_file_system.ip_memoria, config_file_system.puerto_memoria);
+	log_info(logger,"Conectado con memoria");
 }
 
 void establecer_conexiones()
@@ -72,4 +76,5 @@ void establecer_conexiones()
 
 	server_fd = abrir_servidor(logger,config);
 	kernel_fd = esperar_cliente(server_fd, logger);
+
 }

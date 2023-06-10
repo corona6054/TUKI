@@ -37,6 +37,8 @@ void finalizar_modulo();
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
+void levantar_config();
+
 void conectarse_con_memoria();
 void establecer_conexiones();
 

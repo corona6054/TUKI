@@ -3,6 +3,7 @@
 int main(void){
 	levantar_modulo();
 
+	/*
 	//recv(socket_kernel, &cod_op,sizeof(), MSG_WAITALL)// Aca deberia recibir la instruccion y los datos necesarios
 	int code_op; //Solo la inicializo para que no me tire error
 
@@ -18,7 +19,7 @@ int main(void){
 			ejecutar_exit();
 		break;
 	}
-
+	*/
 	finalizar_modulo();
 
 	return 0;
@@ -29,6 +30,7 @@ int main(void){
 void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
+	levantar_config();
 	establecer_conexiones();
 }
 
@@ -63,17 +65,20 @@ t_config* iniciar_config(void)
 		exit(2);
 	}
 
-	config_cpu.retardo = config_get_int_value(config,"RETARDO");
+	return nuevo_config;
+}
+
+void levantar_config(){
+	config_cpu.retardo = config_get_int_value(config,"RETARDO_INSTRUCCION");
 	config_cpu.ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 	config_cpu.puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
 	config_cpu.puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
 	config_cpu.tam_max_segmento = config_get_int_value(config,"TAM_MAX_SEGMENTO");
-
-	return nuevo_config;
 }
 
 void conectarse_con_memoria(){
 	socket_memoria = crear_conexion(config_cpu.ip_memoria, config_cpu.puerto_memoria);
+	log_info(logger,"Conectado con memoria");
 }
 
 void establecer_conexiones()
@@ -84,6 +89,7 @@ void establecer_conexiones()
 
 	server_fd = abrir_servidor(logger,config);
 	kernel_fd = esperar_cliente(server_fd, logger);
+
 }
 
 void ejecutar_set(char registro[], char valor[], int tamanio){

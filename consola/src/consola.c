@@ -79,10 +79,12 @@ t_config* iniciar_config(char* config_path)
 		exit(2);
 	}
 
+	return nuevo_config;
+}
+
+void levantar_config(){
 	config_consola.ip_kernel = config_get_string_value(config,"IP_KERNEL");
 	config_consola.puerto_kernel = config_get_string_value(config,"PUERTO_KERNEL");
-
-	return nuevo_config;
 }
 
 void establecer_conexiones()

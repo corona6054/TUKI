@@ -111,6 +111,7 @@ void levantar_config(){
 
 void conectarse_con_memoria(){
 	socket_memoria = crear_conexion(config_kernel.ip_memoria, config_kernel.puerto_memoria);
+	log_info(logger,"Conectado con memoria");
 }
 
 

@@ -3,6 +3,7 @@
 int main(void){
 	levantar_modulo();
 
+	while(1);
 	finalizar_modulo();
 	return 0;
 }
@@ -10,6 +11,7 @@ int main(void){
 void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
+	levantar_config();
 	establecer_conexiones();
 }
 
@@ -44,6 +46,10 @@ t_config* iniciar_config(void)
 		exit(2);
 	}
 
+	return nuevo_config;
+}
+
+void levantar_config(){
 	config_memoria.puerto_escucha = config_get_int_value(config,"PUERTO_ESCUCHA");
 	config_memoria.tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
 	config_memoria.tam_segmento_0 = config_get_int_value(config,"TAM_SEGMENTO_0");
@@ -51,8 +57,6 @@ t_config* iniciar_config(void)
 	config_memoria.retardo_memoria = config_get_int_value(config,"RETARDO_MEMORIA");
 	config_memoria.retardo_compactacion = config_get_int_value(config,"RETARDO_COMPACTACION");
 	config_memoria.algoritmos_asignacion = config_get_string_value(config,"ALGORITMO_ASIGNACION");
-
-	return nuevo_config;
 }
 
 void establecer_conexiones()
