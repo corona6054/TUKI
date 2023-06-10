@@ -51,6 +51,7 @@ void levantar_modulo(char* config_path){
 void finalizar_modulo(){
 	log_destroy(logger);
 	config_destroy(config);
+	close(socket_kernel);
 	return;
 }
 
@@ -193,7 +194,7 @@ void readNextWordFromFile(FILE *file, int index)
 
 void parseInstructions(FILE *file)
 {
-    char *token = strtok(file, " ");
+    strtok(file, " ");
     int instruccion_actual;
     while (1)
     {
