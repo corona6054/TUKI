@@ -83,3 +83,124 @@
 [INFO] 00:17:51:414 Kernel/(10383:10383): Levantando Config
 [INFO] 00:17:51:415 Kernel/(10383:10389): Conectado con memoria
 [INFO] 00:17:51:415 Kernel/(10383:10383): Listo para escuchar a mi cliente
+[INFO] 13:06:56:932 Kernel/(2021:2021): Levantando Config
+[INFO] 13:15:16:688 Kernel/(2307:2307): Levantando Config
+[INFO] 13:15:42:499 Kernel/(2307:2307): DISCO
+[INFO] 13:16:18:027 Kernel/(2385:2385): Levantando Config
+[INFO] 13:16:23:408 Kernel/(2385:2385): DISCO
+[INFO] 13:16:28:405 Kernel/(2385:2385): RECURSO_1
+[INFO] 13:19:13:579 Kernel/(2534:2534): Levantando Config
+[INFO] 13:19:18:838 Kernel/(2534:2534): DISCO
+[INFO] 13:19:22:122 Kernel/(2534:2534): RECURSO_1
+[INFO] 13:25:16:180 Kernel/(2676:2676): Levantando Config
+[INFO] 13:26:17:642 Kernel/(2722:2722): Levantando Config
+[INFO] 13:27:39:302 Kernel/(2771:2771): Levantando Config
+[INFO] 13:29:21:555 Kernel/(2841:2841): Levantando Config
+[INFO] 13:30:19:453 Kernel/(2916:2916): Levantando Config
+[INFO] 13:30:19:514 Kernel/(2916:2916): DISCO
+[INFO] 13:30:19:516 Kernel/(2916:2916): RECURSO_1
+[INFO] 13:30:46:973 Kernel/(2961:2961): Levantando Config
+[INFO] 13:30:47:034 Kernel/(2961:2961): DISCO
+[INFO] 13:30:47:037 Kernel/(2961:2961): 1
+[INFO] 13:30:47:038 Kernel/(2961:2961): RECURSO_1
+[INFO] 13:30:47:038 Kernel/(2961:2961): 2
+[INFO] 13:33:31:685 Kernel/(3047:3047): DISCO
+[INFO] 13:33:31:685 Kernel/(3047:3047): 1
+[INFO] 13:33:31:685 Kernel/(3047:3047): RECURSO_1
+[INFO] 13:33:31:685 Kernel/(3047:3047): 2
+[INFO] 13:56:36:503 Kernel/(3531:3537): Conectado con memoria
+[INFO] 13:56:36:503 Kernel/(3531:3531): Listo para escuchar a mi cliente
+[INFO] 14:05:15:495 Kernel/(3899:3899): Listo para escuchar a mi cliente
+[INFO] 14:05:15:495 Kernel/(3899:3905): Error al conectar con memoria
+[INFO] 14:08:14:946 Kernel/(4093:4093): Listo para escuchar a mi cliente
+[INFO] 14:08:14:957 Kernel/(4093:4099): Error al conectar con memoria
+[INFO] 14:08:47:681 Kernel/(4127:4127): Listo para escuchar a mi cliente
+[INFO] 14:10:57:937 Kernel/(4212:4212): Listo para escuchar a mi cliente
+[INFO] 14:11:17:511 Kernel/(4258:4258): Listo para escuchar a mi cliente
+[INFO] 14:11:58:617 Kernel/(4297:4297): Listo para escuchar a mi cliente
+[INFO] 14:15:38:091 Kernel/(4421:4421): Listo para escuchar a mi cliente
+[INFO] 14:15:38:091 Kernel/(4421:4427): Entro a esperar cliente
+[INFO] 14:18:36:162 Kernel/(4500:4500): Listo para escuchar a mi cliente
+[INFO] 14:18:36:163 Kernel/(4500:4506): Entro a esperar cliente
+[INFO] 14:20:48:605 Kernel/(4645:4645): Listo para escuchar a mi cliente
+[INFO] 14:20:48:611 Kernel/(4645:4651): Entro a esperar cliente
+[INFO] 14:26:02:278 Kernel/(4645:4651): Se conecto un cliente!
+[INFO] 14:26:02:278 Kernel/(4645:4651): Salio de esperar cliente
+[INFO] 14:26:02:278 Kernel/(4645:4651): Entro a esperar cliente
+[INFO] 14:26:02:278 Kernel/(4645:4911): Entro a planificador a largo plazo.
+[INFO] 14:26:18:938 Kernel/(4645:4911): Paquete recibido.
+[INFO] 14:26:18:938 Kernel/(4645:4911): Se crea el proceso 0 en NEW
+[INFO] 14:26:31:599 Kernel/(4921:4921): Listo para escuchar a mi cliente
+[INFO] 14:26:31:600 Kernel/(4921:4928): Entro a esperar cliente
+[INFO] 14:26:39:751 Kernel/(4921:4928): Se conecto un cliente!
+[INFO] 14:26:39:751 Kernel/(4921:4928): Salio de esperar cliente
+[INFO] 14:26:39:751 Kernel/(4921:4928): Entro a esperar cliente
+[INFO] 14:26:39:751 Kernel/(4921:4943): Entro a planificador a largo plazo.
+[INFO] 14:28:28:931 Kernel/(4921:4943): Paquete recibido.
+[INFO] 14:28:28:931 Kernel/(4921:4943): Se crea el proceso 0 en NEW
+[INFO] 14:28:47:116 Kernel/(5069:5069): Listo para escuchar a mi cliente
+[INFO] 14:28:47:117 Kernel/(5069:5075): Entro a esperar cliente
+[INFO] 14:28:54:844 Kernel/(5069:5075): Se conecto un cliente!
+[INFO] 14:28:54:844 Kernel/(5069:5075): Salio de esperar cliente
+[INFO] 14:28:54:844 Kernel/(5069:5075): Entro a esperar cliente
+[INFO] 14:28:54:844 Kernel/(5069:5090): Entro a planificador a largo plazo.
+[INFO] 14:29:11:008 Kernel/(5069:5090): Paquete recibido.
+[INFO] 14:29:11:008 Kernel/(5069:5090): Se crea el proceso 0 en NEW
+[INFO] 14:29:18:181 Kernel/(5105:5105): Listo para escuchar a mi cliente
+[INFO] 14:29:18:181 Kernel/(5105:5111): Entro a esperar cliente
+[INFO] 14:29:25:043 Kernel/(5105:5111): Se conecto un cliente!
+[INFO] 14:29:25:043 Kernel/(5105:5111): Salio de esperar cliente
+[INFO] 14:29:25:043 Kernel/(5105:5111): Entro a esperar cliente
+[INFO] 14:29:25:043 Kernel/(5105:5144): Entro a planificador a largo plazo.
+[INFO] 14:30:08:739 Kernel/(5105:5144): Paquete recibido.
+[INFO] 14:30:08:739 Kernel/(5105:5144): Se crea el proceso 0 en NEW
+[INFO] 14:30:14:360 Kernel/(5173:5173): Listo para escuchar a mi cliente
+[INFO] 14:30:14:360 Kernel/(5173:5179): Entro a esperar cliente
+[INFO] 14:30:23:586 Kernel/(5173:5179): Se conecto un cliente!
+[INFO] 14:30:23:586 Kernel/(5173:5179): Salio de esperar cliente
+[INFO] 14:30:23:586 Kernel/(5173:5179): Entro a esperar cliente
+[INFO] 14:30:23:587 Kernel/(5173:5211): Entro a planificador a largo plazo.
+[INFO] 14:30:23:708 Kernel/(5173:5211): Paquete recibido.
+[INFO] 14:30:23:708 Kernel/(5173:5211): Se crea el proceso 0 en NEW
+[INFO] 14:30:44:291 Kernel/(5228:5228): Listo para escuchar a mi cliente
+[INFO] 14:30:44:292 Kernel/(5228:5234): Entro a esperar cliente
+[INFO] 14:30:51:771 Kernel/(5228:5234): Se conecto un cliente!
+[INFO] 14:30:51:771 Kernel/(5228:5234): Salio de esperar cliente
+[INFO] 14:30:51:771 Kernel/(5228:5234): Entro a esperar cliente
+[INFO] 14:30:51:771 Kernel/(5228:5264): Entro a planificador a largo plazo.
+[INFO] 14:33:03:518 Kernel/(5345:5345): Listo para escuchar a mi cliente
+[INFO] 14:33:03:518 Kernel/(5345:5351): Entro a esperar cliente
+[INFO] 14:38:57:818 Kernel/(5458:5458): Listo para escuchar a mi cliente
+[INFO] 14:38:57:818 Kernel/(5458:5464): Entro a esperar cliente
+[INFO] 14:39:13:665 Kernel/(5458:5464): Se conecto un cliente!
+[INFO] 14:39:13:665 Kernel/(5458:5464): Salio de esperar cliente
+[INFO] 14:39:13:665 Kernel/(5458:5464): Entro a esperar cliente
+[INFO] 14:39:13:665 Kernel/(5458:5477): Entro a planificador a largo plazo.
+[INFO] 14:40:59:810 Kernel/(5688:5688): Listo para escuchar a mi cliente
+[INFO] 14:40:59:823 Kernel/(5688:5694): Entro a esperar cliente
+[INFO] 14:41:17:550 Kernel/(5688:5694): Se conecto un cliente!
+[INFO] 14:41:17:550 Kernel/(5688:5694): Salio de esperar cliente
+[INFO] 14:41:17:550 Kernel/(5688:5694): Entro a esperar cliente
+[INFO] 14:41:17:550 Kernel/(5688:5712): Entro a planificador a largo plazo.
+[INFO] 14:43:40:352 Kernel/(5750:5750): Listo para escuchar a mi cliente
+[INFO] 14:43:40:352 Kernel/(5750:5755): Entro a esperar cliente
+[INFO] 14:43:49:522 Kernel/(5750:5755): Se conecto un cliente!
+[INFO] 14:43:49:522 Kernel/(5750:5755): Salio de esperar cliente
+[INFO] 14:43:49:522 Kernel/(5750:5755): Entro a esperar cliente
+[INFO] 14:43:49:522 Kernel/(5750:5785): Entro a planificador a largo plazo.
+[INFO] 14:51:54:630 Kernel/(6466:6466): Listo para escuchar a mi cliente
+[INFO] 14:51:54:644 Kernel/(6466:6471): Entro a esperar cliente
+[INFO] 14:52:08:514 Kernel/(6466:6471): Se conecto un cliente!
+[INFO] 14:52:08:514 Kernel/(6466:6471): Salio de esperar cliente
+[INFO] 14:52:08:514 Kernel/(6466:6471): Entro a esperar cliente
+[INFO] 14:52:08:516 Kernel/(6466:6485): Entro a planificador a largo plazo.
+[INFO] 14:52:08:517 Kernel/(6466:6485): Por recibir paquete.
+[INFO] 14:57:43:608 Kernel/(6825:6825): Listo para escuchar a mi cliente
+[INFO] 14:57:43:787 Kernel/(6825:6830): Entro a esperar cliente
+[INFO] 14:57:51:215 Kernel/(6825:6830): Se conecto un cliente!
+[INFO] 14:57:51:217 Kernel/(6825:6830): Salio de esperar cliente
+[INFO] 14:57:51:239 Kernel/(6825:6830): Entro a esperar cliente
+[INFO] 14:57:51:240 Kernel/(6825:6845): Entro a planificador a largo plazo.
+[INFO] 14:57:51:286 Kernel/(6825:6845): Por recibir paquete.
+[INFO] 14:57:51:291 Kernel/(6825:6845): Paquete recibido.
+[INFO] 14:57:51:294 Kernel/(6825:6845): Se crea el proceso 0 en NEW

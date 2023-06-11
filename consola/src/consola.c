@@ -2,11 +2,16 @@
 
 
 int main(int argc, char** argv){
+	sem_init(&sem_conexion, 0, 0);
+
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
 	levantar_modulo(config_path);
 	crearLista(instruccion_path);
+
+	sem_wait(&sem_conexion);
 	enviarLista();
+
 	finalizar_modulo();
 	return 0;
 }
@@ -36,7 +41,7 @@ int enviarLista(){
 				agregar_a_paquete(paquete,serialized,42);
 	        }
 		enviar_paquete(paquete,socket_kernel);
-		printf("Paquete enviado \n");
+		log_info(logger,"Paquete enviado");
 		eliminar_paquete(paquete);
 		return 1;
 }
@@ -45,6 +50,7 @@ int enviarLista(){
 void levantar_modulo(char* config_path){
 	logger = iniciar_logger();
 	config = iniciar_config(config_path);
+	levantar_config();
 	establecer_conexiones();
 }
 
@@ -84,7 +90,7 @@ t_config* iniciar_config(char* config_path)
 
 void levantar_config(){
 	config_consola.ip_kernel = config_get_string_value(config,"IP_KERNEL");
-	config_consola.puerto_kernel = config_get_string_value(config,"PUERTO_KERNEL");
+	config_consola.puerto_kernel = config_get_int_value(config,"PUERTO_KERNEL");
 }
 
 void establecer_conexiones()
@@ -96,6 +102,14 @@ void establecer_conexiones()
 
 void conectarse_con_kernel(){
 	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
+	log_info(logger,"%d",socket_kernel);
+	if (socket_kernel >= 0){
+		sem_post(&sem_conexion);
+		log_info(logger,"Conectado con kernel");
+	}
+	else{
+		log_info(logger,"Error al conectar con kernel");
+	}
 }
 
 InstructionType getNextInstruction(FILE *file)
@@ -298,7 +312,7 @@ int crearLista(char* filename)
     }
     parseInstructions(file);
     fclose(file);
-
+    /*
     printf("Instructions:\n");
     for (int i = 0; i < instructionCount; i++)
     {
@@ -313,6 +327,6 @@ int crearLista(char* filename)
             printf("%s ", instructions[i].string2);
         printf("\n");
     }
-
+	*/
     return 0;
 }

@@ -155,6 +155,7 @@ void manejar_clientes(int);
 t_list* recibir_paquete(int);
 
 void manejar_conexion_con_consola(t_conexiones*);
+void planificadorCortoPlazo();
 Registros inicializar_registros();
 pcb crear_pcb(t_list*);
 

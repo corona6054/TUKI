@@ -13,6 +13,7 @@
 #include "utils_cliente.h"
 #include <string.h>
 #include <pthread.h>
+#include <semaphore.h>
 
  typedef struct
 {
@@ -65,6 +66,9 @@ t_log* logger;
 t_config* config;
 
 Config_consola config_consola;
+
+sem_t *sem_conexion;
+sem_t *sem_enviado;
 
 int socket_kernel;
 Instruction instructions[MAX_INSTRUCTIONS];

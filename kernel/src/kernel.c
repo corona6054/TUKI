@@ -67,7 +67,6 @@ t_config* iniciar_config(void)
 }
 
 void levantar_config(){
-	log_info(logger,"Levantando Config");
 
 	config_kernel.ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 	config_kernel.puerto_memoria = config_get_int_value(config,"PUERTO_MEMORIA");
@@ -84,48 +83,53 @@ void levantar_config(){
 	config_kernel.alpha_hrrn = config_get_int_value(config,"HRRN_ALFA");
 	config_kernel.grado_max_multi = config_get_int_value(config,"GRADO_MAX_MULTIPROGRAMACION");
 
-	/*
 	char **recursos = config_get_array_value(config,"RECURSOS");
+	char **instancias = config_get_array_value(config,"INSTANCIAS_RECURSOS");
+	int a = 0;
 
-	char *recurso;
-	log_info(logger,"Rompi Levantar Config");
+	config_kernel.recursos_compartidos = list_create();
+	config_kernel.instancias = list_create();
 
-	while(!list_is_empty(recursos)){
-		recurso = list_remove(recursos,0);
-		list_add_in_index(config_kernel.recursos_compartidos,0,recurso);
+	while(recursos[a]!= NULL){
+		list_add(config_kernel.recursos_compartidos,recursos[a]);
+		list_add(config_kernel.instancias,instancias[a]);
+		a++;
 	}
-	*/
-	/*
-	char **instancias_recursos = config_get_array_value(config,"INSTANCIAS_RECURSOS");
-
-
-	while(!list_is_empty(instancias_recursos)){
-		int instancia = atoi(list_remove(instancias_recursos,0));
-		list_add_in_index(config_kernel.instancias,0,instancia);
-	}
-
-	log_info(logger,config_kernel.instancias);
-	*/
 }
 
 
 void conectarse_con_memoria(){
 	socket_memoria = crear_conexion(config_kernel.ip_memoria, config_kernel.puerto_memoria);
-	log_info(logger,"Conectado con memoria");
+	if (socket_memoria == 0)
+		log_info(logger,"Conectado con memoria");
+	else
+	{
+		//perror(socket_memoria);
+		log_info(logger,"Error al conectar con memoria");
+	}
 }
 
 
 void conectarse_con_cpu(){
 	socket_cpu = crear_conexion(config_kernel.ip_cpu, config_kernel.puerto_cpu);
+	if (socket_cpu == 0)
+			log_info(logger,"Conectado con cpu");
+		else
+			log_info(logger,"Error al conectar con cpu");
 }
 
 
 void conectarse_con_file_system(){
-	socket_file_system = crear_conexion(config_kernel.ip_file_system, config_kernel.puerto_file_system);	
+	socket_file_system = crear_conexion(config_kernel.ip_file_system, config_kernel.puerto_file_system);
+	if (socket_file_system == 0)
+			log_info(logger,"Conectado con file system");
+		else
+			log_info(logger,"Error al conectar con file system");
 }
 
 void establecer_conexiones()
 {
+	/*
 	pthread_t conexion_memoria;
 	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
 	pthread_detach(conexion_memoria);
@@ -137,8 +141,9 @@ void establecer_conexiones()
 	pthread_t conexion_file_system;
 	pthread_create(&conexion_file_system, NULL, (void *) conectarse_con_file_system, NULL);
 	pthread_detach(conexion_file_system);
+	*/
 
-	server_fd = abrir_servidor(logger,config);
+	server_fd = iniciar_servidor(logger, config_kernel.puerto_escucha);
 	
 	pthread_t manejo_consolas;
 	pthread_create(&manejo_consolas, NULL, (void *) manejar_clientes, (void *) server_fd);
@@ -147,11 +152,12 @@ void establecer_conexiones()
 }
 
 void manejar_clientes(int server_fd){
-	//thread para esperar clientes
+	//thread para espersar clientes
 	while(1){
+		log_info(logger,"Entro a esperar cliente");
 		t_conexiones conexiones;
 		conexiones.socket = esperar_cliente(server_fd, logger);
-		log_info("Salio de esperar cliente",logger);
+		log_info(logger,"Salio de esperar cliente");
 		conexiones.socket_anterior = 0;
 		// threads para recepcion de info de las consolas
 
@@ -186,25 +192,17 @@ t_list* recibir_paquete(int socket_cliente){
 
 void manejar_conexion_con_consola(t_conexiones* conexiones){
 	// Seria el planificador a largo plazo
-	
+	log_info(logger,"Entro a planificador a largo plazo.");
 	t_list* instrucciones ;
-	int a = recibir_operacion(conexiones->socket);
+	log_info(logger,"Por recibir paquete.");
 	instrucciones = recibir_paquete(conexiones->socket);
-
-	//log_info(logger, "size %d", list_size(instrucciones));
-	/*
-	void *instr = list_get(instrucciones,0);
-	int primera;
-	memcpy(&primera, instr, sizeof(int));
-	*/
-	//log_info(logger, "primera instr %d", primera);
-
+	log_info(logger,"Paquete recibido.");
 	int estado_anterior = -1;
 	pcb pcb = crear_pcb(instrucciones);
 	
 	list_add(procesosNuevos,&pcb);
 
-	if(list_size(procesosReady) < config_kernel.grado_max_multi){
+	if(list_size(procesosReady) + list_size(procesosEjecutando) + list_size(procesosBloqueados) < config_kernel.grado_max_multi){
 		
 		sem_wait(&m_nuevos);
 		list_remove(procesosNuevos,0);
@@ -216,20 +214,30 @@ void manejar_conexion_con_consola(t_conexiones* conexiones){
 		sem_wait(&m_ready);
 		list_add(procesosReady,&pcb);
 		sem_post(&m_ready);
+		log_info(logger,"PID: %d - Estado Anterior: %d - Estado Actual: %d", pcb.pid, estado_anterior, pcb.estado); //no va a terminar estando aca este log info
 		
+		planificadorCortoPlazo();
 		//log_info(logger,"Cola Ready %s: , ")
 		//mandar msje a memoria para que inicialice sus estructuras necesarias y obtenga la tabla de segmentos inicial
-		log_info(logger,"PID: %d - Estado Anterior: %d - Estado Actual: %d", pcb.pid, estado_anterior, pcb.estado); //no va a terminar estando aca este log info
 
 	}
 	
+
+}
+
+void planificadorCortoPlazo(){
 	if (strcmp(config_kernel.algoritmo, "FIFO") == 0){
-		planificacionFIFO();
+		pthread_t fifo;
+		pthread_create(&fifo, NULL, (void *) planificacionFIFO, NULL);
+		pthread_detach(fifo);
 	}
 	else if(strcmp(config_kernel.algoritmo, "HRRN") == 0){
-		planificacionHRRN();
+		pthread_t hrrn;
+		pthread_create(&hrrn, NULL, (void *) planificacionHRRN, NULL);
+		pthread_detach(hrrn);
 	}	
 }
+
 
 Registros inicializar_registros(){
 	Registros registros;
@@ -283,7 +291,7 @@ void planificacionFIFO(){
 	pcb *pcb_a_ejecutar;
 	
 
-	while(!list_is_empty(procesosReady)){
+	while(!list_is_empty(procesosReady) || !list_is_empty(procesosBloqueados)){
 		sem_wait(&m_ready);
 		pcb_a_ejecutar = list_remove(procesosReady,0);
 		sem_post(&m_ready);
@@ -294,6 +302,7 @@ void planificacionFIFO(){
 }
 
 void planificacionHRRN(){
-	
+
 	return;
 }
+
