@@ -1,10 +1,70 @@
 #include "../includes/memoria.h"
 
+t_log* logger;
+t_config* config;
+
+int server_fd;
+
+// Clientes
+int cpu_fd;
+int fileSystem_fd;
+int kernel_fd;
+
+typedef struct Segment {
+    void* start;
+    int size;
+} Segment;
+
+
+void *memoria_principal;
+t_list * espacios_libres;
+t_list * tabla_segmentos;
+Segment segmento0;
+int needed_memory;
+
+
 int main(void){
 	levantar_modulo();
+	crearEstructuras();
 
-	while(1);
+
+	//while(1);
 	finalizar_modulo();
+	return 0;
+}
+bool FirstFit(void* data){
+		Segment* element = (Segment*)data;
+		int tamanio = element->size;
+		return (tamanio >= needed_memory);
+
+}
+void printElement(void* ptr) {
+	Segment* seleccionado = (Segment*) ptr;
+    printf("start: %d\n", seleccionado->start);
+    printf("size: %d\n", seleccionado->size);
+}
+void agregar_segmento(Segment *nuevo){
+	needed_memory = nuevo->size;
+	Segment *seleccionado=(Segment*)list_remove_by_condition(espacios_libres,FirstFit);
+	seleccionado->start+=nuevo->size;
+	seleccionado->size-=nuevo->size;
+	list_add(espacios_libres,seleccionado);
+}
+
+
+int crearEstructuras(){
+	memoria_principal = malloc(config_memoria.tam_memoria);
+	espacios_libres = list_create();
+	Segment inicial;
+	inicial.start =memoria_principal;
+	inicial.size =config_memoria.tam_memoria;
+	list_add(espacios_libres,&inicial);
+	list_iterate(espacios_libres,printElement);
+	segmento0.start = memoria_principal;
+	segmento0.size = config_memoria.tam_segmento_0;
+	agregar_segmento(&segmento0);
+	list_iterate(espacios_libres,printElement);
+	printf("Estructuras creadas \n");
 	return 0;
 }
 
@@ -12,9 +72,8 @@ void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	levantar_config();
-	establecer_conexiones();
+	//establecer_conexiones();
 }
-
 void finalizar_modulo(){
 	log_destroy(logger);
 	config_destroy(config);

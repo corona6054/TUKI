@@ -6,6 +6,7 @@
 #include <string.h>
 #include "commons/log.h"
 #include "commons/config.h"
+#include "commons/collections/list.h"
 #include "utils_server.h"
 
 typedef struct{
@@ -38,6 +39,8 @@ t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();;
 
+int crearEstructuras();
+void levantar_modulo();
 void establecer_conexiones();
 
 #endif /* INCLUDES_MEMORIA_H_ */
