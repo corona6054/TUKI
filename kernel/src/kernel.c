@@ -7,12 +7,14 @@ int main(void){
 	sem_init(&m_bloqueados, 0, 1);
 	sem_init(&m_finalizados, 0, 1);
 	sem_init(&m_exec, 0, 1);
-
-	levantar_modulo();
 	
+
 	procesosNuevos = list_create();
 	procesosReady = list_create();
 	procesosEjecutando = list_create();
+	procesosBloqueados = list_create();
+	levantar_modulo();
+
 
 	while(1);
 
@@ -154,10 +156,8 @@ void establecer_conexiones()
 void manejar_clientes(int server_fd){
 	//thread para espersar clientes
 	while(1){
-		log_info(logger,"Entro a esperar cliente");
 		t_conexiones conexiones;
 		conexiones.socket = esperar_cliente(server_fd, logger);
-		log_info(logger,"Salio de esperar cliente");
 		conexiones.socket_anterior = 0;
 		// threads para recepcion de info de las consolas
 
@@ -189,20 +189,53 @@ t_list* recibir_paquete(int socket_cliente){
 	free(buffer);
 	return valores;
 }
+void printElement(void* ptr) {
+	Instruction* seleccionado = (Instruction*) ptr;
+	printf("%d ", seleccionado->instruccion);
+	        if (seleccionado->numero1 != 0)
+	            printf("%d ", seleccionado->numero1);
+	        if (seleccionado->numero2 != 0)
+	            printf("%d ", seleccionado->numero2);
+	        if (strcmp(seleccionado->string1, "") != 0)
+	            printf("%s ", seleccionado->string1);
+	        if (strcmp(seleccionado->string2, "") != 0)
+	            printf("%s ", seleccionado->string2);
+	        printf("\n");
+}
+void* deserializarInst(void* data){
+		Instruction* instruction = malloc(sizeof(Instruction));
+		int offset=0;
+		memcpy(&instruction->instruccion,data + offset, sizeof(int));
+		offset += sizeof(int);
+		memcpy(&instruction->numero1,data + offset, sizeof(int));
+		offset += sizeof(int);
+		memcpy(&instruction->numero2,data + offset, sizeof(int));
+		offset += sizeof(int);
+		memcpy(&instruction->string1,data + offset, sizeof(char[15]));
+		offset += sizeof(char[15]);
+		memcpy(&instruction->string2,data + offset, sizeof(char[15]));
+		offset += sizeof(char[15]);
+		return instruction;
+		}
 
 void manejar_conexion_con_consola(t_conexiones* conexiones){
 	// Seria el planificador a largo plazo
 	log_info(logger,"Entro a planificador a largo plazo.");
 	t_list* instrucciones ;
-	log_info(logger,"Por recibir paquete.");
+	int op = recibir_operacion(conexiones->socket);
 	instrucciones = recibir_paquete(conexiones->socket);
 	log_info(logger,"Paquete recibido.");
+	list_map(instrucciones,deserializarInst);
+
 	int estado_anterior = -1;
 	pcb pcb = crear_pcb(instrucciones);
 	
 	list_add(procesosNuevos,&pcb);
-
-	if(list_size(procesosReady) + list_size(procesosEjecutando) + list_size(procesosBloqueados) < config_kernel.grado_max_multi){
+	int total=0;
+	total+=list_size(procesosReady);
+	total+=list_size(procesosEjecutando);
+	total+=list_size(procesosBloqueados);
+	if(  total < config_kernel.grado_max_multi){
 		
 		sem_wait(&m_nuevos);
 		list_remove(procesosNuevos,0);

@@ -204,3 +204,222 @@
 [INFO] 14:57:51:286 Kernel/(6825:6845): Por recibir paquete.
 [INFO] 14:57:51:291 Kernel/(6825:6845): Paquete recibido.
 [INFO] 14:57:51:294 Kernel/(6825:6845): Se crea el proceso 0 en NEW
+[INFO] 17:10:27:457 Kernel/(4654:4654): Listo para escuchar a mi cliente
+[INFO] 17:10:27:466 Kernel/(4654:4662): Entro a esperar cliente
+[INFO] 17:10:39:953 Kernel/(4654:4662): Se conecto un cliente!
+[INFO] 17:10:39:953 Kernel/(4654:4662): Salio de esperar cliente
+[INFO] 17:10:39:954 Kernel/(4654:4662): Entro a esperar cliente
+[INFO] 17:10:39:959 Kernel/(4654:4704): Entro a planificador a largo plazo.
+[INFO] 17:10:39:959 Kernel/(4654:4704): Por recibir paquete.
+[INFO] 17:10:39:964 Kernel/(4654:4704): Paquete recibido.
+[INFO] 17:10:39:965 Kernel/(4654:4704): Se crea el proceso 0 en NEW
+[INFO] 17:11:03:423 Kernel/(4744:4744): Listo para escuchar a mi cliente
+[INFO] 17:11:03:428 Kernel/(4744:4750): Entro a esperar cliente
+[INFO] 17:11:11:273 Kernel/(4744:4750): Se conecto un cliente!
+[INFO] 17:11:11:273 Kernel/(4744:4750): Salio de esperar cliente
+[INFO] 17:11:11:273 Kernel/(4744:4750): Entro a esperar cliente
+[INFO] 17:11:11:296 Kernel/(4744:4765): Entro a planificador a largo plazo.
+[INFO] 17:11:11:297 Kernel/(4744:4765): Por recibir paquete.
+[INFO] 17:11:11:298 Kernel/(4744:4765): Paquete recibido.
+[INFO] 17:11:11:300 Kernel/(4744:4765): Se crea el proceso 0 en NEW
+[INFO] 17:12:20:505 Kernel/(4795:4795): Listo para escuchar a mi cliente
+[INFO] 17:14:51:720 Kernel/(4795:4875): Entro a esperar cliente
+[INFO] 17:14:51:720 Kernel/(4795:4875): Se conecto un cliente!
+[INFO] 17:14:51:720 Kernel/(4795:4875): Salio de esperar cliente
+[INFO] 17:14:51:730 Kernel/(4795:4875): Entro a esperar cliente
+[INFO] 17:14:51:730 Kernel/(4795:4876): Entro a planificador a largo plazo.
+[INFO] 17:14:51:730 Kernel/(4795:4876): Por recibir paquete.
+[INFO] 17:14:51:730 Kernel/(4795:4876): Paquete recibido.
+[INFO] 17:14:51:731 Kernel/(4795:4876): Se crea el proceso 0 en NEW
+[INFO] 17:16:30:413 Kernel/(4921:4921): Listo para escuchar a mi cliente
+[INFO] 17:16:30:433 Kernel/(4921:4928): Entro a esperar cliente
+[INFO] 17:16:37:162 Kernel/(4921:4928): Se conecto un cliente!
+[INFO] 17:16:37:165 Kernel/(4921:4928): Salio de esperar cliente
+[INFO] 17:16:37:187 Kernel/(4921:4928): Entro a esperar cliente
+[INFO] 17:16:37:187 Kernel/(4921:4943): Entro a planificador a largo plazo.
+[INFO] 17:16:37:187 Kernel/(4921:4943): Por recibir paquete.
+[INFO] 17:16:37:189 Kernel/(4921:4943): Paquete recibido.
+[INFO] 17:16:47:775 Kernel/(4921:4943): Se crea el proceso 0 en NEW
+[INFO] 17:19:03:555 Kernel/(5067:5067): Listo para escuchar a mi cliente
+[INFO] 17:19:03:565 Kernel/(5067:5074): Entro a esperar cliente
+[INFO] 17:19:11:918 Kernel/(5067:5074): Se conecto un cliente!
+[INFO] 17:19:11:918 Kernel/(5067:5074): Salio de esperar cliente
+[INFO] 17:19:11:918 Kernel/(5067:5074): Entro a esperar cliente
+[INFO] 17:19:11:925 Kernel/(5067:5101): Entro a planificador a largo plazo.
+[INFO] 17:19:11:926 Kernel/(5067:5101): Por recibir paquete.
+[INFO] 17:19:11:926 Kernel/(5067:5101): Paquete recibido.
+[INFO] 17:19:11:926 Kernel/(5067:5101): Se crea el proceso 0 en NEW
+[INFO] 18:43:05:594 Kernel/(5528:5528): Listo para escuchar a mi cliente
+[INFO] 18:43:05:598 Kernel/(5528:5541): Entro a esperar cliente
+[INFO] 18:43:14:424 Kernel/(5528:5541): Se conecto un cliente!
+[INFO] 18:43:14:424 Kernel/(5528:5541): Salio de esperar cliente
+[INFO] 18:43:14:424 Kernel/(5528:5541): Entro a esperar cliente
+[INFO] 18:43:14:436 Kernel/(5528:5561): Entro a planificador a largo plazo.
+[INFO] 18:43:14:436 Kernel/(5528:5561): Por recibir paquete.
+[INFO] 18:43:14:437 Kernel/(5528:5561): Paquete recibido.
+[INFO] 18:43:14:439 Kernel/(5528:5561): Se crea el proceso 0 en NEW
+[INFO] 18:44:06:639 Kernel/(5650:5650): Listo para escuchar a mi cliente
+[INFO] 18:44:06:656 Kernel/(5650:5664): Entro a esperar cliente
+[INFO] 18:44:18:523 Kernel/(5650:5664): Se conecto un cliente!
+[INFO] 18:44:18:524 Kernel/(5650:5664): Salio de esperar cliente
+[INFO] 18:44:18:535 Kernel/(5650:5664): Entro a esperar cliente
+[INFO] 18:44:18:538 Kernel/(5650:5690): Entro a planificador a largo plazo.
+[INFO] 18:44:18:538 Kernel/(5650:5690): Por recibir paquete.
+[INFO] 18:44:18:541 Kernel/(5650:5690): Paquete recibido.
+[INFO] 18:44:26:356 Kernel/(5650:5690): Se crea el proceso 0 en NEW
+[INFO] 18:46:47:623 Kernel/(5992:5992): Listo para escuchar a mi cliente
+[INFO] 18:46:47:641 Kernel/(5992:6005): Entro a esperar cliente
+[INFO] 18:46:54:909 Kernel/(5992:6005): Se conecto un cliente!
+[INFO] 18:46:54:909 Kernel/(5992:6005): Salio de esperar cliente
+[INFO] 18:46:54:915 Kernel/(5992:6005): Entro a esperar cliente
+[INFO] 18:46:54:918 Kernel/(5992:6026): Entro a planificador a largo plazo.
+[INFO] 18:46:54:918 Kernel/(5992:6026): Por recibir paquete.
+[INFO] 18:46:54:919 Kernel/(5992:6026): Paquete recibido.
+[INFO] 18:46:59:994 Kernel/(5992:6026): Se crea el proceso 0 en NEW
+[INFO] 18:47:55:520 Kernel/(6194:6194): Listo para escuchar a mi cliente
+[INFO] 18:47:55:530 Kernel/(6194:6207): Entro a esperar cliente
+[INFO] 18:48:05:021 Kernel/(6194:6207): Se conecto un cliente!
+[INFO] 18:48:05:022 Kernel/(6194:6207): Salio de esperar cliente
+[INFO] 18:48:05:047 Kernel/(6194:6231): Entro a planificador a largo plazo.
+[INFO] 18:48:05:048 Kernel/(6194:6231): Por recibir paquete.
+[INFO] 18:48:05:048 Kernel/(6194:6231): Paquete recibido.
+[INFO] 18:48:05:048 Kernel/(6194:6207): Entro a esperar cliente
+[INFO] 18:48:08:300 Kernel/(6194:6231): Se crea el proceso 0 en NEW
+[INFO] 18:48:23:657 Kernel/(6194:6231): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:48:34:808 Kernel/(6194:6207): Se conecto un cliente!
+[INFO] 18:48:34:809 Kernel/(6194:6207): Salio de esperar cliente
+[INFO] 18:48:34:817 Kernel/(6194:6207): Entro a esperar cliente
+[INFO] 18:48:34:826 Kernel/(6194:6300): Entro a planificador a largo plazo.
+[INFO] 18:48:34:826 Kernel/(6194:6300): Por recibir paquete.
+[INFO] 18:48:34:826 Kernel/(6194:6300): Paquete recibido.
+[INFO] 18:48:47:804 Kernel/(6194:6300): Se crea el proceso 1 en NEW
+[INFO] 18:48:47:804 Kernel/(6194:6300): PID: 1 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:49:00:966 Kernel/(6194:6207): Se conecto un cliente!
+[INFO] 18:49:00:967 Kernel/(6194:6207): Salio de esperar cliente
+[INFO] 18:49:00:974 Kernel/(6194:6207): Entro a esperar cliente
+[INFO] 18:49:00:975 Kernel/(6194:6328): Entro a planificador a largo plazo.
+[INFO] 18:49:00:975 Kernel/(6194:6328): Por recibir paquete.
+[INFO] 18:49:00:975 Kernel/(6194:6328): Paquete recibido.
+[INFO] 18:49:17:909 Kernel/(6194:6328): Se crea el proceso 2 en NEW
+[INFO] 18:49:17:909 Kernel/(6194:6328): PID: 2 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:50:35:456 Kernel/(6423:6423): Listo para escuchar a mi cliente
+[INFO] 18:50:35:465 Kernel/(6423:6436): Entro a esperar cliente
+[INFO] 18:50:43:243 Kernel/(6423:6436): Se conecto un cliente!
+[INFO] 18:50:43:244 Kernel/(6423:6436): Salio de esperar cliente
+[INFO] 18:50:43:258 Kernel/(6423:6436): Entro a esperar cliente
+[INFO] 18:50:43:264 Kernel/(6423:6457): Entro a planificador a largo plazo.
+[INFO] 18:50:43:264 Kernel/(6423:6457): Por recibir paquete.
+[INFO] 18:50:43:264 Kernel/(6423:6457): Paquete recibido.
+[INFO] 18:50:46:800 Kernel/(6423:6457): Se crea el proceso 0 en NEW
+[INFO] 18:51:00:235 Kernel/(6423:6457): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:52:15:932 Kernel/(6560:6560): Listo para escuchar a mi cliente
+[INFO] 18:52:15:941 Kernel/(6560:6566): Entro a esperar cliente
+[INFO] 18:52:22:700 Kernel/(6560:6566): Se conecto un cliente!
+[INFO] 18:52:22:700 Kernel/(6560:6566): Salio de esperar cliente
+[INFO] 18:52:22:700 Kernel/(6560:6566): Entro a esperar cliente
+[INFO] 18:52:22:703 Kernel/(6560:6586): Entro a planificador a largo plazo.
+[INFO] 18:52:22:704 Kernel/(6560:6586): Por recibir paquete.
+[INFO] 18:52:22:706 Kernel/(6560:6586): Paquete recibido.
+[INFO] 18:52:22:708 Kernel/(6560:6586): Se crea el proceso 0 en NEW
+[INFO] 18:52:22:708 Kernel/(6560:6586): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:52:33:077 Kernel/(6560:6566): Se conecto un cliente!
+[INFO] 18:52:33:077 Kernel/(6560:6566): Salio de esperar cliente
+[INFO] 18:52:33:077 Kernel/(6560:6566): Entro a esperar cliente
+[INFO] 18:52:33:104 Kernel/(6560:6608): Entro a planificador a largo plazo.
+[INFO] 18:52:33:104 Kernel/(6560:6608): Por recibir paquete.
+[INFO] 18:52:33:105 Kernel/(6560:6608): Paquete recibido.
+[INFO] 18:52:33:105 Kernel/(6560:6608): Se crea el proceso 1 en NEW
+[INFO] 18:52:33:105 Kernel/(6560:6608): PID: 1 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:52:45:674 Kernel/(6560:6566): Se conecto un cliente!
+[INFO] 18:52:45:674 Kernel/(6560:6566): Salio de esperar cliente
+[INFO] 18:52:45:674 Kernel/(6560:6566): Entro a esperar cliente
+[INFO] 18:52:45:677 Kernel/(6560:6628): Entro a planificador a largo plazo.
+[INFO] 18:52:45:677 Kernel/(6560:6628): Por recibir paquete.
+[INFO] 18:52:45:678 Kernel/(6560:6628): Paquete recibido.
+[INFO] 18:52:45:678 Kernel/(6560:6628): Se crea el proceso 2 en NEW
+[INFO] 18:52:45:679 Kernel/(6560:6628): PID: 2 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:52:49:820 Kernel/(6560:6566): Se conecto un cliente!
+[INFO] 18:52:49:821 Kernel/(6560:6566): Salio de esperar cliente
+[INFO] 18:52:49:821 Kernel/(6560:6566): Entro a esperar cliente
+[INFO] 18:52:49:833 Kernel/(6560:6649): Entro a planificador a largo plazo.
+[INFO] 18:52:49:833 Kernel/(6560:6649): Por recibir paquete.
+[INFO] 18:52:49:834 Kernel/(6560:6649): Paquete recibido.
+[INFO] 18:52:49:835 Kernel/(6560:6649): Se crea el proceso 3 en NEW
+[INFO] 18:52:49:835 Kernel/(6560:6649): PID: 3 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:54:24:990 Kernel/(6708:6708): Listo para escuchar a mi cliente
+[INFO] 18:54:24:991 Kernel/(6708:6714): Entro a esperar cliente
+[INFO] 18:54:33:116 Kernel/(6708:6714): Se conecto un cliente!
+[INFO] 18:54:33:119 Kernel/(6708:6714): Salio de esperar cliente
+[INFO] 18:54:33:119 Kernel/(6708:6714): Entro a esperar cliente
+[INFO] 18:54:33:131 Kernel/(6708:6734): Entro a planificador a largo plazo.
+[INFO] 18:54:33:131 Kernel/(6708:6734): Por recibir paquete.
+[INFO] 18:54:33:132 Kernel/(6708:6734): Paquete recibido.
+[INFO] 18:54:33:133 Kernel/(6708:6734): Se crea el proceso 0 en NEW
+[INFO] 18:54:33:133 Kernel/(6708:6734): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:54:39:237 Kernel/(6708:6714): Se conecto un cliente!
+[INFO] 18:54:39:237 Kernel/(6708:6714): Salio de esperar cliente
+[INFO] 18:54:39:238 Kernel/(6708:6714): Entro a esperar cliente
+[INFO] 18:54:39:247 Kernel/(6708:6754): Entro a planificador a largo plazo.
+[INFO] 18:54:39:247 Kernel/(6708:6754): Por recibir paquete.
+[INFO] 18:54:39:247 Kernel/(6708:6754): Paquete recibido.
+[INFO] 18:54:39:247 Kernel/(6708:6754): Se crea el proceso 1 en NEW
+[INFO] 18:54:39:247 Kernel/(6708:6754): PID: 1 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:55:51:812 Kernel/(6829:6829): Listo para escuchar a mi cliente
+[INFO] 18:55:51:814 Kernel/(6829:6835): Entro a esperar cliente
+[INFO] 18:56:01:124 Kernel/(6829:6835): Se conecto un cliente!
+[INFO] 18:56:01:124 Kernel/(6829:6835): Entro a esperar cliente
+[INFO] 18:56:01:130 Kernel/(6829:6861): Entro a planificador a largo plazo.
+[INFO] 18:56:01:130 Kernel/(6829:6861): Paquete recibido.
+[INFO] 18:56:01:130 Kernel/(6829:6861): Se crea el proceso 0 en NEW
+[INFO] 18:56:01:130 Kernel/(6829:6861): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:57:00:425 Kernel/(6829:6835): Se conecto un cliente!
+[INFO] 18:57:00:425 Kernel/(6829:6835): Entro a esperar cliente
+[INFO] 18:57:00:432 Kernel/(6829:6888): Entro a planificador a largo plazo.
+[INFO] 18:57:00:432 Kernel/(6829:6888): Paquete recibido.
+[INFO] 18:57:00:434 Kernel/(6829:6888): Se crea el proceso 1 en NEW
+[INFO] 18:57:00:434 Kernel/(6829:6888): PID: 1 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 18:59:00:578 Kernel/(6829:6835): Se conecto un cliente!
+[INFO] 18:59:00:579 Kernel/(6829:6835): Entro a esperar cliente
+[INFO] 18:59:00:595 Kernel/(6829:6979): Entro a planificador a largo plazo.
+[INFO] 18:59:00:600 Kernel/(6829:6979): Paquete recibido.
+[INFO] 18:59:00:600 Kernel/(6829:6979): Se crea el proceso 2 en NEW
+[INFO] 18:59:00:601 Kernel/(6829:6979): PID: 2 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 19:00:32:842 Kernel/(6829:6835): Se conecto un cliente!
+[INFO] 19:00:32:842 Kernel/(6829:6835): Entro a esperar cliente
+[INFO] 19:00:32:844 Kernel/(6829:7022): Entro a planificador a largo plazo.
+[INFO] 19:00:32:844 Kernel/(6829:7022): Paquete recibido.
+[INFO] 19:00:32:844 Kernel/(6829:7022): Se crea el proceso 3 en NEW
+[INFO] 19:00:32:844 Kernel/(6829:7022): PID: 3 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 19:01:09:357 Kernel/(7074:7074): Listo para escuchar a mi cliente
+[INFO] 19:01:15:786 Kernel/(7074:7080): Se conecto un cliente!
+[INFO] 19:01:15:788 Kernel/(7074:7101): Entro a planificador a largo plazo.
+[INFO] 19:01:15:788 Kernel/(7074:7101): Paquete recibido.
+[INFO] 19:01:15:789 Kernel/(7074:7101): Se crea el proceso 0 en NEW
+[INFO] 19:01:15:789 Kernel/(7074:7101): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 19:01:27:669 Kernel/(7074:7080): Se conecto un cliente!
+[INFO] 19:01:27:673 Kernel/(7074:7121): Entro a planificador a largo plazo.
+[INFO] 19:01:27:674 Kernel/(7074:7121): Paquete recibido.
+[INFO] 19:01:27:674 Kernel/(7074:7121): Se crea el proceso 1 en NEW
+[INFO] 19:01:27:674 Kernel/(7074:7121): PID: 1 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 19:01:43:616 Kernel/(7074:7080): Se conecto un cliente!
+[INFO] 19:01:43:616 Kernel/(7074:7141): Entro a planificador a largo plazo.
+[INFO] 19:01:43:617 Kernel/(7074:7141): Paquete recibido.
+[INFO] 19:01:43:617 Kernel/(7074:7141): Se crea el proceso 2 en NEW
+[INFO] 19:01:43:618 Kernel/(7074:7141): PID: 2 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 19:03:30:665 Kernel/(7074:7080): Se conecto un cliente!
+[INFO] 19:03:30:682 Kernel/(7074:7245): Entro a planificador a largo plazo.
+[INFO] 19:03:30:683 Kernel/(7074:7245): Paquete recibido.
+[INFO] 19:03:30:683 Kernel/(7074:7245): Se crea el proceso 3 en NEW
+[INFO] 19:03:30:683 Kernel/(7074:7245): PID: 3 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 19:03:54:527 Kernel/(7074:7080): Se conecto un cliente!
+[INFO] 19:03:54:537 Kernel/(7074:7269): Entro a planificador a largo plazo.
+[INFO] 19:03:54:537 Kernel/(7074:7269): Paquete recibido.
+[INFO] 19:03:54:538 Kernel/(7074:7269): Se crea el proceso 4 en NEW
+[INFO] 19:04:11:290 Kernel/(7074:7080): Se conecto un cliente!
+[INFO] 19:04:11:292 Kernel/(7074:7290): Entro a planificador a largo plazo.
+[INFO] 19:04:11:292 Kernel/(7074:7290): Paquete recibido.
+[INFO] 19:04:11:292 Kernel/(7074:7290): Se crea el proceso 5 en NEW
+[INFO] 19:04:44:280 Kernel/(7074:7080): Se conecto un cliente!
+[INFO] 19:04:44:291 Kernel/(7074:7315): Entro a planificador a largo plazo.
+[INFO] 19:04:44:292 Kernel/(7074:7315): Paquete recibido.
+[INFO] 19:04:44:292 Kernel/(7074:7315): Se crea el proceso 6 en NEW

@@ -32,3 +32,77 @@
 [INFO] 14:57:51:200 Consola/(6839:6844): 4
 [INFO] 14:57:51:200 Consola/(6839:6844): Conectado con kernel
 [INFO] 14:57:51:200 Consola/(6839:6839): Paquete enviado
+[INFO] 17:10:39:953 Consola/(4693:4703): 4
+[INFO] 17:10:39:962 Consola/(4693:4693): Paquete enviado
+[INFO] 17:11:11:273 Consola/(4757:4764): 4
+[INFO] 17:11:11:277 Consola/(4757:4764): Conectado con kernel
+[INFO] 17:11:11:278 Consola/(4757:4757): Paquete enviado
+[INFO] 17:14:32:219 Consola/(4863:4869): 4
+[INFO] 17:14:32:219 Consola/(4863:4869): Conectado con kernel
+[INFO] 17:14:32:220 Consola/(4863:4863): Paquete enviado
+[INFO] 17:16:37:162 Consola/(4935:4942): 4
+[INFO] 17:16:37:165 Consola/(4935:4935): Paquete enviado
+[INFO] 17:19:11:917 Consola/(5086:5100): 4
+[INFO] 17:19:11:918 Consola/(5086:5100): Conectado con kernel
+[INFO] 17:19:11:918 Consola/(5086:5086): Paquete enviado
+[INFO] 18:43:14:424 Consola/(5554:5560): 4
+[INFO] 18:43:14:432 Consola/(5554:5554): Paquete enviado
+[INFO] 18:44:18:523 Consola/(5681:5689): 4
+[INFO] 18:44:18:524 Consola/(5681:5689): Conectado con kernel
+[INFO] 18:44:18:525 Consola/(5681:5681): Paquete enviado
+[INFO] 18:46:54:909 Consola/(6018:6025): 4
+[INFO] 18:46:54:910 Consola/(6018:6018): Paquete enviado
+[INFO] 18:48:05:021 Consola/(6223:6230): 4
+[INFO] 18:48:05:034 Consola/(6223:6223): Paquete enviado
+[INFO] 18:48:34:814 Consola/(6293:6299): 4
+[INFO] 18:48:34:822 Consola/(6293:6293): Paquete enviado
+[INFO] 18:49:00:965 Consola/(6321:6327): 4
+[INFO] 18:49:00:966 Consola/(6321:6321): Paquete enviado
+[INFO] 18:50:43:243 Consola/(6449:6456): 4
+[INFO] 18:50:43:243 Consola/(6449:6449): Paquete enviado
+[INFO] 18:52:22:703 Consola/(6579:6585): 4
+[INFO] 18:52:22:703 Consola/(6579:6579): Paquete enviado
+[INFO] 18:52:33:078 Consola/(6599:6607): 4
+[INFO] 18:52:33:078 Consola/(6599:6607): Conectado con kernel
+[INFO] 18:52:33:078 Consola/(6599:6599): Paquete enviado
+[INFO] 18:52:45:674 Consola/(6621:6627): 4
+[INFO] 18:52:45:675 Consola/(6621:6621): Paquete enviado
+[INFO] 18:52:49:820 Consola/(6641:6648): 4
+[INFO] 18:52:49:820 Consola/(6641:6641): Paquete enviado
+[INFO] 18:54:33:117 Consola/(6726:6733): 4
+[INFO] 18:54:33:119 Consola/(6726:6726): Paquete enviado
+[INFO] 18:54:39:238 Consola/(6747:6753): 4
+[INFO] 18:54:39:238 Consola/(6747:6747): Paquete enviado
+[INFO] 18:56:01:124 Consola/(6854:6860): 4
+[INFO] 18:56:01:125 Consola/(6854:6854): Paquete enviado
+[INFO] 18:57:00:425 Consola/(6881:6887): 4
+[INFO] 18:57:00:426 Consola/(6881:6881): Paquete enviado
+[INFO] 18:59:00:578 Consola/(6966:6966): Instrucciones leidas
+[INFO] 18:59:00:578 Consola/(6966:6978): 4
+[INFO] 18:59:00:579 Consola/(6966:6966): Paquete enviado
+[INFO] 19:00:32:841 Consola/(7014:7014): Instrucciones leidas
+[INFO] 19:00:32:842 Consola/(7014:7021): 4
+[INFO] 19:00:32:842 Consola/(7014:7014): Paquete enviado
+[INFO] 19:01:15:786 Consola/(7093:7093): Instrucciones leidas
+[INFO] 19:01:15:787 Consola/(7093:7100): 4
+[INFO] 19:01:15:787 Consola/(7093:7093): Paquete enviado
+[INFO] 19:01:27:666 Consola/(7114:7114): Instrucciones leidas
+[INFO] 19:01:27:670 Consola/(7114:7120): 4
+[INFO] 19:01:27:674 Consola/(7114:7114): Paquete enviado
+[INFO] 19:01:43:615 Consola/(7134:7134): Instrucciones leidas
+[INFO] 19:01:43:615 Consola/(7134:7140): 4
+[INFO] 19:01:43:616 Consola/(7134:7134): Paquete enviado
+[INFO] 19:03:30:657 Consola/(7234:7234): Instrucciones leidas
+[INFO] 19:03:30:665 Consola/(7234:7244): Socket kernel :4
+[INFO] 19:03:30:666 Consola/(7234:7244): Conectado con kernel
+[INFO] 19:03:30:674 Consola/(7234:7234): Paquete enviado
+[INFO] 19:03:54:521 Consola/(7262:7262): Instrucciones leidas
+[INFO] 19:03:54:527 Consola/(7262:7268): Socket kernel :4
+[INFO] 19:03:54:535 Consola/(7262:7262): Paquete enviado
+[INFO] 19:04:11:289 Consola/(7282:7282): Instrucciones leidas
+[INFO] 19:04:11:290 Consola/(7282:7289): Socket kernel :4
+[INFO] 19:04:11:290 Consola/(7282:7289): Conectado con kernel
+[INFO] 19:04:11:290 Consola/(7282:7282): Paquete enviado
+[INFO] 19:04:44:270 Consola/(7307:7307): Instrucciones leidas
+[INFO] 19:04:44:279 Consola/(7307:7314): Socket kernel :4
+[INFO] 19:04:44:279 Consola/(7307:7307): Paquete enviado

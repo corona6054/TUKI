@@ -8,6 +8,7 @@ int main(int argc, char** argv){
 	char* instruccion_path=argv[2];
 	levantar_modulo(config_path);
 	crearLista(instruccion_path);
+	log_info(logger,"Instrucciones leidas");
 
 	sem_wait(&sem_conexion);
 	enviarLista();
@@ -26,9 +27,9 @@ void serializeInstruction(Instruction* instruction, void* stream, int offset) {
 	offset += sizeof(int);
 	memcpy(stream + offset, &instruction->numero2, sizeof(int));
 	offset += sizeof(int);
-	memcpy(stream + offset, &instruction->string1, sizeof(int));
+	memcpy(stream + offset, &instruction->string1, sizeof(char[15]));
 	offset += sizeof(char[15]);
-	memcpy(stream + offset, &instruction->string2, sizeof(int));
+	memcpy(stream + offset, &instruction->string2, sizeof(char[15]));
 	offset += sizeof(char[15]);
 	}
 
@@ -103,7 +104,7 @@ void establecer_conexiones()
 
 void conectarse_con_kernel(){
 	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
-	log_info(logger,"%d",socket_kernel);
+	log_info(logger,"Socket kernel :%d",socket_kernel);
 	if (socket_kernel >= 0){
 		sem_post(&sem_conexion);
 		log_info(logger,"Conectado con kernel");
