@@ -74,6 +74,7 @@ void recibir_mensaje(int socket_cliente)
 	log_info(logger, "Me llego el mensaje %s", buffer);
 	free(buffer);
 }
+/*    copiar y pegar en el modulo
 
 t_list* recibir_paquete(int socket_cliente)
 {
@@ -96,6 +97,7 @@ t_list* recibir_paquete(int socket_cliente)
 	free(buffer);
 	return valores;
 }
+*/
 
 int abrir_servidor(t_log* logger,t_config* config)
 {
