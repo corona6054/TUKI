@@ -17,6 +17,7 @@ t_list * espacios_libres;
 t_list * tabla_segmentos;
 Segment *segmento0;
 int *needed_memory;
+Segment *adjacent_seg;
 int *seg_maxsize;
 
 int main(void){
@@ -29,6 +30,13 @@ int main(void){
 	crearSegmento(p2,1,10);
 	list_iterate(tabla_segmentos,printList);
 	list_iterate(espacios_libres,printElement);
+
+	eliminarSegmento(p2,1);
+	eliminarSegmento(p1,2);
+	eliminarSegmento(p1,1);
+	list_iterate(tabla_segmentos,printList);
+	list_iterate(espacios_libres,printElement);
+
 
 
 
@@ -76,8 +84,13 @@ void crearSegmento(t_list* proceso,int id, int size){
 		}
 	}
 
-void eliminarSegmento(t_list* proceso, Segment *segmento){
-
+void eliminarSegmento(t_list* proceso, int id){
+	Segment* seg_viejo=malloc(sizeof(Segment));
+	seg_viejo =(Segment*)list_get(proceso,id);
+	sacarSegmento(seg_viejo);
+	seg_viejo->start = NULL;
+	seg_viejo->size =0;
+	list_replace(proceso,id,seg_viejo);
 }
 
 
@@ -108,11 +121,29 @@ void agregarSegmento(Segment *nuevo){
 	list_add(espacios_libres,seleccionado);
 }
 
+bool Adyacente(void* data){
+		Segment* element = (Segment*)data;
+		void* final_seg = adjacent_seg->start+adjacent_seg->size;
+		return (element->start == final_seg );
+
+}
+void sacarSegmento(Segment *viejo){
+	adjacent_seg->start = viejo->start;
+	adjacent_seg->size = viejo->size;
+	Segment *seleccionado;
+	seleccionado = malloc(sizeof(Segment));
+	seleccionado=(Segment*)list_remove_by_condition(espacios_libres,Adyacente);
+	seleccionado->start-=viejo->size;
+	seleccionado->size+=viejo->size;
+	list_add(espacios_libres,seleccionado);
+}
+
 
 int crearEstructuras(){
 	memoria_principal = malloc(config_memoria.tam_memoria);
 	segmento0 = malloc(sizeof(struct Segment));
 	needed_memory = malloc(sizeof(int));
+	adjacent_seg= malloc(sizeof(struct Segment));
 	seg_maxsize= malloc(sizeof(int));
 	*seg_maxsize= 128;
 	tabla_segmentos = list_create();

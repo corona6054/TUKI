@@ -45,10 +45,13 @@ void levantar_config();;
 
 int crearEstructuras();
 bool FirstFit(void* data);
+bool Adyacente(void* data);
 void printElement(void* ptr);
 void printList (void* ptr);
 void crearSegmento(t_list* proceso,int id, int size);
+void eliminarSegmento(t_list* proceso, int id);
 void agregarSegmento(Segment *nuevo);
+void sacarSegmento(Segment *viejo);
 t_list* crearProceso();
 void *pedidoLectura(int *direccion, int size);
 int pedidoEscritura(int *direccion, int size, void*nuevo_dato);
