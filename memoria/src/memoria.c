@@ -22,14 +22,14 @@ int *seg_maxsize;
 int main(void){
 	levantar_modulo();
 	crearEstructuras();
-	t_list *p1;
-	p1 = crearProceso(10);
-	list_add(tabla_segmentos,p1);
-	t_list *p2;
-	p2 = crearProceso(20);
-	list_add(tabla_segmentos,p2);
+	t_list *p1= crearProceso();
+	t_list *p2= crearProceso();
+	crearSegmento(p1,20);
+	crearSegmento(p1,30);
+	crearSegmento(p2,10);
 	list_iterate(tabla_segmentos,printList);
 	list_iterate(espacios_libres,printElement);
+
 
 
 	pedidoEscritura(memoria_principal,sizeof(int),needed_memory);
@@ -53,15 +53,17 @@ int pedidoEscritura(int *direccion, int size, void*nuevo_dato){
 	return 0;
 }
 
-
-t_list* crearProceso(int totalSize){
+t_list* crearProceso(){
 	t_list* proceso_nuevo= list_create();
 	list_add(proceso_nuevo,segmento0);
+	list_add(tabla_segmentos,proceso_nuevo);
+	return proceso_nuevo;
+}
+void crearSegmento(t_list* proceso, int totalSize){
 	Segment* seg_nuevo;
 	int currentSize=0;
-
 	while (currentSize < totalSize) {
-		if(list_size(proceso_nuevo)<config_memoria.cant_segmentos){
+		if(list_size(proceso)<config_memoria.cant_segmentos){
 		seg_nuevo= malloc(sizeof(Segment));
 		if(currentSize + *seg_maxsize <= totalSize){
 			seg_nuevo->size = *seg_maxsize;
@@ -69,12 +71,11 @@ t_list* crearProceso(int totalSize){
 			seg_nuevo->size= totalSize - currentSize;
 	}
 		agregarSegmento(seg_nuevo);
-		list_add(proceso_nuevo,seg_nuevo);
+		list_add(proceso,seg_nuevo);
 		}
-        currentSize += *needed_memory;
+        currentSize += seg_nuevo->size;
 
 	}
-	return proceso_nuevo;
 }
 
 
