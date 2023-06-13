@@ -18,16 +18,19 @@ t_list * tabla_segmentos;
 Segment *segmento0;
 int *needed_memory;
 int *seg_maxsize;
-
+void printList (void* ptr);
 
 int main(void){
 	levantar_modulo();
 	crearEstructuras();
 	t_list *p1;
-	p1 = crearProceso(480);
-	list_iterate(p1,printElement);
+	p1 = crearProceso(10);
+	list_add(tabla_segmentos,p1);
+	t_list *p2;
+	p2 = crearProceso(20);
+	list_add(tabla_segmentos,p2);
+	list_iterate(tabla_segmentos,printList);
 	list_iterate(espacios_libres,printElement);
-
 	//while(1);
 	finalizar_modulo();
 	return 0;
@@ -37,7 +40,9 @@ t_list* crearProceso(int totalSize){
 	list_add(proceso_nuevo,segmento0);
 	Segment* seg_nuevo;
 	int currentSize=0;
+
 	while (currentSize < totalSize) {
+		if(list_size(proceso_nuevo)<config_memoria.cant_segmentos){
 		seg_nuevo= malloc(sizeof(Segment));
 		if(currentSize + *seg_maxsize <= totalSize){
 			seg_nuevo->size = *seg_maxsize;
@@ -46,8 +51,10 @@ t_list* crearProceso(int totalSize){
 	}
 		agregar_segmento(seg_nuevo);
 		list_add(proceso_nuevo,seg_nuevo);
+		}
         currentSize += *needed_memory;
-}
+
+	}
 	return proceso_nuevo;
 }
 
@@ -56,6 +63,11 @@ bool FirstFit(void* data){
 		Segment* element = (Segment*)data;
 		int tamanio = element->size;
 		return (tamanio >= *needed_memory);
+
+}
+void printList (void* ptr) {
+	t_list* seleccionado = (t_list*) ptr;
+	list_iterate(seleccionado,printElement);
 
 }
 void printElement(void* ptr) {
@@ -81,6 +93,7 @@ int crearEstructuras(){
 	needed_memory = malloc(sizeof(int));
 	seg_maxsize= malloc(sizeof(int));
 	*seg_maxsize= 128;
+	tabla_segmentos = list_create();
 	espacios_libres = list_create();
 	Segment *inicial;
 	inicial = malloc(sizeof(struct Segment));
