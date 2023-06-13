@@ -10,42 +10,65 @@ int cpu_fd;
 int fileSystem_fd;
 int kernel_fd;
 
-typedef struct Segment {
-    void* start;
-    int size;
-} Segment;
 
 
 void *memoria_principal;
 t_list * espacios_libres;
 t_list * tabla_segmentos;
-Segment segmento0;
-int needed_memory;
+Segment *segmento0;
+int *needed_memory;
+int *seg_maxsize;
 
 
 int main(void){
 	levantar_modulo();
 	crearEstructuras();
-
+	t_list *p1;
+	p1 = crearProceso(480);
+	list_iterate(p1,printElement);
+	list_iterate(espacios_libres,printElement);
 
 	//while(1);
 	finalizar_modulo();
 	return 0;
 }
+t_list* crearProceso(int totalSize){
+	t_list* proceso_nuevo= list_create();
+	list_add(proceso_nuevo,segmento0);
+	Segment* seg_nuevo;
+	int currentSize=0;
+	while (currentSize < totalSize) {
+		seg_nuevo= malloc(sizeof(Segment));
+		if(currentSize + *seg_maxsize <= totalSize){
+			seg_nuevo->size = *seg_maxsize;
+		} else{
+			seg_nuevo->size= totalSize - currentSize;
+	}
+		agregar_segmento(seg_nuevo);
+		list_add(proceso_nuevo,seg_nuevo);
+        currentSize += *needed_memory;
+}
+	return proceso_nuevo;
+}
+
+
 bool FirstFit(void* data){
 		Segment* element = (Segment*)data;
 		int tamanio = element->size;
-		return (tamanio >= needed_memory);
+		return (tamanio >= *needed_memory);
 
 }
 void printElement(void* ptr) {
 	Segment* seleccionado = (Segment*) ptr;
-    printf("start: %d\n", seleccionado->start);
+    printf("start: %p\n", seleccionado->start);
     printf("size: %d\n", seleccionado->size);
 }
 void agregar_segmento(Segment *nuevo){
-	needed_memory = nuevo->size;
-	Segment *seleccionado=(Segment*)list_remove_by_condition(espacios_libres,FirstFit);
+	*needed_memory = nuevo->size;
+	Segment *seleccionado;
+	seleccionado = malloc(sizeof(Segment));
+	seleccionado=(Segment*)list_remove_by_condition(espacios_libres,FirstFit);
+	nuevo->start = seleccionado->start;
 	seleccionado->start+=nuevo->size;
 	seleccionado->size-=nuevo->size;
 	list_add(espacios_libres,seleccionado);
@@ -54,17 +77,20 @@ void agregar_segmento(Segment *nuevo){
 
 int crearEstructuras(){
 	memoria_principal = malloc(config_memoria.tam_memoria);
+	segmento0 = malloc(sizeof(struct Segment));
+	needed_memory = malloc(sizeof(int));
+	seg_maxsize= malloc(sizeof(int));
+	*seg_maxsize= 128;
 	espacios_libres = list_create();
-	Segment inicial;
-	inicial.start =memoria_principal;
-	inicial.size =config_memoria.tam_memoria;
-	list_add(espacios_libres,&inicial);
-	list_iterate(espacios_libres,printElement);
-	segmento0.start = memoria_principal;
-	segmento0.size = config_memoria.tam_segmento_0;
-	agregar_segmento(&segmento0);
-	list_iterate(espacios_libres,printElement);
-	printf("Estructuras creadas \n");
+	Segment *inicial;
+	inicial = malloc(sizeof(struct Segment));
+	inicial->start =memoria_principal;
+	inicial->size =config_memoria.tam_memoria;
+	list_add(espacios_libres,inicial);
+	segmento0->start = memoria_principal;
+	segmento0->size = config_memoria.tam_segmento_0;
+	agregar_segmento(segmento0);
+	log_info(logger,"Estructuras creadas");
 	return 0;
 }
 

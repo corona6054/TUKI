@@ -30,6 +30,10 @@ int cpu_fd;
 int fileSystem_fd;
 int kernel_fd;
 
+typedef struct Segment {
+    void* start;
+    int size;
+} Segment;
 
 // Prototipos funciones
 void levantar_modulo();
@@ -40,6 +44,12 @@ t_config* iniciar_config(void);
 void levantar_config();;
 
 int crearEstructuras();
+bool FirstFit(void* data);
+void printElement(void* ptr);
+void agregar_segmento(Segment *nuevo);
+t_list* crearProceso(int totalSize);
+
+
 void levantar_modulo();
 void establecer_conexiones();
 
