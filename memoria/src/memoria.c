@@ -32,8 +32,8 @@ int main(void){
 	list_iterate(espacios_libres,printElement);
 
 	eliminarSegmento(p2,1);
-	eliminarSegmento(p1,2);
 	eliminarSegmento(p1,1);
+	eliminarSegmento(p1,2);
 	list_iterate(tabla_segmentos,printList);
 	list_iterate(espacios_libres,printElement);
 
@@ -49,6 +49,24 @@ int main(void){
 	finalizar_modulo();
 	return 0;
 }
+
+void element_destroyer(void* data) {
+    Segment* elemento = (Segment*)data;
+    free(elemento);
+}
+
+Algorithm selectAlgorithm(char* input) {
+    if (strcmp(input, "FIRST") == 0) {
+        return FIRST;
+    } else if (strcmp(input, "BEST") == 0) {
+        return BEST;
+    } else if (strcmp(input, "WORST") == 0) {
+        return WORST;
+    } else {
+        return -1;
+    }
+}
+
 
 void *pedidoLectura(int *direccion, int size){
 	void *leido= malloc(size);
@@ -92,7 +110,11 @@ void eliminarSegmento(t_list* proceso, int id){
 	seg_viejo->size =0;
 	list_replace(proceso,id,seg_viejo);
 }
+bool Equivalente(void* data){
+		Segment* element = (Segment*)data;
+		return (element->start == adjacent_seg->start);
 
+}
 
 bool FirstFit(void* data){
 		Segment* element = (Segment*)data;
@@ -100,6 +122,19 @@ bool FirstFit(void* data){
 		return (tamanio >= *needed_memory);
 
 }
+
+void* BestFit(void* a, void* b) {
+    Segment* segA = (Segment*)a;
+    Segment* SegB = (Segment*)b;
+    return (segA->size > SegB->size) ? a : b;
+}
+
+void* WorstFit(void* a, void* b) {
+    Segment* segA = (Segment*)a;
+    Segment* SegB = (Segment*)b;
+    return (segA->size > SegB->size) ? b : a;
+}
+
 void printList (void* ptr) {
 	t_list* seleccionado = (t_list*) ptr;
 	list_iterate(seleccionado,printElement);
@@ -114,7 +149,21 @@ void agregarSegmento(Segment *nuevo){
 	*needed_memory = nuevo->size;
 	Segment *seleccionado;
 	seleccionado = malloc(sizeof(Segment));
-	seleccionado=(Segment*)list_remove_by_condition(espacios_libres,FirstFit);
+	switch(config_memoria.algoritmos_asignacion){
+		case FIRST:
+		seleccionado=(Segment*)list_remove_by_condition(espacios_libres,FirstFit);
+		break;
+		case BEST:
+		seleccionado=(Segment*)list_get_maximum(espacios_libres,BestFit);
+		adjacent_seg->start=seleccionado->start;
+		seleccionado=(Segment*)list_remove_by_condition(espacios_libres,Equivalente);
+		break;
+		case WORST:
+		seleccionado=(Segment*)list_get_minimum(espacios_libres,WorstFit);
+		adjacent_seg->start=seleccionado->start;
+		seleccionado=(Segment*)list_remove_by_condition(espacios_libres,Equivalente);
+		break;
+	}
 	nuevo->start = seleccionado->start;
 	seleccionado->start+=nuevo->size;
 	seleccionado->size-=nuevo->size;
@@ -133,9 +182,16 @@ void sacarSegmento(Segment *viejo){
 	Segment *seleccionado;
 	seleccionado = malloc(sizeof(Segment));
 	seleccionado=(Segment*)list_remove_by_condition(espacios_libres,Adyacente);
+	if(seleccionado!=NULL){
 	seleccionado->start-=viejo->size;
 	seleccionado->size+=viejo->size;
 	list_add(espacios_libres,seleccionado);
+	}else{
+		seleccionado = malloc(sizeof(Segment));
+		seleccionado->start =viejo->start;
+		seleccionado->size =viejo->size;
+		list_add(espacios_libres,seleccionado);
+	}
 }
 
 
@@ -206,7 +262,7 @@ void levantar_config(){
 	config_memoria.cant_segmentos = config_get_int_value(config,"CANT_SEGMENTOS");
 	config_memoria.retardo_memoria = config_get_int_value(config,"RETARDO_MEMORIA");
 	config_memoria.retardo_compactacion = config_get_int_value(config,"RETARDO_COMPACTACION");
-	config_memoria.algoritmos_asignacion = config_get_string_value(config,"ALGORITMO_ASIGNACION");
+	config_memoria.algoritmos_asignacion = 	selectAlgorithm(config_get_string_value(config,"ALGORITMO_ASIGNACION"));
 }
 
 void establecer_conexiones()

@@ -16,7 +16,7 @@ typedef struct{
 	int cant_segmentos;
 	int retardo_memoria;
 	int retardo_compactacion;
-	char *algoritmos_asignacion;
+	int algoritmos_asignacion;
 }Config_memoria;
 
 // Variables globales
@@ -29,6 +29,12 @@ int server_fd;
 int cpu_fd;
 int fileSystem_fd;
 int kernel_fd;
+
+typedef enum {
+    FIRST,
+    BEST,
+    WORST
+} Algorithm;
 
 typedef struct Segment {
     void* start;
@@ -43,6 +49,8 @@ t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();;
 
+
+Algorithm selectAlgorithm(char* input);
 int crearEstructuras();
 bool FirstFit(void* data);
 bool Adyacente(void* data);
