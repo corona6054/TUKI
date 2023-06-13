@@ -87,7 +87,6 @@ int crearEstructuras(){
 	inicial->start =memoria_principal;
 	inicial->size =config_memoria.tam_memoria;
 	list_add(espacios_libres,inicial);
-	segmento0->start = memoria_principal;
 	segmento0->size = config_memoria.tam_segmento_0;
 	agregar_segmento(segmento0);
 	log_info(logger,"Estructuras creadas");
