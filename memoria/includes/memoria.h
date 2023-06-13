@@ -46,8 +46,11 @@ void levantar_config();;
 int crearEstructuras();
 bool FirstFit(void* data);
 void printElement(void* ptr);
-void agregar_segmento(Segment *nuevo);
+void printList (void* ptr);
+void agregarSegmento(Segment *nuevo);
 t_list* crearProceso(int totalSize);
+void *pedidoLectura(int *direccion, int size);
+int pedidoEscritura(int *direccion, int size, void*nuevo_dato);
 
 
 void levantar_modulo();

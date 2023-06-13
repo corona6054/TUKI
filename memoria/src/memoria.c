@@ -18,7 +18,6 @@ t_list * tabla_segmentos;
 Segment *segmento0;
 int *needed_memory;
 int *seg_maxsize;
-void printList (void* ptr);
 
 int main(void){
 	levantar_modulo();
@@ -31,10 +30,30 @@ int main(void){
 	list_add(tabla_segmentos,p2);
 	list_iterate(tabla_segmentos,printList);
 	list_iterate(espacios_libres,printElement);
+
+
+	pedidoEscritura(memoria_principal,sizeof(int),needed_memory);
+	printf("Pedido lectura %d \n", *(int*)pedidoLectura(memoria_principal,sizeof(int)));
+
+
+
 	//while(1);
 	finalizar_modulo();
 	return 0;
 }
+
+void *pedidoLectura(int *direccion, int size){
+	void *leido= malloc(size);
+	memcpy(leido,direccion,size);
+	return leido;
+}
+
+int pedidoEscritura(int *direccion, int size, void*nuevo_dato){
+	memcpy(direccion,nuevo_dato,size);
+	return 0;
+}
+
+
 t_list* crearProceso(int totalSize){
 	t_list* proceso_nuevo= list_create();
 	list_add(proceso_nuevo,segmento0);
@@ -49,7 +68,7 @@ t_list* crearProceso(int totalSize){
 		} else{
 			seg_nuevo->size= totalSize - currentSize;
 	}
-		agregar_segmento(seg_nuevo);
+		agregarSegmento(seg_nuevo);
 		list_add(proceso_nuevo,seg_nuevo);
 		}
         currentSize += *needed_memory;
@@ -75,7 +94,7 @@ void printElement(void* ptr) {
     printf("start: %p\n", seleccionado->start);
     printf("size: %d\n", seleccionado->size);
 }
-void agregar_segmento(Segment *nuevo){
+void agregarSegmento(Segment *nuevo){
 	*needed_memory = nuevo->size;
 	Segment *seleccionado;
 	seleccionado = malloc(sizeof(Segment));
@@ -101,7 +120,7 @@ int crearEstructuras(){
 	inicial->size =config_memoria.tam_memoria;
 	list_add(espacios_libres,inicial);
 	segmento0->size = config_memoria.tam_segmento_0;
-	agregar_segmento(segmento0);
+	agregarSegmento(segmento0);
 	log_info(logger,"Estructuras creadas");
 	return 0;
 }
