@@ -47,7 +47,7 @@ int crearEstructuras();
 bool FirstFit(void* data);
 void printElement(void* ptr);
 void printList (void* ptr);
-void crearSegmento(t_list* proceso, int totalSize);
+void crearSegmento(t_list* proceso,int id, int size);
 void agregarSegmento(Segment *nuevo);
 t_list* crearProceso();
 void *pedidoLectura(int *direccion, int size);

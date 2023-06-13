@@ -24,9 +24,9 @@ int main(void){
 	crearEstructuras();
 	t_list *p1= crearProceso();
 	t_list *p2= crearProceso();
-	crearSegmento(p1,20);
-	crearSegmento(p1,30);
-	crearSegmento(p2,10);
+	crearSegmento(p1,1,20);
+	crearSegmento(p1,2,30);
+	crearSegmento(p2,1,10);
 	list_iterate(tabla_segmentos,printList);
 	list_iterate(espacios_libres,printElement);
 
@@ -56,26 +56,28 @@ int pedidoEscritura(int *direccion, int size, void*nuevo_dato){
 t_list* crearProceso(){
 	t_list* proceso_nuevo= list_create();
 	list_add(proceso_nuevo,segmento0);
+	Segment* seg_nuevo;
+	for(int i =1;i<config_memoria.cant_segmentos; i++){
+		seg_nuevo=malloc(sizeof(Segment));
+		seg_nuevo->start =NULL;
+		seg_nuevo->size =0;
+		list_add(proceso_nuevo,seg_nuevo);
+	}
 	list_add(tabla_segmentos,proceso_nuevo);
 	return proceso_nuevo;
 }
-void crearSegmento(t_list* proceso, int totalSize){
-	Segment* seg_nuevo;
-	int currentSize=0;
-	while (currentSize < totalSize) {
-		if(list_size(proceso)<config_memoria.cant_segmentos){
-		seg_nuevo= malloc(sizeof(Segment));
-		if(currentSize + *seg_maxsize <= totalSize){
-			seg_nuevo->size = *seg_maxsize;
-		} else{
-			seg_nuevo->size= totalSize - currentSize;
-	}
+void crearSegmento(t_list* proceso,int id, int size){
+	Segment* seg_nuevo=malloc(sizeof(Segment));
+	seg_nuevo =(Segment*)list_get(proceso,id);
+	if (seg_nuevo->size==0&&id<16){
+		seg_nuevo->size = size;
 		agregarSegmento(seg_nuevo);
-		list_add(proceso,seg_nuevo);
+		list_replace(proceso,id,seg_nuevo);
 		}
-        currentSize += seg_nuevo->size;
-
 	}
+
+void eliminarSegmento(t_list* proceso, Segment *segmento){
+
 }
 
 
