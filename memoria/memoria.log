@@ -202,3 +202,532 @@
 [INFO] 20:39:04:819 Memoria/(51789:51789): PID: 1 - CrearSeg: 1 - Base: 0x5556015e0940 - TAMAÑO: 32
 [INFO] 20:39:04:819 Memoria/(51789:51789): PID: 0 - EliminarSeg: 1 - Base: 0x5556015e08e0 - TAMAÑO: 64
 [INFO] 20:39:04:821 Memoria/(51789:51789): Solicitud Compactación
+[INFO] 21:41:24:908 Memoria/(52547:52547): Estructuras creadas
+[INFO] 21:41:24:908 Memoria/(52547:52547): Creación Proceso PID: 0
+[INFO] 21:41:24:908 Memoria/(52547:52547): Creación Proceso PID: 1
+[INFO] 21:41:24:908 Memoria/(52547:52547): PID: 0 - CrearSeg: 1 - Base: 0x5617672e08e0 - TAMAÑO: 64
+[INFO] 21:41:24:909 Memoria/(52547:52547): PID: 0 - CrearSeg: 2 - Base: 0x5617672e0920 - TAMAÑO: 32
+[INFO] 21:41:24:909 Memoria/(52547:52547): PID: 1 - CrearSeg: 1 - Base: 0x5617672e0940 - TAMAÑO: 32
+[INFO] 21:41:24:909 Memoria/(52547:52547): PID: 0 - EliminarSeg: 1 - Base: 0x5617672e08e0 - TAMAÑO: 64
+[INFO] 21:41:24:909 Memoria/(52547:52547): Solicitud Compactación
+[INFO] 21:43:16:566 Memoria/(52764:52764): Estructuras creadas
+[INFO] 21:43:16:567 Memoria/(52764:52764): Creación Proceso PID: 0
+[INFO] 21:43:16:567 Memoria/(52764:52764): Creación Proceso PID: 1
+[INFO] 21:43:16:567 Memoria/(52764:52764): PID: 0 - CrearSeg: 1 - Base: 0x56303b0398e0 - TAMAÑO: 64
+[INFO] 21:43:16:567 Memoria/(52764:52764): PID: 0 - CrearSeg: 2 - Base: 0x56303b039920 - TAMAÑO: 32
+[INFO] 21:43:16:567 Memoria/(52764:52764): PID: 1 - CrearSeg: 1 - Base: 0x56303b039940 - TAMAÑO: 32
+[INFO] 21:43:16:567 Memoria/(52764:52764): PID: 0 - EliminarSeg: 1 - Base: 0x56303b0398e0 - TAMAÑO: 64
+[INFO] 21:43:16:568 Memoria/(52764:52764): Solicitud Compactación
+[INFO] 21:52:09:253 Memoria/(53880:53880): Estructuras creadas
+[INFO] 21:52:09:253 Memoria/(53880:53880): Creación Proceso PID: 0
+[INFO] 21:52:09:253 Memoria/(53880:53880): Creación Proceso PID: 1
+[INFO] 21:52:09:253 Memoria/(53880:53880): PID: 0 - CrearSeg: 1 - Base: 0x5556aa3b78e0 - TAMAÑO: 64
+[INFO] 21:52:09:253 Memoria/(53880:53880): PID: 0 - CrearSeg: 2 - Base: 0x5556aa3b7920 - TAMAÑO: 32
+[INFO] 21:52:09:253 Memoria/(53880:53880): PID: 1 - CrearSeg: 1 - Base: 0x5556aa3b7940 - TAMAÑO: 32
+[INFO] 21:52:09:254 Memoria/(53880:53880): PID: 0 - EliminarSeg: 1 - Base: 0x5556aa3b78e0 - TAMAÑO: 64
+[INFO] 21:52:09:254 Memoria/(53880:53880): Solicitud Compactación
+[INFO] 21:54:44:609 Memoria/(54040:54040): Estructuras creadas
+[INFO] 21:54:44:609 Memoria/(54040:54040): Creación Proceso PID: 0
+[INFO] 21:54:44:609 Memoria/(54040:54040): Creación Proceso PID: 1
+[INFO] 21:54:44:609 Memoria/(54040:54040): PID: 0 - CrearSeg: 1 - Base: 0x55ce738958e0 - TAMAÑO: 64
+[INFO] 21:54:44:609 Memoria/(54040:54040): PID: 0 - CrearSeg: 2 - Base: 0x55ce73895920 - TAMAÑO: 32
+[INFO] 21:54:44:609 Memoria/(54040:54040): PID: 1 - CrearSeg: 1 - Base: 0x55ce73895940 - TAMAÑO: 32
+[INFO] 21:54:44:609 Memoria/(54040:54040): PID: 0 - EliminarSeg: 1 - Base: 0x55ce738958e0 - TAMAÑO: 64
+[INFO] 21:54:44:610 Memoria/(54040:54040): Solicitud Compactación
+[INFO] 21:55:03:363 Memoria/(54087:54087): Estructuras creadas
+[INFO] 21:55:03:363 Memoria/(54087:54087): Creación Proceso PID: 0
+[INFO] 21:55:03:363 Memoria/(54087:54087): Creación Proceso PID: 1
+[INFO] 21:55:03:363 Memoria/(54087:54087): PID: 0 - CrearSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 21:55:03:363 Memoria/(54087:54087): PID: 0 - CrearSeg: 2 - Base: 0x55555555a920 - TAMAÑO: 32
+[INFO] 21:55:03:363 Memoria/(54087:54087): PID: 1 - CrearSeg: 1 - Base: 0x55555555a940 - TAMAÑO: 32
+[INFO] 21:55:05:509 Memoria/(54087:54087): PID: 0 - EliminarSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 21:55:05:509 Memoria/(54087:54087): Solicitud Compactación
+[INFO] 21:56:46:415 Memoria/(54201:54201): Estructuras creadas
+[INFO] 21:56:46:415 Memoria/(54201:54201): Creación Proceso PID: 0
+[INFO] 21:56:46:415 Memoria/(54201:54201): Creación Proceso PID: 1
+[INFO] 21:56:46:416 Memoria/(54201:54201): PID: 0 - CrearSeg: 1 - Base: 0x561a898e28e0 - TAMAÑO: 64
+[INFO] 21:56:46:416 Memoria/(54201:54201): PID: 0 - CrearSeg: 2 - Base: 0x561a898e2920 - TAMAÑO: 32
+[INFO] 21:56:46:416 Memoria/(54201:54201): PID: 1 - CrearSeg: 1 - Base: 0x561a898e2940 - TAMAÑO: 32
+[INFO] 21:56:46:416 Memoria/(54201:54201): PID: 0 - EliminarSeg: 1 - Base: 0x561a898e28e0 - TAMAÑO: 64
+[INFO] 21:56:46:417 Memoria/(54201:54201): Solicitud Compactación
+[INFO] 21:58:50:470 Memoria/(54288:54288): Estructuras creadas
+[INFO] 21:58:50:470 Memoria/(54288:54288): Creación Proceso PID: 0
+[INFO] 21:58:50:470 Memoria/(54288:54288): Creación Proceso PID: 1
+[INFO] 21:58:50:470 Memoria/(54288:54288): PID: 0 - CrearSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 21:58:50:470 Memoria/(54288:54288): PID: 0 - CrearSeg: 2 - Base: 0x55555555a920 - TAMAÑO: 32
+[INFO] 21:58:50:470 Memoria/(54288:54288): PID: 1 - CrearSeg: 1 - Base: 0x55555555a940 - TAMAÑO: 32
+[INFO] 21:58:50:470 Memoria/(54288:54288): PID: 0 - EliminarSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 21:58:50:470 Memoria/(54288:54288): Solicitud Compactación
+[INFO] 21:59:13:604 Memoria/(54372:54372): Estructuras creadas
+[INFO] 21:59:13:604 Memoria/(54372:54372): Creación Proceso PID: 0
+[INFO] 21:59:13:605 Memoria/(54372:54372): Creación Proceso PID: 1
+[INFO] 21:59:13:605 Memoria/(54372:54372): PID: 0 - CrearSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 21:59:13:605 Memoria/(54372:54372): PID: 0 - CrearSeg: 2 - Base: 0x55555555a920 - TAMAÑO: 32
+[INFO] 21:59:13:605 Memoria/(54372:54372): PID: 1 - CrearSeg: 1 - Base: 0x55555555a940 - TAMAÑO: 32
+[INFO] 21:59:13:605 Memoria/(54372:54372): PID: 0 - EliminarSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 21:59:22:892 Memoria/(54372:54372): Estructuras terminadas
+[INFO] 21:59:54:584 Memoria/(54490:54490): Estructuras creadas
+[INFO] 21:59:54:585 Memoria/(54490:54490): Creación Proceso PID: 0
+[INFO] 21:59:54:585 Memoria/(54490:54490): Creación Proceso PID: 1
+[INFO] 21:59:54:585 Memoria/(54490:54490): PID: 0 - CrearSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 21:59:54:585 Memoria/(54490:54490): PID: 0 - CrearSeg: 2 - Base: 0x55555555a920 - TAMAÑO: 32
+[INFO] 21:59:54:585 Memoria/(54490:54490): PID: 1 - CrearSeg: 1 - Base: 0x55555555a940 - TAMAÑO: 32
+[INFO] 21:59:54:585 Memoria/(54490:54490): PID: 0 - EliminarSeg: 1 - Base: 0x55555555a8e0 - TAMAÑO: 64
+[INFO] 22:00:00:912 Memoria/(54490:54490): Solicitud Compactación
+[INFO] 22:00:51:202 Memoria/(54584:54584): Estructuras creadas
+[INFO] 22:00:51:202 Memoria/(54584:54584): Creación Proceso PID: 0
+[INFO] 22:00:51:202 Memoria/(54584:54584): Creación Proceso PID: 1
+[INFO] 22:00:51:203 Memoria/(54584:54584): PID: 0 - CrearSeg: 1 - Base: 0x55d8142dc8e0 - TAMAÑO: 64
+[INFO] 22:00:51:203 Memoria/(54584:54584): PID: 0 - CrearSeg: 2 - Base: 0x55d8142dc920 - TAMAÑO: 32
+[INFO] 22:00:51:203 Memoria/(54584:54584): PID: 1 - CrearSeg: 1 - Base: 0x55d8142dc940 - TAMAÑO: 32
+[INFO] 22:00:51:203 Memoria/(54584:54584): PID: 0 - EliminarSeg: 1 - Base: 0x55d8142dc8e0 - TAMAÑO: 64
+[INFO] 22:00:51:205 Memoria/(54584:54584): Solicitud Compactación
+[INFO] 22:00:51:205 Memoria/(54584:54584): Estructuras terminadas
+[INFO] 22:01:26:761 Memoria/(54615:54615): Estructuras creadas
+[INFO] 22:01:26:921 Memoria/(54615:54615): Creación Proceso PID: 0
+[INFO] 22:01:26:926 Memoria/(54615:54615): Creación Proceso PID: 1
+[INFO] 22:01:26:943 Memoria/(54615:54615): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:01:26:945 Memoria/(54615:54615): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:01:26:951 Memoria/(54615:54615): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:01:26:958 Memoria/(54615:54615): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:01:26:980 Memoria/(54615:54615): Solicitud Compactación
+[INFO] 22:01:27:045 Memoria/(54615:54615): Estructuras terminadas
+[INFO] 22:02:07:747 Memoria/(54751:54751): Estructuras creadas
+[INFO] 22:02:07:910 Memoria/(54751:54751): Creación Proceso PID: 0
+[INFO] 22:02:07:917 Memoria/(54751:54751): Creación Proceso PID: 1
+[INFO] 22:02:07:928 Memoria/(54751:54751): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:02:07:931 Memoria/(54751:54751): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:02:07:933 Memoria/(54751:54751): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:02:07:938 Memoria/(54751:54751): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:02:07:956 Memoria/(54751:54751): Solicitud Compactación
+[INFO] 22:02:07:991 Memoria/(54751:54751): Estructuras terminadas
+[INFO] 22:04:24:574 Memoria/(54972:54972): Estructuras creadas
+[INFO] 22:04:24:820 Memoria/(54972:54972): Creación Proceso PID: 0
+[INFO] 22:04:24:826 Memoria/(54972:54972): Creación Proceso PID: 1
+[INFO] 22:04:24:837 Memoria/(54972:54972): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:04:24:839 Memoria/(54972:54972): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:04:24:842 Memoria/(54972:54972): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:04:24:849 Memoria/(54972:54972): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:04:24:867 Memoria/(54972:54972): Solicitud Compactación
+[INFO] 22:04:24:902 Memoria/(54972:54972): Estructuras terminadas
+[INFO] 22:04:56:075 Memoria/(55458:55458): Estructuras creadas
+[INFO] 22:04:56:233 Memoria/(55458:55458): Creación Proceso PID: 0
+[INFO] 22:04:56:239 Memoria/(55458:55458): Creación Proceso PID: 1
+[INFO] 22:04:56:251 Memoria/(55458:55458): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:04:56:252 Memoria/(55458:55458): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:04:56:253 Memoria/(55458:55458): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:04:56:259 Memoria/(55458:55458): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:04:56:272 Memoria/(55458:55458): Solicitud Compactación
+[INFO] 22:04:56:324 Memoria/(55458:55458): Estructuras terminadas
+[INFO] 22:08:31:858 Memoria/(55735:55735): Estructuras creadas
+[INFO] 22:08:32:014 Memoria/(55735:55735): Creación Proceso PID: 0
+[INFO] 22:08:32:023 Memoria/(55735:55735): Creación Proceso PID: 1
+[INFO] 22:08:32:035 Memoria/(55735:55735): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:08:32:037 Memoria/(55735:55735): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:08:32:039 Memoria/(55735:55735): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:08:32:044 Memoria/(55735:55735): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:08:32:058 Memoria/(55735:55735): Solicitud Compactación
+[INFO] 22:08:32:088 Memoria/(55735:55735): Estructuras terminadas
+[INFO] 22:10:26:783 Memoria/(55979:55979): Estructuras creadas
+[INFO] 22:10:26:937 Memoria/(55979:55979): Creación Proceso PID: 0
+[INFO] 22:10:26:944 Memoria/(55979:55979): Creación Proceso PID: 1
+[INFO] 22:10:26:956 Memoria/(55979:55979): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:10:26:958 Memoria/(55979:55979): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:10:26:959 Memoria/(55979:55979): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:10:26:967 Memoria/(55979:55979): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:10:26:981 Memoria/(55979:55979): Solicitud Compactación
+[INFO] 22:10:27:018 Memoria/(55979:55979): Estructuras terminadas
+[INFO] 22:12:06:266 Memoria/(56153:56153): Estructuras creadas
+[INFO] 22:12:06:454 Memoria/(56153:56153): Creación Proceso PID: 0
+[INFO] 22:12:06:476 Memoria/(56153:56153): Creación Proceso PID: 1
+[INFO] 22:12:06:502 Memoria/(56153:56153): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:12:06:504 Memoria/(56153:56153): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:12:06:505 Memoria/(56153:56153): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:12:06:514 Memoria/(56153:56153): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:12:06:534 Memoria/(56153:56153): Solicitud Compactación
+[INFO] 22:12:06:567 Memoria/(56153:56153): Estructuras terminadas
+[INFO] 22:13:00:666 Memoria/(56339:56339): Estructuras creadas
+[INFO] 22:13:00:845 Memoria/(56339:56339): Creación Proceso PID: 0
+[INFO] 22:13:00:851 Memoria/(56339:56339): Creación Proceso PID: 1
+[INFO] 22:13:00:864 Memoria/(56339:56339): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:13:00:866 Memoria/(56339:56339): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:13:00:867 Memoria/(56339:56339): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:13:00:874 Memoria/(56339:56339): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:13:00:893 Memoria/(56339:56339): Solicitud Compactación
+[INFO] 22:13:00:927 Memoria/(56339:56339): Estructuras terminadas
+[INFO] 22:17:43:184 Memoria/(56731:56731): Estructuras creadas
+[INFO] 22:17:43:353 Memoria/(56731:56731): Creación Proceso PID: 0
+[INFO] 22:17:43:360 Memoria/(56731:56731): Creación Proceso PID: 1
+[INFO] 22:17:43:372 Memoria/(56731:56731): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:17:43:374 Memoria/(56731:56731): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:17:43:376 Memoria/(56731:56731): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:17:43:384 Memoria/(56731:56731): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:17:43:400 Memoria/(56731:56731): Solicitud Compactación
+[INFO] 22:17:43:433 Memoria/(56731:56731): Estructuras terminadas
+[INFO] 22:18:07:887 Memoria/(56891:56891): Estructuras creadas
+[INFO] 22:18:08:056 Memoria/(56891:56891): Creación Proceso PID: 0
+[INFO] 22:18:08:065 Memoria/(56891:56891): Creación Proceso PID: 1
+[INFO] 22:18:08:077 Memoria/(56891:56891): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:18:08:079 Memoria/(56891:56891): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:18:08:080 Memoria/(56891:56891): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:18:08:086 Memoria/(56891:56891): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:18:08:100 Memoria/(56891:56891): Solicitud Compactación
+[INFO] 22:18:08:132 Memoria/(56891:56891): Estructuras terminadas
+[INFO] 22:21:32:682 Memoria/(57083:57083): Estructuras creadas
+[INFO] 22:21:32:958 Memoria/(57083:57083): Creación Proceso PID: 0
+[INFO] 22:21:32:966 Memoria/(57083:57083): Creación Proceso PID: 1
+[INFO] 22:21:32:978 Memoria/(57083:57083): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:21:32:980 Memoria/(57083:57083): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:21:32:981 Memoria/(57083:57083): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:21:32:988 Memoria/(57083:57083): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:21:33:004 Memoria/(57083:57083): Solicitud Compactación
+[INFO] 22:21:33:040 Memoria/(57083:57083): Estructuras terminadas
+[INFO] 22:22:05:931 Memoria/(57265:57265): Estructuras creadas
+[INFO] 22:22:06:086 Memoria/(57265:57265): Creación Proceso PID: 0
+[INFO] 22:22:06:096 Memoria/(57265:57265): Creación Proceso PID: 1
+[INFO] 22:22:06:108 Memoria/(57265:57265): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:22:06:110 Memoria/(57265:57265): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:22:06:111 Memoria/(57265:57265): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:22:06:118 Memoria/(57265:57265): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:22:06:132 Memoria/(57265:57265): Solicitud Compactación
+[INFO] 22:22:06:166 Memoria/(57265:57265): Estructuras terminadas
+[INFO] 22:23:52:137 Memoria/(57448:57448): Estructuras creadas
+[INFO] 22:23:52:309 Memoria/(57448:57448): Estructuras terminadas
+[INFO] 22:27:06:179 Memoria/(57542:57542): Estructuras creadas
+[INFO] 22:27:06:481 Memoria/(57542:57542): Estructuras terminadas
+[INFO] 22:27:31:361 Memoria/(57653:57653): Estructuras creadas
+[INFO] 22:27:31:532 Memoria/(57653:57653): Estructuras terminadas
+[INFO] 22:28:40:756 Memoria/(57718:57718): Estructuras creadas
+[INFO] 22:28:40:924 Memoria/(57718:57718): Estructuras terminadas
+[INFO] 22:29:21:829 Memoria/(57804:57804): Estructuras creadas
+[INFO] 22:29:21:989 Memoria/(57804:57804): Creación Proceso PID: 0
+[INFO] 22:29:21:994 Memoria/(57804:57804): Creación Proceso PID: 1
+[INFO] 22:29:22:006 Memoria/(57804:57804): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:29:22:011 Memoria/(57804:57804): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:29:22:013 Memoria/(57804:57804): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:29:22:020 Memoria/(57804:57804): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:29:22:033 Memoria/(57804:57804): Solicitud Compactación
+[INFO] 22:29:22:061 Memoria/(57804:57804): Estructuras terminadas
+[INFO] 22:30:32:745 Memoria/(57935:57935): Estructuras creadas
+[INFO] 22:30:32:901 Memoria/(57935:57935): Creación Proceso PID: 0
+[INFO] 22:30:32:907 Memoria/(57935:57935): Creación Proceso PID: 1
+[INFO] 22:30:32:921 Memoria/(57935:57935): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:30:32:923 Memoria/(57935:57935): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:30:32:924 Memoria/(57935:57935): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:30:32:930 Memoria/(57935:57935): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:30:32:948 Memoria/(57935:57935): Solicitud Compactación
+[INFO] 22:30:32:975 Memoria/(57935:57935): Estructuras terminadas
+[INFO] 22:31:36:332 Memoria/(58054:58054): Estructuras creadas
+[INFO] 22:31:36:486 Memoria/(58054:58054): Creación Proceso PID: 0
+[INFO] 22:31:36:492 Memoria/(58054:58054): Creación Proceso PID: 1
+[INFO] 22:31:36:504 Memoria/(58054:58054): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:31:36:505 Memoria/(58054:58054): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:31:36:507 Memoria/(58054:58054): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:31:36:513 Memoria/(58054:58054): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:31:36:525 Memoria/(58054:58054): Solicitud Compactación
+[INFO] 22:31:36:553 Memoria/(58054:58054): Estructuras terminadas
+[INFO] 22:32:04:355 Memoria/(58182:58182): Estructuras creadas
+[INFO] 22:32:04:512 Memoria/(58182:58182): Creación Proceso PID: 0
+[INFO] 22:32:04:518 Memoria/(58182:58182): Creación Proceso PID: 1
+[INFO] 22:32:04:530 Memoria/(58182:58182): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:32:04:532 Memoria/(58182:58182): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:32:04:534 Memoria/(58182:58182): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:32:04:540 Memoria/(58182:58182): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:32:04:554 Memoria/(58182:58182): Solicitud Compactación
+[INFO] 22:32:04:580 Memoria/(58182:58182): Estructuras terminadas
+[INFO] 22:33:48:885 Memoria/(58306:58306): Estructuras creadas
+[INFO] 22:33:49:040 Memoria/(58306:58306): Creación Proceso PID: 0
+[INFO] 22:33:49:050 Memoria/(58306:58306): Creación Proceso PID: 1
+[INFO] 22:33:49:065 Memoria/(58306:58306): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:33:49:067 Memoria/(58306:58306): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:33:49:069 Memoria/(58306:58306): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:33:49:076 Memoria/(58306:58306): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:33:49:096 Memoria/(58306:58306): Solicitud Compactación
+[INFO] 22:33:49:129 Memoria/(58306:58306): Estructuras terminadas
+[INFO] 22:34:46:135 Memoria/(58405:58405): Estructuras creadas
+[INFO] 22:34:46:311 Memoria/(58405:58405): Creación Proceso PID: 0
+[INFO] 22:34:46:322 Memoria/(58405:58405): Creación Proceso PID: 1
+[INFO] 22:34:46:334 Memoria/(58405:58405): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:34:46:335 Memoria/(58405:58405): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:34:46:336 Memoria/(58405:58405): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:34:46:342 Memoria/(58405:58405): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:34:46:358 Memoria/(58405:58405): Solicitud Compactación
+[INFO] 22:34:46:393 Memoria/(58405:58405): Estructuras terminadas
+[INFO] 22:35:26:072 Memoria/(58512:58512): Estructuras creadas
+[INFO] 22:35:26:245 Memoria/(58512:58512): Creación Proceso PID: 0
+[INFO] 22:35:26:252 Memoria/(58512:58512): Creación Proceso PID: 1
+[INFO] 22:35:26:264 Memoria/(58512:58512): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:35:26:266 Memoria/(58512:58512): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:35:26:269 Memoria/(58512:58512): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:35:26:275 Memoria/(58512:58512): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:35:26:294 Memoria/(58512:58512): Solicitud Compactación
+[INFO] 22:35:26:332 Memoria/(58512:58512): Estructuras terminadas
+[INFO] 22:37:04:650 Memoria/(58717:58717): Estructuras creadas
+[INFO] 22:37:04:804 Memoria/(58717:58717): Creación Proceso PID: 0
+[INFO] 22:37:04:810 Memoria/(58717:58717): Creación Proceso PID: 1
+[INFO] 22:37:04:822 Memoria/(58717:58717): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:37:04:823 Memoria/(58717:58717): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:37:04:825 Memoria/(58717:58717): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:37:04:830 Memoria/(58717:58717): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:37:04:844 Memoria/(58717:58717): Solicitud Compactación
+[INFO] 22:38:17:881 Memoria/(58844:58844): Estructuras creadas
+[INFO] 22:38:18:056 Memoria/(58844:58844): Creación Proceso PID: 0
+[INFO] 22:38:18:069 Memoria/(58844:58844): Creación Proceso PID: 1
+[INFO] 22:38:18:082 Memoria/(58844:58844): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:38:18:084 Memoria/(58844:58844): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:38:18:087 Memoria/(58844:58844): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:38:18:096 Memoria/(58844:58844): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:38:18:116 Memoria/(58844:58844): Solicitud Compactación
+[INFO] 22:38:18:152 Memoria/(58844:58844): Estructuras terminadas
+[INFO] 22:39:07:561 Memoria/(58960:58960): Estructuras creadas
+[INFO] 22:39:07:720 Memoria/(58960:58960): Creación Proceso PID: 0
+[INFO] 22:39:07:726 Memoria/(58960:58960): Creación Proceso PID: 1
+[INFO] 22:39:07:737 Memoria/(58960:58960): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:39:07:739 Memoria/(58960:58960): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:39:07:740 Memoria/(58960:58960): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:39:07:747 Memoria/(58960:58960): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:39:07:764 Memoria/(58960:58960): Solicitud Compactación
+[INFO] 22:39:07:795 Memoria/(58960:58960): Estructuras terminadas
+[INFO] 22:41:41:594 Memoria/(59084:59084): Estructuras creadas
+[INFO] 22:41:41:748 Memoria/(59084:59084): Creación Proceso PID: 0
+[INFO] 22:41:41:755 Memoria/(59084:59084): Creación Proceso PID: 1
+[INFO] 22:41:41:766 Memoria/(59084:59084): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:41:41:768 Memoria/(59084:59084): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:41:41:770 Memoria/(59084:59084): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:41:41:775 Memoria/(59084:59084): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:41:41:791 Memoria/(59084:59084): Solicitud Compactación
+[INFO] 22:41:41:826 Memoria/(59084:59084): Estructuras terminadas
+[INFO] 22:42:18:758 Memoria/(59172:59172): Estructuras creadas
+[INFO] 22:42:18:963 Memoria/(59172:59172): Creación Proceso PID: 0
+[INFO] 22:42:18:971 Memoria/(59172:59172): Creación Proceso PID: 1
+[INFO] 22:42:18:983 Memoria/(59172:59172): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:42:18:985 Memoria/(59172:59172): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:42:18:986 Memoria/(59172:59172): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:42:18:992 Memoria/(59172:59172): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:42:19:011 Memoria/(59172:59172): Estructuras terminadas
+[INFO] 22:45:49:089 Memoria/(59436:59436): Estructuras creadas
+[INFO] 22:45:49:257 Memoria/(59436:59436): Creación Proceso PID: 0
+[INFO] 22:45:49:263 Memoria/(59436:59436): Creación Proceso PID: 1
+[INFO] 22:45:49:277 Memoria/(59436:59436): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:45:49:279 Memoria/(59436:59436): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:45:49:280 Memoria/(59436:59436): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:45:49:286 Memoria/(59436:59436): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:45:49:302 Memoria/(59436:59436): Estructuras terminadas
+[INFO] 22:46:08:872 Memoria/(59504:59504): Estructuras creadas
+[INFO] 22:46:09:032 Memoria/(59504:59504): Creación Proceso PID: 0
+[INFO] 22:46:09:045 Memoria/(59504:59504): Creación Proceso PID: 1
+[INFO] 22:46:09:056 Memoria/(59504:59504): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:46:09:058 Memoria/(59504:59504): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:46:09:060 Memoria/(59504:59504): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:46:09:066 Memoria/(59504:59504): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:46:09:081 Memoria/(59504:59504): Solicitud Compactación
+[INFO] 22:46:09:111 Memoria/(59504:59504): Estructuras terminadas
+[INFO] 22:47:54:571 Memoria/(59618:59618): Estructuras creadas
+[INFO] 22:47:54:726 Memoria/(59618:59618): Creación Proceso PID: 0
+[INFO] 22:47:54:732 Memoria/(59618:59618): Creación Proceso PID: 1
+[INFO] 22:47:54:745 Memoria/(59618:59618): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:47:54:747 Memoria/(59618:59618): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:47:54:750 Memoria/(59618:59618): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:47:54:755 Memoria/(59618:59618): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:47:54:773 Memoria/(59618:59618): Estructuras terminadas
+[INFO] 22:48:31:208 Memoria/(59677:59677): Estructuras creadas
+[INFO] 22:48:31:365 Memoria/(59677:59677): Creación Proceso PID: 0
+[INFO] 22:48:31:372 Memoria/(59677:59677): Creación Proceso PID: 1
+[INFO] 22:48:31:385 Memoria/(59677:59677): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:48:31:388 Memoria/(59677:59677): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:48:31:390 Memoria/(59677:59677): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:48:31:395 Memoria/(59677:59677): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:48:31:409 Memoria/(59677:59677): Estructuras terminadas
+[INFO] 22:52:01:789 Memoria/(59840:59840): Estructuras creadas
+[INFO] 22:52:01:946 Memoria/(59840:59840): Creación Proceso PID: 0
+[INFO] 22:52:01:951 Memoria/(59840:59840): Creación Proceso PID: 1
+[INFO] 22:52:01:962 Memoria/(59840:59840): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:52:01:964 Memoria/(59840:59840): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:52:01:965 Memoria/(59840:59840): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:52:01:970 Memoria/(59840:59840): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:52:01:985 Memoria/(59840:59840): Estructuras terminadas
+[INFO] 22:52:44:472 Memoria/(59900:59900): Estructuras creadas
+[INFO] 22:52:44:647 Memoria/(59900:59900): Creación Proceso PID: 0
+[INFO] 22:52:44:654 Memoria/(59900:59900): Creación Proceso PID: 1
+[INFO] 22:52:44:666 Memoria/(59900:59900): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:52:44:668 Memoria/(59900:59900): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:52:44:670 Memoria/(59900:59900): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:52:44:677 Memoria/(59900:59900): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:52:44:691 Memoria/(59900:59900): Solicitud Compactación
+[INFO] 22:52:44:717 Memoria/(59900:59900): Estructuras terminadas
+[INFO] 22:55:37:217 Memoria/(60161:60161): Estructuras creadas
+[INFO] 22:55:37:371 Memoria/(60161:60161): Creación Proceso PID: 0
+[INFO] 22:55:37:376 Memoria/(60161:60161): Creación Proceso PID: 1
+[INFO] 22:55:37:388 Memoria/(60161:60161): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:55:37:390 Memoria/(60161:60161): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:55:37:391 Memoria/(60161:60161): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:55:37:397 Memoria/(60161:60161): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:55:37:412 Memoria/(60161:60161): Solicitud Compactación
+[INFO] 22:55:37:448 Memoria/(60161:60161): Estructuras terminadas
+[INFO] 22:55:58:946 Memoria/(60362:60362): Estructuras creadas
+[INFO] 22:55:59:106 Memoria/(60362:60362): Creación Proceso PID: 0
+[INFO] 22:55:59:114 Memoria/(60362:60362): Creación Proceso PID: 1
+[INFO] 22:55:59:128 Memoria/(60362:60362): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:55:59:130 Memoria/(60362:60362): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:55:59:131 Memoria/(60362:60362): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:55:59:137 Memoria/(60362:60362): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:55:59:150 Memoria/(60362:60362): Solicitud Compactación
+[INFO] 22:55:59:182 Memoria/(60362:60362): Estructuras terminadas
+[INFO] 22:58:14:124 Memoria/(60482:60482): Estructuras creadas
+[INFO] 22:58:14:277 Memoria/(60482:60482): Creación Proceso PID: 0
+[INFO] 22:58:14:283 Memoria/(60482:60482): Creación Proceso PID: 1
+[INFO] 22:58:14:294 Memoria/(60482:60482): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:58:14:297 Memoria/(60482:60482): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:58:14:299 Memoria/(60482:60482): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:58:14:304 Memoria/(60482:60482): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:58:14:320 Memoria/(60482:60482): Solicitud Compactación
+[INFO] 22:58:14:348 Memoria/(60482:60482): Estructuras terminadas
+[INFO] 22:58:37:847 Memoria/(60575:60575): Estructuras creadas
+[INFO] 22:58:38:005 Memoria/(60575:60575): Creación Proceso PID: 0
+[INFO] 22:58:38:016 Memoria/(60575:60575): Creación Proceso PID: 1
+[INFO] 22:58:38:028 Memoria/(60575:60575): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:58:38:032 Memoria/(60575:60575): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 22:58:38:034 Memoria/(60575:60575): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 22:58:38:039 Memoria/(60575:60575): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 22:58:38:054 Memoria/(60575:60575): Solicitud Compactación
+[INFO] 22:58:38:085 Memoria/(60575:60575): Estructuras terminadas
+[INFO] 23:00:11:525 Memoria/(60797:60797): Estructuras creadas
+[INFO] 23:00:11:681 Memoria/(60797:60797): Creación Proceso PID: 0
+[INFO] 23:00:11:686 Memoria/(60797:60797): Creación Proceso PID: 1
+[INFO] 23:00:11:698 Memoria/(60797:60797): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:00:11:699 Memoria/(60797:60797): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:00:11:700 Memoria/(60797:60797): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:00:11:706 Memoria/(60797:60797): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:00:11:720 Memoria/(60797:60797): Solicitud Compactación
+[INFO] 23:00:11:750 Memoria/(60797:60797): Estructuras terminadas
+[INFO] 23:00:42:545 Memoria/(60842:60842): Estructuras creadas
+[INFO] 23:00:42:552 Memoria/(60842:60842): Creación Proceso PID: 0
+[INFO] 23:00:42:552 Memoria/(60842:60842): Creación Proceso PID: 1
+[INFO] 23:00:42:553 Memoria/(60842:60842): PID: 0 - CrearSeg: 1 - Base: 0x561bb83fc8e0 - TAMAÑO: 64
+[INFO] 23:00:42:553 Memoria/(60842:60842): PID: 0 - CrearSeg: 2 - Base: 0x561bb83fc920 - TAMAÑO: 32
+[INFO] 23:00:42:553 Memoria/(60842:60842): PID: 1 - CrearSeg: 1 - Base: 0x561bb83fc940 - TAMAÑO: 32
+[INFO] 23:00:42:553 Memoria/(60842:60842): PID: 0 - EliminarSeg: 1 - Base: 0x561bb83fc8e0 - TAMAÑO: 64
+[INFO] 23:00:42:553 Memoria/(60842:60842): Solicitud Compactación
+[INFO] 23:00:42:553 Memoria/(60842:60842): Estructuras terminadas
+[INFO] 23:00:48:509 Memoria/(60861:60861): Estructuras creadas
+[INFO] 23:00:48:509 Memoria/(60861:60861): Creación Proceso PID: 0
+[INFO] 23:00:48:509 Memoria/(60861:60861): Creación Proceso PID: 1
+[INFO] 23:00:48:509 Memoria/(60861:60861): PID: 0 - CrearSeg: 1 - Base: 0x5606d9bcf8e0 - TAMAÑO: 64
+[INFO] 23:00:48:509 Memoria/(60861:60861): PID: 0 - CrearSeg: 2 - Base: 0x5606d9bcf920 - TAMAÑO: 32
+[INFO] 23:00:48:509 Memoria/(60861:60861): PID: 1 - CrearSeg: 1 - Base: 0x5606d9bcf940 - TAMAÑO: 32
+[INFO] 23:00:48:509 Memoria/(60861:60861): PID: 0 - EliminarSeg: 1 - Base: 0x5606d9bcf8e0 - TAMAÑO: 64
+[INFO] 23:00:48:510 Memoria/(60861:60861): Solicitud Compactación
+[INFO] 23:00:48:510 Memoria/(60861:60861): Estructuras terminadas
+[INFO] 23:01:05:318 Memoria/(60886:60886): Estructuras creadas
+[INFO] 23:01:05:474 Memoria/(60886:60886): Creación Proceso PID: 0
+[INFO] 23:01:05:480 Memoria/(60886:60886): Creación Proceso PID: 1
+[INFO] 23:01:05:490 Memoria/(60886:60886): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:01:05:493 Memoria/(60886:60886): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:01:05:494 Memoria/(60886:60886): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:01:05:502 Memoria/(60886:60886): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:01:05:515 Memoria/(60886:60886): Solicitud Compactación
+[INFO] 23:01:05:542 Memoria/(60886:60886): Estructuras terminadas
+[INFO] 23:03:26:991 Memoria/(61238:61238): Estructuras creadas
+[INFO] 23:03:27:419 Memoria/(61238:61238): Creación Proceso PID: 0
+[INFO] 23:03:27:444 Memoria/(61238:61238): Creación Proceso PID: 1
+[INFO] 23:03:27:465 Memoria/(61238:61238): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:03:27:473 Memoria/(61238:61238): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:03:27:474 Memoria/(61238:61238): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:03:27:485 Memoria/(61238:61238): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:03:27:514 Memoria/(61238:61238): Solicitud Compactación
+[INFO] 23:03:27:564 Memoria/(61238:61238): Estructuras terminadas
+[INFO] 23:06:21:985 Memoria/(61440:61440): Estructuras creadas
+[INFO] 23:06:22:144 Memoria/(61440:61440): Creación Proceso PID: 0
+[INFO] 23:06:22:151 Memoria/(61440:61440): Creación Proceso PID: 1
+[INFO] 23:06:22:162 Memoria/(61440:61440): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:06:22:164 Memoria/(61440:61440): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:06:22:166 Memoria/(61440:61440): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:06:22:172 Memoria/(61440:61440): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:06:22:185 Memoria/(61440:61440): Solicitud Compactación
+[INFO] 23:06:22:207 Memoria/(61440:61440): Estructuras terminadas
+[INFO] 23:10:15:034 Memoria/(61623:61623): Estructuras creadas
+[INFO] 23:10:15:231 Memoria/(61623:61623): Creación Proceso PID: 0
+[INFO] 23:10:15:239 Memoria/(61623:61623): Creación Proceso PID: 1
+[INFO] 23:10:15:251 Memoria/(61623:61623): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:10:15:253 Memoria/(61623:61623): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:10:15:255 Memoria/(61623:61623): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:10:15:262 Memoria/(61623:61623): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:10:15:275 Memoria/(61623:61623): Solicitud Compactación
+[INFO] 23:10:15:295 Memoria/(61623:61623): Estructuras terminadas
+[INFO] 23:10:53:291 Memoria/(61650:61650): Estructuras creadas
+[INFO] 23:10:53:292 Memoria/(61650:61650): Creación Proceso PID: 0
+[INFO] 23:10:53:292 Memoria/(61650:61650): Creación Proceso PID: 1
+[INFO] 23:10:53:294 Memoria/(61650:61650): PID: 0 - CrearSeg: 1 - Base: 0x5630b82608e0 - TAMAÑO: 64
+[INFO] 23:10:53:295 Memoria/(61650:61650): PID: 0 - CrearSeg: 2 - Base: 0x5630b8260920 - TAMAÑO: 32
+[INFO] 23:10:53:295 Memoria/(61650:61650): PID: 1 - CrearSeg: 1 - Base: 0x5630b8260940 - TAMAÑO: 32
+[INFO] 23:10:53:295 Memoria/(61650:61650): PID: 0 - EliminarSeg: 1 - Base: 0x5630b82608e0 - TAMAÑO: 64
+[INFO] 23:10:53:295 Memoria/(61650:61650): Solicitud Compactación
+[INFO] 23:10:53:295 Memoria/(61650:61650): Estructuras terminadas
+[INFO] 23:11:19:068 Memoria/(61707:61707): Estructuras creadas
+[INFO] 23:11:19:069 Memoria/(61707:61707): Creación Proceso PID: 0
+[INFO] 23:11:19:069 Memoria/(61707:61707): Creación Proceso PID: 1
+[INFO] 23:11:19:070 Memoria/(61707:61707): PID: 0 - CrearSeg: 1 - Base: 0x5563076fc8e0 - TAMAÑO: 64
+[INFO] 23:11:19:070 Memoria/(61707:61707): PID: 0 - CrearSeg: 2 - Base: 0x5563076fc920 - TAMAÑO: 32
+[INFO] 23:11:19:070 Memoria/(61707:61707): PID: 1 - CrearSeg: 1 - Base: 0x5563076fc940 - TAMAÑO: 32
+[INFO] 23:11:19:070 Memoria/(61707:61707): PID: 0 - EliminarSeg: 1 - Base: 0x5563076fc8e0 - TAMAÑO: 64
+[INFO] 23:11:19:071 Memoria/(61707:61707): PID: 1 - EliminarSeg: 1 - Base: 0x5563076fc940 - TAMAÑO: 32
+[INFO] 23:11:19:071 Memoria/(61707:61707): Solicitud Compactación
+[INFO] 23:11:19:072 Memoria/(61707:61707): Estructuras terminadas
+[INFO] 23:11:46:761 Memoria/(61770:61770): Estructuras creadas
+[INFO] 23:11:46:762 Memoria/(61770:61770): Creación Proceso PID: 0
+[INFO] 23:11:46:762 Memoria/(61770:61770): Creación Proceso PID: 1
+[INFO] 23:11:46:762 Memoria/(61770:61770): PID: 0 - CrearSeg: 1 - Base: 0x55ef583178e0 - TAMAÑO: 64
+[INFO] 23:11:46:762 Memoria/(61770:61770): PID: 0 - CrearSeg: 2 - Base: 0x55ef58317920 - TAMAÑO: 32
+[INFO] 23:11:46:762 Memoria/(61770:61770): PID: 1 - CrearSeg: 1 - Base: 0x55ef58317940 - TAMAÑO: 32
+[INFO] 23:11:46:762 Memoria/(61770:61770): PID: 0 - EliminarSeg: 1 - Base: 0x55ef583178e0 - TAMAÑO: 64
+[INFO] 23:11:46:762 Memoria/(61770:61770): PID: 1 - EliminarSeg: 1 - Base: 0x55ef58317940 - TAMAÑO: 32
+[INFO] 23:11:46:762 Memoria/(61770:61770): PID: 0 - EliminarSeg: 2 - Base: 0x55ef58317920 - TAMAÑO: 32
+[INFO] 23:11:46:762 Memoria/(61770:61770): Solicitud Compactación
+[INFO] 23:11:46:762 Memoria/(61770:61770): Estructuras terminadas
+[INFO] 23:13:33:565 Memoria/(61900:61900): Estructuras creadas
+[INFO] 23:13:33:565 Memoria/(61900:61900): Creación Proceso PID: 0
+[INFO] 23:13:33:565 Memoria/(61900:61900): Creación Proceso PID: 1
+[INFO] 23:13:33:565 Memoria/(61900:61900): PID: 0 - CrearSeg: 1 - Base: 0x55656afb08e0 - TAMAÑO: 64
+[INFO] 23:13:33:565 Memoria/(61900:61900): PID: 0 - CrearSeg: 2 - Base: 0x55656afb0920 - TAMAÑO: 32
+[INFO] 23:13:33:565 Memoria/(61900:61900): PID: 1 - CrearSeg: 1 - Base: 0x55656afb0940 - TAMAÑO: 32
+[INFO] 23:13:33:565 Memoria/(61900:61900): PID: 0 - EliminarSeg: 1 - Base: 0x55656afb08e0 - TAMAÑO: 64
+[INFO] 23:13:33:566 Memoria/(61900:61900): Solicitud Compactación
+[INFO] 23:13:33:566 Memoria/(61900:61900): Estructuras terminadas
+[INFO] 23:14:20:390 Memoria/(61995:61995): Estructuras creadas
+[INFO] 23:14:20:391 Memoria/(61995:61995): Creación Proceso PID: 0
+[INFO] 23:14:20:392 Memoria/(61995:61995): Creación Proceso PID: 1
+[INFO] 23:14:20:392 Memoria/(61995:61995): PID: 0 - CrearSeg: 1 - Base: 0x556ed0cd58e0 - TAMAÑO: 64
+[INFO] 23:14:20:392 Memoria/(61995:61995): PID: 0 - CrearSeg: 2 - Base: 0x556ed0cd5920 - TAMAÑO: 32
+[INFO] 23:14:20:392 Memoria/(61995:61995): PID: 1 - CrearSeg: 1 - Base: 0x556ed0cd5940 - TAMAÑO: 32
+[INFO] 23:14:20:392 Memoria/(61995:61995): PID: 0 - EliminarSeg: 1 - Base: 0x556ed0cd58e0 - TAMAÑO: 64
+[INFO] 23:14:20:393 Memoria/(61995:61995): Solicitud Compactación
+[INFO] 23:14:20:393 Memoria/(61995:61995): Estructuras terminadas
+[INFO] 23:14:34:173 Memoria/(62069:62069): Estructuras creadas
+[INFO] 23:14:34:175 Memoria/(62069:62069): Creación Proceso PID: 0
+[INFO] 23:14:34:176 Memoria/(62069:62069): Creación Proceso PID: 1
+[INFO] 23:14:34:177 Memoria/(62069:62069): PID: 0 - CrearSeg: 1 - Base: 0x5592d67ee8e0 - TAMAÑO: 64
+[INFO] 23:14:34:177 Memoria/(62069:62069): PID: 0 - CrearSeg: 2 - Base: 0x5592d67ee920 - TAMAÑO: 32
+[INFO] 23:14:34:177 Memoria/(62069:62069): PID: 1 - CrearSeg: 1 - Base: 0x5592d67ee940 - TAMAÑO: 32
+[INFO] 23:14:34:177 Memoria/(62069:62069): PID: 0 - EliminarSeg: 1 - Base: 0x5592d67ee8e0 - TAMAÑO: 64
+[INFO] 23:14:34:186 Memoria/(62069:62069): Solicitud Compactación
+[INFO] 23:14:34:186 Memoria/(62069:62069): Estructuras terminadas
+[INFO] 23:14:50:256 Memoria/(62092:62092): Estructuras creadas
+[INFO] 23:14:50:409 Memoria/(62092:62092): Creación Proceso PID: 0
+[INFO] 23:14:50:415 Memoria/(62092:62092): Creación Proceso PID: 1
+[INFO] 23:14:50:428 Memoria/(62092:62092): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:14:50:430 Memoria/(62092:62092): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:14:50:432 Memoria/(62092:62092): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:14:50:439 Memoria/(62092:62092): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:14:50:471 Memoria/(62092:62092): Solicitud Compactación
+[INFO] 23:14:50:519 Memoria/(62092:62092): Estructuras terminadas
+[INFO] 23:15:41:453 Memoria/(62160:62160): Estructuras creadas
+[INFO] 23:15:41:618 Memoria/(62160:62160): Creación Proceso PID: 0
+[INFO] 23:15:41:624 Memoria/(62160:62160): Creación Proceso PID: 1
+[INFO] 23:15:41:635 Memoria/(62160:62160): PID: 0 - CrearSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:15:41:637 Memoria/(62160:62160): PID: 0 - CrearSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:15:41:638 Memoria/(62160:62160): PID: 1 - CrearSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:15:41:645 Memoria/(62160:62160): PID: 0 - EliminarSeg: 1 - Base: 0x4aa6f00 - TAMAÑO: 64
+[INFO] 23:15:41:649 Memoria/(62160:62160): PID: 1 - EliminarSeg: 1 - Base: 0x4aa6f60 - TAMAÑO: 32
+[INFO] 23:15:41:650 Memoria/(62160:62160): PID: 0 - EliminarSeg: 2 - Base: 0x4aa6f40 - TAMAÑO: 32
+[INFO] 23:15:41:666 Memoria/(62160:62160): Solicitud Compactación
+[INFO] 23:15:41:689 Memoria/(62160:62160): Estructuras terminadas
