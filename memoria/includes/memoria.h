@@ -49,7 +49,13 @@ t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();;
 
-
+void  GetTotalSize (void* ptr);
+void  getEachSize (void* ptr);
+void * realocarSegmento (void* ptr);
+void * realocarLista (void* ptr);
+void compactarMemoria();
+void * addSeg0 (void* ptr);
+void * removeSeg0 (void* ptr);
 Algorithm selectAlgorithm(char* input);
 int crearEstructuras();
 bool FirstFit(void* data);
