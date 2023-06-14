@@ -119,3 +119,86 @@
 [INFO] 16:47:35:046 Memoria/(47754:47754): Estructuras creadas
 [INFO] 16:48:51:121 Memoria/(47802:47802): Estructuras creadas
 [INFO] 16:51:45:210 Memoria/(47861:47861): Estructuras creadas
+[INFO] 19:20:14:073 Memoria/(48291:48291): Estructuras creadas
+[INFO] 19:20:47:931 Memoria/(48390:48390): Estructuras creadas
+[INFO] 19:31:25:123 Memoria/(48701:48701): Estructuras creadas
+[INFO] 19:32:59:790 Memoria/(48781:48781): Estructuras creadas
+[INFO] 19:33:50:237 Memoria/(48851:48851): Estructuras creadas
+[INFO] 19:42:42:130 Memoria/(49043:49043): Estructuras creadas
+[INFO] 19:50:01:555 Memoria/(49378:49378): Estructuras creadas
+[INFO] 19:51:07:460 Memoria/(49487:49487): Estructuras creadas
+[INFO] 20:10:44:300 Memoria/(50201:50201): Estructuras creadas
+[INFO] 20:13:21:081 Memoria/(50417:50417): Estructuras creadas
+[INFO] 20:13:57:655 Memoria/(50486:50486): Estructuras creadas
+[INFO] 20:14:13:792 Memoria/(50542:50542): Estructuras creadas
+[INFO] 20:14:37:005 Memoria/(50605:50605): Estructuras creadas
+[INFO] 20:16:36:589 Memoria/(50768:50768): Estructuras creadas
+[INFO] 20:18:16:980 Memoria/(50875:50875): Estructuras creadas
+[INFO] 20:18:16:981 Memoria/(50875:50875): Creación de Proceso PID: 655947920
+[INFO] 20:18:16:981 Memoria/(50875:50875): Creación de Proceso PID: 655947924
+[INFO] 20:18:34:844 Memoria/(50928:50928): Estructuras creadas
+[INFO] 20:18:34:844 Memoria/(50928:50928): Creación de Proceso PID: 0
+[INFO] 20:18:34:844 Memoria/(50928:50928): Creación de Proceso PID: 21972
+[INFO] 20:19:22:110 Memoria/(51005:51005): Estructuras creadas
+[INFO] 20:19:22:111 Memoria/(51005:51005): Creación de Proceso PID: 0
+[INFO] 20:19:22:111 Memoria/(51005:51005): Creación de Proceso PID: 1
+[INFO] 20:20:03:484 Memoria/(51056:51056): Estructuras creadas
+[INFO] 20:20:03:485 Memoria/(51056:51056): Creación Proceso PID: 0
+[INFO] 20:20:03:485 Memoria/(51056:51056): Creación Proceso PID: 1
+[INFO] 20:22:58:033 Memoria/(51163:51163): Estructuras creadas
+[INFO] 20:22:58:035 Memoria/(51163:51163): Creación Proceso PID: 0
+[INFO] 20:22:58:035 Memoria/(51163:51163): Creación Proceso PID: 1
+[INFO] 20:22:58:035 Memoria/(51163:51163): PID: 0 - Crear Segmento: 1 - Base: 0x55c52fb608e0 - TAMAÑO: 64
+[INFO] 20:22:58:035 Memoria/(51163:51163): PID: 0 - Crear Segmento: 2 - Base: 0x55c52fb60920 - TAMAÑO: 32
+[INFO] 20:22:58:036 Memoria/(51163:51163): PID: 1 - Crear Segmento: 1 - Base: 0x55c52fb60940 - TAMAÑO: 32
+[INFO] 20:26:30:107 Memoria/(51241:51241): Estructuras creadas
+[INFO] 20:26:30:116 Memoria/(51241:51241): Creación Proceso PID: 0
+[INFO] 20:26:30:116 Memoria/(51241:51241): Creación Proceso PID: 1
+[INFO] 20:26:30:116 Memoria/(51241:51241): PID: 0 
+ Crear Segmento: 1 
+ Base: 0x561b517f08e0 
+ TAMAÑO: 64
+[INFO] 20:26:30:117 Memoria/(51241:51241): PID: 0 
+ Crear Segmento: 2 
+ Base: 0x561b517f0920 
+ TAMAÑO: 32
+[INFO] 20:26:30:117 Memoria/(51241:51241): PID: 1 
+ Crear Segmento: 1 
+ Base: 0x561b517f0940 
+ TAMAÑO: 32
+[INFO] 20:27:02:147 Memoria/(51307:51307): Estructuras creadas
+[INFO] 20:27:02:147 Memoria/(51307:51307): Creación Proceso PID: 0
+[INFO] 20:27:02:147 Memoria/(51307:51307): Creación Proceso PID: 1
+[INFO] 20:27:02:147 Memoria/(51307:51307): PID: 0 - Crear Segmento: 1 - Base: 0x55c654c5a8e0 - TAMAÑO: 64
+[INFO] 20:27:02:147 Memoria/(51307:51307): PID: 0 - Crear Segmento: 2 - Base: 0x55c654c5a920 - TAMAÑO: 32
+[INFO] 20:27:02:147 Memoria/(51307:51307): PID: 1 - Crear Segmento: 1 - Base: 0x55c654c5a940 - TAMAÑO: 32
+[INFO] 20:29:45:591 Memoria/(51458:51458): Estructuras creadas
+[INFO] 20:29:45:592 Memoria/(51458:51458): Creación Proceso PID: 0
+[INFO] 20:29:45:592 Memoria/(51458:51458): Creación Proceso PID: 1
+[INFO] 20:29:45:592 Memoria/(51458:51458): PID: 0 - Crear Segmento: 1 - Base: 0x55eef43e18e0 - TAMAÑO: 64
+[INFO] 20:29:45:593 Memoria/(51458:51458): PID: 0 - Crear Segmento: 2 - Base: 0x55eef43e1920 - TAMAÑO: 32
+[INFO] 20:29:45:593 Memoria/(51458:51458): PID: 1 - Crear Segmento: 1 - Base: 0x55eef43e1940 - TAMAÑO: 32
+[INFO] 20:29:45:593 Memoria/(51458:51458): PID: 0 - Eliminar Segmento: 1 - Base: 0x55eef43e18e0 - TAMAÑO: 64
+[INFO] 20:31:19:512 Memoria/(51555:51555): Estructuras creadas
+[INFO] 20:31:19:512 Memoria/(51555:51555): Creación Proceso PID: 0
+[INFO] 20:31:19:513 Memoria/(51555:51555): Creación Proceso PID: 1
+[INFO] 20:31:19:513 Memoria/(51555:51555): PID: 0 - CrearSeg: 1 - Base: 0x559abbe7c8e0 - TAMAÑO: 64
+[INFO] 20:31:19:513 Memoria/(51555:51555): PID: 0 - CrearSeg: 2 - Base: 0x559abbe7c920 - TAMAÑO: 32
+[INFO] 20:31:19:513 Memoria/(51555:51555): PID: 1 - CrearSeg: 1 - Base: 0x559abbe7c940 - TAMAÑO: 32
+[INFO] 20:31:19:513 Memoria/(51555:51555): PID: 0 - EliminarSeg: 1 - Base: 0x559abbe7c8e0 - TAMAÑO: 64
+[INFO] 20:33:15:296 Memoria/(51643:51643): Estructuras creadas
+[INFO] 20:33:15:297 Memoria/(51643:51643): Creación Proceso PID: 0
+[INFO] 20:33:15:297 Memoria/(51643:51643): Creación Proceso PID: 1
+[INFO] 20:33:15:298 Memoria/(51643:51643): PID: 0 - CrearSeg: 1 - Base: 0x5645e5a2f8e0 - TAMAÑO: 64
+[INFO] 20:33:15:298 Memoria/(51643:51643): PID: 0 - CrearSeg: 2 - Base: 0x5645e5a2f920 - TAMAÑO: 32
+[INFO] 20:33:15:298 Memoria/(51643:51643): PID: 1 - CrearSeg: 1 - Base: 0x5645e5a2f940 - TAMAÑO: 32
+[INFO] 20:33:15:298 Memoria/(51643:51643): PID: 0 - EliminarSeg: 1 - Base: 0x5645e5a2f8e0 - TAMAÑO: 64
+[INFO] 20:33:15:301 Memoria/(51643:51643): Solicitud Compactación
+[INFO] 20:39:04:818 Memoria/(51789:51789): Estructuras creadas
+[INFO] 20:39:04:818 Memoria/(51789:51789): Creación Proceso PID: 0
+[INFO] 20:39:04:819 Memoria/(51789:51789): Creación Proceso PID: 1
+[INFO] 20:39:04:819 Memoria/(51789:51789): PID: 0 - CrearSeg: 1 - Base: 0x5556015e08e0 - TAMAÑO: 64
+[INFO] 20:39:04:819 Memoria/(51789:51789): PID: 0 - CrearSeg: 2 - Base: 0x5556015e0920 - TAMAÑO: 32
+[INFO] 20:39:04:819 Memoria/(51789:51789): PID: 1 - CrearSeg: 1 - Base: 0x5556015e0940 - TAMAÑO: 32
+[INFO] 20:39:04:819 Memoria/(51789:51789): PID: 0 - EliminarSeg: 1 - Base: 0x5556015e08e0 - TAMAÑO: 64
+[INFO] 20:39:04:821 Memoria/(51789:51789): Solicitud Compactación
