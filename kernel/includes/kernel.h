@@ -64,18 +64,17 @@ typedef struct{
 	char RAX[16], RBX[16], RCX[16], RDX[16];
 }Registros;
 
-
 typedef struct{
-	int id;
-	int direccion_base;
-	int tamanio_segmentos;
-}segmento;
+	uint32_t id;
+	uint32_t direccion_base;
+	uint32_t tamanio_segmentos;
+}Segmento;
 
 typedef struct{
     int pid;
     t_list* lista_de_instrucciones;
     int program_counter;
-    Registros registro_cpu;
+    Registros registro_proceso;
     t_list* tabla_segmentos;
     int estimado_prox_rafaga;
     int tiempo_llegada_ready;
@@ -84,12 +83,28 @@ typedef struct{
 }pcb;
 
 typedef struct{
-	int pid;
-    pcb pcb;
-	int pc; // no creo q sea int
+    uint32_t pid;
+    t_list* lista_de_instrucciones;
+    uint32_t program_counter; 
 	Registros registrosCpu;
 	t_list* tabla_segmentos;
+    estados estado;
 }contexto_de_ejecucion;
+
+typedef struct{
+    uint32_t pid;
+    uint32_t program_counter; 
+    
+    t_list* lista_de_instrucciones;
+    uint32_t tam_lista_instrucciones;
+	
+    Registros registrosCpu; // tamanio fijo de 112 bytes
+	
+    t_list* tabla_segmentos;
+    uint32_t tam_tabla_segmentos;
+    
+    estados estado;
+}Cde_serializado;
 
 typedef struct{
 	char* ip_memoria;
@@ -161,4 +176,8 @@ pcb crear_pcb(t_list*);
 
 void planificacionFIFO();
 void planificacionHRRN();
+
+Cde_serializado serializar_cde(contexto_de_ejecucion);
+int tamanio_cde_serializado(Cde_serializado);
+
 #endif /* INCLUDES_KERNEL_H_ */

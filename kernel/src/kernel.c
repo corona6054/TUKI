@@ -13,8 +13,13 @@ int main(void){
 	procesosReady = list_create();
 	procesosEjecutando = list_create();
 	procesosBloqueados = list_create();
+	
 	levantar_modulo();
+	
 
+	pthread_t planificadorCorto;
+	pthread_create(&planificadorCorto, NULL, (void *) planificadorCortoPlazo, NULL);
+	pthread_detach(planificadorCorto);
 
 	while(1);
 
@@ -189,6 +194,7 @@ t_list* recibir_paquete(int socket_cliente){
 	free(buffer);
 	return valores;
 }
+
 void printElement(void* ptr) {
 	Instruction* seleccionado = (Instruction*) ptr;
 	printf("%d ", seleccionado->instruccion);
@@ -202,6 +208,7 @@ void printElement(void* ptr) {
 	            printf("%s ", seleccionado->string2);
 	        printf("\n");
 }
+
 void* deserializarInst(void* data){
 		Instruction* instruction = malloc(sizeof(Instruction));
 		int offset=0;
@@ -229,13 +236,14 @@ void manejar_conexion_con_consola(t_conexiones* conexiones){
 
 	int estado_anterior = -1;
 	pcb pcb = crear_pcb(instrucciones);
-	
 	list_add(procesosNuevos,&pcb);
+	
 	int total=0;
 	total+=list_size(procesosReady);
 	total+=list_size(procesosEjecutando);
 	total+=list_size(procesosBloqueados);
-	if(  total < config_kernel.grado_max_multi){
+
+	if( total < config_kernel.grado_max_multi){
 		
 		sem_wait(&m_nuevos);
 		list_remove(procesosNuevos,0);
@@ -249,11 +257,12 @@ void manejar_conexion_con_consola(t_conexiones* conexiones){
 		sem_post(&m_ready);
 		log_info(logger,"PID: %d - Estado Anterior: %d - Estado Actual: %d", pcb.pid, estado_anterior, pcb.estado); //no va a terminar estando aca este log info
 		
-		planificadorCortoPlazo();
+		//planificadorCortoPlazo();
 		//log_info(logger,"Cola Ready %s: , ")
 		//mandar msje a memoria para que inicialice sus estructuras necesarias y obtenga la tabla de segmentos inicial
 
 	}
+	
 	
 
 }
@@ -268,7 +277,7 @@ void planificadorCortoPlazo(){
 		pthread_t hrrn;
 		pthread_create(&hrrn, NULL, (void *) planificacionHRRN, NULL);
 		pthread_detach(hrrn);
-	}	
+	}
 }
 
 
@@ -301,11 +310,11 @@ Registros inicializar_registros(){
 
 pcb crear_pcb(t_list *instrucciones){
 	pcb pcb;
-
+	
 	pcb.pid = pid;
 	pcb.lista_de_instrucciones = instrucciones;
 	pcb.program_counter = 0;
-	pcb.registro_cpu = inicializar_registros();
+	pcb.registro_proceso = inicializar_registros();
     pcb.tabla_segmentos = list_create();
 	pcb.estimado_prox_rafaga = config_kernel.est_inicial;
 	pcb.tiempo_llegada_ready = -1;
@@ -321,21 +330,68 @@ pcb crear_pcb(t_list *instrucciones){
 
 void planificacionFIFO(){
 	
-	pcb *pcb_a_ejecutar;
-	
+	while(1){
+		
+		if(!list_is_empty(procesosReady) || !list_is_empty(procesosBloqueados)){	
+			pcb *pcb_a_ejecutar;
+			
+			sem_wait(&m_ready);
+			pcb_a_ejecutar = list_remove(procesosReady,0);
+			sem_post(&m_ready);
+			
+			contexto_de_ejecucion cde;
 
-	while(!list_is_empty(procesosReady) || !list_is_empty(procesosBloqueados)){
-		sem_wait(&m_ready);
-		pcb_a_ejecutar = list_remove(procesosReady,0);
-		sem_post(&m_ready);
+			cde.pid = pcb_a_ejecutar->pid;
+    		cde.program_counter = pcb_a_ejecutar->program_counter;    
+			cde.registrosCpu = pcb_a_ejecutar->registro_proceso;
+			cde.tabla_segmentos = pcb_a_ejecutar->tabla_segmentos;
+			cde.estado = pcb_a_ejecutar->estado;
+			
+			Cde_serializado cde_ser = serializar_cde(cde);
+			t_paquete *paquete = crear_paquete();
+			agregar_a_paquete(paquete,&cde_ser,tamanio_cde_serializado(cde_ser));
+			
+			//agregar a paquete
+			// enviar a cpu
 
-		// Contexto de ejecucion al cpu
+			// tiene que esperar rta del cpu
+			// deserializa el paquete
+			// replanifica si es necesario
+
+		}
 	}
 	return;
 }
+
 
 void planificacionHRRN(){
 
 	return;
 }
 
+// UTILS SERIALIZACION
+
+Cde_serializado serializar_cde(contexto_de_ejecucion cde){
+	// Ver tamanios de los nodos de las listas
+	Cde_serializado cde_serializado;
+
+	cde_serializado.pid = cde.pid;
+	cde_serializado.program_counter = cde.program_counter;
+
+    cde_serializado.tam_lista_instrucciones = sizeof(Instruction) * list_size(cde.lista_de_instrucciones); //despues cambiar el 42 (tamaño de una instrucion, el tema es que dsps hay q cambiarlo por uint_32)
+    cde_serializado.lista_de_instrucciones = malloc(cde_serializado.tam_lista_instrucciones);
+	
+    cde_serializado.registrosCpu = cde.registrosCpu; // tamanio fijo de 112 bytes
+	
+    cde_serializado.tam_tabla_segmentos = sizeof(Segmento) * list_size(cde.tabla_segmentos);
+    cde_serializado.tabla_segmentos;
+    
+    cde_serializado.estado = cde.estado;
+
+	return cde_serializado;
+}
+
+
+int tamanio_cde_serializado(Cde_serializado cde_ser){
+	return sizeof(uint32_t) * 4 + 112 + cde_ser.tam_lista_instrucciones + cde_ser.tam_tabla_segmentos;
+}

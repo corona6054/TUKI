@@ -1,37 +1,66 @@
 #include "../includes/cpu.h"
 
 int main(void){
-	levantar_modulo();
+	//levantar_modulo();
 
 	/*
-	//recv(socket_kernel, &cod_op,sizeof(), MSG_WAITALL)// Aca deberia recibir la instruccion y los datos necesarios
+	t_list contexto_ejecucion;
+	recibir_contexto();
+	//Aca se tiene que deserializar el contexto
+
+	int instruccion = list_get(contexto_de_ejecucion.pcb.lista_de_instrucciones, contexto_de_ejecucion.pc);
+
 	int code_op; //Solo la inicializo para que no me tire error
 
+	switch(instruccion.instruccion){
 	switch(code_op){
 		case SET:
 			//ejecutar_set(ax, "0000", 4); Esto era solo para la prueba y es un ejemplo de lo que habria que enviarle a la funcion
 			//ejecutar_set(registro,valor,tamanio); Lo dejo comentado porque me tienen que mandar los valores
+			//
+			//ejecutar_set(instruccion.string1,instruccion.string2,tamanio)
 		break;
 		case YIELD:
 			ejecutar_yield();
-		;break;
+		break;
 		case EXIT:
 			ejecutar_exit();
 		break;
+		case IO:
+		break;
 	}
 	*/
-	finalizar_modulo();
 
+	//finalizar_modulo();
+
+	printf("%ld", sizeof(Instruction));
+
+	/*
+	char *reg = "AX";
+	log_info(logger,"tam registro: %d",tamanioRegistro(reg));
+	*/
 	return 0;
 }
 
 // SUBPROGRAMAS
 
+/*
+void recibir_contexto(){
+	int op = recibir_operacion(kernel_fd);
+	contexto_ejecucion = recibir_paquete(kernel_fd)
+}
+*/
+
+int tamanioRegistro(char *registro){
+	if(strcmp(registro,"AX") == 0)
+		return 4;
+}
+
 void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	levantar_config();
-	establecer_conexiones();
+	//establecer_conexiones();
 }
 
 void finalizar_modulo(){
@@ -100,6 +129,8 @@ void ejecutar_set(char registro[], char valor[], int tamanio){
 	for (int i=0; i < tamanio; i++){
 		registro[i] = valor[i];
 	}
+
+
 }
 
 
@@ -109,6 +140,7 @@ void ejecutar_exit(){
 	//send(socket_kernel, &terminalo, sizeof(int), NULL);
 	//Envio el contexto de ejecucion y un valor para que el kernel sepa que tiene que mandar terminar la conexion
 
+	//enviar_contexto_de_ejecucion();
 
 }
 

@@ -106,3 +106,7 @@
 [INFO] 19:04:44:270 Consola/(7307:7307): Instrucciones leidas
 [INFO] 19:04:44:279 Consola/(7307:7314): Socket kernel :4
 [INFO] 19:04:44:279 Consola/(7307:7307): Paquete enviado
+[INFO] 20:59:27:383 Consola/(4258:4258): Instrucciones leidas
+[INFO] 20:59:27:387 Consola/(4258:4263): Socket kernel :4
+[INFO] 20:59:27:387 Consola/(4258:4263): Conectado con kernel
+[INFO] 20:59:27:388 Consola/(4258:4258): Paquete enviado

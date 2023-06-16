@@ -423,3 +423,9 @@
 [INFO] 19:04:44:291 Kernel/(7074:7315): Entro a planificador a largo plazo.
 [INFO] 19:04:44:292 Kernel/(7074:7315): Paquete recibido.
 [INFO] 19:04:44:292 Kernel/(7074:7315): Se crea el proceso 6 en NEW
+[INFO] 20:59:00:436 Kernel/(4223:4223): Listo para escuchar a mi cliente
+[INFO] 20:59:27:386 Kernel/(4223:4228): Se conecto un cliente!
+[INFO] 20:59:27:390 Kernel/(4223:4264): Entro a planificador a largo plazo.
+[INFO] 20:59:27:391 Kernel/(4223:4264): Paquete recibido.
+[INFO] 20:59:27:391 Kernel/(4223:4264): Se crea el proceso 0 en NEW
+[INFO] 20:59:27:391 Kernel/(4223:4264): PID: 0 - Estado Anterior: 0 - Estado Actual: 1

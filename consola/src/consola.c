@@ -31,7 +31,7 @@ void serializeInstruction(Instruction* instruction, void* stream, int offset) {
 	offset += sizeof(char[15]);
 	memcpy(stream + offset, &instruction->string2, sizeof(char[15]));
 	offset += sizeof(char[15]);
-	}
+}
 
 int enviarLista(){
 	t_paquete* paquete = crear_paquete();
