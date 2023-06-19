@@ -1,8 +1,14 @@
 #include "../includes/cpu.h"
 
 int main(void){
-	//levantar_modulo();
 
+	sem_init(&sem_conexion, 0, 0);
+
+	levantar_modulo();
+
+	sem_wait(&sem_conexion);
+
+	deserializar_cde(); // recibe, deserializa y printea el paquete
 	/*
 	t_list contexto_ejecucion;
 	recibir_contexto();
@@ -63,9 +69,8 @@ int main(void){
 	*/
 
 	//finalizar_modulo();
-
-	printf("%ld", sizeof(Instruction));
-
+	
+	while(1);
 	/*
 	char *reg = "AX";
 	log_info(logger,"tam registro: %d",tamanioRegistro(reg));
@@ -91,7 +96,7 @@ void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	levantar_config();
-	//establecer_conexiones();
+	establecer_conexiones();
 }
 
 void finalizar_modulo(){
@@ -143,12 +148,21 @@ void conectarse_con_memoria(){
 
 void establecer_conexiones()
 {
+	/*
 	pthread_t conexion_memoria;
 	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
 	pthread_detach(conexion_memoria);
-
+	*/
 	server_fd = abrir_servidor(logger,config);
 	kernel_fd = esperar_cliente(server_fd, logger);
+	if (kernel_fd == -1)
+	{
+		log_info(logger, "No se conecto el kernel");
+	}
+	else{
+		sem_post(&sem_conexion);
+		log_info(logger, "Se conecto el kernel");
+	}
 
 }
 
@@ -234,4 +248,69 @@ void ejecutar_createsegment(/*int id_segmento, int tamanio*/){
 }
 void ejecutar_deletesegment(/*int id_segmento*/){
 
+}
+
+
+void deserializar_cde(){
+	t_paquete* paquete = crear_paquete();
+
+	log_info(logger,"Entre a deserializar_cde");
+	
+	// Primero recibimos el codigo de operacion
+	recv(kernel_fd, &(paquete->codigo_operacion), sizeof(uint8_t), MSG_WAITALL);
+
+
+	log_info(logger,"Recibi el codigo de operacion");
+
+	// Después ya podemos recibir el buffer. Primero su tamaño seguido del contenido
+	recv(kernel_fd, &(paquete->buffer->size), sizeof(uint32_t), MSG_WAITALL);
+	log_info(logger,"Recibi el tamanio");
+
+	paquete->buffer->stream = malloc(paquete->buffer->size);
+
+	recv(kernel_fd, paquete->buffer->stream, paquete->buffer->size, MSG_WAITALL);
+	log_info(logger,"Recibi el paquete");
+	// ACA VA A HABER UN SWITCH DE COD OP PARA VER SI LE LLEGA DEL KERNEL O DE MEMORIA
+	
+	Cde_serializado* cde_recibido = malloc(sizeof(Cde_serializado));
+
+	void* stream = paquete->buffer->stream;
+
+	log_info(logger,"Empiezo a deserializar");
+	// Deserializamos los campos que tenemos en el buffer
+    memcpy(&(cde_recibido->pid), stream, sizeof(uint32_t));
+    stream += sizeof(uint32_t);
+    
+	memcpy(&(cde_recibido->program_counter), stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+
+	memcpy(&cde_recibido->tam_lista_instrucciones, stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	
+	cde_recibido->lista_de_instrucciones = malloc(cde_recibido->tam_lista_instrucciones);
+
+	memcpy(cde_recibido->lista_de_instrucciones, stream,  cde_recibido->tam_lista_instrucciones);
+	stream += cde_recibido->tam_lista_instrucciones;
+	
+	memcpy(&(cde_recibido->registrosCpu), stream,  112);
+	stream += 112;
+
+	memcpy(&(cde_recibido->tam_tabla_segmentos), stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	
+	cde_recibido->tabla_segmentos = malloc(cde_recibido->tam_tabla_segmentos);
+
+	memcpy(cde_recibido->tabla_segmentos, stream, cde_recibido->tam_tabla_segmentos);
+	stream += cde_recibido->tam_tabla_segmentos;
+
+	memcpy(&cde_recibido->estado, stream, sizeof(uint8_t));
+	stream += sizeof(uint8_t);
+
+	log_info(logger,"Termine de deserializar.");
+
+	log_info(logger,"PID: %d", cde_recibido->pid);
+
+	log_info(logger, "PC: %d", cde_recibido->program_counter);
+   
+	log_info(logger,"Estado: %d", cde_recibido->estado);
 }

@@ -7,6 +7,8 @@
 #include "commons/log.h"
 #include "utils_cliente.h"
 #include <pthread.h>
+#include <unistd.h>
+#include <semaphore.h>
 
 typedef struct
 {
@@ -16,6 +18,12 @@ typedef struct
     char string1[15];
     char string2[15];
 } Instruction;
+
+typedef struct{
+	char AX[4], BX[4], CX[4], DX[4];
+	char EAX[8], EBX[8], ECX[8], EDX[8];
+	char RAX[16], RBX[16], RCX[16], RDX[16];
+}Registros;
 
 typedef enum{
 	NEW,
@@ -63,16 +71,28 @@ typedef struct{
 	int tam_max_segmento;
 }Config_cpu;
 
+
 typedef struct{
-	char AX[4], BX[4], CX[4], DX[4];
-	char EAX[8], EBX[8], ECX[8], EDX[8];
-	char RAX[16], RBX[16], RCX[16], RDX[16];
-}Registros;
+    uint32_t pid;
+    uint32_t program_counter; 
+    
+    t_list* lista_de_instrucciones;
+    uint32_t tam_lista_instrucciones;
+	
+    Registros registrosCpu; // tamanio fijo de 112 bytes
+	
+    t_list* tabla_segmentos;
+    uint32_t tam_tabla_segmentos;
+    
+    estados estado;
+}Cde_serializado;
 
 // Variables globales
 Config_cpu config_cpu;
 t_log* logger;
 t_config* config;
+
+sem_t *sem_conexion;
 
 int kernel_fd;
 int socket_memoria;
@@ -104,5 +124,7 @@ void ejecutar_fseek(/*archivo, int */);
 void ejecutar_ftruncate(/*archivo, int */);
 void ejecutar_createsegment(/*int , int*/ );
 void ejecutar_deletesegment(/*int */);
+
+void deserializar_cde();
 
 #endif /* INCLUDES_CPU_H_ */

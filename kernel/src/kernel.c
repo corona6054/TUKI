@@ -107,7 +107,7 @@ void levantar_config(){
 
 void conectarse_con_memoria(){
 	socket_memoria = crear_conexion(config_kernel.ip_memoria, config_kernel.puerto_memoria);
-	if (socket_memoria == 0)
+	if (socket_memoria >= 0)
 		log_info(logger,"Conectado con memoria");
 	else
 	{
@@ -119,7 +119,7 @@ void conectarse_con_memoria(){
 
 void conectarse_con_cpu(){
 	socket_cpu = crear_conexion(config_kernel.ip_cpu, config_kernel.puerto_cpu);
-	if (socket_cpu == 0)
+	if (socket_cpu >= 0)
 			log_info(logger,"Conectado con cpu");
 		else
 			log_info(logger,"Error al conectar con cpu");
@@ -128,7 +128,7 @@ void conectarse_con_cpu(){
 
 void conectarse_con_file_system(){
 	socket_file_system = crear_conexion(config_kernel.ip_file_system, config_kernel.puerto_file_system);
-	if (socket_file_system == 0)
+	if (socket_file_system >= 0)
 			log_info(logger,"Conectado con file system");
 		else
 			log_info(logger,"Error al conectar con file system");
@@ -141,10 +141,12 @@ void establecer_conexiones()
 	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
 	pthread_detach(conexion_memoria);
 
+	*/
 	pthread_t conexion_cpu;
 	pthread_create(&conexion_cpu, NULL, (void *) conectarse_con_cpu, NULL);
 	pthread_detach(conexion_cpu);
 
+	/*
 	pthread_t conexion_file_system;
 	pthread_create(&conexion_file_system, NULL, (void *) conectarse_con_file_system, NULL);
 	pthread_detach(conexion_file_system);
@@ -347,13 +349,16 @@ void planificacionFIFO(){
 			cde.tabla_segmentos = pcb_a_ejecutar->tabla_segmentos;
 			cde.estado = pcb_a_ejecutar->estado;
 			
-			Cde_serializado cde_ser = serializar_cde(cde);
-			t_paquete *paquete = crear_paquete();
-			agregar_a_paquete(paquete,&cde_ser,tamanio_cde_serializado(cde_ser));
+			serializar_cde(cde); //serializa el cde, arma el paquete y lo envia a cpu
 			
-			//agregar a paquete
-			// enviar a cpu
+			
+			//t_paquete *paquete = crear_paquete();
 
+			
+			//agregar_a_paquete(paquete,&cde_ser,tamanio_cde_serializado(cde_ser));
+			//enviar_paquete(paquete,socket_cpu);
+			
+			
 			// tiene que esperar rta del cpu
 			// deserializa el paquete
 			// replanifica si es necesario
@@ -371,7 +376,7 @@ void planificacionHRRN(){
 
 // UTILS SERIALIZACION
 
-Cde_serializado serializar_cde(contexto_de_ejecucion cde){
+void serializar_cde(contexto_de_ejecucion cde){
 	// Ver tamanios de los nodos de las listas
 	Cde_serializado cde_serializado;
 
@@ -386,9 +391,72 @@ Cde_serializado serializar_cde(contexto_de_ejecucion cde){
     cde_serializado.tam_tabla_segmentos = sizeof(Segmento) * list_size(cde.tabla_segmentos);
     cde_serializado.tabla_segmentos;
     
-    cde_serializado.estado = cde.estado;
+    cde_serializado.estado = 0;
 
-	return cde_serializado;
+	t_buffer* buffer = malloc(sizeof(t_buffer));
+
+	buffer->size = 
+		cde_serializado.tam_lista_instrucciones + cde_serializado.tam_tabla_segmentos
+		+ 112 + sizeof(uint32_t) * 5;
+
+	void* stream = malloc(buffer->size);
+	int offset = 0;
+
+	memcpy(stream + offset, &cde_serializado.pid,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	
+	memcpy(stream + offset, &cde_serializado.program_counter,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+
+	memcpy(stream + offset, &cde_serializado.tam_lista_instrucciones,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	
+	memcpy(stream + offset, cde_serializado.lista_de_instrucciones, cde_serializado.tam_lista_instrucciones);
+	offset += cde_serializado.tam_lista_instrucciones;
+	
+	memcpy(stream + offset, &cde_serializado.registrosCpu, 112);
+	offset += 112;
+
+	memcpy(stream + offset, &cde_serializado.tam_tabla_segmentos,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	
+	memcpy(stream + offset, cde_serializado.tabla_segmentos, cde_serializado.tam_tabla_segmentos);
+	offset += cde_serializado.tam_tabla_segmentos;
+
+	memcpy(stream + offset, &cde_serializado.estado, sizeof(uint8_t));
+	offset += sizeof(uint8_t);
+	
+	buffer->stream = stream;
+
+	free(cde_serializado.lista_de_instrucciones);
+	free(cde_serializado.tabla_segmentos);
+
+	// Llenamos el paquete --------------------------------------------------------
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+
+	paquete->codigo_operacion = CONTEXTOEJEC; // Podemos usar una constante por operación
+	paquete->buffer = buffer; // Nuestro buffer de antes.
+
+	// Armamos el stream a enviar
+	void* a_enviar = malloc(paquete->buffer->size + sizeof(uint8_t) + sizeof(int));
+	offset = 0;
+	
+	memcpy(a_enviar + offset, &(paquete->codigo_operacion), sizeof(uint8_t));
+	offset += sizeof(uint8_t);
+
+	memcpy(a_enviar + offset, &(paquete->buffer->size), sizeof(int));
+	offset += sizeof(int);
+	
+	memcpy(a_enviar + offset, paquete->buffer->stream, paquete->buffer->size);
+
+	// Por último enviamos
+	send(socket_cpu, a_enviar, buffer->size + sizeof(uint8_t) + sizeof(uint32_t), 0);
+
+	// No nos olvidamos de liberar la memoria que ya no usaremos
+	free(a_enviar);
+	free(paquete->buffer->stream);
+	free(paquete->buffer);
+	free(paquete);
 }
 
 

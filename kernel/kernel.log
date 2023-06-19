@@ -429,3 +429,47 @@
 [INFO] 20:59:27:391 Kernel/(4223:4264): Paquete recibido.
 [INFO] 20:59:27:391 Kernel/(4223:4264): Se crea el proceso 0 en NEW
 [INFO] 20:59:27:391 Kernel/(4223:4264): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 22:13:29:215 Kernel/(78869:78869): Listo para escuchar a mi cliente
+[INFO] 22:14:13:428 Kernel/(78923:78923): Listo para escuchar a mi cliente
+[INFO] 22:15:11:788 Kernel/(79060:79060): Listo para escuchar a mi cliente
+[INFO] 22:15:11:793 Kernel/(79060:79065): Error al conectar con cpu
+[INFO] 22:15:37:861 Kernel/(79060:79066): Se conecto un cliente!
+[INFO] 22:15:37:867 Kernel/(79060:79097): Entro a planificador a largo plazo.
+[INFO] 22:15:37:897 Kernel/(79060:79097): Paquete recibido.
+[INFO] 22:15:37:897 Kernel/(79060:79097): Se crea el proceso 0 en NEW
+[INFO] 22:15:37:897 Kernel/(79060:79097): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 22:25:03:164 Kernel/(79495:79495): Listo para escuchar a mi cliente
+[INFO] 22:25:03:173 Kernel/(79495:79500): Error al conectar con cpu
+[INFO] 22:25:20:891 Kernel/(79495:79501): Se conecto un cliente!
+[INFO] 22:25:20:892 Kernel/(79495:79517): Entro a planificador a largo plazo.
+[INFO] 22:25:20:898 Kernel/(79495:79517): Paquete recibido.
+[INFO] 22:25:20:899 Kernel/(79495:79517): Se crea el proceso 0 en NEW
+[INFO] 22:25:20:899 Kernel/(79495:79517): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 22:52:58:402 Kernel/(80737:80737): Listo para escuchar a mi cliente
+[INFO] 22:52:58:419 Kernel/(80737:80741): Error al conectar con cpu
+[INFO] 22:53:09:904 Kernel/(80737:80743): Se conecto un cliente!
+[INFO] 22:53:09:905 Kernel/(80737:80757): Entro a planificador a largo plazo.
+[INFO] 22:53:09:911 Kernel/(80737:80757): Paquete recibido.
+[INFO] 22:53:09:911 Kernel/(80737:80757): Se crea el proceso 0 en NEW
+[INFO] 22:53:09:911 Kernel/(80737:80757): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 23:14:09:150 Kernel/(81865:81865): Listo para escuchar a mi cliente
+[INFO] 23:14:09:157 Kernel/(81865:81870): Error al conectar con cpu
+[INFO] 23:14:35:914 Kernel/(81865:81871): Se conecto un cliente!
+[INFO] 23:14:35:920 Kernel/(81865:81886): Entro a planificador a largo plazo.
+[INFO] 23:14:35:925 Kernel/(81865:81886): Paquete recibido.
+[INFO] 23:14:35:928 Kernel/(81865:81886): Se crea el proceso 0 en NEW
+[INFO] 23:14:35:928 Kernel/(81865:81886): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 23:18:30:191 Kernel/(82533:82533): Listo para escuchar a mi cliente
+[INFO] 23:18:30:202 Kernel/(82533:82538): Error al conectar con cpu
+[INFO] 23:18:44:039 Kernel/(82533:82539): Se conecto un cliente!
+[INFO] 23:18:44:040 Kernel/(82533:82554): Entro a planificador a largo plazo.
+[INFO] 23:18:44:040 Kernel/(82533:82554): Paquete recibido.
+[INFO] 23:18:44:042 Kernel/(82533:82554): Se crea el proceso 0 en NEW
+[INFO] 23:18:44:042 Kernel/(82533:82554): PID: 0 - Estado Anterior: 0 - Estado Actual: 1
+[INFO] 23:20:56:585 Kernel/(82667:82667): Listo para escuchar a mi cliente
+[INFO] 23:20:56:600 Kernel/(82667:82673): Conectado con cpu
+[INFO] 23:21:10:756 Kernel/(82667:82674): Se conecto un cliente!
+[INFO] 23:21:10:761 Kernel/(82667:82700): Entro a planificador a largo plazo.
+[INFO] 23:21:10:762 Kernel/(82667:82700): Paquete recibido.
+[INFO] 23:21:10:762 Kernel/(82667:82700): Se crea el proceso 0 en NEW
+[INFO] 23:21:10:763 Kernel/(82667:82700): PID: 0 - Estado Anterior: 0 - Estado Actual: 1

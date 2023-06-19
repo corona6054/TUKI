@@ -21,3 +21,19 @@
 [INFO] 21:57:21:406 Cpu/(6147:6147): tam registro: 4
 [INFO] 22:00:08:015 Cpu/(6232:6232): tam registro: 4
 [INFO] 22:00:20:078 Cpu/(6246:6246): tam registro: 4
+[INFO] 22:13:02:294 Cpu/(78832:78832): Listo para escuchar a mi cliente
+[INFO] 22:14:02:784 Cpu/(78898:78898): Listo para escuchar a mi cliente
+[INFO] 22:15:03:182 Cpu/(79032:79032): Listo para escuchar a mi cliente
+[INFO] 22:15:11:794 Cpu/(79032:79032): Se conecto un cliente!
+[INFO] 22:24:48:911 Cpu/(79466:79466): Listo para escuchar a mi cliente
+[INFO] 22:25:03:173 Cpu/(79466:79466): Se conecto un cliente!
+[INFO] 22:25:03:173 Cpu/(79466:79466): Entre a deserializar_cde
+[INFO] 22:52:44:325 Cpu/(80702:80702): Listo para escuchar a mi cliente
+[INFO] 23:13:55:213 Cpu/(81853:81853): Listo para escuchar a mi cliente
+[INFO] 23:14:09:157 Cpu/(81853:81853): Se conecto un cliente!
+[INFO] 23:14:09:157 Cpu/(81853:81853): Entre a deserializar_cde
+[INFO] 23:18:23:964 Cpu/(82523:82523): Listo para escuchar a mi cliente
+[INFO] 23:20:51:236 Cpu/(82623:82623): Listo para escuchar a mi cliente
+[INFO] 23:20:56:599 Cpu/(82623:82623): Se conecto un cliente!
+[INFO] 23:20:56:599 Cpu/(82623:82623): Se conecto el kernel
+[INFO] 23:20:56:599 Cpu/(82623:82623): Entre a deserializar_cde

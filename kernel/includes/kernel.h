@@ -12,7 +12,6 @@
 #include <unistd.h>
 #include "utils_server.h"
 #include "utils_cliente.h"
-#include <unistd.h>
 
 
 typedef struct{
@@ -177,7 +176,7 @@ pcb crear_pcb(t_list*);
 void planificacionFIFO();
 void planificacionHRRN();
 
-Cde_serializado serializar_cde(contexto_de_ejecucion);
+void serializar_cde(contexto_de_ejecucion);
 int tamanio_cde_serializado(Cde_serializado);
 
 #endif /* INCLUDES_KERNEL_H_ */
