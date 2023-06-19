@@ -8,7 +8,7 @@ int main(void){
 	recibir_contexto();
 	//Aca se tiene que deserializar el contexto
 
-	int instruccion = list_get(contexto_de_ejecucion.pcb.lista_de_instrucciones, contexto_de_ejecucion.pc);
+	int instruccion = list_get(contexto_de_ejecucion.lista_de_instrucciones, contexto_de_ejecucion.pc);
 
 	int code_op; //Solo la inicializo para que no me tire error
 
@@ -27,6 +27,37 @@ int main(void){
 			ejecutar_exit();
 		break;
 		case IO:
+			ejecutar_io(tiempo);
+		break;
+		case SIGNAL:
+			ejecutar_signal(recurso);
+		break;
+		case WAIT:
+			ejecutar_wait(recurso);
+		break;
+		case F_OPEN:
+			ejecutar_fopen();
+		break;
+		case F_CLOSE:
+			ejecutar_fclose();
+		break;
+		case F_SEEK:
+			ejecutar_fseek();
+		break;
+		case F_READ:
+			ejecutar_fread();
+		break;
+		case F_WRITE:
+			ejecutar_fwrite();
+		break;
+		case F_TRUNCATE:
+			ejecutar_ftruncate();
+		break;
+		case CREATE_SEGMENT:
+			ejecutar_createsegment();
+		break;
+		case DELETE_SEGMENT:
+			ejecutar_deletesegment();
 		break;
 	}
 	*/
@@ -140,6 +171,9 @@ void ejecutar_exit(){
 	//send(socket_kernel, &terminalo, sizeof(int), NULL);
 	//Envio el contexto de ejecucion y un valor para que el kernel sepa que tiene que mandar terminar la conexion
 
+	//contexto_de_ejecucion.estados = EXIT
+	//esta es una opcion o mande un mensaje para que kernel cambie el estado a exit (el enunciado dice que es un syscall)
+
 	//enviar_contexto_de_ejecucion();
 
 }
@@ -149,7 +183,7 @@ void ejecutar_yield(){
 	//int mandalo_al_final = 5
 		//send(socket_kernel, &contexto_ejecucion, sizeof(), NULL);
 		//send(socket_kernel, &mandalo_al_final, sizeof(int), NULL);
-	//Envio el contexto de ejecucion y un valor para que el kernel sepa que tiene que mandar la instruccio al final de la cola
+	//Envio el contexto de ejecucion y un valor para que el kernel sepa que tiene que mandar la instruccion al final de la cola
 
 	/*switch(contexto.algoritmo){
 		case FIFO:
@@ -157,5 +191,47 @@ void ejecutar_yield(){
 		//send(socket_kernel, &valorandasaber, sizeof(), NULL);
 	}Esto es en caso de que que  me mande si es FIFO, HRRN, etc*/
 
+	//creo que tengo que mandar un mensaje para ver que tienen que hacer
+}
+
+void ejecutar_io(int tiempo_bloqueo){
+	//yo cambio el estado a bloqueado o mando el contexto con el tiempo de bloqueo y lo cambia el kernel
+	//como mando el tiempo de bloqueo??
+
+}
+
+void ejecutar_signal(/*recurso*/){
+	//tengo que tener los recursos en un struct o es un tipo de variable?
+	//como le mandamos a kernel el recurso, como mensaje simple?
+
+}
+
+void ejecutar_wait(/*recurso*/){
+	//tengo que tener los recursos en un struct o es un tipo de variable?
+	//como le mandamos a kernel el recurso, como mensaje simple?
+}
+
+void ejecutar_fopen(/*archivo*/){
+
+}
+void ejecutar_fclose(/*archivo*/){
+
+}
+void ejecutar_fread(/*archivo, int direccion_logica, int cant_bytes*/){
+
+}
+void ejecutar_fwrite(/*archivo, int direccion_logica, int cant_bytes*/){
+
+}
+void ejecutar_fseek(/*archivo, int posicion*/){
+
+}
+void ejecutar_ftruncate(/*archivo, int tamanio*/){
+
+}
+void ejecutar_createsegment(/*int id_segmento, int tamanio*/){
+
+}
+void ejecutar_deletesegment(/*int id_segmento*/){
 
 }

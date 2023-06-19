@@ -16,6 +16,24 @@ typedef struct
     char string1[15];
     char string2[15];
 } Instruction;
+
+typedef enum{
+	NEW,
+	READY,
+	EXEC,
+	BLOCK,
+	EXIT1
+}estados;
+
+typedef struct{
+    uint32_t pid;
+    t_list* lista_de_instrucciones;
+    uint32_t program_counter;
+	Registros registrosCpu;
+	t_list* tabla_segmentos;
+    estados estado;
+}contexto_de_ejecucion;
+
 typedef enum
 {
     F_READ,
@@ -75,5 +93,16 @@ void establecer_conexiones();
 void ejecutar_set(char[], char[], int);
 void ejecutar_exit();
 void ejecutar_yield();
+void ejecutar_io(int);
+void ejecutar_signal(/*recurso*/);
+void ejecutar_wait(/*recurso*/);
+void ejecutar_fopen(/*archivo*/);
+void ejecutar_fclose(/*archivo*/);
+void ejecutar_fread(/*archivo, int , int */);
+void ejecutar_fwrite(/*archivo, int , int */);
+void ejecutar_fseek(/*archivo, int */);
+void ejecutar_ftruncate(/*archivo, int */);
+void ejecutar_createsegment(/*int , int*/ );
+void ejecutar_deletesegment(/*int */);
 
 #endif /* INCLUDES_CPU_H_ */
