@@ -25,15 +25,6 @@
 
 }tablaInstr;
 
-typedef struct
-{
-    int instruccion;
-    int numero1;
-    int numero2;
-    char string1[15];
-    char string2[15];
-} Instruction;
-
 typedef enum
 {
     F_READ,
@@ -54,6 +45,16 @@ typedef enum
     EXIT,
     INVALID
 } InstructionType;
+
+typedef struct
+{
+    InstructionType instruccion;
+    u_int32_t numero1;
+    u_int32_t numero2;
+    char string1[15];
+    char string2[15];
+} Instruction;
+
 
 
 typedef struct{

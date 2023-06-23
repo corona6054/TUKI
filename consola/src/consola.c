@@ -21,12 +21,12 @@ int main(int argc, char** argv){
 // SUBPROGRAMAS
 
 void serializeInstruction(Instruction* instruction, void* stream, int offset) {
-	memcpy(stream + offset, &instruction->instruccion, sizeof(int));
-	offset += sizeof(int);
-	memcpy(stream + offset, &instruction->numero1, sizeof(int));
-	offset += sizeof(int);
-	memcpy(stream + offset, &instruction->numero2, sizeof(int));
-	offset += sizeof(int);
+	memcpy(stream + offset, &instruction->instruccion, sizeof(u_int32_t));
+	offset += sizeof(u_int32_t);
+	memcpy(stream + offset, &instruction->numero1, sizeof(u_int32_t));
+	offset += sizeof(u_int32_t);
+	memcpy(stream + offset, &instruction->numero2, sizeof(u_int32_t));
+	offset += sizeof(u_int32_t);
 	memcpy(stream + offset, &instruction->string1, sizeof(char[15]));
 	offset += sizeof(char[15]);
 	memcpy(stream + offset, &instruction->string2, sizeof(char[15]));
@@ -35,16 +35,18 @@ void serializeInstruction(Instruction* instruction, void* stream, int offset) {
 
 int enviarLista(){
 	t_paquete* paquete = crear_paquete();
-	char serialized[42];
-	int offset=0;
+    int instr_size = sizeof(u_int32_t) * 3 + sizeof(char[15]) * 2;
+    void* serialized=malloc(instr_size);
+    int offset=0;
 	for (int i = 0; i < instructionCount; i++){
-	            serializeInstruction(&instructions[i], &serialized,offset);
-				agregar_a_paquete(paquete,serialized,42);
+	            serializeInstruction(&instructions[i], serialized,offset);
+				agregar_a_paquete(paquete,serialized,instr_size);
 	        }
 		enviar_paquete(paquete,socket_kernel);
 		log_info(logger,"Paquete enviado");
 		eliminar_paquete(paquete);
-		return 1;
+        free(serialized);
+        return 1;
 }
 
 

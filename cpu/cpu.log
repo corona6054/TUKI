@@ -37,3 +37,147 @@
 [INFO] 23:20:56:599 Cpu/(82623:82623): Se conecto un cliente!
 [INFO] 23:20:56:599 Cpu/(82623:82623): Se conecto el kernel
 [INFO] 23:20:56:599 Cpu/(82623:82623): Entre a deserializar_cde
+[INFO] 19:58:51:117 Cpu/(2147:2147): Listo para escuchar a mi cliente
+[INFO] 19:59:05:623 Cpu/(2147:2147): Se conecto un cliente!
+[INFO] 19:59:05:623 Cpu/(2147:2147): Se conecto el kernel
+[INFO] 19:59:05:623 Cpu/(2147:2147): Entre a deserializar_cde
+[INFO] 20:01:06:844 Cpu/(2243:2243): Listo para escuchar a mi cliente
+[INFO] 20:08:35:692 Cpu/(2850:2850): Listo para escuchar a mi cliente
+[INFO] 20:08:50:036 Cpu/(2850:2850): Se conecto un cliente!
+[INFO] 20:08:50:037 Cpu/(2850:2850): Se conecto el kernel
+[INFO] 20:08:50:037 Cpu/(2850:2850): Entre a deserializar_cde
+[INFO] 20:10:41:145 Cpu/(2850:2850): Recibi el codigo de operacion
+[INFO] 20:10:41:146 Cpu/(2850:2850): Recibi el tamanio
+[INFO] 20:10:41:146 Cpu/(2850:2850): Recibi el paquete
+[INFO] 20:10:41:146 Cpu/(2850:2850): Empiezo a deserializar
+[INFO] 20:11:45:775 Cpu/(3013:3013): Listo para escuchar a mi cliente
+[INFO] 20:11:57:391 Cpu/(3013:3013): Se conecto un cliente!
+[INFO] 20:11:57:391 Cpu/(3013:3013): Se conecto el kernel
+[INFO] 20:11:57:391 Cpu/(3013:3013): Entre a deserializar_cde
+[INFO] 20:12:07:539 Cpu/(3013:3013): Recibi el codigo de operacion
+[INFO] 20:12:07:539 Cpu/(3013:3013): Recibi el tamanio
+[INFO] 20:12:07:539 Cpu/(3013:3013): Recibi el paquete
+[INFO] 20:12:07:539 Cpu/(3013:3013): Empiezo a deserializar
+[INFO] 20:13:30:896 Cpu/(3126:3126): Listo para escuchar a mi cliente
+[INFO] 20:13:38:952 Cpu/(3126:3126): Se conecto un cliente!
+[INFO] 20:13:38:953 Cpu/(3126:3126): Se conecto el kernel
+[INFO] 20:13:38:953 Cpu/(3126:3126): Entre a deserializar_cde
+[INFO] 20:14:05:687 Cpu/(3126:3126): Recibi el codigo de operacion
+[INFO] 20:14:05:688 Cpu/(3126:3126): Recibi el tamanio
+[INFO] 20:14:05:688 Cpu/(3126:3126): Recibi el paquete
+[INFO] 20:14:05:688 Cpu/(3126:3126): Empiezo a deserializar
+[INFO] 20:14:05:688 Cpu/(3126:3126): Termine de deserializar.
+[INFO] 20:14:05:688 Cpu/(3126:3126): PID: 1411076997
+[INFO] 20:14:05:688 Cpu/(3126:3126): PC: 32623
+[INFO] 20:14:05:688 Cpu/(3126:3126): Estado: 0
+[INFO] 20:19:46:206 Cpu/(3370:3370): Listo para escuchar a mi cliente
+[INFO] 20:20:09:526 Cpu/(3370:3370): Se conecto un cliente!
+[INFO] 20:20:09:529 Cpu/(3370:3370): Se conecto el kernel
+[INFO] 20:20:09:530 Cpu/(3370:3370): Entre a deserializar_cde
+[INFO] 20:20:26:265 Cpu/(3370:3370): Recibi el codigo de operacion
+[INFO] 20:20:26:266 Cpu/(3370:3370): Recibi el tamanio
+[INFO] 20:20:26:266 Cpu/(3370:3370): Recibi el paquete
+[INFO] 20:20:26:267 Cpu/(3370:3370): Empiezo a deserializar
+[INFO] 20:20:26:271 Cpu/(3370:3370): Termine de deserializar.
+[INFO] 20:20:26:271 Cpu/(3370:3370): PID: 0
+[INFO] 20:20:26:272 Cpu/(3370:3370): PC: 0
+[INFO] 20:20:26:273 Cpu/(3370:3370): Estado: 0
+[INFO] 20:29:30:946 Cpu/(3708:3708): Listo para escuchar a mi cliente
+[INFO] 20:30:03:737 Cpu/(3708:3708): Se conecto un cliente!
+[INFO] 20:30:03:739 Cpu/(3708:3708): Se conecto el kernel
+[INFO] 20:30:03:740 Cpu/(3708:3708): Entre a deserializar_cde
+[INFO] 20:30:18:930 Cpu/(3708:3708): Recibi el codigo de operacion
+[INFO] 20:30:18:930 Cpu/(3708:3708): Recibi el tamanio
+[INFO] 20:30:18:931 Cpu/(3708:3708): Recibi el paquete
+[INFO] 20:30:18:931 Cpu/(3708:3708): Empiezo a deserializar
+[INFO] 20:30:18:933 Cpu/(3708:3708): Termine de deserializar.
+[INFO] 20:30:18:934 Cpu/(3708:3708): PID: 0
+[INFO] 20:30:18:934 Cpu/(3708:3708): PC: 0
+[INFO] 20:30:18:936 Cpu/(3708:3708): Estado: 0
+[INFO] 20:34:44:466 Cpu/(3882:3882): Listo para escuchar a mi cliente
+[INFO] 20:34:54:768 Cpu/(3882:3882): Se conecto un cliente!
+[INFO] 20:34:54:769 Cpu/(3882:3882): Se conecto el kernel
+[INFO] 20:34:54:771 Cpu/(3882:3882): Entre a deserializar_cde
+[INFO] 20:35:27:032 Cpu/(3882:3882): Recibi el codigo de operacion: 2
+[INFO] 20:35:27:036 Cpu/(3882:3882): Recibi el tamanio: 0
+[INFO] 20:35:27:036 Cpu/(3882:3882): Recibi el paquete
+[INFO] 20:35:27:037 Cpu/(3882:3882): Empiezo a deserializar
+[INFO] 20:35:27:040 Cpu/(3882:3882): Termine de deserializar.
+[INFO] 20:35:27:041 Cpu/(3882:3882): PID: 0
+[INFO] 20:35:27:041 Cpu/(3882:3882): PC: 0
+[INFO] 20:35:27:042 Cpu/(3882:3882): Estado: 0
+[INFO] 20:36:46:740 Cpu/(3967:3967): Listo para escuchar a mi cliente
+[INFO] 20:37:58:209 Cpu/(3967:3967): Se conecto un cliente!
+[INFO] 20:37:58:209 Cpu/(3967:3967): Se conecto el kernel
+[INFO] 20:37:58:209 Cpu/(3967:3967): Entre a deserializar_cde
+[INFO] 20:38:34:733 Cpu/(3967:3967): Recibi el codigo de operacion: 2
+[INFO] 20:38:34:734 Cpu/(3967:3967): Recibi el tamanio: 0
+[INFO] 20:38:34:734 Cpu/(3967:3967): Recibi el paquete
+[INFO] 20:38:34:734 Cpu/(3967:3967): Empiezo a deserializar
+[INFO] 20:55:14:945 Cpu/(4578:4578): Listo para escuchar a mi cliente
+[INFO] 20:55:26:310 Cpu/(4578:4578): Se conecto un cliente!
+[INFO] 20:55:26:310 Cpu/(4578:4578): Se conecto el kernel
+[INFO] 20:55:26:310 Cpu/(4578:4578): Entre a deserializar_cde
+[INFO] 20:55:57:800 Cpu/(4578:4578): Recibi el codigo de operacion: 2
+[INFO] 20:55:57:800 Cpu/(4578:4578): Recibi el tamanio: 0
+[INFO] 20:55:57:800 Cpu/(4578:4578): Recibi el paquete
+[INFO] 20:55:57:800 Cpu/(4578:4578): Empiezo a deserializar
+[INFO] 20:55:57:800 Cpu/(4578:4578): Termine de deserializar.
+[INFO] 20:55:57:800 Cpu/(4578:4578): PID: -1914836723
+[INFO] 20:55:57:800 Cpu/(4578:4578): PC: 21989
+[INFO] 20:55:57:800 Cpu/(4578:4578): Estado: 56
+[INFO] 23:05:08:431 Cpu/(6792:6792): Listo para escuchar a mi cliente
+[INFO] 23:05:25:409 Cpu/(6792:6792): Se conecto un cliente!
+[INFO] 23:05:25:409 Cpu/(6792:6792): Se conecto el kernel
+[INFO] 23:05:25:409 Cpu/(6792:6792): Entre a deserializar_cde
+[INFO] 23:06:57:251 Cpu/(6792:6792): Recibi el codigo de operacion: 2
+[INFO] 23:06:57:251 Cpu/(6792:6792): Recibi el tamanio: 0
+[INFO] 23:06:57:251 Cpu/(6792:6792): Recibi el paquete
+[INFO] 23:06:57:251 Cpu/(6792:6792): Empiezo a deserializar
+[INFO] 23:09:16:616 Cpu/(7035:7035): Listo para escuchar a mi cliente
+[INFO] 23:09:26:306 Cpu/(7035:7035): Se conecto un cliente!
+[INFO] 23:09:26:308 Cpu/(7035:7035): Se conecto el kernel
+[INFO] 23:09:26:308 Cpu/(7035:7035): Entre a deserializar_cde
+[INFO] 23:09:53:128 Cpu/(7035:7035): Recibi el codigo de operacion: 2
+[INFO] 23:09:53:128 Cpu/(7035:7035): Recibi el tamanio: 0
+[INFO] 23:09:53:128 Cpu/(7035:7035): Recibi el paquete
+[INFO] 23:09:53:128 Cpu/(7035:7035): Empiezo a deserializar
+[INFO] 23:09:53:128 Cpu/(7035:7035): PID: -1198104959
+[INFO] 23:09:53:128 Cpu/(7035:7035): PC: 21958
+[INFO] 23:09:53:128 Cpu/(7035:7035): Tam lista instrucciones: 0
+[INFO] 23:11:28:081 Cpu/(7123:7123): Listo para escuchar a mi cliente
+[INFO] 23:11:36:828 Cpu/(7123:7123): Se conecto un cliente!
+[INFO] 23:11:36:830 Cpu/(7123:7123): Se conecto el kernel
+[INFO] 23:11:36:832 Cpu/(7123:7123): Entre a deserializar_cde
+[INFO] 23:11:48:188 Cpu/(7123:7123): Recibi el codigo de operacion: 2
+[INFO] 23:11:48:189 Cpu/(7123:7123): Recibi el tamanio: 0
+[INFO] 23:11:48:189 Cpu/(7123:7123): Recibi el paquete
+[INFO] 23:11:48:189 Cpu/(7123:7123): Empiezo a deserializar
+[INFO] 23:11:48:191 Cpu/(7123:7123): PID: 0
+[INFO] 23:11:48:192 Cpu/(7123:7123): PC: 0
+[INFO] 23:11:48:192 Cpu/(7123:7123): Tam lista instrucciones: 0
+[INFO] 23:41:48:821 Cpu/(8890:8890): Listo para escuchar a mi cliente
+[INFO] 23:42:15:108 Cpu/(8890:8890): Se conecto un cliente!
+[INFO] 23:42:15:109 Cpu/(8890:8890): Se conecto el kernel
+[INFO] 23:43:40:942 Cpu/(9019:9019): Listo para escuchar a mi cliente
+[INFO] 23:43:48:744 Cpu/(9019:9019): Se conecto un cliente!
+[INFO] 23:43:48:744 Cpu/(9019:9019): Se conecto el kernel
+[INFO] 23:43:48:744 Cpu/(9019:9019): Entre a deserializar_cde
+[INFO] 23:44:10:288 Cpu/(9019:9019): Recibi el codigo de operacion: -1
+[INFO] 23:46:59:013 Cpu/(9192:9192): Listo para escuchar a mi cliente
+[INFO] 23:47:03:621 Cpu/(9192:9192): Se conecto un cliente!
+[INFO] 23:47:03:621 Cpu/(9192:9192): Se conecto el kernel
+[INFO] 23:47:03:621 Cpu/(9192:9192): Entre a deserializar_cde
+[INFO] 23:49:03:124 Cpu/(9192:9192): Recibi el codigo de operacion: -1
+[INFO] 23:50:01:113 Cpu/(9269:9269): Listo para escuchar a mi cliente
+[INFO] 23:50:30:284 Cpu/(9269:9269): Se conecto un cliente!
+[INFO] 23:50:30:284 Cpu/(9269:9269): Se conecto el kernel
+[INFO] 23:50:30:285 Cpu/(9269:9269): Entre a deserializar_cde
+[INFO] 23:51:45:778 Cpu/(9269:9269): Recibi el codigo de operacion: -1
+[INFO] 23:52:22:684 Cpu/(9348:9348): Listo para escuchar a mi cliente
+[INFO] 23:52:57:711 Cpu/(9380:9380): Listo para escuchar a mi cliente
+[INFO] 23:53:26:000 Cpu/(9399:9399): Listo para escuchar a mi cliente
+[INFO] 23:53:37:688 Cpu/(9399:9399): Se conecto un cliente!
+[INFO] 23:53:37:689 Cpu/(9399:9399): Se conecto el kernel
+[INFO] 23:53:37:689 Cpu/(9399:9399): Entre a deserializar_cde
+[INFO] 23:54:47:964 Cpu/(9399:9399): Recibi el codigo de operacion: -1

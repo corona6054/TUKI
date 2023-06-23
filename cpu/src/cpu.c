@@ -8,6 +8,7 @@ int main(void){
 
 	sem_wait(&sem_conexion);
 
+
 	deserializar_cde(); // recibe, deserializa y printea el paquete
 	/*
 	t_list contexto_ejecucion;
@@ -90,6 +91,7 @@ void recibir_contexto(){
 int tamanioRegistro(char *registro){
 	if(strcmp(registro,"AX") == 0)
 		return 4;
+	else return -1;
 }
 
 void levantar_modulo(){
@@ -251,66 +253,88 @@ void ejecutar_deletesegment(/*int id_segmento*/){
 }
 
 
-void deserializar_cde(){
-	t_paquete* paquete = crear_paquete();
-
+void deserializar_cde(){		
 	log_info(logger,"Entre a deserializar_cde");
 	
-	// Primero recibimos el codigo de operacion
-	recv(kernel_fd, &(paquete->codigo_operacion), sizeof(uint8_t), MSG_WAITALL);
+	int op = recibir_operacion(kernel_fd);
+	
+	log_info(logger,"Recibi el codigo de operacion: %d", op);
+	
+	t_list* lista = recibir_paquete(kernel_fd);
 
-
-	log_info(logger,"Recibi el codigo de operacion");
-
-	// Después ya podemos recibir el buffer. Primero su tamaño seguido del contenido
-	recv(kernel_fd, &(paquete->buffer->size), sizeof(uint32_t), MSG_WAITALL);
-	log_info(logger,"Recibi el tamanio");
-
-	paquete->buffer->stream = malloc(paquete->buffer->size);
-
-	recv(kernel_fd, paquete->buffer->stream, paquete->buffer->size, MSG_WAITALL);
 	log_info(logger,"Recibi el paquete");
-	// ACA VA A HABER UN SWITCH DE COD OP PARA VER SI LE LLEGA DEL KERNEL O DE MEMORIA
 	
-	Cde_serializado* cde_recibido = malloc(sizeof(Cde_serializado));
+	void* stream_recibido = list_get(lista, 0);
+	Cde_serializado* cde_recibido = malloc(sizeof(Cde_serializado)); //arreglar dsps el sizeof
+	int offset = 0;
 
-	void* stream = paquete->buffer->stream;
-
-	log_info(logger,"Empiezo a deserializar");
-	// Deserializamos los campos que tenemos en el buffer
-    memcpy(&(cde_recibido->pid), stream, sizeof(uint32_t));
-    stream += sizeof(uint32_t);
-    
-	memcpy(&(cde_recibido->program_counter), stream, sizeof(uint32_t));
-	stream += sizeof(uint32_t);
-
-	memcpy(&cde_recibido->tam_lista_instrucciones, stream, sizeof(uint32_t));
-	stream += sizeof(uint32_t);
+	memcpy(&(cde_recibido->pid), stream_recibido + offset, sizeof(uint32_t));
+    offset += sizeof(uint32_t);
 	
-	cde_recibido->lista_de_instrucciones = malloc(cde_recibido->tam_lista_instrucciones);
+	memcpy(&(cde_recibido->program_counter), stream_recibido + offset, sizeof(uint32_t));
+	offset += sizeof(uint32_t);
 
-	memcpy(cde_recibido->lista_de_instrucciones, stream,  cde_recibido->tam_lista_instrucciones);
-	stream += cde_recibido->tam_lista_instrucciones;
+	memcpy(&cde_recibido->tam_lista_instrucciones, stream_recibido + offset, sizeof(uint32_t));
+	offset += sizeof(uint32_t);
 	
-	memcpy(&(cde_recibido->registrosCpu), stream,  112);
-	stream += 112;
-
-	memcpy(&(cde_recibido->tam_tabla_segmentos), stream, sizeof(uint32_t));
-	stream += sizeof(uint32_t);
+	cde_recibido->lista_de_instrucciones = list_create();
 	
-	cde_recibido->tabla_segmentos = malloc(cde_recibido->tam_tabla_segmentos);
+	int tam_de_1_nodo_instruccion = (sizeof(uint32_t)*2 + sizeof(uint8_t) + 15 + 15);
+	int cant_nodos_instrucciones = cde_recibido->tam_lista_instrucciones / tam_de_1_nodo_instruccion;
+	
+	for(int i=0; i < cant_nodos_instrucciones; i++){
+		Instruction* instruccion;
+		memcpy(&instruccion, stream_recibido + offset ,tam_de_1_nodo_instruccion);
+		list_add(cde_recibido->lista_de_instrucciones,instruccion);
+		offset += tam_de_1_nodo_instruccion;
+	}
 
-	memcpy(cde_recibido->tabla_segmentos, stream, cde_recibido->tam_tabla_segmentos);
-	stream += cde_recibido->tam_tabla_segmentos;
+	memcpy(&(cde_recibido->registrosCpu), stream_recibido + offset,  112);
+	offset += 112;
 
-	memcpy(&cde_recibido->estado, stream, sizeof(uint8_t));
-	stream += sizeof(uint8_t);
+	memcpy(&(cde_recibido->tam_tabla_segmentos), stream_recibido + offset, sizeof(uint32_t));
+	offset += sizeof(uint32_t);
 
-	log_info(logger,"Termine de deserializar.");
+	cde_recibido->tabla_segmentos = list_create();
+	
+	int tam_de_1_segmento = sizeof(uint32_t)*3;
+	int cant_nodos_segmento = cde_recibido->tam_tabla_segmentos / tam_de_1_segmento;
+	
+	for(int i=0; i < cant_nodos_segmento; i++){
+		Segmento* segmento;
+		memcpy(&segmento, stream_recibido + offset, tam_de_1_segmento);
+		list_add(cde_recibido->lista_de_instrucciones, segmento);
+		offset += tam_de_1_nodo_instruccion;
+	}
+	
+	memcpy(&cde_recibido->estado, stream_recibido + offset, sizeof(uint8_t));
+	offset += sizeof(uint8_t);
 
-	log_info(logger,"PID: %d", cde_recibido->pid);
 
-	log_info(logger, "PC: %d", cde_recibido->program_counter);
-   
+	log_info(logger,"Pid: %d", cde_recibido->estado);
+	log_info(logger,"PC: %d", cde_recibido->program_counter);
 	log_info(logger,"Estado: %d", cde_recibido->estado);
+
+	log_info(logger,"Termine de deserializar.");   
+}
+
+t_list* recibir_paquete(int socket_cliente){
+	int size;
+	int desplazamiento = 0;
+	void * buffer;
+	t_list* valores = list_create();
+	int tamanio;
+
+	buffer = recibir_buffer(&size, socket_cliente);
+	while(desplazamiento < size)
+	{
+		memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
+		desplazamiento+=sizeof(int);
+		char* valor = malloc(tamanio);
+		memcpy(valor, buffer+desplazamiento, tamanio);
+		desplazamiento+=tamanio;
+		list_add(valores, valor);
+	}
+	free(buffer);
+	return valores;
 }

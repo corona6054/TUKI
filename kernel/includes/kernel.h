@@ -9,7 +9,7 @@
 #include <commons/config.h>
 #include <pthread.h>
 #include <semaphore.h>
-#include <unistd.h>
+//#include <unistd.h>
 #include "utils_server.h"
 #include "utils_cliente.h"
 
@@ -50,9 +50,9 @@ typedef enum
 
 typedef struct
 {
-    int instruccion;
-    int numero1;
-    int numero2;
+    InstructionType instruccion;
+    uint32_t numero1;
+    uint32_t numero2;
     char string1[15];
     char string2[15];
 } Instruction;
@@ -81,6 +81,7 @@ typedef struct{
     estados estado;
 }pcb;
 
+
 typedef struct{
     uint32_t pid;
     t_list* lista_de_instrucciones;
@@ -89,6 +90,7 @@ typedef struct{
 	t_list* tabla_segmentos;
     estados estado;
 }contexto_de_ejecucion;
+
 
 typedef struct{
     uint32_t pid;
@@ -104,6 +106,22 @@ typedef struct{
     
     estados estado;
 }Cde_serializado;
+
+
+typedef struct{
+    uint32_t pid;
+    uint32_t program_counter; 
+    
+    // t_list* lista_de_instrucciones;
+    uint32_t tam_lista_instrucciones;
+	
+    Registros registrosCpu; // tamanio fijo de 112 bytes
+	
+    // t_list* tabla_segmentos;
+    uint32_t tam_tabla_segmentos;
+    
+    estados estado;
+}Cde_serializado_sin_listas;
 
 typedef struct{
 	char* ip_memoria;
@@ -168,7 +186,7 @@ void establecer_conexiones();
 void manejar_clientes(int);
 t_list* recibir_paquete(int);
 
-void manejar_conexion_con_consola(t_conexiones*);
+void planificadorLargoPlazo(t_conexiones*);
 void planificadorCortoPlazo();
 Registros inicializar_registros();
 pcb crear_pcb(t_list*);
@@ -178,5 +196,7 @@ void planificacionHRRN();
 
 void serializar_cde(contexto_de_ejecucion);
 int tamanio_cde_serializado(Cde_serializado);
+
+void deserializar_cde();
 
 #endif /* INCLUDES_KERNEL_H_ */

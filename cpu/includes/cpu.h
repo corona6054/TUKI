@@ -7,7 +7,7 @@
 #include "commons/log.h"
 #include "utils_cliente.h"
 #include <pthread.h>
-#include <unistd.h>
+#include <stdint.h>
 #include <semaphore.h>
 
 typedef struct
@@ -87,6 +87,28 @@ typedef struct{
     estados estado;
 }Cde_serializado;
 
+typedef struct{
+    uint32_t pid;
+    uint32_t program_counter; 
+    
+    // t_list* lista_de_instrucciones;
+    uint32_t tam_lista_instrucciones;
+	
+    Registros registrosCpu; // tamanio fijo de 112 bytes
+	
+    // t_list* tabla_segmentos;
+    uint32_t tam_tabla_segmentos;
+    
+    estados estado;
+}Cde_serializado_sin_listas;
+
+
+typedef struct{
+	uint32_t id;
+	uint32_t direccion_base;
+	uint32_t tamanio_segmentos;
+}Segmento;
+
 // Variables globales
 Config_cpu config_cpu;
 t_log* logger;
@@ -126,5 +148,6 @@ void ejecutar_createsegment(/*int , int*/ );
 void ejecutar_deletesegment(/*int */);
 
 void deserializar_cde();
+t_list* recibir_paquete(int);
 
 #endif /* INCLUDES_CPU_H_ */
