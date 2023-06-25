@@ -32,12 +32,14 @@ int main(void){
 
 	crearSegmento(1,1,32);
 
+
+	eliminarSegmento(0,2);
 	eliminarSegmento(0,1);
 
 
 
-	list_iterate(tabla_segmentos,printList);
-	list_iterate(espacios_libres,printElement);
+	//list_iterate(tabla_segmentos,printList);
+	//list_iterate(espacios_libres,printElement);
 
 
 
@@ -78,7 +80,22 @@ void compactarMemoria(){
 	list_add(espacios_libres,inicial);
 	free(memoria_principal);
 	memoria_principal=mem_auxiliar;
-	list_iterate(espacios_libres,printElement);
+	//list_iterate(espacios_libres,printElement);
+	*needed_memory=0;
+	list_iterate(tabla_segmentos,ResultadoCompactacion);
+
+}
+
+void  ResultadoCompactacion (void* ptr) {
+	t_list* tabla = (t_list*) ptr;
+	Segment* segmento;
+	for(int i=1;i<config_memoria.cant_segmentos;i++){
+		segmento = list_get(tabla,i);
+		if(segmento->size!=0) {
+			log_info(logger,"PID: %d - Segmento: %d - Base: %p - Tamaño %d",*needed_memory,i,segmento->start,segmento->size);
+		}
+		(*needed_memory)++;
+	}
 }
 
 void  DestroySegment (void* ptr) {
@@ -245,6 +262,13 @@ void agregarSegmento(Segment *nuevo){
 	list_add(espacios_libres,seleccionado);
 }
 
+bool AdyacenteIzquierda(void* data){
+		Segment* element = (Segment*)data;
+		void* final_seg = element->start+element->size;
+		return (seg_anterior->start == final_seg );
+
+}
+
 bool AdyacenteDerecha(void* data){
 		Segment* element = (Segment*)data;
 		void* final_seg = seg_anterior->start+seg_anterior->size;
@@ -256,17 +280,28 @@ bool AdyacenteDerecha(void* data){
 void liberarSegmento(Segment *viejo){
 	seg_anterior->start = viejo->start;
 	seg_anterior->size = viejo->size;
-	Segment *seleccionado;
-	seleccionado=(Segment*)list_remove_by_condition(espacios_libres,AdyacenteDerecha);
-	if(seleccionado!=NULL){
-	seleccionado->start-=viejo->size;
-	seleccionado->size+=viejo->size;
-	list_add(espacios_libres,seleccionado);
-	}else{
-		seleccionado = malloc(sizeof(Segment));
-		seleccionado->start =viejo->start;
-		seleccionado->size =viejo->size;
-		list_add(espacios_libres,seleccionado);
+	Segment *seg_derecha;
+	Segment *seg_izquierda;
+	seg_derecha=(Segment*)list_remove_by_condition(espacios_libres,AdyacenteDerecha);
+	seg_izquierda=(Segment*)list_remove_by_condition(espacios_libres,AdyacenteIzquierda);
+	if(seg_derecha!=NULL&&seg_izquierda!=NULL){
+		seg_izquierda->size+=seg_derecha->size +viejo->size;
+		list_add(espacios_libres,seg_izquierda);
+	}else
+		if(seg_derecha!=NULL){
+		seg_derecha->start-=viejo->size;
+		seg_derecha->size+=viejo->size;
+		list_add(espacios_libres,seg_derecha);
+	}else
+		if(seg_izquierda!=NULL){
+		seg_izquierda->size+=viejo->size;
+		list_add(espacios_libres,seg_izquierda);
+	}
+	else {
+		seg_derecha = malloc(sizeof(Segment));
+		seg_derecha->start =viejo->start;
+		seg_derecha->size =viejo->size;
+		list_add(espacios_libres,seg_derecha);
 	}
 }
 

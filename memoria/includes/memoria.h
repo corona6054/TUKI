@@ -49,6 +49,8 @@ t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();;
 
+
+void  ResultadoCompactacion (void* ptr);
 void  DestroyList (void* ptr);
 void  DestroySegment (void* ptr);
 void  GetTotalSize (void* ptr);
@@ -62,6 +64,7 @@ Algorithm selectAlgorithm(char* input);
 int crearEstructuras();
 int terminarEstructuras();
 bool FirstFit(void* data);
+bool AdyacenteIzquierda(void* data);
 bool AdyacenteDerecha(void* data);
 void printElement(void* ptr);
 void printList (void* ptr);
