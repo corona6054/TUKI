@@ -15,7 +15,6 @@ int main(void){
 	procesosBloqueados = list_create();
 	
 	levantar_modulo();
-	
 
 	pthread_t planificadorCorto;
 	pthread_create(&planificadorCorto, NULL, (void *) planificadorCortoPlazo, NULL);
@@ -99,7 +98,8 @@ void levantar_config(){
 
 	while(recursos[a]!= NULL){
 		list_add(config_kernel.recursos_compartidos,recursos[a]);
-		list_add(config_kernel.instancias,instancias[a]);
+		int num = strtol(instancias[a],NULL,10);
+		list_add(config_kernel.instancias,num);
 		a++;
 	}
 }
@@ -361,15 +361,17 @@ void planificacionFIFO(){
 			cde_a_enviar.estado = pcb_a_ejecutar->estado;
 			
 			serializar_cde(cde_a_enviar); //serializa el cde, arma el paquete y lo envia a cpu
-			//Cde_serializado cde_recibido = deserializar_cde(); // recive y deserializa cde;
+			Cde_serializado cde_recibido;
+				// = deserializar_cde(); // recibe y deserializa cde;
 			
 			
 			// tiene que esperar rta del cpu
 			// deserializa el paquete
+			Instruction* instruccion_actual = list_get(cde_recibido.lista_de_instrucciones,cde_recibido.program_counter - 1);
+			
+			
+			
 
-			
-			
-			
 			// replanifica si es necesario
 
 		}
@@ -469,9 +471,11 @@ void serializar_cde(contexto_de_ejecucion cde){
 	memcpy(stream + offset, &cde_serializado.estado, sizeof(uint8_t));
 	offset += sizeof(uint8_t);
 	
+	mem_hexdump(stream,tam);
+
 	log_info("offset: %d, tam: %d", offset, tam);
 
-	agregar_a_paquete(paquete, stream, offset);
+	agregar_a_paquete(paquete, stream, 8);
 	enviar_paquete(paquete, socket_cpu);
 	eliminar_paquete(paquete);
 
@@ -514,4 +518,90 @@ int tamanio_cde_serializado(Cde_serializado cde_ser){
 
 void deserializar_cde(){
 
+}
+
+
+
+// UTILS INSTRUCCIONES
+
+void evaluar_instruccion(Instruction* instruccion_actual, contexto_de_ejecucion cde_recibido){
+	switch(instruccion_actual->instruccion){
+		case F_READ:
+			break;
+		case F_WRITE:
+			break;
+		case MOV_IN:
+			break;
+		case MOV_OUT:
+			break;
+		case F_TRUNCATE:
+			break;
+		case F_SEEK:
+			break;
+		case CREATE_SEGMENT:
+			break;
+		case IO:
+			log_info(logger,"PID: %d - Ejecuta IO: %d",cde_recibido.pid,instruccion_actual->numero1);
+			break;
+		case WAIT:
+			if(actualizar_instancias_recurso(instruccion_actual->string1, -1) == 0)
+				log_info(logger,"PID: %d - Wait: %s - Instancias: %d",cde_recibido.pid,instruccion_actual->string1,
+						obtener_instancia_recurso(instruccion_actual->string1));
+			else{
+				log_info(logger,"Fin de Proceso: “Finaliza el proceso %d - Motivo: INVALID_RESOURCE",cde_recibido.pid);
+				// LIBERAR RECURSOS DEL PROCESO
+			}
+			break;
+		case SIGNAL:
+			if(actualizar_instancias_recurso(instruccion_actual->string1, 1) == 0)
+				log_info(logger,"PID: %d - Signal: %s - Instancias: %d",cde_recibido.pid,instruccion_actual->string1,
+						obtener_instancia_recurso(instruccion_actual->string1));
+			else{
+				log_info(logger,"Fin de Proceso: “Finaliza el proceso %d - Motivo: INVALID_RESOURCE",cde_recibido.pid);
+				// LIBERAR RECURSOS DEL PROCESO
+			}
+			break;
+		case F_OPEN:
+			break;
+		case F_CLOSE:
+			break;
+		case DELETE_SEGMENT:
+			break;
+		case YIELD:
+
+			break;
+		case EXIT:
+			break;
+		default:
+			break;
+	}
+}
+
+int actualizar_instancias_recurso(char* recurso_a_actualizar, int numero){
+	// Paso el numero para poder hacer +1 y -1 por wait y signal
+
+	char* recurso;
+	int* instancia;
+
+	for(int i=0; i< list_size(config_kernel.recursos_compartidos) ; i++){
+		recurso = list_get(config_kernel.recursos_compartidos,i);
+		if(strcmp(recurso, recurso_a_actualizar) == 0){
+			instancia = list_get(config_kernel.instancias,i) + numero;
+			list_replace(config_kernel.instancias, i, instancia);
+			return 0;
+		}
+	}
+	return -1;
+
+}
+
+int obtener_instancia_recurso(char* recurso_a_obtener){
+	char* recurso;
+
+	for(int i=0; i< list_size(config_kernel.recursos_compartidos) ; i++){
+		recurso = list_get(config_kernel.recursos_compartidos,i);
+		if(strcmp(recurso, recurso_a_obtener) == 0)
+			return list_get(config_kernel.instancias, i);
+	}
+	return -1;
 }

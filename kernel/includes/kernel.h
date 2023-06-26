@@ -7,6 +7,7 @@
 #include <commons/log.h>
 #include <commons/collections/list.h>
 #include <commons/config.h>
+#include <commons/memory.h>
 #include <pthread.h>
 #include <semaphore.h>
 //#include <unistd.h>
@@ -198,5 +199,8 @@ void serializar_cde(contexto_de_ejecucion);
 int tamanio_cde_serializado(Cde_serializado);
 
 void deserializar_cde();
+
+int actualizar_instancias_recurso(char*, int);
+int obtener_instancia_recurso(char*);
 
 #endif /* INCLUDES_KERNEL_H_ */
