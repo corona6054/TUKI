@@ -115,6 +115,7 @@ t_log* logger;
 t_config* config;
 
 sem_t *sem_conexion;
+sem_t *prueba1cpu;
 
 int kernel_fd;
 int socket_memoria;
@@ -149,5 +150,21 @@ void ejecutar_deletesegment(/*int */);
 
 void deserializar_cde();
 t_list* recibir_paquete(int);
+
+//---------FUNCIONES BUFFER---------------
+t_buffer* crear_buffer_nuestro();
+
+void buffer_write_uint32(t_buffer*, uint32_t);
+void buffer_write_string(t_buffer*, char*);
+void buffer_write_Instruction(t_buffer*, Instruction);
+void buffer_write_uint8(t_buffer*, uint8_t);
+void buffer_write_Registros(t_buffer*, Registros);
+
+uint32_t buffer_read_uint32(t_buffer*);
+char* buffer_read_string(t_buffer*);
+Instruction buffer_read_Instruction(t_buffer*);
+uint8_t buffer_read_uint8(t_buffer*);
+Registros buffer_read_Registros(t_buffer*);
+//----------------------------------------
 
 #endif /* INCLUDES_CPU_H_ */

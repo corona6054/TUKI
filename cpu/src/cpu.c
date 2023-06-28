@@ -1,73 +1,46 @@
 #include "../includes/cpu.h"
 
 int main(void){
+	sem_init(&prueba1cpu, 0, 0);
+	
+	levantar_modulo();
+	
 
+	t_buffer* buffer = crear_buffer_nuestro();
+
+	// Primero recibo el tamanio del buffer
+	sem_wait(&prueba1cpu);
+	//uint32_t tamanio = 10;
+	recv(kernel_fd, &(buffer->size), sizeof(uint32_t), MSG_WAITALL);
+	log_info(logger,"Tamanio del buffer: %d", buffer->size);
+
+	// Reservo espacio en memoria
+	buffer->stream = malloc(buffer->size);
+
+	// Recibo el stream
+	recv(kernel_fd, buffer->stream, buffer->size, MSG_WAITALL);
+	log_info(logger,"Ya recibi el stream.");
+	
+	char* a;
+	int b;
+
+	a = buffer_read_string(buffer);
+	log_info(logger,"%s", a);
+
+	a = buffer_read_string(buffer);
+	log_info(logger,"%s", a);
+
+	b = buffer_read_uint32(buffer); //aca ripea
+	log_info(logger, "%lu", b);
+
+	while(1);
 	sem_init(&sem_conexion, 0, 0);
 
-	levantar_modulo();
 
 	sem_wait(&sem_conexion);
 
 
 	deserializar_cde(); // recibe, deserializa y printea el paquete
-	/*
-	t_list contexto_ejecucion;
-	recibir_contexto();
-	//Aca se tiene que deserializar el contexto
-
-	int instruccion = list_get(contexto_de_ejecucion.lista_de_instrucciones, contexto_de_ejecucion.pc);
-
-	int code_op; //Solo la inicializo para que no me tire error
-
-	switch(instruccion.instruccion){
-	switch(code_op){
-		case SET:
-			//ejecutar_set(ax, "0000", 4); Esto era solo para la prueba y es un ejemplo de lo que habria que enviarle a la funcion
-			//ejecutar_set(registro,valor,tamanio); Lo dejo comentado porque me tienen que mandar los valores
-			//
-			//ejecutar_set(instruccion.string1,instruccion.string2,tamanio)
-		break;
-		case YIELD:
-			ejecutar_yield();
-		break;
-		case EXIT:
-			ejecutar_exit();
-		break;
-		case IO:
-			ejecutar_io(tiempo);
-		break;
-		case SIGNAL:
-			ejecutar_signal(recurso);
-		break;
-		case WAIT:
-			ejecutar_wait(recurso);
-		break;
-		case F_OPEN:
-			ejecutar_fopen();
-		break;
-		case F_CLOSE:
-			ejecutar_fclose();
-		break;
-		case F_SEEK:
-			ejecutar_fseek();
-		break;
-		case F_READ:
-			ejecutar_fread();
-		break;
-		case F_WRITE:
-			ejecutar_fwrite();
-		break;
-		case F_TRUNCATE:
-			ejecutar_ftruncate();
-		break;
-		case CREATE_SEGMENT:
-			ejecutar_createsegment();
-		break;
-		case DELETE_SEGMENT:
-			ejecutar_deletesegment();
-		break;
-	}
-	*/
 
 	//finalizar_modulo();
 	
@@ -162,8 +135,9 @@ void establecer_conexiones()
 		log_info(logger, "No se conecto el kernel");
 	}
 	else{
-		sem_post(&sem_conexion);
+		//sem_post(&sem_conexion);
 		log_info(logger, "Se conecto el kernel");
+		sem_post(&prueba1cpu);
 	}
 
 }
@@ -338,3 +312,195 @@ t_list* recibir_paquete(int socket_cliente){
 	free(buffer);
 	return valores;
 }
+
+	/*
+	t_list contexto_ejecucion;
+	recibir_contexto();
+	//Aca se tiene que deserializar el contexto
+
+	int instruccion = list_get(contexto_de_ejecucion.lista_de_instrucciones, contexto_de_ejecucion.pc);
+
+	int code_op; //Solo la inicializo para que no me tire error
+
+	switch(instruccion.instruccion){
+	switch(code_op){
+		case SET:
+			//ejecutar_set(ax, "0000", 4); Esto era solo para la prueba y es un ejemplo de lo que habria que enviarle a la funcion
+			//ejecutar_set(registro,valor,tamanio); Lo dejo comentado porque me tienen que mandar los valores
+			//
+			//ejecutar_set(instruccion.string1,instruccion.string2,tamanio)
+		break;
+		case YIELD:
+			ejecutar_yield();
+		break;
+		case EXIT:
+			ejecutar_exit();
+		break;
+		case IO:
+			ejecutar_io(tiempo);
+		break;
+		case SIGNAL:
+			ejecutar_signal(recurso);
+		break;
+		case WAIT:
+			ejecutar_wait(recurso);
+		break;
+		case F_OPEN:
+			ejecutar_fopen();
+		break;
+		case F_CLOSE:
+			ejecutar_fclose();
+		break;
+		case F_SEEK:
+			ejecutar_fseek();
+		break;
+		case F_READ:
+			ejecutar_fread();
+		break;
+		case F_WRITE:
+			ejecutar_fwrite();
+		break;
+		case F_TRUNCATE:
+			ejecutar_ftruncate();
+		break;
+		case CREATE_SEGMENT:
+			ejecutar_createsegment();
+		break;
+		case DELETE_SEGMENT:
+			ejecutar_deletesegment();
+		break;
+	}
+	*/
+
+	
+// -------------- UTILS BUFFER ---------------
+
+t_buffer* crear_buffer_nuestro(){
+	t_buffer* b = malloc(sizeof(t_buffer));
+	b->size = 0;
+	b->stream = NULL;
+	return b;
+}
+
+// UINT32
+void buffer_write_uint32(t_buffer* buffer, uint32_t entero){
+	buffer->stream = realloc(buffer->stream, buffer->size + sizeof(uint32_t));
+	
+	memcpy(buffer->stream + buffer->size, &entero, sizeof(uint32_t));
+	buffer->size += sizeof(uint32_t);
+}
+
+uint32_t buffer_read_uint32(t_buffer *buffer){
+	uint32_t entero;
+	
+	memcpy(&entero, buffer->stream, sizeof(uint32_t));
+	buffer->stream += sizeof(uint32_t);
+
+	return entero;
+}
+
+// UINT8
+void buffer_write_uint8(t_buffer* buffer, uint8_t entero){
+	buffer->stream = realloc(buffer->stream, buffer->size + sizeof(uint8_t));
+	
+	memcpy(buffer->stream + buffer->size, &entero, sizeof(uint8_t));
+	buffer->size += sizeof(uint8_t);
+}
+
+uint8_t buffer_read_uint8(t_buffer *buffer){
+	uint8_t entero;
+	
+	memcpy(&entero, buffer->stream, sizeof(uint8_t));
+	buffer->stream += sizeof(uint8_t);
+
+	return entero;
+}
+
+//STRING
+void buffer_write_string(t_buffer* buffer, char* cadena){
+	uint32_t tam = 0;
+	
+	while(cadena[tam] != NULL)
+		tam++;
+	
+	buffer_write_uint32(buffer,tam);
+	
+	buffer->stream = realloc(buffer->stream, buffer->size + tam);
+
+	memcpy(buffer->stream + buffer->size, cadena , tam);
+	buffer->size += tam;
+}
+
+
+char* buffer_read_string(t_buffer *buffer){
+	uint32_t tam = buffer_read_uint32(buffer);
+	char* cadena = malloc(tam);
+
+	memcpy(cadena, buffer->stream, tam);
+	buffer->stream += tam;
+
+	return cadena;
+}
+
+//INSTRUCTION
+void buffer_write_Instruction(t_buffer* buffer, Instruction instruccion){
+	buffer_write_uint8(buffer, instruccion.instruccion);
+	buffer_write_uint32(buffer, instruccion.numero1);
+	buffer_write_uint32(buffer, instruccion.numero2);
+	buffer_write_string(buffer, instruccion.string1);
+	buffer_write_string(buffer, instruccion.string2);
+}
+
+// Por ahi lo deberia devolver como puntero (ver issue)
+Instruction buffer_read_Instruction(t_buffer* buffer){
+	Instruction inst;
+	
+	inst.instruccion = buffer_read_uint8(buffer);
+	inst.numero1 = buffer_read_uint32(buffer);
+	inst.numero2 = buffer_read_uint32(buffer);
+	strcpy(inst.string1, buffer_read_string(buffer));
+	strcpy(inst.string2, buffer_read_string(buffer));
+
+	return inst;
+}
+
+//REGISTROS
+void buffer_write_Registros(t_buffer* buffer, Registros registros){
+	buffer_write_string(buffer, registros.AX);
+	buffer_write_string(buffer, registros.BX);
+	buffer_write_string(buffer, registros.CX);
+	buffer_write_string(buffer, registros.DX);
+
+	buffer_write_string(buffer, registros.EAX);
+	buffer_write_string(buffer, registros.EBX);
+	buffer_write_string(buffer, registros.ECX);
+	buffer_write_string(buffer, registros.EDX);
+
+	buffer_write_string(buffer, registros.RAX);
+	buffer_write_string(buffer, registros.RBX);
+	buffer_write_string(buffer, registros.RCX);
+	buffer_write_string(buffer, registros.RDX);
+}
+
+Registros buffer_read_Registros(t_buffer* buffer){
+	Registros regis;
+
+	strcpy(regis.AX, buffer_read_string(buffer));
+	strcpy(regis.BX, buffer_read_string(buffer));
+	strcpy(regis.CX, buffer_read_string(buffer));
+	strcpy(regis.DX, buffer_read_string(buffer));
+
+	strcpy(regis.EAX, buffer_read_string(buffer));
+	strcpy(regis.EBX, buffer_read_string(buffer));
+	strcpy(regis.ECX, buffer_read_string(buffer));
+	strcpy(regis.EDX, buffer_read_string(buffer));
+
+	strcpy(regis.RAX, buffer_read_string(buffer));
+	strcpy(regis.RBX, buffer_read_string(buffer));
+	strcpy(regis.RCX, buffer_read_string(buffer));
+	strcpy(regis.RDX, buffer_read_string(buffer));
+
+	return regis;
+}
+
+// ------------ FIN DE UTILS DE BUFFER -------------------

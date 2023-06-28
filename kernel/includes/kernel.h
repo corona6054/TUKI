@@ -20,13 +20,6 @@ typedef struct{
     int socket_anterior;
 } t_conexiones;
 
-typedef enum{
-	NEW,
-	READY,
-	EXEC,
-	BLOCK,
-	EXIT1
-}estados;
 
 typedef enum
 {
@@ -79,7 +72,6 @@ typedef struct{
     int estimado_prox_rafaga;
     int tiempo_llegada_ready;
     t_list* archivos_abiertos;
-    estados estado;
 }pcb;
 
 
@@ -89,7 +81,6 @@ typedef struct{
     uint32_t program_counter; 
 	Registros registrosCpu;
 	t_list* tabla_segmentos;
-    estados estado;
 }contexto_de_ejecucion;
 
 
@@ -105,7 +96,7 @@ typedef struct{
     t_list* tabla_segmentos;
     uint32_t tam_tabla_segmentos;
     
-    estados estado;
+    //estados estado;
 }Cde_serializado;
 
 
@@ -121,7 +112,7 @@ typedef struct{
     // t_list* tabla_segmentos;
     uint32_t tam_tabla_segmentos;
     
-    estados estado;
+   // estados estado;
 }Cde_serializado_sin_listas;
 
 typedef struct{
@@ -154,6 +145,7 @@ int server_fd;
 
 int consola_fd;
 
+sem_t* prueba1;
 sem_t* m_nuevos;
 sem_t* m_ready;
 sem_t* m_bloqueados;
@@ -207,8 +199,14 @@ t_buffer* crear_buffer_nuestro();
 
 void buffer_write_uint32(t_buffer*, uint32_t);
 void buffer_write_string(t_buffer*, char*);
+void buffer_write_Instruction(t_buffer*, Instruction);
+void buffer_write_uint8(t_buffer*, uint8_t);
+void buffer_write_Registros(t_buffer*, Registros);
 
 uint32_t buffer_read_uint32(t_buffer*);
 char* buffer_read_string(t_buffer*);
+Instruction buffer_read_Instruction(t_buffer*);
+uint8_t buffer_read_uint8(t_buffer*);
+Registros buffer_read_Registros(t_buffer*);
 //----------------------------------------
 #endif /* INCLUDES_KERNEL_H_ */

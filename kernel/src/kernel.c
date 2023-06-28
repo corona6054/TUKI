@@ -1,28 +1,39 @@
 #include "../includes/kernel.h"
 
+
 int main(void){
 	// prueba utils buffer
 	uint32_t b = 5;
 	int elemento = -1;
 	char* a;
 	
-	logger = iniciar_logger();
+	sem_init(&prueba1, 0, 0);
 	
+	levantar_modulo();
+	
+	
+
+
 	t_buffer* buffer = crear_buffer_nuestro();
 	
 	buffer_write_string(buffer,"CHAU");
 	buffer_write_string(buffer,"HOLA123");
 	buffer_write_uint32(buffer,10);
-	/*
-	buffer_write_uint32(buffer,11);
-	buffer_write_uint32(buffer,12);
-	buffer_write_uint32(buffer,13);
-	*/
+
 	
-	//t_paquete* paquete = crear_paquete();
-	//agregar_a_paquete(paquete,buffer->stream, buffer->size);
-	//a probar
+	log_info(logger, "Ya cargue el stream");
 	
+	sem_wait(&prueba1);
+
+	// Primero enviamos el tamanio del buffer
+	log_info(logger,"Tamanio del buffer: %d",buffer->size);
+	// [INFO] 22:24:28:391 Kernel/(4462:4462): Tamanio del buffer: 23
+	send(socket_cpu, &(buffer->size), sizeof(uint32_t), 0);
+	
+	// Despues enviamos el stream del buffer
+	send(socket_cpu, buffer->stream, buffer->size, 0);
+	log_info(logger, "Ya mande el stream");
+		
 	/*
 	a = buffer_read_string(buffer);
 	log_info(logger,"%s", a);
@@ -162,10 +173,12 @@ void conectarse_con_memoria(){
 
 void conectarse_con_cpu(){
 	socket_cpu = crear_conexion(config_kernel.ip_cpu, config_kernel.puerto_cpu);
-	if (socket_cpu >= 0)
-			log_info(logger,"Conectado con cpu");
-		else
-			log_info(logger,"Error al conectar con cpu");
+	if (socket_cpu >= 0){			
+		log_info(logger,"Conectado con cpu");
+		sem_post(&prueba1);
+	}
+	else
+		log_info(logger,"Error al conectar con cpu");
 }
 
 
@@ -186,9 +199,11 @@ void establecer_conexiones()
 
 	*/
 
+	
 	pthread_t conexion_cpu;
 	pthread_create(&conexion_cpu, NULL, (void *) conectarse_con_cpu, NULL);
 	pthread_detach(conexion_cpu);
+	
 
 	/*
 	pthread_t conexion_file_system;
@@ -196,11 +211,13 @@ void establecer_conexiones()
 	pthread_detach(conexion_file_system);
 	*/
 
+	/*
 	server_fd = iniciar_servidor(logger, config_kernel.puerto_escucha);
 	
 	pthread_t manejo_consolas;
 	pthread_create(&manejo_consolas, NULL, (void *) manejar_clientes, (void *) server_fd);
-	pthread_detach(manejo_consolas);	
+	pthread_detach(manejo_consolas);
+	*/
 
 }
 
@@ -297,13 +314,13 @@ void planificadorLargoPlazo(t_conexiones* conexiones){
 		list_remove(procesosNuevos,0);
 		sem_post(&m_nuevos);
 
-		estado_anterior = pcb.estado;
-		pcb.estado = READY;
+		//estado_anterior = pcb.estado;
+		//pcb.estado = READY;
 
 		sem_wait(&m_ready);
 		list_add(procesosReady,&pcb);
 		sem_post(&m_ready);
-		log_info(logger,"PID: %d - Estado Anterior: %d - Estado Actual: %d", pcb.pid, estado_anterior, pcb.estado); //no va a terminar estando aca este log info
+		log_info(logger,"PID: %d - Estado Anterior: %d - Estado Actual: READY", pcb.pid, estado_anterior); //no va a terminar estando aca este log info
 		
 		//planificadorCortoPlazo();
 		//log_info(logger,"Cola Ready %s: , ")
@@ -367,7 +384,7 @@ pcb crear_pcb(t_list *instrucciones){
 	pcb.estimado_prox_rafaga = config_kernel.est_inicial;
 	pcb.tiempo_llegada_ready = -1;
 	t_list* archivos_abiertos = list_create();
-	pcb.estado = NEW;
+	//pcb.estado = NEW;
 
 	log_info(logger, "Se crea el proceso %d en NEW", pcb.pid);
 
@@ -393,7 +410,7 @@ void planificacionFIFO(){
 			sem_post(&m_exec);
 			
 			log_info(logger,"Pid pcb_a_ejecutar: %d", pcb_a_ejecutar->pid);
-			log_info(logger,"Estado pcb_a_ejecutar: %d", pcb_a_ejecutar->estado);
+			//log_info(logger,"Estado pcb_a_ejecutar: %d", pcb_a_ejecutar->estado);
 
 			contexto_de_ejecucion cde_a_enviar;
 
@@ -401,7 +418,7 @@ void planificacionFIFO(){
     		cde_a_enviar.program_counter = pcb_a_ejecutar->program_counter;    
 			cde_a_enviar.registrosCpu = pcb_a_ejecutar->registro_proceso;
 			cde_a_enviar.tabla_segmentos = pcb_a_ejecutar->tabla_segmentos;
-			cde_a_enviar.estado = pcb_a_ejecutar->estado;
+			//cde_a_enviar.estado = pcb_a_ejecutar->estado;
 			
 			serializar_cde(cde_a_enviar); //serializa el cde, arma el paquete y lo envia a cpu
 			Cde_serializado cde_recibido;
@@ -593,6 +610,23 @@ Registros buffer_read_Registros(t_buffer* buffer){
 	return regis;
 }
 
+// SEGMENTOS
+void buffer_write_segmento(t_buffer* buffer,Segmento segm){
+	buffer_write_uint32(buffer, segm.id);
+	buffer_write_uint32(buffer, segm.direccion_base);
+	buffer_write_uint32(buffer, segm.tamanio_segmentos);
+}
+
+
+Segmento buffer_read_segmento(t_buffer* buffer){
+	Segmento seg;
+
+	seg.id = buffer_read_uint32(buffer);
+	seg.direccion_base = buffer_read_uint32(buffer);
+	seg.tamanio_segmentos = buffer_read_uint32(buffer);
+
+	return seg;
+}
 // ------------ FIN DE UTILS DE BUFFER -------------------
 
 void serializacion(contexto_de_ejecucion cde){
@@ -624,7 +658,7 @@ void serializar_cde(contexto_de_ejecucion cde){
     
 	cde_serializado.tabla_segmentos = cde.tabla_segmentos;
     
-    cde_serializado.estado = 0;
+    //cde_serializado.estado = 0;
 
 	t_paquete* paquete = crear_paquete();
 
@@ -661,9 +695,10 @@ void serializar_cde(contexto_de_ejecucion cde){
 	memcpy(stream + offset, cde_serializado.tabla_segmentos, cde_serializado.tam_tabla_segmentos);
 	offset += cde_serializado.tam_tabla_segmentos;
 	
+	/*
 	memcpy(stream + offset, &cde_serializado.estado, sizeof(uint8_t));
 	offset += sizeof(uint8_t);
-	
+	*/
 	mem_hexdump(stream,tam);
 
 	log_info("offset: %d, tam: %d", offset, tam);

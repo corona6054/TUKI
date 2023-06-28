@@ -181,3 +181,166 @@
 [INFO] 23:53:37:689 Cpu/(9399:9399): Se conecto el kernel
 [INFO] 23:53:37:689 Cpu/(9399:9399): Entre a deserializar_cde
 [INFO] 23:54:47:964 Cpu/(9399:9399): Recibi el codigo de operacion: -1
+[INFO] 01:10:07:412 Cpu/(3072:3072): Listo para escuchar a mi cliente
+[INFO] 01:10:21:915 Cpu/(3072:3072): Se conecto un cliente!
+[INFO] 01:10:21:915 Cpu/(3072:3072): Se conecto el kernel
+[INFO] 01:15:01:592 Cpu/(3293:3293): Listo para escuchar a mi cliente
+[INFO] 01:15:43:981 Cpu/(3293:3293): Se conecto un cliente!
+[INFO] 01:15:43:981 Cpu/(3293:3293): Se conecto el kernel
+[INFO] 01:15:43:981 Cpu/(3293:3293): Tamanio del buffer: 0
+[INFO] 01:15:43:981 Cpu/(3293:3293): Ya recibi el stream.
+[INFO] 01:18:09:483 Cpu/(3502:3502): Listo para escuchar a mi cliente
+[INFO] 01:19:20:450 Cpu/(3502:3502): Se conecto un cliente!
+[INFO] 01:19:49:060 Cpu/(3502:3502): Se conecto el kernel
+[INFO] 01:20:40:664 Cpu/(3502:3502): Tamanio del buffer: 0
+[INFO] 01:20:48:138 Cpu/(3502:3502): Ya recibi el stream.
+[INFO] 01:21:38:553 Cpu/(3502:3502): PU
+[INFO] 21:57:30:448 Cpu/(2342:2342): Listo para escuchar a mi cliente
+[INFO] 21:57:45:720 Cpu/(2342:2342): Se conecto un cliente!
+[INFO] 21:57:45:721 Cpu/(2342:2342): Se conecto el kernel
+[INFO] 21:58:08:793 Cpu/(2342:2342): Tamanio del buffer: 0
+[INFO] 21:58:08:794 Cpu/(2342:2342): Ya recibi el stream.
+[INFO] 21:59:28:127 Cpu/(2445:2445): Listo para escuchar a mi cliente
+[INFO] 21:59:33:897 Cpu/(2445:2445): Se conecto un cliente!
+[INFO] 21:59:33:897 Cpu/(2445:2445): Se conecto el kernel
+[INFO] 21:59:33:898 Cpu/(2445:2445): Tamanio del buffer: 0
+[INFO] 21:59:33:898 Cpu/(2445:2445): Ya recibi el stream.
+[INFO] 22:06:07:936 Cpu/(2696:2696): Listo para escuchar a mi cliente
+[INFO] 22:06:11:851 Cpu/(2696:2696): Se conecto un cliente!
+[INFO] 22:06:11:852 Cpu/(2696:2696): Se conecto el kernel
+[INFO] 22:06:11:852 Cpu/(2696:2696): Tamanio del buffer: 0
+[INFO] 22:06:11:852 Cpu/(2696:2696): Ya recibi el stream.
+[INFO] 22:10:23:657 Cpu/(2811:2811): Listo para escuchar a mi cliente
+[INFO] 22:10:27:757 Cpu/(2811:2811): Se conecto un cliente!
+[INFO] 22:10:27:757 Cpu/(2811:2811): Se conecto el kernel
+[INFO] 22:10:27:758 Cpu/(2811:2811): Tamanio del buffer: 0
+[INFO] 22:10:27:758 Cpu/(2811:2811): Ya recibi el stream.
+[INFO] 22:11:26:621 Cpu/(2932:2932): Listo para escuchar a mi cliente
+[INFO] 22:13:24:757 Cpu/(3072:3072): Listo para escuchar a mi cliente
+[INFO] 22:13:28:957 Cpu/(3072:3072): Se conecto un cliente!
+[INFO] 22:13:28:957 Cpu/(3072:3072): Se conecto el kernel
+[INFO] 22:13:28:957 Cpu/(3072:3072): Tamanio del buffer: 0
+[INFO] 22:13:28:957 Cpu/(3072:3072): Ya recibi el stream.
+[INFO] 22:13:44:407 Cpu/(3107:3107): Listo para escuchar a mi cliente
+[INFO] 22:13:53:744 Cpu/(3107:3107): Se conecto un cliente!
+[INFO] 22:13:53:747 Cpu/(3107:3107): Se conecto el kernel
+[INFO] 22:13:53:770 Cpu/(3107:3107): Tamanio del buffer: 0
+[INFO] 22:13:53:773 Cpu/(3107:3107): Ya recibi el stream.
+[INFO] 22:13:53:776 Cpu/(3107:3107): 
+[INFO] 22:13:53:777 Cpu/(3107:3107): 
+[INFO] 22:13:53:779 Cpu/(3107:3107): 0
+[INFO] 22:18:24:869 Cpu/(3427:3427): Listo para escuchar a mi cliente
+[INFO] 22:18:30:088 Cpu/(3427:3427): Se conecto un cliente!
+[INFO] 22:18:30:088 Cpu/(3427:3427): Se conecto el kernel
+[INFO] 22:18:30:089 Cpu/(3427:3427): Tamanio del buffer: 0
+[INFO] 22:18:30:089 Cpu/(3427:3427): Ya recibi el stream.
+[INFO] 22:18:52:073 Cpu/(3502:3502): Listo para escuchar a mi cliente
+[INFO] 22:18:56:682 Cpu/(3502:3502): Se conecto un cliente!
+[INFO] 22:18:56:684 Cpu/(3502:3502): Se conecto el kernel
+[INFO] 22:18:56:685 Cpu/(3502:3502): Tamanio del buffer: 0
+[INFO] 22:18:56:686 Cpu/(3502:3502): Ya recibi el stream.
+[INFO] 22:18:56:687 Cpu/(3502:3502): 
+[INFO] 22:18:56:688 Cpu/(3502:3502): 
+[INFO] 22:18:56:689 Cpu/(3502:3502): 0
+[INFO] 22:20:20:022 Cpu/(3598:3598): Listo para escuchar a mi cliente
+[INFO] 22:20:28:386 Cpu/(3598:3598): Se conecto un cliente!
+[INFO] 22:20:28:388 Cpu/(3598:3598): Se conecto el kernel
+[INFO] 22:20:28:396 Cpu/(3598:3598): Tamanio del buffer: 10
+[INFO] 22:20:28:396 Cpu/(3598:3598): Ya recibi el stream.
+[INFO] 22:24:24:242 Cpu/(4449:4449): Listo para escuchar a mi cliente
+[INFO] 22:24:28:390 Cpu/(4449:4449): Se conecto un cliente!
+[INFO] 22:24:28:391 Cpu/(4449:4449): Se conecto el kernel
+[INFO] 22:24:28:391 Cpu/(4449:4449): Tamanio del buffer: 10
+[INFO] 22:24:28:397 Cpu/(4449:4449): Ya recibi el stream.
+[INFO] 22:27:03:806 Cpu/(4529:4529): Listo para escuchar a mi cliente
+[INFO] 22:27:09:656 Cpu/(4529:4529): Se conecto un cliente!
+[INFO] 22:27:09:657 Cpu/(4529:4529): Se conecto el kernel
+[INFO] 22:27:09:672 Cpu/(4529:4529): Tamanio del buffer: 10
+[INFO] 22:27:09:672 Cpu/(4529:4529): Ya recibi el stream.
+[INFO] 22:27:09:674 Cpu/(4529:4529): 
+[INFO] 22:27:09:682 Cpu/(4529:4529): 
+[INFO] 22:27:09:684 Cpu/(4529:4529): 0
+[INFO] 22:30:33:366 Cpu/(4661:4661): Listo para escuchar a mi cliente
+[INFO] 22:30:43:067 Cpu/(4661:4661): Se conecto un cliente!
+[INFO] 22:30:43:069 Cpu/(4661:4661): Se conecto el kernel
+[INFO] 22:30:43:072 Cpu/(4661:4661): Tamanio del buffer: 10
+[INFO] 22:30:43:073 Cpu/(4661:4661): Ya recibi el stream.
+[INFO] 22:30:43:076 Cpu/(4661:4661): 
+[INFO] 22:30:43:077 Cpu/(4661:4661): 
+[INFO] 22:30:43:087 Cpu/(4661:4661): 0
+[INFO] 22:34:11:598 Cpu/(4797:4797): Listo para escuchar a mi cliente
+[INFO] 22:34:15:978 Cpu/(4797:4797): Se conecto un cliente!
+[INFO] 22:34:15:978 Cpu/(4797:4797): Se conecto el kernel
+[INFO] 22:34:15:987 Cpu/(4797:4797): Tamanio del buffer: 4
+[INFO] 22:34:15:989 Cpu/(4797:4797): Ya recibi el stream.
+[INFO] 22:35:58:112 Cpu/(4893:4893): Listo para escuchar a mi cliente
+[INFO] 22:36:03:619 Cpu/(4893:4893): Se conecto un cliente!
+[INFO] 22:36:03:619 Cpu/(4893:4893): Se conecto el kernel
+[INFO] 22:36:03:625 Cpu/(4893:4893): Tamanio del buffer: 4
+[INFO] 22:36:03:625 Cpu/(4893:4893): Ya recibi el stream.
+[INFO] 22:37:08:170 Cpu/(4977:4977): Listo para escuchar a mi cliente
+[INFO] 22:37:13:278 Cpu/(4977:4977): Se conecto un cliente!
+[INFO] 22:37:13:278 Cpu/(4977:4977): Se conecto el kernel
+[INFO] 22:37:13:279 Cpu/(4977:4977): Tamanio del buffer: 4
+[INFO] 22:37:13:279 Cpu/(4977:4977): Ya recibi el stream.
+[INFO] 22:37:39:272 Cpu/(5009:5009): Listo para escuchar a mi cliente
+[INFO] 22:37:43:746 Cpu/(5009:5009): Se conecto un cliente!
+[INFO] 22:37:43:748 Cpu/(5009:5009): Se conecto el kernel
+[INFO] 22:37:43:749 Cpu/(5009:5009): Tamanio del buffer: 4
+[INFO] 22:37:43:750 Cpu/(5009:5009): Ya recibi el stream.
+[INFO] 22:40:27:698 Cpu/(5101:5101): Listo para escuchar a mi cliente
+[INFO] 22:40:32:599 Cpu/(5101:5101): Se conecto un cliente!
+[INFO] 22:40:32:600 Cpu/(5101:5101): Se conecto el kernel
+[INFO] 22:43:49:722 Cpu/(5231:5231): Listo para escuchar a mi cliente
+[INFO] 22:43:53:726 Cpu/(5231:5231): Se conecto un cliente!
+[INFO] 22:43:53:727 Cpu/(5231:5231): Se conecto el kernel
+[INFO] 22:44:12:082 Cpu/(5231:5231): Tamanio del buffer: 4
+[INFO] 22:44:28:451 Cpu/(5231:5231): Ya recibi el stream.
+[INFO] 22:46:31:571 Cpu/(5348:5348): Listo para escuchar a mi cliente
+[INFO] 22:46:34:917 Cpu/(5348:5348): Se conecto un cliente!
+[INFO] 22:46:34:917 Cpu/(5348:5348): Se conecto el kernel
+[INFO] 22:46:34:918 Cpu/(5348:5348): Tamanio del buffer: 23
+[INFO] 22:46:34:918 Cpu/(5348:5348): Ya recibi el stream.
+[INFO] 22:47:41:509 Cpu/(5468:5468): Listo para escuchar a mi cliente
+[INFO] 22:47:45:658 Cpu/(5468:5468): Se conecto un cliente!
+[INFO] 22:47:45:658 Cpu/(5468:5468): Se conecto el kernel
+[INFO] 22:47:45:659 Cpu/(5468:5468): Tamanio del buffer: 23
+[INFO] 22:47:45:659 Cpu/(5468:5468): Ya recibi el stream.
+[INFO] 22:47:45:659 Cpu/(5468:5468): CHAUeU
+[INFO] 22:47:45:659 Cpu/(5468:5468): HOLA123
+[INFO] 22:47:45:659 Cpu/(5468:5468): 10
+[INFO] 22:49:07:446 Cpu/(5520:5520): Listo para escuchar a mi cliente
+[INFO] 22:49:51:960 Cpu/(5560:5560): Listo para escuchar a mi cliente
+[INFO] 22:49:59:775 Cpu/(5560:5560): Se conecto un cliente!
+[INFO] 22:49:59:775 Cpu/(5560:5560): Se conecto el kernel
+[INFO] 22:49:59:776 Cpu/(5560:5560): Tamanio del buffer: 23
+[INFO] 22:49:59:776 Cpu/(5560:5560): Ya recibi el stream.
+[INFO] 22:49:59:776 Cpu/(5560:5560): CHAU(V
+[INFO] 22:49:59:776 Cpu/(5560:5560): HOLA123
+[INFO] 22:49:59:776 Cpu/(5560:5560): 10
+[INFO] 22:50:17:077 Cpu/(5589:5589): Listo para escuchar a mi cliente
+[INFO] 22:50:38:383 Cpu/(5615:5615): Listo para escuchar a mi cliente
+[INFO] 22:52:29:429 Cpu/(5651:5651): Listo para escuchar a mi cliente
+[INFO] 22:52:33:661 Cpu/(5651:5651): Se conecto un cliente!
+[INFO] 22:52:33:661 Cpu/(5651:5651): Se conecto el kernel
+[INFO] 22:52:33:662 Cpu/(5651:5651): Tamanio del buffer: 23
+[INFO] 22:52:33:662 Cpu/(5651:5651): Ya recibi el stream.
+[INFO] 22:52:33:662 Cpu/(5651:5651): CHAUV
+[INFO] 22:52:33:662 Cpu/(5651:5651): HOLA123
+[INFO] 22:52:33:662 Cpu/(5651:5651): 10
+[INFO] 22:52:47:019 Cpu/(5684:5684): Listo para escuchar a mi cliente
+[INFO] 22:52:50:131 Cpu/(5684:5684): Se conecto un cliente!
+[INFO] 22:52:50:134 Cpu/(5684:5684): Se conecto el kernel
+[INFO] 22:52:50:141 Cpu/(5684:5684): Tamanio del buffer: 23
+[INFO] 22:52:50:141 Cpu/(5684:5684): Ya recibi el stream.
+[INFO] 22:52:50:146 Cpu/(5684:5684): CHAU
+[INFO] 22:52:50:146 Cpu/(5684:5684): HOLA123
+[INFO] 22:52:50:171 Cpu/(5684:5684): 10
+[INFO] 22:54:11:023 Cpu/(5731:5731): Listo para escuchar a mi cliente
+[INFO] 22:54:17:795 Cpu/(5731:5731): Se conecto un cliente!
+[INFO] 22:54:17:798 Cpu/(5731:5731): Se conecto el kernel
+[INFO] 22:54:17:835 Cpu/(5731:5731): Tamanio del buffer: 23
+[INFO] 22:54:17:836 Cpu/(5731:5731): Ya recibi el stream.
+[INFO] 22:54:17:841 Cpu/(5731:5731): CHAU
+[INFO] 22:54:17:842 Cpu/(5731:5731): HOLA123
+[INFO] 22:54:17:844 Cpu/(5731:5731): 10
