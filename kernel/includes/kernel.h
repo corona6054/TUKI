@@ -202,5 +202,13 @@ void deserializar_cde();
 
 int actualizar_instancias_recurso(char*, int);
 int obtener_instancia_recurso(char*);
+//---------FUNCIONES BUFFER---------------
+t_buffer* crear_buffer_nuestro();
 
+void buffer_write_uint32(t_buffer*, uint32_t);
+void buffer_write_string(t_buffer*, char*);
+
+uint32_t buffer_read_uint32(t_buffer*);
+char* buffer_read_string(t_buffer*);
+//----------------------------------------
 #endif /* INCLUDES_KERNEL_H_ */

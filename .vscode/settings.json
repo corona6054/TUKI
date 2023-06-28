@@ -5,6 +5,7 @@
         "log.h": "c",
         "string.h": "c",
         "config.h": "c",
-        "cpu.h": "c"
+        "cpu.h": "c",
+        "stdlib.h": "c"
     }
 }
