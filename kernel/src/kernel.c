@@ -70,10 +70,12 @@ int main(void){
 	
 	levantar_modulo();
 
+	planificadorCortoPlazo();
+	/*
 	pthread_t planificadorCorto;
 	pthread_create(&planificadorCorto, NULL, (void *) planificadorCortoPlazo, NULL);
 	pthread_detach(planificadorCorto);
-
+	*/
 	while(1);
 
 	finalizar_modulo();
@@ -412,6 +414,7 @@ void planificacionFIFO(){
 			log_info(logger,"Pid pcb_a_ejecutar: %d", pcb_a_ejecutar->pid);
 			//log_info(logger,"Estado pcb_a_ejecutar: %d", pcb_a_ejecutar->estado);
 
+			/*
 			contexto_de_ejecucion cde_a_enviar;
 
 			cde_a_enviar.pid = pcb_a_ejecutar->pid;
@@ -430,7 +433,7 @@ void planificacionFIFO(){
 			Instruction* instruccion_actual = list_get(cde_recibido.lista_de_instrucciones,cde_recibido.program_counter - 1);
 			
 			// evaluar_instruccion(instruccion_actual, cde_recibido);
-			
+			*/
 			
 
 			// replanifica si es necesario
@@ -446,312 +449,9 @@ void planificacionHRRN(){
 	return;
 }
 
-// UTILS SERIALIZACION
-/*
-void serializar2_cde(contexto_de_ejecucion cde){
-	t_paquete* paquete = crear_paquete();
-	
-  	int32_t tam_lista = list_size(cde.lista_de_instrucciones) * sizeof(Instruction);
-	int32_t tam_tabla = list_size(cde.tabla_segmentos) * (sizeof(Segmento));
-	
-	int tam_malloc = 
-		tam_lista + tam_tabla +
-		112 + (sizeof(uint32_t) * 4) + sizeof(uint8_t);
-
-	void* stream = malloc(tam_malloc);
-	int offset = 0;
-
-	agregar_a_paquete(paquete, &cde.pid, sizeof(uint32_t));
-	agregar_a_paquete(paquete, &cde.program_counter, sizeof(uint32_t));
-	agregar_a_paquete(paquete, tam_lista, sizeof(uint32_t));
-
-	for(int i=0;i<tam_lista;i++){
-		agregar_a_paquete(paquete,list_get(cde.lista_de_instrucciones,i),sizeof())
-	}	
-}
-*/
-
-t_buffer* cargar_buffer(contexto_de_ejecucion cde){
-	t_buffer* buffer = crear_buffer_nuestro();
-
-
-		
-
-	return buffer;
-}
-
-// -------------- UTILS BUFFER ---------------
-
-t_buffer* crear_buffer_nuestro(){
-	t_buffer* b = malloc(sizeof(t_buffer));
-	b->size = 0;
-	b->stream = NULL;
-	return b;
-}
-
-// UINT32
-void buffer_write_uint32(t_buffer* buffer, uint32_t entero){
-	buffer->stream = realloc(buffer->stream, buffer->size + sizeof(uint32_t));
-	
-	memcpy(buffer->stream + buffer->size, &entero, sizeof(uint32_t));
-	buffer->size += sizeof(uint32_t);
-}
-
-uint32_t buffer_read_uint32(t_buffer *buffer){
-	uint32_t entero;
-	
-	memcpy(&entero, buffer->stream, sizeof(uint32_t));
-	buffer->stream += sizeof(uint32_t);
-
-	return entero;
-}
-
-// UINT8
-void buffer_write_uint8(t_buffer* buffer, uint8_t entero){
-	buffer->stream = realloc(buffer->stream, buffer->size + sizeof(uint8_t));
-	
-	memcpy(buffer->stream + buffer->size, &entero, sizeof(uint8_t));
-	buffer->size += sizeof(uint8_t);
-}
-
-uint8_t buffer_read_uint8(t_buffer *buffer){
-	uint8_t entero;
-	
-	memcpy(&entero, buffer->stream, sizeof(uint8_t));
-	buffer->stream += sizeof(uint8_t);
-
-	return entero;
-}
-
-//STRING
-void buffer_write_string(t_buffer* buffer, char* cadena){
-	uint32_t tam = 0;
-	
-	while(cadena[tam] != NULL)
-		tam++;
-	
-	buffer_write_uint32(buffer,tam);
-	
-	buffer->stream = realloc(buffer->stream, buffer->size + tam);
-
-	memcpy(buffer->stream + buffer->size, cadena , tam);
-	buffer->size += tam;
-}
-
-
-char* buffer_read_string(t_buffer *buffer){
-	uint32_t tam = buffer_read_uint32(buffer);
-	char* cadena = malloc(tam);
-
-	memcpy(cadena, buffer->stream, tam);
-	buffer->stream += tam;
-
-	return cadena;
-}
-
-//INSTRUCTION
-void buffer_write_Instruction(t_buffer* buffer, Instruction instruccion){
-	buffer_write_uint8(buffer, instruccion.instruccion);
-	buffer_write_uint32(buffer, instruccion.numero1);
-	buffer_write_uint32(buffer, instruccion.numero2);
-	buffer_write_string(buffer, instruccion.string1);
-	buffer_write_string(buffer, instruccion.string2);
-}
-
-// Por ahi lo deberia devolver como puntero (ver issue)
-Instruction buffer_read_Instruction(t_buffer* buffer){
-	Instruction inst;
-	
-	inst.instruccion = buffer_read_uint8(buffer);
-	inst.numero1 = buffer_read_uint32(buffer);
-	inst.numero2 = buffer_read_uint32(buffer);
-	strcpy(inst.string1, buffer_read_string(buffer));
-	strcpy(inst.string2, buffer_read_string(buffer));
-
-	return inst;
-}
-
-//REGISTROS
-void buffer_write_Registros(t_buffer* buffer, Registros registros){
-	buffer_write_string(buffer, registros.AX);
-	buffer_write_string(buffer, registros.BX);
-	buffer_write_string(buffer, registros.CX);
-	buffer_write_string(buffer, registros.DX);
-
-	buffer_write_string(buffer, registros.EAX);
-	buffer_write_string(buffer, registros.EBX);
-	buffer_write_string(buffer, registros.ECX);
-	buffer_write_string(buffer, registros.EDX);
-
-	buffer_write_string(buffer, registros.RAX);
-	buffer_write_string(buffer, registros.RBX);
-	buffer_write_string(buffer, registros.RCX);
-	buffer_write_string(buffer, registros.RDX);
-}
-
-Registros buffer_read_Registros(t_buffer* buffer){
-	Registros regis;
-
-	strcpy(regis.AX, buffer_read_string(buffer));
-	strcpy(regis.BX, buffer_read_string(buffer));
-	strcpy(regis.CX, buffer_read_string(buffer));
-	strcpy(regis.DX, buffer_read_string(buffer));
-
-	strcpy(regis.EAX, buffer_read_string(buffer));
-	strcpy(regis.EBX, buffer_read_string(buffer));
-	strcpy(regis.ECX, buffer_read_string(buffer));
-	strcpy(regis.EDX, buffer_read_string(buffer));
-
-	strcpy(regis.RAX, buffer_read_string(buffer));
-	strcpy(regis.RBX, buffer_read_string(buffer));
-	strcpy(regis.RCX, buffer_read_string(buffer));
-	strcpy(regis.RDX, buffer_read_string(buffer));
-
-	return regis;
-}
-
-// SEGMENTOS
-void buffer_write_segmento(t_buffer* buffer,Segmento segm){
-	buffer_write_uint32(buffer, segm.id);
-	buffer_write_uint32(buffer, segm.direccion_base);
-	buffer_write_uint32(buffer, segm.tamanio_segmentos);
-}
-
-
-Segmento buffer_read_segmento(t_buffer* buffer){
-	Segmento seg;
-
-	seg.id = buffer_read_uint32(buffer);
-	seg.direccion_base = buffer_read_uint32(buffer);
-	seg.tamanio_segmentos = buffer_read_uint32(buffer);
-
-	return seg;
-}
-// ------------ FIN DE UTILS DE BUFFER -------------------
-
-void serializacion(contexto_de_ejecucion cde){
-	int tam;
-	//void* stream = armar_stream(cde,tam);
-	//t_paquete* paquete = crear_paquete();
-	//agregar_a_paquete(paquete, stream, tam);
-	//eliminar_paquete(paquete);
-	
-}
-
-void serializar_cde(contexto_de_ejecucion cde){
-	// Ver tamanios de los nodos de las listas
-	Cde_serializado cde_serializado;
-
-	cde_serializado.pid = cde.pid;
-	cde_serializado.program_counter = cde.program_counter;
-
-	int tam_de_1_nodo_instruccion = (sizeof(uint32_t)*2 + sizeof(uint8_t) + 15 + 15);
-
-    cde_serializado.tam_lista_instrucciones = 
-		tam_de_1_nodo_instruccion * list_size(cde.lista_de_instrucciones); 
-	
-	cde_serializado.lista_de_instrucciones = cde.lista_de_instrucciones;
-	
-    cde_serializado.registrosCpu = cde.registrosCpu; // tamanio fijo de 112 bytes
-	
-    cde_serializado.tam_tabla_segmentos = (sizeof(uint32_t)*3) * list_size(cde.tabla_segmentos);
-    
-	cde_serializado.tabla_segmentos = cde.tabla_segmentos;
-    
-    //cde_serializado.estado = 0;
-
-	t_paquete* paquete = crear_paquete();
-
-	int tam =
-		cde_serializado.tam_lista_instrucciones + cde_serializado.tam_tabla_segmentos +
-		112 + (sizeof(uint32_t) * 4) + sizeof(uint8_t);
-
-	void* stream = malloc(tam);
-	int offset = 0;
-	
-	memcpy(stream + offset, &cde_serializado.pid,sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	
-	memcpy(stream + offset, &cde_serializado.program_counter,sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-
-	// tam_lista_instrucciones esta en bytes
-	memcpy(stream + offset, &cde_serializado.tam_lista_instrucciones,sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	
-
-	for(int i=0; i < list_size(cde_serializado.lista_de_instrucciones); i++){
-		memcpy(stream + offset, list_get(cde_serializado.lista_de_instrucciones,i),tam_de_1_nodo_instruccion);
-		offset += tam_de_1_nodo_instruccion;
-	}
-	
-	memcpy(stream + offset, &cde_serializado.registrosCpu, 112);
-	offset += 112;
-
-	// tam_tabla_segmentos esta en bytes
-	memcpy(stream + offset, &cde_serializado.tam_tabla_segmentos,sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	
-	memcpy(stream + offset, cde_serializado.tabla_segmentos, cde_serializado.tam_tabla_segmentos);
-	offset += cde_serializado.tam_tabla_segmentos;
-	
-	/*
-	memcpy(stream + offset, &cde_serializado.estado, sizeof(uint8_t));
-	offset += sizeof(uint8_t);
-	*/
-	mem_hexdump(stream,tam);
-
-	log_info("offset: %d, tam: %d", offset, tam);
-
-	agregar_a_paquete(paquete, stream, 8);
-	enviar_paquete(paquete, socket_cpu);
-	eliminar_paquete(paquete);
-
-	// Llenamos el paquete --------------------------------------------------------
-	//paquete->codigo_operacion = CONTEXTOEJEC; // Podemos usar una constante por operación
-
-	// Armamos el stream a enviar	
-
-	/*
-	void* a_enviar = malloc(paquete->buffer->size + sizeof(uint8_t) + sizeof(uint32_t));
-	offset = 0;
-	
-	memcpy(a_enviar + offset, &(paquete->codigo_operacion), sizeof(uint8_t));
-	offset += sizeof(uint8_t);
-
-	memcpy(a_enviar + offset, &(paquete->buffer->size), sizeof(uint32_t));
-	offset += sizeof(uint32_t);
-	
-	memcpy(a_enviar + offset, paquete->buffer->stream, paquete->buffer->size);
-
-	// Por último enviamos
-	send(socket_cpu, a_enviar, paquete->buffer->size + sizeof(uint8_t) + sizeof(uint32_t), 0);
-	*/
-	// No nos olvidamos de liberar la memoria que ya no usaremos
-	list_destroy(cde_serializado.tabla_segmentos);
-	list_destroy(cde_serializado.lista_de_instrucciones);
-	free(stream);
-
-	/*
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
-	*/
-}
-
-
-int tamanio_cde_serializado(Cde_serializado cde_ser){
-	return sizeof(uint32_t) * 4 + 112 + cde_ser.tam_lista_instrucciones + cde_ser.tam_tabla_segmentos;
-}
-
-void deserializar_cde(){
-
-}
-
 
 
 // UTILS INSTRUCCIONES
-
 void evaluar_instruccion(Instruction* instruccion_actual, contexto_de_ejecucion cde_recibido){
 	switch(instruccion_actual->instruccion){
 		case F_READ:

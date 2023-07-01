@@ -344,3 +344,12 @@
 [INFO] 22:54:17:841 Cpu/(5731:5731): CHAU
 [INFO] 22:54:17:842 Cpu/(5731:5731): HOLA123
 [INFO] 22:54:17:844 Cpu/(5731:5731): 10
+[INFO] 00:37:28:802 Cpu/(5520:5520): Listo para escuchar a mi cliente
+[INFO] 00:38:45:350 Cpu/(5520:5520): Se conecto un cliente!
+[INFO] 00:38:45:350 Cpu/(5520:5520): Se conecto el kernel
+[INFO] 00:38:45:354 Cpu/(5520:5520): Tamanio del buffer: 23
+[INFO] 00:38:45:354 Cpu/(5520:5520): Ya recibi el stream.
+[INFO] 00:38:45:354 Cpu/(5520:5520): CHAUsU
+[INFO] 00:38:45:354 Cpu/(5520:5520): HOLA123
+[INFO] 00:38:45:354 Cpu/(5520:5520): 10
+[INFO] 01:47:22:067 Cpu/(6322:6322): Listo para escuchar a mi cliente

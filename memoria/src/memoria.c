@@ -1,5 +1,8 @@
 #include "../includes/memoria.h"
 
+#include "serializacion.h"
+
+
 t_log* logger;
 t_config* config;
 

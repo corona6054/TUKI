@@ -12,8 +12,11 @@
 #include<commons/log.h>
 #include<commons/string.h>
 #include<string.h>
+#include "serializacion.h"
 
 
+
+/*
 typedef enum
 {
 	CONTEXTOEJEC,
@@ -24,6 +27,7 @@ typedef enum
 typedef struct
 {
 	uint32_t size;
+	uint32_t offset;
 	void* stream;
 } t_buffer;
 
@@ -44,10 +48,6 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente);
 void liberar_conexion(int socket_cliente);
 void eliminar_paquete(t_paquete* paquete);
 
-// Creadas por nosotros
-int conectarse_a(char* modulo, t_config* config);
-char *concatenar(char *str1, char *str2);
-
-
+*/
 
 #endif /* UTILS_CLIENTE_H_ */

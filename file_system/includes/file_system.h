@@ -7,6 +7,7 @@
 #include "commons/log.h"
 #include "utils_cliente.h"
 #include <pthread.h>
+#include "serializacion.h"
 
 typedef struct{
 	char* ip_memoria;

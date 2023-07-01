@@ -14,6 +14,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include "serializacion.h"
+
 
  typedef struct
 {
@@ -24,37 +26,6 @@
     char nombre2[32];
 
 }tablaInstr;
-
-typedef enum
-{
-    F_READ,
-    F_WRITE,
-    SET,
-    MOV_IN,
-    MOV_OUT,
-    F_TRUNCATE,
-    F_SEEK,
-    CREATE_SEGMENT,
-    IO,
-    WAIT,
-    SIGNAL,
-    F_OPEN,
-    F_CLOSE,
-    DELETE_SEGMENT,
-    YIELD,
-    EXIT,
-    INVALID
-} InstructionType;
-
-typedef struct
-{
-    InstructionType instruccion;
-    u_int32_t numero1;
-    u_int32_t numero2;
-    char string1[15];
-    char string2[15];
-} Instruction;
-
 
 
 typedef struct{

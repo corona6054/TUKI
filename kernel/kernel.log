@@ -816,3 +816,15 @@
 [INFO] 22:54:17:775 Kernel/(5747:5747): Ya cargue el stream
 [INFO] 22:54:17:832 Kernel/(5747:5747): Tamanio del buffer: 23
 [INFO] 22:54:17:833 Kernel/(5747:5747): Ya mande el stream
+[INFO] 23:17:48:710 Kernel/(2309:2309): Ya cargue el stream
+[INFO] 23:17:48:711 Kernel/(2309:2314): Conectado con cpu
+[INFO] 23:17:48:721 Kernel/(2309:2309): Tamanio del buffer: 23
+[INFO] 23:17:48:721 Kernel/(2309:2309): Ya mande el stream
+[INFO] 00:28:48:160 Kernel/(5342:5359): Conectado con cpu
+[INFO] 00:29:14:276 Kernel/(5342:5342): Ya cargue el stream
+[INFO] 00:29:16:700 Kernel/(5342:5342): Tamanio del buffer: 23
+[INFO] 00:29:23:010 Kernel/(5342:5342): Ya mande el stream
+[INFO] 00:38:45:350 Kernel/(5554:5554): Ya cargue el stream
+[INFO] 00:38:45:353 Kernel/(5554:5559): Conectado con cpu
+[INFO] 00:38:45:353 Kernel/(5554:5554): Tamanio del buffer: 23
+[INFO] 00:38:45:354 Kernel/(5554:5554): Ya mande el stream
