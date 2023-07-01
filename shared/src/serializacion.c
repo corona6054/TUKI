@@ -61,18 +61,21 @@ void buffer_write_string(t_buffer* buffer, char* cadena){
 
 char* buffer_read_string(t_buffer *buffer){
 	uint32_t tam = buffer_read_uint32(buffer);
-	char* aux = malloc(tam);
+	char* cadena = malloc(tam + 1);
 
-	memcpy(aux, buffer->stream + buffer->offset, tam);
+	memcpy(cadena, buffer->stream + buffer->offset, tam);
 	buffer->offset += tam;
 
-	char* cadena = malloc(tam);
+	// char* cadena = malloc(tam + 1);
 
+	/*
 	// esto no funciona
 	for (int i = 0; i < tam; i++)
 		cadena[i] = aux[i];
+	*/
+	cadena[tam] = '\0';
 
-	free(aux);
+	// free(aux);
 
 	return cadena;
 }
