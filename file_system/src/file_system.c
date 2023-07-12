@@ -1,5 +1,24 @@
 #include "../includes/file_system.h"
 
+typedef struct {
+	uint32_t  block_size;
+	uint32_t block_count;
+}superBloque;
+
+typedef struct {
+	char*  file_name;
+	uint32_t file_size;
+	uint32_t  direct_pointer;
+	uint32_t indirect_pointer;
+	}FCB;
+
+	typedef struct {
+		char*  file_name;
+		uint32_t file_size;
+		uint32_t  direct_pointer;
+		uint32_t indirect_pointer;
+	}FCB;
+
 
 int main(void){
 
