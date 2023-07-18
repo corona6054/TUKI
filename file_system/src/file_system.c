@@ -13,8 +13,10 @@ typedef struct {
 	}FCB;
 
 	int bitarray_fd;
-	char *bitarray;
+	char *bitarray_pointer;
 	off_t file_size;
+	t_bitarray * bitarray;
+	t_list* fcb_list;
 
 	int crearEstructuras();
 	int cerrarEstructuras();
@@ -33,22 +35,45 @@ int main(void){
 // SUBPROGRAMAS
 
 int crearEstructuras(){
+	//superbloque
 	t_config* superbloque_config;
 	superBloque superbloque;
 	superbloque_config = config_create(config_file_system.path_superbloque);
 	superbloque.block_size= (int)config_get_int_value(config,"BLOCK_SIZE");
 	superbloque.block_count= (int)config_get_int_value(config,"BLOCK_COUNT");
+	//bitarray
 	bitarray_fd = open(config_file_system.path_bitmap, O_RDWR);
 	if (bitarray_fd) printf("Error opening bitmap");
     file_size = lseek(bitarray_fd, 0, SEEK_END);
-    bitarray = mmap(NULL, file_size, PROT_READ | PROT_WRITE, MAP_SHARED, bitarray_fd, 0);
-    if (bitarray == MAP_FAILED) printf("Error mapeando");
+    bitarray_pointer = mmap(NULL, file_size, PROT_READ | PROT_WRITE, MAP_SHARED, bitarray_fd, 0);
+    if (bitarray_pointer == MAP_FAILED) printf("Error mapeando");
+    bitarray =bitarray_create(bitarray_pointer,file_size);
+	//fcb
+    char file_path[256];
+    t_config* config_fcb;
+    FCB read_fcb;
+    fcb_list = list_create();
+    DIR* directory = opendir(config_file_system.path_fcb);
+    struct dirent* entry;
+    while ((entry = readdir(directory)) != NULL) {
+            if (entry->d_type == DT_REG) { // Check if it's a regular file
+                snprintf(file_path, sizeof(file_path), "%s/%s", config_file_system.path_fcb, entry->d_name);
+                config_fcb= config_create(file_path);
+                read_fcb.file_name = config_get_string_value(config,"NOMBRE_ARCHIVO");
+                read_fcb.file_size = (uint32_t)config_get_int_value(config,"TAMANIO_ARCHIVO");
+                read_fcb.direct_pointer = (uint32_t)config_get_int_value(config,"PUNTERO_DIRECTO");
+                read_fcb.indirect_pointer = (uint32_t)config_get_int_value(config,"PUNTERO_INDIRECTO");
+                list_add(fcb_list,&read_fcb);
+            }
+    }
+    closedir(directory);
     return 0;
 }
+
 int cerrarEstructuras(){
-	int sync = msync(bitarray, file_size, MS_SYNC);
+	int sync = msync(bitarray_pointer, file_size, MS_SYNC);
 	    if(sync == -1) printf("Error syncing the file");
-	    int unmap = munmap(bitarray, file_size);
+	    int unmap = munmap(bitarray_pointer, file_size);
 	    if(unmap == -1) printf("Error syncing the file");
 	    close(bitarray_fd);
 	    return 0;
