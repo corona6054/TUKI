@@ -198,3 +198,329 @@
 [INFO] 23:53:53:424 Consola/(9449:9449): Instrucciones leidas
 [INFO] 23:53:53:425 Consola/(9449:9455): Socket kernel :4
 [INFO] 23:53:53:425 Consola/(9449:9449): Paquete enviado
+[INFO] 20:31:16:696 Consola/(3917:3921): Socket kernel :5
+[INFO] 20:31:16:697 Consola/(3917:3917): Instrucciones leidas
+[INFO] 20:34:36:396 Consola/(4070:4070): Instrucciones leidas
+[INFO] 20:34:36:400 Consola/(4070:4073): Socket kernel :4
+[INFO] 20:38:34:946 Consola/(4330:4330): Instrucciones leidas
+[INFO] 20:38:34:947 Consola/(4330:4336): Socket kernel :4
+[INFO] 20:38:34:949 Consola/(4330:4336): Conectado con kernel
+[INFO] 20:39:25:289 Consola/(4367:4395): Socket kernel :4
+[INFO] 20:39:25:289 Consola/(4367:4395): Conectado con kernel
+[INFO] 20:41:13:962 Consola/(4538:4538): Instrucciones leidas
+[INFO] 20:41:13:964 Consola/(4538:4540): Socket kernel :4
+[INFO] 20:41:54:616 Consola/(4574:4574): Instrucciones leidas
+[INFO] 20:41:54:622 Consola/(4574:4577): Socket kernel :4
+[INFO] 20:45:03:303 Consola/(4720:4720): Instrucciones leidas
+[INFO] 20:45:03:305 Consola/(4720:4722): Socket kernel :4
+[INFO] 20:52:16:783 Consola/(4938:4938): Instrucciones leidas
+[INFO] 20:52:16:790 Consola/(4938:4940): Socket kernel :4
+[INFO] 20:52:16:790 Consola/(4938:4940): Conectado con kernel
+[INFO] 21:29:13:105 Consola/(5472:5472): Instrucciones leidas
+[INFO] 21:29:13:106 Consola/(5472:5478): Socket kernel :4
+[INFO] 21:29:13:109 Consola/(5472:5478): Conectado con kernel
+[INFO] 21:30:52:745 Consola/(5573:5573): Instrucciones leidas
+[INFO] 21:30:52:745 Consola/(5573:5579): Socket kernel :4
+[INFO] 00:36:49:320 Consola/(9204:9204): Instrucciones leidas
+[INFO] 00:36:49:322 Consola/(9204:9209): Socket kernel :4
+[INFO] 00:39:08:248 Consola/(9320:9320): Instrucciones leidas
+[INFO] 00:39:08:248 Consola/(9320:9326): Socket kernel :4
+[INFO] 00:40:25:208 Consola/(9404:9404): Instrucciones leidas
+[INFO] 00:40:25:208 Consola/(9404:9409): Socket kernel :4
+[INFO] 00:40:25:208 Consola/(9404:9409): Conectado con kernel
+[INFO] 00:49:30:172 Consola/(9687:9687): Instrucciones leidas
+[INFO] 00:49:30:179 Consola/(9687:9692): Socket kernel :4
+[INFO] 00:49:30:179 Consola/(9687:9692): Conectado con kernel
+[INFO] 00:53:29:880 Consola/(9926:9926): Instrucciones leidas
+[INFO] 00:53:29:887 Consola/(9926:9932): Socket kernel :4
+[INFO] 00:53:29:887 Consola/(9926:9932): Conectado con kernel
+[INFO] 00:54:52:045 Consola/(10018:10018): Instrucciones leidas
+[INFO] 00:54:52:050 Consola/(10018:10024): Socket kernel :4
+[INFO] 00:54:52:050 Consola/(10018:10024): Conectado con kernel
+[INFO] 00:56:31:145 Consola/(10118:10118): Instrucciones leidas
+[INFO] 00:56:31:146 Consola/(10118:10124): Socket kernel :4
+[INFO] 00:56:52:323 Consola/(10169:10169): Instrucciones leidas
+[INFO] 00:56:52:324 Consola/(10169:10176): Socket kernel :4
+[INFO] 00:58:49:931 Consola/(10265:10265): Instrucciones leidas
+[INFO] 00:58:49:939 Consola/(10265:10271): Socket kernel :4
+[INFO] 00:58:49:939 Consola/(10265:10271): Conectado con kernel
+[INFO] 01:01:24:393 Consola/(10379:10379): Instrucciones leidas
+[INFO] 01:01:24:393 Consola/(10379:10385): Socket kernel :4
+[INFO] 01:03:13:425 Consola/(10544:10544): Instrucciones leidas
+[INFO] 01:03:13:426 Consola/(10544:10546): Socket kernel :4
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:426 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:427 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:03:13:427 Consola/(10544:10544): Codigo instruccion: 1112727648
+[INFO] 01:07:51:141 Consola/(10674:10688): Socket kernel :4
+[INFO] 01:07:51:141 Consola/(10674:10688): Conectado con kernel
+[INFO] 01:12:26:702 Consola/(10891:10891): Instruccion actual: 2
+[INFO] 01:13:05:509 Consola/(10953:10953): Instruccion actual: 2
+[INFO] 01:13:43:806 Consola/(11004:11018): Socket kernel :4
+[INFO] 01:13:43:806 Consola/(11004:11018): Conectado con kernel
+[INFO] 01:14:28:346 Consola/(11004:11004): Instruccion actual: 2
+[INFO] 01:18:38:595 Consola/(11136:11156): Socket kernel :4
+[INFO] 01:18:38:595 Consola/(11136:11156): Conectado con kernel
+[INFO] 01:19:25:849 Consola/(11136:11136): Instruccion actual: 2
+[INFO] 01:26:03:407 Consola/(11277:11277): Instruccion actual: 2
+[INFO] 01:26:14:296 Consola/(11324:11324): Instruccion actual: 2
+[INFO] 01:26:53:389 Consola/(11417:11417): Instruccion actual: 2
+[INFO] 01:26:53:389 Consola/(11417:11417): Instruccion actual: 4
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 9
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 8
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 10
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 3
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 11
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 14
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 5
+[INFO] 01:26:53:390 Consola/(11417:11417): Instruccion actual: 6
+[INFO] 01:26:53:391 Consola/(11417:11417): Instruccion actual: 7
+[INFO] 01:26:53:391 Consola/(11417:11417): Instruccion actual: 1
+[INFO] 01:26:53:391 Consola/(11417:11417): Instruccion actual: 0
+[INFO] 01:26:53:391 Consola/(11417:11417): Instruccion actual: 13
+[INFO] 01:26:53:392 Consola/(11417:11417): Instruccion actual: 12
+[INFO] 01:26:53:392 Consola/(11417:11417): Instruccion actual: 15
+[INFO] 01:26:53:392 Consola/(11417:11417): Instrucciones leidas
+[INFO] 01:27:35:246 Consola/(11451:11451): Instruccion actual: 2
+[INFO] 01:28:13:704 Consola/(11451:11451): Instruccion actual: 4
+[INFO] 01:28:15:024 Consola/(11451:11451): Instruccion actual: 9
+[INFO] 01:28:17:105 Consola/(11451:11451): Instruccion actual: 8
+[INFO] 01:28:17:897 Consola/(11451:11451): Instruccion actual: 10
+[INFO] 01:28:18:794 Consola/(11451:11451): Instruccion actual: 3
+[INFO] 01:28:19:223 Consola/(11451:11451): Instruccion actual: 11
+[INFO] 01:28:19:571 Consola/(11451:11451): Instruccion actual: 14
+[INFO] 01:28:20:002 Consola/(11451:11451): Instruccion actual: 5
+[INFO] 01:28:20:388 Consola/(11451:11451): Instruccion actual: 6
+[INFO] 01:28:21:006 Consola/(11451:11451): Instruccion actual: 7
+[INFO] 01:28:21:571 Consola/(11451:11451): Instruccion actual: 1
+[INFO] 01:28:22:039 Consola/(11451:11451): Instruccion actual: 0
+[INFO] 01:28:22:519 Consola/(11451:11451): Instruccion actual: 13
+[INFO] 01:28:23:073 Consola/(11451:11451): Instruccion actual: 12
+[INFO] 01:28:23:778 Consola/(11451:11451): Instruccion actual: 15
+[INFO] 01:28:41:058 Consola/(11451:11451): Instrucciones leidas
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 2
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 4
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 9
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 8
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 10
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 3
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 11
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 14
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 5
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 6
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 7
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 1
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 0
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 13
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 12
+[INFO] 01:29:54:118 Consola/(11649:11649): Instruccion actual: 15
+[INFO] 01:29:54:118 Consola/(11649:11649): Instrucciones leidas
+[INFO] 01:29:59:414 Consola/(11649:11654): Socket kernel :4
+[INFO] 01:29:59:415 Consola/(11649:11654): Conectado con kernel
+[INFO] 01:30:23:614 Consola/(11649:11649): Codigo instruccion: 0
+[INFO] 01:32:36:323 Consola/(11759:11759): Instruccion actual: 2
+[INFO] 01:33:41:230 Consola/(11759:11766): Socket kernel :5
+[INFO] 01:33:41:230 Consola/(11759:11766): Conectado con kernel
+[INFO] 01:33:55:537 Consola/(11759:11759): Instruccion actual: 4
+[INFO] 01:33:57:411 Consola/(11759:11759): Instruccion actual: 9
+[INFO] 01:33:57:962 Consola/(11759:11759): Instruccion actual: 8
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 2
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 4
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 9
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 8
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 10
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 3
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 11
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 14
+[INFO] 01:35:05:706 Consola/(11858:11858): Instruccion actual: 5
+[INFO] 01:35:05:707 Consola/(11858:11858): Instruccion actual: 6
+[INFO] 01:35:05:707 Consola/(11858:11858): Instruccion actual: 7
+[INFO] 01:35:05:707 Consola/(11858:11858): Instruccion actual: 1
+[INFO] 01:35:05:707 Consola/(11858:11858): Instruccion actual: 0
+[INFO] 01:35:05:707 Consola/(11858:11858): Instruccion actual: 13
+[INFO] 01:35:05:707 Consola/(11858:11858): Instruccion actual: 12
+[INFO] 01:35:05:707 Consola/(11858:11858): Instruccion actual: 15
+[INFO] 01:35:05:707 Consola/(11858:11858): Instrucciones leidas
+[INFO] 01:37:26:656 Consola/(11948:11948): Cant de instruccion: 1
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 2
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 3
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 4
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 5
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 6
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 7
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 8
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 9
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 10
+[INFO] 01:37:26:657 Consola/(11948:11948): Cant de instruccion: 11
+[INFO] 01:37:26:658 Consola/(11948:11948): Cant de instruccion: 12
+[INFO] 01:37:26:658 Consola/(11948:11948): Cant de instruccion: 13
+[INFO] 01:37:26:658 Consola/(11948:11948): Cant de instruccion: 14
+[INFO] 01:37:26:658 Consola/(11948:11948): Cant de instruccion: 15
+[INFO] 01:37:26:658 Consola/(11948:11948): Instrucciones leidas
+[INFO] 01:41:01:281 Consola/(12111:12111): Cant de instrucciones: 1
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 2
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 3
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 4
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 5
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 6
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 7
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 8
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 9
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 10
+[INFO] 01:41:01:282 Consola/(12111:12111): Cant de instrucciones: 11
+[INFO] 01:41:01:283 Consola/(12111:12111): Cant de instrucciones: 12
+[INFO] 01:41:01:283 Consola/(12111:12111): Cant de instrucciones: 13
+[INFO] 01:41:01:283 Consola/(12111:12111): Cant de instrucciones: 14
+[INFO] 01:41:01:283 Consola/(12111:12111): Cant de instrucciones: 15
+[INFO] 01:41:01:283 Consola/(12111:12111): Instrucciones leidas
+[INFO] 01:41:33:837 Consola/(12160:12160): Instrucciones leidas
+[INFO] 01:42:42:520 Consola/(12210:12210): Cant de instrucciones: 15
+[INFO] 01:42:42:521 Consola/(12210:12210): Instrucciones leidas
+[INFO] 01:43:58:290 Consola/(12272:12272): Cant de instrucciones: 15
+[INFO] 01:43:58:290 Consola/(12272:12272): Instrucciones leidas
+[INFO] 01:44:14:787 Consola/(12344:12344): Cant de instrucciones: 16
+[INFO] 01:44:14:789 Consola/(12344:12344): Instrucciones leidas
+[INFO] 01:45:42:094 Consola/(12435:12448): Socket kernel :4
+[INFO] 01:45:42:096 Consola/(12435:12448): Conectado con kernel
+[INFO] 01:45:42:097 Consola/(12435:12435): Cant de instrucciones: 16
+[INFO] 01:45:42:523 Consola/(12435:12435): Instrucciones leidas
+[INFO] 01:46:24:033 Consola/(12435:12435): Codigo instruccion: 0
+[INFO] 01:46:33:911 Consola/(12435:12435): Codigo instruccion: 0
+[INFO] 01:47:24:126 Consola/(12435:12435): Codigo instruccion: 0
+[INFO] 21:50:48:934 Consola/(1884:1884): Cant de instrucciones: 16
+[INFO] 21:50:48:935 Consola/(1884:1884): Instrucciones leidas
+[INFO] 21:50:48:947 Consola/(1884:1888): Socket kernel :4
+[INFO] 21:50:48:947 Consola/(1884:1888): Conectado con kernel
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:50:48:947 Consola/(1884:1884): Codigo instruccion: -1436032928
+[INFO] 21:58:34:612 Consola/(2103:2103): Cant de instrucciones: 16
+[INFO] 21:58:34:612 Consola/(2103:2103): Instrucciones leidas
+[INFO] 21:58:34:612 Consola/(2103:2108): Socket kernel :4
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 21:58:34:612 Consola/(2103:2103): Codigo instruccion: -521666128
+[INFO] 22:07:32:551 Consola/(1869:1869): Cant de instrucciones: 16
+[INFO] 22:07:32:560 Consola/(1869:1869): Instrucciones leidas
+[INFO] 22:07:32:555 Consola/(1869:1874): Socket kernel :5
+[INFO] 22:07:32:560 Consola/(1869:1874): Conectado con kernel
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:560 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:561 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:561 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:561 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:561 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:561 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:561 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:07:32:561 Consola/(1869:1869): Codigo instruccion: -461134432
+[INFO] 22:13:20:467 Consola/(2403:2403): Cant de instrucciones: 16
+[INFO] 22:13:20:467 Consola/(2403:2403): Instrucciones leidas
+[INFO] 22:13:20:467 Consola/(2403:2408): Socket kernel :4
+[INFO] 22:13:20:468 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:468 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:468 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:468 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:13:20:469 Consola/(2403:2403): Codigo instruccion: 1557409120
+[INFO] 22:16:58:119 Consola/(2726:2726): Cant de instrucciones: 16
+[INFO] 22:17:13:068 Consola/(2770:2770): Cant de instrucciones: 16
+[INFO] 22:18:20:913 Consola/(2814:2836): Socket kernel :4
+[INFO] 22:18:20:914 Consola/(2814:2836): Conectado con kernel
+[INFO] 22:19:26:202 Consola/(2814:2814): Cant de instrucciones: 16
+[INFO] 22:22:36:691 Consola/(3042:3042): Cant de instrucciones: 16
+[INFO] 22:23:10:717 Consola/(3076:3076): Cant de instrucciones: 16
+[INFO] 22:25:58:704 Consola/(3331:3331): Cant de instrucciones: 16
+[INFO] 22:28:56:554 Consola/(3512:3512): Cant de instrucciones: 16
+[INFO] 22:33:29:977 Consola/(3549:3549): Cant de instrucciones: 16
+[INFO] 22:38:24:262 Consola/(4089:4089): Cant de instrucciones: 16
+[INFO] 22:38:54:244 Consola/(4130:4130): Cant de instrucciones: 16
+[INFO] 22:39:24:788 Consola/(4190:4190): Cant de instrucciones: 16
+[INFO] 22:40:15:032 Consola/(4305:4305): Cant de instrucciones: 16
+[INFO] 22:51:46:581 Consola/(5507:5507): Instrucciones leidas
+[INFO] 22:51:46:582 Consola/(5507:5512): Socket kernel :4
+[INFO] 22:53:34:754 Consola/(5626:5626): Instrucciones leidas
+[INFO] 22:54:21:204 Consola/(5679:5679): Instrucciones leidas
+[INFO] 23:12:00:850 Consola/(6514:6514): Instrucciones leidas
+[INFO] 23:12:00:850 Consola/(6514:6519): Socket kernel :4
+[INFO] 23:12:00:850 Consola/(6514:6519): Conectado con kernel
+[INFO] 23:13:11:024 Consola/(6589:6605): Socket kernel :4
+[INFO] 23:13:11:027 Consola/(6589:6605): Conectado con kernel
+[INFO] 23:13:43:299 Consola/(6589:6589): Instrucciones leidas
+[INFO] 23:48:11:639 Consola/(7875:7875): Instrucciones leidas
+[INFO] 23:51:43:987 Consola/(8072:8072): Instrucciones leidas
+[INFO] 23:55:17:353 Consola/(8258:8258): Instrucciones leidas
+[INFO] 23:55:17:355 Consola/(8258:8263): Socket kernel :4
+[INFO] 23:55:37:027 Consola/(8276:8276): Instrucciones leidas
+[INFO] 23:55:37:034 Consola/(8276:8281): Socket kernel :4
+[INFO] 23:57:43:107 Consola/(8359:8359): Instrucciones leidas
+[INFO] 23:57:43:113 Consola/(8359:8365): Socket kernel :4
+[INFO] 23:57:43:113 Consola/(8359:8365): Conectado con kernel
+[INFO] 23:59:28:015 Consola/(8475:8475): Instrucciones leidas
+[INFO] 23:59:28:020 Consola/(8475:8481): Socket kernel :4
+[INFO] 23:59:28:020 Consola/(8475:8481): Conectado con kernel
+[INFO] 00:01:41:601 Consola/(8689:8689): Instrucciones leidas
+[INFO] 00:01:41:603 Consola/(8689:8694): Socket kernel :4
+[INFO] 00:04:02:233 Consola/(8797:8797): Instrucciones leidas
+[INFO] 00:04:02:239 Consola/(8797:8803): Socket kernel :4
+[INFO] 00:04:02:244 Consola/(8797:8803): Conectado con kernel
+[INFO] 00:07:13:214 Consola/(8904:8904): Instrucciones leidas
+[INFO] 00:07:13:215 Consola/(8904:8904): Lista mapeada
+[INFO] 00:07:13:215 Consola/(8904:8910): Socket kernel :4
+[INFO] 00:07:13:215 Consola/(8904:8904): Escribi en el buffer la lista de instrucciones
+[INFO] 00:07:13:215 Consola/(8904:8904): A punto de enviar el tamanio del buffer
+[INFO] 00:07:13:215 Consola/(8904:8904): Envie el tamanio del buffer
+[INFO] 00:07:13:215 Consola/(8904:8904): Lista enviada

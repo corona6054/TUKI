@@ -66,13 +66,6 @@ char* buffer_read_string(t_buffer *buffer){
 	memcpy(cadena, buffer->stream + buffer->offset, tam);
 	buffer->offset += tam;
 
-	// char* cadena = malloc(tam + 1);
-
-	/*
-	// esto no funciona
-	for (int i = 0; i < tam; i++)
-		cadena[i] = aux[i];
-	*/
 	cadena[tam] = '\0';
 
 	// free(aux);
@@ -239,7 +232,48 @@ contexto_de_ejecucion buffer_read_cde(t_buffer* buffer){
 
 	return cde;
 }
+/*
+void enviar_buffer(t_buffer *buffer, int socket_cliente){
 
+	send(socket_cliente, &(buffer->size), sizeof(uint32_t), 0);
 
+	send(socket_cliente, buffer->stream, buffer->size, 0);
+
+	return;
+}
+
+t_buffer *recibir_buffer(int socket){
+	t_buffer *buffer = crear_buffer_nuestro();
+
+	recv(socket, &(buffer->size), sizeof(uint32_t), MSG_WAITALL);
+
+	buffer->stream = malloc(buffer->size);
+	
+	recv(socket, buffer->stream, buffer->size, MSG_WAITALL);
+
+	return buffer;
+}
+*/
+// UTILS DE LECTURA
+
+void mostrar_instrucciones(t_list* lista_instrucciones){
+	
+	printf("Instructions:\n");
+    for (int i = 0; i < list_size(lista_instrucciones); i++)
+    {
+        Instruction* instruccion = list_get(lista_instrucciones, i);
+		printf("Codigo de instruccion: %d ", instruccion->instruccion);
+        
+		if (instruccion->numero1 != 0)
+            printf("Numero1: %d ", instruccion->numero1);
+        if (instruccion->numero2 != 0)
+            printf("Numero2: %d ", instruccion->numero2);
+        if (strcmp(instruccion->string1, "") != 0)
+            printf("String1: %s ", instruccion->string1);
+        if (strcmp(instruccion->string2, "") != 0)
+            printf("String2: %s ", instruccion->string2);
+        printf("\n");
+    }
+}
 
 

@@ -16,7 +16,7 @@
 
 //extern t_log* logger;
 
-void* recibir_buffer(int*, int);
+
 
 
 int iniciar_servidor(t_log*, int);
@@ -24,6 +24,8 @@ int esperar_cliente(int, t_log*);
 t_list* recibir_paquete(int);
 void recibir_mensaje(int);
 int recibir_operacion(int);
+void* recibir_buffer(int*, int);
+
 
 int abrir_servidor(t_log*,t_config*);
 

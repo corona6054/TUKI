@@ -33,6 +33,15 @@ typedef struct{
 	int puerto_kernel;
 }Config_consola;
 
+typedef struct
+{
+    InstructionType instruccion;
+    uint32_t numero1;
+    uint32_t numero2;
+    char string1[15];
+    char string2[15];
+} Instruction_consola;
+
 //Variables globales
 t_log* logger;
 t_config* config;
@@ -43,13 +52,17 @@ sem_t *sem_conexion;
 sem_t *sem_enviado;
 
 int socket_kernel;
-Instruction instructions[MAX_INSTRUCTIONS];
+Instruction_consola instructions[MAX_INSTRUCTIONS];
 int instructionCount = 0;
 
 
 // Prototipos funciones
-void serializeInstruction(Instruction* instruction, void* stream, int offset);
-int enviarLista();
+void serializeInstruction(Instruction*, void*, int);
+void enviarLista(t_buffer*, t_list*);
+
+t_list* mapearLista();
+Instruction cambiarStruct(Instruction_consola);
+int get_tamanio_char_array(char [], int);
 
 void levantar_modulo(char*);
 void finalizar_modulo();

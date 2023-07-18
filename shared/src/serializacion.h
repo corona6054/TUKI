@@ -17,11 +17,15 @@
 // STRUCTS NECESARIOS ------------------------------------------------------
 
 
+
+
 typedef enum
 {
 	CONTEXTOEJEC,
 	MENSAJE,
-	PAQUETE
+	PAQUETE,
+	AVISO_MEMORIA, //para dar aviso que tiene uqe liberar las estructuras
+	AVISO_CONSOLA //aviso a consola para finalizacion del procesos
 }op_code;
 
 typedef struct
@@ -63,8 +67,8 @@ typedef struct
     InstructionType instruccion;
     uint32_t numero1;
     uint32_t numero2;
-    char string1[15];
-    char string2[15];
+    char* string1;
+    char* string2;
 } Instruction;
 
 typedef struct{
@@ -137,6 +141,10 @@ t_list* buffer_read_tabla_segmentos(t_buffer*);
 void buffer_write_cde(t_buffer*, contexto_de_ejecucion);
 contexto_de_ejecucion buffer_read_cde(t_buffer*);
 
+void mostrar_instrucciones(t_list*);
+
+//void enviar_buffer(t_buffer*, int);
+//t_buffer *recibir_buffer(int);
 
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 

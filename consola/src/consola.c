@@ -2,7 +2,8 @@
 
 
 int main(int argc, char** argv){
-	sem_init(&sem_conexion, 0, 0);
+	
+    sem_init(&sem_conexion, 0, 0);
 
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
@@ -10,8 +11,20 @@ int main(int argc, char** argv){
 	crearLista(instruccion_path);
 	log_info(logger,"Instrucciones leidas");
 
+
+    t_list* listaAEnviar = mapearLista();
+    log_info(logger,"Lista mapeada");
+    
+    t_buffer* buffer = crear_buffer_nuestro();
+
 	sem_wait(&sem_conexion);
-	enviarLista();
+	
+    enviarLista(buffer, listaAEnviar);
+    log_info(logger,"Lista enviada");
+
+
+
+    //destruirLista(listaAEnviar);
 
 	finalizar_modulo();
 	return 0;
@@ -19,6 +32,50 @@ int main(int argc, char** argv){
 
 
 // SUBPROGRAMAS
+
+t_list* mapearLista(){
+
+    t_list* listaAEnviar = list_create();
+    
+    for(int i = 0; i < instructionCount; i++){
+        Instruction instruccion = cambiarStruct(instructions[i]);
+        list_add(listaAEnviar, &instruccion);
+    }
+
+    return listaAEnviar;
+}
+
+Instruction cambiarStruct(Instruction_consola instruccion_a_cambiar){
+
+    Instruction instruccion_cambiada;
+
+    instruccion_cambiada.instruccion = instruccion_a_cambiar.instruccion;
+    instruccion_cambiada.numero1 = instruccion_a_cambiar.numero1;
+    instruccion_cambiada.numero2 = instruccion_a_cambiar.numero2;
+    
+    int tam1 = get_tamanio_char_array(instruccion_a_cambiar.string1, 15);
+    int tam2 = get_tamanio_char_array(instruccion_a_cambiar.string2, 15);
+    
+    instruccion_cambiada.string1 = malloc(tam1);
+    instruccion_cambiada.string2 = malloc(tam2);
+
+    instruccion_cambiada.string1 = &instruccion_a_cambiar.string1[0];
+    instruccion_cambiada.string2 = &instruccion_a_cambiar.string2[0];
+    
+
+    return instruccion_cambiada;
+}
+
+int get_tamanio_char_array(char a[], int tamanioFisico){
+    int tamanioLogico = 0;
+    
+    for(int i = 0; i < tamanioFisico; i++){
+        if(a[i] != '\0')
+            tamanioLogico++;
+    }
+
+    return tamanioLogico;
+}
 
 void serializeInstruction(Instruction* instruction, void* stream, int offset) {
 	memcpy(stream + offset, &instruction->instruccion, sizeof(u_int32_t));
@@ -33,20 +90,17 @@ void serializeInstruction(Instruction* instruction, void* stream, int offset) {
 	offset += sizeof(char[15]);
 }
 
-int enviarLista(){
-	t_paquete* paquete = crear_paquete();
-    int instr_size = sizeof(u_int32_t) * 3 + sizeof(char[15]) * 2;
-    void* serialized=malloc(instr_size);
-    int offset=0;
-	for (int i = 0; i < instructionCount; i++){
-	            serializeInstruction(&instructions[i], serialized,offset);
-				agregar_a_paquete(paquete,serialized,instr_size);
-	        }
-		enviar_paquete(paquete,socket_kernel);
-		log_info(logger,"Paquete enviado");
-		eliminar_paquete(paquete);
-        free(serialized);
-        return 1;
+void enviarLista(t_buffer* buffer, t_list* listaAEnviar){
+
+    buffer_write_lista_instrucciones(buffer, listaAEnviar);
+    log_info(logger, "Escribi en el buffer la lista de instrucciones");
+    // Enviamos el tamanio del buffer
+    log_info(logger, "A punto de enviar el tamanio del buffer");
+    send(socket_kernel, &(buffer->size), sizeof(uint32_t), 0);
+    log_info(logger, "Envie el tamanio del buffer");
+
+    // Enviamos el stream del buffer
+    send(socket_kernel, buffer->stream, buffer->size, 0);        
 }
 
 
@@ -315,8 +369,9 @@ int crearLista(char* filename)
         return 1;
     }
     parseInstructions(file);
+    
     fclose(file);
-    /*
+    
     printf("Instructions:\n");
     for (int i = 0; i < instructionCount; i++)
     {
@@ -331,6 +386,5 @@ int crearLista(char* filename)
             printf("%s ", instructions[i].string2);
         printf("\n");
     }
-	*/
     return 0;
 }
