@@ -8,6 +8,9 @@
 #include "utils_cliente.h"
 #include <pthread.h>
 #include "serializacion.h"
+#include <sys/mman.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 typedef struct{
 	char* ip_memoria;

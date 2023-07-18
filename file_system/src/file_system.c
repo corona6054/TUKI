@@ -12,23 +12,49 @@ typedef struct {
 	uint32_t indirect_pointer;
 	}FCB;
 
-	typedef struct {
-		char*  file_name;
-		uint32_t file_size;
-		uint32_t  direct_pointer;
-		uint32_t indirect_pointer;
-	}FCB;
+	int bitarray_fd;
+	char *bitarray;
+	off_t file_size;
 
+	int crearEstructuras();
+	int cerrarEstructuras();
 
 int main(void){
 
 	levantar_modulo();
+	crearEstructuras();
+
+	cerrarEstructuras();
 
 	finalizar_modulo();
 	return 0;
 }
 
 // SUBPROGRAMAS
+
+int crearEstructuras(){
+	t_config* superbloque_config;
+	superBloque superbloque;
+	superbloque_config = config_create(config_file_system.path_superbloque);
+	superbloque.block_size= (int)config_get_int_value(config,"BLOCK_SIZE");
+	superbloque.block_count= (int)config_get_int_value(config,"BLOCK_COUNT");
+	bitarray_fd = open(config_file_system.path_bitmap, O_RDWR);
+	if (bitarray_fd) printf("Error opening bitmap");
+    file_size = lseek(bitarray_fd, 0, SEEK_END);
+    bitarray = mmap(NULL, file_size, PROT_READ | PROT_WRITE, MAP_SHARED, bitarray_fd, 0);
+    if (bitarray == MAP_FAILED) printf("Error mapeando");
+    return 0;
+}
+int cerrarEstructuras(){
+	int sync = msync(bitarray, file_size, MS_SYNC);
+	    if(sync == -1) printf("Error syncing the file");
+	    int unmap = munmap(bitarray, file_size);
+	    if(unmap == -1) printf("Error syncing the file");
+	    close(bitarray_fd);
+	    return 0;
+}
+
+
 
 void levantar_modulo(){
 	logger = iniciar_logger();
