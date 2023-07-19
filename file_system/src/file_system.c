@@ -39,15 +39,21 @@ int crearEstructuras(){
 	t_config* superbloque_config;
 	superBloque superbloque;
 	superbloque_config = config_create(config_file_system.path_superbloque);
-	superbloque.block_size= (int)config_get_int_value(config,"BLOCK_SIZE");
-	superbloque.block_count= (int)config_get_int_value(config,"BLOCK_COUNT");
+	superbloque.block_size= (uint32_t)config_get_int_value(superbloque_config,"BLOCK_SIZE");
+	superbloque.block_count= (uint32_t)config_get_int_value(superbloque_config,"BLOCK_COUNT");
 	//bitarray
 	bitarray_fd = open(config_file_system.path_bitmap, O_RDWR);
-	if (bitarray_fd) printf("Error opening bitmap");
+	if (bitarray_fd==-1) {
+		//FILE * bitarray_file = fopen(config_file_system.path_bitmap,"w");
+	    //size_t num_bytes = (65536 + 7) / 8;
+		//char buffer[1024];
+		//crear bitarray con todos 1
+	}
     file_size = lseek(bitarray_fd, 0, SEEK_END);
     bitarray_pointer = mmap(NULL, file_size, PROT_READ | PROT_WRITE, MAP_SHARED, bitarray_fd, 0);
     if (bitarray_pointer == MAP_FAILED) printf("Error mapeando");
     bitarray =bitarray_create(bitarray_pointer,file_size);
+
 	//fcb
     char file_path[256];
     t_config* config_fcb;
@@ -59,14 +65,19 @@ int crearEstructuras(){
             if (entry->d_type == DT_REG) { // Check if it's a regular file
                 snprintf(file_path, sizeof(file_path), "%s/%s", config_file_system.path_fcb, entry->d_name);
                 config_fcb= config_create(file_path);
-                read_fcb.file_name = config_get_string_value(config,"NOMBRE_ARCHIVO");
-                read_fcb.file_size = (uint32_t)config_get_int_value(config,"TAMANIO_ARCHIVO");
-                read_fcb.direct_pointer = (uint32_t)config_get_int_value(config,"PUNTERO_DIRECTO");
-                read_fcb.indirect_pointer = (uint32_t)config_get_int_value(config,"PUNTERO_INDIRECTO");
+                read_fcb.file_name = config_get_string_value(config_fcb,"NOMBRE_ARCHIVO");
+                read_fcb.file_size = (uint32_t)config_get_int_value(config_fcb,"TAMANIO_ARCHIVO");
+                read_fcb.direct_pointer = (uint32_t)config_get_int_value(config_fcb,"PUNTERO_DIRECTO");
+                read_fcb.indirect_pointer = (uint32_t)config_get_int_value(config_fcb,"PUNTERO_INDIRECTO");
                 list_add(fcb_list,&read_fcb);
             }
     }
     closedir(directory);
+
+    //archivo de bloques
+
+
+
     return 0;
 }
 
@@ -85,7 +96,7 @@ void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	levantar_config();
-	establecer_conexiones();
+	//establecer_conexiones();
 }
 void finalizar_modulo(){
 	log_destroy(logger);
