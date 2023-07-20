@@ -13,8 +13,11 @@ typedef struct {
 	}FCB;
 
 	int bitarray_fd;
+	int archivobloques_fd;
+	char *archivobloques_pointer;
 	char *bitarray_pointer;
-	off_t file_size;
+	off_t bitarray_size;
+	off_t archivobloques_size;
 	t_bitarray * bitarray;
 	t_list* fcb_list;
 
@@ -44,15 +47,20 @@ int crearEstructuras(){
 	//bitarray
 	bitarray_fd = open(config_file_system.path_bitmap, O_RDWR);
 	if (bitarray_fd==-1) {
-		//FILE * bitarray_file = fopen(config_file_system.path_bitmap,"w");
-	    //size_t num_bytes = (65536 + 7) / 8;
-		//char buffer[1024];
-		//crear bitarray con todos 1
+		FILE * bitarray_file = fopen(config_file_system.path_bitmap,"w");
+	    size_t num_bytes = superbloque.block_count / 8;
+	    unsigned char* buffer = (unsigned char*)malloc(num_bytes);
+	    for (size_t i = 0; i < num_bytes; i++) {
+	           buffer[i] = 0xFF;
+	       }
+	    fwrite(buffer, sizeof(unsigned char), num_bytes, bitarray_file);
+	    free(buffer);
+	    bitarray_fd = open(config_file_system.path_bitmap, O_RDWR);
 	}
-    file_size = lseek(bitarray_fd, 0, SEEK_END);
-    bitarray_pointer = mmap(NULL, file_size, PROT_READ | PROT_WRITE, MAP_SHARED, bitarray_fd, 0);
-    if (bitarray_pointer == MAP_FAILED) printf("Error mapeando");
-    bitarray =bitarray_create(bitarray_pointer,file_size);
+    bitarray_size = lseek(bitarray_fd, 0, SEEK_END);
+    bitarray_pointer = mmap(NULL, bitarray_size, PROT_READ | PROT_WRITE, MAP_SHARED, bitarray_fd, 0);
+    if (bitarray_pointer == MAP_FAILED) printf("Error mapeando bitarray");
+    bitarray =bitarray_create(bitarray_pointer,bitarray_size);
 
 	//fcb
     char file_path[256];
@@ -75,18 +83,38 @@ int crearEstructuras(){
     closedir(directory);
 
     //archivo de bloques
-
+    archivobloques_fd = open(config_file_system.path_bloques, O_RDWR);
+    	if (archivobloques_fd==-1) {
+    		FILE * bitarray_file = fopen(config_file_system.path_bloques,"w");
+    	    size_t total_size = superbloque.block_count * superbloque.block_size;
+    	    unsigned char* buffer = (unsigned char*)malloc(total_size);
+    	    fwrite(buffer, sizeof(unsigned char), total_size, bitarray_file);
+    	    free(buffer);
+    	    archivobloques_fd = open(config_file_system.path_bloques, O_RDWR);
+    	}
+    	archivobloques_size = lseek(archivobloques_fd, 0, SEEK_END);
+    	archivobloques_pointer = mmap(NULL, archivobloques_size, PROT_READ | PROT_WRITE, MAP_SHARED, bitarray_fd, 0);
+        if (archivobloques_pointer == MAP_FAILED) printf("Error mapeando archivobloques");
+    	log_info(logger,"Estructuras creadas");
 
 
     return 0;
 }
 
 int cerrarEstructuras(){
-	int sync = msync(bitarray_pointer, file_size, MS_SYNC);
-	    if(sync == -1) printf("Error syncing the file");
-	    int unmap = munmap(bitarray_pointer, file_size);
-	    if(unmap == -1) printf("Error syncing the file");
+	int sync = msync(bitarray_pointer, bitarray_size, MS_SYNC);
+	    if(sync == -1) printf("Error syncing bitarray");
+	    int unmap = munmap(bitarray_pointer, bitarray_size);
+	    if(unmap == -1) printf("Error unmapping bitarray");
 	    close(bitarray_fd);
+
+	    sync = msync(archivobloques_pointer, archivobloques_size, MS_SYNC);
+	    	    if(sync == -1) printf("Error syncing archivobloques");
+	    	     unmap = munmap(archivobloques_pointer, archivobloques_size);
+	    	    if(unmap == -1) printf("Error unmapping archivobloques");
+	    	    close(archivobloques_fd);
+	    log_info(logger,"Estructuras terminadas");
+
 	    return 0;
 }
 
