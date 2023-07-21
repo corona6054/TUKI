@@ -21,11 +21,14 @@ typedef struct {
 	t_bitarray * bitarray;
 	t_list* fcb_list;
 	char buscado[64];
+	superBloque superbloque;
+
 
 	int crearEstructuras();
 	int cerrarEstructuras();
 	int crearArchivo(char* nombre);
 	int abrirArchivo(char* nombre);
+	bool igualBuscado(void * ptr);
 
 int main(void){
 
@@ -40,6 +43,24 @@ int main(void){
 }
 
 // SUBPROGRAMAS
+
+int truncarArchivo(char* nombre, int size){
+	strcpy(buscado,nombre);
+	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
+	int cant_bloques = (size +63)/superbloque.block_size;
+	seleccionado->file_size= cant_bloques * superbloque.block_size;
+	int bloq_actual=0;
+	/*
+	for(int i = 0;i<bitarray_size;i++){
+		if(bitarray_test_bit(bitarray_pointer,i)==1){
+
+		}
+		}
+		*/
+
+}
+
+
 bool igualBuscado(void * ptr){
 	FCB* seleccionado = (FCB*) ptr;
 	if (strcmp(seleccionado->file_name,buscado)==0){
@@ -83,7 +104,6 @@ int crearArchivo(char* nombre){
 int crearEstructuras(){
 	//superbloque
 	t_config* superbloque_config;
-	superBloque superbloque;
 	superbloque_config = config_create(config_file_system.path_superbloque);
 	superbloque.block_size= (uint32_t)config_get_int_value(superbloque_config,"BLOCK_SIZE");
 	superbloque.block_count= (uint32_t)config_get_int_value(superbloque_config,"BLOCK_COUNT");

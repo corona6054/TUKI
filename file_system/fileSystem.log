@@ -94,3 +94,15 @@
 [INFO] 21:18:45:364 FileSystem/(185026:185026): Abrir Archivo: hola
 
 [INFO] 21:18:45:409 FileSystem/(185026:185026): Estructuras terminadas
+[INFO] 21:56:03:481 FileSystem/(185542:185542): Estructuras creadas
+[INFO] 21:56:03:482 FileSystem/(185542:185542): Crear archivo: hola
+
+[INFO] 21:56:03:482 FileSystem/(185542:185542): Abrir Archivo: hola
+
+[INFO] 21:56:03:525 FileSystem/(185542:185542): Estructuras terminadas
+[INFO] 22:08:22:932 FileSystem/(185899:185899): Estructuras creadas
+[INFO] 22:08:22:932 FileSystem/(185899:185899): Crear archivo: hola
+
+[INFO] 22:08:22:933 FileSystem/(185899:185899): Abrir Archivo: hola
+
+[INFO] 22:08:22:993 FileSystem/(185899:185899): Estructuras terminadas
