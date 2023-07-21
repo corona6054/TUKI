@@ -20,10 +20,12 @@ typedef struct {
 	off_t archivobloques_size;
 	t_bitarray * bitarray;
 	t_list* fcb_list;
+	char buscado[64];
 
 	int crearEstructuras();
 	int cerrarEstructuras();
 	int crearArchivo(char* nombre);
+	int abrirArchivo(char* nombre);
 
 int main(void){
 
@@ -37,8 +39,23 @@ int main(void){
 }
 
 // SUBPROGRAMAS
+bool igualBuscado(void * ptr){
+	FCB* seleccionado = (FCB*) ptr;
+	if (strcmp(seleccionado->file_name,buscado)==0){
+		return 1;
+	} else return 0;
 
+}
+int abrirArchivo(char* nombre){
+	strcpy(buscado,nombre);
+	return list_any_satisfy(fcb_list,igualBuscado);
+
+}
 int crearArchivo(char* nombre){
+	if(abrirArchivo(nombre)==1){
+		printf("File already exists \n");
+		return 1;
+	}
 	FCB *fcb_nuevo;
 	fcb_nuevo=malloc(sizeof(FCB));
 	fcb_nuevo->file_name= malloc(sizeof(nombre));
@@ -55,7 +72,8 @@ int crearArchivo(char* nombre){
        fprintf(fcb_file, "TAMANIO_ARCHIVO=%u\n", fcb_nuevo->file_size);
        fprintf(fcb_file, "PUNTERO_DIRECTO=%u\n", fcb_nuevo->direct_pointer);
        fprintf(fcb_file, "PUNTERO_INDIRECTO=%u\n", fcb_nuevo->indirect_pointer);
-    log_info(logger,"Crear archivo: %s", nombre);
+       list_add(fcb_list,fcb_nuevo);
+       log_info(logger,"Crear archivo: %s", nombre);
 	return 0;
 
 }
@@ -88,19 +106,21 @@ int crearEstructuras(){
 	//fcb
     char file_path[256];
     t_config* config_fcb;
-    FCB read_fcb;
+    FCB *read_fcb;
     fcb_list = list_create();
     DIR* directory = opendir(config_file_system.path_fcb);
     struct dirent* entry;
     while ((entry = readdir(directory)) != NULL) {
             if (entry->d_type == DT_REG) { // Check if it's a regular file
-                snprintf(file_path, sizeof(file_path), "%s/%s", config_file_system.path_fcb, entry->d_name);
+                read_fcb=(FCB*)malloc(sizeof(FCB));
+                read_fcb->file_name = malloc(sizeof(config_get_string_value(config_fcb,"NOMBRE_ARCHIVO")));
+            	snprintf(file_path, sizeof(file_path), "%s/%s", config_file_system.path_fcb, entry->d_name);
                 config_fcb= config_create(file_path);
-                read_fcb.file_name = config_get_string_value(config_fcb,"NOMBRE_ARCHIVO");
-                read_fcb.file_size = (uint32_t)config_get_int_value(config_fcb,"TAMANIO_ARCHIVO");
-                read_fcb.direct_pointer = (uint32_t)config_get_int_value(config_fcb,"PUNTERO_DIRECTO");
-                read_fcb.indirect_pointer = (uint32_t)config_get_int_value(config_fcb,"PUNTERO_INDIRECTO");
-                list_add(fcb_list,&read_fcb);
+                read_fcb->file_name = config_get_string_value(config_fcb,"NOMBRE_ARCHIVO");
+                read_fcb->file_size = (uint32_t)config_get_int_value(config_fcb,"TAMANIO_ARCHIVO");
+                read_fcb->direct_pointer = (uint32_t)config_get_int_value(config_fcb,"PUNTERO_DIRECTO");
+                read_fcb->indirect_pointer = (uint32_t)config_get_int_value(config_fcb,"PUNTERO_INDIRECTO");
+                list_add(fcb_list,read_fcb);
             }
     }
     closedir(directory);
