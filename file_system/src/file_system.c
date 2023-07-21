@@ -32,6 +32,7 @@ int main(void){
 	levantar_modulo();
 	crearEstructuras();
 	crearArchivo("hola\n");
+	abrirArchivo("hola\n");
 	cerrarEstructuras();
 
 	finalizar_modulo();
@@ -49,7 +50,11 @@ bool igualBuscado(void * ptr){
 int abrirArchivo(char* nombre){
 	strcpy(buscado,nombre);
 	bool resultado = list_any_satisfy(fcb_list,igualBuscado);
-    log_info(logger,"Abrir Archivo: %s", nombre);
+	if(resultado==1){
+    log_info(logger,"Abrir Archivo: %s", nombre);}
+	else{
+	    log_info(logger,"Archivo no existe");
+	}
 	return resultado;
 
 }
