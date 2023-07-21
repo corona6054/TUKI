@@ -31,7 +31,7 @@ int main(void){
 
 	levantar_modulo();
 	crearEstructuras();
-	crearArchivo("hola \0");
+	crearArchivo("hola\n");
 	cerrarEstructuras();
 
 	finalizar_modulo();
@@ -48,14 +48,12 @@ bool igualBuscado(void * ptr){
 }
 int abrirArchivo(char* nombre){
 	strcpy(buscado,nombre);
-	return list_any_satisfy(fcb_list,igualBuscado);
+	bool resultado = list_any_satisfy(fcb_list,igualBuscado);
+    log_info(logger,"Abrir Archivo: %s", nombre);
+	return resultado;
 
 }
 int crearArchivo(char* nombre){
-	if(abrirArchivo(nombre)==1){
-		printf("File already exists \n");
-		return 1;
-	}
 	FCB *fcb_nuevo;
 	fcb_nuevo=malloc(sizeof(FCB));
 	fcb_nuevo->file_name= malloc(sizeof(nombre));
