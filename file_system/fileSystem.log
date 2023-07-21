@@ -34,3 +34,15 @@
 [INFO] 20:47:43:651 FileSystem/(172794:172794): Estructuras creadas
 [INFO] 20:48:08:786 FileSystem/(172881:172881): Estructuras creadas
 [INFO] 20:48:08:791 FileSystem/(172881:172881): Estructuras terminadas
+[INFO] 19:44:54:779 FileSystem/(179458:179458): Estructuras creadas
+[INFO] 19:44:54:889 FileSystem/(179458:179458): Estructuras terminadas
+[INFO] 19:49:42:829 FileSystem/(179761:179761): Estructuras creadas
+[INFO] 19:49:42:875 FileSystem/(179761:179761): Estructuras terminadas
+[INFO] 20:03:58:979 FileSystem/(180114:180114): Crear archivo: hola 
+[INFO] 20:03:58:988 FileSystem/(180114:180114): Estructuras terminadas
+[INFO] 20:12:31:529 FileSystem/(181101:181101): Estructuras creadas
+[INFO] 20:12:31:533 FileSystem/(181101:181101): Crear archivo: hola 
+[INFO] 20:12:31:569 FileSystem/(181101:181101): Estructuras terminadas
+[INFO] 20:12:52:008 FileSystem/(181201:181201): Estructuras creadas
+[INFO] 20:12:52:014 FileSystem/(181201:181201): Crear archivo: hola 
+[INFO] 20:12:52:179 FileSystem/(181201:181201): Estructuras terminadas

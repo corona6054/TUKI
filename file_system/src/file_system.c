@@ -23,12 +23,13 @@ typedef struct {
 
 	int crearEstructuras();
 	int cerrarEstructuras();
+	int crearArchivo(char* nombre);
 
 int main(void){
 
 	levantar_modulo();
 	crearEstructuras();
-
+	crearArchivo("hola \0");
 	cerrarEstructuras();
 
 	finalizar_modulo();
@@ -37,6 +38,27 @@ int main(void){
 
 // SUBPROGRAMAS
 
+int crearArchivo(char* nombre){
+	FCB *fcb_nuevo;
+	fcb_nuevo=malloc(sizeof(FCB));
+	fcb_nuevo->file_name= malloc(sizeof(nombre));
+    char file_path[256];
+    strcpy(fcb_nuevo->file_name, nombre);
+	fcb_nuevo->file_size=0;
+    snprintf(file_path, sizeof(file_path), "%s/%s.dat", config_file_system.path_fcb, nombre);
+	FILE * fcb_file = fopen(file_path,"w");
+	 if (!fcb_file) {
+	        printf("Error creating the file.\n");
+	        return-1;
+	    }
+    fprintf(fcb_file, "NOMBRE_ARCHIVO=%s\n", fcb_nuevo->file_name);
+       fprintf(fcb_file, "TAMANIO_ARCHIVO=%u\n", fcb_nuevo->file_size);
+       fprintf(fcb_file, "PUNTERO_DIRECTO=%u\n", fcb_nuevo->direct_pointer);
+       fprintf(fcb_file, "PUNTERO_INDIRECTO=%u\n", fcb_nuevo->indirect_pointer);
+    log_info(logger,"Crear archivo: %s", nombre);
+	return 0;
+
+}
 int crearEstructuras(){
 	//superbloque
 	t_config* superbloque_config;
@@ -55,6 +77,7 @@ int crearEstructuras(){
 	       }
 	    fwrite(buffer, sizeof(unsigned char), num_bytes, bitarray_file);
 	    free(buffer);
+	    fclose(bitarray_file);
 	    bitarray_fd = open(config_file_system.path_bitmap, O_RDWR);
 	}
     bitarray_size = lseek(bitarray_fd, 0, SEEK_END);
@@ -83,13 +106,15 @@ int crearEstructuras(){
     closedir(directory);
 
     //archivo de bloques
+
     archivobloques_fd = open(config_file_system.path_bloques, O_RDWR);
     	if (archivobloques_fd==-1) {
-    		FILE * bitarray_file = fopen(config_file_system.path_bloques,"w");
+    		FILE * archivobloques_file = fopen(config_file_system.path_bloques,"w");
     	    size_t total_size = superbloque.block_count * superbloque.block_size;
     	    unsigned char* buffer = (unsigned char*)malloc(total_size);
-    	    fwrite(buffer, sizeof(unsigned char), total_size, bitarray_file);
+    	    fwrite(buffer, sizeof(unsigned char), total_size, archivobloques_file);
     	    free(buffer);
+    	    fclose(archivobloques_file);
     	    archivobloques_fd = open(config_file_system.path_bloques, O_RDWR);
     	}
     	archivobloques_size = lseek(archivobloques_fd, 0, SEEK_END);
