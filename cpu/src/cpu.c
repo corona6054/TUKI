@@ -1,7 +1,8 @@
 #include "../includes/cpu.h"
+void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde);
 
 int main(void){
-	sem_init(&prueba1cpu, 0, 0);
+	/*sem_init(&prueba1cpu, 0, 0);
 	
 	levantar_modulo();
 	
@@ -21,34 +22,53 @@ int main(void){
 	recv(kernel_fd, buffer->stream, buffer->size, MSG_WAITALL);
 	log_info(logger,"Ya recibi el stream.");
 	
-	char* a;
-	int b;
+	//contexto_de_ejecucion cde_recibido= buffer_read_cde(buffer);
 
-	a = buffer_read_string(buffer);
-	log_info(logger,"%s", a);
-
-	a = buffer_read_string(buffer);
-	log_info(logger,"%s", a);
-
-	b = buffer_read_uint32(buffer); //aca ripea
-	log_info(logger, "%lu", b);
+	//mostrar_instrucciones(cde_recibido.lista_de_instrucciones);
 
 	while(1);
-	sem_init(&sem_conexion, 0, 0);
-
-
-	sem_wait(&sem_conexion);
-
-
-	deserializar_cde(); // recibe, deserializa y printea el paquete
-
-	//finalizar_modulo();
-	
-	while(1);
-	/*
-	char *reg = "AX";
-	log_info(logger,"tam registro: %d",tamanioRegistro(reg));
 	*/
+	Instruction *inst1 ;
+	inst1 = malloc(sizeof(Instruction));
+	inst1->instruccion = SET;
+	inst1->string1 = malloc(sizeof("AX"));
+	inst1->string2 = malloc(sizeof("HOLA"));
+	strcpy(inst1->string1,"RAX");
+	strcpy(inst1->string2,"HOLA-SOY-NICOLAS");
+
+	char RAX[16] = "XXXXXXXXXXXXXXXX";
+
+	t_list* instrucciones = list_create();
+	list_add(instrucciones,inst1);
+
+	Instruction *inst2 ;
+	inst2 = malloc(sizeof(Instruction));
+	inst2->instruccion = IO;
+
+	list_add(instrucciones,inst2);
+
+	Registros registros;
+
+	contexto_de_ejecucion cde_recibido = {
+				1,
+				instrucciones,
+				0,
+				registros
+	};
+	Instruction* contexto_instruccion = list_get(cde_recibido.lista_de_instrucciones, cde_recibido.program_counter);
+	switch_instruccion(contexto_instruccion, cde_recibido);
+
+
+
+	//ejecutar_set("AX", "HOLA", 4,  registros);
+
+	//ejecutar_set("BX", "CHAU", 4,  registros);
+
+	//for(int i=0;i<4;i++){
+		//printf("%c",registros.AX[i]);
+	//}
+
+	//finalizar_modulo();*/
 	return 0;
 }
 
@@ -62,8 +82,12 @@ void recibir_contexto(){
 */
 
 int tamanioRegistro(char *registro){
-	if(strcmp(registro,"AX") == 0)
+	if(strcmp(registro,"AX") == 0 || strcmp(registro,"BX") == 0 || strcmp(registro,"CX") == 0 || strcmp(registro,"DX") == 0)
 		return 4;
+	else if(strcmp(registro,"EAX") == 0 || strcmp(registro,"EBX") == 0 || strcmp(registro,"ECX") == 0 || strcmp(registro,"EDX") == 0)
+			return 8;
+		else if(strcmp(registro,"RAX") == 0 || strcmp(registro,"RBX") == 0 || strcmp(registro,"RCX") == 0 || strcmp(registro,"RDX") == 0)
+				return 16;
 	else return -1;
 }
 
@@ -142,16 +166,104 @@ void establecer_conexiones()
 
 }
 
-void ejecutar_set(char registro[], char valor[], int tamanio){
-
-	//verificar tamaño mas adelante
-	//fijarme el tiempo de retraso
-
-	for (int i=0; i < tamanio; i++){
-		registro[i] = valor[i];
+void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde){
+	t_buffer* buffer = crear_buffer_nuestro();
+	switch(instruccion->instruccion){
+		case SET:
+			//ejecutar_set(ax, "0000", 4); Esto era solo para la prueba y es un ejemplo de lo que habria que enviarle a la funcion
+			//int tamanio = tamanioRegistro(instruccion->string1);
+			printf("entre a set");
+			ejecutar_set(instruccion->string1,instruccion->string2,4, cde.registrosCpu);
+			cde.program_counter = cde.program_counter + 1;
+			Instruction* contexto_instruccion = list_get(cde.lista_de_instrucciones, cde.program_counter);
+			switch_instruccion(contexto_instruccion, cde);
+		break;
+		case YIELD:
+			printf("entre a yield");
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_yield();
+		break;
+		case EXIT:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_exit();
+		break;
+		case IO:
+			printf("entre a IO");
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_io(tiempo);
+		break;
+		case SIGNAL:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_signal(recurso);
+		break;
+		case WAIT:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_wait(recurso);
+		break;
+		case F_OPEN:
+			cde.program_counter = cde.program_counter + 1;
+			buffer_write_cde(buffer, cde);
+			//ejecutar_fopen();
+		break;
+		case F_CLOSE:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_fclose();
+		break;
+		case F_SEEK:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_fseek();
+		break;
+		case F_READ:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_fread();
+		break;
+		case F_WRITE:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_fwrite();
+		break;
+		case F_TRUNCATE:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_ftruncate();
+		break;
+		case CREATE_SEGMENT:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_createsegment();
+		break;
+		case DELETE_SEGMENT:
+			cde.program_counter = cde.program_counter + 1;
+			//buffer_write_cde(buffer, cde);
+			//ejecutar_deletesegment();
+		break;
 	}
+}
 
-
+void ejecutar_set(char registro[], char valor[], int tamanio, Registros registros){
+	if (strcmp(registro,"AX") == 0) {strcpy(registros.AX, valor);}
+	if (strcmp(registro,"BX") == 0) {strcpy(registros.BX, valor);}
+	if (strcmp(registro,"CX") == 0) {strcpy(registros.CX, valor);}
+	if (strcmp(registro,"DX") == 0) {strcpy(registros.DX, valor);}
+	if (strcmp(registro,"EAX") == 0) {strcpy(registros.EAX, valor);}
+	if (strcmp(registro,"EBX") == 0) {strcpy(registros.EBX, valor);}
+	if (strcmp(registro,"ECX") == 0) {strcpy(registros.ECX, valor);}
+	if (strcmp(registro,"EDX") == 0) {strcpy(registros.EDX, valor);}
+	if (strcmp(registro,"RAX") == 0) {strcpy(registros.RAX, valor);}
+	if (strcmp(registro,"RBX") == 0) {strcpy(registros.RBX, valor);}
+	if (strcmp(registro,"ECX") == 0) {strcpy(registros.RCX, valor);}
+	if (strcmp(registro,"RDX") == 0) {strcpy(registros.RDX, valor);}
+	for(int i=0;i<16;i++){
+				printf("%c",registros.RAX[i]);
+	}
 }
 
 

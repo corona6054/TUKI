@@ -44,7 +44,7 @@ void levantar_config();
 void conectarse_con_memoria();
 void establecer_conexiones();
 
-void ejecutar_set(char[], char[], int);
+void ejecutar_set(char[], char[], int, Registros);
 void ejecutar_exit();
 void ejecutar_yield();
 void ejecutar_io(int);
