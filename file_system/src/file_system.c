@@ -29,6 +29,7 @@ typedef struct {
 	int crearArchivo(char* nombre);
 	int abrirArchivo(char* nombre);
 	bool igualBuscado(void * ptr);
+	void * bloqueLibre();
 
 int main(void){
 
@@ -43,20 +44,45 @@ int main(void){
 }
 
 // SUBPROGRAMAS
+int bloqueLibre(){
+	int offset=-1;
+	for(int i = 0;i<bitarray_size;i++){
+			if(bitarray_test_bit(bitarray_pointer,i)==1){
+				bitarray_clean_bit(bitarray_pointer,i);
+				offset = i;			}
+			}
+	return offset;
+}
 
 int truncarArchivo(char* nombre, int size){
 	strcpy(buscado,nombre);
 	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
-	int cant_bloques = (size +63)/superbloque.block_size;
-	seleccionado->file_size= cant_bloques * superbloque.block_size;
-	int bloq_actual=0;
-	/*
-	for(int i = 0;i<bitarray_size;i++){
-		if(bitarray_test_bit(bitarray_pointer,i)==1){
+	int bloques_restantes = (size +63)/superbloque.block_size;
+	int tam_viejo=seleccionado->file_size/superbloque.block_size;
+	seleccionado->file_size= bloques_restantes*superbloque.block_size;
+	if(bloques_restantes==0){
+			//seleccionado->direct_pointer = bloqueLibre();
+		}
+	if(tam_viejo==0){
+		seleccionado->direct_pointer = bloqueLibre();
+		bloques_restantes = bloques_restantes-1;
+	}
 
-		}
-		}
-		*/
+	if(tam_viejo<bloques_restantes){
+		int agregar = bloques_restantes-tam_viejo;
+
+	}else if(tam_viejo>bloques_restantes){
+		int eliminar = tam_viejo-bloques_restantes;
+
+	}
+
+
+
+
+
+
+
+
 
 }
 
