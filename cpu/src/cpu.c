@@ -1,13 +1,16 @@
 #include "../includes/cpu.h"
+#include <math.h>
 void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde);
-
+int calcular_dir_fisica(int dir_logica, contexto_de_ejecucion cde,int tamanio);
+int tamanioRegistro(char *registro);
+void sacar_de_registro(char registro[],int dir_fisica, int tamanio, Registros *registros, int pid);
 int main(void){
-	/*sem_init(&prueba1cpu, 0, 0);
+	//sem_init(&prueba1cpu, 0, 0);
 	
 	levantar_modulo();
 	
 
-	t_buffer* buffer = crear_buffer_nuestro();
+	/*t_buffer* buffer = crear_buffer_nuestro();
 
 	// Primero recibo el tamanio del buffer
 	sem_wait(&prueba1cpu);
@@ -30,13 +33,12 @@ int main(void){
 	*/
 	Instruction *inst1 ;
 	inst1 = malloc(sizeof(Instruction));
-	inst1->instruccion = SET;
+	inst1->instruccion = MOV_IN;
 	inst1->string1 = malloc(sizeof("AX"));
 	inst1->string2 = malloc(sizeof("HOLA"));
 	strcpy(inst1->string1,"RAX");
 	strcpy(inst1->string2,"HOLA-SOY-NICOLAS");
 
-	char RAX[16] = "XXXXXXXXXXXXXXXX";
 
 	t_list* instrucciones = list_create();
 	list_add(instrucciones,inst1);
@@ -49,24 +51,63 @@ int main(void){
 
 	Registros registros;
 
+	ejecutar_set("AX", "XXXX", 4, &registros);
+	ejecutar_set("BX", "1XX1", 4, &registros);
+	ejecutar_set("CX", "XXX2", 4, &registros);
+	ejecutar_set("DX", "XXX3", 4, &registros);
+	ejecutar_set("EAX", "XXXXXXX4", 4, &registros);
+	ejecutar_set("EBX", "XXXXXXX5", 4, &registros);
+	ejecutar_set("ECX", "XXXXXXX6", 4, &registros);
+	ejecutar_set("EDX", "XXXXXXX7", 4, &registros);
+	ejecutar_set("RAX", "XXXXXXXXXXX8", 4, &registros);
+	ejecutar_set("RBX", "XXXXXXXXXXX9", 4, &registros);
+	ejecutar_set("RCX", "XXXXXXXXXX10", 4, &registros);
+	ejecutar_set("RDX", "XXXXXXXXXX11", 4, &registros);
+
+
+
+	Segmento *segmento1;
+	segmento1 = malloc(sizeof(Segmento));
+	segmento1->id = 1;
+	segmento1->direccion_base = 0;
+	segmento1->tamanio_segmentos = 137;
+
+	Segmento *segmento2;
+		segmento2 = malloc(sizeof(Segmento));
+		segmento2->id = 2;
+		segmento2->direccion_base = 100;
+		segmento2->tamanio_segmentos = 19;
+
+	t_list* segmentos = list_create();
+	list_add(segmentos, segmento1);
+	list_add(segmentos, segmento2);
+
 	contexto_de_ejecucion cde_recibido = {
 				1,
 				instrucciones,
 				0,
-				registros
+				registros,
+				segmentos
 	};
-	Instruction* contexto_instruccion = list_get(cde_recibido.lista_de_instrucciones, cde_recibido.program_counter);
-	switch_instruccion(contexto_instruccion, cde_recibido);
 
 
 
-	//ejecutar_set("AX", "HOLA", 4,  registros);
 
-	//ejecutar_set("BX", "CHAU", 4,  registros);
 
-	//for(int i=0;i<4;i++){
-		//printf("%c",registros.AX[i]);
-	//}
+	//printf("%d", dir_fisica);
+	//Instruction* contexto_instruccion = list_get(cde_recibido.lista_de_instrucciones, cde_recibido.program_counter);
+	//switch_instruccion(contexto_instruccion, cde_recibido);
+
+	/*int tamanio = tamanioRegistro("RAX");
+	int dir_fisica = calcular_dir_fisica(130, cde_recibido,tamanio);
+	if (dir_fisica == -1){
+		printf("Segmentation fault");
+	}else {printf("%d", dir_fisica);}*/
+
+
+
+
+
 
 	//finalizar_modulo();*/
 	return 0;
@@ -83,11 +124,11 @@ void recibir_contexto(){
 
 int tamanioRegistro(char *registro){
 	if(strcmp(registro,"AX") == 0 || strcmp(registro,"BX") == 0 || strcmp(registro,"CX") == 0 || strcmp(registro,"DX") == 0)
-		return 4;
+		return sizeof("XXXX");
 	else if(strcmp(registro,"EAX") == 0 || strcmp(registro,"EBX") == 0 || strcmp(registro,"ECX") == 0 || strcmp(registro,"EDX") == 0)
-			return 8;
+			return sizeof("XXXXXXXX");
 		else if(strcmp(registro,"RAX") == 0 || strcmp(registro,"RBX") == 0 || strcmp(registro,"RCX") == 0 || strcmp(registro,"RDX") == 0)
-				return 16;
+				return sizeof("XXXXXXXXXXXXXXXX");
 	else return -1;
 }
 
@@ -95,7 +136,7 @@ void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	levantar_config();
-	establecer_conexiones();
+	//establecer_conexiones();
 }
 
 void finalizar_modulo(){
@@ -170,13 +211,47 @@ void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde){
 	t_buffer* buffer = crear_buffer_nuestro();
 	switch(instruccion->instruccion){
 		case SET:
-			//ejecutar_set(ax, "0000", 4); Esto era solo para la prueba y es un ejemplo de lo que habria que enviarle a la funcion
 			//int tamanio = tamanioRegistro(instruccion->string1);
 			printf("entre a set");
-			ejecutar_set(instruccion->string1,instruccion->string2,4, cde.registrosCpu);
+			ejecutar_set(instruccion->string1,instruccion->string2,4, &(cde.registrosCpu));
+			Registros registros = cde.registrosCpu;
+			for(int i=0;i<16;i++){
+				printf("%c",registros.RAX[i]);
+			}
 			cde.program_counter = cde.program_counter + 1;
-			Instruction* contexto_instruccion = list_get(cde.lista_de_instrucciones, cde.program_counter);
-			switch_instruccion(contexto_instruccion, cde);
+			//Instruction* contexto_instruccion = list_get(cde->lista_de_instrucciones, cde->program_counter);
+			//switch_instruccion(contexto_instruccion, cde);
+		break;
+		case MOV_IN:
+			int tamanio = tamanioRegistro(instruccion->string1);
+			printf("%d\n",tamanio);
+			int dir_fisica = calcular_dir_fisica(130, cde,tamanio);
+			if (dir_fisica == -1){
+				printf("Segmentation fault");
+				//mando a kernel el contexto de ejecucion
+			}else {printf("%d\n", dir_fisica);/*Aca mando a memoria la info*/
+
+				char* a_guardar = "HOLA-SOY-NICOLAS"; // = lo que me llega de memoria
+				ejecutar_set(instruccion->string1, a_guardar,4, &(cde.registrosCpu));
+				Registros registros2 = cde.registrosCpu;
+				for(int i=0;i<16;i++){
+					printf("%c",registros2.RAX[i]);
+				}
+			}
+		break;
+		case MOV_OUT:
+			tamanio = tamanioRegistro(instruccion->string1);
+			printf("%d\n",tamanio);
+			dir_fisica = calcular_dir_fisica(130, cde,tamanio);
+			if (dir_fisica == -1){
+				printf("Segmentation fault");
+				//mando a kernel el contexto de ejecucion
+			}else {
+				printf("%d\n", dir_fisica);
+				//hago la funcion para enviar la info
+
+			}
+
 		break;
 		case YIELD:
 			printf("entre a yield");
@@ -248,24 +323,49 @@ void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde){
 	}
 }
 
-void ejecutar_set(char registro[], char valor[], int tamanio, Registros registros){
-	if (strcmp(registro,"AX") == 0) {strcpy(registros.AX, valor);}
-	if (strcmp(registro,"BX") == 0) {strcpy(registros.BX, valor);}
-	if (strcmp(registro,"CX") == 0) {strcpy(registros.CX, valor);}
-	if (strcmp(registro,"DX") == 0) {strcpy(registros.DX, valor);}
-	if (strcmp(registro,"EAX") == 0) {strcpy(registros.EAX, valor);}
-	if (strcmp(registro,"EBX") == 0) {strcpy(registros.EBX, valor);}
-	if (strcmp(registro,"ECX") == 0) {strcpy(registros.ECX, valor);}
-	if (strcmp(registro,"EDX") == 0) {strcpy(registros.EDX, valor);}
-	if (strcmp(registro,"RAX") == 0) {strcpy(registros.RAX, valor);}
-	if (strcmp(registro,"RBX") == 0) {strcpy(registros.RBX, valor);}
-	if (strcmp(registro,"ECX") == 0) {strcpy(registros.RCX, valor);}
-	if (strcmp(registro,"RDX") == 0) {strcpy(registros.RDX, valor);}
-	for(int i=0;i<16;i++){
-				printf("%c",registros.RAX[i]);
-	}
+void ejecutar_set(char registro[], char valor[], int tamanio, Registros *registros){
+	if (strcmp(registro,"AX") == 0) {strcpy(registros->AX, valor);}
+	if (strcmp(registro,"BX") == 0) {strcpy(registros->BX, valor);}
+	if (strcmp(registro,"CX") == 0) {strcpy(registros->CX, valor);}
+	if (strcmp(registro,"DX") == 0) {strcpy(registros->DX, valor);}
+	if (strcmp(registro,"EAX") == 0) {strcpy(registros->EAX, valor);}
+	if (strcmp(registro,"EBX") == 0) {strcpy(registros->EBX, valor);}
+	if (strcmp(registro,"ECX") == 0) {strcpy(registros->ECX, valor);}
+	if (strcmp(registro,"EDX") == 0) {strcpy(registros->EDX, valor);}
+	if (strcmp(registro,"RAX") == 0) {strcpy(registros->RAX, valor);}
+	if (strcmp(registro,"RBX") == 0) {strcpy(registros->RBX, valor);}
+	if (strcmp(registro,"ECX") == 0) {strcpy(registros->RCX, valor);}
+	if (strcmp(registro,"RDX") == 0) {strcpy(registros->RDX, valor);}
 }
 
+void sacar_de_registro(char registro[], int dir_fisica, int tamanio, Registros *registros, int pid){
+	if (strcmp(registro,"AX") == 0)  { }
+	if (strcmp(registro,"BX") == 0)  { }
+	if (strcmp(registro,"CX") == 0)  { }
+	if (strcmp(registro,"DX") == 0)  { }
+	if (strcmp(registro,"EAX") == 0) { }
+	if (strcmp(registro,"EBX") == 0) { }
+	if (strcmp(registro,"ECX") == 0) { }
+	if (strcmp(registro,"EDX") == 0) { }
+	if (strcmp(registro,"RAX") == 0) { }
+	if (strcmp(registro,"RBX") == 0) { }
+	if (strcmp(registro,"ECX") == 0) { }
+	if (strcmp(registro,"RDX") == 0) { }
+}
+
+
+int calcular_dir_fisica(int dir_logica, contexto_de_ejecucion cde,int tamanio){
+	int tam_max_segmento = config_cpu.tam_max_segmento;
+	int num_seg = floor(dir_logica/tam_max_segmento);
+	int desplaz_segmento = dir_logica % tam_max_segmento;
+
+	Segmento* segmento = list_get(cde.tabla_segmentos, num_seg);
+
+	if (segmento->tamanio_segmentos < desplaz_segmento + tamanio){return -1;}
+
+	return segmento->direccion_base + desplaz_segmento;
+
+}
 
 void ejecutar_exit(){
 	//int terminalo = 5
