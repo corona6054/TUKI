@@ -24,14 +24,17 @@ typedef enum
 	CONTEXTOEJEC,
 	MENSAJE,
 	PAQUETE,
-	AVISO_MEMORIA, //para dar aviso que tiene uqe liberar las estructuras
-	AVISO_CONSOLA //aviso a consola para finalizacion del procesos
+    LISTA_INSTRUCCIONES,
+	INICIO_PROCESO_MEMORIA, // aviso a memoria para que inicialice las estructuras del proceso
+	FIN_PROCESO_MEMORIA, //para dar aviso que tiene uqe liberar las estructuras
+	FIN_PROCESO_CONSOLA //aviso a consola para finalizacion del procesos
 }op_code;
 
 typedef struct
 {
 	uint32_t size;
 	uint32_t offset;
+	uint8_t codigo; // Para decir que guarda el buffer (nose si en vez de uint8_t tendria que ser op_code)
 	void* stream;
 } t_buffer;
 

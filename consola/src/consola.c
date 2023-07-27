@@ -22,7 +22,8 @@ int main(int argc, char** argv){
     enviarLista(buffer, listaAEnviar);
     log_info(logger,"Lista enviada");
 
-
+    
+    while(1);
 
     //destruirLista(listaAEnviar);
 
@@ -77,23 +78,18 @@ int get_tamanio_char_array(char a[], int tamanioFisico){
     return tamanioLogico;
 }
 
-void serializeInstruction(Instruction* instruction, void* stream, int offset) {
-	memcpy(stream + offset, &instruction->instruccion, sizeof(u_int32_t));
-	offset += sizeof(u_int32_t);
-	memcpy(stream + offset, &instruction->numero1, sizeof(u_int32_t));
-	offset += sizeof(u_int32_t);
-	memcpy(stream + offset, &instruction->numero2, sizeof(u_int32_t));
-	offset += sizeof(u_int32_t);
-	memcpy(stream + offset, &instruction->string1, sizeof(char[15]));
-	offset += sizeof(char[15]);
-	memcpy(stream + offset, &instruction->string2, sizeof(char[15]));
-	offset += sizeof(char[15]);
-}
 
 void enviarLista(t_buffer* buffer, t_list* listaAEnviar){
 
     buffer_write_lista_instrucciones(buffer, listaAEnviar);
     log_info(logger, "Escribi en el buffer la lista de instrucciones");
+    
+
+    // Enviamos el codigo de operacion
+    log_info(logger, "A punto de enviar el codigo de operacion");
+    send(socket_kernel, &(buffer->codigo), sizeof(uint8_t), 0);
+    log_info(logger, "Envie el codigo de op");
+
     // Enviamos el tamanio del buffer
     log_info(logger, "A punto de enviar el tamanio del buffer");
     send(socket_kernel, &(buffer->size), sizeof(uint32_t), 0);
@@ -153,12 +149,6 @@ void levantar_config(){
 
 void establecer_conexiones()
 {
-	pthread_t conexion_kernel;
-	pthread_create(&conexion_kernel, NULL, (void *) conectarse_con_kernel, NULL);
-	pthread_detach(conexion_kernel);
-}
-
-void conectarse_con_kernel(){
 	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
 	log_info(logger,"Socket kernel :%d",socket_kernel);
 	if (socket_kernel >= 0){
@@ -170,6 +160,19 @@ void conectarse_con_kernel(){
 	}
 }
 
+/*
+void conectarse_con_kernel(){
+	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
+	log_info(logger,"Socket kernel :%d",socket_kernel);
+	if (socket_kernel >= 0){
+		sem_post(&sem_conexion);
+		log_info(logger,"Conectado con kernel");
+	}
+	else{
+		log_info(logger,"Error al conectar con kernel");
+	}
+}
+*/
 InstructionType getNextInstruction(FILE *file)
 {
     char instruction[20];
@@ -257,8 +260,10 @@ void readNextWordFromFile(FILE *file, int index)
 {
     char buffer[15];
     fscanf(file, "%s", buffer);
-    if (index == 1)
+    if (index == 1){
         strcpy(instructions[instructionCount].string1, buffer);
+        strcpy(instructions[instructionCount].string2, "");
+    }
     else
         strcpy(instructions[instructionCount].string2, buffer);
 }
@@ -286,57 +291,81 @@ void parseInstructions(FILE *file)
         case SET:
             readNextWordFromFile(file, 1);
             readNextWordFromFile(file, 2);
+            instructions[instructionCount].numero1 = -1;
+            instructions[instructionCount].numero2 = -1;
             break;
         case MOV_IN:
             readNextWordFromFile(file, 1);
             readIntegerFromFile(file, 1);
+            instructions[instructionCount].numero2 = -1;
             break;
         case MOV_OUT:
             readIntegerFromFile(file, 1);
             readNextWordFromFile(file, 1);
+            instructions[instructionCount].numero2 = -1;
             break;
         case F_TRUNCATE:
             readNextWordFromFile(file, 1);
             readIntegerFromFile(file, 1);
+            instructions[instructionCount].numero2 = -1;
             break;
         case F_SEEK:
             readNextWordFromFile(file, 1);
             readIntegerFromFile(file, 1);
-
+            instructions[instructionCount].numero2 = -1;
             break;
         case CREATE_SEGMENT:
+        	strcpy(instructions[instructionCount].string1, "");
+        	strcpy(instructions[instructionCount].string2, "");
             readIntegerFromFile(file, 1);
             readIntegerFromFile(file, 2);
             break;
         case IO:
+        	strcpy(instructions[instructionCount].string1, "");
+        	strcpy(instructions[instructionCount].string2, "");
             readIntegerFromFile(file, 1);
-
+            instructions[instructionCount].numero2 = -1;
             break;
         case WAIT:
             readNextWordFromFile(file, 1);
+        	instructions[instructionCount].numero1 = -1;
+        	instructions[instructionCount].numero2 = -1;
             break;
         case SIGNAL:
             readNextWordFromFile(file, 1);
-
+            instructions[instructionCount].numero1 = -1;
+            instructions[instructionCount].numero2 = -1;
             break;
         case F_OPEN:
             readNextWordFromFile(file, 1);
+            instructions[instructionCount].numero1 = -1;
+            instructions[instructionCount].numero2 = -1;
             break;
         case F_CLOSE:
             readNextWordFromFile(file, 1);
+            instructions[instructionCount].numero1 = -1;
+            instructions[instructionCount].numero2 = -1;
             break;
         case DELETE_SEGMENT:
+        	strcpy(instructions[instructionCount].string1, "");
+        	strcpy(instructions[instructionCount].string2, "");
             readIntegerFromFile(file, 1);
+            instructions[instructionCount].numero2 = -1;
             break;
         case YIELD:
-
+        	strcpy(instructions[instructionCount].string1, "");
+        	strcpy(instructions[instructionCount].string2, "");
+        	instructions[instructionCount].numero1 = -1;
+        	instructions[instructionCount].numero2 = -1;
             break;
         case EXIT:
+        	strcpy(instructions[instructionCount].string1, "");
+        	strcpy(instructions[instructionCount].string2, "");
+        	instructions[instructionCount].numero1 = -1;
+        	instructions[instructionCount].numero2 = -1;
             instructionCount++;
             return;
-
             break;
-
         default:
             break;
         }

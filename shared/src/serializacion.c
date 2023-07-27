@@ -98,6 +98,8 @@ Instruction* buffer_read_Instruction(t_buffer* buffer){
 // LISTA DE INSTRUCCIONES
 void buffer_write_lista_instrucciones(t_buffer* buffer, t_list* lista_de_instrucciones){
 
+	
+	buffer -> codigo = LISTA_INSTRUCCIONES;
 	// Hay que ver el orden en que escribimos y leemos
 	// Primero guardo el tamanio de la lista, que lo necesito para cuando lea la lista
 	uint32_t cant_instrucciones = list_size(lista_de_instrucciones);
@@ -213,6 +215,7 @@ t_list* buffer_read_tabla_segmentos(t_buffer* buffer){
 
 // CONTEXTO DE EJECUCION
 void buffer_write_cde(t_buffer* buffer, contexto_de_ejecucion cde){
+	buffer -> codigo = CONTEXTOEJEC;
 
 	buffer_write_uint32(buffer, cde.pid);
 	buffer_write_lista_instrucciones(buffer, cde.lista_de_instrucciones);
@@ -232,28 +235,8 @@ contexto_de_ejecucion buffer_read_cde(t_buffer* buffer){
 
 	return cde;
 }
-/*
-void enviar_buffer(t_buffer *buffer, int socket_cliente){
 
-	send(socket_cliente, &(buffer->size), sizeof(uint32_t), 0);
 
-	send(socket_cliente, buffer->stream, buffer->size, 0);
-
-	return;
-}
-
-t_buffer *recibir_buffer(int socket){
-	t_buffer *buffer = crear_buffer_nuestro();
-
-	recv(socket, &(buffer->size), sizeof(uint32_t), MSG_WAITALL);
-
-	buffer->stream = malloc(buffer->size);
-	
-	recv(socket, buffer->stream, buffer->size, MSG_WAITALL);
-
-	return buffer;
-}
-*/
 // UTILS DE LECTURA
 
 void mostrar_instrucciones(t_list* lista_instrucciones){

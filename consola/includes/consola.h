@@ -10,11 +10,10 @@
 #include "commons/config.h"
 #include "commons/log.h"
 #include "commons/collections/list.h"
-#include "utils_cliente.h"
 #include <string.h>
 #include <pthread.h>
 #include <semaphore.h>
-#include "serializacion.h"
+#include "sockets.h"
 
 
  typedef struct
@@ -57,7 +56,6 @@ int instructionCount = 0;
 
 
 // Prototipos funciones
-void serializeInstruction(Instruction*, void*, int);
 void enviarLista(t_buffer*, t_list*);
 
 t_list* mapearLista();
