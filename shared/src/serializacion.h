@@ -6,6 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include <sys/socket.h>
+#include <netdb.h>
+
 #include <commons/log.h>
 #include <commons/collections/list.h>
 #include <commons/config.h>
@@ -114,6 +118,10 @@ typedef struct{
 
 // PROTOTIPOS DE FUNCIONES -------------------------------------------------
 
+t_paquete* crear_paquete(op_code, t_buffer*);
+void enviar_paquete(t_paquete*, int);
+void* serializar_paquete(t_paquete*, int);
+t_buffer* recibir_buffer(int);
 
 t_buffer* crear_buffer_nuestro();
 
@@ -146,8 +154,6 @@ contexto_de_ejecucion buffer_read_cde(t_buffer*);
 
 void mostrar_instrucciones(t_list*);
 
-//void enviar_buffer(t_buffer*, int);
-//t_buffer *recibir_buffer(int);
 
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 

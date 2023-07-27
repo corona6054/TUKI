@@ -13,8 +13,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <semaphore.h>
-#include "sockets.h"
-
+#include "comunicacion.h"
+#include "serializacion.h"
 
  typedef struct
 {
@@ -57,6 +57,7 @@ int instructionCount = 0;
 
 // Prototipos funciones
 void enviarLista(t_buffer*, t_list*);
+void destruir_lista(t_list*);
 
 t_list* mapearLista();
 Instruction cambiarStruct(Instruction_consola);
@@ -81,5 +82,6 @@ void match(FILE *file, const char *expected);
 void error();
 int crearLista(char* filename);
 
+void destruir_lista(t_list* lista_instrucciones);
 
 #endif /* INCLUDES_CONSOLA_H_ */

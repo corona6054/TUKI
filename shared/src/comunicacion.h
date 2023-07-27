@@ -1,10 +1,12 @@
-#ifndef SOCKETS_H_
-#define SOCKETS_H_
+#ifndef COMUNICACION_H_
+#define COMUNICACION_H_
 
 
-#include "serializacion.h"
 #include <sys/socket.h>
 #include <netdb.h>
+#include <stdint.h> // Para uintX_t
+#include <commons/log.h>
+#include <unistd.h>
 
 
 // STRUCTS NECESARIOS ------------------------------------------------------
@@ -20,16 +22,9 @@
 int iniciar_servidor(t_log*, int);
 int crear_conexion(char*, int);
 
-
-t_paquete* crear_paquete(op_code, t_buffer*);
-void enviar_paquete(t_paquete*, int);
-void* serializar_paquete(t_paquete*, int);
-t_buffer* recibir_buffer(int);
-
-
-void enviar_codigo(int, op_code);
-op_code recibir_codigo(int);
+void enviar_codigo(int, uint8_t);
+uint8_t recibir_codigo(int);
 
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 
-#endif /* SOCKETS_H_ */
+#endif /* COMUNICACION_H_ */

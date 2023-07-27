@@ -23,9 +23,12 @@ int main(int argc, char** argv){
     log_info(logger,"Lista enviada");
 
     
-    while(1);
+    destruir_lista(listaAEnviar);
 
-    //destruirLista(listaAEnviar);
+
+
+    if(recibir_codigo(socket_kernel) != FIN_PROCESO_CONSOLA)
+    	return -2;
 
 	finalizar_modulo();
 	return 0;
@@ -160,19 +163,7 @@ void establecer_conexiones()
 	}
 }
 
-/*
-void conectarse_con_kernel(){
-	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
-	log_info(logger,"Socket kernel :%d",socket_kernel);
-	if (socket_kernel >= 0){
-		sem_post(&sem_conexion);
-		log_info(logger,"Conectado con kernel");
-	}
-	else{
-		log_info(logger,"Error al conectar con kernel");
-	}
-}
-*/
+
 InstructionType getNextInstruction(FILE *file)
 {
     char instruction[20];
@@ -416,4 +407,19 @@ int crearLista(char* filename)
         printf("\n");
     }
     return 0;
+}
+
+
+
+void destruir_lista(t_list* lista_instrucciones){
+
+	int cant_instrucciones = list_size(lista_instrucciones);
+
+	for(int i = 0; i < cant_instrucciones; i++){
+		Instruction* instruccion = list_get(lista_instrucciones, i);
+		free(instruccion -> string1);
+		free(instruccion -> string2);
+	}
+
+	list_destroy(lista_instrucciones);
 }

@@ -1,5 +1,62 @@
 #include "serializacion.h"
 
+t_paquete* crear_paquete(op_code codigo, t_buffer* buffer)
+{
+	t_paquete* paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = codigo;
+	paquete->buffer = buffer;
+	return paquete;
+}
+
+void enviar_paquete(t_paquete* paquete, int socket_cliente)
+{
+	int tamanio_paquete_serializado = paquete->buffer->size + sizeof(uint8_t) + sizeof(uint32_t);
+	void* paquete_serializado = serializar_paquete(paquete, tamanio_paquete_serializado);
+
+	send(socket_cliente, paquete_serializado, tamanio_paquete_serializado, 0);
+
+	free(paquete_serializado);
+}
+
+void* serializar_paquete(t_paquete* paquete, int tam_paquete)
+{
+	// Esta funcion, mete al paquete en un stream para que se pueda enviar
+	void* paquete_serializado = malloc(tam_paquete);
+	int desplazamiento = 0;
+
+	// Codigo de operacion
+	memcpy(paquete_serializado + desplazamiento, &(paquete->codigo_operacion), sizeof(uint8_t));
+	desplazamiento+= sizeof(int);
+
+	// Tamanio del stream
+	memcpy(paquete_serializado + desplazamiento, &(paquete->buffer->size), sizeof(uint32_t));
+	desplazamiento+= sizeof(int);
+
+	// Stream en si
+	memcpy(paquete_serializado + desplazamiento, paquete->buffer->stream, paquete->buffer->size);
+	desplazamiento+= paquete->buffer->size;
+
+	return paquete_serializado;
+}
+
+
+t_buffer* recibir_buffer(int socket)
+{
+	// Esta funcion desarma el paquete y arma el buffer que luego sera deserializado
+	t_buffer* buffer = crear_buffer_nuestro();
+
+	// Recibo el codigo de operacion
+	recv(socket, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL);
+
+	// Recibo el tamanio del buffer y reservo espacio en memoria
+	recv(socket, &(buffer -> size), sizeof(uint32_t), MSG_WAITALL);
+	buffer -> stream = malloc(buffer -> size);
+
+	// Recibo stream del buffer
+	recv(socket, buffer -> stream, buffer -> size, MSG_WAITALL);
+
+	return buffer;
+}
 
 t_buffer* crear_buffer_nuestro(){
 	t_buffer* b = malloc(sizeof(t_buffer));
