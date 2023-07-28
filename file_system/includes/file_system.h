@@ -6,7 +6,7 @@
 #include "commons/config.h"
 #include "commons/log.h"
 #include "commons/bitarray.h"
-#include "utils_cliente.h"
+#include "comunicacion.h"
 #include <pthread.h>
 #include "serializacion.h"
 #include <sys/mman.h>

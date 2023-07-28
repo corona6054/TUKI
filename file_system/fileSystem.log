@@ -106,3 +106,69 @@
 [INFO] 22:08:22:933 FileSystem/(185899:185899): Abrir Archivo: hola
 
 [INFO] 22:08:22:993 FileSystem/(185899:185899): Estructuras terminadas
+[INFO] 21:21:27:427 FileSystem/(6603:6603): Estructuras creadas
+[INFO] 21:21:27:497 FileSystem/(6603:6603): Crear archivo: hola
+
+[INFO] 21:21:27:497 FileSystem/(6603:6603): Abrir Archivo: hola
+
+[INFO] 21:21:27:537 FileSystem/(6603:6603): Estructuras terminadas
+[INFO] 21:22:41:189 FileSystem/(6667:6667): Estructuras creadas
+[INFO] 21:22:41:193 FileSystem/(6667:6667): Crear archivo: hola
+
+[INFO] 21:22:41:203 FileSystem/(6667:6667): Abrir Archivo: hola
+
+[INFO] 21:39:37:300 FileSystem/(7156:7156): Estructuras creadas
+[INFO] 21:40:12:580 FileSystem/(7156:7156): Crear archivo: hola
+
+[INFO] 21:40:24:265 FileSystem/(7156:7156): Abrir Archivo: hola
+
+[INFO] 21:40:26:509 FileSystem/(7156:7156): Estructuras terminadas
+[INFO] 21:45:00:219 FileSystem/(8087:8087): Estructuras creadas
+[INFO] 21:46:07:220 FileSystem/(8087:8087): Crear archivo: hola
+
+[INFO] 21:47:06:034 FileSystem/(8346:8346): Estructuras creadas
+[INFO] 21:47:12:189 FileSystem/(8346:8346): Crear archivo: hola
+
+[INFO] 21:48:58:009 FileSystem/(8346:8346): Abrir Archivo: hola
+
+[INFO] 21:49:02:955 FileSystem/(8346:8346): Estructuras terminadas
+[INFO] 21:49:20:758 FileSystem/(8540:8540): Estructuras creadas
+[INFO] 21:49:53:703 FileSystem/(8632:8632): Estructuras creadas
+[INFO] 21:50:00:276 FileSystem/(8632:8632): Crear archivo: hola
+
+[INFO] 21:52:34:784 FileSystem/(8774:8774): Estructuras creadas
+[INFO] 21:52:50:052 FileSystem/(8774:8774): Crear archivo: hola
+
+[INFO] 21:53:46:761 FileSystem/(8936:8936): Estructuras creadas
+[INFO] 21:53:46:771 FileSystem/(8936:8936): Crear archivo: hola 
+
+[INFO] 21:53:46:771 FileSystem/(8936:8936): Abrir Archivo: hola 
+
+[INFO] 21:53:48:778 FileSystem/(8952:8952): Estructuras creadas
+[INFO] 21:53:48:787 FileSystem/(8952:8952): Crear archivo: hola 
+
+[INFO] 21:54:50:315 FileSystem/(9086:9086): Estructuras creadas
+[INFO] 21:54:50:316 FileSystem/(9086:9086): Crear archivo: hola
+[INFO] 21:54:50:317 FileSystem/(9086:9086): Abrir Archivo: hola
+[INFO] 21:55:21:960 FileSystem/(9186:9186): Estructuras creadas
+[INFO] 21:55:23:858 FileSystem/(9186:9186): Crear archivo: hola
+[INFO] 21:57:23:291 FileSystem/(9366:9366): Estructuras creadas
+[INFO] 21:59:46:384 FileSystem/(9631:9631): Estructuras creadas
+[INFO] 22:00:21:883 FileSystem/(9631:9631): Abrir Archivo: hola
+[INFO] 22:02:58:563 FileSystem/(9822:9822): Estructuras creadas
+[INFO] 22:03:18:457 FileSystem/(9873:9873): Estructuras creadas
+[INFO] 22:03:19:387 FileSystem/(9873:9873): Abrir Archivo: hola
+[INFO] 22:04:44:216 FileSystem/(9873:9873): Estructuras terminadas
+[INFO] 22:06:23:024 FileSystem/(10073:10073): Estructuras creadas
+[INFO] 22:06:23:648 FileSystem/(10073:10073): Abrir Archivo: hola
+[INFO] 22:19:40:370 FileSystem/(10360:10360): Estructuras creadas
+[INFO] 22:19:41:321 FileSystem/(10360:10360): Abrir Archivo: hola
+[INFO] 22:23:12:168 FileSystem/(10521:10521): Estructuras creadas
+[INFO] 22:23:14:354 FileSystem/(10521:10521): Abrir Archivo: hola
+[INFO] 22:28:21:753 FileSystem/(10521:10521): Estructuras terminadas
+[INFO] 22:28:58:780 FileSystem/(10684:10684): Estructuras creadas
+[INFO] 22:28:59:577 FileSystem/(10684:10684): Abrir Archivo: hola
+[INFO] 22:32:32:253 FileSystem/(10813:10813): Estructuras creadas
+[INFO] 22:32:32:254 FileSystem/(10813:10813): Abrir Archivo: hola
+[INFO] 22:33:12:442 FileSystem/(10903:10903): Estructuras creadas
+[INFO] 22:33:12:443 FileSystem/(10903:10903): Abrir Archivo: hola

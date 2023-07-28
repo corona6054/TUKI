@@ -12,6 +12,8 @@ typedef struct {
 	uint32_t indirect_pointer;
 	}FCB;
 
+
+
 	int bitarray_fd;
 	int archivobloques_fd;
 	char *archivobloques_pointer;
@@ -23,20 +25,23 @@ typedef struct {
 	char buscado[64];
 	superBloque superbloque;
 
-
+	int eliminarBloques(int eliminar,FCB* seleccionado);
 	int crearEstructuras();
 	int cerrarEstructuras();
 	int crearArchivo(char* nombre);
 	int abrirArchivo(char* nombre);
 	bool igualBuscado(void * ptr);
-	void * bloqueLibre();
+	uint32_t  bloqueLibre();
+	int liberarBloque(uint32_t bit);
+	int truncarArchivo(char* nombre, int size);
 
 int main(void){
 
 	levantar_modulo();
 	crearEstructuras();
-	crearArchivo("hola\n");
-	abrirArchivo("hola\n");
+	//crearArchivo("hola");
+	abrirArchivo("hola");
+	truncarArchivo("hola",264);
 	cerrarEstructuras();
 
 	finalizar_modulo();
@@ -44,14 +49,45 @@ int main(void){
 }
 
 // SUBPROGRAMAS
-int bloqueLibre(){
-	int offset=-1;
-	for(int i = 0;i<bitarray_size;i++){
-			if(bitarray_test_bit(bitarray_pointer,i)==1){
-				bitarray_clean_bit(bitarray_pointer,i);
-				offset = i;			}
+uint32_t bloqueLibre(){
+	uint32_t offset=-1;
+	for(uint32_t i = 0;i<bitarray_size;i++){
+			if(bitarray_test_bit(bitarray,i)==1){
+				bitarray_clean_bit(bitarray,i);
+				offset = i;
+				i= bitarray_size;
+			}
 			}
 	return offset;
+}
+
+int liberarBloque(uint32_t bit){
+	if(bitarray_test_bit(bitarray,bit)==0) {
+		bitarray_set_bit(bitarray,bit);
+	}
+	return 0;
+}
+
+int agregarBloques(int agregar, FCB* seleccionado){
+	void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
+	int pos_nuevos = (seleccionado->file_size/superbloque.block_size);
+	int ultimo = pos_nuevos + agregar;
+    uint32_t* destination = (uint32_t*)bloque_punteros;
+	for(int i =pos_nuevos;i<ultimo;i++){
+		destination[i]= bloqueLibre();
+	}
+	return 0;
+
+}
+int eliminarBloques(int eliminar,FCB* seleccionado){
+	void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
+	int pos_viejos = (seleccionado->file_size/superbloque.block_size)-2;
+	int ultimo = pos_viejos -eliminar;
+	  uint32_t* destination = (uint32_t*)bloque_punteros;
+		for(int i =pos_viejos;i>ultimo;i--){
+			liberarBloque(destination[i]);
+		}
+		return 0;
 }
 
 int truncarArchivo(char* nombre, int size){
@@ -59,30 +95,28 @@ int truncarArchivo(char* nombre, int size){
 	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
 	int bloques_restantes = (size +63)/superbloque.block_size;
 	int tam_viejo=seleccionado->file_size/superbloque.block_size;
-	seleccionado->file_size= bloques_restantes*superbloque.block_size;
 	if(bloques_restantes==0){
-			//seleccionado->direct_pointer = bloqueLibre();
+			liberarBloque(seleccionado->direct_pointer);
 		}
-	if(tam_viejo==0){
+	if(tam_viejo==0&&bloques_restantes>0){
 		seleccionado->direct_pointer = bloqueLibre();
 		bloques_restantes = bloques_restantes-1;
 	}
+	if(tam_viejo<2&&bloques_restantes>0){
+			seleccionado->indirect_pointer = bloqueLibre();
+		}
 
 	if(tam_viejo<bloques_restantes){
 		int agregar = bloques_restantes-tam_viejo;
-
+		agregarBloques(agregar,seleccionado);
 	}else if(tam_viejo>bloques_restantes){
 		int eliminar = tam_viejo-bloques_restantes;
-
+		eliminarBloques(eliminar,seleccionado);
 	}
-
-
-
-
-
-
-
-
+	seleccionado->file_size= bloques_restantes*superbloque.block_size;
+	//guardar fcb
+	list_add(fcb_list,seleccionado);
+	return 0;
 
 }
 
@@ -122,6 +156,7 @@ int crearArchivo(char* nombre){
        fprintf(fcb_file, "TAMANIO_ARCHIVO=%u\n", fcb_nuevo->file_size);
        fprintf(fcb_file, "PUNTERO_DIRECTO=%u\n", fcb_nuevo->direct_pointer);
        fprintf(fcb_file, "PUNTERO_INDIRECTO=%u\n", fcb_nuevo->indirect_pointer);
+       fclose(fcb_file);
        list_add(fcb_list,fcb_nuevo);
        log_info(logger,"Crear archivo: %s", nombre);
 	return 0;
@@ -161,8 +196,8 @@ int crearEstructuras(){
     struct dirent* entry;
     while ((entry = readdir(directory)) != NULL) {
             if (entry->d_type == DT_REG) { // Check if it's a regular file
-                read_fcb=(FCB*)malloc(sizeof(FCB));
-                read_fcb->file_name = malloc(sizeof(config_get_string_value(config_fcb,"NOMBRE_ARCHIVO")));
+            	read_fcb = malloc(sizeof(FCB));
+            	read_fcb->file_name = malloc(sizeof(config_get_string_value(config_fcb,"NOMBRE_ARCHIVO")));
             	snprintf(file_path, sizeof(file_path), "%s/%s", config_file_system.path_fcb, entry->d_name);
                 config_fcb= config_create(file_path);
                 read_fcb->file_name = config_get_string_value(config_fcb,"NOMBRE_ARCHIVO");
