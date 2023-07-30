@@ -697,3 +697,2057 @@
 [INFO] 21:17:28:866 Consola/(18530:18530): A punto de enviar el tamanio del buffer
 [INFO] 21:17:28:866 Consola/(18530:18530): Envie el tamanio del buffer
 [INFO] 21:17:28:866 Consola/(18530:18530): Lista enviada
+[INFO] 13:35:10:194 Consola/(4029:4029): Socket kernel :4
+[INFO] 13:35:10:195 Consola/(4029:4029): Conectado con kernel
+[INFO] 13:35:10:195 Consola/(4029:4029): Instrucciones leidas
+[INFO] 13:35:10:195 Consola/(4029:4029): Lista mapeada
+[INFO] 13:35:10:195 Consola/(4029:4029): Escribi en el buffer la lista de instrucciones
+[INFO] 13:35:10:195 Consola/(4029:4029): A punto de enviar el codigo de operacion
+[INFO] 13:35:10:195 Consola/(4029:4029): Envie el codigo de op
+[INFO] 13:35:10:195 Consola/(4029:4029): A punto de enviar el tamanio del buffer
+[INFO] 13:35:10:195 Consola/(4029:4029): Envie el tamanio del buffer
+[INFO] 13:35:10:195 Consola/(4029:4029): Lista enviada
+[INFO] 13:37:05:987 Consola/(4122:4122): Socket kernel :5
+[INFO] 13:37:06:020 Consola/(4122:4122): Conectado con kernel
+[INFO] 13:37:06:047 Consola/(4122:4122): Instrucciones leidas
+[INFO] 13:37:06:051 Consola/(4122:4122): Lista mapeada
+[INFO] 13:37:06:061 Consola/(4122:4122): Escribi en el buffer la lista de instrucciones
+[INFO] 13:37:06:061 Consola/(4122:4122): A punto de enviar el codigo de operacion
+[INFO] 13:37:06:063 Consola/(4122:4122): Envie el codigo de op
+[INFO] 13:37:06:063 Consola/(4122:4122): A punto de enviar el tamanio del buffer
+[INFO] 13:37:06:063 Consola/(4122:4122): Envie el tamanio del buffer
+[INFO] 13:37:06:064 Consola/(4122:4122): Lista enviada
+[INFO] 13:38:59:153 Consola/(4213:4213): Socket kernel :4
+[INFO] 13:38:59:154 Consola/(4213:4213): Conectado con kernel
+[INFO] 13:38:59:158 Consola/(4213:4213): Instrucciones leidas
+[INFO] 13:38:59:159 Consola/(4213:4213): Lista mapeada
+[INFO] 13:38:59:159 Consola/(4213:4213): Escribi en el buffer la lista de instrucciones
+[INFO] 13:38:59:159 Consola/(4213:4213): A punto de enviar el codigo de operacion
+[INFO] 13:38:59:159 Consola/(4213:4213): Envie el codigo de op
+[INFO] 13:38:59:159 Consola/(4213:4213): A punto de enviar el tamanio del buffer
+[INFO] 13:38:59:159 Consola/(4213:4213): Envie el tamanio del buffer
+[INFO] 13:38:59:159 Consola/(4213:4213): Lista enviada
+[INFO] 13:39:07:660 Consola/(4244:4244): Socket kernel :5
+[INFO] 13:39:07:691 Consola/(4244:4244): Conectado con kernel
+[INFO] 13:39:07:718 Consola/(4244:4244): Instrucciones leidas
+[INFO] 13:39:07:723 Consola/(4244:4244): Lista mapeada
+[INFO] 13:39:07:726 Consola/(4244:4244): Escribi en el buffer la lista de instrucciones
+[INFO] 13:39:07:727 Consola/(4244:4244): A punto de enviar el codigo de operacion
+[INFO] 13:39:07:728 Consola/(4244:4244): Envie el codigo de op
+[INFO] 13:39:07:728 Consola/(4244:4244): A punto de enviar el tamanio del buffer
+[INFO] 13:39:07:729 Consola/(4244:4244): Envie el tamanio del buffer
+[INFO] 13:39:07:729 Consola/(4244:4244): Lista enviada
+[INFO] 13:39:53:381 Consola/(4336:4336): Socket kernel :5
+[INFO] 13:39:53:412 Consola/(4336:4336): Conectado con kernel
+[INFO] 13:39:53:439 Consola/(4336:4336): Instrucciones leidas
+[INFO] 13:39:53:442 Consola/(4336:4336): Lista mapeada
+[INFO] 13:39:53:445 Consola/(4336:4336): Escribi en el buffer la lista de instrucciones
+[INFO] 13:39:53:446 Consola/(4336:4336): A punto de enviar el codigo de operacion
+[INFO] 13:39:53:446 Consola/(4336:4336): Envie el codigo de op
+[INFO] 13:39:53:447 Consola/(4336:4336): A punto de enviar el tamanio del buffer
+[INFO] 13:39:53:447 Consola/(4336:4336): Envie el tamanio del buffer
+[INFO] 13:39:53:447 Consola/(4336:4336): Lista enviada
+[INFO] 13:40:09:923 Consola/(4373:4373): Socket kernel :4
+[INFO] 13:40:09:924 Consola/(4373:4373): Conectado con kernel
+[INFO] 13:40:09:925 Consola/(4373:4373): Instrucciones leidas
+[INFO] 13:40:09:925 Consola/(4373:4373): Lista mapeada
+[INFO] 13:40:09:925 Consola/(4373:4373): Escribi en el buffer la lista de instrucciones
+[INFO] 13:40:09:925 Consola/(4373:4373): A punto de enviar el codigo de operacion
+[INFO] 13:40:09:925 Consola/(4373:4373): Envie el codigo de op
+[INFO] 13:40:09:925 Consola/(4373:4373): A punto de enviar el tamanio del buffer
+[INFO] 13:40:09:925 Consola/(4373:4373): Envie el tamanio del buffer
+[INFO] 13:40:09:925 Consola/(4373:4373): Lista enviada
+[INFO] 13:40:20:416 Consola/(4402:4402): Socket kernel :5
+[INFO] 13:40:20:447 Consola/(4402:4402): Conectado con kernel
+[INFO] 13:40:20:472 Consola/(4402:4402): Instrucciones leidas
+[INFO] 13:40:20:475 Consola/(4402:4402): Lista mapeada
+[INFO] 13:40:20:478 Consola/(4402:4402): Escribi en el buffer la lista de instrucciones
+[INFO] 13:40:20:479 Consola/(4402:4402): A punto de enviar el codigo de operacion
+[INFO] 13:40:20:479 Consola/(4402:4402): Envie el codigo de op
+[INFO] 13:40:20:480 Consola/(4402:4402): A punto de enviar el tamanio del buffer
+[INFO] 13:40:20:480 Consola/(4402:4402): Envie el tamanio del buffer
+[INFO] 13:40:20:480 Consola/(4402:4402): Lista enviada
+[INFO] 13:44:04:505 Consola/(4497:4497): Socket kernel :4
+[INFO] 13:44:04:507 Consola/(4497:4497): Conectado con kernel
+[INFO] 13:44:04:508 Consola/(4497:4497): Instrucciones leidas
+[INFO] 13:44:04:508 Consola/(4497:4497): Lista mapeada
+[INFO] 13:44:04:509 Consola/(4497:4497): Escribi en el buffer la lista de instrucciones
+[INFO] 13:44:04:509 Consola/(4497:4497): A punto de enviar el codigo de operacion
+[INFO] 13:44:04:509 Consola/(4497:4497): Envie el codigo de op
+[INFO] 13:44:04:509 Consola/(4497:4497): A punto de enviar el tamanio del buffer
+[INFO] 13:44:04:509 Consola/(4497:4497): Envie el tamanio del buffer
+[INFO] 13:44:04:509 Consola/(4497:4497): Lista enviada
+[INFO] 13:44:40:240 Consola/(4539:4539): Socket kernel :4
+[INFO] 13:44:40:240 Consola/(4539:4539): Conectado con kernel
+[INFO] 13:44:40:241 Consola/(4539:4539): Instrucciones leidas
+[INFO] 13:44:40:241 Consola/(4539:4539): Lista mapeada
+[INFO] 13:44:40:241 Consola/(4539:4539): Escribi en el buffer la lista de instrucciones
+[INFO] 13:44:40:241 Consola/(4539:4539): A punto de enviar el codigo de operacion
+[INFO] 13:44:40:241 Consola/(4539:4539): Envie el codigo de op
+[INFO] 13:44:40:241 Consola/(4539:4539): A punto de enviar el tamanio del buffer
+[INFO] 13:44:40:241 Consola/(4539:4539): Envie el tamanio del buffer
+[INFO] 13:44:40:241 Consola/(4539:4539): Lista enviada
+[INFO] 13:44:51:616 Consola/(4556:4556): Socket kernel :5
+[INFO] 13:44:51:645 Consola/(4556:4556): Conectado con kernel
+[INFO] 13:44:51:676 Consola/(4556:4556): Instrucciones leidas
+[INFO] 13:44:51:679 Consola/(4556:4556): Lista mapeada
+[INFO] 13:44:51:682 Consola/(4556:4556): Escribi en el buffer la lista de instrucciones
+[INFO] 13:44:51:683 Consola/(4556:4556): A punto de enviar el codigo de operacion
+[INFO] 13:44:51:683 Consola/(4556:4556): Envie el codigo de op
+[INFO] 13:44:51:684 Consola/(4556:4556): A punto de enviar el tamanio del buffer
+[INFO] 13:44:51:684 Consola/(4556:4556): Envie el tamanio del buffer
+[INFO] 13:44:51:684 Consola/(4556:4556): Lista enviada
+[INFO] 13:45:39:027 Consola/(4634:4634): Socket kernel :4
+[INFO] 13:45:39:027 Consola/(4634:4634): Conectado con kernel
+[INFO] 13:45:39:028 Consola/(4634:4634): Instrucciones leidas
+[INFO] 13:45:39:028 Consola/(4634:4634): Lista mapeada
+[INFO] 13:45:39:028 Consola/(4634:4634): Escribi en el buffer la lista de instrucciones
+[INFO] 13:45:39:028 Consola/(4634:4634): A punto de enviar el codigo de operacion
+[INFO] 13:45:39:028 Consola/(4634:4634): Envie el codigo de op
+[INFO] 13:45:39:028 Consola/(4634:4634): A punto de enviar el tamanio del buffer
+[INFO] 13:45:39:028 Consola/(4634:4634): Envie el tamanio del buffer
+[INFO] 13:45:39:028 Consola/(4634:4634): Lista enviada
+[INFO] 13:48:42:114 Consola/(4720:4720): Socket kernel :4
+[INFO] 13:48:42:114 Consola/(4720:4720): Conectado con kernel
+[INFO] 13:48:42:114 Consola/(4720:4720): Instrucciones leidas
+[INFO] 13:48:42:114 Consola/(4720:4720): Lista mapeada
+[INFO] 13:48:42:115 Consola/(4720:4720): Escribi en el buffer la lista de instrucciones
+[INFO] 13:48:42:116 Consola/(4720:4720): A punto de enviar el codigo de operacion
+[INFO] 13:48:42:116 Consola/(4720:4720): Envie el codigo de op
+[INFO] 13:48:42:116 Consola/(4720:4720): A punto de enviar el tamanio del buffer
+[INFO] 13:48:42:116 Consola/(4720:4720): Envie el tamanio del buffer
+[INFO] 13:48:42:116 Consola/(4720:4720): Lista enviada
+[INFO] 13:58:44:528 Consola/(4993:4993): Socket kernel :4
+[INFO] 13:58:44:529 Consola/(4993:4993): Conectado con kernel
+[INFO] 13:58:44:531 Consola/(4993:4993): Ints actual 2, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 4, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 9, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 8, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 10, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 3, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 11, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 14, numero1: -1
+[INFO] 13:58:44:532 Consola/(4993:4993): Ints actual 5, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Ints actual 6, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Ints actual 7, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Ints actual 1, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Ints actual 0, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Ints actual 13, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Ints actual 12, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Ints actual 15, numero1: -1
+[INFO] 13:58:44:533 Consola/(4993:4993): Instrucciones leidas
+[INFO] 13:58:44:534 Consola/(4993:4993): Lista mapeada
+[INFO] 13:58:44:534 Consola/(4993:4993): Escribi en el buffer la lista de instrucciones
+[INFO] 13:58:44:534 Consola/(4993:4993): A punto de enviar el codigo de operacion
+[INFO] 13:58:44:534 Consola/(4993:4993): Envie el codigo de op
+[INFO] 13:58:44:535 Consola/(4993:4993): A punto de enviar el tamanio del buffer
+[INFO] 13:58:44:535 Consola/(4993:4993): Envie el tamanio del buffer
+[INFO] 13:58:44:535 Consola/(4993:4993): Lista enviada
+[INFO] 14:05:25:687 Consola/(5098:5098): Socket kernel :4
+[INFO] 14:05:25:687 Consola/(5098:5098): Conectado con kernel
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 2, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 4, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 9, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 8, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 10, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 3, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 11, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 14, numero1: -1
+[INFO] 14:05:25:687 Consola/(5098:5098): Ints actual 5, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Ints actual 6, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Ints actual 7, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Ints actual 1, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Ints actual 0, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Ints actual 13, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Ints actual 12, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Ints actual 15, numero1: -1
+[INFO] 14:05:25:688 Consola/(5098:5098): Instrucciones leidas
+[INFO] 14:05:25:688 Consola/(5098:5098): Lista mapeada
+[INFO] 14:05:25:688 Consola/(5098:5098): Escribi en el buffer la lista de instrucciones
+[INFO] 14:05:25:688 Consola/(5098:5098): A punto de enviar el codigo de operacion
+[INFO] 14:05:25:688 Consola/(5098:5098): Envie el codigo de op
+[INFO] 14:05:25:688 Consola/(5098:5098): A punto de enviar el tamanio del buffer
+[INFO] 14:05:25:688 Consola/(5098:5098): Envie el tamanio del buffer
+[INFO] 14:05:25:688 Consola/(5098:5098): Lista enviada
+[INFO] 14:05:31:772 Consola/(5113:5113): Socket kernel :5
+[INFO] 14:05:31:806 Consola/(5113:5113): Conectado con kernel
+[INFO] 14:05:31:814 Consola/(5113:5113): Ints actual 2, numero1: -1
+[INFO] 14:05:31:816 Consola/(5113:5113): Ints actual 4, numero1: -1
+[INFO] 14:05:31:819 Consola/(5113:5113): Ints actual 9, numero1: -1
+[INFO] 14:05:31:819 Consola/(5113:5113): Ints actual 8, numero1: -1
+[INFO] 14:05:31:820 Consola/(5113:5113): Ints actual 10, numero1: -1
+[INFO] 14:05:31:820 Consola/(5113:5113): Ints actual 3, numero1: -1
+[INFO] 14:05:31:821 Consola/(5113:5113): Ints actual 11, numero1: -1
+[INFO] 14:05:31:821 Consola/(5113:5113): Ints actual 14, numero1: -1
+[INFO] 14:05:31:822 Consola/(5113:5113): Ints actual 5, numero1: -1
+[INFO] 14:05:31:823 Consola/(5113:5113): Ints actual 6, numero1: -1
+[INFO] 14:05:31:823 Consola/(5113:5113): Ints actual 7, numero1: -1
+[INFO] 14:05:31:824 Consola/(5113:5113): Ints actual 1, numero1: -1
+[INFO] 14:05:31:825 Consola/(5113:5113): Ints actual 0, numero1: -1
+[INFO] 14:05:31:826 Consola/(5113:5113): Ints actual 13, numero1: -1
+[INFO] 14:05:31:826 Consola/(5113:5113): Ints actual 12, numero1: -1
+[INFO] 14:05:31:827 Consola/(5113:5113): Ints actual 15, numero1: -1
+[INFO] 14:05:31:831 Consola/(5113:5113): Instrucciones leidas
+[INFO] 14:05:31:833 Consola/(5113:5113): Lista mapeada
+[INFO] 14:05:31:839 Consola/(5113:5113): Escribi en el buffer la lista de instrucciones
+[INFO] 14:05:31:839 Consola/(5113:5113): A punto de enviar el codigo de operacion
+[INFO] 14:05:31:840 Consola/(5113:5113): Envie el codigo de op
+[INFO] 14:05:31:840 Consola/(5113:5113): A punto de enviar el tamanio del buffer
+[INFO] 14:05:31:840 Consola/(5113:5113): Envie el tamanio del buffer
+[INFO] 14:05:31:840 Consola/(5113:5113): Lista enviada
+[INFO] 14:09:34:079 Consola/(5256:5256): Socket kernel :4
+[INFO] 14:09:34:079 Consola/(5256:5256): Conectado con kernel
+[INFO] 14:09:34:079 Consola/(5256:5256): Ints actual 2, numero1: -1
+[INFO] 14:09:34:079 Consola/(5256:5256): Ints actual 4, numero1: -1
+[INFO] 14:09:34:079 Consola/(5256:5256): Ints actual 9, numero1: -1
+[INFO] 14:09:34:079 Consola/(5256:5256): Ints actual 8, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 10, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 3, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 11, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 14, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 5, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 6, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 7, numero1: -1
+[INFO] 14:09:34:080 Consola/(5256:5256): Ints actual 1, numero1: -1
+[INFO] 14:09:34:081 Consola/(5256:5256): Ints actual 0, numero1: -1
+[INFO] 14:09:34:081 Consola/(5256:5256): Ints actual 13, numero1: -1
+[INFO] 14:09:34:081 Consola/(5256:5256): Ints actual 12, numero1: -1
+[INFO] 14:09:34:081 Consola/(5256:5256): Ints actual 15, numero1: -1
+[INFO] 14:09:34:081 Consola/(5256:5256): Instrucciones leidas
+[INFO] 14:09:34:081 Consola/(5256:5256): Lista mapeada
+[INFO] 14:09:34:081 Consola/(5256:5256): Escribi en el buffer la lista de instrucciones
+[INFO] 14:09:34:081 Consola/(5256:5256): A punto de enviar el codigo de operacion
+[INFO] 14:09:34:081 Consola/(5256:5256): Envie el codigo de op
+[INFO] 14:09:34:082 Consola/(5256:5256): A punto de enviar el tamanio del buffer
+[INFO] 14:09:34:082 Consola/(5256:5256): Envie el tamanio del buffer
+[INFO] 14:09:34:082 Consola/(5256:5256): Lista enviada
+[INFO] 14:09:39:820 Consola/(5274:5274): Socket kernel :5
+[INFO] 14:09:39:862 Consola/(5274:5274): Conectado con kernel
+[INFO] 14:09:39:871 Consola/(5274:5274): Ints actual 2, numero1: -1
+[INFO] 14:09:39:873 Consola/(5274:5274): Ints actual 4, numero1: -1
+[INFO] 14:09:39:877 Consola/(5274:5274): Ints actual 9, numero1: -1
+[INFO] 14:09:39:880 Consola/(5274:5274): Ints actual 8, numero1: -1
+[INFO] 14:09:39:881 Consola/(5274:5274): Ints actual 10, numero1: -1
+[INFO] 14:09:39:883 Consola/(5274:5274): Ints actual 3, numero1: -1
+[INFO] 14:09:39:883 Consola/(5274:5274): Ints actual 11, numero1: -1
+[INFO] 14:09:39:884 Consola/(5274:5274): Ints actual 14, numero1: -1
+[INFO] 14:09:39:884 Consola/(5274:5274): Ints actual 5, numero1: -1
+[INFO] 14:09:39:885 Consola/(5274:5274): Ints actual 6, numero1: -1
+[INFO] 14:09:39:886 Consola/(5274:5274): Ints actual 7, numero1: -1
+[INFO] 14:09:39:887 Consola/(5274:5274): Ints actual 1, numero1: -1
+[INFO] 14:09:39:888 Consola/(5274:5274): Ints actual 0, numero1: -1
+[INFO] 14:09:39:888 Consola/(5274:5274): Ints actual 13, numero1: -1
+[INFO] 14:09:39:889 Consola/(5274:5274): Ints actual 12, numero1: -1
+[INFO] 14:09:39:890 Consola/(5274:5274): Ints actual 15, numero1: -1
+[INFO] 14:09:39:895 Consola/(5274:5274): Instrucciones leidas
+[INFO] 14:09:39:898 Consola/(5274:5274): Lista mapeada
+[INFO] 14:09:39:902 Consola/(5274:5274): Escribi en el buffer la lista de instrucciones
+[INFO] 14:09:39:902 Consola/(5274:5274): A punto de enviar el codigo de operacion
+[INFO] 14:09:39:903 Consola/(5274:5274): Envie el codigo de op
+[INFO] 14:09:39:903 Consola/(5274:5274): A punto de enviar el tamanio del buffer
+[INFO] 14:09:39:904 Consola/(5274:5274): Envie el tamanio del buffer
+[INFO] 14:09:39:904 Consola/(5274:5274): Lista enviada
+[INFO] 14:10:55:708 Consola/(5368:5368): Socket kernel :4
+[INFO] 14:10:55:713 Consola/(5368:5368): Conectado con kernel
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 2, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 4, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 9, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 8, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 10, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 3, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 11, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 14, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 5, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 6, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 7, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 1, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 0, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 13, numero1: -1
+[INFO] 14:10:55:713 Consola/(5368:5368): Ints actual 12, numero1: -1
+[INFO] 14:10:55:714 Consola/(5368:5368): Ints actual 15, numero1: -1
+[INFO] 14:10:55:714 Consola/(5368:5368): Instrucciones leidas
+[INFO] 14:10:55:714 Consola/(5368:5368): Lista mapeada
+[INFO] 14:10:55:714 Consola/(5368:5368): Escribi en el buffer la lista de instrucciones
+[INFO] 14:10:55:714 Consola/(5368:5368): A punto de enviar el codigo de operacion
+[INFO] 14:10:55:714 Consola/(5368:5368): Envie el codigo de op
+[INFO] 14:10:55:714 Consola/(5368:5368): A punto de enviar el tamanio del buffer
+[INFO] 14:10:55:714 Consola/(5368:5368): Envie el tamanio del buffer
+[INFO] 14:10:55:714 Consola/(5368:5368): Lista enviada
+[INFO] 14:11:03:285 Consola/(5392:5392): Socket kernel :5
+[INFO] 14:11:03:328 Consola/(5392:5392): Conectado con kernel
+[INFO] 14:11:03:339 Consola/(5392:5392): Ints actual 2, numero1: -1
+[INFO] 14:11:03:340 Consola/(5392:5392): Ints actual 4, numero1: -1
+[INFO] 14:11:03:344 Consola/(5392:5392): Ints actual 9, numero1: -1
+[INFO] 14:11:03:345 Consola/(5392:5392): Ints actual 8, numero1: -1
+[INFO] 14:11:03:346 Consola/(5392:5392): Ints actual 10, numero1: -1
+[INFO] 14:11:03:347 Consola/(5392:5392): Ints actual 3, numero1: -1
+[INFO] 14:11:03:347 Consola/(5392:5392): Ints actual 11, numero1: -1
+[INFO] 14:11:03:348 Consola/(5392:5392): Ints actual 14, numero1: -1
+[INFO] 14:11:03:348 Consola/(5392:5392): Ints actual 5, numero1: -1
+[INFO] 14:11:03:349 Consola/(5392:5392): Ints actual 6, numero1: -1
+[INFO] 14:11:03:350 Consola/(5392:5392): Ints actual 7, numero1: -1
+[INFO] 14:11:03:351 Consola/(5392:5392): Ints actual 1, numero1: -1
+[INFO] 14:11:03:354 Consola/(5392:5392): Ints actual 0, numero1: -1
+[INFO] 14:11:03:355 Consola/(5392:5392): Ints actual 13, numero1: -1
+[INFO] 14:11:03:356 Consola/(5392:5392): Ints actual 12, numero1: -1
+[INFO] 14:11:03:357 Consola/(5392:5392): Ints actual 15, numero1: -1
+[INFO] 14:11:03:363 Consola/(5392:5392): Instrucciones leidas
+[INFO] 14:11:03:366 Consola/(5392:5392): Lista mapeada
+[INFO] 14:11:03:383 Consola/(5392:5392): Escribi en el buffer la lista de instrucciones
+[INFO] 14:11:03:383 Consola/(5392:5392): A punto de enviar el codigo de operacion
+[INFO] 14:11:03:384 Consola/(5392:5392): Envie el codigo de op
+[INFO] 14:11:03:385 Consola/(5392:5392): A punto de enviar el tamanio del buffer
+[INFO] 14:11:03:385 Consola/(5392:5392): Envie el tamanio del buffer
+[INFO] 14:11:03:385 Consola/(5392:5392): Lista enviada
+[INFO] 14:12:18:642 Consola/(5458:5458): Socket kernel :4
+[INFO] 14:12:18:642 Consola/(5458:5458): Conectado con kernel
+[INFO] 14:12:26:424 Consola/(5458:5458): Ints actual 2, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 4, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 9, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 8, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 10, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 3, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 11, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 14, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 5, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 6, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 7, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 1, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 0, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 13, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 12, numero1: -1
+[INFO] 14:12:26:425 Consola/(5458:5458): Ints actual 15, numero1: -1
+[INFO] 14:12:27:547 Consola/(5458:5458): Instrucciones leidas
+[INFO] 14:12:30:688 Consola/(5458:5458): Lista mapeada
+[INFO] 14:12:34:575 Consola/(5458:5458): Escribi en el buffer la lista de instrucciones
+[INFO] 14:12:34:575 Consola/(5458:5458): A punto de enviar el codigo de operacion
+[INFO] 14:12:40:497 Consola/(5458:5458): Envie el codigo de op
+[INFO] 14:12:43:820 Consola/(5458:5458): A punto de enviar el tamanio del buffer
+[INFO] 14:12:50:143 Consola/(5458:5458): Envie el tamanio del buffer
+[INFO] 14:12:56:016 Consola/(5458:5458): Lista enviada
+[INFO] 14:17:02:900 Consola/(5686:5686): Socket kernel :4
+[INFO] 14:17:02:900 Consola/(5686:5686): Conectado con kernel
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 2, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 4, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 9, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 8, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 10, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 3, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 11, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 14, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 5, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 6, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 7, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 1, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 0, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 13, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 12, numero1: -1
+[INFO] 14:17:03:176 Consola/(5686:5686): Ints actual 15, numero1: -1
+[INFO] 14:17:03:399 Consola/(5686:5686): Instrucciones leidas
+[INFO] 14:17:03:943 Consola/(5686:5686): Lista mapeada
+[INFO] 14:17:05:430 Consola/(5686:5686): Escribi en el buffer la lista de instrucciones
+[INFO] 14:17:05:430 Consola/(5686:5686): A punto de enviar el codigo de operacion
+[INFO] 14:17:06:987 Consola/(5686:5686): Envie el codigo de op
+[INFO] 14:17:07:309 Consola/(5686:5686): A punto de enviar el tamanio del buffer
+[INFO] 14:17:08:811 Consola/(5686:5686): Envie el tamanio del buffer
+[INFO] 14:17:11:534 Consola/(5686:5686): Lista enviada
+[INFO] 14:17:33:969 Consola/(5786:5786): Socket kernel :4
+[INFO] 14:17:33:970 Consola/(5786:5786): Conectado con kernel
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 2, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 4, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 9, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 8, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 10, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 3, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 11, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 14, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 5, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 6, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 7, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 1, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 0, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 13, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 12, numero1: -1
+[INFO] 14:17:34:264 Consola/(5786:5786): Ints actual 15, numero1: -1
+[INFO] 14:17:34:561 Consola/(5786:5786): Instrucciones leidas
+[INFO] 14:17:35:596 Consola/(5786:5786): Lista mapeada
+[INFO] 14:17:36:947 Consola/(5786:5786): Escribi en el buffer la lista de instrucciones
+[INFO] 14:17:36:947 Consola/(5786:5786): A punto de enviar el codigo de operacion
+[INFO] 14:17:37:529 Consola/(5786:5786): Envie el codigo de op
+[INFO] 14:17:37:770 Consola/(5786:5786): A punto de enviar el tamanio del buffer
+[INFO] 14:17:38:498 Consola/(5786:5786): Envie el tamanio del buffer
+[INFO] 14:17:40:447 Consola/(5786:5786): Lista enviada
+[INFO] 14:22:03:602 Consola/(6136:6136): Socket kernel :4
+[INFO] 14:22:03:602 Consola/(6136:6136): Conectado con kernel
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 2, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 4, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 9, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 8, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 10, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 3, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 11, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 14, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 5, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 6, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 7, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 1, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 0, numero1: -1
+[INFO] 14:22:04:428 Consola/(6136:6136): Ints actual 13, numero1: -1
+[INFO] 14:22:04:429 Consola/(6136:6136): Ints actual 12, numero1: -1
+[INFO] 14:22:04:429 Consola/(6136:6136): Ints actual 15, numero1: -1
+[INFO] 14:22:05:074 Consola/(6136:6136): Instrucciones leidas
+[INFO] 14:22:29:948 Consola/(6136:6136): Lista mapeada
+[INFO] 14:22:36:577 Consola/(6136:6136): Lista enviada
+[INFO] 14:23:02:219 Consola/(6231:6231): Socket kernel :4
+[INFO] 14:23:02:220 Consola/(6231:6231): Conectado con kernel
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 2, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 4, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 9, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 8, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 10, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 3, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 11, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 14, numero1: -1
+[INFO] 14:23:02:575 Consola/(6231:6231): Ints actual 5, numero1: -1
+[INFO] 14:23:02:576 Consola/(6231:6231): Ints actual 6, numero1: -1
+[INFO] 14:23:02:576 Consola/(6231:6231): Ints actual 7, numero1: -1
+[INFO] 14:23:02:576 Consola/(6231:6231): Ints actual 1, numero1: -1
+[INFO] 14:23:02:576 Consola/(6231:6231): Ints actual 0, numero1: -1
+[INFO] 14:23:02:576 Consola/(6231:6231): Ints actual 13, numero1: -1
+[INFO] 14:23:02:576 Consola/(6231:6231): Ints actual 12, numero1: -1
+[INFO] 14:23:02:576 Consola/(6231:6231): Ints actual 15, numero1: -1
+[INFO] 14:23:03:020 Consola/(6231:6231): Instrucciones leidas
+[INFO] 14:29:37:331 Consola/(6528:6528): Socket kernel :4
+[INFO] 14:29:37:331 Consola/(6528:6528): Conectado con kernel
+[INFO] 14:31:13:427 Consola/(6657:6657): Socket kernel :4
+[INFO] 14:31:13:427 Consola/(6657:6657): Conectado con kernel
+[INFO] 14:32:43:022 Consola/(6657:6657): Ints actual 2, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 4, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 9, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 8, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 10, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 3, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 11, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 14, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 5, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 6, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 7, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 1, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 0, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 13, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 12, numero1: -1
+[INFO] 14:32:54:343 Consola/(6657:6657): Ints actual 15, numero1: -1
+[INFO] 14:33:32:528 Consola/(6657:6657): Instrucciones leidas
+[INFO] 14:44:27:285 Consola/(7054:7054): Socket kernel :4
+[INFO] 14:44:27:285 Consola/(7054:7054): Conectado con kernel
+[INFO] 14:44:35:834 Consola/(7054:7054): Ints actual 2, numero1: -1
+[INFO] 14:44:35:834 Consola/(7054:7054): Ints actual 4, numero1: -1
+[INFO] 14:44:35:834 Consola/(7054:7054): Ints actual 9, numero1: -1
+[INFO] 14:44:35:834 Consola/(7054:7054): Ints actual 8, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 10, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 3, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 11, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 14, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 5, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 6, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 7, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 1, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 0, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 13, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 12, numero1: -1
+[INFO] 14:44:35:835 Consola/(7054:7054): Ints actual 15, numero1: -1
+[INFO] 14:44:39:245 Consola/(7054:7054): Instrucciones leidas
+[INFO] 14:46:41:468 Consola/(7177:7177): Socket kernel :4
+[INFO] 14:46:41:469 Consola/(7177:7177): Conectado con kernel
+[INFO] 14:46:41:711 Consola/(7177:7177): Ints actual 2, numero1: 0
+[INFO] 14:46:41:711 Consola/(7177:7177): Ints actual 4, numero1: 0
+[INFO] 14:46:41:711 Consola/(7177:7177): Ints actual 9, numero1: 0
+[INFO] 14:46:41:711 Consola/(7177:7177): Ints actual 8, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 10, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 3, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 11, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 14, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 5, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 6, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 7, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 1, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 0, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 13, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 12, numero1: 0
+[INFO] 14:46:41:712 Consola/(7177:7177): Ints actual 15, numero1: 0
+[INFO] 14:46:42:018 Consola/(7177:7177): Instrucciones leidas
+[INFO] 14:46:48:568 Consola/(7225:7225): Socket kernel :4
+[INFO] 14:46:48:568 Consola/(7225:7225): Conectado con kernel
+[INFO] 14:46:48:829 Consola/(7225:7225): Ints actual 2, numero1: 0
+[INFO] 14:46:48:829 Consola/(7225:7225): Ints actual 4, numero1: 0
+[INFO] 14:46:48:829 Consola/(7225:7225): Ints actual 9, numero1: 0
+[INFO] 14:46:48:829 Consola/(7225:7225): Ints actual 8, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 10, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 3, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 11, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 14, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 5, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 6, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 7, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 1, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 0, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 13, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 12, numero1: 0
+[INFO] 14:46:48:830 Consola/(7225:7225): Ints actual 15, numero1: 0
+[INFO] 14:46:49:220 Consola/(7225:7225): Instrucciones leidas
+[INFO] 14:57:05:666 Consola/(7509:7509): Socket kernel :4
+[INFO] 14:57:05:666 Consola/(7509:7509): Conectado con kernel
+[INFO] 14:57:06:029 Consola/(7509:7509): Ints actual 2, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 4, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 9, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 8, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 10, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 3, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 11, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 14, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 5, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 6, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 7, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 1, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 0, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 13, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 12, numero1: 0
+[INFO] 14:57:06:030 Consola/(7509:7509): Ints actual 15, numero1: 0
+[INFO] 14:57:06:434 Consola/(7509:7509): Instrucciones leidas
+[INFO] 14:58:04:959 Consola/(7616:7616): Socket kernel :4
+[INFO] 14:58:04:959 Consola/(7616:7616): Conectado con kernel
+[INFO] 14:58:05:313 Consola/(7616:7616): Ints actual 2, numero1: 0
+[INFO] 14:58:05:313 Consola/(7616:7616): Ints actual 4, numero1: 0
+[INFO] 14:58:05:313 Consola/(7616:7616): Ints actual 9, numero1: 0
+[INFO] 14:58:05:313 Consola/(7616:7616): Ints actual 8, numero1: 0
+[INFO] 14:58:05:313 Consola/(7616:7616): Ints actual 10, numero1: 0
+[INFO] 14:58:05:313 Consola/(7616:7616): Ints actual 3, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 11, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 14, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 5, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 6, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 7, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 1, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 0, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 13, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 12, numero1: 0
+[INFO] 14:58:05:314 Consola/(7616:7616): Ints actual 15, numero1: 0
+[INFO] 14:58:05:759 Consola/(7616:7616): Instrucciones leidas
+[INFO] 15:00:10:278 Consola/(7738:7738): Socket kernel :4
+[INFO] 15:00:10:278 Consola/(7738:7738): Conectado con kernel
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 2, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 4, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 9, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 8, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 10, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 3, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 11, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 14, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 5, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 6, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 7, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 1, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 0, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 13, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 12, numero1: 0
+[INFO] 15:00:10:639 Consola/(7738:7738): Ints actual 15, numero1: 0
+[INFO] 15:00:11:101 Consola/(7738:7738): Instrucciones leidas
+[INFO] 15:02:08:201 Consola/(7738:7738): Lista mapeada
+[INFO] 15:02:14:929 Consola/(7738:7738): Lista enviada
+[INFO] 15:08:18:992 Consola/(7958:7958): Socket kernel :4
+[INFO] 15:08:18:992 Consola/(7958:7958): Conectado con kernel
+[INFO] 15:08:19:725 Consola/(7958:7958): Ints actual 2, numero1: 0
+[INFO] 15:08:19:725 Consola/(7958:7958): Ints actual 4, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 9, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 8, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 10, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 3, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 11, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 14, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 5, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 6, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 7, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 1, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 0, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 13, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 12, numero1: 0
+[INFO] 15:08:19:726 Consola/(7958:7958): Ints actual 15, numero1: 0
+[INFO] 15:08:20:262 Consola/(7958:7958): Instrucciones leidas
+[INFO] 15:10:54:570 Consola/(8109:8109): Socket kernel :4
+[INFO] 15:10:54:570 Consola/(8109:8109): Conectado con kernel
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 2, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 4, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 9, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 8, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 10, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 3, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 11, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 14, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 5, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 6, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 7, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 1, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 0, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 13, numero1: 0
+[INFO] 15:10:54:887 Consola/(8109:8109): Ints actual 12, numero1: 0
+[INFO] 15:10:54:888 Consola/(8109:8109): Ints actual 15, numero1: 0
+[INFO] 15:10:55:323 Consola/(8109:8109): Instrucciones leidas
+[INFO] 15:12:21:657 Consola/(8109:8109): Lista mapeada
+[INFO] 15:12:25:622 Consola/(8109:8109): Lista enviada
+[INFO] 15:18:09:983 Consola/(8337:8337): Socket kernel :4
+[INFO] 15:18:09:983 Consola/(8337:8337): Conectado con kernel
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 2, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 4, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 9, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 8, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 10, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 3, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 11, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 14, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 5, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 6, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 7, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 1, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 0, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 13, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 12, numero1: 0
+[INFO] 15:18:10:271 Consola/(8337:8337): Ints actual 15, numero1: 0
+[INFO] 15:18:10:599 Consola/(8337:8337): Instrucciones leidas
+[INFO] 15:18:14:700 Consola/(8337:8337): Lista mapeada
+[INFO] 15:18:17:688 Consola/(8337:8337): Lista enviada
+[INFO] 15:20:12:613 Consola/(8448:8448): Socket kernel :4
+[INFO] 15:20:12:613 Consola/(8448:8448): Conectado con kernel
+[INFO] 15:20:13:006 Consola/(8448:8448): Ints actual 2, numero1: 0
+[INFO] 15:20:13:006 Consola/(8448:8448): Ints actual 4, numero1: 0
+[INFO] 15:20:13:006 Consola/(8448:8448): Ints actual 9, numero1: 0
+[INFO] 15:20:13:006 Consola/(8448:8448): Ints actual 8, numero1: 0
+[INFO] 15:20:13:006 Consola/(8448:8448): Ints actual 10, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 3, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 11, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 14, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 5, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 6, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 7, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 1, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 0, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 13, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 12, numero1: 0
+[INFO] 15:20:13:007 Consola/(8448:8448): Ints actual 15, numero1: 0
+[INFO] 15:20:14:854 Consola/(8448:8448): Instrucciones leidas
+[INFO] 15:22:49:426 Consola/(8575:8575): Socket kernel :4
+[INFO] 15:22:49:426 Consola/(8575:8575): Conectado con kernel
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 2, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 4, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 9, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 8, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 10, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 3, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 11, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 14, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 5, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 6, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 7, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 1, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 0, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 13, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 12, numero1: 0
+[INFO] 15:22:49:945 Consola/(8575:8575): Ints actual 15, numero1: 0
+[INFO] 15:22:50:450 Consola/(8575:8575): Instrucciones leidas
+[INFO] 15:23:48:152 Consola/(8641:8641): Socket kernel :4
+[INFO] 15:23:48:152 Consola/(8641:8641): Conectado con kernel
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 2, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 4, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 9, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 8, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 10, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 3, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 11, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 14, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 5, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 6, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 7, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 1, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 0, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 13, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 12, numero1: 0
+[INFO] 15:23:48:449 Consola/(8641:8641): Ints actual 15, numero1: 0
+[INFO] 15:23:48:750 Consola/(8641:8641): Instrucciones leidas
+[INFO] 15:28:48:267 Consola/(8802:8802): Socket kernel :4
+[INFO] 15:28:48:268 Consola/(8802:8802): Conectado con kernel
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 2, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 4, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 9, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 8, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 10, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 3, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 11, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 14, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 5, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 6, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 7, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 1, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 0, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 13, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 12, numero1: 0
+[INFO] 15:28:48:564 Consola/(8802:8802): Ints actual 15, numero1: 0
+[INFO] 15:28:49:061 Consola/(8802:8802): Instrucciones leidas
+[INFO] 15:29:40:883 Consola/(8896:8896): Socket kernel :4
+[INFO] 15:29:40:883 Consola/(8896:8896): Conectado con kernel
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 2, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 4, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 9, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 8, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 10, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 3, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 11, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 14, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 5, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 6, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 7, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 1, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 0, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 13, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 12, numero1: 0
+[INFO] 15:29:41:256 Consola/(8896:8896): Ints actual 15, numero1: 0
+[INFO] 15:29:42:228 Consola/(8896:8896): Instrucciones leidas
+[INFO] 15:30:51:154 Consola/(9010:9010): Socket kernel :4
+[INFO] 15:30:51:154 Consola/(9010:9010): Conectado con kernel
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 2, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 4, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 9, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 8, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 10, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 3, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 11, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 14, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 5, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 6, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 7, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 1, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 0, numero1: 0
+[INFO] 15:30:51:345 Consola/(9010:9010): Ints actual 13, numero1: 0
+[INFO] 15:30:51:346 Consola/(9010:9010): Ints actual 12, numero1: 0
+[INFO] 15:30:51:346 Consola/(9010:9010): Ints actual 15, numero1: 0
+[INFO] 15:30:51:732 Consola/(9010:9010): Instrucciones leidas
+[INFO] 15:34:29:083 Consola/(9187:9187): Socket kernel :4
+[INFO] 15:34:29:084 Consola/(9187:9187): Conectado con kernel
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 2, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 4, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 9, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 8, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 10, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 3, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 11, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 14, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 5, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 6, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 7, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 1, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 0, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 13, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 12, numero1: 0
+[INFO] 15:34:29:399 Consola/(9187:9187): Ints actual 15, numero1: 0
+[INFO] 15:34:29:839 Consola/(9187:9187): Instrucciones leidas
+[INFO] 15:36:26:294 Consola/(9316:9316): Socket kernel :4
+[INFO] 15:36:26:295 Consola/(9316:9316): Conectado con kernel
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 2, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 4, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 9, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 8, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 10, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 3, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 11, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 14, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 5, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 6, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 7, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 1, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 0, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 13, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 12, numero1: 0
+[INFO] 15:36:26:624 Consola/(9316:9316): Ints actual 15, numero1: 0
+[INFO] 15:36:26:992 Consola/(9316:9316): Instrucciones leidas
+[INFO] 15:36:27:789 Consola/(9316:9316): Lista mapeada
+[INFO] 15:36:27:790 Consola/(9316:9316): Lista enviada
+[INFO] 15:36:36:779 Consola/(9363:9363): Socket kernel :4
+[INFO] 15:36:36:779 Consola/(9363:9363): Conectado con kernel
+[INFO] 15:36:37:132 Consola/(9363:9363): Ints actual 2, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 4, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 9, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 8, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 10, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 3, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 11, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 14, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 5, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 6, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 7, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 1, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 0, numero1: 0
+[INFO] 15:36:37:134 Consola/(9363:9363): Ints actual 13, numero1: 0
+[INFO] 15:36:37:136 Consola/(9363:9363): Ints actual 12, numero1: 0
+[INFO] 15:36:37:136 Consola/(9363:9363): Ints actual 15, numero1: 0
+[INFO] 15:36:37:577 Consola/(9363:9363): Instrucciones leidas
+[INFO] 15:42:20:049 Consola/(9523:9523): Socket kernel :4
+[INFO] 15:42:20:050 Consola/(9523:9523): Conectado con kernel
+[INFO] 15:42:20:597 Consola/(9523:9523): Ints actual 2, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 4, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 9, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 8, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 10, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 3, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 11, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 14, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 5, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 6, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 7, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 1, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 0, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 13, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 12, numero1: 0
+[INFO] 15:42:20:598 Consola/(9523:9523): Ints actual 15, numero1: 0
+[INFO] 15:42:25:107 Consola/(9523:9523): Instrucciones leidas
+[INFO] 15:43:13:720 Consola/(9523:9523): Lista mapeada
+[INFO] 15:43:19:467 Consola/(9523:9523): Lista enviada
+[INFO] 15:43:49:052 Consola/(9607:9607): Socket kernel :4
+[INFO] 15:43:49:052 Consola/(9607:9607): Conectado con kernel
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 2, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 4, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 9, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 8, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 10, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 3, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 11, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 14, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 5, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 6, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 7, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 1, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 0, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 13, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 12, numero1: 0
+[INFO] 15:43:49:399 Consola/(9607:9607): Ints actual 15, numero1: 0
+[INFO] 15:43:49:778 Consola/(9607:9607): Instrucciones leidas
+[INFO] 15:45:30:790 Consola/(9726:9726): Socket kernel :4
+[INFO] 15:45:30:790 Consola/(9726:9726): Conectado con kernel
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 2, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 4, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 9, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 8, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 10, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 3, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 11, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 14, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 5, numero1: 0
+[INFO] 15:45:31:124 Consola/(9726:9726): Ints actual 6, numero1: 0
+[INFO] 15:45:31:128 Consola/(9726:9726): Ints actual 7, numero1: 0
+[INFO] 15:45:31:128 Consola/(9726:9726): Ints actual 1, numero1: 0
+[INFO] 15:45:31:128 Consola/(9726:9726): Ints actual 0, numero1: 0
+[INFO] 15:45:31:128 Consola/(9726:9726): Ints actual 13, numero1: 0
+[INFO] 15:45:31:128 Consola/(9726:9726): Ints actual 12, numero1: 0
+[INFO] 15:45:31:128 Consola/(9726:9726): Ints actual 15, numero1: 0
+[INFO] 15:45:31:488 Consola/(9726:9726): Instrucciones leidas
+[INFO] 15:45:41:693 Consola/(9774:9774): Socket kernel :4
+[INFO] 15:45:41:693 Consola/(9774:9774): Conectado con kernel
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 2, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 4, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 9, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 8, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 10, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 3, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 11, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 14, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 5, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 6, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 7, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 1, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 0, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 13, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 12, numero1: 0
+[INFO] 15:45:42:028 Consola/(9774:9774): Ints actual 15, numero1: 0
+[INFO] 15:45:42:392 Consola/(9774:9774): Instrucciones leidas
+[INFO] 15:47:09:460 Consola/(9915:9915): Socket kernel :4
+[INFO] 15:47:09:460 Consola/(9915:9915): Conectado con kernel
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 2, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 4, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 9, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 8, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 10, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 3, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 11, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 14, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 5, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 6, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 7, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 1, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 0, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 13, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 12, numero1: 0
+[INFO] 15:47:09:752 Consola/(9915:9915): Ints actual 15, numero1: 0
+[INFO] 15:47:10:086 Consola/(9915:9915): Instrucciones leidas
+[INFO] 15:48:57:471 Consola/(10044:10044): Socket kernel :4
+[INFO] 15:48:57:472 Consola/(10044:10044): Conectado con kernel
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 2, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 4, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 9, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 8, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 10, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 3, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 11, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 14, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 5, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 6, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 7, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 1, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 0, numero1: 0
+[INFO] 15:48:57:472 Consola/(10044:10044): Ints actual 13, numero1: 0
+[INFO] 15:48:57:473 Consola/(10044:10044): Ints actual 12, numero1: 0
+[INFO] 15:48:57:473 Consola/(10044:10044): Ints actual 15, numero1: 0
+[INFO] 15:48:57:473 Consola/(10044:10044): Instrucciones leidas
+[INFO] 15:53:05:516 Consola/(10324:10324): Socket kernel :4
+[INFO] 15:53:05:517 Consola/(10324:10324): Conectado con kernel
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 2, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 4, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 9, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 8, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 10, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 3, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 11, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 14, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 5, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 6, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 7, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 1, numero1: 0
+[INFO] 15:53:05:852 Consola/(10324:10324): Ints actual 0, numero1: 0
+[INFO] 15:53:05:853 Consola/(10324:10324): Ints actual 13, numero1: 0
+[INFO] 15:53:05:853 Consola/(10324:10324): Ints actual 12, numero1: 0
+[INFO] 15:53:05:853 Consola/(10324:10324): Ints actual 15, numero1: 0
+[INFO] 15:53:06:203 Consola/(10324:10324): Instrucciones leidas
+[INFO] 15:53:37:336 Consola/(10324:10324): Lista mapeada
+[INFO] 15:53:39:785 Consola/(10324:10324): Lista enviada
+[INFO] 16:00:13:126 Consola/(10653:10653): Socket kernel :4
+[INFO] 16:00:13:127 Consola/(10653:10653): Conectado con kernel
+[INFO] 16:00:13:473 Consola/(10653:10653): Ints actual 2, numero1: 0
+[INFO] 16:00:13:473 Consola/(10653:10653): Ints actual 4, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 9, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 8, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 10, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 3, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 11, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 14, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 5, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 6, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 7, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 1, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 0, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 13, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 12, numero1: 0
+[INFO] 16:00:13:474 Consola/(10653:10653): Ints actual 15, numero1: 0
+[INFO] 16:00:13:887 Consola/(10653:10653): Instrucciones leidas
+[INFO] 16:00:17:189 Consola/(10653:10653): Lista mapeada
+[INFO] 16:00:19:753 Consola/(10653:10653): Lista enviada
+[INFO] 16:00:59:957 Consola/(10746:10746): Socket kernel :4
+[INFO] 16:00:59:957 Consola/(10746:10746): Conectado con kernel
+[INFO] 16:01:00:173 Consola/(10746:10746): Ints actual 2, numero1: 0
+[INFO] 16:01:00:173 Consola/(10746:10746): Ints actual 4, numero1: 0
+[INFO] 16:01:00:174 Consola/(10746:10746): Ints actual 9, numero1: 0
+[INFO] 16:01:00:174 Consola/(10746:10746): Ints actual 8, numero1: 0
+[INFO] 16:01:00:174 Consola/(10746:10746): Ints actual 10, numero1: 0
+[INFO] 16:01:00:174 Consola/(10746:10746): Ints actual 3, numero1: 0
+[INFO] 16:01:00:174 Consola/(10746:10746): Ints actual 11, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 14, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 5, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 6, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 7, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 1, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 0, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 13, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 12, numero1: 0
+[INFO] 16:01:00:175 Consola/(10746:10746): Ints actual 15, numero1: 0
+[INFO] 16:01:00:361 Consola/(10746:10746): Instrucciones leidas
+[INFO] 16:01:00:765 Consola/(10746:10746): Lista mapeada
+[INFO] 16:01:01:918 Consola/(10746:10746): Lista enviada
+[INFO] 16:02:19:731 Consola/(10843:10843): Socket kernel :4
+[INFO] 16:02:19:732 Consola/(10843:10843): Conectado con kernel
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 2, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 4, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 9, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 8, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 10, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 3, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 11, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 14, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 5, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 6, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 7, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 1, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 0, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 13, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 12, numero1: 0
+[INFO] 16:02:20:016 Consola/(10843:10843): Ints actual 15, numero1: 0
+[INFO] 16:02:20:463 Consola/(10843:10843): Instrucciones leidas
+[INFO] 16:02:26:397 Consola/(10843:10843): Lista mapeada
+[INFO] 16:02:28:070 Consola/(10843:10843): Lista enviada
+[INFO] 16:08:15:381 Consola/(11026:11026): Socket kernel :4
+[INFO] 16:08:15:381 Consola/(11026:11026): Conectado con kernel
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 2, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 4, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 9, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 8, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 10, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 3, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 11, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 14, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 5, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 6, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 7, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 1, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 0, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 13, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 12, numero1: 0
+[INFO] 16:08:15:652 Consola/(11026:11026): Ints actual 15, numero1: 0
+[INFO] 16:08:15:969 Consola/(11026:11026): Instrucciones leidas
+[INFO] 16:08:18:611 Consola/(11026:11026): Lista mapeada
+[INFO] 16:08:19:793 Consola/(11026:11026): Lista enviada
+[INFO] 16:09:41:861 Consola/(11123:11123): Socket kernel :4
+[INFO] 16:09:41:861 Consola/(11123:11123): Conectado con kernel
+[INFO] 16:11:03:527 Consola/(11243:11243): Socket kernel :4
+[INFO] 16:11:03:527 Consola/(11243:11243): Conectado con kernel
+[INFO] 16:11:07:399 Consola/(11243:11243): Ints actual 2, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 4, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 9, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 8, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 10, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 3, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 11, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 14, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 5, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 6, numero1: 0
+[INFO] 16:11:07:400 Consola/(11243:11243): Ints actual 7, numero1: 0
+[INFO] 16:11:07:401 Consola/(11243:11243): Ints actual 1, numero1: 0
+[INFO] 16:11:07:401 Consola/(11243:11243): Ints actual 0, numero1: 0
+[INFO] 16:11:07:401 Consola/(11243:11243): Ints actual 13, numero1: 0
+[INFO] 16:11:07:401 Consola/(11243:11243): Ints actual 12, numero1: 0
+[INFO] 16:11:07:401 Consola/(11243:11243): Ints actual 15, numero1: 0
+[INFO] 16:11:21:694 Consola/(11296:11296): Socket kernel :4
+[INFO] 16:11:21:694 Consola/(11296:11296): Conectado con kernel
+[INFO] 16:11:32:397 Consola/(11296:11296): Ints actual 2, numero1: 0
+[INFO] 16:12:25:047 Consola/(11296:11296): Ints actual 4, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 9, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 8, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 10, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 3, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 11, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 14, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 5, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 6, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 7, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 1, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 0, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 13, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 12, numero1: 0
+[INFO] 16:12:49:740 Consola/(11296:11296): Ints actual 15, numero1: 0
+[INFO] 16:13:03:033 Consola/(11296:11296): Instrucciones leidas
+[INFO] 16:13:17:581 Consola/(11296:11296): Lista mapeada
+[INFO] 16:13:18:792 Consola/(11296:11296): Lista enviada
+[INFO] 19:31:24:592 Consola/(2838:2838): Socket kernel :4
+[INFO] 19:31:24:594 Consola/(2838:2838): Conectado con kernel
+[INFO] 19:33:22:849 Consola/(3074:3074): Socket kernel :4
+[INFO] 19:33:22:849 Consola/(3074:3074): Conectado con kernel
+[INFO] 19:33:36:738 Consola/(3074:3074): Ints actual 2, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 4, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 9, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 8, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 10, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 3, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 11, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 14, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 5, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 6, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 7, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 1, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 0, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 13, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 12, numero1: 123456789
+[INFO] 19:33:36:739 Consola/(3074:3074): Ints actual 15, numero1: 123456789
+[INFO] 19:33:44:643 Consola/(3074:3074): Instrucciones leidas
+[INFO] 19:33:48:136 Consola/(3074:3074): Lista mapeada
+[INFO] 19:33:54:771 Consola/(3074:3074): Lista enviada
+[INFO] 19:34:42:913 Consola/(3155:3155): Socket kernel :4
+[INFO] 19:34:42:914 Consola/(3155:3155): Conectado con kernel
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 2, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 4, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 9, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 8, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 10, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 3, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 11, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 14, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 5, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 6, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 7, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 1, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 0, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 13, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 12, numero1: 123456789
+[INFO] 19:34:43:418 Consola/(3155:3155): Ints actual 15, numero1: 123456789
+[INFO] 19:34:45:363 Consola/(3155:3155): Instrucciones leidas
+[INFO] 19:34:46:222 Consola/(3155:3155): Lista mapeada
+[INFO] 19:34:53:520 Consola/(3155:3155): Lista enviada
+[INFO] 19:45:04:177 Consola/(3446:3446): Socket kernel :4
+[INFO] 19:45:04:177 Consola/(3446:3446): Conectado con kernel
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 2, numero1: 123456789
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 4, numero1: 123456789
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 9, numero1: 123456789
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 8, numero1: 123456789
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 10, numero1: 123456789
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 3, numero1: 123456789
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 11, numero1: 123456789
+[INFO] 19:45:04:177 Consola/(3446:3446): Ints actual 14, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 5, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 6, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 7, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 1, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 0, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 13, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 12, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Ints actual 15, numero1: 123456789
+[INFO] 19:45:04:178 Consola/(3446:3446): Instrucciones leidas
+[INFO] 19:45:04:178 Consola/(3446:3446): Lista mapeada
+[INFO] 19:45:04:178 Consola/(3446:3446): Lista enviada
+[INFO] 19:45:50:252 Consola/(3501:3501): Socket kernel :4
+[INFO] 19:45:50:252 Consola/(3501:3501): Conectado con kernel
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 2, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 4, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 9, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 8, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 10, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 3, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 11, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 14, numero1: 123456789
+[INFO] 19:45:50:252 Consola/(3501:3501): Ints actual 5, numero1: 123456789
+[INFO] 19:45:50:253 Consola/(3501:3501): Ints actual 6, numero1: 123456789
+[INFO] 19:45:50:253 Consola/(3501:3501): Ints actual 7, numero1: 123456789
+[INFO] 19:45:50:253 Consola/(3501:3501): Ints actual 1, numero1: 123456789
+[INFO] 19:45:50:253 Consola/(3501:3501): Ints actual 0, numero1: 123456789
+[INFO] 19:45:50:253 Consola/(3501:3501): Ints actual 13, numero1: 123456789
+[INFO] 19:45:50:253 Consola/(3501:3501): Ints actual 12, numero1: 123456789
+[INFO] 19:45:50:254 Consola/(3501:3501): Ints actual 15, numero1: 123456789
+[INFO] 19:45:50:254 Consola/(3501:3501): Instrucciones leidas
+[INFO] 19:45:50:254 Consola/(3501:3501): Lista mapeada
+[INFO] 19:45:50:254 Consola/(3501:3501): Lista enviada
+[INFO] 19:49:09:937 Consola/(3613:3613): Socket kernel :4
+[INFO] 19:49:09:937 Consola/(3613:3613): Conectado con kernel
+[INFO] 19:49:18:021 Consola/(3613:3613): Instrucciones leidas
+[INFO] 19:49:20:945 Consola/(3613:3613): Lista mapeada
+[INFO] 19:49:25:257 Consola/(3613:3613): Lista enviada
+[INFO] 19:52:08:490 Consola/(3786:3786): Socket kernel :4
+[INFO] 19:52:08:490 Consola/(3786:3786): Conectado con kernel
+[INFO] 19:52:11:778 Consola/(3786:3786): Instrucciones leidas
+[INFO] 19:52:13:559 Consola/(3786:3786): Lista mapeada
+[INFO] 19:52:20:986 Consola/(3786:3786): Escribi en el buffer la lista de instrucciones
+[INFO] 19:52:23:501 Consola/(3786:3786): A punto de enviar el codigo de operacion
+[INFO] 19:52:46:893 Consola/(3786:3786): Envie el codigo de op
+[INFO] 19:52:47:444 Consola/(3786:3786): A punto de enviar el tamanio del buffer
+[INFO] 19:52:48:370 Consola/(3786:3786): Envie el tamanio del buffer
+[INFO] 19:52:49:360 Consola/(3786:3786): A punto de enviar el stream del buffer
+[INFO] 19:52:50:678 Consola/(3786:3786): Envie el stream del buffer
+[INFO] 19:52:52:486 Consola/(3786:3786): Lista enviada
+[INFO] 19:53:55:769 Consola/(3786:3786): Lista destruida
+[INFO] 19:54:36:352 Consola/(3981:3981): Socket kernel :4
+[INFO] 19:54:36:352 Consola/(3981:3981): Conectado con kernel
+[INFO] 19:54:40:343 Consola/(3981:3981): Instrucciones leidas
+[INFO] 19:54:46:618 Consola/(3981:3981): Lista mapeada
+[INFO] 19:58:18:095 Consola/(3981:3981): Escribi en el buffer la lista de instrucciones
+[INFO] 19:59:08:973 Consola/(4208:4208): Socket kernel :4
+[INFO] 19:59:08:975 Consola/(4208:4208): Conectado con kernel
+[INFO] 19:59:10:375 Consola/(4208:4208): Instrucciones leidas
+[INFO] 19:59:11:925 Consola/(4208:4208): Lista mapeada
+[INFO] 19:59:24:816 Consola/(4208:4208): Escribi en el buffer la lista de instrucciones
+[INFO] 19:59:24:817 Consola/(4208:4208): A punto de enviar el codigo de operacion
+[INFO] 19:59:24:817 Consola/(4208:4208): Envie el codigo de op
+[INFO] 19:59:24:817 Consola/(4208:4208): A punto de enviar el tamanio del buffer
+[INFO] 19:59:24:817 Consola/(4208:4208): Envie el tamanio del buffer
+[INFO] 19:59:24:817 Consola/(4208:4208): A punto de enviar el stream del buffer
+[INFO] 19:59:24:818 Consola/(4208:4208): Envie el stream del buffer
+[INFO] 19:59:26:705 Consola/(4208:4208): Lista enviada
+[INFO] 19:59:28:729 Consola/(4208:4208): Lista destruida
+[INFO] 20:02:57:942 Consola/(4403:4403): Socket kernel :4
+[INFO] 20:02:57:943 Consola/(4403:4403): Conectado con kernel
+[INFO] 20:04:53:966 Consola/(4507:4507): Socket kernel :4
+[INFO] 20:04:53:966 Consola/(4507:4507): Conectado con kernel
+[INFO] 20:04:56:700 Consola/(4507:4507): Instrucciones leidas
+[INFO] 20:04:58:964 Consola/(4507:4507): Lista mapeada
+[INFO] 20:05:00:574 Consola/(4507:4507): Escribi en el buffer la lista de instrucciones
+[INFO] 20:05:00:574 Consola/(4507:4507): A punto de enviar el codigo de operacion
+[INFO] 20:05:00:574 Consola/(4507:4507): Envie el codigo de op
+[INFO] 20:05:00:575 Consola/(4507:4507): A punto de enviar el tamanio del buffer
+[INFO] 20:05:00:575 Consola/(4507:4507): Envie el tamanio del buffer
+[INFO] 20:05:00:575 Consola/(4507:4507): A punto de enviar el stream del buffer
+[INFO] 20:05:00:575 Consola/(4507:4507): Envie el stream del buffer
+[INFO] 20:05:01:007 Consola/(4507:4507): Lista enviada
+[INFO] 20:05:04:446 Consola/(4507:4507): Lista destruida
+[INFO] 20:06:24:971 Consola/(4655:4655): Socket kernel :4
+[INFO] 20:06:24:971 Consola/(4655:4655): Conectado con kernel
+[INFO] 20:06:27:235 Consola/(4655:4655): Instrucciones leidas
+[INFO] 20:06:51:164 Consola/(4757:4757): Socket kernel :4
+[INFO] 20:06:51:165 Consola/(4757:4757): Conectado con kernel
+[INFO] 20:06:53:490 Consola/(4757:4757): Instrucciones leidas
+[INFO] 21:47:11:478 Consola/(3601:3601): Socket kernel :4
+[INFO] 21:47:11:481 Consola/(3601:3601): Conectado con kernel
+[INFO] 21:47:11:481 Consola/(3601:3601): Codigo recibido: 6
+[INFO] 21:49:35:271 Consola/(3704:3704): Socket kernel :4
+[INFO] 21:49:35:272 Consola/(3704:3704): Conectado con kernel
+[INFO] 21:49:35:272 Consola/(3704:3704): Fin proceso consola: 6
+[INFO] 21:50:24:220 Consola/(3818:3818): Socket kernel :4
+[INFO] 21:50:24:220 Consola/(3818:3818): Conectado con kernel
+[INFO] 21:50:24:220 Consola/(3818:3818): Codigo recibido: 5
+[INFO] 21:51:19:532 Consola/(3923:3923): Socket kernel :4
+[INFO] 21:51:19:533 Consola/(3923:3923): Conectado con kernel
+[INFO] 21:51:19:533 Consola/(3923:3923): Fin proceso consola: 6
+[INFO] 12:51:50:210 Consola/(2780:2780): Instrucciones leidas
+[INFO] 12:54:32:570 Consola/(2780:2780): Lista mapeada
+[INFO] 12:57:54:698 Consola/(2780:2780): Lista destruida
+[INFO] 13:10:54:316 Consola/(3632:3632): Instrucciones leidas
+[INFO] 13:10:56:105 Consola/(3632:3632): Lista mapeada
+[INFO] 13:10:59:360 Consola/(3632:3632): Lista destruida
+[INFO] 13:14:40:523 Consola/(3800:3800): Instrucciones leidas
+[INFO] 13:14:40:523 Consola/(3800:3800): Lista mapeada
+[INFO] 13:14:40:523 Consola/(3800:3800): Lista destruida
+[INFO] 13:17:24:669 Consola/(3929:3929): Instrucciones leidas
+[INFO] 13:17:24:669 Consola/(3929:3929): Lista mapeada
+[INFO] 13:17:24:669 Consola/(3929:3929): Lista destruida
+[INFO] 13:17:24:670 Consola/(3929:3929): Codigo de instruccion: 2 
+[INFO] 13:17:24:670 Consola/(3929:3929): String1: AX`U 
+[INFO] 13:17:24:670 Consola/(3929:3929): String2: 10`U 
+[INFO] 13:17:24:670 Consola/(3929:3929): Codigo de instruccion: 4 
+[INFO] 13:17:24:670 Consola/(3929:3929): Numero1: 120 
+[INFO] 13:17:24:670 Consola/(3929:3929): String1: AX`U 
+[INFO] 13:17:24:670 Consola/(3929:3929): Codigo de instruccion: 9 
+[INFO] 13:17:24:670 Consola/(3929:3929): String1: DISCOU 
+[INFO] 13:17:24:670 Consola/(3929:3929): String2: v`U 
+[INFO] 13:17:24:670 Consola/(3929:3929): Codigo de instruccion: 8 
+[INFO] 13:17:24:671 Consola/(3929:3929): Numero1: 10 
+[INFO] 13:17:24:671 Consola/(3929:3929): String1: v`U 
+[INFO] 13:17:24:671 Consola/(3929:3929): String2: v`U 
+[INFO] 13:17:24:671 Consola/(3929:3929): Codigo de instruccion: 10 
+[INFO] 13:17:24:671 Consola/(3929:3929): String1: DISCOU 
+[INFO] 13:17:24:671 Consola/(3929:3929): String2: v•RV 
+[INFO] 13:17:24:671 Consola/(3929:3929): Codigo de instruccion: 3 
+[INFO] 13:17:24:671 Consola/(3929:3929): Numero1: 120 
+[INFO] 13:17:24:671 Consola/(3929:3929): String1: BX`U 
+[INFO] 13:17:24:671 Consola/(3929:3929): String2: v`U 
+[INFO] 13:17:24:671 Consola/(3929:3929): Codigo de instruccion: 11 
+[INFO] 13:17:24:671 Consola/(3929:3929): String1: ARCHIVO 
+[INFO] 13:17:24:671 Consola/(3929:3929): Codigo de instruccion: 14 
+[INFO] 13:17:24:671 Consola/(3929:3929): Codigo de instruccion: 5 
+[INFO] 13:17:24:671 Consola/(3929:3929): Numero1: 64 
+[INFO] 13:17:24:671 Consola/(3929:3929): String1: ARCHIVO 
+[INFO] 13:17:24:671 Consola/(3929:3929): Codigo de instruccion: 6 
+[INFO] 13:17:24:672 Consola/(3929:3929): Numero1: 10 
+[INFO] 13:17:24:672 Consola/(3929:3929): String1: ARCHIVO 
+[INFO] 13:17:24:672 Consola/(3929:3929): Codigo de instruccion: 7 
+[INFO] 13:17:24:672 Consola/(3929:3929): Numero1: 1 
+[INFO] 13:17:24:672 Consola/(3929:3929): Numero2: 128 
+[INFO] 13:17:24:672 Consola/(3929:3929): Codigo de instruccion: 1 
+[INFO] 13:17:24:672 Consola/(3929:3929): Numero1: 4 
+[INFO] 13:17:24:672 Consola/(3929:3929): Numero2: 4 
+[INFO] 13:17:24:672 Consola/(3929:3929): String1: ARCHIVO 
+[INFO] 13:17:24:672 Consola/(3929:3929): Codigo de instruccion: 0 
+[INFO] 13:17:24:672 Consola/(3929:3929): Numero1: 16 
+[INFO] 13:17:24:672 Consola/(3929:3929): Numero2: 4 
+[INFO] 13:17:24:672 Consola/(3929:3929): String1: ARCHIVO 
+[INFO] 13:17:24:672 Consola/(3929:3929): Codigo de instruccion: 13 
+[INFO] 13:17:24:673 Consola/(3929:3929): Numero1: 1 
+[INFO] 13:17:24:673 Consola/(3929:3929): Codigo de instruccion: 12 
+[INFO] 13:17:24:673 Consola/(3929:3929): String1: ARCHIVO 
+[INFO] 13:17:24:673 Consola/(3929:3929): Codigo de instruccion: 15 
+[INFO] 13:26:06:208 Consola/(4267:4267): Instrucciones leidas
+[INFO] 13:26:06:208 Consola/(4267:4267): Lista mapeada
+[INFO] 13:27:10:252 Consola/(4318:4318): Instrucciones leidas
+[INFO] 13:27:11:262 Consola/(4318:4318): Lista mapeada
+[INFO] 13:27:44:128 Consola/(4376:4376): Instrucciones leidas
+[INFO] 13:27:46:245 Consola/(4376:4376): Lista mapeada
+[INFO] 13:28:25:727 Consola/(4479:4479): Instrucciones leidas
+[INFO] 13:28:26:549 Consola/(4479:4479): Lista mapeada
+[INFO] 13:28:29:267 Consola/(4479:4479): Lista destruida
+[INFO] 13:31:59:160 Consola/(4637:4637): Instrucciones leidas
+[INFO] 13:31:59:876 Consola/(4637:4637): Lista mapeada
+[INFO] 13:32:29:716 Consola/(4723:4723): Instrucciones leidas
+[INFO] 13:32:30:718 Consola/(4723:4723): Lista mapeada
+[INFO] 13:32:32:980 Consola/(4723:4723): Lista destruida
+[INFO] 13:38:41:231 Consola/(4723:4723): Codigo de instruccion: 2 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: AX 
+[INFO] 13:38:41:232 Consola/(4723:4723): String2: 10 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 4 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 120 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: AX 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 9 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: DISCO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 8 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 10 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 10 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: DISCO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 3 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 120 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: BX 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 11 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: ARCHIVO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 14 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 5 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 64 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: ARCHIVO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 6 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 10 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: ARCHIVO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 7 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 1 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero2: 128 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 1 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 4 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero2: 4 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: ARCHIVO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 0 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 16 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero2: 4 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: ARCHIVO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 13 
+[INFO] 13:38:41:232 Consola/(4723:4723): Numero1: 1 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 12 
+[INFO] 13:38:41:232 Consola/(4723:4723): String1: ARCHIVO 
+[INFO] 13:38:41:232 Consola/(4723:4723): Codigo de instruccion: 15 
+[INFO] 13:44:31:114 Consola/(5350:5350): Instrucciones leidas
+[INFO] 13:44:31:115 Consola/(5350:5350): Lista mapeada
+[INFO] 13:45:01:772 Consola/(5392:5392): Instrucciones leidas
+[INFO] 13:45:02:594 Consola/(5392:5392): Lista mapeada
+[INFO] 13:45:43:117 Consola/(5513:5513): Instrucciones leidas
+[INFO] 13:45:43:117 Consola/(5513:5513): Lista mapeada
+[INFO] 13:45:43:117 Consola/(5513:5513): Lista enviada
+[INFO] 13:45:56:656 Consola/(5544:5544): Instrucciones leidas
+[INFO] 13:45:57:409 Consola/(5544:5544): Lista mapeada
+[INFO] 13:45:58:382 Consola/(5544:5544): Lista enviada
+[INFO] 13:46:10:189 Consola/(5602:5602): Instrucciones leidas
+[INFO] 13:46:10:872 Consola/(5602:5602): Lista mapeada
+[INFO] 13:46:12:303 Consola/(5602:5602): Lista enviada
+[INFO] 13:50:09:923 Consola/(5763:5763): Instrucciones leidas
+[INFO] 13:50:09:923 Consola/(5763:5763): Lista mapeada
+[INFO] 13:50:09:923 Consola/(5763:5763): Lista enviada
+[INFO] 13:50:09:923 Consola/(5763:5763): Lista destruida
+[INFO] 14:10:24:529 Consola/(6486:6486): Socket kernel :4
+[INFO] 14:10:24:529 Consola/(6486:6486): Conectado con kernel
+[INFO] 14:10:24:529 Consola/(6486:6486): Instrucciones leidas
+[INFO] 14:10:24:529 Consola/(6486:6486): Lista mapeada
+[INFO] 14:10:24:529 Consola/(6486:6486): Escribi en el buffer la lista de instrucciones
+[INFO] 14:10:24:529 Consola/(6486:6486): A punto de enviar el codigo de operacion
+[INFO] 14:10:24:529 Consola/(6486:6486): Envie el codigo de op
+[INFO] 14:10:24:529 Consola/(6486:6486): A punto de enviar el tamanio del buffer
+[INFO] 14:10:24:529 Consola/(6486:6486): Envie el tamanio del buffer
+[INFO] 14:10:24:529 Consola/(6486:6486): A punto de enviar el stream del buffer
+[INFO] 14:10:24:530 Consola/(6486:6486): Envie el stream del buffer
+[INFO] 14:10:24:530 Consola/(6486:6486): Lista enviada
+[INFO] 14:10:24:530 Consola/(6486:6486): Lista destruida
+[INFO] 14:10:24:658 Consola/(6486:6486): Codigo recibido: 21860
+[INFO] 14:11:15:810 Consola/(6517:6517): Socket kernel :4
+[INFO] 14:11:15:810 Consola/(6517:6517): Conectado con kernel
+[INFO] 14:11:15:811 Consola/(6517:6517): Instrucciones leidas
+[INFO] 14:11:15:811 Consola/(6517:6517): Lista mapeada
+[INFO] 14:11:15:811 Consola/(6517:6517): Escribi en el buffer la lista de instrucciones
+[INFO] 14:11:15:811 Consola/(6517:6517): A punto de enviar el codigo de operacion
+[INFO] 14:11:15:811 Consola/(6517:6517): Envie el codigo de op
+[INFO] 14:11:15:811 Consola/(6517:6517): A punto de enviar el tamanio del buffer
+[INFO] 14:11:15:811 Consola/(6517:6517): Envie el tamanio del buffer
+[INFO] 14:11:15:811 Consola/(6517:6517): A punto de enviar el stream del buffer
+[INFO] 14:11:15:811 Consola/(6517:6517): Envie el stream del buffer
+[INFO] 14:11:15:817 Consola/(6517:6517): Lista enviada
+[INFO] 14:11:15:817 Consola/(6517:6517): Lista destruida
+[INFO] 14:11:15:925 Consola/(6517:6517): Codigo recibido: 22099
+[INFO] 14:12:07:187 Consola/(6593:6593): Socket kernel :4
+[INFO] 14:12:07:187 Consola/(6593:6593): Conectado con kernel
+[INFO] 14:12:11:283 Consola/(6593:6593): Instrucciones leidas
+[INFO] 14:12:12:771 Consola/(6593:6593): Lista mapeada
+[INFO] 14:12:32:774 Consola/(6593:6593): Escribi en el buffer la lista de instrucciones
+[INFO] 14:12:32:774 Consola/(6593:6593): A punto de enviar el codigo de operacion
+[INFO] 14:12:32:774 Consola/(6593:6593): Envie el codigo de op
+[INFO] 14:12:32:775 Consola/(6593:6593): A punto de enviar el tamanio del buffer
+[INFO] 14:12:32:775 Consola/(6593:6593): Envie el tamanio del buffer
+[INFO] 14:12:32:775 Consola/(6593:6593): A punto de enviar el stream del buffer
+[INFO] 14:12:32:775 Consola/(6593:6593): Envie el stream del buffer
+[INFO] 14:18:31:820 Consola/(6768:6768): Socket kernel :4
+[INFO] 14:18:31:820 Consola/(6768:6768): Conectado con kernel
+[INFO] 14:18:31:820 Consola/(6768:6768): Instrucciones leidas
+[INFO] 14:18:31:820 Consola/(6768:6768): Lista mapeada
+[INFO] 14:18:31:820 Consola/(6768:6768): Escribi en el buffer la lista de instrucciones
+[INFO] 14:18:31:820 Consola/(6768:6768): A punto de enviar el codigo de operacion
+[INFO] 14:18:31:820 Consola/(6768:6768): Envie el codigo de op
+[INFO] 14:18:31:820 Consola/(6768:6768): A punto de enviar el tamanio del buffer
+[INFO] 14:18:31:821 Consola/(6768:6768): Envie el tamanio del buffer
+[INFO] 14:18:31:821 Consola/(6768:6768): A punto de enviar el stream del buffer
+[INFO] 14:18:31:823 Consola/(6768:6768): Envie el stream del buffer
+[INFO] 14:18:31:823 Consola/(6768:6768): Lista enviada
+[INFO] 14:18:31:823 Consola/(6768:6768): Lista destruida
+[INFO] 14:18:31:823 Consola/(6768:6768): Codigo recibido: 21766
+[INFO] 14:21:08:804 Consola/(6888:6888): Socket kernel :4
+[INFO] 14:21:08:805 Consola/(6888:6888): Conectado con kernel
+[INFO] 14:21:08:806 Consola/(6888:6888): Instrucciones leidas
+[INFO] 14:21:08:806 Consola/(6888:6888): Lista mapeada
+[INFO] 14:21:08:806 Consola/(6888:6888): Escribi en el buffer la lista de instrucciones
+[INFO] 14:21:08:806 Consola/(6888:6888): A punto de enviar el codigo de operacion
+[INFO] 14:21:08:806 Consola/(6888:6888): Envie el codigo de op
+[INFO] 14:21:08:806 Consola/(6888:6888): A punto de enviar el tamanio del buffer
+[INFO] 14:21:08:807 Consola/(6888:6888): Envie el tamanio del buffer
+[INFO] 14:21:08:807 Consola/(6888:6888): A punto de enviar el stream del buffer
+[INFO] 14:21:08:807 Consola/(6888:6888): Envie el stream del buffer
+[INFO] 14:21:08:807 Consola/(6888:6888): Lista enviada
+[INFO] 14:21:08:807 Consola/(6888:6888): Lista destruida
+[INFO] 14:21:46:308 Consola/(6888:6888): Codigo recibido: 21766
+[INFO] 14:23:43:571 Consola/(7018:7018): Socket kernel :4
+[INFO] 14:23:43:571 Consola/(7018:7018): Conectado con kernel
+[INFO] 14:23:43:571 Consola/(7018:7018): Instrucciones leidas
+[INFO] 14:23:43:571 Consola/(7018:7018): Lista mapeada
+[INFO] 14:23:43:571 Consola/(7018:7018): Escribi en el buffer la lista de instrucciones
+[INFO] 14:23:43:571 Consola/(7018:7018): A punto de enviar el codigo de operacion
+[INFO] 14:23:43:571 Consola/(7018:7018): Envie el codigo de op
+[INFO] 14:23:43:571 Consola/(7018:7018): A punto de enviar el tamanio del buffer
+[INFO] 14:23:43:571 Consola/(7018:7018): Envie el tamanio del buffer
+[INFO] 14:23:43:572 Consola/(7018:7018): A punto de enviar el stream del buffer
+[INFO] 14:23:43:590 Consola/(7018:7018): Envie el stream del buffer
+[INFO] 14:23:43:590 Consola/(7018:7018): Lista enviada
+[INFO] 14:23:43:590 Consola/(7018:7018): Lista destruida
+[INFO] 14:23:43:590 Consola/(7018:7018): Codigo recibido: 22022
+[INFO] 14:24:12:953 Consola/(7083:7083): Socket kernel :4
+[INFO] 14:24:12:953 Consola/(7083:7083): Conectado con kernel
+[INFO] 14:24:12:953 Consola/(7083:7083): Instrucciones leidas
+[INFO] 14:24:12:953 Consola/(7083:7083): Lista mapeada
+[INFO] 14:24:12:954 Consola/(7083:7083): Escribi en el buffer la lista de instrucciones
+[INFO] 14:24:12:954 Consola/(7083:7083): A punto de enviar el codigo de operacion
+[INFO] 14:24:12:954 Consola/(7083:7083): Envie el codigo de op
+[INFO] 14:24:12:954 Consola/(7083:7083): A punto de enviar el tamanio del buffer
+[INFO] 14:24:12:954 Consola/(7083:7083): Envie el tamanio del buffer
+[INFO] 14:24:12:954 Consola/(7083:7083): A punto de enviar el stream del buffer
+[INFO] 14:24:12:954 Consola/(7083:7083): Envie el stream del buffer
+[INFO] 14:24:12:954 Consola/(7083:7083): Lista enviada
+[INFO] 14:24:12:954 Consola/(7083:7083): Lista destruida
+[INFO] 14:24:26:973 Consola/(7083:7083): Codigo recibido: 21766
+[INFO] 14:27:57:097 Consola/(7318:7318): Socket kernel :4
+[INFO] 14:27:57:097 Consola/(7318:7318): Conectado con kernel
+[INFO] 14:27:59:338 Consola/(7318:7318): Instrucciones leidas
+[INFO] 14:28:46:786 Consola/(7402:7402): Socket kernel :4
+[INFO] 14:28:46:786 Consola/(7402:7402): Conectado con kernel
+[INFO] 14:28:46:787 Consola/(7402:7402): Instrucciones leidas
+[INFO] 14:28:46:787 Consola/(7402:7402): Lista mapeada
+[INFO] 14:28:46:787 Consola/(7402:7402): Escribi en el buffer la lista de instrucciones
+[INFO] 14:28:46:787 Consola/(7402:7402): A punto de enviar el codigo de operacion
+[INFO] 14:28:46:787 Consola/(7402:7402): Envie el codigo de op
+[INFO] 14:28:46:787 Consola/(7402:7402): A punto de enviar el tamanio del buffer
+[INFO] 14:28:46:787 Consola/(7402:7402): Envie el tamanio del buffer
+[INFO] 14:28:46:787 Consola/(7402:7402): A punto de enviar el stream del buffer
+[INFO] 14:28:46:791 Consola/(7402:7402): Envie el stream del buffer
+[INFO] 14:28:46:791 Consola/(7402:7402): Lista enviada
+[INFO] 14:28:46:792 Consola/(7402:7402): Lista destruida
+[INFO] 14:28:46:792 Consola/(7402:7402): Codigo recibido: -1
+[INFO] 14:30:55:836 Consola/(7553:7553): Socket kernel :4
+[INFO] 14:30:55:836 Consola/(7553:7553): Conectado con kernel
+[INFO] 14:30:55:837 Consola/(7553:7553): Instrucciones leidas
+[INFO] 14:30:55:837 Consola/(7553:7553): Lista mapeada
+[INFO] 14:30:55:838 Consola/(7553:7553): Escribi en el buffer la lista de instrucciones
+[INFO] 14:30:55:839 Consola/(7553:7553): A punto de enviar el codigo de operacion
+[INFO] 14:30:55:839 Consola/(7553:7553): Envie el codigo de op
+[INFO] 14:30:55:839 Consola/(7553:7553): A punto de enviar el tamanio del buffer
+[INFO] 14:30:55:839 Consola/(7553:7553): Envie el tamanio del buffer
+[INFO] 14:30:55:839 Consola/(7553:7553): A punto de enviar el stream del buffer
+[INFO] 14:30:55:841 Consola/(7553:7553): Envie el stream del buffer
+[INFO] 14:30:55:841 Consola/(7553:7553): Lista enviada
+[INFO] 14:30:55:842 Consola/(7553:7553): Lista destruida
+[INFO] 14:30:55:842 Consola/(7553:7553): Codigo recibido: 1
+[INFO] 14:34:29:050 Consola/(7730:7730): Socket kernel :4
+[INFO] 14:34:29:051 Consola/(7730:7730): Conectado con kernel
+[INFO] 14:34:29:051 Consola/(7730:7730): Instrucciones leidas
+[INFO] 14:34:29:051 Consola/(7730:7730): Lista mapeada
+[INFO] 14:34:29:051 Consola/(7730:7730): Escribi en el buffer la lista de instrucciones
+[INFO] 14:34:29:051 Consola/(7730:7730): A punto de enviar el codigo de operacion
+[INFO] 14:34:29:051 Consola/(7730:7730): Envie el codigo de op
+[INFO] 14:34:29:051 Consola/(7730:7730): A punto de enviar el tamanio del buffer
+[INFO] 14:34:29:051 Consola/(7730:7730): Envie el tamanio del buffer
+[INFO] 14:34:29:051 Consola/(7730:7730): A punto de enviar el stream del buffer
+[INFO] 14:34:29:055 Consola/(7730:7730): Envie el stream del buffer
+[INFO] 14:34:29:055 Consola/(7730:7730): Lista enviada
+[INFO] 14:34:29:055 Consola/(7730:7730): Lista destruida
+[INFO] 14:34:29:216 Consola/(7730:7730): Codigo recibido: 246
+[INFO] 14:37:06:523 Consola/(7926:7926): Socket kernel :4
+[INFO] 14:37:06:523 Consola/(7926:7926): Conectado con kernel
+[INFO] 14:37:06:523 Consola/(7926:7926): Instrucciones leidas
+[INFO] 14:37:06:523 Consola/(7926:7926): Lista mapeada
+[INFO] 14:37:06:523 Consola/(7926:7926): Escribi en el buffer la lista de instrucciones
+[INFO] 14:37:06:523 Consola/(7926:7926): A punto de enviar el codigo de operacion
+[INFO] 14:37:06:523 Consola/(7926:7926): Envie el codigo de op
+[INFO] 14:37:06:523 Consola/(7926:7926): A punto de enviar el tamanio del buffer
+[INFO] 14:37:06:524 Consola/(7926:7926): Envie el tamanio del buffer
+[INFO] 14:37:06:524 Consola/(7926:7926): A punto de enviar el stream del buffer
+[INFO] 14:37:06:533 Consola/(7926:7926): Envie el stream del buffer
+[INFO] 14:37:06:568 Consola/(7926:7926): Lista enviada
+[INFO] 14:37:06:568 Consola/(7926:7926): Lista destruida
+[INFO] 14:37:06:568 Consola/(7926:7926): Codigo recibido: 22022
+[INFO] 14:38:20:026 Consola/(8027:8027): Socket kernel :4
+[INFO] 14:38:20:026 Consola/(8027:8027): Conectado con kernel
+[INFO] 14:38:20:026 Consola/(8027:8027): Instrucciones leidas
+[INFO] 14:38:20:026 Consola/(8027:8027): Lista mapeada
+[INFO] 14:38:20:027 Consola/(8027:8027): Escribi en el buffer la lista de instrucciones
+[INFO] 14:38:20:027 Consola/(8027:8027): A punto de enviar el codigo de operacion
+[INFO] 14:38:20:027 Consola/(8027:8027): Envie el codigo de op
+[INFO] 14:38:20:027 Consola/(8027:8027): A punto de enviar el tamanio del buffer
+[INFO] 14:38:20:027 Consola/(8027:8027): Envie el tamanio del buffer
+[INFO] 14:38:20:027 Consola/(8027:8027): A punto de enviar el stream del buffer
+[INFO] 14:38:20:037 Consola/(8027:8027): Envie el stream del buffer
+[INFO] 14:38:20:037 Consola/(8027:8027): Lista enviada
+[INFO] 14:38:20:037 Consola/(8027:8027): Lista destruida
+[INFO] 14:38:20:037 Consola/(8027:8027): Codigo recibido: 21766
+[INFO] 14:40:30:982 Consola/(8337:8337): Socket kernel :4
+[INFO] 14:40:30:983 Consola/(8337:8337): Conectado con kernel
+[INFO] 14:40:30:983 Consola/(8337:8337): Instrucciones leidas
+[INFO] 14:40:30:983 Consola/(8337:8337): Lista mapeada
+[INFO] 14:40:30:983 Consola/(8337:8337): Escribi en el buffer la lista de instrucciones
+[INFO] 14:40:30:983 Consola/(8337:8337): A punto de enviar el codigo de operacion
+[INFO] 14:40:30:983 Consola/(8337:8337): Envie el codigo de op
+[INFO] 14:40:30:983 Consola/(8337:8337): A punto de enviar el tamanio del buffer
+[INFO] 14:40:30:983 Consola/(8337:8337): Envie el tamanio del buffer
+[INFO] 14:40:30:983 Consola/(8337:8337): A punto de enviar el stream del buffer
+[INFO] 14:40:31:016 Consola/(8337:8337): Envie el stream del buffer
+[INFO] 14:40:31:016 Consola/(8337:8337): Lista enviada
+[INFO] 14:40:31:016 Consola/(8337:8337): Lista destruida
+[INFO] 14:40:31:016 Consola/(8337:8337): Fin proceso consola: 6
+[INFO] 14:41:37:780 Consola/(8437:8437): Socket kernel :4
+[INFO] 14:41:37:780 Consola/(8437:8437): Conectado con kernel
+[INFO] 14:41:37:780 Consola/(8437:8437): Instrucciones leidas
+[INFO] 14:41:37:780 Consola/(8437:8437): Lista mapeada
+[INFO] 14:41:37:780 Consola/(8437:8437): Escribi en el buffer la lista de instrucciones
+[INFO] 14:41:37:780 Consola/(8437:8437): A punto de enviar el codigo de operacion
+[INFO] 14:41:37:781 Consola/(8437:8437): Envie el codigo de op
+[INFO] 14:41:37:781 Consola/(8437:8437): A punto de enviar el tamanio del buffer
+[INFO] 14:41:37:781 Consola/(8437:8437): Envie el tamanio del buffer
+[INFO] 14:41:37:781 Consola/(8437:8437): A punto de enviar el stream del buffer
+[INFO] 14:41:37:789 Consola/(8437:8437): Envie el stream del buffer
+[INFO] 14:41:37:789 Consola/(8437:8437): Lista enviada
+[INFO] 14:41:37:789 Consola/(8437:8437): Lista destruida
+[INFO] 14:41:37:789 Consola/(8437:8437): Fin proceso consola: 6
+[INFO] 14:42:27:949 Consola/(8494:8494): Socket kernel :4
+[INFO] 14:42:27:949 Consola/(8494:8494): Conectado con kernel
+[INFO] 14:42:27:949 Consola/(8494:8494): Instrucciones leidas
+[INFO] 14:42:27:949 Consola/(8494:8494): Lista mapeada
+[INFO] 14:42:27:949 Consola/(8494:8494): Escribi en el buffer la lista de instrucciones
+[INFO] 14:42:27:949 Consola/(8494:8494): A punto de enviar el codigo de operacion
+[INFO] 14:42:27:950 Consola/(8494:8494): Envie el codigo de op
+[INFO] 14:42:27:950 Consola/(8494:8494): A punto de enviar el tamanio del buffer
+[INFO] 14:42:27:950 Consola/(8494:8494): Envie el tamanio del buffer
+[INFO] 14:42:27:950 Consola/(8494:8494): A punto de enviar el stream del buffer
+[INFO] 14:42:27:958 Consola/(8494:8494): Envie el stream del buffer
+[INFO] 14:42:27:960 Consola/(8494:8494): Lista enviada
+[INFO] 14:42:27:960 Consola/(8494:8494): Lista destruida
+[INFO] 14:42:27:960 Consola/(8494:8494): Fin proceso consola: 6
+[INFO] 14:43:32:758 Consola/(8671:8671): Socket kernel :4
+[INFO] 14:43:32:758 Consola/(8671:8671): Conectado con kernel
+[INFO] 14:43:32:758 Consola/(8671:8671): Instrucciones leidas
+[INFO] 14:43:32:758 Consola/(8671:8671): Lista mapeada
+[INFO] 14:43:32:758 Consola/(8671:8671): Escribi en el buffer la lista de instrucciones
+[INFO] 14:43:32:759 Consola/(8671:8671): A punto de enviar el codigo de operacion
+[INFO] 14:43:32:759 Consola/(8671:8671): Envie el codigo de op
+[INFO] 14:43:32:759 Consola/(8671:8671): A punto de enviar el tamanio del buffer
+[INFO] 14:43:32:759 Consola/(8671:8671): Envie el tamanio del buffer
+[INFO] 14:43:32:759 Consola/(8671:8671): A punto de enviar el stream del buffer
+[INFO] 14:43:32:759 Consola/(8671:8671): Envie el stream del buffer
+[INFO] 14:43:32:759 Consola/(8671:8671): Lista enviada
+[INFO] 14:43:32:759 Consola/(8671:8671): Lista destruida
+[INFO] 14:43:32:764 Consola/(8671:8671): Fin proceso consola: 6
+[INFO] 14:44:21:317 Consola/(8837:8837): Socket kernel :4
+[INFO] 14:44:21:317 Consola/(8837:8837): Conectado con kernel
+[INFO] 14:44:21:317 Consola/(8837:8837): Instrucciones leidas
+[INFO] 14:44:21:317 Consola/(8837:8837): Lista mapeada
+[INFO] 14:44:21:317 Consola/(8837:8837): Escribi en el buffer la lista de instrucciones
+[INFO] 14:44:21:317 Consola/(8837:8837): A punto de enviar el codigo de operacion
+[INFO] 14:44:21:317 Consola/(8837:8837): Envie el codigo de op
+[INFO] 14:44:21:317 Consola/(8837:8837): A punto de enviar el tamanio del buffer
+[INFO] 14:44:21:317 Consola/(8837:8837): Envie el tamanio del buffer
+[INFO] 14:44:21:317 Consola/(8837:8837): A punto de enviar el stream del buffer
+[INFO] 14:44:21:321 Consola/(8837:8837): Envie el stream del buffer
+[INFO] 14:44:21:321 Consola/(8837:8837): Lista enviada
+[INFO] 14:44:21:321 Consola/(8837:8837): Lista destruida
+[INFO] 14:44:21:321 Consola/(8837:8837): Fin proceso consola: 6
+[INFO] 15:02:26:642 Consola/(9538:9538): Socket kernel :4
+[INFO] 15:02:26:647 Consola/(9538:9538): Conectado con kernel
+[INFO] 15:02:26:647 Consola/(9538:9538): Instrucciones leidas
+[INFO] 15:02:26:647 Consola/(9538:9538): Lista mapeada
+[INFO] 15:02:26:647 Consola/(9538:9538): Escribi en el buffer la lista de instrucciones
+[INFO] 15:02:26:647 Consola/(9538:9538): A punto de enviar el codigo de operacion
+[INFO] 15:02:26:647 Consola/(9538:9538): Envie el codigo de op
+[INFO] 15:02:26:647 Consola/(9538:9538): A punto de enviar el tamanio del buffer
+[INFO] 15:02:26:647 Consola/(9538:9538): Envie el tamanio del buffer
+[INFO] 15:02:26:647 Consola/(9538:9538): A punto de enviar el stream del buffer
+[INFO] 15:02:26:651 Consola/(9538:9538): Envie el stream del buffer
+[INFO] 15:02:26:651 Consola/(9538:9538): Lista enviada
+[INFO] 15:02:26:651 Consola/(9538:9538): Lista destruida
+[INFO] 15:02:26:805 Consola/(9538:9538): Codigo recibido: 21924
+[INFO] 15:04:54:150 Consola/(9624:9624): Socket kernel :4
+[INFO] 15:04:54:150 Consola/(9624:9624): Conectado con kernel
+[INFO] 15:04:54:150 Consola/(9624:9624): Instrucciones leidas
+[INFO] 15:04:54:150 Consola/(9624:9624): Lista mapeada
+[INFO] 15:04:54:150 Consola/(9624:9624): Escribi en el buffer la lista de instrucciones
+[INFO] 15:04:54:150 Consola/(9624:9624): A punto de enviar el codigo de operacion
+[INFO] 15:04:54:151 Consola/(9624:9624): Envie el codigo de op
+[INFO] 15:04:54:151 Consola/(9624:9624): A punto de enviar el tamanio del buffer
+[INFO] 15:04:54:151 Consola/(9624:9624): Envie el tamanio del buffer
+[INFO] 15:04:54:151 Consola/(9624:9624): A punto de enviar el stream del buffer
+[INFO] 15:04:54:152 Consola/(9624:9624): Envie el stream del buffer
+[INFO] 15:04:54:154 Consola/(9624:9624): Lista enviada
+[INFO] 15:04:54:154 Consola/(9624:9624): Lista destruida
+[INFO] 15:04:54:263 Consola/(9624:9624): Codigo recibido: 21923
+[INFO] 15:06:29:903 Consola/(9688:9688): Socket kernel :4
+[INFO] 15:06:29:904 Consola/(9688:9688): Conectado con kernel
+[INFO] 15:06:29:904 Consola/(9688:9688): Instrucciones leidas
+[INFO] 15:06:29:904 Consola/(9688:9688): Lista mapeada
+[INFO] 15:06:29:904 Consola/(9688:9688): Escribi en el buffer la lista de instrucciones
+[INFO] 15:06:29:904 Consola/(9688:9688): A punto de enviar el codigo de operacion
+[INFO] 15:06:29:904 Consola/(9688:9688): Envie el codigo de op
+[INFO] 15:06:29:904 Consola/(9688:9688): A punto de enviar el tamanio del buffer
+[INFO] 15:06:29:905 Consola/(9688:9688): Envie el tamanio del buffer
+[INFO] 15:06:29:905 Consola/(9688:9688): A punto de enviar el stream del buffer
+[INFO] 15:06:29:910 Consola/(9688:9688): Envie el stream del buffer
+[INFO] 15:06:29:910 Consola/(9688:9688): Lista enviada
+[INFO] 15:06:29:910 Consola/(9688:9688): Lista destruida
+[INFO] 15:06:31:803 Consola/(9688:9688): Codigo recibido: 22036
+[INFO] 15:09:10:227 Consola/(9819:9819): Socket kernel :4
+[INFO] 15:09:10:228 Consola/(9819:9819): Conectado con kernel
+[INFO] 15:09:12:639 Consola/(9819:9819): Instrucciones leidas
+[INFO] 15:10:41:354 Consola/(9981:9981): Socket kernel :4
+[INFO] 15:10:41:354 Consola/(9981:9981): Conectado con kernel
+[INFO] 15:10:44:738 Consola/(9981:9981): Instrucciones leidas
+[INFO] 15:10:46:349 Consola/(9981:9981): Lista mapeada
+[INFO] 15:10:57:350 Consola/(9981:9981): Escribi en el buffer la lista de instrucciones
+[INFO] 15:10:57:350 Consola/(9981:9981): A punto de enviar el codigo de operacion
+[INFO] 15:10:57:350 Consola/(9981:9981): Envie el codigo de op
+[INFO] 15:10:57:350 Consola/(9981:9981): A punto de enviar el tamanio del buffer
+[INFO] 15:10:57:351 Consola/(9981:9981): Envie el tamanio del buffer
+[INFO] 15:10:57:351 Consola/(9981:9981): A punto de enviar el stream del buffer
+[INFO] 15:10:57:351 Consola/(9981:9981): Envie el stream del buffer
+[INFO] 15:11:01:447 Consola/(9981:9981): Lista enviada
+[INFO] 15:11:02:424 Consola/(9981:9981): Lista destruida
+[INFO] 15:28:44:153 Consola/(10766:10766): Socket kernel :4
+[INFO] 15:28:44:154 Consola/(10766:10766): Conectado con kernel
+[INFO] 15:28:44:154 Consola/(10766:10766): Instrucciones leidas
+[INFO] 15:28:44:154 Consola/(10766:10766): Lista mapeada
+[INFO] 15:28:44:154 Consola/(10766:10766): Escribi en el buffer la lista de instrucciones
+[INFO] 15:28:44:154 Consola/(10766:10766): A punto de enviar el codigo de operacion
+[INFO] 15:28:44:154 Consola/(10766:10766): Envie el codigo de op
+[INFO] 15:28:44:154 Consola/(10766:10766): A punto de enviar el tamanio del buffer
+[INFO] 15:28:44:154 Consola/(10766:10766): Envie el tamanio del buffer
+[INFO] 15:28:44:154 Consola/(10766:10766): A punto de enviar el stream del buffer
+[INFO] 15:28:44:156 Consola/(10766:10766): Envie el stream del buffer
+[INFO] 15:28:44:156 Consola/(10766:10766): Lista enviada
+[INFO] 15:28:44:156 Consola/(10766:10766): Lista destruida
+[INFO] 15:28:44:280 Consola/(10766:10766): Codigo recibido: 21941
+[INFO] 15:29:17:411 Consola/(10878:10878): Socket kernel :4
+[INFO] 15:29:17:411 Consola/(10878:10878): Conectado con kernel
+[INFO] 15:29:18:382 Consola/(10878:10878): Instrucciones leidas
+[INFO] 15:29:21:744 Consola/(10878:10878): Lista mapeada
+[INFO] 15:33:25:412 Consola/(2279:2279): Socket kernel :4
+[INFO] 15:33:25:418 Consola/(2279:2279): Conectado con kernel
+[INFO] 15:33:29:029 Consola/(2279:2279): Instrucciones leidas
+[INFO] 15:33:30:089 Consola/(2279:2279): Lista mapeada
+[INFO] 15:33:39:875 Consola/(2279:2279): Escribi en el buffer la lista de instrucciones
+[INFO] 15:33:39:875 Consola/(2279:2279): A punto de enviar el codigo de operacion
+[INFO] 15:33:39:875 Consola/(2279:2279): Envie el codigo de op
+[INFO] 15:33:39:876 Consola/(2279:2279): A punto de enviar el tamanio del buffer
+[INFO] 15:33:39:876 Consola/(2279:2279): Envie el tamanio del buffer
+[INFO] 15:33:39:876 Consola/(2279:2279): A punto de enviar el stream del buffer
+[INFO] 15:33:39:876 Consola/(2279:2279): Envie el stream del buffer
+[INFO] 15:33:59:533 Consola/(2279:2279): Lista enviada
+[INFO] 15:35:51:621 Consola/(2410:2410): Socket kernel :4
+[INFO] 15:35:51:621 Consola/(2410:2410): Conectado con kernel
+[INFO] 15:35:51:621 Consola/(2410:2410): Instrucciones leidas
+[INFO] 15:35:51:621 Consola/(2410:2410): Lista mapeada
+[INFO] 15:35:51:621 Consola/(2410:2410): Escribi en el buffer la lista de instrucciones
+[INFO] 15:35:51:621 Consola/(2410:2410): A punto de enviar el codigo de operacion
+[INFO] 15:35:51:623 Consola/(2410:2410): Envie el codigo de op
+[INFO] 15:35:51:623 Consola/(2410:2410): A punto de enviar el tamanio del buffer
+[INFO] 15:35:51:623 Consola/(2410:2410): Envie el tamanio del buffer
+[INFO] 15:35:51:623 Consola/(2410:2410): A punto de enviar el stream del buffer
+[INFO] 15:35:51:624 Consola/(2410:2410): Envie el stream del buffer
+[INFO] 15:35:51:624 Consola/(2410:2410): Lista enviada
+[INFO] 15:35:51:624 Consola/(2410:2410): Lista destruida
+[INFO] 15:35:51:736 Consola/(2410:2410): Codigo recibido: 21935
+[INFO] 15:36:29:841 Consola/(2494:2494): Socket kernel :4
+[INFO] 15:36:29:841 Consola/(2494:2494): Conectado con kernel
+[INFO] 15:36:29:842 Consola/(2494:2494): Instrucciones leidas
+[INFO] 15:36:29:842 Consola/(2494:2494): Lista mapeada
+[INFO] 15:36:29:842 Consola/(2494:2494): Escribi en el buffer la lista de instrucciones
+[INFO] 15:36:29:842 Consola/(2494:2494): A punto de enviar el codigo de operacion
+[INFO] 15:36:29:842 Consola/(2494:2494): Envie el codigo de op
+[INFO] 15:36:29:842 Consola/(2494:2494): A punto de enviar el tamanio del buffer
+[INFO] 15:36:29:842 Consola/(2494:2494): Envie el tamanio del buffer
+[INFO] 15:36:29:842 Consola/(2494:2494): A punto de enviar el stream del buffer
+[INFO] 15:36:29:842 Consola/(2494:2494): Envie el stream del buffer
+[INFO] 15:36:29:842 Consola/(2494:2494): Lista enviada
+[INFO] 15:36:29:842 Consola/(2494:2494): Lista destruida
+[INFO] 15:36:29:842 Consola/(2494:2494): Codigo recibido: 21898
+[INFO] 15:37:23:617 Consola/(2529:2529): Socket kernel :4
+[INFO] 15:37:23:617 Consola/(2529:2529): Conectado con kernel
+[INFO] 15:37:23:618 Consola/(2529:2529): Instrucciones leidas
+[INFO] 15:37:23:618 Consola/(2529:2529): Lista mapeada
+[INFO] 15:37:23:618 Consola/(2529:2529): Escribi en el buffer la lista de instrucciones
+[INFO] 15:37:23:618 Consola/(2529:2529): A punto de enviar el codigo de operacion
+[INFO] 15:37:23:619 Consola/(2529:2529): Envie el codigo de op
+[INFO] 15:37:23:620 Consola/(2529:2529): A punto de enviar el tamanio del buffer
+[INFO] 15:37:23:621 Consola/(2529:2529): Envie el tamanio del buffer
+[INFO] 15:37:23:621 Consola/(2529:2529): A punto de enviar el stream del buffer
+[INFO] 15:37:23:624 Consola/(2529:2529): Envie el stream del buffer
+[INFO] 15:37:23:624 Consola/(2529:2529): Lista enviada
+[INFO] 15:37:23:624 Consola/(2529:2529): Lista destruida
+[INFO] 15:37:24:902 Consola/(2529:2529): Codigo recibido: 21892
+[INFO] 15:39:55:653 Consola/(2651:2651): Socket kernel :4
+[INFO] 15:39:55:654 Consola/(2651:2651): Conectado con kernel
+[INFO] 15:39:55:654 Consola/(2651:2651): Instrucciones leidas
+[INFO] 15:39:55:654 Consola/(2651:2651): Lista mapeada
+[INFO] 15:39:55:654 Consola/(2651:2651): Escribi en el buffer la lista de instrucciones
+[INFO] 15:39:55:654 Consola/(2651:2651): A punto de enviar el codigo de operacion
+[INFO] 15:39:55:655 Consola/(2651:2651): Envie el codigo de op
+[INFO] 15:39:55:655 Consola/(2651:2651): A punto de enviar el tamanio del buffer
+[INFO] 15:39:55:655 Consola/(2651:2651): Envie el tamanio del buffer
+[INFO] 15:39:55:655 Consola/(2651:2651): A punto de enviar el stream del buffer
+[INFO] 15:39:55:656 Consola/(2651:2651): Envie el stream del buffer
+[INFO] 15:39:55:657 Consola/(2651:2651): Lista enviada
+[INFO] 15:39:55:657 Consola/(2651:2651): Lista destruida
+[INFO] 15:39:55:758 Consola/(2651:2651): Codigo recibido: 22067
+[INFO] 15:40:31:991 Consola/(2686:2686): Socket kernel :4
+[INFO] 15:40:31:991 Consola/(2686:2686): Conectado con kernel
+[INFO] 15:40:31:991 Consola/(2686:2686): Instrucciones leidas
+[INFO] 15:40:31:992 Consola/(2686:2686): Lista mapeada
+[INFO] 15:40:31:992 Consola/(2686:2686): Escribi en el buffer la lista de instrucciones
+[INFO] 15:40:31:992 Consola/(2686:2686): A punto de enviar el codigo de operacion
+[INFO] 15:40:31:992 Consola/(2686:2686): Envie el codigo de op
+[INFO] 15:40:31:992 Consola/(2686:2686): A punto de enviar el tamanio del buffer
+[INFO] 15:40:31:992 Consola/(2686:2686): Envie el tamanio del buffer
+[INFO] 15:40:31:993 Consola/(2686:2686): A punto de enviar el stream del buffer
+[INFO] 15:40:31:993 Consola/(2686:2686): Envie el stream del buffer
+[INFO] 15:40:31:993 Consola/(2686:2686): Lista enviada
+[INFO] 15:40:31:993 Consola/(2686:2686): Lista destruida
+[INFO] 15:40:31:993 Consola/(2686:2686): Codigo recibido: 21872
+[INFO] 15:42:08:619 Consola/(2753:2753): Socket kernel :4
+[INFO] 15:42:08:620 Consola/(2753:2753): Conectado con kernel
+[INFO] 15:42:08:620 Consola/(2753:2753): Instrucciones leidas
+[INFO] 15:42:08:620 Consola/(2753:2753): Lista mapeada
+[INFO] 15:42:08:620 Consola/(2753:2753): Escribi en el buffer la lista de instrucciones
+[INFO] 15:42:08:620 Consola/(2753:2753): A punto de enviar el codigo de operacion
+[INFO] 15:42:08:621 Consola/(2753:2753): Envie el codigo de op
+[INFO] 15:42:08:622 Consola/(2753:2753): A punto de enviar el tamanio del buffer
+[INFO] 15:42:08:622 Consola/(2753:2753): Envie el tamanio del buffer
+[INFO] 15:42:08:622 Consola/(2753:2753): A punto de enviar el stream del buffer
+[INFO] 15:42:08:626 Consola/(2753:2753): Envie el stream del buffer
+[INFO] 15:42:08:626 Consola/(2753:2753): Lista enviada
+[INFO] 15:42:08:627 Consola/(2753:2753): Lista destruida
+[INFO] 15:42:08:729 Consola/(2753:2753): Codigo recibido: 22006
+[INFO] 15:45:01:611 Consola/(2935:2935): Socket kernel :4
+[INFO] 15:45:01:611 Consola/(2935:2935): Conectado con kernel
+[INFO] 15:45:01:611 Consola/(2935:2935): Instrucciones leidas
+[INFO] 15:45:01:611 Consola/(2935:2935): Lista mapeada
+[INFO] 15:45:01:611 Consola/(2935:2935): Escribi en el buffer la lista de instrucciones
+[INFO] 15:45:01:611 Consola/(2935:2935): A punto de enviar el codigo de operacion
+[INFO] 15:45:01:611 Consola/(2935:2935): Envie el codigo de op
+[INFO] 15:45:01:612 Consola/(2935:2935): A punto de enviar el tamanio del buffer
+[INFO] 15:45:01:612 Consola/(2935:2935): Envie el tamanio del buffer
+[INFO] 15:45:01:612 Consola/(2935:2935): A punto de enviar el stream del buffer
+[INFO] 15:45:01:614 Consola/(2935:2935): Envie el stream del buffer
+[INFO] 15:45:01:614 Consola/(2935:2935): Lista enviada
+[INFO] 15:45:01:614 Consola/(2935:2935): Lista destruida
+[INFO] 15:45:01:744 Consola/(2935:2935): Codigo recibido: 21950
+[INFO] 15:47:01:517 Consola/(3019:3019): Socket kernel :4
+[INFO] 15:47:01:517 Consola/(3019:3019): Conectado con kernel
+[INFO] 15:47:01:517 Consola/(3019:3019): Instrucciones leidas
+[INFO] 15:47:01:517 Consola/(3019:3019): Lista mapeada
+[INFO] 15:47:01:517 Consola/(3019:3019): Escribi en el buffer la lista de instrucciones
+[INFO] 15:47:01:517 Consola/(3019:3019): A punto de enviar el codigo de operacion
+[INFO] 15:47:01:517 Consola/(3019:3019): Envie el codigo de op
+[INFO] 15:47:01:517 Consola/(3019:3019): A punto de enviar el tamanio del buffer
+[INFO] 15:47:01:518 Consola/(3019:3019): Envie el tamanio del buffer
+[INFO] 15:47:01:518 Consola/(3019:3019): A punto de enviar el stream del buffer
+[INFO] 15:47:01:520 Consola/(3019:3019): Envie el stream del buffer
+[INFO] 15:47:01:520 Consola/(3019:3019): Lista enviada
+[INFO] 15:47:01:520 Consola/(3019:3019): Lista destruida
+[INFO] 15:47:01:624 Consola/(3019:3019): Codigo recibido: 21976
+[INFO] 15:47:53:151 Consola/(3091:3091): Socket kernel :4
+[INFO] 15:47:53:156 Consola/(3091:3091): Conectado con kernel
+[INFO] 15:49:33:616 Consola/(3246:3246): Socket kernel :4
+[INFO] 15:49:33:616 Consola/(3246:3246): Conectado con kernel
+[INFO] 15:49:33:616 Consola/(3246:3246): Instrucciones leidas
+[INFO] 15:49:33:616 Consola/(3246:3246): Lista mapeada
+[INFO] 15:49:33:616 Consola/(3246:3246): Escribi en el buffer la lista de instrucciones
+[INFO] 15:49:33:616 Consola/(3246:3246): A punto de enviar el codigo de operacion
+[INFO] 15:49:33:616 Consola/(3246:3246): Envie el codigo de op
+[INFO] 15:49:33:616 Consola/(3246:3246): A punto de enviar el tamanio del buffer
+[INFO] 15:49:33:616 Consola/(3246:3246): Envie el tamanio del buffer
+[INFO] 15:49:33:616 Consola/(3246:3246): A punto de enviar el stream del buffer
+[INFO] 15:49:33:616 Consola/(3246:3246): Envie el stream del buffer
+[INFO] 15:49:33:616 Consola/(3246:3246): Lista enviada
+[INFO] 15:49:33:616 Consola/(3246:3246): Lista destruida
+[INFO] 15:52:49:183 Consola/(3246:3246): Codigo recibido: 21845
+[INFO] 15:52:55:185 Consola/(3441:3441): Socket kernel :4
+[INFO] 15:52:55:185 Consola/(3441:3441): Conectado con kernel
+[INFO] 15:52:55:185 Consola/(3441:3441): Instrucciones leidas
+[INFO] 15:52:55:185 Consola/(3441:3441): Lista mapeada
+[INFO] 15:52:55:185 Consola/(3441:3441): Escribi en el buffer la lista de instrucciones
+[INFO] 15:52:55:185 Consola/(3441:3441): A punto de enviar el codigo de operacion
+[INFO] 15:52:55:185 Consola/(3441:3441): Envie el codigo de op
+[INFO] 15:52:55:185 Consola/(3441:3441): A punto de enviar el tamanio del buffer
+[INFO] 15:52:55:185 Consola/(3441:3441): Envie el tamanio del buffer
+[INFO] 15:52:55:185 Consola/(3441:3441): A punto de enviar el stream del buffer
+[INFO] 15:52:55:185 Consola/(3441:3441): Envie el stream del buffer
+[INFO] 15:52:55:185 Consola/(3441:3441): Lista enviada
+[INFO] 15:52:55:185 Consola/(3441:3441): Lista destruida
+[INFO] 15:52:55:185 Consola/(3441:3441): Codigo recibido: 22073
+[INFO] 15:54:39:654 Consola/(3477:3477): Socket kernel :4
+[INFO] 15:54:39:655 Consola/(3477:3477): Conectado con kernel
+[INFO] 15:54:39:655 Consola/(3477:3477): Instrucciones leidas
+[INFO] 15:54:39:655 Consola/(3477:3477): Lista mapeada
+[INFO] 15:54:39:655 Consola/(3477:3477): Escribi en el buffer la lista de instrucciones
+[INFO] 15:54:39:655 Consola/(3477:3477): A punto de enviar el codigo de operacion
+[INFO] 15:54:39:655 Consola/(3477:3477): Envie el codigo de op
+[INFO] 15:54:39:655 Consola/(3477:3477): A punto de enviar el tamanio del buffer
+[INFO] 15:54:39:655 Consola/(3477:3477): Envie el tamanio del buffer
+[INFO] 15:54:39:655 Consola/(3477:3477): A punto de enviar el stream del buffer
+[INFO] 15:54:39:656 Consola/(3477:3477): Envie el stream del buffer
+[INFO] 15:54:39:656 Consola/(3477:3477): Lista enviada
+[INFO] 15:54:39:656 Consola/(3477:3477): Lista destruida
+[INFO] 15:54:39:758 Consola/(3477:3477): Codigo recibido: 21911
+[INFO] 15:56:28:522 Consola/(3624:3624): Socket kernel :4
+[INFO] 15:56:28:522 Consola/(3624:3624): Conectado con kernel
+[INFO] 15:56:28:522 Consola/(3624:3624): Instrucciones leidas
+[INFO] 15:56:28:522 Consola/(3624:3624): Lista mapeada
+[INFO] 15:56:28:522 Consola/(3624:3624): Escribi en el buffer la lista de instrucciones
+[INFO] 15:56:28:522 Consola/(3624:3624): A punto de enviar el codigo de operacion
+[INFO] 15:56:28:522 Consola/(3624:3624): Envie el codigo de op
+[INFO] 15:56:28:522 Consola/(3624:3624): A punto de enviar el tamanio del buffer
+[INFO] 15:56:28:522 Consola/(3624:3624): Envie el tamanio del buffer
+[INFO] 15:56:28:522 Consola/(3624:3624): A punto de enviar el stream del buffer
+[INFO] 15:56:28:523 Consola/(3624:3624): Envie el stream del buffer
+[INFO] 15:56:28:523 Consola/(3624:3624): Lista enviada
+[INFO] 15:56:28:523 Consola/(3624:3624): Lista destruida
+[INFO] 15:56:28:626 Consola/(3624:3624): Codigo recibido: 21887
+[INFO] 15:57:07:394 Consola/(3799:3799): Socket kernel :4
+[INFO] 15:57:07:395 Consola/(3799:3799): Conectado con kernel
+[INFO] 15:57:07:396 Consola/(3799:3799): Instrucciones leidas
+[INFO] 15:57:07:396 Consola/(3799:3799): Lista mapeada
+[INFO] 15:57:07:396 Consola/(3799:3799): Escribi en el buffer la lista de instrucciones
+[INFO] 15:57:07:396 Consola/(3799:3799): A punto de enviar el codigo de operacion
+[INFO] 15:57:07:396 Consola/(3799:3799): Envie el codigo de op
+[INFO] 15:57:07:396 Consola/(3799:3799): A punto de enviar el tamanio del buffer
+[INFO] 15:57:07:396 Consola/(3799:3799): Envie el tamanio del buffer
+[INFO] 15:57:07:397 Consola/(3799:3799): A punto de enviar el stream del buffer
+[INFO] 15:57:07:397 Consola/(3799:3799): Envie el stream del buffer
+[INFO] 15:57:07:397 Consola/(3799:3799): Lista enviada
+[INFO] 15:57:07:397 Consola/(3799:3799): Lista destruida
+[INFO] 15:57:07:397 Consola/(3799:3799): Codigo recibido: 22016
+[INFO] 15:57:56:388 Consola/(3893:3893): Socket kernel :4
+[INFO] 15:57:56:388 Consola/(3893:3893): Conectado con kernel
+[INFO] 15:57:56:388 Consola/(3893:3893): Instrucciones leidas
+[INFO] 15:57:56:388 Consola/(3893:3893): Lista mapeada
+[INFO] 15:57:56:388 Consola/(3893:3893): Escribi en el buffer la lista de instrucciones
+[INFO] 15:57:56:388 Consola/(3893:3893): A punto de enviar el codigo de operacion
+[INFO] 15:57:56:388 Consola/(3893:3893): Envie el codigo de op
+[INFO] 15:57:56:388 Consola/(3893:3893): A punto de enviar el tamanio del buffer
+[INFO] 15:57:56:388 Consola/(3893:3893): Envie el tamanio del buffer
+[INFO] 15:57:56:388 Consola/(3893:3893): A punto de enviar el stream del buffer
+[INFO] 15:57:56:388 Consola/(3893:3893): Envie el stream del buffer
+[INFO] 15:57:56:388 Consola/(3893:3893): Lista enviada
+[INFO] 15:57:56:388 Consola/(3893:3893): Lista destruida
+[INFO] 15:57:56:686 Consola/(3893:3893): Codigo recibido: 22061
+[INFO] 15:58:20:034 Consola/(3995:3995): Socket kernel :4
+[INFO] 15:58:20:034 Consola/(3995:3995): Conectado con kernel
+[INFO] 16:01:54:812 Consola/(4114:4114): Socket kernel :4
+[INFO] 16:01:54:815 Consola/(4114:4114): Conectado con kernel
+[INFO] 16:02:00:038 Consola/(4114:4114): Instrucciones leidas
+[INFO] 16:02:00:038 Consola/(4114:4114): Lista mapeada
+[INFO] 16:02:00:038 Consola/(4114:4114): Escribi en el buffer la lista de instrucciones
+[INFO] 16:02:00:038 Consola/(4114:4114): A punto de enviar el codigo de operacion
+[INFO] 16:02:00:038 Consola/(4114:4114): Envie el codigo de op
+[INFO] 16:02:00:038 Consola/(4114:4114): A punto de enviar el tamanio del buffer
+[INFO] 16:02:00:038 Consola/(4114:4114): Envie el tamanio del buffer
+[INFO] 16:02:00:038 Consola/(4114:4114): A punto de enviar el stream del buffer
+[INFO] 16:02:00:038 Consola/(4114:4114): Envie el stream del buffer
+[INFO] 16:02:00:038 Consola/(4114:4114): Lista enviada
+[INFO] 16:02:00:038 Consola/(4114:4114): Lista destruida
+[INFO] 16:04:05:246 Consola/(4114:4114): Codigo recibido: 21845
+[INFO] 16:05:04:033 Consola/(4381:4381): Socket kernel :4
+[INFO] 16:05:04:034 Consola/(4381:4381): Conectado con kernel
+[INFO] 16:05:04:034 Consola/(4381:4381): Instrucciones leidas
+[INFO] 16:05:04:034 Consola/(4381:4381): Lista mapeada
+[INFO] 16:05:04:034 Consola/(4381:4381): Escribi en el buffer la lista de instrucciones
+[INFO] 16:05:04:034 Consola/(4381:4381): A punto de enviar el codigo de operacion
+[INFO] 16:05:04:034 Consola/(4381:4381): Envie el codigo de op
+[INFO] 16:05:04:034 Consola/(4381:4381): A punto de enviar el tamanio del buffer
+[INFO] 16:05:04:034 Consola/(4381:4381): Envie el tamanio del buffer
+[INFO] 16:05:04:034 Consola/(4381:4381): A punto de enviar el stream del buffer
+[INFO] 16:05:04:034 Consola/(4381:4381): Envie el stream del buffer
+[INFO] 16:05:04:034 Consola/(4381:4381): Lista enviada
+[INFO] 16:05:04:034 Consola/(4381:4381): Lista destruida
+[INFO] 16:05:04:034 Consola/(4381:4381): Codigo recibido: 22009
+[INFO] 16:11:49:009 Consola/(4469:4469): Socket kernel :4
+[INFO] 16:11:49:009 Consola/(4469:4469): Conectado con kernel
+[INFO] 16:11:49:009 Consola/(4469:4469): Instrucciones leidas
+[INFO] 16:11:49:009 Consola/(4469:4469): Lista mapeada
+[INFO] 16:11:49:009 Consola/(4469:4469): Escribi en el buffer la lista de instrucciones
+[INFO] 16:11:49:009 Consola/(4469:4469): A punto de enviar el codigo de operacion
+[INFO] 16:11:49:009 Consola/(4469:4469): Envie el codigo de op
+[INFO] 16:11:49:009 Consola/(4469:4469): A punto de enviar el tamanio del buffer
+[INFO] 16:11:49:009 Consola/(4469:4469): Envie el tamanio del buffer
+[INFO] 16:11:49:009 Consola/(4469:4469): A punto de enviar el stream del buffer
+[INFO] 16:11:49:012 Consola/(4469:4469): Envie el stream del buffer
+[INFO] 16:11:49:012 Consola/(4469:4469): Lista enviada
+[INFO] 16:11:49:012 Consola/(4469:4469): Lista destruida
+[INFO] 16:11:49:106 Consola/(4469:4469): Codigo recibido: 22053
+[INFO] 16:12:37:738 Consola/(4555:4555): Socket kernel :4
+[INFO] 16:12:37:738 Consola/(4555:4555): Conectado con kernel
+[INFO] 16:12:37:739 Consola/(4555:4555): Instrucciones leidas
+[INFO] 16:12:37:745 Consola/(4555:4555): Lista mapeada
+[INFO] 16:12:37:745 Consola/(4555:4555): Escribi en el buffer la lista de instrucciones
+[INFO] 16:12:37:745 Consola/(4555:4555): A punto de enviar el codigo de operacion
+[INFO] 16:12:49:114 Consola/(4555:4555): Envie el codigo de op
+[INFO] 16:12:49:115 Consola/(4555:4555): A punto de enviar el tamanio del buffer
+[INFO] 16:12:49:848 Consola/(4555:4555): Envie el tamanio del buffer
+[INFO] 16:12:49:848 Consola/(4555:4555): A punto de enviar el stream del buffer
+[INFO] 16:12:50:612 Consola/(4555:4555): Envie el stream del buffer
+[INFO] 16:12:50:612 Consola/(4555:4555): Lista enviada
+[INFO] 16:12:50:612 Consola/(4555:4555): Lista destruida
+[INFO] 16:12:50:612 Consola/(4555:4555): Codigo recibido: 21845
+[INFO] 16:13:13:492 Consola/(4636:4636): Socket kernel :4
+[INFO] 16:13:13:494 Consola/(4636:4636): Conectado con kernel
+[INFO] 16:13:14:667 Consola/(4636:4636): Instrucciones leidas
+[INFO] 16:13:15:766 Consola/(4636:4636): Lista mapeada
+[INFO] 16:13:25:035 Consola/(4636:4636): Escribi en el buffer la lista de instrucciones
+[INFO] 16:13:25:035 Consola/(4636:4636): A punto de enviar el codigo de operacion
+[INFO] 16:13:25:035 Consola/(4636:4636): Envie el codigo de op
+[INFO] 16:13:25:035 Consola/(4636:4636): A punto de enviar el tamanio del buffer
+[INFO] 16:13:25:035 Consola/(4636:4636): Envie el tamanio del buffer
+[INFO] 16:13:25:035 Consola/(4636:4636): A punto de enviar el stream del buffer
+[INFO] 16:13:25:036 Consola/(4636:4636): Envie el stream del buffer
+[INFO] 16:13:26:294 Consola/(4636:4636): Lista enviada
+[INFO] 16:20:55:179 Consola/(5035:5035): Socket kernel :4
+[INFO] 16:20:55:180 Consola/(5035:5035): Conectado con kernel
+[INFO] 16:21:04:967 Consola/(5035:5035): Instrucciones leidas
+[INFO] 16:21:07:242 Consola/(5035:5035): Lista mapeada
+[INFO] 16:21:26:948 Consola/(5035:5035): Escribi en el buffer la lista de instrucciones
+[INFO] 16:21:26:948 Consola/(5035:5035): A punto de enviar el codigo de operacion
+[INFO] 16:21:26:948 Consola/(5035:5035): Envie el codigo de op
+[INFO] 16:21:26:948 Consola/(5035:5035): A punto de enviar el tamanio del buffer
+[INFO] 16:21:26:948 Consola/(5035:5035): Envie el tamanio del buffer
+[INFO] 16:21:26:948 Consola/(5035:5035): A punto de enviar el stream del buffer
+[INFO] 16:21:26:948 Consola/(5035:5035): Envie el stream del buffer
+[INFO] 16:21:28:597 Consola/(5035:5035): Lista enviada
+[INFO] 16:22:00:090 Consola/(5035:5035): Lista destruida
+[INFO] 16:22:00:090 Consola/(5035:5035): Fin proceso consola: 6
+[INFO] 17:33:21:074 Consola/(5618:5618): Socket kernel :4
+[INFO] 17:33:21:074 Consola/(5618:5618): Conectado con kernel
+[INFO] 17:33:22:481 Consola/(5618:5618): Instrucciones leidas
+[INFO] 17:33:23:231 Consola/(5618:5618): Lista mapeada
+[INFO] 17:33:24:849 Consola/(5618:5618): Escribi en el buffer la lista de instrucciones
+[INFO] 17:33:24:849 Consola/(5618:5618): A punto de enviar el codigo de operacion
+[INFO] 17:33:24:849 Consola/(5618:5618): Envie el codigo de op
+[INFO] 17:33:24:849 Consola/(5618:5618): A punto de enviar el tamanio del buffer
+[INFO] 17:33:24:849 Consola/(5618:5618): Envie el tamanio del buffer
+[INFO] 17:33:24:849 Consola/(5618:5618): A punto de enviar el stream del buffer
+[INFO] 17:33:24:849 Consola/(5618:5618): Envie el stream del buffer
+[INFO] 17:33:26:550 Consola/(5618:5618): Lista enviada
+[INFO] 17:33:29:176 Consola/(5618:5618): Lista destruida
+[INFO] 17:38:20:121 Consola/(6036:6036): Socket kernel :4
+[INFO] 17:38:20:123 Consola/(6036:6036): Conectado con kernel
+[INFO] 17:38:20:123 Consola/(6036:6036): Instrucciones leidas
+[INFO] 17:38:20:123 Consola/(6036:6036): Lista mapeada
+[INFO] 17:38:20:123 Consola/(6036:6036): Escribi en el buffer la lista de instrucciones
+[INFO] 17:38:20:123 Consola/(6036:6036): A punto de enviar el codigo de operacion
+[INFO] 17:38:20:123 Consola/(6036:6036): Envie el codigo de op
+[INFO] 17:38:20:123 Consola/(6036:6036): A punto de enviar el tamanio del buffer
+[INFO] 17:38:20:123 Consola/(6036:6036): Envie el tamanio del buffer
+[INFO] 17:38:20:123 Consola/(6036:6036): A punto de enviar el stream del buffer
+[INFO] 17:38:20:123 Consola/(6036:6036): Envie el stream del buffer
+[INFO] 17:38:20:124 Consola/(6036:6036): Lista enviada
+[INFO] 17:38:20:124 Consola/(6036:6036): Lista destruida
+[INFO] 17:38:20:125 Consola/(6036:6036): Fin proceso consola: 6
+[INFO] 17:41:45:583 Consola/(6190:6190): Socket kernel :4
+[INFO] 17:41:45:584 Consola/(6190:6190): Conectado con kernel
+[INFO] 17:41:45:584 Consola/(6190:6190): Instrucciones leidas
+[INFO] 17:41:45:584 Consola/(6190:6190): Lista mapeada
+[INFO] 17:41:45:584 Consola/(6190:6190): Escribi en el buffer la lista de instrucciones
+[INFO] 17:41:45:584 Consola/(6190:6190): A punto de enviar el codigo de operacion
+[INFO] 17:41:45:586 Consola/(6190:6190): Envie el codigo de op
+[INFO] 17:41:45:587 Consola/(6190:6190): A punto de enviar el tamanio del buffer
+[INFO] 17:41:45:587 Consola/(6190:6190): Envie el tamanio del buffer
+[INFO] 17:41:45:587 Consola/(6190:6190): A punto de enviar el stream del buffer
+[INFO] 17:41:45:589 Consola/(6190:6190): Envie el stream del buffer
+[INFO] 17:41:45:589 Consola/(6190:6190): Lista enviada
+[INFO] 17:41:45:590 Consola/(6190:6190): Lista destruida
+[INFO] 17:41:45:590 Consola/(6190:6190): Fin proceso consola: 6
+[INFO] 17:42:17:723 Consola/(6295:6295): Socket kernel :4
+[INFO] 17:42:17:723 Consola/(6295:6295): Conectado con kernel
+[INFO] 17:42:20:387 Consola/(6295:6295): Instrucciones leidas
+[INFO] 17:42:21:500 Consola/(6295:6295): Lista mapeada
+[INFO] 17:42:29:417 Consola/(6295:6295): Escribi en el buffer la lista de instrucciones
+[INFO] 17:42:29:418 Consola/(6295:6295): A punto de enviar el codigo de operacion
+[INFO] 17:42:29:418 Consola/(6295:6295): Envie el codigo de op
+[INFO] 17:42:29:418 Consola/(6295:6295): A punto de enviar el tamanio del buffer
+[INFO] 17:42:29:418 Consola/(6295:6295): Envie el tamanio del buffer
+[INFO] 17:42:29:418 Consola/(6295:6295): A punto de enviar el stream del buffer
+[INFO] 17:42:29:418 Consola/(6295:6295): Envie el stream del buffer
+[INFO] 17:42:45:968 Consola/(6295:6295): Lista enviada
+[INFO] 17:43:14:916 Consola/(6295:6295): Lista destruida
+[INFO] 17:45:04:120 Consola/(6568:6568): Socket kernel :4
+[INFO] 17:45:04:120 Consola/(6568:6568): Conectado con kernel
+[INFO] 17:45:04:121 Consola/(6568:6568): Instrucciones leidas
+[INFO] 17:45:04:121 Consola/(6568:6568): Lista mapeada
+[INFO] 17:45:04:121 Consola/(6568:6568): Escribi en el buffer la lista de instrucciones
+[INFO] 17:45:04:121 Consola/(6568:6568): A punto de enviar el codigo de operacion
+[INFO] 17:45:04:121 Consola/(6568:6568): Envie el codigo de op
+[INFO] 17:45:04:121 Consola/(6568:6568): A punto de enviar el tamanio del buffer
+[INFO] 17:45:04:121 Consola/(6568:6568): Envie el tamanio del buffer
+[INFO] 17:45:04:121 Consola/(6568:6568): A punto de enviar el stream del buffer
+[INFO] 17:45:04:188 Consola/(6568:6568): Envie el stream del buffer
+[INFO] 17:45:04:192 Consola/(6568:6568): Lista enviada
+[INFO] 17:45:04:192 Consola/(6568:6568): Lista destruida
+[INFO] 17:45:04:192 Consola/(6568:6568): Fin proceso consola: 6
+[INFO] 17:47:20:609 Consola/(6700:6700): Socket kernel :4
+[INFO] 17:47:20:609 Consola/(6700:6700): Conectado con kernel
+[INFO] 17:47:20:610 Consola/(6700:6700): Instrucciones leidas
+[INFO] 17:47:20:610 Consola/(6700:6700): Lista mapeada
+[INFO] 17:47:20:610 Consola/(6700:6700): Escribi en el buffer la lista de instrucciones
+[INFO] 17:47:20:611 Consola/(6700:6700): A punto de enviar el codigo de operacion
+[INFO] 17:47:20:611 Consola/(6700:6700): Envie el codigo de op
+[INFO] 17:47:20:611 Consola/(6700:6700): A punto de enviar el tamanio del buffer
+[INFO] 17:47:20:611 Consola/(6700:6700): Envie el tamanio del buffer
+[INFO] 17:47:20:611 Consola/(6700:6700): A punto de enviar el stream del buffer
+[INFO] 17:47:20:620 Consola/(6700:6700): Envie el stream del buffer
+[INFO] 17:47:20:625 Consola/(6700:6700): Lista enviada
+[INFO] 17:47:20:625 Consola/(6700:6700): Lista destruida
+[INFO] 17:47:20:625 Consola/(6700:6700): Fin proceso consola: 6
+[INFO] 17:48:25:151 Consola/(6768:6768): Socket kernel :4
+[INFO] 17:48:25:152 Consola/(6768:6768): Conectado con kernel
+[INFO] 17:48:25:152 Consola/(6768:6768): Instrucciones leidas
+[INFO] 17:48:25:153 Consola/(6768:6768): Lista mapeada
+[INFO] 17:48:25:154 Consola/(6768:6768): Escribi en el buffer la lista de instrucciones
+[INFO] 17:48:25:154 Consola/(6768:6768): A punto de enviar el codigo de operacion
+[INFO] 17:48:25:154 Consola/(6768:6768): Envie el codigo de op
+[INFO] 17:48:25:154 Consola/(6768:6768): A punto de enviar el tamanio del buffer
+[INFO] 17:48:25:154 Consola/(6768:6768): Envie el tamanio del buffer
+[INFO] 17:48:25:154 Consola/(6768:6768): A punto de enviar el stream del buffer
+[INFO] 17:48:25:159 Consola/(6768:6768): Envie el stream del buffer
+[INFO] 17:48:25:159 Consola/(6768:6768): Lista enviada
+[INFO] 17:48:25:159 Consola/(6768:6768): Lista destruida
+[INFO] 17:48:25:159 Consola/(6768:6768): Fin proceso consola: 6
+[INFO] 17:49:08:602 Consola/(6835:6835): Socket kernel :4
+[INFO] 17:49:08:602 Consola/(6835:6835): Conectado con kernel
+[INFO] 17:49:08:602 Consola/(6835:6835): Instrucciones leidas
+[INFO] 17:49:08:603 Consola/(6835:6835): Lista mapeada
+[INFO] 17:49:08:603 Consola/(6835:6835): Escribi en el buffer la lista de instrucciones
+[INFO] 17:49:08:603 Consola/(6835:6835): A punto de enviar el codigo de operacion
+[INFO] 17:49:08:603 Consola/(6835:6835): Envie el codigo de op
+[INFO] 17:49:08:603 Consola/(6835:6835): A punto de enviar el tamanio del buffer
+[INFO] 17:49:08:603 Consola/(6835:6835): Envie el tamanio del buffer
+[INFO] 17:49:08:603 Consola/(6835:6835): A punto de enviar el stream del buffer
+[INFO] 17:49:08:603 Consola/(6835:6835): Envie el stream del buffer
+[INFO] 17:49:08:603 Consola/(6835:6835): Lista enviada
+[INFO] 17:49:08:603 Consola/(6835:6835): Lista destruida
+[INFO] 17:49:08:606 Consola/(6835:6835): Fin proceso consola: 6

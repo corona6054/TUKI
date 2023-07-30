@@ -8,7 +8,8 @@ int main(int argc, char** argv){
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
 	levantar_modulo(config_path);
-	crearLista(instruccion_path);
+
+	crear_array_de_instrucciones(instruccion_path);
 	log_info(logger,"Instrucciones leidas");
 
 
@@ -22,16 +23,22 @@ int main(int argc, char** argv){
     enviarLista(buffer, listaAEnviar);
     log_info(logger,"Lista enviada");
 
-    
     destruir_lista(listaAEnviar);
+    log_info(logger,"Lista destruida");
 
+    
+    op_code codigo = recibir_codigo(socket_kernel);
 
-
-    if(recibir_codigo(socket_kernel) != FIN_PROCESO_CONSOLA)
-    	return -2;
-
-	finalizar_modulo();
-	return 0;
+    if (codigo == FIN_PROCESO_CONSOLA){
+        log_info(logger, "Fin proceso consola: %d", codigo);
+        finalizar_modulo();    
+        return 0;
+    }
+    else{
+        log_info(logger, "Codigo recibido: %d", codigo);
+        finalizar_modulo();
+        return -2;
+    }
 }
 
 
@@ -42,30 +49,33 @@ t_list* mapearLista(){
     t_list* listaAEnviar = list_create();
     
     for(int i = 0; i < instructionCount; i++){
-        Instruction instruccion = cambiarStruct(instructions[i]);
-        list_add(listaAEnviar, &instruccion);
+        t_instruction* instruccion = cambiarStruct(instructions[i]);
+        list_add(listaAEnviar, instruccion);
     }
 
     return listaAEnviar;
 }
 
-Instruction cambiarStruct(Instruction_consola instruccion_a_cambiar){
+t_instruction* cambiarStruct(Instruction_consola instruccion_a_cambiar){
 
-    Instruction instruccion_cambiada;
+    t_instruction* instruccion_cambiada = NULL;
+    
+    instruccion_cambiada = malloc(sizeof(t_instruction));
 
-    instruccion_cambiada.instruccion = instruccion_a_cambiar.instruccion;
-    instruccion_cambiada.numero1 = instruccion_a_cambiar.numero1;
-    instruccion_cambiada.numero2 = instruccion_a_cambiar.numero2;
+    instruccion_cambiada -> instruccion = instruccion_a_cambiar.instruccion;
+    instruccion_cambiada -> numero1 = instruccion_a_cambiar.numero1;
+    instruccion_cambiada -> numero2 = instruccion_a_cambiar.numero2;
     
     int tam1 = get_tamanio_char_array(instruccion_a_cambiar.string1, 15);
     int tam2 = get_tamanio_char_array(instruccion_a_cambiar.string2, 15);
     
-    instruccion_cambiada.string1 = malloc(tam1);
-    instruccion_cambiada.string2 = malloc(tam2);
-
-    instruccion_cambiada.string1 = &instruccion_a_cambiar.string1[0];
-    instruccion_cambiada.string2 = &instruccion_a_cambiar.string2[0];
+    instruccion_cambiada -> string1 = malloc(tam1);
+    for(int i = 0; i < tam1 + 1; i++)
+        *(instruccion_cambiada -> string1 + i) = instruccion_a_cambiar.string1[i];
     
+    instruccion_cambiada -> string2 = malloc(tam2);
+    for(int j = 0; j < tam2 + 1; j++)
+        *(instruccion_cambiada -> string2 + j) = instruccion_a_cambiar.string2[j];
 
     return instruccion_cambiada;
 }
@@ -87,7 +97,6 @@ void enviarLista(t_buffer* buffer, t_list* listaAEnviar){
     buffer_write_lista_instrucciones(buffer, listaAEnviar);
     log_info(logger, "Escribi en el buffer la lista de instrucciones");
     
-
     // Enviamos el codigo de operacion
     log_info(logger, "A punto de enviar el codigo de operacion");
     send(socket_kernel, &(buffer->codigo), sizeof(uint8_t), 0);
@@ -99,7 +108,9 @@ void enviarLista(t_buffer* buffer, t_list* listaAEnviar){
     log_info(logger, "Envie el tamanio del buffer");
 
     // Enviamos el stream del buffer
-    send(socket_kernel, buffer->stream, buffer->size, 0);        
+    log_info(logger, "A punto de enviar el stream del buffer");
+    send(socket_kernel, buffer->stream, buffer->size, 0);
+    log_info(logger, "Envie el stream del buffer");
 }
 
 
@@ -251,10 +262,8 @@ void readNextWordFromFile(FILE *file, int index)
 {
     char buffer[15];
     fscanf(file, "%s", buffer);
-    if (index == 1){
+    if (index == 1)
         strcpy(instructions[instructionCount].string1, buffer);
-        strcpy(instructions[instructionCount].string2, "");
-    }
     else
         strcpy(instructions[instructionCount].string2, buffer);
 }
@@ -267,6 +276,7 @@ void parseInstructions(FILE *file)
     {
         instruccion_actual = getNextInstruction(file);
         instructions[instructionCount].instruccion = instruccion_actual;
+        inicializar_instruccion();
         switch (instruccion_actual)
         {
         case F_READ:
@@ -282,78 +292,46 @@ void parseInstructions(FILE *file)
         case SET:
             readNextWordFromFile(file, 1);
             readNextWordFromFile(file, 2);
-            instructions[instructionCount].numero1 = -1;
-            instructions[instructionCount].numero2 = -1;
             break;
         case MOV_IN:
             readNextWordFromFile(file, 1);
             readIntegerFromFile(file, 1);
-            instructions[instructionCount].numero2 = -1;
             break;
         case MOV_OUT:
             readIntegerFromFile(file, 1);
             readNextWordFromFile(file, 1);
-            instructions[instructionCount].numero2 = -1;
             break;
         case F_TRUNCATE:
             readNextWordFromFile(file, 1);
             readIntegerFromFile(file, 1);
-            instructions[instructionCount].numero2 = -1;
             break;
         case F_SEEK:
             readNextWordFromFile(file, 1);
             readIntegerFromFile(file, 1);
-            instructions[instructionCount].numero2 = -1;
             break;
         case CREATE_SEGMENT:
-        	strcpy(instructions[instructionCount].string1, "");
-        	strcpy(instructions[instructionCount].string2, "");
             readIntegerFromFile(file, 1);
             readIntegerFromFile(file, 2);
             break;
         case IO:
-        	strcpy(instructions[instructionCount].string1, "");
-        	strcpy(instructions[instructionCount].string2, "");
             readIntegerFromFile(file, 1);
-            instructions[instructionCount].numero2 = -1;
             break;
         case WAIT:
             readNextWordFromFile(file, 1);
-        	instructions[instructionCount].numero1 = -1;
-        	instructions[instructionCount].numero2 = -1;
             break;
         case SIGNAL:
             readNextWordFromFile(file, 1);
-            instructions[instructionCount].numero1 = -1;
-            instructions[instructionCount].numero2 = -1;
             break;
         case F_OPEN:
             readNextWordFromFile(file, 1);
-            instructions[instructionCount].numero1 = -1;
-            instructions[instructionCount].numero2 = -1;
             break;
         case F_CLOSE:
             readNextWordFromFile(file, 1);
-            instructions[instructionCount].numero1 = -1;
-            instructions[instructionCount].numero2 = -1;
             break;
         case DELETE_SEGMENT:
-        	strcpy(instructions[instructionCount].string1, "");
-        	strcpy(instructions[instructionCount].string2, "");
-            readIntegerFromFile(file, 1);
-            instructions[instructionCount].numero2 = -1;
-            break;
-        case YIELD:
-        	strcpy(instructions[instructionCount].string1, "");
-        	strcpy(instructions[instructionCount].string2, "");
-        	instructions[instructionCount].numero1 = -1;
-        	instructions[instructionCount].numero2 = -1;
+        	readIntegerFromFile(file, 1);
             break;
         case EXIT:
-        	strcpy(instructions[instructionCount].string1, "");
-        	strcpy(instructions[instructionCount].string2, "");
-        	instructions[instructionCount].numero1 = -1;
-        	instructions[instructionCount].numero2 = -1;
             instructionCount++;
             return;
             break;
@@ -380,7 +358,7 @@ void error()
     exit(1);
 }
 
-int crearLista(char* filename)
+int crear_array_de_instrucciones(char* filename)
 {
     FILE *file = fopen(filename, "r");
     if (file == NULL)
@@ -391,21 +369,6 @@ int crearLista(char* filename)
     parseInstructions(file);
     
     fclose(file);
-    
-    printf("Instructions:\n");
-    for (int i = 0; i < instructionCount; i++)
-    {
-        printf("%d ", instructions[i].instruccion);
-        if (instructions[i].numero1 != 0)
-            printf("%d ", instructions[i].numero1);
-        if (instructions[i].numero2 != 0)
-            printf("%d ", instructions[i].numero2);
-        if (strcmp(instructions[i].string1, "") != 0)
-            printf("%s ", instructions[i].string1);
-        if (strcmp(instructions[i].string2, "") != 0)
-            printf("%s ", instructions[i].string2);
-        printf("\n");
-    }
     return 0;
 }
 
@@ -414,12 +377,22 @@ int crearLista(char* filename)
 void destruir_lista(t_list* lista_instrucciones){
 
 	int cant_instrucciones = list_size(lista_instrucciones);
-
-	for(int i = 0; i < cant_instrucciones; i++){
-		Instruction* instruccion = list_get(lista_instrucciones, i);
-		free(instruccion -> string1);
-		free(instruccion -> string2);
-	}
-
+	
+    /*
+    for(int i = 0; i < cant_instrucciones; i++){
+		t_instruction* instruccion = list_remove(lista_instrucciones, i);
+        free(instruccion->string1);
+        free(instruccion->string2);
+        free(instruccion);
+        instruccion = NULL;
+	}*/
+    
 	list_destroy(lista_instrucciones);
+}
+
+void inicializar_instruccion(){
+    strcpy(instructions[instructionCount].string1, CHAR_VACIO);
+    strcpy(instructions[instructionCount].string2, CHAR_VACIO);
+    instructions[instructionCount].numero1 = INT_VACIO;
+    instructions[instructionCount].numero2 = INT_VACIO;
 }

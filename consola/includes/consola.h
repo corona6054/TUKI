@@ -13,8 +13,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <semaphore.h>
-#include "comunicacion.h"
 #include "serializacion.h"
+#include "comunicacion.h"
 
  typedef struct
 {
@@ -60,7 +60,7 @@ void enviarLista(t_buffer*, t_list*);
 void destruir_lista(t_list*);
 
 t_list* mapearLista();
-Instruction cambiarStruct(Instruction_consola);
+t_instruction* cambiarStruct(Instruction_consola);
 int get_tamanio_char_array(char [], int);
 
 void levantar_modulo(char*);
@@ -83,5 +83,6 @@ void error();
 int crearLista(char* filename);
 
 void destruir_lista(t_list* lista_instrucciones);
+void inicializar_instruccion();
 
 #endif /* INCLUDES_CONSOLA_H_ */
