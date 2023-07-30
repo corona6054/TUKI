@@ -1,39 +1,5 @@
 #include "../includes/file_system.h"
 
-typedef struct {
-	uint32_t  block_size;
-	uint32_t block_count;
-}superBloque;
-
-typedef struct {
-	char*  file_name;
-	uint32_t file_size;
-	uint32_t  direct_pointer;
-	uint32_t indirect_pointer;
-	}FCB;
-
-
-
-	int bitarray_fd;
-	int archivobloques_fd;
-	char *archivobloques_pointer;
-	char *bitarray_pointer;
-	off_t bitarray_size;
-	off_t archivobloques_size;
-	t_bitarray * bitarray;
-	t_list* fcb_list;
-	char buscado[64];
-	superBloque superbloque;
-
-	int eliminarBloques(int eliminar,FCB* seleccionado);
-	int crearEstructuras();
-	int cerrarEstructuras();
-	int crearArchivo(char* nombre);
-	int abrirArchivo(char* nombre);
-	bool igualBuscado(void * ptr);
-	uint32_t  bloqueLibre();
-	int liberarBloque(uint32_t bit);
-	int truncarArchivo(char* nombre, int size);
 
 int main(void){
 
@@ -312,7 +278,7 @@ void establecer_conexiones()
 	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
 	pthread_detach(conexion_memoria);
 
-	server_fd = abrir_servidor(logger,config);
+	server_fd = iniciar_servidor(logger,config_file_system.puerto_escucha);
 	kernel_fd = esperar_cliente(server_fd, logger);
 
 }
