@@ -1,30 +1,5 @@
 #include "../includes/memoria.h"
 
-#include "serializacion.h"
-
-
-t_log* logger;
-t_config* config;
-
-int server_fd;
-
-// Clientes
-int cpu_fd;
-int fileSystem_fd;
-int kernel_fd;
-
-
-
-void *memoria_principal;
-t_list * espacios_libres;
-t_list * tabla_segmentos;
-Segment *segmento0;
-int *needed_memory;
-Segment *seg_anterior;
-int *seg_maxsize;
-void* mem_auxiliar;
-int *contador_procesos;
-
 int main(void){
 	levantar_modulo();
 	crearEstructuras();
@@ -405,7 +380,7 @@ void levantar_config(){
 
 void establecer_conexiones()
 {
-	server_fd = abrir_servidor(logger, config);
+	server_fd = iniciar_servidor(logger, config_memoria.puerto_escucha);
 
 	cpu_fd = esperar_cliente(server_fd, logger);
 	fileSystem_fd = esperar_cliente(server_fd, logger);

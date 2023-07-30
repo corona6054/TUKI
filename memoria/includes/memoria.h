@@ -7,7 +7,19 @@
 #include "commons/log.h"
 #include "commons/config.h"
 #include "commons/collections/list.h"
-#include "utils_server.h"
+#include "serializacion.h"
+
+
+typedef enum {
+    FIRST,
+    BEST,
+    WORST
+} Algorithm;
+
+typedef struct Segment {
+    void* start;
+    int size;
+} Segment;
 
 typedef struct{
 	int puerto_escucha;
@@ -18,6 +30,7 @@ typedef struct{
 	int retardo_compactacion;
 	int algoritmos_asignacion;
 }Config_memoria;
+
 
 // Variables globales
 Config_memoria config_memoria;
@@ -30,16 +43,15 @@ int cpu_fd;
 int fileSystem_fd;
 int kernel_fd;
 
-typedef enum {
-    FIRST,
-    BEST,
-    WORST
-} Algorithm;
-
-typedef struct Segment {
-    void* start;
-    int size;
-} Segment;
+void *memoria_principal;
+t_list* espacios_libres;
+t_list* tabla_segmentos;
+Segment* segmento0;
+int *needed_memory;
+Segment *seg_anterior;
+int *seg_maxsize;
+void* mem_auxiliar;
+int *contador_procesos;
 
 // Prototipos funciones
 void levantar_modulo();
