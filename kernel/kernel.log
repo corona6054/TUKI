@@ -828,3 +828,2229 @@
 [INFO] 00:38:45:353 Kernel/(5554:5559): Conectado con cpu
 [INFO] 00:38:45:353 Kernel/(5554:5554): Tamanio del buffer: 23
 [INFO] 00:38:45:354 Kernel/(5554:5554): Ya mande el stream
+[INFO] 19:30:42:797 Kernel/(2791:2791): Listo para escuchar a mi cliente
+[INFO] 19:30:59:273 Kernel/(2791:2791): Listo para escuchar a mi cliente
+[INFO] 19:31:24:592 Kernel/(2791:2859): Se conecto un cliente!
+[INFO] 19:31:24:596 Kernel/(2791:2878): Por recibir el tamanio
+[INFO] 19:31:24:596 Kernel/(2791:2878): Ya recibi el tamanio
+[INFO] 19:31:24:597 Kernel/(2791:2878): Por recibir el stream.
+[INFO] 19:31:24:597 Kernel/(2791:2878): Recibi el stream.
+[INFO] 19:32:14:727 Kernel/(2916:2916): Listo para escuchar a mi cliente
+[INFO] 19:32:14:728 Kernel/(2916:2916): Listo para escuchar a mi cliente
+[INFO] 19:33:08:695 Kernel/(3031:3031): Listo para escuchar a mi cliente
+[INFO] 19:33:22:849 Kernel/(3031:3031): Se conecto un cliente!
+[INFO] 19:33:28:601 Kernel/(3031:3031): Creando buffer
+[INFO] 19:33:31:098 Kernel/(3031:3031): A punto de recibir el codigo de operacion
+[INFO] 19:45:13:895 Kernel/(3483:3483): Listo para escuchar a mi cliente
+[INFO] 19:45:50:252 Kernel/(3483:3483): Se conecto un cliente!
+[INFO] 19:45:50:252 Kernel/(3483:3483): Creando buffer
+[INFO] 19:45:50:252 Kernel/(3483:3483): A punto de recibir el codigo de operacion
+[INFO] 19:46:00:985 Kernel/(3483:3483): Recibi el codigo de op: 0
+[INFO] 19:46:00:986 Kernel/(3483:3483): A punto de recibir el tamanio del buffer
+[INFO] 19:46:00:986 Kernel/(3483:3483): Recibi el tamanio del buffer: 0
+[INFO] 19:46:00:986 Kernel/(3483:3483): A punto de recibir el stream del buffer
+[INFO] 19:46:00:986 Kernel/(3483:3483): Recibi el stream del buffer: 0
+[INFO] 19:49:02:986 Kernel/(3551:3551): Listo para escuchar a mi cliente
+[INFO] 19:49:09:938 Kernel/(3551:3551): Se conecto un cliente!
+[INFO] 19:52:00:996 Kernel/(3737:3737): Listo para escuchar a mi cliente
+[INFO] 19:52:08:490 Kernel/(3737:3737): Se conecto un cliente!
+[INFO] 19:52:27:703 Kernel/(3737:3737): Creando buffer
+[INFO] 19:53:04:513 Kernel/(3737:3737): A punto de recibir el codigo de operacion
+[INFO] 19:53:09:171 Kernel/(3737:3737): Recibi el codigo de op: 3
+[INFO] 19:53:32:174 Kernel/(3737:3737): A punto de recibir el tamanio del buffer
+[INFO] 19:53:36:267 Kernel/(3737:3737): Recibi el tamanio del buffer: 356
+[INFO] 19:53:42:731 Kernel/(3737:3737): A punto de recibir el stream del buffer
+[INFO] 19:53:45:566 Kernel/(3737:3737): Recibi el stream del buffer: 356
+[INFO] 19:54:28:254 Kernel/(3942:3942): Listo para escuchar a mi cliente
+[INFO] 19:59:03:104 Kernel/(4179:4179): Listo para escuchar a mi cliente
+[INFO] 19:59:08:973 Kernel/(4179:4179): Se conecto un cliente!
+[INFO] 19:59:16:122 Kernel/(4179:4179): Creando buffer
+[INFO] 19:59:17:257 Kernel/(4179:4179): A punto de recibir el codigo de operacion
+[INFO] 20:00:09:396 Kernel/(4179:4179): Recibi el codigo de op: 3
+[INFO] 20:00:24:759 Kernel/(4179:4179): A punto de recibir el tamanio del buffer
+[INFO] 20:00:28:325 Kernel/(4179:4179): Recibi el tamanio del buffer: 356
+[INFO] 20:00:36:576 Kernel/(4179:4179): A punto de recibir el stream del buffer
+[INFO] 20:00:45:418 Kernel/(4179:4179): Recibi el stream del buffer: 356
+[INFO] 20:02:52:900 Kernel/(4370:4370): Listo para escuchar a mi cliente
+[INFO] 20:04:40:840 Kernel/(4471:4471): Listo para escuchar a mi cliente
+[INFO] 20:04:53:966 Kernel/(4471:4471): Se conecto un cliente!
+[INFO] 20:05:08:276 Kernel/(4471:4471): Creando buffer
+[INFO] 20:05:10:355 Kernel/(4471:4471): A punto de recibir el codigo de operacion
+[INFO] 20:05:14:244 Kernel/(4471:4471): Recibi el codigo de op: 3
+[INFO] 20:05:15:344 Kernel/(4471:4471): A punto de recibir el tamanio del buffer
+[INFO] 20:05:17:229 Kernel/(4471:4471): Recibi el tamanio del buffer: 356
+[INFO] 20:05:24:074 Kernel/(4471:4471): A punto de recibir el stream del buffer
+[INFO] 20:05:28:006 Kernel/(4471:4471): Recibi el stream del buffer: 356
+[INFO] 20:06:20:371 Kernel/(4622:4622): Listo para escuchar a mi cliente
+[INFO] 20:06:42:703 Kernel/(4719:4719): Listo para escuchar a mi cliente
+[INFO] 21:47:00:971 Kernel/(3568:3568): Listo para escuchar a mi cliente
+[INFO] 21:47:11:478 Kernel/(3568:3568): Se conecto un cliente!
+[INFO] 21:49:20:066 Kernel/(3675:3675): Listo para escuchar a mi cliente
+[INFO] 21:49:35:257 Kernel/(3675:3675): Se conecto un cliente!
+[INFO] 21:50:14:769 Kernel/(3793:3793): Listo para escuchar a mi cliente
+[INFO] 21:50:24:206 Kernel/(3793:3793): Se conecto un cliente!
+[INFO] 21:51:11:968 Kernel/(3905:3905): Listo para escuchar a mi cliente
+[INFO] 21:51:19:523 Kernel/(3905:3905): Se conecto un cliente!
+[INFO] 14:10:10:189 Kernel/(6456:6456): Listo para escuchar a mi cliente
+[INFO] 14:10:24:528 Kernel/(6456:6456): Se conecto un cliente!
+[INFO] 14:10:24:529 Kernel/(6456:6456): A punto de recibir el codigo de operacion
+[INFO] 14:10:24:529 Kernel/(6456:6456): Recibi el codigo de op: 3
+[INFO] 14:10:24:529 Kernel/(6456:6456): A punto de recibir el tamanio del buffer
+[INFO] 14:10:24:529 Kernel/(6456:6456): Recibi el tamanio del buffer: 356
+[INFO] 14:10:24:529 Kernel/(6456:6456): A punto de recibir el stream del buffer
+[INFO] 14:10:24:529 Kernel/(6456:6456): Recibi el stream del buffer
+[INFO] 14:11:11:525 Kernel/(6503:6503): Listo para escuchar a mi cliente
+[INFO] 14:11:15:810 Kernel/(6503:6503): Se conecto un cliente!
+[INFO] 14:11:15:812 Kernel/(6503:6503): A punto de recibir el codigo de operacion
+[INFO] 14:11:15:812 Kernel/(6503:6503): Recibi el codigo de op: 3
+[INFO] 14:11:15:812 Kernel/(6503:6503): A punto de recibir el tamanio del buffer
+[INFO] 14:11:15:812 Kernel/(6503:6503): Recibi el tamanio del buffer: 356
+[INFO] 14:11:15:812 Kernel/(6503:6503): A punto de recibir el stream del buffer
+[INFO] 14:11:15:812 Kernel/(6503:6503): Recibi el stream del buffer
+[INFO] 14:11:55:172 Kernel/(6550:6550): Listo para escuchar a mi cliente
+[INFO] 14:12:07:187 Kernel/(6550:6550): Se conecto un cliente!
+[INFO] 14:12:27:349 Kernel/(6550:6550): A punto de recibir el codigo de operacion
+[INFO] 14:12:37:837 Kernel/(6550:6550): Recibi el codigo de op: 3
+[INFO] 14:12:38:410 Kernel/(6550:6550): A punto de recibir el tamanio del buffer
+[INFO] 14:12:39:884 Kernel/(6550:6550): Recibi el tamanio del buffer: 356
+[INFO] 14:12:40:564 Kernel/(6550:6550): A punto de recibir el stream del buffer
+[INFO] 14:12:54:226 Kernel/(6550:6550): Recibi el stream del buffer
+[INFO] 14:18:27:178 Kernel/(6755:6755): Listo para escuchar a mi cliente
+[INFO] 14:18:31:820 Kernel/(6755:6755): Se conecto un cliente!
+[INFO] 14:18:31:820 Kernel/(6755:6755): A punto de recibir el codigo de operacion
+[INFO] 14:18:31:820 Kernel/(6755:6755): Recibi el codigo de op: 3
+[INFO] 14:18:31:820 Kernel/(6755:6755): A punto de recibir el tamanio del buffer
+[INFO] 14:18:31:820 Kernel/(6755:6755): Recibi el tamanio del buffer: 356
+[INFO] 14:18:31:821 Kernel/(6755:6755): A punto de recibir el stream del buffer
+[INFO] 14:18:31:821 Kernel/(6755:6755): Recibi el stream del buffer
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 2 
+[INFO] 14:18:31:821 Kernel/(6755:6755): String1: AX 
+[INFO] 14:18:31:821 Kernel/(6755:6755): String2: 10 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 4 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Numero1: 120 
+[INFO] 14:18:31:821 Kernel/(6755:6755): String1: AX 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 9 
+[INFO] 14:18:31:821 Kernel/(6755:6755): String1: DISCO 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 8 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Numero1: 10 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 10 
+[INFO] 14:18:31:821 Kernel/(6755:6755): String1: DISCO 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 3 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Numero1: 120 
+[INFO] 14:18:31:821 Kernel/(6755:6755): String1: BX 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 11 
+[INFO] 14:18:31:821 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 14 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Codigo de instruccion: 5 
+[INFO] 14:18:31:821 Kernel/(6755:6755): Numero1: 64 
+[INFO] 14:18:31:822 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Codigo de instruccion: 6 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero1: 10 
+[INFO] 14:18:31:822 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Codigo de instruccion: 7 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero1: 1 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero2: 128 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Codigo de instruccion: 1 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero1: 4 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero2: 4 
+[INFO] 14:18:31:822 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Codigo de instruccion: 0 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero1: 16 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero2: 4 
+[INFO] 14:18:31:822 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Codigo de instruccion: 13 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Numero1: 1 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Codigo de instruccion: 12 
+[INFO] 14:18:31:822 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Codigo de instruccion: 15 
+[INFO] 14:18:31:822 Kernel/(6755:6755): Enive codigo de fin de proceso.
+[INFO] 14:20:42:218 Kernel/(6817:6817): Listo para escuchar a mi cliente
+[INFO] 14:20:57:923 Kernel/(6847:6847): Listo para escuchar a mi cliente
+[INFO] 14:21:08:804 Kernel/(6847:6847): Se conecto un cliente!
+[INFO] 14:21:08:806 Kernel/(6847:6847): A punto de recibir el codigo de operacion
+[INFO] 14:21:08:806 Kernel/(6847:6847): Recibi el codigo de op: 3
+[INFO] 14:21:08:807 Kernel/(6847:6847): A punto de recibir el tamanio del buffer
+[INFO] 14:21:08:807 Kernel/(6847:6847): Recibi el tamanio del buffer: 356
+[INFO] 14:21:08:807 Kernel/(6847:6847): A punto de recibir el stream del buffer
+[INFO] 14:21:08:807 Kernel/(6847:6847): Recibi el stream del buffer
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 2 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: AX 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String2: 10 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 4 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 120 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: AX 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 9 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: DISCO 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 8 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 10 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 10 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: DISCO 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 3 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 120 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: BX 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 11 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: ARCHIVO 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 14 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 5 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 64 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: ARCHIVO 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 6 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 10 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: ARCHIVO 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 7 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 1 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero2: 128 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 1 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 4 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero2: 4 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: ARCHIVO 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 0 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero1: 16 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Numero2: 4 
+[INFO] 14:21:08:807 Kernel/(6847:6847): String1: ARCHIVO 
+[INFO] 14:21:08:807 Kernel/(6847:6847): Codigo de instruccion: 13 
+[INFO] 14:21:08:808 Kernel/(6847:6847): Numero1: 1 
+[INFO] 14:21:08:808 Kernel/(6847:6847): Codigo de instruccion: 12 
+[INFO] 14:21:08:808 Kernel/(6847:6847): String1: ARCHIVO 
+[INFO] 14:21:08:808 Kernel/(6847:6847): Codigo de instruccion: 15 
+[INFO] 14:23:31:232 Kernel/(6989:6989): Listo para escuchar a mi cliente
+[INFO] 14:23:43:569 Kernel/(6989:6989): Se conecto un cliente!
+[INFO] 14:23:43:569 Kernel/(6989:6989): A punto de recibir el codigo de operacion
+[INFO] 14:23:43:571 Kernel/(6989:6989): Recibi el codigo de op: 3
+[INFO] 14:23:43:571 Kernel/(6989:6989): A punto de recibir el tamanio del buffer
+[INFO] 14:23:43:571 Kernel/(6989:6989): Recibi el tamanio del buffer: 356
+[INFO] 14:23:43:571 Kernel/(6989:6989): A punto de recibir el stream del buffer
+[INFO] 14:23:43:572 Kernel/(6989:6989): Recibi el stream del buffer
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 2 
+[INFO] 14:23:43:572 Kernel/(6989:6989): String1: AX 
+[INFO] 14:23:43:572 Kernel/(6989:6989): String2: 10 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 4 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Numero1: 120 
+[INFO] 14:23:43:572 Kernel/(6989:6989): String1: AX 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 9 
+[INFO] 14:23:43:572 Kernel/(6989:6989): String1: DISCO 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 8 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Numero1: 10 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 10 
+[INFO] 14:23:43:572 Kernel/(6989:6989): String1: DISCO 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 3 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Numero1: 120 
+[INFO] 14:23:43:572 Kernel/(6989:6989): String1: BX 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 11 
+[INFO] 14:23:43:572 Kernel/(6989:6989): String1: ARCHIVO 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 14 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Codigo de instruccion: 5 
+[INFO] 14:23:43:572 Kernel/(6989:6989): Numero1: 64 
+[INFO] 14:23:43:573 Kernel/(6989:6989): String1: ARCHIVO 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Codigo de instruccion: 6 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Numero1: 10 
+[INFO] 14:23:43:573 Kernel/(6989:6989): String1: ARCHIVO 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Codigo de instruccion: 7 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Numero1: 1 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Numero2: 128 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Codigo de instruccion: 1 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Numero1: 4 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Numero2: 4 
+[INFO] 14:23:43:573 Kernel/(6989:6989): String1: ARCHIVO 
+[INFO] 14:23:43:573 Kernel/(6989:6989): Codigo de instruccion: 0 
+[INFO] 14:23:43:574 Kernel/(6989:6989): Numero1: 16 
+[INFO] 14:23:43:574 Kernel/(6989:6989): Numero2: 4 
+[INFO] 14:23:43:574 Kernel/(6989:6989): String1: ARCHIVO 
+[INFO] 14:23:43:574 Kernel/(6989:6989): Codigo de instruccion: 13 
+[INFO] 14:23:43:574 Kernel/(6989:6989): Numero1: 1 
+[INFO] 14:23:43:574 Kernel/(6989:6989): Codigo de instruccion: 12 
+[INFO] 14:23:43:574 Kernel/(6989:6989): String1: ARCHIVO 
+[INFO] 14:23:43:574 Kernel/(6989:6989): Codigo de instruccion: 15 
+[INFO] 14:23:43:574 Kernel/(6989:6989): Enive codigo de fin de proceso.
+[INFO] 14:24:00:245 Kernel/(7049:7049): Listo para escuchar a mi cliente
+[INFO] 14:24:12:953 Kernel/(7049:7049): Se conecto un cliente!
+[INFO] 14:24:12:953 Kernel/(7049:7049): A punto de recibir el codigo de operacion
+[INFO] 14:24:12:954 Kernel/(7049:7049): Recibi el codigo de op: 3
+[INFO] 14:24:12:954 Kernel/(7049:7049): A punto de recibir el tamanio del buffer
+[INFO] 14:24:12:954 Kernel/(7049:7049): Recibi el tamanio del buffer: 356
+[INFO] 14:24:12:954 Kernel/(7049:7049): A punto de recibir el stream del buffer
+[INFO] 14:24:12:954 Kernel/(7049:7049): Recibi el stream del buffer
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 2 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: AX 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String2: 10 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 4 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 120 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: AX 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 9 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: DISCO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 8 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 10 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 10 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: DISCO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 3 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 120 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: BX 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 11 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: ARCHIVO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 14 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 5 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 64 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: ARCHIVO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 6 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 10 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: ARCHIVO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 7 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 1 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero2: 128 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 1 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 4 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero2: 4 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: ARCHIVO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 0 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 16 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero2: 4 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: ARCHIVO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 13 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Numero1: 1 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 12 
+[INFO] 14:24:12:954 Kernel/(7049:7049): String1: ARCHIVO 
+[INFO] 14:24:12:954 Kernel/(7049:7049): Codigo de instruccion: 15 
+[INFO] 14:27:48:416 Kernel/(7264:7264): Listo para escuchar a mi cliente
+[INFO] 14:27:57:097 Kernel/(7264:7264): Se conecto un cliente!
+[INFO] 14:27:57:097 Kernel/(7264:7264): A punto de recibir el codigo de operacion
+[INFO] 14:28:12:380 Kernel/(7264:7264): Recibi el codigo de op: 0
+[INFO] 14:28:12:380 Kernel/(7264:7264): A punto de recibir el tamanio del buffer
+[INFO] 14:28:12:380 Kernel/(7264:7264): Recibi el tamanio del buffer: 0
+[INFO] 14:28:12:380 Kernel/(7264:7264): A punto de recibir el stream del buffer
+[INFO] 14:28:12:380 Kernel/(7264:7264): Recibi el stream del buffer
+[INFO] 14:28:39:409 Kernel/(7390:7390): Listo para escuchar a mi cliente
+[INFO] 14:28:46:785 Kernel/(7390:7390): Se conecto un cliente!
+[INFO] 14:28:46:786 Kernel/(7390:7390): A punto de recibir el codigo de operacion
+[INFO] 14:28:46:787 Kernel/(7390:7390): Recibi el codigo de op: 3
+[INFO] 14:28:46:787 Kernel/(7390:7390): A punto de recibir el tamanio del buffer
+[INFO] 14:28:46:787 Kernel/(7390:7390): Recibi el tamanio del buffer: 356
+[INFO] 14:28:46:787 Kernel/(7390:7390): A punto de recibir el stream del buffer
+[INFO] 14:28:46:787 Kernel/(7390:7390): Recibi el stream del buffer
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 2 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: AX 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String2: 10 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 4 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 120 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: AX 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 9 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: DISCO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 8 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 10 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 10 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: DISCO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 3 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 120 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: BX 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 11 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: ARCHIVO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 14 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 5 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 64 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: ARCHIVO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 6 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 10 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: ARCHIVO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 7 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 1 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero2: 128 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 1 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 4 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero2: 4 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: ARCHIVO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 0 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 16 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero2: 4 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: ARCHIVO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 13 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Numero1: 1 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 12 
+[INFO] 14:28:46:788 Kernel/(7390:7390): String1: ARCHIVO 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Codigo de instruccion: 15 
+[INFO] 14:28:46:788 Kernel/(7390:7390): Enive codigo de fin de proceso.
+[INFO] 14:30:50:824 Kernel/(7521:7521): Listo para escuchar a mi cliente
+[INFO] 14:30:55:836 Kernel/(7521:7521): Se conecto un cliente!
+[INFO] 14:30:55:836 Kernel/(7521:7521): A punto de recibir el codigo de operacion
+[INFO] 14:30:55:839 Kernel/(7521:7521): Recibi el codigo de op: 3
+[INFO] 14:30:55:839 Kernel/(7521:7521): A punto de recibir el tamanio del buffer
+[INFO] 14:30:55:839 Kernel/(7521:7521): Recibi el tamanio del buffer: 356
+[INFO] 14:30:55:839 Kernel/(7521:7521): A punto de recibir el stream del buffer
+[INFO] 14:30:55:839 Kernel/(7521:7521): Recibi el stream del buffer
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 2 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: AX 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String2: 10 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 4 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 120 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: AX 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 9 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: DISCO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 8 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 10 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 10 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: DISCO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 3 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 120 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: BX 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 11 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: ARCHIVO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 14 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 5 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 64 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: ARCHIVO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 6 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 10 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: ARCHIVO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 7 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 1 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero2: 128 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 1 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 4 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero2: 4 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: ARCHIVO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 0 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 16 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero2: 4 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: ARCHIVO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 13 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Numero1: 1 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 12 
+[INFO] 14:30:55:839 Kernel/(7521:7521): String1: ARCHIVO 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Codigo de instruccion: 15 
+[INFO] 14:30:55:839 Kernel/(7521:7521): Enive codigo de fin de proceso.
+[INFO] 14:34:23:839 Kernel/(7697:7697): Listo para escuchar a mi cliente
+[INFO] 14:34:29:050 Kernel/(7697:7697): Se conecto un cliente!
+[INFO] 14:34:29:050 Kernel/(7697:7697): A punto de recibir el codigo de operacion
+[INFO] 14:34:29:051 Kernel/(7697:7697): Recibi el codigo de op: 3
+[INFO] 14:34:29:051 Kernel/(7697:7697): A punto de recibir el tamanio del buffer
+[INFO] 14:34:29:051 Kernel/(7697:7697): Recibi el tamanio del buffer: 356
+[INFO] 14:34:29:051 Kernel/(7697:7697): A punto de recibir el stream del buffer
+[INFO] 14:34:29:051 Kernel/(7697:7697): Recibi el stream del buffer
+[INFO] 14:34:29:051 Kernel/(7697:7697): Codigo de instruccion: 2 
+[INFO] 14:34:29:051 Kernel/(7697:7697): String1: AX 
+[INFO] 14:34:29:051 Kernel/(7697:7697): String2: 10 
+[INFO] 14:34:29:051 Kernel/(7697:7697): Codigo de instruccion: 4 
+[INFO] 14:34:29:051 Kernel/(7697:7697): Numero1: 120 
+[INFO] 14:34:29:052 Kernel/(7697:7697): String1: AX 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Codigo de instruccion: 9 
+[INFO] 14:34:29:052 Kernel/(7697:7697): String1: DISCO 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Codigo de instruccion: 8 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Numero1: 10 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Codigo de instruccion: 10 
+[INFO] 14:34:29:052 Kernel/(7697:7697): String1: DISCO 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Codigo de instruccion: 3 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Numero1: 120 
+[INFO] 14:34:29:052 Kernel/(7697:7697): String1: BX 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Codigo de instruccion: 11 
+[INFO] 14:34:29:052 Kernel/(7697:7697): String1: ARCHIVO 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Codigo de instruccion: 14 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Codigo de instruccion: 5 
+[INFO] 14:34:29:052 Kernel/(7697:7697): Numero1: 64 
+[INFO] 14:34:29:052 Kernel/(7697:7697): String1: ARCHIVO 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Codigo de instruccion: 6 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Numero1: 10 
+[INFO] 14:34:29:053 Kernel/(7697:7697): String1: ARCHIVO 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Codigo de instruccion: 7 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Numero1: 1 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Numero2: 128 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Codigo de instruccion: 1 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Numero1: 4 
+[INFO] 14:34:29:053 Kernel/(7697:7697): Numero2: 4 
+[INFO] 14:34:29:054 Kernel/(7697:7697): String1: ARCHIVO 
+[INFO] 14:34:29:054 Kernel/(7697:7697): Codigo de instruccion: 0 
+[INFO] 14:34:29:054 Kernel/(7697:7697): Numero1: 16 
+[INFO] 14:34:29:054 Kernel/(7697:7697): Numero2: 4 
+[INFO] 14:34:29:054 Kernel/(7697:7697): String1: ARCHIVO 
+[INFO] 14:34:29:054 Kernel/(7697:7697): Codigo de instruccion: 13 
+[INFO] 14:34:29:054 Kernel/(7697:7697): Numero1: 1 
+[INFO] 14:34:29:054 Kernel/(7697:7697): Codigo de instruccion: 12 
+[INFO] 14:34:29:054 Kernel/(7697:7697): String1: ARCHIVO 
+[INFO] 14:34:29:054 Kernel/(7697:7697): Codigo de instruccion: 15 
+[INFO] 14:36:59:399 Kernel/(7894:7894): Listo para escuchar a mi cliente
+[INFO] 14:37:06:522 Kernel/(7894:7894): Se conecto un cliente!
+[INFO] 14:37:06:523 Kernel/(7894:7894): A punto de recibir el codigo de operacion
+[INFO] 14:37:06:523 Kernel/(7894:7894): Recibi el codigo de op: 3
+[INFO] 14:37:06:523 Kernel/(7894:7894): A punto de recibir el tamanio del buffer
+[INFO] 14:37:06:524 Kernel/(7894:7894): Recibi el tamanio del buffer: 356
+[INFO] 14:37:06:524 Kernel/(7894:7894): A punto de recibir el stream del buffer
+[INFO] 14:37:06:524 Kernel/(7894:7894): Recibi el stream del buffer
+[INFO] 14:37:06:524 Kernel/(7894:7894): Codigo de instruccion: 2 
+[INFO] 14:37:06:524 Kernel/(7894:7894): String1: AX 
+[INFO] 14:37:06:524 Kernel/(7894:7894): String2: 10 
+[INFO] 14:37:06:524 Kernel/(7894:7894): Codigo de instruccion: 4 
+[INFO] 14:37:06:524 Kernel/(7894:7894): Numero1: 120 
+[INFO] 14:37:06:524 Kernel/(7894:7894): String1: AX 
+[INFO] 14:37:06:526 Kernel/(7894:7894): Codigo de instruccion: 9 
+[INFO] 14:37:06:526 Kernel/(7894:7894): String1: DISCO 
+[INFO] 14:37:06:526 Kernel/(7894:7894): Codigo de instruccion: 8 
+[INFO] 14:37:06:526 Kernel/(7894:7894): Numero1: 10 
+[INFO] 14:37:06:526 Kernel/(7894:7894): Codigo de instruccion: 10 
+[INFO] 14:37:06:526 Kernel/(7894:7894): String1: DISCO 
+[INFO] 14:37:06:526 Kernel/(7894:7894): Codigo de instruccion: 3 
+[INFO] 14:37:06:526 Kernel/(7894:7894): Numero1: 120 
+[INFO] 14:37:06:527 Kernel/(7894:7894): String1: BX 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Codigo de instruccion: 11 
+[INFO] 14:37:06:527 Kernel/(7894:7894): String1: ARCHIVO 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Codigo de instruccion: 14 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Codigo de instruccion: 5 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero1: 64 
+[INFO] 14:37:06:527 Kernel/(7894:7894): String1: ARCHIVO 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Codigo de instruccion: 6 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero1: 10 
+[INFO] 14:37:06:527 Kernel/(7894:7894): String1: ARCHIVO 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Codigo de instruccion: 7 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero1: 1 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero2: 128 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Codigo de instruccion: 1 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero1: 4 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero2: 4 
+[INFO] 14:37:06:527 Kernel/(7894:7894): String1: ARCHIVO 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Codigo de instruccion: 0 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero1: 16 
+[INFO] 14:37:06:527 Kernel/(7894:7894): Numero2: 4 
+[INFO] 14:37:06:528 Kernel/(7894:7894): String1: ARCHIVO 
+[INFO] 14:37:06:528 Kernel/(7894:7894): Codigo de instruccion: 13 
+[INFO] 14:37:06:528 Kernel/(7894:7894): Numero1: 1 
+[INFO] 14:37:06:528 Kernel/(7894:7894): Codigo de instruccion: 12 
+[INFO] 14:37:06:528 Kernel/(7894:7894): String1: ARCHIVO 
+[INFO] 14:37:06:528 Kernel/(7894:7894): Codigo de instruccion: 15 
+[INFO] 14:37:06:528 Kernel/(7894:7894): Enive codigo de fin de proceso.
+[INFO] 14:38:12:949 Kernel/(8013:8013): Listo para escuchar a mi cliente
+[INFO] 14:38:20:024 Kernel/(8013:8013): Se conecto un cliente!
+[INFO] 14:38:20:025 Kernel/(8013:8013): A punto de recibir el codigo de operacion
+[INFO] 14:38:20:027 Kernel/(8013:8013): Recibi el codigo de op: 3
+[INFO] 14:38:20:027 Kernel/(8013:8013): A punto de recibir el tamanio del buffer
+[INFO] 14:38:20:027 Kernel/(8013:8013): Recibi el tamanio del buffer: 356
+[INFO] 14:38:20:027 Kernel/(8013:8013): A punto de recibir el stream del buffer
+[INFO] 14:38:20:027 Kernel/(8013:8013): Recibi el stream del buffer
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 2 
+[INFO] 14:38:20:027 Kernel/(8013:8013): String1: AX 
+[INFO] 14:38:20:027 Kernel/(8013:8013): String2: 10 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 4 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Numero1: 120 
+[INFO] 14:38:20:027 Kernel/(8013:8013): String1: AX 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 9 
+[INFO] 14:38:20:027 Kernel/(8013:8013): String1: DISCO 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 8 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Numero1: 10 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 10 
+[INFO] 14:38:20:027 Kernel/(8013:8013): String1: DISCO 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 3 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Numero1: 120 
+[INFO] 14:38:20:027 Kernel/(8013:8013): String1: BX 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 11 
+[INFO] 14:38:20:027 Kernel/(8013:8013): String1: ARCHIVO 
+[INFO] 14:38:20:027 Kernel/(8013:8013): Codigo de instruccion: 14 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 5 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero1: 64 
+[INFO] 14:38:20:028 Kernel/(8013:8013): String1: ARCHIVO 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 6 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero1: 10 
+[INFO] 14:38:20:028 Kernel/(8013:8013): String1: ARCHIVO 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 7 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero1: 1 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero2: 128 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 1 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero1: 4 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero2: 4 
+[INFO] 14:38:20:028 Kernel/(8013:8013): String1: ARCHIVO 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 0 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero1: 16 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero2: 4 
+[INFO] 14:38:20:028 Kernel/(8013:8013): String1: ARCHIVO 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 13 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Numero1: 1 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 12 
+[INFO] 14:38:20:028 Kernel/(8013:8013): String1: ARCHIVO 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Codigo de instruccion: 15 
+[INFO] 14:38:20:028 Kernel/(8013:8013): Enive codigo de fin de proceso.
+[INFO] 14:40:27:597 Kernel/(8301:8301): Listo para escuchar a mi cliente
+[INFO] 14:40:30:982 Kernel/(8301:8301): Se conecto un cliente!
+[INFO] 14:40:30:982 Kernel/(8301:8301): A punto de recibir el codigo de operacion
+[INFO] 14:40:30:983 Kernel/(8301:8301): Recibi el codigo de op: 3
+[INFO] 14:40:30:983 Kernel/(8301:8301): A punto de recibir el tamanio del buffer
+[INFO] 14:40:30:983 Kernel/(8301:8301): Recibi el tamanio del buffer: 356
+[INFO] 14:40:30:983 Kernel/(8301:8301): A punto de recibir el stream del buffer
+[INFO] 14:40:30:983 Kernel/(8301:8301): Recibi el stream del buffer
+[INFO] 14:40:30:983 Kernel/(8301:8301): Codigo de instruccion: 2 
+[INFO] 14:40:30:983 Kernel/(8301:8301): String1: AX 
+[INFO] 14:40:30:983 Kernel/(8301:8301): String2: 10 
+[INFO] 14:40:30:983 Kernel/(8301:8301): Codigo de instruccion: 4 
+[INFO] 14:40:30:983 Kernel/(8301:8301): Numero1: 120 
+[INFO] 14:40:30:983 Kernel/(8301:8301): String1: AX 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 9 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: DISCO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 8 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 10 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 10 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: DISCO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 3 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 120 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: BX 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 11 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: ARCHIVO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 14 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 5 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 64 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: ARCHIVO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 6 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 10 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: ARCHIVO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 7 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 1 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero2: 128 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 1 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 4 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero2: 4 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: ARCHIVO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 0 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 16 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero2: 4 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: ARCHIVO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 13 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Numero1: 1 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 12 
+[INFO] 14:40:30:984 Kernel/(8301:8301): String1: ARCHIVO 
+[INFO] 14:40:30:984 Kernel/(8301:8301): Codigo de instruccion: 15 
+[INFO] 14:40:30:985 Kernel/(8301:8301): Enive codigo de fin de proceso.
+[INFO] 14:41:32:197 Kernel/(8408:8408): Listo para escuchar a mi cliente
+[INFO] 14:41:37:780 Kernel/(8408:8408): Se conecto un cliente!
+[INFO] 14:41:37:780 Kernel/(8408:8408): A punto de recibir el codigo de operacion
+[INFO] 14:41:37:781 Kernel/(8408:8408): Recibi el codigo de op: 3
+[INFO] 14:41:37:781 Kernel/(8408:8408): A punto de recibir el tamanio del buffer
+[INFO] 14:41:37:781 Kernel/(8408:8408): Recibi el tamanio del buffer: 356
+[INFO] 14:41:37:781 Kernel/(8408:8408): A punto de recibir el stream del buffer
+[INFO] 14:41:37:781 Kernel/(8408:8408): Recibi el stream del buffer
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 2 
+[INFO] 14:41:37:781 Kernel/(8408:8408): String1: AX 
+[INFO] 14:41:37:781 Kernel/(8408:8408): String2: 10 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 4 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Numero1: 120 
+[INFO] 14:41:37:781 Kernel/(8408:8408): String1: AX 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 9 
+[INFO] 14:41:37:781 Kernel/(8408:8408): String1: DISCO 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 8 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Numero1: 10 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 10 
+[INFO] 14:41:37:781 Kernel/(8408:8408): String1: DISCO 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 3 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Numero1: 120 
+[INFO] 14:41:37:781 Kernel/(8408:8408): String1: BX 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 11 
+[INFO] 14:41:37:781 Kernel/(8408:8408): String1: ARCHIVO 
+[INFO] 14:41:37:781 Kernel/(8408:8408): Codigo de instruccion: 14 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 5 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero1: 64 
+[INFO] 14:41:37:782 Kernel/(8408:8408): String1: ARCHIVO 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 6 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero1: 10 
+[INFO] 14:41:37:782 Kernel/(8408:8408): String1: ARCHIVO 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 7 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero1: 1 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero2: 128 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 1 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero1: 4 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero2: 4 
+[INFO] 14:41:37:782 Kernel/(8408:8408): String1: ARCHIVO 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 0 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero1: 16 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero2: 4 
+[INFO] 14:41:37:782 Kernel/(8408:8408): String1: ARCHIVO 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 13 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Numero1: 1 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 12 
+[INFO] 14:41:37:782 Kernel/(8408:8408): String1: ARCHIVO 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Codigo de instruccion: 15 
+[INFO] 14:41:37:782 Kernel/(8408:8408): Enive codigo de fin de proceso.
+[INFO] 14:42:24:479 Kernel/(8481:8481): Listo para escuchar a mi cliente
+[INFO] 14:42:27:948 Kernel/(8481:8481): Se conecto un cliente!
+[INFO] 14:42:27:949 Kernel/(8481:8481): A punto de recibir el codigo de operacion
+[INFO] 14:42:27:949 Kernel/(8481:8481): Recibi el codigo de op: 3
+[INFO] 14:42:27:949 Kernel/(8481:8481): A punto de recibir el tamanio del buffer
+[INFO] 14:42:27:950 Kernel/(8481:8481): Recibi el tamanio del buffer: 356
+[INFO] 14:42:27:950 Kernel/(8481:8481): A punto de recibir el stream del buffer
+[INFO] 14:42:27:950 Kernel/(8481:8481): Recibi el stream del buffer
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 2 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: AX 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String2: 10 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 4 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 120 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: AX 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 9 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: DISCO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 8 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 10 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 10 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: DISCO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 3 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 120 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: BX 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 11 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: ARCHIVO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 14 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 5 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 64 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: ARCHIVO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 6 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 10 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: ARCHIVO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 7 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 1 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero2: 128 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 1 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 4 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero2: 4 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: ARCHIVO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 0 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 16 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero2: 4 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: ARCHIVO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 13 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Numero1: 1 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 12 
+[INFO] 14:42:27:950 Kernel/(8481:8481): String1: ARCHIVO 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Codigo de instruccion: 15 
+[INFO] 14:42:27:950 Kernel/(8481:8481): Enive codigo de fin de proceso.
+[INFO] 14:43:29:751 Kernel/(8641:8641): Listo para escuchar a mi cliente
+[INFO] 14:43:32:757 Kernel/(8641:8641): Se conecto un cliente!
+[INFO] 14:43:32:758 Kernel/(8641:8641): A punto de recibir el codigo de operacion
+[INFO] 14:43:32:760 Kernel/(8641:8641): Recibi el codigo de op: 3
+[INFO] 14:43:32:760 Kernel/(8641:8641): A punto de recibir el tamanio del buffer
+[INFO] 14:43:32:760 Kernel/(8641:8641): Recibi el tamanio del buffer: 356
+[INFO] 14:43:32:760 Kernel/(8641:8641): A punto de recibir el stream del buffer
+[INFO] 14:43:32:760 Kernel/(8641:8641): Recibi el stream del buffer
+[INFO] 14:43:32:760 Kernel/(8641:8641): Codigo de instruccion: 2 
+[INFO] 14:43:32:760 Kernel/(8641:8641): String1: AX 
+[INFO] 14:43:32:760 Kernel/(8641:8641): String2: 10 
+[INFO] 14:43:32:760 Kernel/(8641:8641): Codigo de instruccion: 4 
+[INFO] 14:43:32:760 Kernel/(8641:8641): Numero1: 120 
+[INFO] 14:43:32:760 Kernel/(8641:8641): String1: AX 
+[INFO] 14:43:32:760 Kernel/(8641:8641): Codigo de instruccion: 9 
+[INFO] 14:43:32:760 Kernel/(8641:8641): String1: DISCO 
+[INFO] 14:43:32:761 Kernel/(8641:8641): Codigo de instruccion: 8 
+[INFO] 14:43:32:761 Kernel/(8641:8641): Numero1: 10 
+[INFO] 14:43:32:761 Kernel/(8641:8641): Codigo de instruccion: 10 
+[INFO] 14:43:32:761 Kernel/(8641:8641): String1: DISCO 
+[INFO] 14:43:32:761 Kernel/(8641:8641): Codigo de instruccion: 3 
+[INFO] 14:43:32:761 Kernel/(8641:8641): Numero1: 120 
+[INFO] 14:43:32:761 Kernel/(8641:8641): String1: BX 
+[INFO] 14:43:32:761 Kernel/(8641:8641): Codigo de instruccion: 11 
+[INFO] 14:43:32:762 Kernel/(8641:8641): String1: ARCHIVO 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Codigo de instruccion: 14 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Codigo de instruccion: 5 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Numero1: 64 
+[INFO] 14:43:32:762 Kernel/(8641:8641): String1: ARCHIVO 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Codigo de instruccion: 6 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Numero1: 10 
+[INFO] 14:43:32:762 Kernel/(8641:8641): String1: ARCHIVO 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Codigo de instruccion: 7 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Numero1: 1 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Numero2: 128 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Codigo de instruccion: 1 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Numero1: 4 
+[INFO] 14:43:32:762 Kernel/(8641:8641): Numero2: 4 
+[INFO] 14:43:32:763 Kernel/(8641:8641): String1: ARCHIVO 
+[INFO] 14:43:32:763 Kernel/(8641:8641): Codigo de instruccion: 0 
+[INFO] 14:43:32:763 Kernel/(8641:8641): Numero1: 16 
+[INFO] 14:43:32:763 Kernel/(8641:8641): Numero2: 4 
+[INFO] 14:43:32:763 Kernel/(8641:8641): String1: ARCHIVO 
+[INFO] 14:43:32:763 Kernel/(8641:8641): Codigo de instruccion: 13 
+[INFO] 14:43:32:763 Kernel/(8641:8641): Numero1: 1 
+[INFO] 14:43:32:763 Kernel/(8641:8641): Codigo de instruccion: 12 
+[INFO] 14:43:32:763 Kernel/(8641:8641): String1: ARCHIVO 
+[INFO] 14:43:32:763 Kernel/(8641:8641): Codigo de instruccion: 15 
+[INFO] 14:43:32:764 Kernel/(8641:8641): Enive codigo de fin de proceso.
+[INFO] 14:44:18:219 Kernel/(8802:8802): Listo para escuchar a mi cliente
+[INFO] 14:44:21:317 Kernel/(8802:8802): Se conecto un cliente!
+[INFO] 14:44:21:317 Kernel/(8802:8802): A punto de recibir el codigo de operacion
+[INFO] 14:44:21:317 Kernel/(8802:8802): Recibi el codigo de op: 3
+[INFO] 14:44:21:317 Kernel/(8802:8802): A punto de recibir el tamanio del buffer
+[INFO] 14:44:21:317 Kernel/(8802:8802): Recibi el tamanio del buffer: 356
+[INFO] 14:44:21:317 Kernel/(8802:8802): A punto de recibir el stream del buffer
+[INFO] 14:44:21:317 Kernel/(8802:8802): Recibi el stream del buffer
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 2 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: AX 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String2: 10 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 4 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Numero1: 120 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: AX 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 9 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: DISCO 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 8 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Numero1: 10 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 10 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: DISCO 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 3 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Numero1: 120 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: BX 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 11 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: ARCHIVO 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 14 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 5 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Numero1: 64 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: ARCHIVO 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 6 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Numero1: 10 
+[INFO] 14:44:21:317 Kernel/(8802:8802): String1: ARCHIVO 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 7 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Numero1: 1 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Numero2: 128 
+[INFO] 14:44:21:317 Kernel/(8802:8802): Codigo de instruccion: 1 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Numero1: 4 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Numero2: 4 
+[INFO] 14:44:21:318 Kernel/(8802:8802): String1: ARCHIVO 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Codigo de instruccion: 0 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Numero1: 16 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Numero2: 4 
+[INFO] 14:44:21:318 Kernel/(8802:8802): String1: ARCHIVO 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Codigo de instruccion: 13 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Numero1: 1 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Codigo de instruccion: 12 
+[INFO] 14:44:21:318 Kernel/(8802:8802): String1: ARCHIVO 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Codigo de instruccion: 15 
+[INFO] 14:44:21:318 Kernel/(8802:8802): Enive codigo de fin de proceso.
+[INFO] 15:02:21:821 Kernel/(9524:9524): Listo para escuchar a mi cliente
+[INFO] 15:02:26:636 Kernel/(9524:9524): Se conecto un cliente!
+[INFO] 15:02:26:642 Kernel/(9524:9524): A punto de recibir el codigo de operacion
+[INFO] 15:02:26:647 Kernel/(9524:9524): Recibi el codigo de op: 3
+[INFO] 15:02:26:647 Kernel/(9524:9524): A punto de recibir el tamanio del buffer
+[INFO] 15:02:26:647 Kernel/(9524:9524): Recibi el tamanio del buffer: 356
+[INFO] 15:02:26:647 Kernel/(9524:9524): A punto de recibir el stream del buffer
+[INFO] 15:02:26:647 Kernel/(9524:9524): Recibi el stream del buffer
+[INFO] 15:02:26:647 Kernel/(9524:9524): Codigo de instruccion: 2 
+[INFO] 15:02:26:647 Kernel/(9524:9524): String1: AX 
+[INFO] 15:02:26:647 Kernel/(9524:9524): String2: 10 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Codigo de instruccion: 4 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Numero1: 120 
+[INFO] 15:02:26:647 Kernel/(9524:9524): String1: AX 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Codigo de instruccion: 9 
+[INFO] 15:02:26:647 Kernel/(9524:9524): String1: DISCO 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Codigo de instruccion: 8 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Numero1: 10 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Codigo de instruccion: 10 
+[INFO] 15:02:26:647 Kernel/(9524:9524): String1: DISCO 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Codigo de instruccion: 3 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Numero1: 120 
+[INFO] 15:02:26:647 Kernel/(9524:9524): String1: BX 
+[INFO] 15:02:26:647 Kernel/(9524:9524): Codigo de instruccion: 11 
+[INFO] 15:02:26:650 Kernel/(9524:9524): String1: ARCHIVO 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 14 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 5 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero1: 64 
+[INFO] 15:02:26:650 Kernel/(9524:9524): String1: ARCHIVO 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 6 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero1: 10 
+[INFO] 15:02:26:650 Kernel/(9524:9524): String1: ARCHIVO 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 7 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero1: 1 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero2: 128 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 1 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero1: 4 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero2: 4 
+[INFO] 15:02:26:650 Kernel/(9524:9524): String1: ARCHIVO 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 0 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero1: 16 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero2: 4 
+[INFO] 15:02:26:650 Kernel/(9524:9524): String1: ARCHIVO 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 13 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Numero1: 1 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 12 
+[INFO] 15:02:26:650 Kernel/(9524:9524): String1: ARCHIVO 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Codigo de instruccion: 15 
+[INFO] 15:02:26:650 Kernel/(9524:9524): Se crea el proceso 0 en NEW
+[INFO] 15:04:36:175 Kernel/(9609:9609): Listo para escuchar a mi cliente
+[INFO] 15:04:54:150 Kernel/(9609:9609): Se conecto un cliente!
+[INFO] 15:04:54:150 Kernel/(9609:9609): A punto de recibir el codigo de operacion
+[INFO] 15:04:54:151 Kernel/(9609:9609): Recibi el codigo de op: 3
+[INFO] 15:04:54:151 Kernel/(9609:9609): A punto de recibir el tamanio del buffer
+[INFO] 15:04:54:151 Kernel/(9609:9609): Recibi el tamanio del buffer: 356
+[INFO] 15:04:54:151 Kernel/(9609:9609): A punto de recibir el stream del buffer
+[INFO] 15:04:54:151 Kernel/(9609:9609): Recibi el stream del buffer
+[INFO] 15:04:54:151 Kernel/(9609:9609): Codigo de instruccion: 2 
+[INFO] 15:04:54:151 Kernel/(9609:9609): String1: AX 
+[INFO] 15:04:54:151 Kernel/(9609:9609): String2: 10 
+[INFO] 15:04:54:151 Kernel/(9609:9609): Codigo de instruccion: 4 
+[INFO] 15:04:54:151 Kernel/(9609:9609): Numero1: 120 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: AX 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 9 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: DISCO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 8 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 10 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 10 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: DISCO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 3 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 120 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: BX 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 11 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: ARCHIVO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 14 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 5 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 64 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: ARCHIVO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 6 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 10 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: ARCHIVO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 7 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 1 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero2: 128 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 1 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 4 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero2: 4 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: ARCHIVO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 0 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 16 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero2: 4 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: ARCHIVO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 13 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Numero1: 1 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 12 
+[INFO] 15:04:54:152 Kernel/(9609:9609): String1: ARCHIVO 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Codigo de instruccion: 15 
+[INFO] 15:04:54:152 Kernel/(9609:9609): Se crea el proceso 0 en NEW
+[INFO] 15:06:23:765 Kernel/(9669:9669): Listo para escuchar a mi cliente
+[INFO] 15:06:29:903 Kernel/(9669:9669): Se conecto un cliente!
+[INFO] 15:06:29:903 Kernel/(9669:9669): A punto de recibir el codigo de operacion
+[INFO] 15:06:29:904 Kernel/(9669:9669): Recibi el codigo de op: 3
+[INFO] 15:06:29:904 Kernel/(9669:9669): A punto de recibir el tamanio del buffer
+[INFO] 15:06:29:904 Kernel/(9669:9669): Recibi el tamanio del buffer: 356
+[INFO] 15:06:29:904 Kernel/(9669:9669): A punto de recibir el stream del buffer
+[INFO] 15:06:29:905 Kernel/(9669:9669): Recibi el stream del buffer
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 2 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: AX 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String2: 10 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 4 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 120 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: AX 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 9 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: DISCO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 8 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 10 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 10 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: DISCO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 3 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 120 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: BX 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 11 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: ARCHIVO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 14 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 5 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 64 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: ARCHIVO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 6 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 10 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: ARCHIVO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 7 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 1 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero2: 128 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 1 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 4 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero2: 4 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: ARCHIVO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 0 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 16 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero2: 4 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: ARCHIVO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 13 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Numero1: 1 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 12 
+[INFO] 15:06:29:905 Kernel/(9669:9669): String1: ARCHIVO 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Codigo de instruccion: 15 
+[INFO] 15:06:29:905 Kernel/(9669:9669): Se crea el proceso 0 en NEW
+[INFO] 15:08:49:707 Kernel/(9773:9773): Listo para escuchar a mi cliente
+[INFO] 15:09:10:228 Kernel/(9773:9773): Se conecto un cliente!
+[INFO] 15:09:10:228 Kernel/(9773:9773): A punto de recibir el codigo de operacion
+[INFO] 15:09:20:540 Kernel/(9773:9773): Recibi el codigo de op: 0
+[INFO] 15:09:20:540 Kernel/(9773:9773): A punto de recibir el tamanio del buffer
+[INFO] 15:09:20:540 Kernel/(9773:9773): Recibi el tamanio del buffer: 0
+[INFO] 15:09:20:540 Kernel/(9773:9773): A punto de recibir el stream del buffer
+[INFO] 15:09:20:540 Kernel/(9773:9773): Recibi el stream del buffer
+[INFO] 15:10:01:853 Kernel/(9889:9889): Listo para escuchar a mi cliente
+[INFO] 15:10:24:279 Kernel/(9933:9933): Listo para escuchar a mi cliente
+[INFO] 15:10:41:354 Kernel/(9933:9933): Se conecto un cliente!
+[INFO] 15:10:52:462 Kernel/(9933:9933): A punto de recibir el codigo de operacion
+[INFO] 15:11:10:563 Kernel/(9933:9933): Recibi el codigo de op: 3
+[INFO] 15:11:11:182 Kernel/(9933:9933): A punto de recibir el tamanio del buffer
+[INFO] 15:11:12:354 Kernel/(9933:9933): Recibi el tamanio del buffer: 356
+[INFO] 15:11:14:582 Kernel/(9933:9933): A punto de recibir el stream del buffer
+[INFO] 15:11:15:582 Kernel/(9933:9933): Recibi el stream del buffer
+[INFO] 15:11:21:189 Kernel/(9933:9933): Codigo de instruccion: 2 
+[INFO] 15:11:21:189 Kernel/(9933:9933): String1: AX 
+[INFO] 15:11:21:189 Kernel/(9933:9933): String2: 10 
+[INFO] 15:11:21:189 Kernel/(9933:9933): Codigo de instruccion: 4 
+[INFO] 15:11:21:189 Kernel/(9933:9933): Numero1: 120 
+[INFO] 15:11:21:189 Kernel/(9933:9933): String1: AX 
+[INFO] 15:11:21:189 Kernel/(9933:9933): Codigo de instruccion: 9 
+[INFO] 15:11:21:189 Kernel/(9933:9933): String1: DISCO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 8 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 10 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 10 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: DISCO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 3 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 120 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: BX 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 11 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: ARCHIVO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 14 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 5 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 64 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: ARCHIVO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 6 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 10 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: ARCHIVO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 7 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 1 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero2: 128 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 1 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 4 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero2: 4 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: ARCHIVO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 0 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 16 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero2: 4 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: ARCHIVO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 13 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Numero1: 1 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 12 
+[INFO] 15:11:21:190 Kernel/(9933:9933): String1: ARCHIVO 
+[INFO] 15:11:21:190 Kernel/(9933:9933): Codigo de instruccion: 15 
+[INFO] 15:11:46:612 Kernel/(9933:9933): Se crea el proceso 0 en NEW
+[INFO] 15:28:38:091 Kernel/(10747:10747): Listo para escuchar a mi cliente
+[INFO] 15:28:44:153 Kernel/(10747:10747): Se conecto un cliente!
+[INFO] 15:28:44:153 Kernel/(10747:10747): A punto de recibir el codigo de operacion
+[INFO] 15:28:44:154 Kernel/(10747:10747): Recibi el codigo de op: 3
+[INFO] 15:28:44:154 Kernel/(10747:10747): A punto de recibir el tamanio del buffer
+[INFO] 15:28:44:154 Kernel/(10747:10747): Recibi el tamanio del buffer: 356
+[INFO] 15:28:44:154 Kernel/(10747:10747): A punto de recibir el stream del buffer
+[INFO] 15:28:44:154 Kernel/(10747:10747): Recibi el stream del buffer
+[INFO] 15:28:44:154 Kernel/(10747:10747): Codigo de instruccion: 2 
+[INFO] 15:28:44:154 Kernel/(10747:10747): String1: AX 
+[INFO] 15:28:44:154 Kernel/(10747:10747): String2: 10 
+[INFO] 15:28:44:154 Kernel/(10747:10747): Codigo de instruccion: 4 
+[INFO] 15:28:44:154 Kernel/(10747:10747): Numero1: 120 
+[INFO] 15:28:44:154 Kernel/(10747:10747): String1: AX 
+[INFO] 15:28:44:154 Kernel/(10747:10747): Codigo de instruccion: 9 
+[INFO] 15:28:44:154 Kernel/(10747:10747): String1: DISCO 
+[INFO] 15:28:44:154 Kernel/(10747:10747): Codigo de instruccion: 8 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Numero1: 10 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 10 
+[INFO] 15:28:44:155 Kernel/(10747:10747): String1: DISCO 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 3 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Numero1: 120 
+[INFO] 15:28:44:155 Kernel/(10747:10747): String1: BX 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 11 
+[INFO] 15:28:44:155 Kernel/(10747:10747): String1: ARCHIVO 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 14 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 5 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Numero1: 64 
+[INFO] 15:28:44:155 Kernel/(10747:10747): String1: ARCHIVO 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 6 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Numero1: 10 
+[INFO] 15:28:44:155 Kernel/(10747:10747): String1: ARCHIVO 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 7 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Numero1: 1 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Numero2: 128 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Codigo de instruccion: 1 
+[INFO] 15:28:44:155 Kernel/(10747:10747): Numero1: 4 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Numero2: 4 
+[INFO] 15:28:44:156 Kernel/(10747:10747): String1: ARCHIVO 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Codigo de instruccion: 0 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Numero1: 16 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Numero2: 4 
+[INFO] 15:28:44:156 Kernel/(10747:10747): String1: ARCHIVO 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Codigo de instruccion: 13 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Numero1: 1 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Codigo de instruccion: 12 
+[INFO] 15:28:44:156 Kernel/(10747:10747): String1: ARCHIVO 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Codigo de instruccion: 15 
+[INFO] 15:28:44:156 Kernel/(10747:10747): Se crea el proceso 0 en NEW
+[INFO] 15:29:09:696 Kernel/(10817:10817): Listo para escuchar a mi cliente
+[INFO] 15:33:19:914 Kernel/(2243:2243): Listo para escuchar a mi cliente
+[INFO] 15:33:25:412 Kernel/(2243:2243): Se conecto un cliente!
+[INFO] 15:33:34:887 Kernel/(2243:2243): A punto de recibir el codigo de operacion
+[INFO] 15:33:43:420 Kernel/(2243:2243): Recibi el codigo de op: 3
+[INFO] 15:33:43:917 Kernel/(2243:2243): A punto de recibir el tamanio del buffer
+[INFO] 15:33:44:979 Kernel/(2243:2243): Recibi el tamanio del buffer: 356
+[INFO] 15:33:46:125 Kernel/(2243:2243): A punto de recibir el stream del buffer
+[INFO] 15:33:47:248 Kernel/(2243:2243): Recibi el stream del buffer
+[INFO] 15:34:04:638 Kernel/(2243:2243): Codigo de instruccion: 2 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: AX 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String2: 10 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 4 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Numero1: 120 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: AX 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 9 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: DISCO 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 8 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Numero1: 10 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 10 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: DISCO 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 3 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Numero1: 120 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: BX 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 11 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: ARCHIVO 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 14 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 5 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Numero1: 64 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: ARCHIVO 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Codigo de instruccion: 6 
+[INFO] 15:34:04:643 Kernel/(2243:2243): Numero1: 10 
+[INFO] 15:34:04:643 Kernel/(2243:2243): String1: ARCHIVO 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Codigo de instruccion: 7 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Numero1: 1 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Numero2: 128 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Codigo de instruccion: 1 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Numero1: 4 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Numero2: 4 
+[INFO] 15:34:04:644 Kernel/(2243:2243): String1: ARCHIVO 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Codigo de instruccion: 0 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Numero1: 16 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Numero2: 4 
+[INFO] 15:34:04:644 Kernel/(2243:2243): String1: ARCHIVO 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Codigo de instruccion: 13 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Numero1: 1 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Codigo de instruccion: 12 
+[INFO] 15:34:04:644 Kernel/(2243:2243): String1: ARCHIVO 
+[INFO] 15:34:04:644 Kernel/(2243:2243): Codigo de instruccion: 15 
+[INFO] 15:34:20:709 Kernel/(2243:2243): Se crea el proceso 0 en NEW
+[INFO] 15:35:47:503 Kernel/(2398:2398): Listo para escuchar a mi cliente
+[INFO] 15:35:51:621 Kernel/(2398:2398): Se conecto un cliente!
+[INFO] 15:35:51:621 Kernel/(2398:2398): A punto de recibir el codigo de operacion
+[INFO] 15:35:51:622 Kernel/(2398:2398): Recibi el codigo de op: 3
+[INFO] 15:35:51:623 Kernel/(2398:2398): A punto de recibir el tamanio del buffer
+[INFO] 15:35:51:623 Kernel/(2398:2398): Recibi el tamanio del buffer: 356
+[INFO] 15:35:51:623 Kernel/(2398:2398): A punto de recibir el stream del buffer
+[INFO] 15:35:51:623 Kernel/(2398:2398): Recibi el stream del buffer
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 2 
+[INFO] 15:35:51:623 Kernel/(2398:2398): String1: AX 
+[INFO] 15:35:51:623 Kernel/(2398:2398): String2: 10 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 4 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Numero1: 120 
+[INFO] 15:35:51:623 Kernel/(2398:2398): String1: AX 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 9 
+[INFO] 15:35:51:623 Kernel/(2398:2398): String1: DISCO 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 8 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Numero1: 10 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 10 
+[INFO] 15:35:51:623 Kernel/(2398:2398): String1: DISCO 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 3 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Numero1: 120 
+[INFO] 15:35:51:623 Kernel/(2398:2398): String1: BX 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 11 
+[INFO] 15:35:51:623 Kernel/(2398:2398): String1: ARCHIVO 
+[INFO] 15:35:51:623 Kernel/(2398:2398): Codigo de instruccion: 14 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 5 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero1: 64 
+[INFO] 15:35:51:624 Kernel/(2398:2398): String1: ARCHIVO 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 6 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero1: 10 
+[INFO] 15:35:51:624 Kernel/(2398:2398): String1: ARCHIVO 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 7 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero1: 1 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero2: 128 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 1 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero1: 4 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero2: 4 
+[INFO] 15:35:51:624 Kernel/(2398:2398): String1: ARCHIVO 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 0 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero1: 16 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero2: 4 
+[INFO] 15:35:51:624 Kernel/(2398:2398): String1: ARCHIVO 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 13 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Numero1: 1 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 12 
+[INFO] 15:35:51:624 Kernel/(2398:2398): String1: ARCHIVO 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Codigo de instruccion: 15 
+[INFO] 15:35:51:624 Kernel/(2398:2398): Se crea el proceso 0 en NEW
+[INFO] 15:36:12:417 Kernel/(2435:2435): Listo para escuchar a mi cliente
+[INFO] 15:36:26:686 Kernel/(2482:2482): Listo para escuchar a mi cliente
+[INFO] 15:37:19:197 Kernel/(2517:2517): Listo para escuchar a mi cliente
+[INFO] 15:37:23:615 Kernel/(2517:2517): Se conecto un cliente!
+[INFO] 15:37:23:617 Kernel/(2517:2517): A punto de recibir el codigo de operacion
+[INFO] 15:37:23:618 Kernel/(2517:2517): Recibi el codigo de op: 3
+[INFO] 15:37:23:619 Kernel/(2517:2517): A punto de recibir el tamanio del buffer
+[INFO] 15:37:23:620 Kernel/(2517:2517): Recibi el tamanio del buffer: 356
+[INFO] 15:37:23:620 Kernel/(2517:2517): A punto de recibir el stream del buffer
+[INFO] 15:37:23:621 Kernel/(2517:2517): Recibi el stream del buffer
+[INFO] 15:37:23:627 Kernel/(2517:2517): Codigo de instruccion: 2 
+[INFO] 15:37:23:628 Kernel/(2517:2517): String1: AX 
+[INFO] 15:37:23:628 Kernel/(2517:2517): String2: 10 
+[INFO] 15:37:23:629 Kernel/(2517:2517): Codigo de instruccion: 4 
+[INFO] 15:37:23:629 Kernel/(2517:2517): Numero1: 120 
+[INFO] 15:37:23:630 Kernel/(2517:2517): String1: AX 
+[INFO] 15:37:23:630 Kernel/(2517:2517): Codigo de instruccion: 9 
+[INFO] 15:37:23:630 Kernel/(2517:2517): String1: DISCO 
+[INFO] 15:37:23:631 Kernel/(2517:2517): Codigo de instruccion: 8 
+[INFO] 15:37:23:631 Kernel/(2517:2517): Numero1: 10 
+[INFO] 15:37:23:632 Kernel/(2517:2517): Codigo de instruccion: 10 
+[INFO] 15:37:23:632 Kernel/(2517:2517): String1: DISCO 
+[INFO] 15:37:23:632 Kernel/(2517:2517): Codigo de instruccion: 3 
+[INFO] 15:37:23:632 Kernel/(2517:2517): Numero1: 120 
+[INFO] 15:37:23:633 Kernel/(2517:2517): String1: BX 
+[INFO] 15:37:23:633 Kernel/(2517:2517): Codigo de instruccion: 11 
+[INFO] 15:37:23:633 Kernel/(2517:2517): String1: ARCHIVO 
+[INFO] 15:37:23:633 Kernel/(2517:2517): Codigo de instruccion: 14 
+[INFO] 15:37:23:633 Kernel/(2517:2517): Codigo de instruccion: 5 
+[INFO] 15:37:23:634 Kernel/(2517:2517): Numero1: 64 
+[INFO] 15:37:23:634 Kernel/(2517:2517): String1: ARCHIVO 
+[INFO] 15:37:23:634 Kernel/(2517:2517): Codigo de instruccion: 6 
+[INFO] 15:37:23:636 Kernel/(2517:2517): Numero1: 10 
+[INFO] 15:37:23:636 Kernel/(2517:2517): String1: ARCHIVO 
+[INFO] 15:37:23:636 Kernel/(2517:2517): Codigo de instruccion: 7 
+[INFO] 15:37:23:636 Kernel/(2517:2517): Numero1: 1 
+[INFO] 15:37:23:637 Kernel/(2517:2517): Numero2: 128 
+[INFO] 15:37:23:637 Kernel/(2517:2517): Codigo de instruccion: 1 
+[INFO] 15:37:23:637 Kernel/(2517:2517): Numero1: 4 
+[INFO] 15:37:23:638 Kernel/(2517:2517): Numero2: 4 
+[INFO] 15:37:23:638 Kernel/(2517:2517): String1: ARCHIVO 
+[INFO] 15:37:23:639 Kernel/(2517:2517): Codigo de instruccion: 0 
+[INFO] 15:37:23:641 Kernel/(2517:2517): Numero1: 16 
+[INFO] 15:37:23:641 Kernel/(2517:2517): Numero2: 4 
+[INFO] 15:37:23:641 Kernel/(2517:2517): String1: ARCHIVO 
+[INFO] 15:37:23:649 Kernel/(2517:2517): Codigo de instruccion: 13 
+[INFO] 15:37:23:649 Kernel/(2517:2517): Numero1: 1 
+[INFO] 15:37:23:650 Kernel/(2517:2517): Codigo de instruccion: 12 
+[INFO] 15:37:23:650 Kernel/(2517:2517): String1: ARCHIVO 
+[INFO] 15:37:23:650 Kernel/(2517:2517): Codigo de instruccion: 15 
+[INFO] 15:37:23:652 Kernel/(2517:2517): Se crea el proceso 0 en NEW
+[INFO] 15:39:46:884 Kernel/(2624:2624): Listo para escuchar a mi cliente
+[INFO] 15:39:55:653 Kernel/(2624:2624): Se conecto un cliente!
+[INFO] 15:39:55:654 Kernel/(2624:2624): A punto de recibir el codigo de operacion
+[INFO] 15:39:55:654 Kernel/(2624:2624): Recibi el codigo de op: 3
+[INFO] 15:39:55:655 Kernel/(2624:2624): A punto de recibir el tamanio del buffer
+[INFO] 15:39:55:655 Kernel/(2624:2624): Recibi el tamanio del buffer: 356
+[INFO] 15:39:55:655 Kernel/(2624:2624): A punto de recibir el stream del buffer
+[INFO] 15:39:55:655 Kernel/(2624:2624): Recibi el stream del buffer
+[INFO] 15:39:55:655 Kernel/(2624:2624): Codigo de instruccion: 2 
+[INFO] 15:39:55:655 Kernel/(2624:2624): String1: AX 
+[INFO] 15:39:55:655 Kernel/(2624:2624): String2: 10 
+[INFO] 15:39:55:655 Kernel/(2624:2624): Codigo de instruccion: 4 
+[INFO] 15:39:55:655 Kernel/(2624:2624): Numero1: 120 
+[INFO] 15:39:55:655 Kernel/(2624:2624): String1: AX 
+[INFO] 15:39:55:655 Kernel/(2624:2624): Codigo de instruccion: 9 
+[INFO] 15:39:55:655 Kernel/(2624:2624): String1: DISCO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 8 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 10 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 10 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: DISCO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 3 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 120 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: BX 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 11 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: ARCHIVO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 14 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 5 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 64 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: ARCHIVO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 6 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 10 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: ARCHIVO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 7 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 1 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero2: 128 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 1 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 4 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero2: 4 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: ARCHIVO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 0 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 16 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero2: 4 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: ARCHIVO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 13 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Numero1: 1 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 12 
+[INFO] 15:39:55:656 Kernel/(2624:2624): String1: ARCHIVO 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Codigo de instruccion: 15 
+[INFO] 15:39:55:656 Kernel/(2624:2624): Se crea el proceso 0 en NEW
+[INFO] 15:40:07:706 Kernel/(2671:2671): Listo para escuchar a mi cliente
+[INFO] 15:42:04:281 Kernel/(2737:2737): Listo para escuchar a mi cliente
+[INFO] 15:42:08:619 Kernel/(2737:2737): Se conecto un cliente!
+[INFO] 15:42:08:619 Kernel/(2737:2737): A punto de recibir el codigo de operacion
+[INFO] 15:42:08:621 Kernel/(2737:2737): Recibi el codigo de op: 3
+[INFO] 15:42:08:621 Kernel/(2737:2737): A punto de recibir el tamanio del buffer
+[INFO] 15:42:08:622 Kernel/(2737:2737): Recibi el tamanio del buffer: 356
+[INFO] 15:42:08:622 Kernel/(2737:2737): A punto de recibir el stream del buffer
+[INFO] 15:42:08:622 Kernel/(2737:2737): Recibi el stream del buffer
+[INFO] 15:42:08:622 Kernel/(2737:2737): Codigo de instruccion: 2 
+[INFO] 15:42:08:622 Kernel/(2737:2737): String1: AX 
+[INFO] 15:42:08:623 Kernel/(2737:2737): String2: 10 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 4 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Numero1: 120 
+[INFO] 15:42:08:623 Kernel/(2737:2737): String1: AX 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 9 
+[INFO] 15:42:08:623 Kernel/(2737:2737): String1: DISCO 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 8 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Numero1: 10 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 10 
+[INFO] 15:42:08:623 Kernel/(2737:2737): String1: DISCO 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 3 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Numero1: 120 
+[INFO] 15:42:08:623 Kernel/(2737:2737): String1: BX 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 11 
+[INFO] 15:42:08:623 Kernel/(2737:2737): String1: ARCHIVO 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 14 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 5 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Numero1: 64 
+[INFO] 15:42:08:623 Kernel/(2737:2737): String1: ARCHIVO 
+[INFO] 15:42:08:623 Kernel/(2737:2737): Codigo de instruccion: 6 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Numero1: 10 
+[INFO] 15:42:08:624 Kernel/(2737:2737): String1: ARCHIVO 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Codigo de instruccion: 7 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Numero1: 1 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Numero2: 128 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Codigo de instruccion: 1 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Numero1: 4 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Numero2: 4 
+[INFO] 15:42:08:624 Kernel/(2737:2737): String1: ARCHIVO 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Codigo de instruccion: 0 
+[INFO] 15:42:08:624 Kernel/(2737:2737): Numero1: 16 
+[INFO] 15:42:08:625 Kernel/(2737:2737): Numero2: 4 
+[INFO] 15:42:08:625 Kernel/(2737:2737): String1: ARCHIVO 
+[INFO] 15:42:08:625 Kernel/(2737:2737): Codigo de instruccion: 13 
+[INFO] 15:42:08:625 Kernel/(2737:2737): Numero1: 1 
+[INFO] 15:42:08:625 Kernel/(2737:2737): Codigo de instruccion: 12 
+[INFO] 15:42:08:625 Kernel/(2737:2737): String1: ARCHIVO 
+[INFO] 15:42:08:625 Kernel/(2737:2737): Codigo de instruccion: 15 
+[INFO] 15:42:08:625 Kernel/(2737:2737): Se crea el proceso 0 en NEW
+[INFO] 15:42:08:626 Kernel/(2737:2737): Por agregar pcb a exit
+[INFO] 15:42:08:626 Kernel/(2737:2737): Estoy en agregar_pcb_a()
+[INFO] 15:44:57:470 Kernel/(2920:2920): Listo para escuchar a mi cliente
+[INFO] 15:45:01:611 Kernel/(2920:2920): Se conecto un cliente!
+[INFO] 15:45:01:611 Kernel/(2920:2920): A punto de recibir el codigo de operacion
+[INFO] 15:45:01:611 Kernel/(2920:2920): Recibi el codigo de op: 3
+[INFO] 15:45:01:611 Kernel/(2920:2920): A punto de recibir el tamanio del buffer
+[INFO] 15:45:01:612 Kernel/(2920:2920): Recibi el tamanio del buffer: 356
+[INFO] 15:45:01:612 Kernel/(2920:2920): A punto de recibir el stream del buffer
+[INFO] 15:45:01:612 Kernel/(2920:2920): Recibi el stream del buffer
+[INFO] 15:45:01:612 Kernel/(2920:2920): Codigo de instruccion: 2 
+[INFO] 15:45:01:612 Kernel/(2920:2920): String1: AX 
+[INFO] 15:45:01:613 Kernel/(2920:2920): String2: 10 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Codigo de instruccion: 4 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Numero1: 120 
+[INFO] 15:45:01:613 Kernel/(2920:2920): String1: AX 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Codigo de instruccion: 9 
+[INFO] 15:45:01:613 Kernel/(2920:2920): String1: DISCO 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Codigo de instruccion: 8 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Numero1: 10 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Codigo de instruccion: 10 
+[INFO] 15:45:01:613 Kernel/(2920:2920): String1: DISCO 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Codigo de instruccion: 3 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Numero1: 120 
+[INFO] 15:45:01:613 Kernel/(2920:2920): String1: BX 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Codigo de instruccion: 11 
+[INFO] 15:45:01:613 Kernel/(2920:2920): String1: ARCHIVO 
+[INFO] 15:45:01:613 Kernel/(2920:2920): Codigo de instruccion: 14 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 5 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero1: 64 
+[INFO] 15:45:01:614 Kernel/(2920:2920): String1: ARCHIVO 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 6 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero1: 10 
+[INFO] 15:45:01:614 Kernel/(2920:2920): String1: ARCHIVO 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 7 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero1: 1 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero2: 128 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 1 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero1: 4 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero2: 4 
+[INFO] 15:45:01:614 Kernel/(2920:2920): String1: ARCHIVO 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 0 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero1: 16 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero2: 4 
+[INFO] 15:45:01:614 Kernel/(2920:2920): String1: ARCHIVO 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 13 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Numero1: 1 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 12 
+[INFO] 15:45:01:614 Kernel/(2920:2920): String1: ARCHIVO 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Codigo de instruccion: 15 
+[INFO] 15:45:01:614 Kernel/(2920:2920): Se crea el proceso 0 en NEW
+[INFO] 15:45:01:614 Kernel/(2920:2920): Por agregar pcb a exit
+[INFO] 15:45:01:614 Kernel/(2920:2920): Estoy en agregar_pcb_a()
+[INFO] 15:46:58:322 Kernel/(3005:3005): Listo para escuchar a mi cliente
+[INFO] 15:47:01:516 Kernel/(3005:3005): Se conecto un cliente!
+[INFO] 15:47:01:517 Kernel/(3005:3005): A punto de recibir el codigo de operacion
+[INFO] 15:47:01:517 Kernel/(3005:3005): Recibi el codigo de op: 3
+[INFO] 15:47:01:517 Kernel/(3005:3005): A punto de recibir el tamanio del buffer
+[INFO] 15:47:01:518 Kernel/(3005:3005): Recibi el tamanio del buffer: 356
+[INFO] 15:47:01:518 Kernel/(3005:3005): A punto de recibir el stream del buffer
+[INFO] 15:47:01:518 Kernel/(3005:3005): Recibi el stream del buffer
+[INFO] 15:47:01:518 Kernel/(3005:3005): Codigo de instruccion: 2 
+[INFO] 15:47:01:518 Kernel/(3005:3005): String1: AX 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String2: 10 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 4 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 120 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: AX 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 9 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: DISCO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 8 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 10 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 10 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: DISCO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 3 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 120 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: BX 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 11 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: ARCHIVO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 14 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 5 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 64 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: ARCHIVO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 6 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 10 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: ARCHIVO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 7 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 1 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero2: 128 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 1 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 4 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero2: 4 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: ARCHIVO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 0 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 16 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero2: 4 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: ARCHIVO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 13 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Numero1: 1 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 12 
+[INFO] 15:47:01:519 Kernel/(3005:3005): String1: ARCHIVO 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Codigo de instruccion: 15 
+[INFO] 15:47:01:519 Kernel/(3005:3005): Se crea el proceso 0 en NEW
+[INFO] 15:47:01:519 Kernel/(3005:3005): Por agregar pcb a exit
+[INFO] 15:47:01:519 Kernel/(3005:3005): Estoy en agregar_pcb_a()
+[INFO] 15:47:48:408 Kernel/(3056:3056): Listo para escuchar a mi cliente
+[INFO] 15:49:17:588 Kernel/(3201:3201): Listo para escuchar a mi cliente
+[INFO] 15:49:33:616 Kernel/(3201:3201): Se conecto un cliente!
+[INFO] 15:49:37:394 Kernel/(3201:3201): A punto de recibir el codigo de operacion
+[INFO] 15:49:48:436 Kernel/(3201:3201): Recibi el codigo de op: 3
+[INFO] 15:49:49:441 Kernel/(3201:3201): A punto de recibir el tamanio del buffer
+[INFO] 15:49:51:214 Kernel/(3201:3201): Recibi el tamanio del buffer: 356
+[INFO] 15:49:55:154 Kernel/(3201:3201): A punto de recibir el stream del buffer
+[INFO] 15:49:56:271 Kernel/(3201:3201): Recibi el stream del buffer
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 2 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: AX 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String2: 10 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 4 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 120 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: AX 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 9 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: DISCO 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 8 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 10 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 10 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: DISCO 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 3 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 120 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: BX 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 11 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: ARCHIVO 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 14 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 5 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 64 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: ARCHIVO 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 6 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 10 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: ARCHIVO 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 7 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 1 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero2: 128 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 1 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 4 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero2: 4 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: ARCHIVO 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 0 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 16 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero2: 4 
+[INFO] 15:49:57:704 Kernel/(3201:3201): String1: ARCHIVO 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Codigo de instruccion: 13 
+[INFO] 15:49:57:704 Kernel/(3201:3201): Numero1: 1 
+[INFO] 15:49:57:705 Kernel/(3201:3201): Codigo de instruccion: 12 
+[INFO] 15:49:57:705 Kernel/(3201:3201): String1: ARCHIVO 
+[INFO] 15:49:57:705 Kernel/(3201:3201): Codigo de instruccion: 15 
+[INFO] 15:50:23:270 Kernel/(3201:3201): Se crea el proceso 0 en NEW
+[INFO] 15:50:23:924 Kernel/(3201:3201): Por agregar pcb a exit
+[INFO] 15:50:41:518 Kernel/(3201:3201): Estoy en agregar_pcb_a()
+[INFO] 15:52:50:055 Kernel/(3428:3428): Listo para escuchar a mi cliente
+[INFO] 15:54:36:566 Kernel/(3464:3464): Listo para escuchar a mi cliente
+[INFO] 15:54:39:654 Kernel/(3464:3464): Se conecto un cliente!
+[INFO] 15:54:39:654 Kernel/(3464:3464): A punto de recibir el codigo de operacion
+[INFO] 15:54:39:655 Kernel/(3464:3464): Recibi el codigo de op: 3
+[INFO] 15:54:39:655 Kernel/(3464:3464): A punto de recibir el tamanio del buffer
+[INFO] 15:54:39:655 Kernel/(3464:3464): Recibi el tamanio del buffer: 356
+[INFO] 15:54:39:655 Kernel/(3464:3464): A punto de recibir el stream del buffer
+[INFO] 15:54:39:655 Kernel/(3464:3464): Recibi el stream del buffer
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 2 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: AX 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String2: 10 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 4 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Numero1: 120 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: AX 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 9 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: DISCO 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 8 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Numero1: 10 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 10 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: DISCO 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 3 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Numero1: 120 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: BX 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 11 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: ARCHIVO 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 14 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 5 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Numero1: 64 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: ARCHIVO 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 6 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Numero1: 10 
+[INFO] 15:54:39:655 Kernel/(3464:3464): String1: ARCHIVO 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 7 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Numero1: 1 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Numero2: 128 
+[INFO] 15:54:39:655 Kernel/(3464:3464): Codigo de instruccion: 1 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Numero1: 4 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Numero2: 4 
+[INFO] 15:54:39:656 Kernel/(3464:3464): String1: ARCHIVO 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Codigo de instruccion: 0 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Numero1: 16 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Numero2: 4 
+[INFO] 15:54:39:656 Kernel/(3464:3464): String1: ARCHIVO 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Codigo de instruccion: 13 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Numero1: 1 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Codigo de instruccion: 12 
+[INFO] 15:54:39:656 Kernel/(3464:3464): String1: ARCHIVO 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Codigo de instruccion: 15 
+[INFO] 15:54:39:656 Kernel/(3464:3464): Se crea el proceso 0 en NEW
+[INFO] 15:54:39:656 Kernel/(3464:3464): Por agregar pcb a exit
+[INFO] 15:54:39:656 Kernel/(3464:3464): Estoy en agregar_pcb_a()
+[INFO] 15:56:25:599 Kernel/(3607:3607): Listo para escuchar a mi cliente
+[INFO] 15:56:28:521 Kernel/(3607:3607): Se conecto un cliente!
+[INFO] 15:56:28:522 Kernel/(3607:3607): A punto de recibir el codigo de operacion
+[INFO] 15:56:28:522 Kernel/(3607:3607): Recibi el codigo de op: 3
+[INFO] 15:56:28:522 Kernel/(3607:3607): A punto de recibir el tamanio del buffer
+[INFO] 15:56:28:522 Kernel/(3607:3607): Recibi el tamanio del buffer: 356
+[INFO] 15:56:28:522 Kernel/(3607:3607): A punto de recibir el stream del buffer
+[INFO] 15:56:28:522 Kernel/(3607:3607): Recibi el stream del buffer
+[INFO] 15:56:28:522 Kernel/(3607:3607): Codigo de instruccion: 2 
+[INFO] 15:56:28:522 Kernel/(3607:3607): String1: AX 
+[INFO] 15:56:28:522 Kernel/(3607:3607): String2: 10 
+[INFO] 15:56:28:522 Kernel/(3607:3607): Codigo de instruccion: 4 
+[INFO] 15:56:28:522 Kernel/(3607:3607): Numero1: 120 
+[INFO] 15:56:28:522 Kernel/(3607:3607): String1: AX 
+[INFO] 15:56:28:522 Kernel/(3607:3607): Codigo de instruccion: 9 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: DISCO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 8 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 10 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 10 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: DISCO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 3 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 120 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: BX 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 11 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: ARCHIVO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 14 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 5 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 64 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: ARCHIVO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 6 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 10 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: ARCHIVO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 7 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 1 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero2: 128 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 1 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 4 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero2: 4 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: ARCHIVO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 0 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 16 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero2: 4 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: ARCHIVO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 13 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Numero1: 1 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 12 
+[INFO] 15:56:28:523 Kernel/(3607:3607): String1: ARCHIVO 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Codigo de instruccion: 15 
+[INFO] 15:56:28:523 Kernel/(3607:3607): Se crea el proceso 0 en NEW
+[INFO] 15:56:28:523 Kernel/(3607:3607): Por agregar pcb a exit
+[INFO] 15:56:28:523 Kernel/(3607:3607): Estoy en agregar_pcb_a()
+[INFO] 15:57:03:951 Kernel/(3785:3785): Listo para escuchar a mi cliente
+[INFO] 15:57:52:728 Kernel/(3876:3876): Listo para escuchar a mi cliente
+[INFO] 15:57:56:388 Kernel/(3876:3876): Se conecto un cliente!
+[INFO] 15:57:56:388 Kernel/(3876:3876): A punto de recibir el codigo de operacion
+[INFO] 15:57:56:388 Kernel/(3876:3876): Recibi el codigo de op: 3
+[INFO] 15:57:56:389 Kernel/(3876:3876): A punto de recibir el tamanio del buffer
+[INFO] 15:57:56:389 Kernel/(3876:3876): Recibi el tamanio del buffer: 356
+[INFO] 15:57:56:390 Kernel/(3876:3876): A punto de recibir el stream del buffer
+[INFO] 15:57:56:390 Kernel/(3876:3876): Recibi el stream del buffer
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 2 
+[INFO] 15:57:56:390 Kernel/(3876:3876): String1: AX 
+[INFO] 15:57:56:390 Kernel/(3876:3876): String2: 10 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 4 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Numero1: 120 
+[INFO] 15:57:56:390 Kernel/(3876:3876): String1: AX 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 9 
+[INFO] 15:57:56:390 Kernel/(3876:3876): String1: DISCO 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 8 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Numero1: 10 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 10 
+[INFO] 15:57:56:390 Kernel/(3876:3876): String1: DISCO 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 3 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Numero1: 120 
+[INFO] 15:57:56:390 Kernel/(3876:3876): String1: BX 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 11 
+[INFO] 15:57:56:390 Kernel/(3876:3876): String1: ARCHIVO 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 14 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Codigo de instruccion: 5 
+[INFO] 15:57:56:390 Kernel/(3876:3876): Numero1: 64 
+[INFO] 15:57:56:391 Kernel/(3876:3876): String1: ARCHIVO 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Codigo de instruccion: 6 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero1: 10 
+[INFO] 15:57:56:391 Kernel/(3876:3876): String1: ARCHIVO 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Codigo de instruccion: 7 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero1: 1 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero2: 128 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Codigo de instruccion: 1 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero1: 4 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero2: 4 
+[INFO] 15:57:56:391 Kernel/(3876:3876): String1: ARCHIVO 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Codigo de instruccion: 0 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero1: 16 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero2: 4 
+[INFO] 15:57:56:391 Kernel/(3876:3876): String1: ARCHIVO 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Codigo de instruccion: 13 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Numero1: 1 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Codigo de instruccion: 12 
+[INFO] 15:57:56:391 Kernel/(3876:3876): String1: ARCHIVO 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Codigo de instruccion: 15 
+[INFO] 15:57:56:391 Kernel/(3876:3876): Se crea el proceso 0 en NEW
+[INFO] 15:57:56:391 Kernel/(3876:3876): Por agregar pcb a exit
+[INFO] 15:57:56:391 Kernel/(3876:3876): Estoy en agregar_pcb_a()
+[INFO] 15:58:11:322 Kernel/(3943:3943): Listo para escuchar a mi cliente
+[INFO] 16:01:45:582 Kernel/(4067:4067): Listo para escuchar a mi cliente
+[INFO] 16:01:54:812 Kernel/(4067:4067): Se conecto un cliente!
+[INFO] 16:02:02:882 Kernel/(4067:4067): A punto de recibir el codigo de operacion
+[INFO] 16:02:03:618 Kernel/(4067:4067): Recibi el codigo de op: 3
+[INFO] 16:02:03:941 Kernel/(4067:4067): A punto de recibir el tamanio del buffer
+[INFO] 16:02:04:624 Kernel/(4067:4067): Recibi el tamanio del buffer: 356
+[INFO] 16:02:06:640 Kernel/(4067:4067): A punto de recibir el stream del buffer
+[INFO] 16:02:07:523 Kernel/(4067:4067): Recibi el stream del buffer
+[INFO] 16:02:09:130 Kernel/(4067:4067): Codigo de instruccion: 2 
+[INFO] 16:02:09:130 Kernel/(4067:4067): String1: AX 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String2: 10 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 4 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Numero1: 120 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String1: AX 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 9 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String1: DISCO 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 8 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Numero1: 10 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 10 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String1: DISCO 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 3 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Numero1: 120 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String1: BX 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 11 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String1: ARCHIVO 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 14 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 5 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Numero1: 64 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String1: ARCHIVO 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Codigo de instruccion: 6 
+[INFO] 16:02:09:131 Kernel/(4067:4067): Numero1: 10 
+[INFO] 16:02:09:131 Kernel/(4067:4067): String1: ARCHIVO 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Codigo de instruccion: 7 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Numero1: 1 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Numero2: 128 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Codigo de instruccion: 1 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Numero1: 4 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Numero2: 4 
+[INFO] 16:02:09:132 Kernel/(4067:4067): String1: ARCHIVO 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Codigo de instruccion: 0 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Numero1: 16 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Numero2: 4 
+[INFO] 16:02:09:132 Kernel/(4067:4067): String1: ARCHIVO 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Codigo de instruccion: 13 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Numero1: 1 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Codigo de instruccion: 12 
+[INFO] 16:02:09:132 Kernel/(4067:4067): String1: ARCHIVO 
+[INFO] 16:02:09:132 Kernel/(4067:4067): Codigo de instruccion: 15 
+[INFO] 16:02:10:564 Kernel/(4067:4067): Se crea el proceso 0 en NEW
+[INFO] 16:02:11:164 Kernel/(4067:4067): Por agregar pcb a exit
+[INFO] 16:02:16:709 Kernel/(4067:4067): Estoy en agregar_pcb_a()
+[INFO] 16:04:58:287 Kernel/(4368:4368): Listo para escuchar a mi cliente
+[INFO] 16:11:45:558 Kernel/(4452:4452): Listo para escuchar a mi cliente
+[INFO] 16:11:49:008 Kernel/(4452:4452): Se conecto un cliente!
+[INFO] 16:11:49:009 Kernel/(4452:4452): A punto de recibir el codigo de operacion
+[INFO] 16:11:49:009 Kernel/(4452:4452): Recibi el codigo de op: 3
+[INFO] 16:11:49:009 Kernel/(4452:4452): A punto de recibir el tamanio del buffer
+[INFO] 16:11:49:009 Kernel/(4452:4452): Recibi el tamanio del buffer: 356
+[INFO] 16:11:49:009 Kernel/(4452:4452): A punto de recibir el stream del buffer
+[INFO] 16:11:49:009 Kernel/(4452:4452): Recibi el stream del buffer
+[INFO] 16:11:49:009 Kernel/(4452:4452): Codigo de instruccion: 2 
+[INFO] 16:11:49:009 Kernel/(4452:4452): String1: AX 
+[INFO] 16:11:49:009 Kernel/(4452:4452): String2: 10 
+[INFO] 16:11:49:009 Kernel/(4452:4452): Codigo de instruccion: 4 
+[INFO] 16:11:49:009 Kernel/(4452:4452): Numero1: 120 
+[INFO] 16:11:49:009 Kernel/(4452:4452): String1: AX 
+[INFO] 16:11:49:009 Kernel/(4452:4452): Codigo de instruccion: 9 
+[INFO] 16:11:49:009 Kernel/(4452:4452): String1: DISCO 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 8 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero1: 10 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 10 
+[INFO] 16:11:49:010 Kernel/(4452:4452): String1: DISCO 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 3 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero1: 120 
+[INFO] 16:11:49:010 Kernel/(4452:4452): String1: BX 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 11 
+[INFO] 16:11:49:010 Kernel/(4452:4452): String1: ARCHIVO 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 14 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 5 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero1: 64 
+[INFO] 16:11:49:010 Kernel/(4452:4452): String1: ARCHIVO 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 6 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero1: 10 
+[INFO] 16:11:49:010 Kernel/(4452:4452): String1: ARCHIVO 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 7 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero1: 1 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero2: 128 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 1 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero1: 4 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Numero2: 4 
+[INFO] 16:11:49:010 Kernel/(4452:4452): String1: ARCHIVO 
+[INFO] 16:11:49:010 Kernel/(4452:4452): Codigo de instruccion: 0 
+[INFO] 16:11:49:011 Kernel/(4452:4452): Numero1: 16 
+[INFO] 16:11:49:011 Kernel/(4452:4452): Numero2: 4 
+[INFO] 16:11:49:011 Kernel/(4452:4452): String1: ARCHIVO 
+[INFO] 16:11:49:011 Kernel/(4452:4452): Codigo de instruccion: 13 
+[INFO] 16:11:49:011 Kernel/(4452:4452): Numero1: 1 
+[INFO] 16:11:49:011 Kernel/(4452:4452): Codigo de instruccion: 12 
+[INFO] 16:11:49:011 Kernel/(4452:4452): String1: ARCHIVO 
+[INFO] 16:11:49:011 Kernel/(4452:4452): Codigo de instruccion: 15 
+[INFO] 16:11:49:011 Kernel/(4452:4452): Se crea el proceso 0 en NEW
+[INFO] 16:11:49:011 Kernel/(4452:4452): Por agregar pcb a exit
+[INFO] 16:11:49:011 Kernel/(4452:4452): Estoy en agregar_pcb_a()
+[INFO] 16:11:49:011 Kernel/(4452:4452): pcb agregado a exit
+[INFO] 16:12:27:471 Kernel/(4506:4506): Listo para escuchar a mi cliente
+[INFO] 16:13:05:398 Kernel/(4595:4595): Listo para escuchar a mi cliente
+[INFO] 16:13:13:492 Kernel/(4595:4595): Se conecto un cliente!
+[INFO] 16:13:20:730 Kernel/(4595:4595): A punto de recibir el codigo de operacion
+[INFO] 16:13:29:648 Kernel/(4595:4595): Recibi el codigo de op: 3
+[INFO] 16:13:30:007 Kernel/(4595:4595): A punto de recibir el tamanio del buffer
+[INFO] 16:13:30:651 Kernel/(4595:4595): Recibi el tamanio del buffer: 356
+[INFO] 16:13:31:232 Kernel/(4595:4595): A punto de recibir el stream del buffer
+[INFO] 16:13:31:833 Kernel/(4595:4595): Recibi el stream del buffer
+[INFO] 16:13:33:413 Kernel/(4595:4595): Codigo de instruccion: 2 
+[INFO] 16:13:33:413 Kernel/(4595:4595): String1: AX 
+[INFO] 16:13:33:413 Kernel/(4595:4595): String2: 10 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 4 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 120 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: AX 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 9 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: DISCO 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 8 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 10 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 10 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: DISCO 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 3 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 120 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: BX 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 11 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: ARCHIVO 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 14 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 5 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 64 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: ARCHIVO 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 6 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 10 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: ARCHIVO 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 7 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 1 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero2: 128 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 1 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 4 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero2: 4 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: ARCHIVO 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 0 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero1: 16 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Numero2: 4 
+[INFO] 16:13:33:414 Kernel/(4595:4595): String1: ARCHIVO 
+[INFO] 16:13:33:414 Kernel/(4595:4595): Codigo de instruccion: 13 
+[INFO] 16:13:33:415 Kernel/(4595:4595): Numero1: 1 
+[INFO] 16:13:33:415 Kernel/(4595:4595): Codigo de instruccion: 12 
+[INFO] 16:13:33:415 Kernel/(4595:4595): String1: ARCHIVO 
+[INFO] 16:13:33:415 Kernel/(4595:4595): Codigo de instruccion: 15 
+[INFO] 16:13:34:186 Kernel/(4595:4595): Se crea el proceso 0 en NEW
+[INFO] 16:13:34:720 Kernel/(4595:4595): Por agregar pcb a exit
+[INFO] 16:13:46:004 Kernel/(4595:4595): Estoy en agregar_pcb_a()
+[INFO] 16:13:48:433 Kernel/(4595:4595): pcb agregado a exit
+[INFO] 16:20:46:541 Kernel/(4975:4975): Listo para escuchar a mi cliente
+[INFO] 16:20:55:179 Kernel/(4975:4975): Se conecto un cliente!
+[INFO] 16:21:23:982 Kernel/(4975:4975): A punto de recibir el codigo de operacion
+[INFO] 16:21:34:236 Kernel/(4975:4975): Recibi el codigo de op: 3
+[INFO] 16:21:35:552 Kernel/(4975:4975): A punto de recibir el tamanio del buffer
+[INFO] 16:21:36:838 Kernel/(4975:4975): Recibi el tamanio del buffer: 356
+[INFO] 16:21:38:648 Kernel/(4975:4975): A punto de recibir el stream del buffer
+[INFO] 16:21:39:468 Kernel/(4975:4975): Recibi el stream del buffer
+[INFO] 16:21:40:692 Kernel/(4975:4975): Codigo de instruccion: 2 
+[INFO] 16:21:40:692 Kernel/(4975:4975): String1: AX 
+[INFO] 16:21:40:692 Kernel/(4975:4975): String2: 10 
+[INFO] 16:21:40:692 Kernel/(4975:4975): Codigo de instruccion: 4 
+[INFO] 16:21:40:692 Kernel/(4975:4975): Numero1: 120 
+[INFO] 16:21:40:692 Kernel/(4975:4975): String1: AX 
+[INFO] 16:21:40:692 Kernel/(4975:4975): Codigo de instruccion: 9 
+[INFO] 16:21:40:692 Kernel/(4975:4975): String1: DISCO 
+[INFO] 16:21:40:692 Kernel/(4975:4975): Codigo de instruccion: 8 
+[INFO] 16:21:40:692 Kernel/(4975:4975): Numero1: 10 
+[INFO] 16:21:40:692 Kernel/(4975:4975): Codigo de instruccion: 10 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: DISCO 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 3 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero1: 120 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: BX 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 11 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: ARCHIVO 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 14 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 5 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero1: 64 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: ARCHIVO 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 6 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero1: 10 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: ARCHIVO 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 7 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero1: 1 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero2: 128 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 1 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero1: 4 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero2: 4 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: ARCHIVO 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 0 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero1: 16 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero2: 4 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: ARCHIVO 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 13 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Numero1: 1 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 12 
+[INFO] 16:21:40:693 Kernel/(4975:4975): String1: ARCHIVO 
+[INFO] 16:21:40:693 Kernel/(4975:4975): Codigo de instruccion: 15 
+[INFO] 16:21:42:743 Kernel/(4975:4975): Se crea el proceso 0 en NEW
+[INFO] 16:21:44:011 Kernel/(4975:4975): Por agregar pcb a exit
+[INFO] 16:21:47:803 Kernel/(4975:4975): Estoy en agregar_pcb_a()
+[INFO] 16:21:48:552 Kernel/(4975:4975): pcb agregado a exit
+[INFO] 17:32:33:928 Kernel/(5468:5468): Listo para escuchar a mi cliente
+[INFO] 17:33:14:687 Kernel/(5587:5587): Listo para escuchar a mi cliente
+[INFO] 17:33:21:074 Kernel/(5587:5587): Se conecto un cliente!
+[INFO] 17:33:35:136 Kernel/(5587:5587): A punto de recibir el codigo de operacion
+[INFO] 17:33:37:670 Kernel/(5587:5587): Recibi el codigo de op: 3
+[INFO] 17:33:38:123 Kernel/(5587:5587): A punto de recibir el tamanio del buffer
+[INFO] 17:33:43:857 Kernel/(5587:5587): Recibi el tamanio del buffer: 356
+[INFO] 17:33:45:822 Kernel/(5587:5587): A punto de recibir el stream del buffer
+[INFO] 17:33:47:714 Kernel/(5587:5587): Recibi el stream del buffer
+[INFO] 17:33:50:721 Kernel/(5587:5587): Codigo de instruccion: 2 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: AX 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String2: 10 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 4 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 120 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: AX 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 9 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: DISCO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 8 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 10 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 10 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: DISCO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 3 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 120 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: BX 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 11 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: ARCHIVO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 14 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 5 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 64 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: ARCHIVO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 6 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 10 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: ARCHIVO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 7 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 1 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero2: 128 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 1 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 4 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero2: 4 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: ARCHIVO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 0 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 16 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero2: 4 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: ARCHIVO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 13 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Numero1: 1 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 12 
+[INFO] 17:33:50:722 Kernel/(5587:5587): String1: ARCHIVO 
+[INFO] 17:33:50:722 Kernel/(5587:5587): Codigo de instruccion: 15 
+[INFO] 17:33:59:002 Kernel/(5587:5587): Se crea el proceso 0 en NEW
+[INFO] 17:34:11:042 Kernel/(5587:5587): Por agregar pcb a exit
+[INFO] 17:34:22:120 Kernel/(5587:5587): Estoy en agregar_pcb_a()
+[INFO] 17:34:32:839 Kernel/(5587:5587): pcb agregado a exit
+[INFO] 17:38:04:461 Kernel/(6011:6011): Listo para escuchar a mi cliente
+[INFO] 17:38:20:121 Kernel/(6011:6011): Se conecto un cliente!
+[INFO] 17:38:20:124 Kernel/(6011:6011): A punto de recibir el codigo de operacion
+[INFO] 17:38:20:124 Kernel/(6011:6011): Recibi el codigo de op: 3
+[INFO] 17:38:20:124 Kernel/(6011:6011): A punto de recibir el tamanio del buffer
+[INFO] 17:38:20:124 Kernel/(6011:6011): Recibi el tamanio del buffer: 356
+[INFO] 17:38:20:124 Kernel/(6011:6011): A punto de recibir el stream del buffer
+[INFO] 17:38:20:124 Kernel/(6011:6011): Recibi el stream del buffer
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 2 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: AX 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String2: 10 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 4 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Numero1: 120 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: AX 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 9 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: DISCO 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 8 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Numero1: 10 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 10 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: DISCO 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 3 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Numero1: 120 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: BX 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 11 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: ARCHIVO 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 14 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 5 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Numero1: 64 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: ARCHIVO 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 6 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Numero1: 10 
+[INFO] 17:38:20:124 Kernel/(6011:6011): String1: ARCHIVO 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 7 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Numero1: 1 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Numero2: 128 
+[INFO] 17:38:20:124 Kernel/(6011:6011): Codigo de instruccion: 1 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Numero1: 4 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Numero2: 4 
+[INFO] 17:38:20:125 Kernel/(6011:6011): String1: ARCHIVO 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Codigo de instruccion: 0 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Numero1: 16 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Numero2: 4 
+[INFO] 17:38:20:125 Kernel/(6011:6011): String1: ARCHIVO 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Codigo de instruccion: 13 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Numero1: 1 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Codigo de instruccion: 12 
+[INFO] 17:38:20:125 Kernel/(6011:6011): String1: ARCHIVO 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Codigo de instruccion: 15 
+[INFO] 17:38:20:125 Kernel/(6011:6011): Se crea el proceso 0 en NEW
+[INFO] 17:38:20:125 Kernel/(6011:6011): Por agregar pcb a exit
+[INFO] 17:38:20:125 Kernel/(6011:6011): Estoy en agregar_pcb_a()
+[INFO] 17:38:20:125 Kernel/(6011:6011): pcb agregado a exit
+[INFO] 17:41:42:011 Kernel/(6174:6174): Listo para escuchar a mi cliente
+[INFO] 17:41:45:583 Kernel/(6174:6174): Se conecto un cliente!
+[INFO] 17:41:45:583 Kernel/(6174:6174): A punto de recibir el codigo de operacion
+[INFO] 17:41:45:584 Kernel/(6174:6174): Recibi el codigo de op: 3
+[INFO] 17:41:45:584 Kernel/(6174:6174): A punto de recibir el tamanio del buffer
+[INFO] 17:41:45:587 Kernel/(6174:6174): Recibi el tamanio del buffer: 356
+[INFO] 17:41:45:587 Kernel/(6174:6174): A punto de recibir el stream del buffer
+[INFO] 17:41:45:587 Kernel/(6174:6174): Recibi el stream del buffer
+[INFO] 17:41:45:587 Kernel/(6174:6174): Codigo de instruccion: 2 
+[INFO] 17:41:45:587 Kernel/(6174:6174): String1: AX 
+[INFO] 17:41:45:587 Kernel/(6174:6174): String2: 10 
+[INFO] 17:41:45:587 Kernel/(6174:6174): Codigo de instruccion: 4 
+[INFO] 17:41:45:587 Kernel/(6174:6174): Numero1: 120 
+[INFO] 17:41:45:588 Kernel/(6174:6174): String1: AX 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 9 
+[INFO] 17:41:45:588 Kernel/(6174:6174): String1: DISCO 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 8 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero1: 10 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 10 
+[INFO] 17:41:45:588 Kernel/(6174:6174): String1: DISCO 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 3 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero1: 120 
+[INFO] 17:41:45:588 Kernel/(6174:6174): String1: BX 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 11 
+[INFO] 17:41:45:588 Kernel/(6174:6174): String1: ARCHIVO 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 14 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 5 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero1: 64 
+[INFO] 17:41:45:588 Kernel/(6174:6174): String1: ARCHIVO 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 6 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero1: 10 
+[INFO] 17:41:45:588 Kernel/(6174:6174): String1: ARCHIVO 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 7 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero1: 1 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero2: 128 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Codigo de instruccion: 1 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero1: 4 
+[INFO] 17:41:45:588 Kernel/(6174:6174): Numero2: 4 
+[INFO] 17:41:45:589 Kernel/(6174:6174): String1: ARCHIVO 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Codigo de instruccion: 0 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Numero1: 16 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Numero2: 4 
+[INFO] 17:41:45:589 Kernel/(6174:6174): String1: ARCHIVO 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Codigo de instruccion: 13 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Numero1: 1 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Codigo de instruccion: 12 
+[INFO] 17:41:45:589 Kernel/(6174:6174): String1: ARCHIVO 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Codigo de instruccion: 15 
+[INFO] 17:41:45:589 Kernel/(6174:6174): Se crea el proceso 0 en NEW
+[INFO] 17:41:45:589 Kernel/(6174:6174): Por agregar pcb a exit
+[INFO] 17:41:45:589 Kernel/(6174:6174): Estoy en agregar_pcb_a()
+[INFO] 17:41:45:589 Kernel/(6174:6174): pcb agregado a exit
+[INFO] 17:41:45:589 Kernel/(6174:6174): A punto de matar consola
+[INFO] 17:42:07:343 Kernel/(6242:6242): Listo para escuchar a mi cliente
+[INFO] 17:42:17:723 Kernel/(6242:6242): Se conecto un cliente!
+[INFO] 17:42:25:731 Kernel/(6242:6242): A punto de recibir el codigo de operacion
+[INFO] 17:42:50:280 Kernel/(6242:6242): Recibi el codigo de op: 3
+[INFO] 17:42:51:018 Kernel/(6242:6242): A punto de recibir el tamanio del buffer
+[INFO] 17:42:51:983 Kernel/(6242:6242): Recibi el tamanio del buffer: 356
+[INFO] 17:42:52:865 Kernel/(6242:6242): A punto de recibir el stream del buffer
+[INFO] 17:42:59:385 Kernel/(6242:6242): Recibi el stream del buffer
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 2 
+[INFO] 17:43:02:117 Kernel/(6242:6242): String1: AX 
+[INFO] 17:43:02:117 Kernel/(6242:6242): String2: 10 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 4 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Numero1: 120 
+[INFO] 17:43:02:117 Kernel/(6242:6242): String1: AX 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 9 
+[INFO] 17:43:02:117 Kernel/(6242:6242): String1: DISCO 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 8 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Numero1: 10 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 10 
+[INFO] 17:43:02:117 Kernel/(6242:6242): String1: DISCO 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 3 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Numero1: 120 
+[INFO] 17:43:02:117 Kernel/(6242:6242): String1: BX 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 11 
+[INFO] 17:43:02:117 Kernel/(6242:6242): String1: ARCHIVO 
+[INFO] 17:43:02:117 Kernel/(6242:6242): Codigo de instruccion: 14 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 5 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero1: 64 
+[INFO] 17:43:02:118 Kernel/(6242:6242): String1: ARCHIVO 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 6 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero1: 10 
+[INFO] 17:43:02:118 Kernel/(6242:6242): String1: ARCHIVO 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 7 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero1: 1 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero2: 128 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 1 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero1: 4 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero2: 4 
+[INFO] 17:43:02:118 Kernel/(6242:6242): String1: ARCHIVO 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 0 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero1: 16 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero2: 4 
+[INFO] 17:43:02:118 Kernel/(6242:6242): String1: ARCHIVO 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 13 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Numero1: 1 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 12 
+[INFO] 17:43:02:118 Kernel/(6242:6242): String1: ARCHIVO 
+[INFO] 17:43:02:118 Kernel/(6242:6242): Codigo de instruccion: 15 
+[INFO] 17:43:05:901 Kernel/(6242:6242): Se crea el proceso 0 en NEW
+[INFO] 17:43:08:579 Kernel/(6242:6242): Por agregar pcb a exit
+[INFO] 17:43:09:099 Kernel/(6242:6242): Estoy en agregar_pcb_a()
+[INFO] 17:43:09:587 Kernel/(6242:6242): pcb agregado a exit
+[INFO] 17:43:30:060 Kernel/(6242:6242): A punto de matar consola
+[INFO] 17:44:58:393 Kernel/(6555:6555): Listo para escuchar a mi cliente
+[INFO] 17:45:04:120 Kernel/(6555:6555): Se conecto un cliente!
+[INFO] 17:45:04:120 Kernel/(6555:6555): A punto de recibir el codigo de operacion
+[INFO] 17:45:04:121 Kernel/(6555:6555): Recibi el codigo de op: 3
+[INFO] 17:45:04:121 Kernel/(6555:6555): A punto de recibir el tamanio del buffer
+[INFO] 17:45:04:121 Kernel/(6555:6555): Recibi el tamanio del buffer: 356
+[INFO] 17:45:04:121 Kernel/(6555:6555): A punto de recibir el stream del buffer
+[INFO] 17:45:04:121 Kernel/(6555:6555): Recibi el stream del buffer
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 2 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: AX 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String2: 10 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 4 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 120 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: AX 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 9 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: DISCO 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 8 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 10 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 10 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: DISCO 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 3 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 120 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: BX 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 11 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: ARCHIVO 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 14 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 5 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 64 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: ARCHIVO 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 6 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 10 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: ARCHIVO 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 7 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 1 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero2: 128 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 1 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 4 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero2: 4 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: ARCHIVO 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Codigo de instruccion: 0 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero1: 16 
+[INFO] 17:45:04:121 Kernel/(6555:6555): Numero2: 4 
+[INFO] 17:45:04:121 Kernel/(6555:6555): String1: ARCHIVO 
+[INFO] 17:45:04:122 Kernel/(6555:6555): Codigo de instruccion: 13 
+[INFO] 17:45:04:122 Kernel/(6555:6555): Numero1: 1 
+[INFO] 17:45:04:122 Kernel/(6555:6555): Codigo de instruccion: 12 
+[INFO] 17:45:04:122 Kernel/(6555:6555): String1: ARCHIVO 
+[INFO] 17:45:04:122 Kernel/(6555:6555): Codigo de instruccion: 15 
+[INFO] 17:45:04:122 Kernel/(6555:6555): Se crea el proceso 0 en NEW
+[INFO] 17:45:04:122 Kernel/(6555:6555): Por agregar pcb a exit
+[INFO] 17:45:04:122 Kernel/(6555:6555): Estoy en agregar_pcb_a()
+[INFO] 17:45:04:122 Kernel/(6555:6555): pcb agregado a exit
+[INFO] 17:45:04:122 Kernel/(6555:6555): A punto de matar consola
+[INFO] 17:47:16:525 Kernel/(6687:6687): Listo para escuchar a mi cliente
+[INFO] 17:47:20:609 Kernel/(6687:6687): Se conecto un cliente!
+[INFO] 17:47:20:609 Kernel/(6687:6687): A punto de recibir el codigo de operacion
+[INFO] 17:47:20:611 Kernel/(6687:6687): Recibi el codigo de op: 3
+[INFO] 17:47:20:611 Kernel/(6687:6687): A punto de recibir el tamanio del buffer
+[INFO] 17:47:20:611 Kernel/(6687:6687): Recibi el tamanio del buffer: 356
+[INFO] 17:47:20:611 Kernel/(6687:6687): A punto de recibir el stream del buffer
+[INFO] 17:47:20:612 Kernel/(6687:6687): Recibi el stream del buffer
+[INFO] 17:47:20:612 Kernel/(6687:6687): Codigo de instruccion: 2 
+[INFO] 17:47:20:612 Kernel/(6687:6687): String1: AX 
+[INFO] 17:47:20:612 Kernel/(6687:6687): String2: 10 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Codigo de instruccion: 4 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Numero1: 120 
+[INFO] 17:47:20:612 Kernel/(6687:6687): String1: AX 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Codigo de instruccion: 9 
+[INFO] 17:47:20:612 Kernel/(6687:6687): String1: DISCO 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Codigo de instruccion: 8 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Numero1: 10 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Codigo de instruccion: 10 
+[INFO] 17:47:20:612 Kernel/(6687:6687): String1: DISCO 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Codigo de instruccion: 3 
+[INFO] 17:47:20:612 Kernel/(6687:6687): Numero1: 120 
+[INFO] 17:47:20:613 Kernel/(6687:6687): String1: BX 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 11 
+[INFO] 17:47:20:613 Kernel/(6687:6687): String1: ARCHIVO 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 14 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 5 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero1: 64 
+[INFO] 17:47:20:613 Kernel/(6687:6687): String1: ARCHIVO 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 6 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero1: 10 
+[INFO] 17:47:20:613 Kernel/(6687:6687): String1: ARCHIVO 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 7 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero1: 1 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero2: 128 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 1 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero1: 4 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero2: 4 
+[INFO] 17:47:20:613 Kernel/(6687:6687): String1: ARCHIVO 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 0 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero1: 16 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero2: 4 
+[INFO] 17:47:20:613 Kernel/(6687:6687): String1: ARCHIVO 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 13 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Numero1: 1 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 12 
+[INFO] 17:47:20:613 Kernel/(6687:6687): String1: ARCHIVO 
+[INFO] 17:47:20:613 Kernel/(6687:6687): Codigo de instruccion: 15 
+[INFO] 17:47:20:614 Kernel/(6687:6687): Se crea el proceso 0 en NEW
+[INFO] 17:47:20:614 Kernel/(6687:6687): Por agregar pcb a exit
+[INFO] 17:47:20:614 Kernel/(6687:6687): Estoy en agregar_pcb_a()
+[INFO] 17:47:20:616 Kernel/(6687:6687): pcb agregado a exit
+[INFO] 17:47:20:616 Kernel/(6687:6690): A punto de matar consola
+[INFO] 17:48:21:356 Kernel/(6755:6755): Listo para escuchar a mi cliente
+[INFO] 17:48:25:151 Kernel/(6755:6755): Se conecto un cliente!
+[INFO] 17:48:25:152 Kernel/(6755:6755): A punto de recibir el codigo de operacion
+[INFO] 17:48:25:154 Kernel/(6755:6755): Recibi el codigo de op: 3
+[INFO] 17:48:25:154 Kernel/(6755:6755): A punto de recibir el tamanio del buffer
+[INFO] 17:48:25:154 Kernel/(6755:6755): Recibi el tamanio del buffer: 356
+[INFO] 17:48:25:154 Kernel/(6755:6755): A punto de recibir el stream del buffer
+[INFO] 17:48:25:154 Kernel/(6755:6755): Recibi el stream del buffer
+[INFO] 17:48:25:154 Kernel/(6755:6755): Codigo de instruccion: 2 
+[INFO] 17:48:25:154 Kernel/(6755:6755): String1: AX 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String2: 10 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 4 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Numero1: 120 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String1: AX 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 9 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String1: DISCO 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 8 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Numero1: 10 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 10 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String1: DISCO 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 3 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Numero1: 120 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String1: BX 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 11 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 14 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 5 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Numero1: 64 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 6 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Numero1: 10 
+[INFO] 17:48:25:155 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Codigo de instruccion: 7 
+[INFO] 17:48:25:155 Kernel/(6755:6755): Numero1: 1 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Numero2: 128 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Codigo de instruccion: 1 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Numero1: 4 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Numero2: 4 
+[INFO] 17:48:25:156 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Codigo de instruccion: 0 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Numero1: 16 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Numero2: 4 
+[INFO] 17:48:25:156 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Codigo de instruccion: 13 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Numero1: 1 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Codigo de instruccion: 12 
+[INFO] 17:48:25:156 Kernel/(6755:6755): String1: ARCHIVO 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Codigo de instruccion: 15 
+[INFO] 17:48:25:156 Kernel/(6755:6755): Se crea el proceso 0 en NEW
+[INFO] 17:48:25:156 Kernel/(6755:6755): Por agregar pcb a exit
+[INFO] 17:48:25:156 Kernel/(6755:6755): Estoy en agregar_pcb_a()
+[INFO] 17:48:25:157 Kernel/(6755:6755): pcb agregado a exit
+[INFO] 17:48:25:157 Kernel/(6755:6760): A punto de matar consola
+[INFO] 17:49:02:085 Kernel/(6820:6820): Listo para escuchar a mi cliente
+[INFO] 17:49:08:601 Kernel/(6820:6820): Se conecto un cliente!
+[INFO] 17:49:08:602 Kernel/(6820:6820): A punto de recibir el codigo de operacion
+[INFO] 17:49:08:603 Kernel/(6820:6820): Recibi el codigo de op: 3
+[INFO] 17:49:08:603 Kernel/(6820:6820): A punto de recibir el tamanio del buffer
+[INFO] 17:49:08:603 Kernel/(6820:6820): Recibi el tamanio del buffer: 356
+[INFO] 17:49:08:603 Kernel/(6820:6820): A punto de recibir el stream del buffer
+[INFO] 17:49:08:603 Kernel/(6820:6820): Recibi el stream del buffer
+[INFO] 17:49:08:603 Kernel/(6820:6820): Codigo de instruccion: 2 
+[INFO] 17:49:08:603 Kernel/(6820:6820): String1: AX 
+[INFO] 17:49:08:603 Kernel/(6820:6820): String2: 10 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 4 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Numero1: 120 
+[INFO] 17:49:08:604 Kernel/(6820:6820): String1: AX 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 9 
+[INFO] 17:49:08:604 Kernel/(6820:6820): String1: DISCO 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 8 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Numero1: 10 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 10 
+[INFO] 17:49:08:604 Kernel/(6820:6820): String1: DISCO 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 3 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Numero1: 120 
+[INFO] 17:49:08:604 Kernel/(6820:6820): String1: BX 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 11 
+[INFO] 17:49:08:604 Kernel/(6820:6820): String1: ARCHIVO 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 14 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 5 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Numero1: 64 
+[INFO] 17:49:08:604 Kernel/(6820:6820): String1: ARCHIVO 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 6 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Numero1: 10 
+[INFO] 17:49:08:604 Kernel/(6820:6820): String1: ARCHIVO 
+[INFO] 17:49:08:604 Kernel/(6820:6820): Codigo de instruccion: 7 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Numero1: 1 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Numero2: 128 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Codigo de instruccion: 1 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Numero1: 4 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Numero2: 4 
+[INFO] 17:49:08:605 Kernel/(6820:6820): String1: ARCHIVO 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Codigo de instruccion: 0 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Numero1: 16 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Numero2: 4 
+[INFO] 17:49:08:605 Kernel/(6820:6820): String1: ARCHIVO 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Codigo de instruccion: 13 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Numero1: 1 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Codigo de instruccion: 12 
+[INFO] 17:49:08:605 Kernel/(6820:6820): String1: ARCHIVO 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Codigo de instruccion: 15 
+[INFO] 17:49:08:605 Kernel/(6820:6820): Se crea el proceso 0 en NEW
+[INFO] 17:49:08:605 Kernel/(6820:6820): Por agregar pcb a exit
+[INFO] 17:49:08:605 Kernel/(6820:6820): Estoy en agregar_pcb_a()
+[INFO] 17:49:08:605 Kernel/(6820:6820): pcb agregado a exit
+[INFO] 17:49:08:606 Kernel/(6820:6825): A punto de matar consola

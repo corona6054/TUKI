@@ -1,87 +1,53 @@
 #include "../includes/kernel.h"
 
-
 int main(void){
-	// prueba utils buffer
-	uint32_t b = 5;
-	int elemento = -1;
-	char* a;
-	
-	sem_init(&prueba1, 0, 0);
-	
 	levantar_modulo();
-	
-	
 
+	pthread_t matar_procesos;
+	pthread_create(&matar_procesos, NULL, (void *) terminar_procesos, NULL);
+	pthread_detach(matar_procesos);
 
+	server_fd = iniciar_servidor(logger, config_kernel.puerto_escucha);
+
+	consola_fd = esperar_cliente(server_fd, logger);
+	
 	t_buffer* buffer = crear_buffer_nuestro();
-	
-	buffer_write_string(buffer,"CHAU");
-	buffer_write_string(buffer,"HOLA123");
-	buffer_write_uint32(buffer,10);
 
-	
-	log_info(logger, "Ya cargue el stream");
-	
-	sem_wait(&prueba1);
+	// Enviamos el codigo de operacion
+    log_info(logger, "A punto de recibir el codigo de operacion");
+    recv(consola_fd, &(buffer->codigo), sizeof(uint8_t), MSG_WAITALL);
+    log_info(logger, "Recibi el codigo de op: %d", buffer -> codigo);
 
-	// Primero enviamos el tamanio del buffer
-	log_info(logger,"Tamanio del buffer: %d",buffer->size);
-	// [INFO] 22:24:28:391 Kernel/(4462:4462): Tamanio del buffer: 23
-	send(socket_cpu, &(buffer->size), sizeof(uint32_t), 0);
-	
-	// Despues enviamos el stream del buffer
-	send(socket_cpu, buffer->stream, buffer->size, 0);
-	log_info(logger, "Ya mande el stream");
-		
-	/*
-	a = buffer_read_string(buffer);
-	log_info(logger,"%s", a);
-	free(a);
-	a = buffer_read_string(buffer);
-	log_info(logger,"%s", a);
-	b = buffer_read_uint32(buffer);
-	log_info(logger, "%lu", b);
-	for(int i = 0;i<2;i++){
-		b = buffer_read_uint32(buffer);
-		log_info(logger, "%lu", b);
-	}
-	
+    // Enviamos el tamanio del buffer
+    log_info(logger, "A punto de recibir el tamanio del buffer");
+    recv(consola_fd, &(buffer->size), sizeof(uint32_t), MSG_WAITALL);
+    log_info(logger, "Recibi el tamanio del buffer: %d", buffer -> size);
 
 
-	b = buffer_read_uint32(buffer);
-		log_info(logger, "%lu", b);
+	buffer -> stream = malloc(buffer -> size);
+    // Enviamos el stream del buffer
+    log_info(logger, "A punto de recibir el stream del buffer");
+    recv(consola_fd, buffer->stream, buffer -> size, MSG_WAITALL);
+    log_info(logger, "Recibi el stream del buffer");
 
-	*/
+	
+	t_list* lista_instrucciones = buffer_read_lista_instrucciones(buffer);
+
+	mostrar_instrucciones(logger, lista_instrucciones);
+
+	t_pcb* pcb_prueba = crear_pcb(lista_instrucciones, consola_fd);
+	
+	log_info(logger, "Por agregar pcb a exit");
+	agregar_pcb_a(procesosExit, pcb_prueba, &mutex_exit);
+	sem_post(&cont_exit);
+	log_info(logger, "pcb agregado a exit");
+
 	while(1);
-	// fin prueba utils buffer
 	
-	sem_init(&m_nuevos, 0, 1);
-	sem_init(&m_ready, 0, 1);
-	sem_init(&m_bloqueados, 0, 1);
-	sem_init(&m_finalizados, 0, 1);
-	sem_init(&m_exec, 0, 1);
-	
-
-	procesosNuevos = list_create();
-	procesosReady = list_create();
-	procesosEjecutando = list_create();
-	procesosBloqueados = list_create();
-	
-	levantar_modulo();
-
-	planificadorCortoPlazo();
-	/*
-	pthread_t planificadorCorto;
-	pthread_create(&planificadorCorto, NULL, (void *) planificadorCortoPlazo, NULL);
-	pthread_detach(planificadorCorto);
-	*/
-	while(1);
-
-	finalizar_modulo();
-
 	return 0;
 }
+
+
 
 
 // SUBPROGRAMAS
@@ -90,8 +56,35 @@ void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	levantar_config();
-	establecer_conexiones();
+
+	incializar_listas();
+	incializar_semaforos();
+
+	//establecer_conexiones();
 	return;
+}
+
+void incializar_listas(){
+	procesosNew = queue_create();
+	procesosReady = queue_create();
+	procesosExec = queue_create();
+	procesosBlocked = queue_create();
+	procesosExit = queue_create();
+	return;
+}
+
+void incializar_semaforos(){
+	pthread_mutex_init(&mutex_new, NULL);
+	pthread_mutex_init(&mutex_ready, NULL);
+	pthread_mutex_init(&mutex_blocked, NULL);
+	pthread_mutex_init(&mutex_exec, NULL);
+	pthread_mutex_init(&mutex_exit, NULL);
+	
+	//FALTA INICIALIZAR ALGUNOS
+	sem_init(&cont_exit, 0, 0);
+
+	//Semaforos conexiones y recibos/envios
+	sem_init(&conexion_consola, 0, 0);
 }
 
 void finalizar_modulo(){
@@ -177,7 +170,7 @@ void conectarse_con_cpu(){
 	socket_cpu = crear_conexion(config_kernel.ip_cpu, config_kernel.puerto_cpu);
 	if (socket_cpu >= 0){			
 		log_info(logger,"Conectado con cpu");
-		sem_post(&prueba1);
+		//sem_post(&prueba1); verificar dsps este semaforo
 	}
 	else
 		log_info(logger,"Error al conectar con cpu");
@@ -201,11 +194,11 @@ void establecer_conexiones()
 
 	*/
 
-	
+	/*
 	pthread_t conexion_cpu;
 	pthread_create(&conexion_cpu, NULL, (void *) conectarse_con_cpu, NULL);
 	pthread_detach(conexion_cpu);
-	
+	*/
 
 	/*
 	pthread_t conexion_file_system;
@@ -213,143 +206,148 @@ void establecer_conexiones()
 	pthread_detach(conexion_file_system);
 	*/
 
-	/*
+
 	server_fd = iniciar_servidor(logger, config_kernel.puerto_escucha);
 	
 	pthread_t manejo_consolas;
 	pthread_create(&manejo_consolas, NULL, (void *) manejar_clientes, (void *) server_fd);
 	pthread_detach(manejo_consolas);
-	*/
+
 
 }
 
 void manejar_clientes(int server_fd){
 	//thread para espersar clientes
 	while(1){
-		t_conexiones conexiones;
-		conexiones.socket = esperar_cliente(server_fd, logger);
-		conexiones.socket_anterior = 0;
+		//t_conexiones conexiones;
+		int socket = esperar_cliente(server_fd, logger);
+		//conexiones.socket_anterior = 0;
 		// threads para recepcion de info de las consolas
 
-
 		pthread_t t;
-		pthread_create(&t, NULL, (void *) planificadorLargoPlazo, (void *) &conexiones);
+		pthread_create(&t, NULL, (void *) recepcionar_proceso, (void *) &socket);
 		pthread_detach(t);
 	}
 
 }
 
-t_list* recibir_paquete(int socket_cliente){
-	int size;
-	int desplazamiento = 0;
-	void * buffer;
-	t_list* valores = list_create();
-	int tamanio;
+void recepcionar_proceso(int socket_a_atender){
+	//Recibir, deserializar lista de instrucciones de consola
+	t_buffer* buffer = crear_buffer_nuestro();
 
-	buffer = recibir_buffer(&size, socket_cliente);
-	while(desplazamiento < size)
-	{
-		memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
-		desplazamiento+=sizeof(int);
-		char* valor = malloc(tamanio);
-		memcpy(valor, buffer+desplazamiento, tamanio);
-		desplazamiento+=tamanio;
-		list_add(valores, valor);
+	log_info(logger, "Por recibir el tamanio");
+	recv(socket_a_atender, &(buffer->size), sizeof(uint32_t), MSG_WAITALL);
+	log_info(logger, "Ya recibi el tamanio");
+
+	buffer->stream = malloc(buffer->size);
+
+	log_info(logger, "Por recibir el stream.");
+	recv(socket_a_atender, buffer->stream, buffer->size, MSG_WAITALL);
+	log_info(logger, "Recibi el stream.");
+
+	t_list* lista_instrucciones = buffer_read_lista_instrucciones(buffer);
+
+	log_info(logger, "Mostrando instrucciones recibidas:");
+
+	for(int i = 0; i < list_size(lista_instrucciones); i++){
+		t_instruction* instruccion = list_get(lista_instrucciones, i);
+		log_info(logger, "Codigo instruccion: %d", instruccion->instruccion);
 	}
-	free(buffer);
-	return valores;
+
+	//Crear pcb
+	t_pcb* pcb_recibido = crear_pcb(lista_instrucciones, socket_a_atender);
+
+	//Agregarlo a new
+	/*
+	sem_wait(&m_nuevos);
+	queue_push(procesosNuevos, &pcb_recibido);
+	sem_post(&m_nuevos);
+	*/
 }
 
-void printElement(void* ptr) {
-	Instruction* seleccionado = (Instruction*) ptr;
-	printf("%d ", seleccionado->instruccion);
-	        if (seleccionado->numero1 != 0)
-	            printf("%d ", seleccionado->numero1);
-	        if (seleccionado->numero2 != 0)
-	            printf("%d ", seleccionado->numero2);
-	        if (strcmp(seleccionado->string1, "") != 0)
-	            printf("%s ", seleccionado->string1);
-	        if (strcmp(seleccionado->string2, "") != 0)
-	            printf("%s ", seleccionado->string2);
-	        printf("\n");
+
+void planificadorLargoPlazo(){
+	pthread_t hiloNew;
+	pthread_t hiloExit;
+	pthread_create(&hiloNew,NULL,mandar_a_ready,NULL);
+	pthread_create(&hiloExit,NULL,terminar_procesos,NULL);
+
+	pthread_detach(hiloNew);
+	pthread_detach(hiloExit);
 }
 
-void* deserializarInst(void* data){
-		Instruction* instruction = malloc(sizeof(Instruction));
-		int offset=0;
-		memcpy(&instruction->instruccion,data + offset, sizeof(u_int32_t));
-		offset += sizeof(u_int32_t);
-		memcpy(&instruction->numero1,data + offset, sizeof(u_int32_t));
-		offset += sizeof(u_int32_t);
-		memcpy(&instruction->numero2,data + offset, sizeof(u_int32_t));
-		offset += sizeof(u_int32_t);
-		memcpy(&instruction->string1,data + offset, sizeof(char[15]));
-		offset += sizeof(char[15]);
-		memcpy(&instruction->string2,data + offset, sizeof(char[15]));
-		offset += sizeof(char[15]);
-		return instruction;
-		}
+void mandar_a_ready(){
+	// Chequear grado de multiprogramacion
 
-void planificadorLargoPlazo(t_conexiones* conexiones){
-	// Seria el planificador a largo plazo
-	log_info(logger,"Entro a planificador a largo plazo.");
-	t_list* instrucciones ;
-	int op = recibir_operacion(conexiones->socket);
-	instrucciones = recibir_paquete(conexiones->socket);
-	log_info(logger,"Paquete recibido.");
-	list_map(instrucciones,deserializarInst);
+	// mandarle a memoria para que inicialize las estructuras necesarias, y tabla de segmentos para alm en pcb.
+	// Ponerlo en la cola de ready (x FIFO SIEMPRE)
+}
 
-	list_iterate(instrucciones,printElement);
-
-	int estado_anterior = -1;
-	pcb pcb = crear_pcb(instrucciones);
-	list_add(procesosNuevos,&pcb);
-	
-	int total=0;
-	total+=list_size(procesosReady);
-	total+=list_size(procesosEjecutando);
-	total+=list_size(procesosBloqueados);
-
-	if( total < config_kernel.grado_max_multi){
+void terminar_procesos(){
+	//Verificar todo el tiempo si hay procesos en la lista de finalizados (x semaforos)
+	while(1){
+		// Semaforo contador de cuantos procesos hay en exit
+		sem_wait(&cont_exit);
 		
-		sem_wait(&m_nuevos);
-		list_remove(procesosNuevos,0);
-		sem_post(&m_nuevos);
+		t_pcb* pcb = retirar_pcb_de(procesosExit, &mutex_exit);
 
-		//estado_anterior = pcb.estado;
-		//pcb.estado = READY;
+		//liberar recursos asignados
+		//liberar_todos_recursos(pcb);
+		//avisar a memoria para liberar estructuras
 
-		sem_wait(&m_ready);
-		list_add(procesosReady,&pcb);
-		sem_post(&m_ready);
-		log_info(logger,"PID: %d - Estado Anterior: %d - Estado Actual: READY", pcb.pid, estado_anterior); //no va a terminar estando aca este log info
-		
-		//planificadorCortoPlazo();
-		//log_info(logger,"Cola Ready %s: , ")
-		//mandar msje a memoria para que inicialice sus estructuras necesarias y obtenga la tabla de segmentos inicial
+		//enviar_codigo(socket_memoria, FIN_PROCESO_MEMORIA);
+		log_info(logger, "A punto de matar consola");
+		//avisar a consola para matar conexion
+		op_code terminar_consola = FIN_PROCESO_CONSOLA;
+		enviar_codigo(pcb->socket_consola, terminar_consola);
+
+
+		// Hacer free de todos los malloc (PCB Y CDE)
+	}
+}
+
+t_pcb* retirar_pcb_de(t_queue* cola, pthread_mutex_t* mutex){
+	t_pcb* pcb;
+	pthread_mutex_lock(mutex);
+	pcb = queue_pop(cola);
+	pthread_mutex_unlock(mutex);
+	return pcb;
+}
+
+void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex){
+	log_info(logger, "Estoy en agregar_pcb_a()");
+	pthread_mutex_lock(mutex);
+	queue_push(cola, pcb_a_agregar);
+	pthread_mutex_unlock(mutex);
+}
+
+void liberar_todos_recursos(t_pcb* pcb){
+	int cant_recursos = list_size(pcb -> recursos_asignados);
+
+	for (int i=0; i < cant_recursos; i++){
+		char* recurso = list_remove(pcb -> recursos_asignados, i);
+		sumar_instancia_recurso(recurso);
 
 	}
-	
-	
+}
 
+void restar_instancia_recurso(char* recurso){
+	actualizar_instancias_recurso(recurso, -1);
+}
+
+void sumar_instancia_recurso(char* recurso){
+	actualizar_instancias_recurso(recurso, 1);
 }
 
 void planificadorCortoPlazo(){
-	if (strcmp(config_kernel.algoritmo, "FIFO") == 0){
-		pthread_t fifo;
-		pthread_create(&fifo, NULL, (void *) planificacionFIFO, NULL);
-		pthread_detach(fifo);
-	}
-	else if(strcmp(config_kernel.algoritmo, "HRRN") == 0){
-		pthread_t hrrn;
-		pthread_create(&hrrn, NULL, (void *) planificacionHRRN, NULL);
-		pthread_detach(hrrn);
-	}
+	if (strcmp(config_kernel.algoritmo, "FIFO") == 0)
+		planificacionFIFO();
+	else if(strcmp(config_kernel.algoritmo, "HRRN") == 0)
+		planificacionHRRN();
 }
 
-
-Registros inicializar_registros(){
-	Registros registros;
+t_registros inicializar_registros(){
+	t_registros registros;
 
 	for(int i=0;i<4;i++){
 		registros.AX[i] = 'x';
@@ -375,84 +373,103 @@ Registros inicializar_registros(){
 	return registros;
 }
 
-pcb crear_pcb(t_list *instrucciones){
-	pcb pcb;
+t_cde* crear_cde(t_list* instrucciones){
+	t_cde* cde = malloc(sizeof(t_cde));
+
+	cde->pid = pid;
+	cde->lista_de_instrucciones = instrucciones;
+	cde->program_counter = 0;
+	cde->registros_cpu = inicializar_registros();
+    cde->tabla_segmentos = list_create();
+
+
+	return cde;
+}
+
+t_pcb* crear_pcb(t_list *instrucciones, int socket_con){
+	t_pcb* pcb = malloc(sizeof(t_pcb));
 	
-	pcb.pid = pid;
-	pcb.lista_de_instrucciones = instrucciones;
-	pcb.program_counter = 0;
-	pcb.registro_proceso = inicializar_registros();
-    pcb.tabla_segmentos = list_create();
-	pcb.estimado_prox_rafaga = config_kernel.est_inicial;
-	pcb.tiempo_llegada_ready = -1;
-	t_list* archivos_abiertos = list_create();
-	//pcb.estado = NEW;
-
-	log_info(logger, "Se crea el proceso %d en NEW", pcb.pid);
-
+	pcb->cde = crear_cde(instrucciones);
 	pid++;
+
+	pcb->estimado_prox_rafaga = config_kernel.est_inicial;
+	pcb->tiempo_llegada_ready = -1;
+
+	pcb->archivos_abiertos = list_create();
+	pcb->recursos_asignados = list_create();
+	pcb->recursos_solicitados = list_create();
+	//pcb.estado = NEW;
+	pcb->socket_consola = socket_con;
+	log_info(logger, "Se crea el proceso %d en NEW", pcb->cde->pid);
+
 	return pcb;
 }
 
 
 void planificacionFIFO(){
 	
+
+	//semaforo para ver que
+	//if(!list_is_empty(procesosReady) || !list_is_empty(procesosBloqueados)){
+
+	//hilo de ready	a exec
+	//hilo de bloc a ready
+
+	pthread_t transicionReadyExec;
+	pthread_t  transicionBlockReady;
+	pthread_create(&transicionReadyExec,NULL, enviarDeReadyAExecFIFO,NULL);
+	pthread_create(&transicionBlockReady,NULL,enviarDeBlockAReadyFIFO,NULL);
+
+	pthread_detach(transicionReadyExec);
+	pthread_detach(transicionBlockReady);
+
+	// (de exec a bloc es adentro del switch)
+	// de exec a ready es YIELD
+	return;
+}
+
+void enviarDeReadyAExecFIFO(){
 	while(1){
-		
-		if(!list_is_empty(procesosReady) || !list_is_empty(procesosBloqueados)){	
-			pcb *pcb_a_ejecutar;
-			
-			sem_wait(&m_ready);
-			pcb_a_ejecutar = list_remove(procesosReady,0);
-			sem_post(&m_ready);
+		//chequear que no haya ninguno ejecutando
+		//Sale el primero x FIFO
+		if(!list_is_empty(procesosReady) && list_is_empty(procesosExec)){
 
-
-			sem_wait(&m_exec);
-			list_add(procesosEjecutando, pcb_a_ejecutar);
-			sem_post(&m_exec);
+			t_pcb* pcb = retirar_pcb_de(procesosReady, &mutex_ready);
+			agregar_pcb_a(procesosExec, pcb, &mutex_exec);
 			
-			log_info(logger,"Pid pcb_a_ejecutar: %d", pcb_a_ejecutar->pid);
-			//log_info(logger,"Estado pcb_a_ejecutar: %d", pcb_a_ejecutar->estado);
-
-			/*
-			contexto_de_ejecucion cde_a_enviar;
-
-			cde_a_enviar.pid = pcb_a_ejecutar->pid;
-    		cde_a_enviar.program_counter = pcb_a_ejecutar->program_counter;    
-			cde_a_enviar.registrosCpu = pcb_a_ejecutar->registro_proceso;
-			cde_a_enviar.tabla_segmentos = pcb_a_ejecutar->tabla_segmentos;
-			//cde_a_enviar.estado = pcb_a_ejecutar->estado;
-			
-			serializar_cde(cde_a_enviar); //serializa el cde, arma el paquete y lo envia a cpu
-			Cde_serializado cde_recibido;
-				// = deserializar_cde(); // recibe y deserializa cde;
-			
-			
-			// tiene que esperar rta del cpu
-			// deserializa el paquete
-			Instruction* instruccion_actual = list_get(cde_recibido.lista_de_instrucciones,cde_recibido.program_counter - 1);
-			
-			// evaluar_instruccion(instruccion_actual, cde_recibido);
-			*/
-			
-
-			// replanifica si es necesario
-
+			ejecutarProceso(pcb);
 		}
+
 	}
 	return;
 }
 
+
+void ejecutarProceso(){
+	// Arma el cde
+	// Se lo envia a CPU
+	// CPU ejecuta instrucciones y si necesita devuelve el CDE (do while de ulima instruccion != exit)
+	// Cuando recibe el CDE, evalua la instruccion actual
+	// Si la instruccion actual bloquea el proceso, lo saca de la colaExec
+	// Llama al subprograma que bloquea.
+	return;
+}
+
+void enviarDeBlockAReadyFIFO(){
+	while(1){
+		//Varias maneras de desbloquear un proceso, 1 por que hay un signal de un recurso q el proceso necesitbaa y no estaba disponible
+		// antes,
+	}
+	return;
+}
 
 void planificacionHRRN(){
 
 	return;
 }
 
-
-
 // UTILS INSTRUCCIONES
-void evaluar_instruccion(Instruction* instruccion_actual, contexto_de_ejecucion cde_recibido){
+void evaluar_instruccion(t_instruction* instruccion_actual, t_cde cde_recibido){
 	switch(instruccion_actual->instruccion){
 		case F_READ:
 			break;
@@ -472,22 +489,8 @@ void evaluar_instruccion(Instruction* instruccion_actual, contexto_de_ejecucion 
 			log_info(logger,"PID: %d - Ejecuta IO: %d",cde_recibido.pid,instruccion_actual->numero1);
 			break;
 		case WAIT:
-			if(actualizar_instancias_recurso(instruccion_actual->string1, -1) == 0)
-				log_info(logger,"PID: %d - Wait: %s - Instancias: %d",cde_recibido.pid,instruccion_actual->string1,
-						obtener_instancia_recurso(instruccion_actual->string1));
-			else{
-				log_info(logger,"Fin de Proceso: “Finaliza el proceso %d - Motivo: INVALID_RESOURCE",cde_recibido.pid);
-				// LIBERAR RECURSOS DEL PROCESO
-			}
 			break;
 		case SIGNAL:
-			if(actualizar_instancias_recurso(instruccion_actual->string1, 1) == 0)
-				log_info(logger,"PID: %d - Signal: %s - Instancias: %d",cde_recibido.pid,instruccion_actual->string1,
-						obtener_instancia_recurso(instruccion_actual->string1));
-			else{
-				log_info(logger,"Fin de Proceso: “Finaliza el proceso %d - Motivo: INVALID_RESOURCE",cde_recibido.pid);
-				// LIBERAR RECURSOS DEL PROCESO
-			}
 			break;
 		case F_OPEN:
 			break;
@@ -496,31 +499,36 @@ void evaluar_instruccion(Instruction* instruccion_actual, contexto_de_ejecucion 
 		case DELETE_SEGMENT:
 			break;
 		case YIELD:
-
+				ejecutar_YIELD();
 			break;
 		case EXIT:
+			//agregar_pcb_a(procesosFinalizados, pcb);
+			//sem_post(&cont_exit); este esta bien pero dsps lo seguimos
 			break;
 		default:
 			break;
 	}
 }
 
-int actualizar_instancias_recurso(char* recurso_a_actualizar, int numero){
-	// Paso el numero para poder hacer +1 y -1 por wait y signal
+void ejecutar_YIELD(){
+	//hay que mandar al final de la cola de ready
+	//hacemos el recv del cde
 
+}
+
+void actualizar_instancias_recurso(char* recurso_a_actualizar, int numero){
+	// Paso el numero para poder hacer +1 y -1 por wait y signal
+	// Aca no hay chequeos, solo cambia la cantidad de instancias del recurso
 	char* recurso;
 	int* instancia;
 
-	for(int i=0; i< list_size(config_kernel.recursos_compartidos) ; i++){
+	for(int i=0; i< list_size(config_kernel.recursos_compartidos) ; i++){ 
 		recurso = list_get(config_kernel.recursos_compartidos,i);
 		if(strcmp(recurso, recurso_a_actualizar) == 0){
 			instancia = list_get(config_kernel.instancias,i) + numero;
 			list_replace(config_kernel.instancias, i, instancia);
-			return 0;
 		}
 	}
-	return -1;
-
 }
 
 int obtener_instancia_recurso(char* recurso_a_obtener){
@@ -533,3 +541,5 @@ int obtener_instancia_recurso(char* recurso_a_obtener){
 	}
 	return -1;
 }
+
+// FIN UTILS INSTRUCCIONES

@@ -6,14 +6,14 @@
 #include <string.h>
 #include <commons/log.h>
 #include <commons/collections/list.h>
+#include <commons/collections/queue.h>
 #include <commons/config.h>
 #include <commons/memory.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
-#include "utils_server.h"
-#include "utils_cliente.h"
-#include "serializacion.h"
+//#include "serializacion.h"
+#include "comunicacion.h"
 
 typedef struct{
     int socket;
@@ -50,22 +50,29 @@ int server_fd;
 
 int consola_fd;
 
-sem_t* prueba1;
-sem_t* m_nuevos;
-sem_t* m_ready;
-sem_t* m_bloqueados;
-sem_t* m_finalizados;
-sem_t* m_exec;
+
+// SEMAFOROS
+// Mutex
+pthread_mutex_t mutex_new;
+pthread_mutex_t mutex_ready;
+pthread_mutex_t mutex_blocked;
+pthread_mutex_t mutex_exec;
+pthread_mutex_t mutex_exit;
+
+// Contadores
+sem_t* cont_exit;
+sem_t* conexion_consola;
+
 
 int pid = 0;
 
 int ejecutando = 0;
 
-t_list* procesosNuevos;
-t_list*	procesosReady;
-t_list*	procesosBloqueados;
-t_list*	procesosFinalizados;
-t_list* procesosEjecutando;
+t_queue* procesosNew;
+t_queue* procesosReady;
+t_queue* procesosBlocked;
+t_queue* procesosExec;
+t_queue* procesosExit;
 
 // Prototipos funciones
 void levantar_modulo();
@@ -84,10 +91,10 @@ void establecer_conexiones();
 void manejar_clientes(int);
 t_list* recibir_paquete(int);
 
-void planificadorLargoPlazo(t_conexiones*);
+void planificadorLargoPlazo();
 void planificadorCortoPlazo();
-Registros inicializar_registros();
-pcb crear_pcb(t_list*);
+t_registros inicializar_registros();
+t_pcb* crear_pcb(t_list*, int);
 
 void planificacionFIFO();
 void planificacionHRRN();
@@ -97,7 +104,20 @@ int tamanio_cde_serializado(Cde_serializado);
 
 void deserializar_cde();
 
-int actualizar_instancias_recurso(char*, int);
+void actualizar_instancias_recurso(char*, int);
 int obtener_instancia_recurso(char*);
 
-#endif /* INCLUDES_KERNEL_H_ */
+void enviarDeReadyAExecFIFO();
+void enviarDeBlockAReadyFIFO();
+void mandar_a_ready();
+void terminar_procesos();
+void recepcionar_proceso(int);
+
+t_pcb* crear_pcb(t_list* lista_instrucciones, int socket);
+t_cde* crear_cde(t_list* lista_instrucciones);
+
+//Agregar y retirar pcbs de las funciones seguramente
+t_pcb* retirar_pcb_de(t_queue* cola, pthread_mutex_t* mutex);
+void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex);
+
+#endif /* INCLUDES_KERNEL_H_ */
