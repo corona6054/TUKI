@@ -5,12 +5,11 @@
 #include <stdlib.h>
 #include "commons/config.h"
 #include "commons/log.h"
-#include "utils_cliente.h"
 #include <pthread.h>
 #include <stdint.h>
 #include <semaphore.h>
+#include <math.h>
 #include "serializacion.h"
-
 typedef struct{
 	int retardo;
 	char *ip_memoria;
@@ -44,7 +43,7 @@ void levantar_config();
 void conectarse_con_memoria();
 void establecer_conexiones();
 
-void ejecutar_set(char[], char[], int, Registros*);
+void ejecutar_set(char[], char[], int, t_registros*);
 void ejecutar_exit();
 void ejecutar_yield();
 void ejecutar_io(int);
@@ -59,9 +58,9 @@ void ejecutar_ftruncate(/*archivo, int */);
 void ejecutar_createsegment(/*int , int*/ );
 void ejecutar_deletesegment(/*int */);
 
-void deserializar_cde();
-t_list* recibir_paquete(int);
-
-
+void switch_instruccion(t_instruction* instruccion, t_cde cde);
+int calcular_dir_fisica(int dir_logica, t_cde cde,int tamanio);
+int tamanioRegistro(char *registro);
+void sacar_de_registro(char registro[],int dir_fisica, int tamanio, t_registros *registros, int pid);
 
 #endif /* INCLUDES_CPU_H_ */

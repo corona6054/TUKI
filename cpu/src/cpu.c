@@ -1,9 +1,6 @@
 #include "../includes/cpu.h"
-#include <math.h>
-void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde);
-int calcular_dir_fisica(int dir_logica, contexto_de_ejecucion cde,int tamanio);
-int tamanioRegistro(char *registro);
-void sacar_de_registro(char registro[],int dir_fisica, int tamanio, Registros *registros, int pid);
+
+
 int main(void){
 	//sem_init(&prueba1cpu, 0, 0);
 	
@@ -31,8 +28,8 @@ int main(void){
 
 	while(1);
 	*/
-	Instruction *inst1 ;
-	inst1 = malloc(sizeof(Instruction));
+	t_instruction *inst1 ;
+	inst1 = malloc(sizeof(t_instruction));
 	inst1->instruccion = MOV_IN;
 	inst1->string1 = malloc(sizeof("AX"));
 	inst1->string2 = malloc(sizeof("HOLA"));
@@ -43,13 +40,13 @@ int main(void){
 	t_list* instrucciones = list_create();
 	list_add(instrucciones,inst1);
 
-	Instruction *inst2 ;
-	inst2 = malloc(sizeof(Instruction));
+	t_instruction *inst2 ;
+	inst2 = malloc(sizeof(t_instruction));
 	inst2->instruccion = IO;
 
 	list_add(instrucciones,inst2);
 
-	Registros registros;
+	t_registros registros;
 
 	ejecutar_set("AX", "XXXX", 4, &registros);
 	ejecutar_set("BX", "1XX1", 4, &registros);
@@ -66,14 +63,14 @@ int main(void){
 
 
 
-	Segmento *segmento1;
-	segmento1 = malloc(sizeof(Segmento));
+	t_segmento *segmento1;
+	segmento1 = malloc(sizeof(t_segmento));
 	segmento1->id = 1;
 	segmento1->direccion_base = 0;
 	segmento1->tamanio_segmentos = 137;
 
-	Segmento *segmento2;
-		segmento2 = malloc(sizeof(Segmento));
+	t_segmento *segmento2;
+		segmento2 = malloc(sizeof(t_segmento));
 		segmento2->id = 2;
 		segmento2->direccion_base = 100;
 		segmento2->tamanio_segmentos = 19;
@@ -82,7 +79,7 @@ int main(void){
 	list_add(segmentos, segmento1);
 	list_add(segmentos, segmento2);
 
-	contexto_de_ejecucion cde_recibido = {
+	t_cde cde_recibido = {
 				1,
 				instrucciones,
 				0,
@@ -193,7 +190,7 @@ void establecer_conexiones()
 	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
 	pthread_detach(conexion_memoria);
 	*/
-	server_fd = abrir_servidor(logger,config);
+	server_fd = iniciar_servidor(logger,config);
 	kernel_fd = esperar_cliente(server_fd, logger);
 	if (kernel_fd == -1)
 	{
@@ -207,14 +204,14 @@ void establecer_conexiones()
 
 }
 
-void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde){
+void switch_instruccion(t_instruction* instruccion, t_cde cde){
 	t_buffer* buffer = crear_buffer_nuestro();
 	switch(instruccion->instruccion){
 		case SET:
 			//int tamanio = tamanioRegistro(instruccion->string1);
 			printf("entre a set");
-			ejecutar_set(instruccion->string1,instruccion->string2,4, &(cde.registrosCpu));
-			Registros registros = cde.registrosCpu;
+			ejecutar_set(instruccion->string1,instruccion->string2,4, &(cde.registros_cpu));
+			t_registros registros = cde.registros_cpu;
 			for(int i=0;i<16;i++){
 				printf("%c",registros.RAX[i]);
 			}
@@ -232,8 +229,8 @@ void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde){
 			}else {printf("%d\n", dir_fisica);/*Aca mando a memoria la info*/
 
 				char* a_guardar = "HOLA-SOY-NICOLAS"; // = lo que me llega de memoria
-				ejecutar_set(instruccion->string1, a_guardar,4, &(cde.registrosCpu));
-				Registros registros2 = cde.registrosCpu;
+				ejecutar_set(instruccion->string1, a_guardar,4, &(cde.registros_cpu));
+				t_registros registros2 = cde.registros_cpu;
 				for(int i=0;i<16;i++){
 					printf("%c",registros2.RAX[i]);
 				}
@@ -323,7 +320,7 @@ void switch_instruccion(Instruction* instruccion, contexto_de_ejecucion cde){
 	}
 }
 
-void ejecutar_set(char registro[], char valor[], int tamanio, Registros *registros){
+void ejecutar_set(char registro[], char valor[], int tamanio, t_registros *registros){
 	if (strcmp(registro,"AX") == 0) {strcpy(registros->AX, valor);}
 	if (strcmp(registro,"BX") == 0) {strcpy(registros->BX, valor);}
 	if (strcmp(registro,"CX") == 0) {strcpy(registros->CX, valor);}
@@ -338,7 +335,7 @@ void ejecutar_set(char registro[], char valor[], int tamanio, Registros *registr
 	if (strcmp(registro,"RDX") == 0) {strcpy(registros->RDX, valor);}
 }
 
-void sacar_de_registro(char registro[], int dir_fisica, int tamanio, Registros *registros, int pid){
+void sacar_de_registro(char registro[], int dir_fisica, int tamanio, t_registros *registros, int pid){
 	if (strcmp(registro,"AX") == 0)  { }
 	if (strcmp(registro,"BX") == 0)  { }
 	if (strcmp(registro,"CX") == 0)  { }
@@ -354,12 +351,12 @@ void sacar_de_registro(char registro[], int dir_fisica, int tamanio, Registros *
 }
 
 
-int calcular_dir_fisica(int dir_logica, contexto_de_ejecucion cde,int tamanio){
+int calcular_dir_fisica(int dir_logica, t_cde cde,int tamanio){
 	int tam_max_segmento = config_cpu.tam_max_segmento;
 	int num_seg = floor(dir_logica/tam_max_segmento);
 	int desplaz_segmento = dir_logica % tam_max_segmento;
 
-	Segmento* segmento = list_get(cde.tabla_segmentos, num_seg);
+	t_segmento* segmento = list_get(cde.tabla_segmentos, num_seg);
 
 	if (segmento->tamanio_segmentos < desplaz_segmento + tamanio){return -1;}
 
