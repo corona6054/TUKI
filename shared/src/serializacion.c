@@ -106,7 +106,7 @@ void buffer_write_string(t_buffer* buffer, char* cadena){
 
 	while(cadena[tam] != NULL)
 		tam++;
-
+	
 	buffer_write_uint32(buffer,tam);
 
 	buffer->stream = realloc(buffer->stream, buffer->size + tam);
@@ -117,21 +117,30 @@ void buffer_write_string(t_buffer* buffer, char* cadena){
 
 
 char* buffer_read_string(t_buffer *buffer){
-	uint32_t tam = buffer_read_uint32(buffer);
+	int tam = buffer_read_uint32(buffer);
 	char* cadena = malloc(tam + 1);
 
 	memcpy(cadena, buffer->stream + buffer->offset, tam);
 	buffer->offset += tam;
 
-	cadena[tam] = '\0';
+	return cadena;
+}
 
-	// free(aux);
+char* buffer_read_stringV2(t_buffer* buffer, uint32_t* tam){
+	(*tam) = buffer_read_uint32(buffer);
+	char* cadena = malloc((*tam) + 1);
+
+	memcpy(cadena, buffer->stream + buffer->offset, (*tam));
+	buffer->offset += (*tam);
+
+	*(cadena + (*tam)) = '\0';
 
 	return cadena;
 }
 
+
 //INSTRUCTION
-void buffer_write_Instruction(t_buffer* buffer, Instruction instruccion){
+void buffer_write_Instruction(t_buffer* buffer, t_instruction instruccion){
 	buffer_write_uint8(buffer, instruccion.instruccion);
 	buffer_write_uint32(buffer, instruccion.numero1);
 	buffer_write_uint32(buffer, instruccion.numero2);
@@ -140,17 +149,37 @@ void buffer_write_Instruction(t_buffer* buffer, Instruction instruccion){
 }
 
 // Tiene que ser puntero para poder despues manejarlo en las listas
-Instruction* buffer_read_Instruction(t_buffer* buffer){
-	Instruction* inst = malloc(sizeof(Instruction));
+
+t_instruction* buffer_read_Instruction(t_buffer* buffer){
+	t_instruction* inst = malloc(sizeof(t_instruction));
 
 	inst->instruccion = buffer_read_uint8(buffer);
+	
 	inst->numero1 = buffer_read_uint32(buffer);
 	inst->numero2 = buffer_read_uint32(buffer);
-	strcpy(inst->string1, buffer_read_string(buffer));
-	strcpy(inst->string2, buffer_read_string(buffer));
+	
+	int tam1 = 0;
+	int tam2 = 0;
 
+	char* s1 = buffer_read_stringV2(buffer, &tam1);
+	char* s2 = buffer_read_stringV2(buffer, &tam2);
+	
+	inst -> string1 = malloc(tam1);
+	for(int i = 0; i < tam1 + 1; i++){
+		*(inst -> string1 + i) = *(s1 + i);
+	}
+	
+	inst -> string2 = malloc(tam2);
+	for(int i = 0; i < tam2 + 1; i++){
+		*(inst -> string2 + i) = *(s2 + i);
+	}
+
+	free(s1);
+	free(s2);
+	
 	return inst;
 }
+
 
 // LISTA DE INSTRUCCIONES
 void buffer_write_lista_instrucciones(t_buffer* buffer, t_list* lista_de_instrucciones){
@@ -163,7 +192,7 @@ void buffer_write_lista_instrucciones(t_buffer* buffer, t_list* lista_de_instruc
 	buffer_write_uint32(buffer, cant_instrucciones);
 
 	for(int i = 0; i < cant_instrucciones; i++){
-		Instruction* inst = list_get(lista_de_instrucciones,i);
+		t_instruction* inst = list_get(lista_de_instrucciones,i);
 		buffer_write_Instruction(buffer, *inst);
 	}
 }
@@ -174,7 +203,7 @@ t_list* buffer_read_lista_instrucciones(t_buffer* buffer){
 	uint32_t cant_instrucciones = buffer_read_uint32(buffer);
 
 	for(int i = 0; i < cant_instrucciones; i++){
-		Instruction* instr = buffer_read_Instruction(buffer);
+		t_instruction* instr = buffer_read_Instruction(buffer);
 		list_add(lista_instrucciones, instr);
 	}
 
@@ -183,7 +212,8 @@ t_list* buffer_read_lista_instrucciones(t_buffer* buffer){
 
 
 //REGISTROS
-void buffer_write_Registros(t_buffer* buffer, Registros registros){
+
+void buffer_write_Registros(t_buffer* buffer, t_registros registros){
 	buffer_write_string(buffer, registros.AX);
 	buffer_write_string(buffer, registros.BX);
 	buffer_write_string(buffer, registros.CX);
@@ -200,8 +230,8 @@ void buffer_write_Registros(t_buffer* buffer, Registros registros){
 	buffer_write_string(buffer, registros.RDX);
 }
 
-Registros buffer_read_Registros(t_buffer* buffer){
-	Registros regis;
+t_registros buffer_read_Registros(t_buffer* buffer){
+	t_registros regis;
 
 	strcpy(regis.AX, buffer_read_string(buffer));
 	strcpy(regis.BX, buffer_read_string(buffer));
@@ -222,15 +252,15 @@ Registros buffer_read_Registros(t_buffer* buffer){
 }
 
 // SEGMENTOS
-void buffer_write_segmento(t_buffer* buffer,Segmento segm){
+void buffer_write_segmento(t_buffer* buffer, t_segmento segm){
 	buffer_write_uint32(buffer, segm.id);
 	buffer_write_uint32(buffer, segm.direccion_base);
 	buffer_write_uint32(buffer, segm.tamanio_segmentos);
 }
 
 
-Segmento* buffer_read_segmento(t_buffer* buffer){
-	Segmento* seg = malloc(sizeof(Segmento));
+t_segmento* buffer_read_segmento(t_buffer* buffer){
+	t_segmento* seg = malloc(sizeof(t_segmento));
 
 	seg->id = buffer_read_uint32(buffer);
 	seg->direccion_base = buffer_read_uint32(buffer);
@@ -249,7 +279,7 @@ void buffer_write_tabla_segmentos(t_buffer* buffer, t_list* tabla_segmentos){
 	buffer_write_uint32(buffer, cant_segmentos);
 
 	for(int i = 0; i < cant_segmentos; i++){
-		Segmento* segm = list_get(tabla_segmentos, i);
+		t_segmento* segm = list_get(tabla_segmentos, i);
 		buffer_write_segmento(buffer, *segm);
 	}
 }
@@ -260,7 +290,7 @@ t_list* buffer_read_tabla_segmentos(t_buffer* buffer){
 	uint32_t cant_segmentos = buffer_read_uint32(buffer);
 
 	for(int i = 0; i < cant_segmentos; i++){
-		Segmento* segm = buffer_read_segmento(buffer);
+		t_segmento* segm = buffer_read_segmento(buffer);
 		list_add(tabla_segmentos, segm);
 	}
 
@@ -271,23 +301,23 @@ t_list* buffer_read_tabla_segmentos(t_buffer* buffer){
 
 
 // CONTEXTO DE EJECUCION
-void buffer_write_cde(t_buffer* buffer, contexto_de_ejecucion cde){
+void buffer_write_cde(t_buffer* buffer, t_cde cde){
 	buffer -> codigo = CONTEXTOEJEC;
 
 	buffer_write_uint32(buffer, cde.pid);
 	buffer_write_lista_instrucciones(buffer, cde.lista_de_instrucciones);
 	buffer_write_uint32(buffer, cde.program_counter);
-	buffer_write_Registros(buffer, cde.registrosCpu);
+	buffer_write_Registros(buffer, cde.registros_cpu);
 	buffer_write_tabla_segmentos(buffer, cde.tabla_segmentos);
 }
 
-contexto_de_ejecucion buffer_read_cde(t_buffer* buffer){
-	contexto_de_ejecucion cde;
+t_cde buffer_read_cde(t_buffer* buffer){
+	t_cde cde;
 
 	cde.pid = buffer_read_uint32(buffer);
 	cde.lista_de_instrucciones = buffer_read_lista_instrucciones(buffer);
 	cde.program_counter = buffer_read_uint32(buffer);;
-	cde.registrosCpu = buffer_read_Registros(buffer);
+	cde.registros_cpu = buffer_read_Registros(buffer);
 	cde.tabla_segmentos = buffer_read_tabla_segmentos(buffer);
 
 	return cde;
@@ -296,24 +326,24 @@ contexto_de_ejecucion buffer_read_cde(t_buffer* buffer){
 
 // UTILS DE LECTURA
 
-void mostrar_instrucciones(t_list* lista_instrucciones){
-	
-	printf("Instructions:\n");
-    for (int i = 0; i < list_size(lista_instrucciones); i++)
-    {
-        Instruction* instruccion = list_get(lista_instrucciones, i);
-		printf("Codigo de instruccion: %d ", instruccion->instruccion);
-        
-		if (instruccion->numero1 != 0)
-            printf("Numero1: %d ", instruccion->numero1);
-        if (instruccion->numero2 != 0)
-            printf("Numero2: %d ", instruccion->numero2);
-        if (strcmp(instruccion->string1, "") != 0)
-            printf("String1: %s ", instruccion->string1);
-        if (strcmp(instruccion->string2, "") != 0)
-            printf("String2: %s ", instruccion->string2);
-        printf("\n");
-    }
+void mostrar_instrucciones(t_log* logger,t_list* lista_instrucciones){
+	for(int i = 0; i < list_size(lista_instrucciones); i++){
+		t_instruction* instruccion = list_get(lista_instrucciones, i);
+		mostrar_instruccion(logger, instruccion);
+	}
+	return;	
 }
 
+void  mostrar_instruccion(t_log* logger, t_instruction* instruccion){
+	log_info(logger, "Codigo de instruccion: %d ", instruccion->instruccion);
+        
+	if (instruccion->numero1 != INT_VACIO)
+        log_info(logger, "Numero1: %d ", instruccion->numero1);
+    if (instruccion->numero2 != INT_VACIO)
+        log_info(logger, "Numero2: %d ", instruccion->numero2);
+    if (strcmp(instruccion->string1, CHAR_VACIO) != 0)
+        log_info(logger, "String1: %s ", instruccion->string1);
+    if (strcmp(instruccion->string2, CHAR_VACIO) != 0)
+        log_info(logger, "String2: %s ", instruccion->string2);
 
+}

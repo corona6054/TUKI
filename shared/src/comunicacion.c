@@ -73,14 +73,14 @@ int crear_conexion(char *ip, int puerto)
 }
 
 
-void enviar_codigo(int socket, uint8_t codigo){
-	send(socket, &codigo, sizeof(uint8_t), 0);
+void enviar_codigo(int socket, op_code codigo){
+	send(socket, &codigo, sizeof(op_code), 0);
 }
 
-uint8_t recibir_codigo(int socket){
-	uint8_t codigo;
+op_code recibir_codigo(int socket){
+	op_code codigo;
 
-	recv(socket, &codigo, sizeof(uint8_t), MSG_WAITALL);
+	recv(socket, &codigo, sizeof(op_code), MSG_WAITALL);
 
 	return codigo;
 }
