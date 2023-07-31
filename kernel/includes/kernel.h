@@ -12,7 +12,6 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
-//#include "serializacion.h"
 #include "comunicacion.h"
 
 typedef struct{
@@ -46,10 +45,8 @@ int socket_memoria;
 int socket_file_system;
 int socket_cpu;
 
+// Socket propio del kernel
 int server_fd;
-
-int consola_fd;
-
 
 // SEMAFOROS
 // Mutex
@@ -60,9 +57,14 @@ pthread_mutex_t mutex_exec;
 pthread_mutex_t mutex_exit;
 
 // Contadores
-sem_t* cont_exit;
-sem_t* conexion_consola;
+// Importante ver si es puntero o no para ponerle el & (o no)
+sem_t cont_exit;
+sem_t cont_grado_max_multiprog;
+sem_t cont_procesador_libre;
 
+
+// CONEXIONES
+sem_t* conexion_consola;
 
 int pid = 0;
 
@@ -82,13 +84,13 @@ t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();
 
-void conectarse_con_memoria();
-void conectarse_con_cpu();
-void conectarse_con_file_system();
+void manejar_conexion_con_memoria();
+void manejar_conexion_con_cpu();
+void manejar_conexioncon_file_system();
 
 void establecer_conexiones();
 
-void manejar_clientes(int);
+void esperar_consolas();
 t_list* recibir_paquete(int);
 
 void planificadorLargoPlazo();
@@ -107,11 +109,16 @@ void deserializar_cde();
 void actualizar_instancias_recurso(char*, int);
 int obtener_instancia_recurso(char*);
 
-void enviarDeReadyAExecFIFO();
-void enviarDeBlockAReadyFIFO();
-void mandar_a_ready();
+// Subprogramas planificador corto plazo
+void enviar_de_block_a_ready(); // hilo con while(1){}
+void enviar_de_exec_a_block(); // Para wait
+void enviar_de_exec_a_ready(); // Para yield
+void enviar_de_ready_a_exec(); // hilo | se libera cuando no hay ningun proceso en ejecucion
+
+// Subprogramas planificador largo plazo
+void enviar_de_new_a_ready();
 void terminar_procesos();
-void recepcionar_proceso(int);
+void recepcionar_proceso(void* argumento);
 
 t_pcb* crear_pcb(t_list* lista_instrucciones, int socket);
 t_cde* crear_cde(t_list* lista_instrucciones);
@@ -119,5 +126,9 @@ t_cde* crear_cde(t_list* lista_instrucciones);
 //Agregar y retirar pcbs de las funciones seguramente
 t_pcb* retirar_pcb_de(t_queue* cola, pthread_mutex_t* mutex);
 void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex);
+
+t_pcb* elegido_por_FIFO();
+t_pcb* elegido_por_HRRN();
+t_pcb* retirar_pcb_de_ready_segun_algoritmo();
 
 #endif /* INCLUDES_KERNEL_H_ */

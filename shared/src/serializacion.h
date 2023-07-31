@@ -24,7 +24,7 @@
 
 typedef enum
 {
-	CONTEXTOEJEC,
+	CONTEXTO_DE_EJECUCION,
 	MENSAJE,
 	PAQUETE,
     LISTA_INSTRUCCIONES,
@@ -67,6 +67,7 @@ typedef enum
     EXIT,
     INVALID
 } InstructionType;
+
 
 typedef struct
 {
@@ -120,7 +121,6 @@ typedef struct{
 t_paquete* crear_paquete(op_code, t_buffer*);
 void enviar_paquete(t_paquete*, int);
 void* serializar_paquete(t_paquete*, int);
-t_buffer* recibir_buffer(int);
 
 t_buffer* crear_buffer_nuestro();
 

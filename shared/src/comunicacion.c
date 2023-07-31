@@ -72,7 +72,37 @@ int crear_conexion(char *ip, int puerto)
 	return socket_cliente;
 }
 
+// UTILS BUFFER
+t_buffer* recibir_buffer(int socket)
+{
+	// Esta funcion desarma el paquete y arma el buffer que luego sera deserializado
+	t_buffer* buffer = crear_buffer_nuestro();
 
+	// Recibo que hay en el buffer
+	recv(socket, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL);
+
+	// Recibo el tamanio del buffer y reservo espacio en memoria
+	recv(socket, &(buffer -> size), sizeof(uint32_t), MSG_WAITALL);
+	buffer -> stream = malloc(buffer -> size);
+
+	// Recibo stream del buffer
+	recv(socket, buffer -> stream, buffer -> size, MSG_WAITALL);
+
+	return buffer;
+}
+
+void enviar_buffer(t_buffer* buffer, int socket){
+	// Enviamos el codigo de operacion
+    send(socket, &(buffer->codigo), sizeof(uint8_t), 0);
+
+    // Enviamos el tamanio del buffer
+    send(socket, &(buffer->size), sizeof(uint32_t), 0);
+
+    // Enviamos el stream del buffer
+    send(socket, buffer->stream, buffer->size, 0);
+}
+
+// UTILS CODIGO
 void enviar_codigo(int socket, op_code codigo){
 	send(socket, &codigo, sizeof(op_code), 0);
 }

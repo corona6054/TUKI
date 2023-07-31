@@ -97,20 +97,7 @@ void enviarLista(t_buffer* buffer, t_list* listaAEnviar){
     buffer_write_lista_instrucciones(buffer, listaAEnviar);
     log_info(logger, "Escribi en el buffer la lista de instrucciones");
     
-    // Enviamos el codigo de operacion
-    log_info(logger, "A punto de enviar el codigo de operacion");
-    send(socket_kernel, &(buffer->codigo), sizeof(uint8_t), 0);
-    log_info(logger, "Envie el codigo de op");
-
-    // Enviamos el tamanio del buffer
-    log_info(logger, "A punto de enviar el tamanio del buffer");
-    send(socket_kernel, &(buffer->size), sizeof(uint32_t), 0);
-    log_info(logger, "Envie el tamanio del buffer");
-
-    // Enviamos el stream del buffer
-    log_info(logger, "A punto de enviar el stream del buffer");
-    send(socket_kernel, buffer->stream, buffer->size, 0);
-    log_info(logger, "Envie el stream del buffer");
+    enviar_buffer(buffer, socket_kernel);
 }
 
 

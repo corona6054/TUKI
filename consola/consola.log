@@ -2751,3 +2751,77 @@
 [INFO] 17:49:08:603 Consola/(6835:6835): Lista enviada
 [INFO] 17:49:08:603 Consola/(6835:6835): Lista destruida
 [INFO] 17:49:08:606 Consola/(6835:6835): Fin proceso consola: 6
+[INFO] 21:32:52:665 Consola/(3622:3622): Socket kernel :4
+[INFO] 21:32:52:668 Consola/(3622:3622): Conectado con kernel
+[INFO] 21:32:52:669 Consola/(3622:3622): Instrucciones leidas
+[INFO] 21:32:52:669 Consola/(3622:3622): Lista mapeada
+[INFO] 21:32:52:669 Consola/(3622:3622): Escribi en el buffer la lista de instrucciones
+[INFO] 21:32:52:669 Consola/(3622:3622): Lista enviada
+[INFO] 21:36:07:603 Consola/(3862:3862): Socket kernel :4
+[INFO] 21:36:07:603 Consola/(3862:3862): Conectado con kernel
+[INFO] 21:36:07:603 Consola/(3862:3862): Instrucciones leidas
+[INFO] 21:36:07:604 Consola/(3862:3862): Lista mapeada
+[INFO] 21:36:07:604 Consola/(3862:3862): Escribi en el buffer la lista de instrucciones
+[INFO] 21:36:07:604 Consola/(3862:3862): Lista enviada
+[INFO] 21:37:42:881 Consola/(3999:3999): Socket kernel :4
+[INFO] 21:37:42:883 Consola/(3999:3999): Conectado con kernel
+[INFO] 21:39:55:369 Consola/(4160:4160): Socket kernel :4
+[INFO] 21:39:55:370 Consola/(4160:4160): Conectado con kernel
+[INFO] 21:40:42:597 Consola/(4262:4262): Socket kernel :4
+[INFO] 21:40:42:598 Consola/(4262:4262): Conectado con kernel
+[INFO] 21:42:16:183 Consola/(4417:4417): Socket kernel :4
+[INFO] 21:42:16:184 Consola/(4417:4417): Conectado con kernel
+[INFO] 21:42:18:516 Consola/(4417:4417): Instrucciones leidas
+[INFO] 21:42:20:233 Consola/(4417:4417): Lista mapeada
+[INFO] 21:42:22:077 Consola/(4417:4417): Escribi en el buffer la lista de instrucciones
+[INFO] 21:46:54:076 Consola/(4535:4535): Socket kernel :4
+[INFO] 21:46:54:077 Consola/(4535:4535): Conectado con kernel
+[INFO] 21:46:54:804 Consola/(4535:4535): Instrucciones leidas
+[INFO] 21:46:56:417 Consola/(4535:4535): Lista mapeada
+[INFO] 21:48:36:511 Consola/(4535:4535): Escribi en el buffer la lista de instrucciones
+[INFO] 21:54:17:879 Consola/(4737:4737): Socket kernel :4
+[INFO] 21:54:17:880 Consola/(4737:4737): Conectado con kernel
+[INFO] 21:54:17:880 Consola/(4737:4737): Instrucciones leidas
+[INFO] 21:54:17:880 Consola/(4737:4737): Lista mapeada
+[INFO] 21:54:17:880 Consola/(4737:4737): Escribi en el buffer la lista de instrucciones
+[INFO] 21:54:17:880 Consola/(4737:4737): Lista enviada
+[INFO] 21:55:35:287 Consola/(4768:4768): Socket kernel :4
+[INFO] 21:55:35:287 Consola/(4768:4768): Conectado con kernel
+[INFO] 21:55:35:287 Consola/(4768:4768): Instrucciones leidas
+[INFO] 21:55:35:289 Consola/(4768:4768): Lista mapeada
+[INFO] 21:55:35:289 Consola/(4768:4768): Escribi en el buffer la lista de instrucciones
+[INFO] 21:55:35:289 Consola/(4768:4768): Lista enviada
+[INFO] 22:00:19:769 Consola/(4970:4970): Socket kernel :4
+[INFO] 22:00:19:769 Consola/(4970:4970): Conectado con kernel
+[INFO] 22:00:19:769 Consola/(4970:4970): Instrucciones leidas
+[INFO] 22:00:19:769 Consola/(4970:4970): Lista mapeada
+[INFO] 22:00:19:769 Consola/(4970:4970): Escribi en el buffer la lista de instrucciones
+[INFO] 22:00:19:769 Consola/(4970:4970): Lista enviada
+[INFO] 22:00:55:388 Consola/(5066:5066): Socket kernel :4
+[INFO] 22:00:55:389 Consola/(5066:5066): Conectado con kernel
+[INFO] 22:00:55:389 Consola/(5066:5066): Instrucciones leidas
+[INFO] 22:00:55:389 Consola/(5066:5066): Lista mapeada
+[INFO] 22:00:55:389 Consola/(5066:5066): Escribi en el buffer la lista de instrucciones
+[INFO] 22:00:55:389 Consola/(5066:5066): Lista enviada
+[INFO] 22:00:55:389 Consola/(5066:5066): Lista destruida
+[INFO] 22:00:55:389 Consola/(5066:5066): Codigo recibido: 22075
+[INFO] 22:02:09:705 Consola/(5113:5113): Socket kernel :4
+[INFO] 22:02:09:706 Consola/(5113:5113): Conectado con kernel
+[INFO] 22:02:09:706 Consola/(5113:5113): Instrucciones leidas
+[INFO] 22:02:09:706 Consola/(5113:5113): Lista mapeada
+[INFO] 22:02:09:706 Consola/(5113:5113): Escribi en el buffer la lista de instrucciones
+[INFO] 22:02:09:707 Consola/(5113:5113): Lista enviada
+[INFO] 22:02:09:707 Consola/(5113:5113): Lista destruida
+[INFO] 22:02:35:809 Consola/(5113:5113): Codigo recibido: 21991
+[INFO] 22:03:00:169 Consola/(5186:5186): Socket kernel :4
+[INFO] 22:03:00:175 Consola/(5186:5186): Conectado con kernel
+[INFO] 22:03:00:177 Consola/(5186:5186): Instrucciones leidas
+[INFO] 22:03:00:177 Consola/(5186:5186): Lista mapeada
+[INFO] 22:03:00:177 Consola/(5186:5186): Escribi en el buffer la lista de instrucciones
+[INFO] 22:03:00:177 Consola/(5186:5186): Lista enviada
+[INFO] 22:03:00:177 Consola/(5186:5186): Lista destruida
+[INFO] 22:03:00:177 Consola/(5186:5186): Codigo recibido: 21936
+[INFO] 22:03:29:433 Consola/(5258:5258): Socket kernel :4
+[INFO] 22:03:29:433 Consola/(5258:5258): Conectado con kernel
+[INFO] 22:03:30:908 Consola/(5258:5258): Instrucciones leidas
+[INFO] 22:03:31:927 Consola/(5258:5258): Lista mapeada

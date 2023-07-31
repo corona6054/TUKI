@@ -23,8 +23,11 @@
 int iniciar_servidor(t_log*, int);
 int crear_conexion(char*, int);
 
-void enviar_codigo(int, op_code);
-op_code recibir_codigo(int);
+void enviar_buffer(t_buffer* buffer, int socket);
+t_buffer* recibir_buffer(int socket);
+
+void enviar_codigo(int socket, op_code);
+op_code recibir_codigo(int socket);
 
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 

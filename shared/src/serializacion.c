@@ -40,23 +40,7 @@ void* serializar_paquete(t_paquete* paquete, int tam_paquete)
 }
 
 
-t_buffer* recibir_buffer(int socket)
-{
-	// Esta funcion desarma el paquete y arma el buffer que luego sera deserializado
-	t_buffer* buffer = crear_buffer_nuestro();
 
-	// Recibo el codigo de operacion
-	recv(socket, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL);
-
-	// Recibo el tamanio del buffer y reservo espacio en memoria
-	recv(socket, &(buffer -> size), sizeof(uint32_t), MSG_WAITALL);
-	buffer -> stream = malloc(buffer -> size);
-
-	// Recibo stream del buffer
-	recv(socket, buffer -> stream, buffer -> size, MSG_WAITALL);
-
-	return buffer;
-}
 
 t_buffer* crear_buffer_nuestro(){
 	t_buffer* b = malloc(sizeof(t_buffer));
@@ -302,7 +286,7 @@ t_list* buffer_read_tabla_segmentos(t_buffer* buffer){
 
 // CONTEXTO DE EJECUCION
 void buffer_write_cde(t_buffer* buffer, t_cde cde){
-	buffer -> codigo = CONTEXTOEJEC;
+	buffer -> codigo = CONTEXTO_DE_EJECUCION;
 
 	buffer_write_uint32(buffer, cde.pid);
 	buffer_write_lista_instrucciones(buffer, cde.lista_de_instrucciones);
