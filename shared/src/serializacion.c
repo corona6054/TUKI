@@ -308,7 +308,7 @@ t_cde buffer_read_cde(t_buffer* buffer){
 }
 
 
-// UTILS DE LECTURA
+// UTILS DE LECTURA DE INSTRUCCIONES ----------------------------------------------------
 
 void mostrar_instrucciones(t_log* logger,t_list* lista_instrucciones){
 	for(int i = 0; i < list_size(lista_instrucciones); i++){
@@ -331,3 +331,45 @@ void  mostrar_instruccion(t_log* logger, t_instruction* instruccion){
         log_info(logger, "String2: %s ", instruccion->string2);
 
 }
+// FIN UTILS DE LECTURA DE INSTRUCCIONES ------------------------------------------------
+
+
+// UTILS DESTRUIR -----------------------------------------------------------------------
+void destruir_cde(t_cde* cde){
+	destruir_lista_instrucciones(cde -> lista_de_instrucciones);
+	list_destroy(cde -> tabla_segmentos);
+	free(cde);
+}
+
+void destruir_pcb(t_pcb* pcb){
+	destruir_cde(pcb -> cde);
+	destruir_lista_char(pcb -> recursos_asignados);
+	destruir_lista_char(pcb -> recursos_solicitados);
+	destruir_lista_char(pcb -> archivos_abiertos);
+	free(pcb);
+}
+
+void destruir_lista_instrucciones(t_list* lista_instrucciones){
+	t_instruction* instruccion;
+	for(int i = 0; i < list_size(lista_instrucciones); i++){
+		 instruccion = list_get(lista_instrucciones, i);
+		destruir_instruccion(instruccion);
+	}
+	list_destroy(lista_instrucciones);
+}
+
+void destruir_instruccion(t_instruction* instruccion){
+	free(instruccion -> string1);
+	free(instruccion -> string2);
+	free(instruccion);
+}
+
+void destruir_lista_char(t_list* lista_char_asterisco){
+	for(int i = 0; i < list_size(lista_char_asterisco); i++){
+		char* palabra = list_get(lista_char_asterisco, i);
+		free(palabra);
+	}
+	list_destroy(lista_char_asterisco);
+}
+// FIN UTILS DESTRUIR -------------------------------------------------------------------
+

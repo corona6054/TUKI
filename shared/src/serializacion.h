@@ -112,11 +112,11 @@ typedef struct{
 }t_pcb;
 
 
-// FIN DE STRUCTS NECESARIOS -----------------------------------------------
+// FIN DE STRUCTS NECESARIOS ------------------------------------------------------------
 
 
 
-// PROTOTIPOS DE FUNCIONES -------------------------------------------------
+// PROTOTIPOS DE FUNCIONES --------------------------------------------------------------
 
 t_paquete* crear_paquete(op_code, t_buffer*);
 void enviar_paquete(t_paquete*, int);
@@ -153,7 +153,15 @@ void buffer_write_cde(t_buffer*, t_cde);
 t_cde buffer_read_cde(t_buffer*);
 
 void mostrar_instrucciones(t_log*, t_list*);
-void  mostrar_instruccion(t_log*, t_instruction*);
+void mostrar_instruccion(t_log*, t_instruction*);
+
+
+// Utils destruir
+void destruir_cde(t_cde* cde);
+void destruir_pcb(t_pcb* pcb);
+void destruir_lista_instrucciones(t_list* lista_instrucciones);
+void destruir_instruccion(t_instruction* instruccion);
+void destruir_lista_char(t_list* lista_char_asterisco);
 
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 
