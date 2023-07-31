@@ -7,7 +7,7 @@ int main(void){
 	crearEstructuras();
 	//crearArchivo("hola");
 	abrirArchivo("hola");
-	truncarArchivo("hola",264);
+	truncarArchivo("hola",100);
 	cerrarEstructuras();
 
 	finalizar_modulo();
@@ -59,11 +59,15 @@ int eliminarBloques(int eliminar,FCB* seleccionado){
 int truncarArchivo(char* nombre, int size){
 	strcpy(buscado,nombre);
 	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
+	if(seleccionado){
 	int bloques_restantes = (size +63)/superbloque.block_size;
 	int tam_viejo=seleccionado->file_size/superbloque.block_size;
 	if(bloques_restantes==0){
 			liberarBloque(seleccionado->direct_pointer);
 		}
+	if(bloques_restantes<2){
+				liberarBloque(seleccionado->indirect_pointer);
+			}
 	if(tam_viejo==0&&bloques_restantes>0){
 		seleccionado->direct_pointer = bloqueLibre();
 		bloques_restantes = bloques_restantes-1;
@@ -80,9 +84,17 @@ int truncarArchivo(char* nombre, int size){
 		eliminarBloques(eliminar,seleccionado);
 	}
 	seleccionado->file_size= bloques_restantes*superbloque.block_size;
-	//guardar fcb
+    char file_path[256];
+	snprintf(file_path, sizeof(file_path), "%s/%s.dat", config_file_system.path_fcb, nombre);
+	FILE * fcb_file = fopen(file_path,"w");
+	fprintf(fcb_file, "NOMBRE_ARCHIVO=%s\n", seleccionado->file_name);
+	       fprintf(fcb_file, "TAMANIO_ARCHIVO=%u\n", seleccionado->file_size);
+	       fprintf(fcb_file, "PUNTERO_DIRECTO=%u\n", seleccionado->direct_pointer);
+	       fprintf(fcb_file, "PUNTERO_INDIRECTO=%u\n", seleccionado->indirect_pointer);
+	       fclose(fcb_file);
 	list_add(fcb_list,seleccionado);
 	return 0;
+	}
 
 }
 
