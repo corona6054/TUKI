@@ -15,10 +15,10 @@
 #include "comunicacion.h"
 
 typedef enum{
-	EXITO,
-	RECURSO_INEXISTENTE,
-	RECURSO_NO_ASIGNADO,
-	EN_ESPERA
+	RECURSO_ASIGNADO, // WAIT
+	RECURSO_LIBERADO, // SIGNAL
+	RECURSO_INVALIDO, // SI PASA => MANDO A EXIT
+	EN_ESPERA // LO AGREGO A LA COLA_DE_ESPERA DEL RECURSO
 }Res_solicitud_recursos;
 
 typedef struct{
@@ -117,14 +117,12 @@ int tamanio_cde_serializado(Cde_serializado);
 
 void deserializar_cde();
 
-void actualizar_instancias_recurso(char*, int);
-int obtener_instancia_recurso(char*);
-
 // Subprogramas planificador corto plazo
 void enviar_de_block_a_ready(); // hilo con while(1){}
 void enviar_de_exec_a_block(); // Para wait
 void enviar_de_exec_a_ready(); // Para yield
 void enviar_de_ready_a_exec(); // hilo | se libera cuando no hay ningun proceso en ejecucion
+void enviar_de_exec_a_exit(char* razon);
 
 // Subprogramas planificador largo plazo
 void enviar_de_new_a_ready();
@@ -148,7 +146,8 @@ void inicializar_recurso_nulo(); // FUNCIONA
 int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb); // FUNCIONA
 int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb);
 int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar); // FUNCIONA
-t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNCIONA
 void liberar_todos_recursos(t_pcb* pcb);
+t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNCIONA
+void desbloquear_proceso(char* recurso_libearado);
 
 #endif /* INCLUDES_KERNEL_H_ */

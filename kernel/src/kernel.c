@@ -249,7 +249,9 @@ void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
 
 void enviar_de_block_a_ready(){
 	while(1){
-		// 
+		// Semaforos si o si
+		// Podria ser que cada vez que se libera un recurso se haga un post
+		// Ya sea por que un proceso termino o porque hubo algun signal
 	}
 }
 
@@ -294,10 +296,8 @@ void recepcionar_proceso(void* arg){
 
 	mostrar_instrucciones(logger, lista_instrucciones);
 
-	//Crear pcb
 	t_pcb* pcb_recibido = crear_pcb(lista_instrucciones, socket_a_atender);
 
-	//Agregarlo a new
 	agregar_pcb_a(procesosNew, pcb_recibido, &mutex_new);
 	log_info(logger, "Se crea el proceso %d en NEW", pcb_recibido->cde->pid);
 }
@@ -382,7 +382,7 @@ int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb){
 	t_recurso* recurso = encontrar_recurso_por_nombre(nombre_recurso_a_actualizar);
 
 	if(strcmp(recurso -> nombre_recurso, recurso_nulo -> nombre_recurso) == 0)
-		return RECURSO_INEXISTENTE;
+		return RECURSO_INVALIDO;
 
 	if(recurso->instancias_totales == recurso->instancias_en_uso){
 		list_add(recurso->cola_de_espera, pcb -> cde -> pid);
@@ -395,26 +395,27 @@ int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb){
 	while(recurso -> nombre_recurso[tam] != NULL)
 		tam++;
 
+	// Necesito que & nombre != & recurso -> nombre_recurso, porque despues hago free(nombre)
 	char* nombre = malloc(tam);
 	strcpy(nombre, recurso -> nombre_recurso);
 	list_add(pcb->recursos_asignados, nombre);
-	return EXITO;
+	return RECURSO_ASIGNADO;
 }
 
 int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb){
 	t_recurso* recurso = encontrar_recurso_por_nombre(nombre_recurso_a_liberar);
 
+	// Suponemos que todos los recursos a liberar fueron asignados antes ya que no
+	// aclara que sucederia en caso de que se quiera liberar un recurso que no
+	// fue asignado con anterioridad
+
 	if(strcmp(recurso -> nombre_recurso, recurso_nulo -> nombre_recurso) == 0)
-		return RECURSO_INEXISTENTE;
-
-	if(sacar_recurso(pcb -> recursos_asignados, nombre_recurso_a_liberar) == RECURSO_NO_ASIGNADO)
-		return RECURSO_NO_ASIGNADO;
-
-	recurso->instancias_en_uso += -1;
-	return EXITO;
-
-
-
+		return RECURSO_INVALIDO;
+	else{
+		recurso->instancias_en_uso += -1;
+		// En caso de que corresponda, desbloquea al primer proceso de la cola de bloqueados de ese recurso
+		return RECURSO_LIBERADO;
+	}
 }
 
 int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar){
@@ -423,10 +424,9 @@ int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar){
 		if(strcmp(recurso, recurso_a_sacar) == 0){
 			recurso = list_remove(recursos_asignados, i);
 			free(recurso);
-			return EXITO;
+			return RECURSO_LIBERADO;
 		}
 	}
-	return RECURSO_NO_ASIGNADO;
 }
 
 void liberar_todos_recursos(t_pcb* pcb){
@@ -446,9 +446,15 @@ t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener){
 	}
 	return recurso_nulo;
 }
-// FIN UTILS RECURSOS -------------------------------------------------------------------
-// 0x55555555c940
 
+void desbloquear_proceso(char* recurso_libearado){
+
+}
+
+// FIN UTILS RECURSOS -------------------------------------------------------------------
+
+
+// UTILS PARA SACAR DE READY ------------------------------------------------------------
 t_pcb* elegido_por_FIFO(){
 	t_pcb* pcb;
 
@@ -470,6 +476,7 @@ t_pcb* retirar_pcb_de_ready_segun_algoritmo(){
 	log_info(logger, "Algoritmo no reconocido.");
 	exit(3);
 }
+// FIN UTILS PARA SACAR DE READY --------------------------------------------------------
 
 
 // UTLIS CREAR --------------------------------------------------------------------------
@@ -543,7 +550,7 @@ void ejecutarProceso(){
 }
 
 // UTILS INSTRUCCIONES ------------------------------------------------------------------
-void evaluar_instruccion(t_instruction* instruccion_actual, t_cde cde_recibido){
+void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 	// La evalua cuando vuelve de CPU
 	switch(instruccion_actual->instruccion){
 		case F_READ:
@@ -557,14 +564,32 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_cde cde_recibido){
 		case CREATE_SEGMENT:
 			break;
 		case IO:
-			log_info(logger,"PID: %d - Ejecuta IO: %d",cde_recibido.pid,instruccion_actual->numero1);
+			log_info(logger,"PID: %d - Ejecuta IO: %d",pcb -> cde -> pid,instruccion_actual->numero1);
 			break;
 		case WAIT:
+			switch(asignar_instancia_recurso(instruccion_actual -> string1, pcb)){
+				case RECURSO_INVALIDO:
+					enviar_de_exec_a_exit("INVALID_RESOURCE");
+					break;
+				case EN_ESPERA:
+					enviar_de_exec_a_block(instruccion_actual -> string1);
+					break;
+				case RECURSO_ASIGNADO:
+					t_recurso* recurso = encontrar_recurso_por_nombre(instruccion_actual -> string1);
+					log_info(logger, "Wait: “PID: %d - Wait: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_en_uso);
+					break;
+			}
 			break;
 		case SIGNAL:
-			// Primero si existe -> no existe => proceso a exit
-				// Si existe => sumo uno a las instancias
-					// 
+			switch(liberar_instancia_recurso(instruccion_actual -> string1, pcb)){
+				case RECURSO_INVALIDO:
+					enviar_de_exec_a_exit("INVALID_RESOURCE");
+					break;
+				case RECURSO_LIBERADO:
+					t_recurso* recurso = encontrar_recurso_por_nombre(instruccion_actual -> string1);
+					log_info(logger, "Wait: “PID: %d - Signal: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_en_uso);
+			}
+
 			break;
 		case F_OPEN:
 			break;

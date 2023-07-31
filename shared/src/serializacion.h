@@ -22,6 +22,13 @@
 
 // STRUCTS NECESARIOS ------------------------------------------------------
 
+typedef enum{
+	SUCCESS,
+	SEG_FAULT,
+	INVALID_RESOURCE,
+	OUT_OF_MEMORY,
+}motivo_exit;
+
 typedef enum
 {
 	CONTEXTO_DE_EJECUCION,
@@ -68,7 +75,6 @@ typedef enum
     INVALID
 } InstructionType;
 
-
 typedef struct
 {
     InstructionType instruccion;
@@ -107,8 +113,7 @@ typedef struct{
     uint32_t tiempo_llegada_ready;
     
     t_list* archivos_abiertos;
-    t_list* recursos_asignados;
-    t_list* recursos_solicitados;
+    t_list* recursos_asignados; // lista de char*
 }t_pcb;
 
 
@@ -163,6 +168,7 @@ void destruir_lista_instrucciones(t_list* lista_instrucciones);
 void destruir_instruccion(t_instruction* instruccion);
 void destruir_lista_char(t_list* lista_char_asterisco);
 
+char* motivo_exit_a_string(motivo_exit motivo);
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 
 #endif /* SERIALIZACION_H_ */

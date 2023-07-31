@@ -344,7 +344,6 @@ void destruir_cde(t_cde* cde){
 void destruir_pcb(t_pcb* pcb){
 	destruir_cde(pcb -> cde);
 	destruir_lista_char(pcb -> recursos_asignados);
-	destruir_lista_char(pcb -> recursos_solicitados);
 	destruir_lista_char(pcb -> archivos_abiertos);
 	free(pcb);
 }
@@ -373,3 +372,19 @@ void destruir_lista_char(t_list* lista_char_asterisco){
 }
 // FIN UTILS DESTRUIR -------------------------------------------------------------------
 
+char* motivo_exit_a_string(motivo_exit motivo){
+	switch(motivo){
+		case SUCCESS:
+			return "SUCCESS";
+			break;
+		case SEG_FAULT:
+			return "SEG_FAULT";
+			break;
+		case INVALID_RESOURCE:
+			return "INVALID_RESOURCE";
+			break;
+		case OUT_OF_MEMORY:
+			return "OUT_OF_MEMORY";
+			break;
+	}
+}
