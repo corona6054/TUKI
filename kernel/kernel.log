@@ -3295,3 +3295,46 @@
 [INFO] 22:02:09:709 Kernel/(5092:5119): Se crea el proceso 0 en NEW
 [INFO] 22:02:55:867 Kernel/(5168:5168): Listo para escuchar a mi cliente
 [INFO] 22:03:19:835 Kernel/(5222:5222): Listo para escuchar a mi cliente
+[INFO] 18:02:56:168 Kernel/(5217:5217): Numero: 1
+[INFO] 19:42:32:847 Kernel/(8739:8739): Resultado: 0
+[INFO] 19:42:32:859 Kernel/(8739:8739): Resultado: 2
+[INFO] 19:44:17:186 Kernel/(8904:8904): Resultado: 0
+[INFO] 19:44:17:186 Kernel/(8904:8904): Resultado: 2
+[INFO] 19:44:17:186 Kernel/(8904:8904): Esperando: 128
+[INFO] 19:48:57:803 Kernel/(9129:9129): Resultado: 0
+[INFO] 19:50:51:046 Kernel/(9272:9272): Resultado: 0
+[INFO] 19:50:51:046 Kernel/(9272:9272): Resultado: 1
+[INFO] 19:50:51:046 Kernel/(9272:9272): Resultado: 0
+[INFO] 19:50:51:046 Kernel/(9272:9272): Resultado: 1
+[INFO] 19:52:40:074 Kernel/(9325:9325): Resultado: 0
+[INFO] 19:53:14:127 Kernel/(9325:9325): Resultado: 1
+[INFO] 19:54:29:853 Kernel/(9325:9325): Resultado: 0
+[INFO] 19:54:52:492 Kernel/(9420:9420): Resultado: 0
+[INFO] 19:54:53:301 Kernel/(9420:9420): Resultado: 1
+[INFO] 19:56:35:077 Kernel/(9420:9420): Resultado: 0
+[INFO] 19:58:21:725 Kernel/(9553:9553): Resultado: 0
+[INFO] 19:58:40:432 Kernel/(9553:9553): Resultado: 1
+[INFO] 19:59:41:034 Kernel/(9553:9553): Resultado: 0
+[INFO] 20:01:20:274 Kernel/(9641:9641): Resultado: 0
+[INFO] 20:01:24:522 Kernel/(9641:9641): Resultado: 1
+[INFO] 20:01:35:112 Kernel/(9641:9641): Resultado: 0
+[INFO] 20:02:50:057 Kernel/(9641:9641): Resultado: 1
+[INFO] 20:03:05:196 Kernel/(9789:9789): Resultado: 0
+[INFO] 20:03:05:926 Kernel/(9789:9789): Resultado: 1
+[INFO] 20:03:44:421 Kernel/(9789:9789): Resultado: 0
+[INFO] 20:04:05:573 Kernel/(9869:9869): Resultado: 0
+[INFO] 20:04:06:156 Kernel/(9869:9869): Resultado: 1
+[INFO] 20:05:05:034 Kernel/(9955:9955): Resultado: 0
+[INFO] 20:05:06:171 Kernel/(9955:9955): Resultado: 1
+[INFO] 20:05:17:045 Kernel/(9955:9955): Resultado: 0
+[INFO] 20:05:18:717 Kernel/(9955:9955): Resultado: 1
+[INFO] 20:05:35:612 Kernel/(10025:10025): Resultado: 0
+[INFO] 20:05:36:485 Kernel/(10025:10025): Resultado: 1
+[INFO] 20:06:42:151 Kernel/(10097:10097): Resultado: 0
+[INFO] 20:06:42:817 Kernel/(10097:10097): Resultado: 1
+[INFO] 20:13:56:425 Kernel/(10327:10327): Resultado: 0
+[INFO] 20:13:57:232 Kernel/(10327:10327): Resultado: 1
+[INFO] 20:13:57:903 Kernel/(10327:10327): Resultado: 0
+[INFO] 20:13:59:053 Kernel/(10327:10327): Resultado: 2
+[INFO] 20:15:11:808 Kernel/(10511:10511): Resultado: 0
+[INFO] 20:15:14:740 Kernel/(10511:10511): Resultado: 3

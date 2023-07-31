@@ -3,11 +3,7 @@
 int main(void){
 	levantar_modulo();
 
-	
-	pthread_t matar_procesos;
-	pthread_create(&matar_procesos, NULL, (void *) terminar_procesos, NULL);
-	pthread_detach(matar_procesos);
-	
+
 
 	while(1);
 	
@@ -26,8 +22,9 @@ void levantar_modulo(){
 
 	incializar_listas();
 	incializar_semaforos();
+	inicializar_recurso_nulo();
 
-	establecer_conexiones();
+	//establecer_conexiones();
 	return;
 }
 
@@ -111,15 +108,14 @@ void levantar_config(){
 
 	char **recursos = config_get_array_value(config,"RECURSOS");
 	char **instancias = config_get_array_value(config,"INSTANCIAS_RECURSOS");
+
+	config_kernel.recursos = list_create();
+
 	int a = 0;
-
-	config_kernel.recursos_compartidos = list_create();
-	config_kernel.instancias = list_create();
-
 	while(recursos[a]!= NULL){
-		list_add(config_kernel.recursos_compartidos,recursos[a]);
 		int num = strtol(instancias[a],NULL,10);
-		list_add(config_kernel.instancias,num);
+		t_recurso* recurso = inicializar_recurso(recursos[a], num);
+		list_add(config_kernel.recursos, recurso);
 		a++;
 	}
 }
@@ -203,6 +199,8 @@ void esperar_consolas(){
 }
 // FIN UTILS CONEXIONES -----------------------------------------------------------------
 
+
+// UTILS MOVIMIENTO PCB SEGUROS (MUTEX) -------------------------------------------------
 t_pcb* retirar_pcb_de(t_queue* cola, pthread_mutex_t* mutex){
 	t_pcb* pcb;
 	pthread_mutex_lock(mutex);
@@ -216,6 +214,7 @@ void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex){
 	queue_push(cola, pcb_a_agregar);
 	pthread_mutex_unlock(mutex);
 }
+// FIN UTILS MOVIMIENTO PCB SEGUROS (MUTEX) ---------------------------------------------
 
 
 // ------------------------------------ TRANSICIONES ------------------------------------
@@ -308,7 +307,6 @@ void terminar_procesos(){
 	while(1){
 		// Semaforo contador de cuantos procesos hay en exit
 		sem_wait(&cont_exit);
-		
 		t_pcb* pcb = retirar_pcb_de(procesosExit, &mutex_exit);
 
 		//liberar recursos asignados
@@ -321,7 +319,7 @@ void terminar_procesos(){
 		enviar_codigo(pcb->socket_consola, terminar_consola);
 
 
-		// Hacer free de todos los malloc (PCB Y CDE)
+		destruir_pcb(pcb);
 	}
 }
 // FIN TRANSICIONES LARGO PLAZO ---------------------------------------------------------
@@ -361,24 +359,95 @@ void planificadorLargoPlazo(){
 
 
 // UTILS RECURSOS -----------------------------------------------------------------------
-void restar_instancia_recurso(char* recurso){
-	actualizar_instancias_recurso(recurso, -1);
+t_recurso* inicializar_recurso(char* nombre_recu, int instancias_tot){
+	t_recurso* recurso = malloc(sizeof(t_recurso));
+	int tam = 0;
+
+	while(nombre_recu[tam] != NULL)
+		tam++;
+
+	recurso -> nombre_recurso  = malloc(tam);
+	strcpy(recurso -> nombre_recurso, nombre_recu);
+
+	recurso -> instancias_totales = instancias_tot;
+	recurso -> cola_de_espera = queue_create();
+	recurso -> instancias_en_uso = 0;
 }
 
-void sumar_instancia_recurso(char* recurso){
-	actualizar_instancias_recurso(recurso, 1);
+void inicializar_recurso_nulo(){
+	recurso_nulo = inicializar_recurso("NULO", 0);
+}
+
+int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb){
+	t_recurso* recurso = encontrar_recurso_por_nombre(nombre_recurso_a_actualizar);
+
+	if(strcmp(recurso -> nombre_recurso, recurso_nulo -> nombre_recurso) == 0)
+		return RECURSO_INEXISTENTE;
+
+	if(recurso->instancias_totales == recurso->instancias_en_uso){
+		list_add(recurso->cola_de_espera, pcb -> cde -> pid);
+		return EN_ESPERA;
+	}
+
+	recurso->instancias_en_uso += 1;
+
+	int tam = 0;
+	while(recurso -> nombre_recurso[tam] != NULL)
+		tam++;
+
+	char* nombre = malloc(tam);
+	strcpy(nombre, recurso -> nombre_recurso);
+	list_add(pcb->recursos_asignados, nombre);
+	return EXITO;
+}
+
+int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb){
+	t_recurso* recurso = encontrar_recurso_por_nombre(nombre_recurso_a_liberar);
+
+	if(strcmp(recurso -> nombre_recurso, recurso_nulo -> nombre_recurso) == 0)
+		return RECURSO_INEXISTENTE;
+
+	if(sacar_recurso(pcb -> recursos_asignados, nombre_recurso_a_liberar) == RECURSO_NO_ASIGNADO)
+		return RECURSO_NO_ASIGNADO;
+
+	recurso->instancias_en_uso += -1;
+	return EXITO;
+
+
+
+}
+
+int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar){
+	for(int i = 0; i < list_size(recursos_asignados); i++){
+		char* recurso = list_get(recursos_asignados, i);
+		if(strcmp(recurso, recurso_a_sacar) == 0){
+			recurso = list_remove(recursos_asignados, i);
+			free(recurso);
+			return EXITO;
+		}
+	}
+	return RECURSO_NO_ASIGNADO;
 }
 
 void liberar_todos_recursos(t_pcb* pcb){
-	int cant_recursos = list_size(pcb -> recursos_asignados);
-
-	for (int i=0; i < cant_recursos; i++){
-		char* recurso = list_remove(pcb -> recursos_asignados, i);
-		sumar_instancia_recurso(recurso);
-
+	int cant_rec_asignados = list_size(pcb -> recursos_asignados);
+	for(int i = 0; i < cant_rec_asignados; i++){
+		char* recurso_a_liberar = list_get(pcb -> recursos_asignados, i);
+		liberar_instancia_recurso(recurso_a_liberar, pcb);
 	}
 }
+
+t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener){
+	// En caso de que no exista el recurso (si sale del for) devuelve el recurso_nulo
+	for(int i=0; i< list_size(config_kernel.recursos) ; i++){
+		t_recurso* recurso = list_get(config_kernel.recursos,i);
+		if(strcmp(nombre_recurso_a_obtener, recurso->nombre_recurso) == 0)
+			return recurso;
+	}
+	return recurso_nulo;
+}
 // FIN UTILS RECURSOS -------------------------------------------------------------------
+// 0x55555555c940
 
 t_pcb* elegido_por_FIFO(){
 	t_pcb* pcb;
@@ -428,7 +497,6 @@ t_pcb* crear_pcb(t_list *instrucciones, int socket_con){
 
 	pcb->archivos_abiertos = list_create();
 	pcb->recursos_asignados = list_create();
-	pcb->recursos_solicitados = list_create();
 	pcb->socket_consola = socket_con;
 	return pcb;
 }
@@ -463,27 +531,6 @@ t_registros inicializar_registros(){
 // FIN UTILS CREAR ----------------------------------------------------------------------
 
 
-// UTILS DESTRUIR (NO PROBADOS) -----------------------------------------------------------------------
-void destruir_cde(t_cde* cde){	
-	list_destroy(cde -> lista_de_instrucciones);
-	list_destroy(cde -> tabla_segmentos);
-	free(cde);
-}
-
-void destruir_pcb(t_pcb* pcb){
-	destruir_cde(pcb -> cde);
-	list_destroy(pcb -> recursos_asignados);
-	list_destroy(pcb -> recursos_solicitados);
-	list_destroy(pcb -> archivos_abiertos);
-	free(pcb);
-}
-
-void destruir_instrucciones(t_instruction* instruccion){
-	free(instruccion -> string1);
-	free(instruccion -> string2);
-	free(instruccion);
-}
-// FIN UTILS DESTRUIR -------------------------------------------------------------------
 
 void ejecutarProceso(){
 	// Arma el cde
@@ -535,31 +582,4 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_cde cde_recibido){
 			break;
 	}
 }
-
-void actualizar_instancias_recurso(char* recurso_a_actualizar, int numero){
-	// Paso el numero para poder hacer +1 y -1 por wait y signal
-	// Aca no hay chequeos, solo cambia la cantidad de instancias del recurso
-	char* recurso;
-	int* instancia;
-
-	for(int i=0; i< list_size(config_kernel.recursos_compartidos) ; i++){ 
-		recurso = list_get(config_kernel.recursos_compartidos,i);
-		if(strcmp(recurso, recurso_a_actualizar) == 0){
-			instancia = list_get(config_kernel.instancias,i) + numero;
-			list_replace(config_kernel.instancias, i, instancia);
-		}
-	}
-}
-
-int obtener_instancia_recurso(char* recurso_a_obtener){
-	char* recurso;
-
-	for(int i=0; i< list_size(config_kernel.recursos_compartidos) ; i++){
-		recurso = list_get(config_kernel.recursos_compartidos,i);
-		if(strcmp(recurso, recurso_a_obtener) == 0)
-			return list_get(config_kernel.instancias, i);
-	}
-	return -1;
-}
-
 // FIN UTILS INSTRUCCIONES --------------------------------------------------------------

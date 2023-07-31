@@ -14,10 +14,19 @@
 #include <unistd.h>
 #include "comunicacion.h"
 
+typedef enum{
+	EXITO,
+	RECURSO_INEXISTENTE,
+	RECURSO_NO_ASIGNADO,
+	EN_ESPERA
+}Res_solicitud_recursos;
+
 typedef struct{
-    int socket;
-    int socket_anterior;
-} t_conexiones;
+	char* nombre_recurso;
+	int instancias_totales; // Fija
+	int instancias_en_uso; // Siempre mayor a cero
+	t_queue* cola_de_espera; // guarda PID de los procesos que estan esperando ese recurso
+}t_recurso;
 
 typedef struct{
 	char* ip_memoria;
@@ -31,8 +40,7 @@ typedef struct{
 	int est_inicial;
 	int alpha_hrrn;
 	int grado_max_multi;
-	t_list* recursos_compartidos;
-	t_list* instancias;
+	t_list* recursos;
 }Config_kernel;
 
 // Variables globales
@@ -75,6 +83,9 @@ t_queue* procesosReady;
 t_queue* procesosBlocked;
 t_queue* procesosExec;
 t_queue* procesosExit;
+
+
+t_recurso* recurso_nulo;
 
 // Prototipos funciones
 void levantar_modulo();
@@ -130,5 +141,14 @@ void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex);
 t_pcb* elegido_por_FIFO();
 t_pcb* elegido_por_HRRN();
 t_pcb* retirar_pcb_de_ready_segun_algoritmo();
+
+// Utils recursos
+t_recurso* inicializar_recurso(char* nombre_recu, int instancias_tot); // FUNCIONA
+void inicializar_recurso_nulo(); // FUNCIONA
+int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb); // FUNCIONA
+int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb);
+int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar); // FUNCIONA
+t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNCIONA
+void liberar_todos_recursos(t_pcb* pcb);
 
 #endif /* INCLUDES_KERNEL_H_ */
