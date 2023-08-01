@@ -47,9 +47,6 @@ t_config* config;
 
 Config_consola config_consola;
 
-sem_t *sem_conexion;
-sem_t *sem_enviado;
-
 int socket_kernel;
 Instruction_consola instructions[MAX_INSTRUCTIONS];
 int instructionCount = 0;

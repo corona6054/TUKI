@@ -2,9 +2,6 @@
 
 
 int main(int argc, char** argv){
-	
-    sem_init(&sem_conexion, 0, 0);
-
 	char* config_path=argv[1];
 	char* instruccion_path=argv[2];
 	levantar_modulo(config_path);
@@ -17,8 +14,6 @@ int main(int argc, char** argv){
     log_info(logger,"Lista mapeada");
     
     t_buffer* buffer = crear_buffer_nuestro();
-
-	sem_wait(&sem_conexion);
 	
     enviarLista(buffer, listaAEnviar);
     log_info(logger,"Lista enviada");
@@ -151,14 +146,17 @@ void levantar_config(){
 void establecer_conexiones()
 {
 	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
-	log_info(logger,"Socket kernel :%d",socket_kernel);
 	if (socket_kernel >= 0){
-		sem_post(&sem_conexion);
-		log_info(logger,"Conectado con kernel");
+        log_info(logger,"Conectado con kernel");
+        //Realizamos el handshake
+		enviar_handshake(socket_kernel);
+		if (recibir_handshake(socket_kernel) == HANDSHAKE){
+			log_info(logger, "Handshake con Kernel realizado.");			
+		}else
+			log_info(logger, "Ocurio un error al realizar el handshake con Kernel.");
 	}
-	else{
+	else
 		log_info(logger,"Error al conectar con kernel");
-	}
 }
 
 
