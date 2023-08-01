@@ -2,9 +2,7 @@
 
 int main(void){
 	levantar_modulo();
-
-
-
+	
 	while(1);
 	
 	return 0;
@@ -44,7 +42,8 @@ void incializar_semaforos(){
 	pthread_mutex_init(&mutex_exec, NULL);
 	pthread_mutex_init(&mutex_exit, NULL);
 	
-	sem_init(&cont_grado_max_multiprog, 0, config_kernel.grado_max_multi); //para no acpetar mas procesos de los q permite el grado max de multi
+	//para no agregar mas procesos a READY de los q permite el grado max de multi
+	sem_init(&cont_grado_max_multiprog, 0, config_kernel.grado_max_multi); 
 
 	sem_init(&cont_exit, 0, 0); //para postear cuando uno entra a exit y poder matar su consola
 
@@ -128,6 +127,7 @@ void manejar_conexion_con_memoria(){
 }
 
 void manejar_conexion_con_cpu(){
+	// Este haria el ida y vuelta del CDE
 	t_buffer* buffer = crear_buffer_nuestro();
 	while(recv(socket_cpu, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL) > 0){
 		
@@ -230,12 +230,10 @@ void enviar_de_ready_a_exec(){
 	}
 }
 
-void enviar_de_exec_a_block(char* razon){ // SOLO PARA WAIT, por ARCHIVOS y por (IO -> va a ser un hilo aparte)
+void enviar_de_exec_a_psedudoblock(char* razon){ // SOLO PARA WAIT, por ARCHIVOS y por (IO -> va a ser un hilo aparte)
 	// razones: "nombre de recurso" || "nombre de archivo" |||||| io va aparte
 	t_pcb* pcb_a_blocked = retirar_pcb_de(procesosExec, &mutex_blocked);
-	agregar_pcb_a(procesosBlocked, pcb_a_blocked, &mutex_blocked);
 	log_info(logger, "PID: %d	-	Estado anterior: EXEC	-	Estado actual: BLOCK", pcb_a_blocked->cde->pid); //OBLIGATORIO
-
 	log_info("PID: %d	-	Bloqueado por: %s", pcb_a_blocked->cde->pid, razon);
 }
 
@@ -247,12 +245,9 @@ void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
 	//mostrar_pids(pcb_a_ready->cde->lista_de_instrucciones);
 }
 
-void enviar_de_block_a_ready(){
-	while(1){
-		// Semaforos si o si
-		// Podria ser que cada vez que se libera un recurso se haga un post
-		// Ya sea por que un proceso termino o porque hubo algun signal
-	}
+void enviar_de_pseudoblock_a_ready(t_pcb* pcb){
+		agregar_pcb_a(procesosReady, pcb, &mutex_ready);
+		log_info(logger, "PID: %d	-	Estado anterior: BLOCK	-	Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
 }
 
 void enviar_de_exec_a_exit(char* razon){
@@ -270,9 +265,11 @@ void enviar_de_exec_a_exit(char* razon){
 void enviar_de_new_a_ready(){
 	while(1){
 		sem_wait(&cont_grado_max_multiprog);
+		// falta un semaforo por si procesosNew esta vacia
 		t_pcb* pcb_a_ready = retirar_pcb_de(procesosNew, &mutex_new);
 		
 		// mandarle a memoria para que inicialize las estructuras necesarias, y tabla de segmentos para alm en pcb.
+		
 		//op_code inicio_memoria = INICIO_PROCESO_MEMORIA;
 		//enviar_codigo(socket_memoria, inicio_memoria);
 
@@ -311,9 +308,10 @@ void terminar_procesos(){
 
 		//liberar recursos asignados
 		//liberar_todos_recursos(pcb);
-		//avisar a memoria para liberar estructuras
-		
-		//enviar_codigo(socket_memoria, FIN_PROCESO_MEMORIA);
+		//avisar a memoria para liberar estructuras		
+		op_code aviso_de_fin_a_memoria = FIN_PROCESO_MEMORIA;
+		//enviar_codigo(socket_memoria, aviso_de_fin_a_memoria);
+
 		//avisar a consola para matar conexion
 		op_code terminar_consola = FIN_PROCESO_CONSOLA;
 		enviar_codigo(pcb->socket_consola, terminar_consola);
@@ -337,10 +335,11 @@ void planificadorCortoPlazo(){
 	// hilo para enviar_de_exec_a_ready()?? SOLO PARA YIELD
 
 	// hilo para enviar_de_block_a_ready()
+	/*
 	pthread_t poner_en_listo;
 	pthread_create(&poner_en_listo, NULL, (void *) enviar_de_block_a_ready, NULL);
 	pthread_detach(poner_en_listo);
-	
+	*/
 	pthread_t matar_procesos;
 	pthread_create(&matar_procesos, NULL, (void *) terminar_procesos, NULL);
 	pthread_detach(matar_procesos);
@@ -369,36 +368,43 @@ t_recurso* inicializar_recurso(char* nombre_recu, int instancias_tot){
 	recurso -> nombre_recurso  = malloc(tam);
 	strcpy(recurso -> nombre_recurso, nombre_recu);
 
-	recurso -> instancias_totales = instancias_tot;
+	recurso -> instancias_disponibles = instancias_tot;
 	recurso -> cola_de_espera = queue_create();
-	recurso -> instancias_en_uso = 0;
+	
+	return recurso;
 }
 
 void inicializar_recurso_nulo(){
 	recurso_nulo = inicializar_recurso("NULO", 0);
 }
 
-int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb){
-	t_recurso* recurso = encontrar_recurso_por_nombre(nombre_recurso_a_actualizar);
+int asignar_instancia_recurso(char* nombre_recurso_a_asignar, t_pcb* pcb){
+	t_recurso* recurso = encontrar_recurso_por_nombre(nombre_recurso_a_asignar);
 
 	if(strcmp(recurso -> nombre_recurso, recurso_nulo -> nombre_recurso) == 0)
 		return RECURSO_INVALIDO;
+	// Si sigue de largo de este if(el de arriba) es porque es distinto de recurso_nulo
 
-	if(recurso->instancias_totales == recurso->instancias_en_uso){
-		list_add(recurso->cola_de_espera, pcb -> cde -> pid);
+	// Por mas que no asigne, tengo que restar las instancias ya que seria como "reservarlo"	
+
+	if(recurso->instancias_disponibles <= 0){
+		list_add(recurso->cola_de_espera, pcb);
+		recurso->instancias_disponibles--;
+		// agregar en lista de pcb?
 		return EN_ESPERA;
 	}
+	// Si sigue de largo de este if(el de arriba) es porque hay instancias disponibles
 
-	recurso->instancias_en_uso += 1;
-
+	recurso->instancias_disponibles--;
 	int tam = 0;
 	while(recurso -> nombre_recurso[tam] != NULL)
 		tam++;
 
-	// Necesito que & nombre != & recurso -> nombre_recurso, porque despues hago free(nombre)
+	// Necesito que &nombre != &(recurso -> nombre_recurso), porque despues hago free(nombre)
 	char* nombre = malloc(tam);
 	strcpy(nombre, recurso -> nombre_recurso);
 	list_add(pcb->recursos_asignados, nombre);
+	log_info(logger, "Wait: “PID: %d - Wait: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_disponibles);
 	return RECURSO_ASIGNADO;
 }
 
@@ -412,8 +418,16 @@ int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb){
 	if(strcmp(recurso -> nombre_recurso, recurso_nulo -> nombre_recurso) == 0)
 		return RECURSO_INVALIDO;
 	else{
-		recurso->instancias_en_uso += -1;
+		recurso->instancias_disponibles++;
+		sacar_recurso(pcb -> recursos_asignados, nombre_recurso_a_liberar);
+		
 		// En caso de que corresponda, desbloquea al primer proceso de la cola de bloqueados de ese recurso
+		if(recurso->instancias_disponibles < 0){
+			t_pcb* pcb_a_desbloquear = queue_pop(recurso -> cola_de_espera);
+			asignar_instancia_recurso(nombre_recurso_a_liberar, pcb_a_desbloquear);
+			agregar_pcb_a(procesosReady, pcb_a_desbloquear, &mutex_ready);
+		}
+		log_info(logger, "Wait: “PID: %d - Signal: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_disponibles);
 		return RECURSO_LIBERADO;
 	}
 }
@@ -564,7 +578,9 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 		case CREATE_SEGMENT:
 			break;
 		case IO:
-			log_info(logger,"PID: %d - Ejecuta IO: %d",pcb -> cde -> pid,instruccion_actual->numero1);
+			log_info(logger,"PID: %d - Bloqueado por: %s", pcb->cde->pid, "IO");
+			log_info(logger,"PID: %d - Ejecuta IO: %d", pcb->cde-> pid, instruccion_actual->numero1);
+			administrar_io(pcb, instruccion_actual->numero1);
 			break;
 		case WAIT:
 			switch(asignar_instancia_recurso(instruccion_actual -> string1, pcb)){
@@ -572,11 +588,10 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 					enviar_de_exec_a_exit("INVALID_RESOURCE");
 					break;
 				case EN_ESPERA:
-					enviar_de_exec_a_block(instruccion_actual -> string1);
+					enviar_de_exec_a_psedudoblock(instruccion_actual -> string1);
 					break;
 				case RECURSO_ASIGNADO:
-					t_recurso* recurso = encontrar_recurso_por_nombre(instruccion_actual -> string1);
-					log_info(logger, "Wait: “PID: %d - Wait: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_en_uso);
+					// Lo unico que tendria que hacer es el log_info que esta adentro de asignar_instancia_recurso
 					break;
 			}
 			break;
@@ -586,8 +601,8 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 					enviar_de_exec_a_exit("INVALID_RESOURCE");
 					break;
 				case RECURSO_LIBERADO:
-					t_recurso* recurso = encontrar_recurso_por_nombre(instruccion_actual -> string1);
-					log_info(logger, "Wait: “PID: %d - Signal: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_en_uso);
+					// Lo unico que tendria que hacer es el log_info que esta adentro de liberar_instancia_recurso
+					break;
 			}
 
 			break;
@@ -607,4 +622,23 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 			break;
 	}
 }
+
+void administrar_io(t_pcb* pcb_a_dormir, int tiempo_siesta){
+	t_io* datos_io = malloc(sizeof(t_io));
+
+	datos_io -> pcb = pcb_a_dormir;
+	datos_io -> tiempo = tiempo_siesta;
+
+	pthread_t bloquear_proceso_por_io;
+	pthread_create(&bloquear_proceso_por_io, NULL, (void *) dormir_proceso, (void*) datos_io);
+	pthread_detach(bloquear_proceso_por_io);
+}
+
+void dormir_proceso(void* args){
+	t_io* datos_io = (t_io*) args;
+	enviar_de_exec_a_psedudoblock("IO");
+	usleep(datos_io->tiempo * 1000000);	
+	enviar_de_pseudoblock_a_ready(datos_io -> pcb);
+}
+
 // FIN UTILS INSTRUCCIONES --------------------------------------------------------------

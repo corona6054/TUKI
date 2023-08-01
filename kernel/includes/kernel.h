@@ -23,10 +23,14 @@ typedef enum{
 
 typedef struct{
 	char* nombre_recurso;
-	int instancias_totales; // Fija
-	int instancias_en_uso; // Siempre mayor a cero
-	t_queue* cola_de_espera; // guarda PID de los procesos que estan esperando ese recurso
+	int instancias_disponibles; // inicialmente es la que esta en el congfig
+	t_queue* cola_de_espera; // guarda PCB de los procesos que estan esperando ese recurso
 }t_recurso;
+
+typedef struct{
+	int tiempo;
+	t_pcb* pcb;
+}t_io;
 
 typedef struct{
 	char* ip_memoria;
@@ -40,7 +44,7 @@ typedef struct{
 	int est_inicial;
 	int alpha_hrrn;
 	int grado_max_multi;
-	t_list* recursos;
+	t_list* recursos; // lista de t_recurso*
 }Config_kernel;
 
 // Variables globales
@@ -80,7 +84,7 @@ int ejecutando = 0;
 
 t_queue* procesosNew;
 t_queue* procesosReady;
-t_queue* procesosBlocked;
+t_queue* procesosBlocked; // probablemente no la usemos
 t_queue* procesosExec;
 t_queue* procesosExit;
 
@@ -118,11 +122,11 @@ int tamanio_cde_serializado(Cde_serializado);
 void deserializar_cde();
 
 // Subprogramas planificador corto plazo
-void enviar_de_block_a_ready(); // hilo con while(1){}
-void enviar_de_exec_a_block(); // Para wait
+void enviar_de_pseudoblock_a_ready(t_pcb* pcb); // 
+void enviar_de_exec_a_psedudoblock(char* razon_de_block); // Para wait
 void enviar_de_exec_a_ready(); // Para yield
 void enviar_de_ready_a_exec(); // hilo | se libera cuando no hay ningun proceso en ejecucion
-void enviar_de_exec_a_exit(char* razon);
+void enviar_de_exec_a_exit(char* razon_de_exit); //
 
 // Subprogramas planificador largo plazo
 void enviar_de_new_a_ready();
@@ -149,5 +153,10 @@ int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar); // FUNCION
 void liberar_todos_recursos(t_pcb* pcb);
 t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNCIONA
 void desbloquear_proceso(char* recurso_libearado);
+
+
+// Utils instrucciones (particular)
+void administrar_io(t_pcb* pcb_a_dormir, int tiempo_siesta);
+void dormir_proceso(void* args);
 
 #endif /* INCLUDES_KERNEL_H_ */

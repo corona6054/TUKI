@@ -3338,3 +3338,29 @@
 [INFO] 20:13:59:053 Kernel/(10327:10327): Resultado: 2
 [INFO] 20:15:11:808 Kernel/(10511:10511): Resultado: 0
 [INFO] 20:15:14:740 Kernel/(10511:10511): Resultado: 3
+[INFO] 14:46:52:443 Kernel/(5286:5286): Resultado: 3
+[INFO] 14:46:52:443 Kernel/(5286:5286): Resultado: 3
+[INFO] 14:46:52:443 Kernel/(5286:5286): Resultado: 3
+[INFO] 14:50:23:144 Kernel/(5476:5476): Wait: “PID: 0 - Wait: DISCO - Instancias: 0
+[INFO] 14:50:23:145 Kernel/(5476:5476): Resultado: 0
+[INFO] 14:50:23:145 Kernel/(5476:5476): Resultado: 3
+[INFO] 14:50:23:145 Kernel/(5476:5476): Resultado: 2
+[INFO] 15:00:37:779 Kernel/(5668:5668): Wait: “PID: 0 - Wait: DISCO - Instancias: 0
+[INFO] 15:00:37:779 Kernel/(5668:5668): Resultado DISCO PCB1: 0
+[INFO] 15:00:37:779 Kernel/(5668:5668): Resultado IMPRESORA PCB2: 2
+[INFO] 15:00:37:779 Kernel/(5668:5668): Wait: “PID: 2 - Wait: SCANNER - Instancias: 0
+[INFO] 15:00:37:779 Kernel/(5668:5668): Resultado SCANNER PCB3: 0
+[INFO] 15:00:37:779 Kernel/(5668:5668): Resultado IMPRESORA PCB1: 2
+[INFO] 15:00:37:779 Kernel/(5668:5668): Resultado SCANNER PCB2: 3
+[INFO] 15:00:37:779 Kernel/(5668:5668): Resultado DISCO PCB3: 3
+[INFO] 15:01:48:282 Kernel/(5699:5699): Wait: “PID: 0 - Wait: DISCO - Instancias: 0
+[INFO] 15:01:48:284 Kernel/(5699:5699): Resultado DISCO PCB1: 0
+[INFO] 15:01:48:284 Kernel/(5699:5699): Wait: “PID: 1 - Wait: IMPRESORA - Instancias: 0
+[INFO] 15:01:48:284 Kernel/(5699:5699): Resultado IMPRESORA PCB2: 0
+[INFO] 15:01:48:284 Kernel/(5699:5699): Wait: “PID: 2 - Wait: SCANNER - Instancias: 0
+[INFO] 15:01:48:284 Kernel/(5699:5699): Resultado SCANNER PCB3: 0
+[INFO] 15:01:48:284 Kernel/(5699:5699): Resultado IMPRESORA PCB1: 3
+[INFO] 15:01:48:284 Kernel/(5699:5699): Resultado SCANNER PCB2: 3
+[INFO] 15:01:48:284 Kernel/(5699:5699): Resultado DISCO PCB3: 3
+[INFO] 15:10:38:538 Kernel/(6040:6047): Bloqueandome...
+[INFO] 15:10:43:547 Kernel/(6040:6047): PID: 0	-	Estado anterior: BLOCK	-	Estado actual: READY
