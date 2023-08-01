@@ -103,14 +103,23 @@ void enviar_buffer(t_buffer* buffer, int socket){
 }
 
 // UTILS CODIGO
-void enviar_codigo(int socket, op_code codigo){
-	send(socket, &codigo, sizeof(op_code), 0);
+void enviar_codigo(int socket_receptor, op_code codigo){
+	send(socket_receptor, &codigo, sizeof(op_code), 0);
 }
 
-op_code recibir_codigo(int socket){
+op_code recibir_codigo(int socket_emisor){
 	op_code codigo;
 
-	recv(socket, &codigo, sizeof(op_code), MSG_WAITALL);
+	recv(socket_emisor, &codigo, sizeof(op_code), MSG_WAITALL);
 
 	return codigo;
+}
+
+void enviar_handshake(int socket_receptor){
+	op_code primer_contacto = HANDSHAKE;
+	enviar_codigo(socket_receptor, primer_contacto);
+}
+
+op_code recibir_handshake(int socket_emisor){
+	return recibir_codigo(socket_emisor);
 }

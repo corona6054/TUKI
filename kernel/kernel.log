@@ -3364,3 +3364,213 @@
 [INFO] 15:01:48:284 Kernel/(5699:5699): Resultado DISCO PCB3: 3
 [INFO] 15:10:38:538 Kernel/(6040:6047): Bloqueandome...
 [INFO] 15:10:43:547 Kernel/(6040:6047): PID: 0	-	Estado anterior: BLOCK	-	Estado actual: READY
+[INFO] 15:24:14:844 Kernel/(6406:6406): Saque: 1
+[INFO] 15:24:14:844 Kernel/(6406:6406): Saque: 0
+[INFO] 15:24:14:844 Kernel/(6406:6406): Saque: 2
+[INFO] 16:11:59:820 Kernel/(7724:7724): Listo para escuchar a mi cliente
+[INFO] 16:12:06:836 Kernel/(7724:7731): Se conecto un cliente!
+[INFO] 16:12:06:836 Kernel/(7724:7731): Ocurio un error al realizar el handshake con Consola.
+[INFO] 16:12:24:681 Kernel/(7778:7778): Listo para escuchar a mi cliente
+[INFO] 16:12:28:617 Kernel/(7778:7783): Se conecto un cliente!
+[INFO] 16:12:28:617 Kernel/(7778:7783): Ocurio un error al realizar el handshake con Consola.
+[INFO] 16:12:38:128 Kernel/(7778:7783): Se conecto un cliente!
+[INFO] 16:12:38:128 Kernel/(7778:7783): Ocurio un error al realizar el handshake con Consola.
+[INFO] 16:13:13:975 Kernel/(7855:7855): Listo para escuchar a mi cliente
+[INFO] 16:14:16:456 Kernel/(7855:7898): Se conecto un cliente!
+[INFO] 16:15:15:261 Kernel/(8078:8078): Listo para escuchar a mi cliente
+[INFO] 16:19:27:748 Kernel/(8121:8121): Listo para escuchar a mi cliente
+[INFO] 16:19:33:428 Kernel/(8121:8127): Se conecto un cliente!
+[INFO] 16:19:33:428 Kernel/(8121:8127): Handshake con Consola realizado.
+[INFO] 16:19:33:471 Kernel/(8121:8141): Se crea el proceso 0 en NEW
+[INFO] 16:20:01:415 Kernel/(8121:8127): Se conecto un cliente!
+[INFO] 16:20:01:415 Kernel/(8121:8127): Handshake con Consola realizado.
+[INFO] 16:20:01:463 Kernel/(8121:8154): Se crea el proceso 1 en NEW
+[INFO] 16:20:08:513 Kernel/(8121:8127): Se conecto un cliente!
+[INFO] 16:20:08:514 Kernel/(8121:8127): Handshake con Consola realizado.
+[INFO] 16:20:08:559 Kernel/(8121:8171): Se crea el proceso 2 en NEW
+[INFO] 16:20:11:492 Kernel/(8121:8127): Se conecto un cliente!
+[INFO] 16:20:11:493 Kernel/(8121:8127): Handshake con Consola realizado.
+[INFO] 16:20:11:534 Kernel/(8121:8183): Se crea el proceso 3 en NEW
+[INFO] 16:20:35:012 Kernel/(8121:8127): Se conecto un cliente!
+[INFO] 16:20:35:013 Kernel/(8121:8127): Handshake con Consola realizado.
+[INFO] 16:20:35:067 Kernel/(8121:8198): Se crea el proceso 4 en NEW
+[INFO] 16:22:45:903 Kernel/(8221:8221): Listo para escuchar a mi cliente
+[INFO] 16:29:32:247 Kernel/(8569:8569): Listo para escuchar a mi cliente
+[INFO] 16:29:50:630 Kernel/(8569:8575): Se conecto un cliente!
+[INFO] 16:29:50:631 Kernel/(8569:8575): Handshake con Consola realizado.
+[INFO] 16:29:50:677 Kernel/(8569:8589): Se crea el proceso 0 en NEW
+[INFO] 16:29:52:245 Kernel/(8569:8575): Se conecto un cliente!
+[INFO] 16:29:52:245 Kernel/(8569:8575): Handshake con Consola realizado.
+[INFO] 16:29:52:248 Kernel/(8569:8569): Cant de consolas en ready: 268868832
+[INFO] 16:29:52:248 Kernel/(8569:8569): Cant de consolas en new: 268868832
+[INFO] 16:29:52:304 Kernel/(8569:8601): Se crea el proceso 1 en NEW
+[INFO] 16:30:53:230 Kernel/(8655:8655): Listo para escuchar a mi cliente
+[INFO] 16:30:57:437 Kernel/(8655:8660): Se conecto un cliente!
+[INFO] 16:30:57:439 Kernel/(8655:8660): Handshake con Consola realizado.
+[INFO] 16:30:57:486 Kernel/(8655:8673): Se crea el proceso 0 en NEW
+[INFO] 16:30:59:546 Kernel/(8655:8660): Se conecto un cliente!
+[INFO] 16:30:59:547 Kernel/(8655:8660): Handshake con Consola realizado.
+[INFO] 16:30:59:591 Kernel/(8655:8685): Se crea el proceso 1 en NEW
+[INFO] 16:31:01:265 Kernel/(8655:8660): Se conecto un cliente!
+[INFO] 16:31:01:266 Kernel/(8655:8660): Handshake con Consola realizado.
+[INFO] 16:31:01:319 Kernel/(8655:8696): Se crea el proceso 2 en NEW
+[INFO] 16:31:03:265 Kernel/(8655:8660): Se conecto un cliente!
+[INFO] 16:31:03:266 Kernel/(8655:8660): Handshake con Consola realizado.
+[INFO] 16:31:03:307 Kernel/(8655:8707): Se crea el proceso 3 en NEW
+[INFO] 16:31:04:402 Kernel/(8655:8660): Se conecto un cliente!
+[INFO] 16:31:04:402 Kernel/(8655:8660): Handshake con Consola realizado.
+[INFO] 16:31:04:449 Kernel/(8655:8716): Se crea el proceso 4 en NEW
+[INFO] 16:31:06:253 Kernel/(8655:8660): Se conecto un cliente!
+[INFO] 16:31:06:255 Kernel/(8655:8660): Handshake con Consola realizado.
+[INFO] 16:31:06:300 Kernel/(8655:8730): Se crea el proceso 5 en NEW
+[INFO] 16:31:13:231 Kernel/(8655:8655): Cant de consolas en ready: 4
+[INFO] 16:31:13:231 Kernel/(8655:8655): Cant de consolas en new: 2
+[INFO] 16:38:50:767 Kernel/(8993:8993): Listo para escuchar a mi cliente
+[INFO] 16:38:57:200 Kernel/(9013:9013): Listo para escuchar a mi cliente
+[INFO] 16:39:35:623 Kernel/(9072:9072): Listo para escuchar a mi cliente
+[INFO] 16:39:46:902 Kernel/(9111:9111): Listo para escuchar a mi cliente
+[INFO] 16:43:09:364 Kernel/(9264:9264): Listo para escuchar a mi cliente
+[INFO] 16:43:29:607 Kernel/(9283:9283): Listo para escuchar a mi cliente
+[INFO] 16:45:41:341 Kernel/(9424:9424): Listo para escuchar a mi cliente
+[INFO] 16:45:51:216 Kernel/(9424:9430): Se conecto un cliente!
+[INFO] 16:45:51:216 Kernel/(9424:9430): Handshake con Consola realizado.
+[INFO] 16:45:51:260 Kernel/(9424:9460): Se crea el proceso 0 en NEW
+[INFO] 16:45:51:261 Kernel/(9424:9431): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 16:45:51:261 Kernel/(9424:9432): PID: -365812160	-	Estado anterior: READY	-	Estado actual: EXEC
+[INFO] 16:45:51:261 Kernel/(9424:9424): Finaliza el proceso -365812160 - Motivo: PINTO
+[INFO] 16:48:24:682 Kernel/(9545:9545): Listo para escuchar a mi cliente
+[INFO] 16:48:29:703 Kernel/(9545:9552): Se conecto un cliente!
+[INFO] 16:48:29:704 Kernel/(9545:9552): Handshake con Consola realizado.
+[INFO] 16:48:29:761 Kernel/(9545:9553): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 16:48:29:762 Kernel/(9545:9572): Se crea el proceso 0 en NEW
+[INFO] 16:48:29:764 Kernel/(9545:9554): PID: 1359201856	-	Estado anterior: READY	-	Estado actual: EXEC
+[INFO] 16:48:29:764 Kernel/(9545:9545): Finaliza el proceso 1359201856 - Motivo: PINTO
+[INFO] 16:48:29:764 Kernel/(9545:9545): Cant de consolas en ready: 1
+[INFO] 16:48:29:764 Kernel/(9545:9545): Cant de consolas en new: 0
+[INFO] 16:52:57:000 Kernel/(9678:9678): Listo para escuchar a mi cliente
+[INFO] 16:53:03:621 Kernel/(9678:9685): Se conecto un cliente!
+[INFO] 16:53:03:621 Kernel/(9678:9685): Handshake con Consola realizado.
+[INFO] 16:53:03:664 Kernel/(9678:9698): Se crea el proceso 0 en NEW
+[INFO] 16:53:17:006 Kernel/(9678:9678): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 16:54:42:960 Kernel/(9778:9778): Listo para escuchar a mi cliente
+[INFO] 16:56:42:089 Kernel/(9812:9812): Listo para escuchar a mi cliente
+[INFO] 16:56:50:947 Kernel/(9812:9817): Se conecto un cliente!
+[INFO] 16:56:50:947 Kernel/(9812:9817): Handshake con Consola realizado.
+[INFO] 16:56:50:997 Kernel/(9812:9829): Se crea el proceso 0 en NEW
+[INFO] 16:57:02:092 Kernel/(9812:9812): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 16:58:39:120 Kernel/(9912:9912): Listo para escuchar a mi cliente
+[INFO] 16:58:44:800 Kernel/(9912:9919): Se conecto un cliente!
+[INFO] 16:58:44:800 Kernel/(9912:9919): Handshake con Consola realizado.
+[INFO] 16:58:44:843 Kernel/(9912:9932): Se crea el proceso 0 en NEW
+[INFO] 16:58:59:121 Kernel/(9912:9912): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 16:58:59:121 Kernel/(9912:9912): Cant de consolas en ready: 1
+[INFO] 17:00:53:465 Kernel/(10054:10054): Listo para escuchar a mi cliente
+[INFO] 17:00:59:454 Kernel/(10054:10060): Se conecto un cliente!
+[INFO] 17:00:59:454 Kernel/(10054:10060): Handshake con Consola realizado.
+[INFO] 17:00:59:510 Kernel/(10054:10084): Se crea el proceso 0 en NEW
+[INFO] 17:01:13:473 Kernel/(10054:10054): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 17:01:13:473 Kernel/(10054:10054): PID: 0	-	Estado anterior: READY	-	Estado actual: EXEC
+[INFO] 17:01:13:473 Kernel/(10054:10054): Finaliza el proceso 0 - Motivo: Pinto
+[INFO] 17:01:13:473 Kernel/(10054:10054): Cant de consolas en ready: 0
+[INFO] 17:01:13:473 Kernel/(10054:10054): Cant de consolas en new: 0
+[INFO] 17:02:55:554 Kernel/(10233:10233): Listo para escuchar a mi cliente
+[INFO] 17:03:02:894 Kernel/(10233:10239): Se conecto un cliente!
+[INFO] 17:03:02:895 Kernel/(10233:10239): Handshake con Consola realizado.
+[INFO] 17:03:02:944 Kernel/(10233:10260): Se crea el proceso 0 en NEW
+[INFO] 17:03:02:944 Kernel/(10233:10240): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 17:03:02:944 Kernel/(10233:10241): PID: 0	-	Estado anterior: READY	-	Estado actual: EXEC
+[INFO] 17:03:02:944 Kernel/(10233:10233): Finaliza el proceso 0 - Motivo: PINTO
+[INFO] 17:03:02:945 Kernel/(10233:10233): Cant de consolas en ready: 0
+[INFO] 17:03:02:945 Kernel/(10233:10233): Cant de consolas en new: 0
+[INFO] 17:08:11:712 Kernel/(10439:10439): Listo para escuchar a mi cliente
+[INFO] 17:08:16:003 Kernel/(10439:10444): Se conecto un cliente!
+[INFO] 17:08:16:003 Kernel/(10439:10444): Handshake con Consola realizado.
+[INFO] 17:08:16:050 Kernel/(10439:10445): PID: 0	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 17:08:16:051 Kernel/(10439:10446): PID: 0	-	Estado anterior: READY	-	Estado actual: EXEC
+[INFO] 17:08:16:051 Kernel/(10439:10439): PID: 0 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:08:16:051 Kernel/(10439:10447): PID: 0
+[INFO] 17:08:16:051 Kernel/(10439:10439): Finaliza el proceso 0 - Motivo: PID1
+[INFO] 17:08:16:051 Kernel/(10439:10461): Se crea el proceso 0 en NEW
+[INFO] 17:08:20:048 Kernel/(10439:10444): Se conecto un cliente!
+[INFO] 17:08:20:048 Kernel/(10439:10444): Handshake con Consola realizado.
+[INFO] 17:08:20:092 Kernel/(10439:10473): Se crea el proceso 1 en NEW
+[INFO] 17:08:20:092 Kernel/(10439:10445): PID: 1	-	Estado anterior: NEW	-	Estado actual: READY
+[INFO] 17:08:20:093 Kernel/(10439:10446): PID: 1	-	Estado anterior: READY	-	Estado actual: EXEC
+[INFO] 17:08:20:093 Kernel/(10439:10439): PID: 1 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:08:20:093 Kernel/(10439:10447): PID: 1
+[INFO] 17:08:20:093 Kernel/(10439:10439): Finaliza el proceso 1 - Motivo: PID2
+[INFO] 17:11:17:790 Kernel/(10551:10551): Listo para escuchar a mi cliente
+[INFO] 17:11:21:843 Kernel/(10551:10557): Se conecto un cliente!
+[INFO] 17:11:21:844 Kernel/(10551:10557): Handshake con Consola realizado.
+[INFO] 17:11:21:887 Kernel/(10551:10572): Se crea el proceso 0 en NEW
+[INFO] 17:11:21:888 Kernel/(10551:10558): PID: 0 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:11:21:888 Kernel/(10551:10559): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:11:21:888 Kernel/(10551:10551): PID: 0 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:11:21:888 Kernel/(10551:10560): PID: 0
+[INFO] 17:11:21:888 Kernel/(10551:10551): Finaliza el proceso 0 - Motivo: PID1
+[INFO] 17:12:46:037 Kernel/(10622:10622): Listo para escuchar a mi cliente
+[INFO] 17:13:21:941 Kernel/(10655:10655): Listo para escuchar a mi cliente
+[INFO] 17:16:32:789 Kernel/(10686:10686): Listo para escuchar a mi cliente
+[INFO] 17:16:37:563 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:37:563 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:37:610 Kernel/(10686:10706): Se crea el proceso 0 en NEW
+[INFO] 17:16:37:611 Kernel/(10686:10692): PID: 0 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:37:611 Kernel/(10686:10693): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:16:37:611 Kernel/(10686:10686): PID: 0 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:16:37:611 Kernel/(10686:10686): Finaliza el proceso 0 - Motivo: PID1
+[INFO] 17:16:37:611 Kernel/(10686:10694): PID Terminado: 0
+[INFO] 17:16:40:958 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:40:959 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:41:002 Kernel/(10686:10718): Se crea el proceso 1 en NEW
+[INFO] 17:16:41:003 Kernel/(10686:10692): PID: 1 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:41:003 Kernel/(10686:10693): PID: 1 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:16:41:003 Kernel/(10686:10686): PID: 1 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:16:41:003 Kernel/(10686:10686): Finaliza el proceso 1 - Motivo: PID2
+[INFO] 17:16:41:003 Kernel/(10686:10694): PID Terminado: 1
+[INFO] 17:16:42:644 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:42:644 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:42:687 Kernel/(10686:10729): Se crea el proceso 2 en NEW
+[INFO] 17:16:42:687 Kernel/(10686:10692): PID: 2 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:42:687 Kernel/(10686:10693): PID: 2 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:16:42:687 Kernel/(10686:10686): PID: 2 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:16:42:687 Kernel/(10686:10686): Finaliza el proceso 2 - Motivo: PID3
+[INFO] 17:16:42:687 Kernel/(10686:10694): PID Terminado: 2
+[INFO] 17:16:43:991 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:43:991 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:44:030 Kernel/(10686:10741): Se crea el proceso 3 en NEW
+[INFO] 17:16:44:031 Kernel/(10686:10692): PID: 3 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:44:031 Kernel/(10686:10693): PID: 3 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:16:44:031 Kernel/(10686:10686): PID: 3 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:16:44:031 Kernel/(10686:10686): Finaliza el proceso 3 - Motivo: PID4
+[INFO] 17:16:44:031 Kernel/(10686:10694): PID Terminado: 3
+[INFO] 17:16:45:127 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:45:128 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:45:171 Kernel/(10686:10751): Se crea el proceso 4 en NEW
+[INFO] 17:16:45:171 Kernel/(10686:10692): PID: 4 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:45:171 Kernel/(10686:10693): PID: 4 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:16:45:171 Kernel/(10686:10686): PID: 4 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:16:45:171 Kernel/(10686:10686): Finaliza el proceso 4 - Motivo: PID5
+[INFO] 17:16:45:171 Kernel/(10686:10694): PID Terminado: 4
+[INFO] 17:16:46:163 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:46:164 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:46:213 Kernel/(10686:10763): Se crea el proceso 5 en NEW
+[INFO] 17:16:46:213 Kernel/(10686:10692): PID: 5 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:46:213 Kernel/(10686:10693): PID: 5 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:16:46:213 Kernel/(10686:10686): PID: 5 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 17:16:46:213 Kernel/(10686:10686): Finaliza el proceso 5 - Motivo: PID6
+[INFO] 17:16:46:213 Kernel/(10686:10686): Cant de consolas en ready: 0
+[INFO] 17:16:46:214 Kernel/(10686:10694): PID Terminado: 5
+[INFO] 17:16:46:214 Kernel/(10686:10686): Cant de consolas en new: 0
+[INFO] 17:16:47:300 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:47:303 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:47:357 Kernel/(10686:10774): Se crea el proceso 6 en NEW
+[INFO] 17:16:47:359 Kernel/(10686:10692): PID: 6 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:47:360 Kernel/(10686:10693): PID: 6 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:16:49:160 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:49:161 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:49:204 Kernel/(10686:10787): Se crea el proceso 7 en NEW
+[INFO] 17:16:49:204 Kernel/(10686:10692): PID: 7 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 17:16:52:176 Kernel/(10686:10691): Se conecto un cliente!
+[INFO] 17:16:52:177 Kernel/(10686:10691): Handshake con Consola realizado.
+[INFO] 17:16:52:228 Kernel/(10686:10798): Se crea el proceso 8 en NEW
+[INFO] 17:16:52:228 Kernel/(10686:10692): PID: 8 -	Estado anterior: NEW - Estado actual: READY

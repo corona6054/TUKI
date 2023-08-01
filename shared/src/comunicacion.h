@@ -26,9 +26,11 @@ int crear_conexion(char*, int);
 void enviar_buffer(t_buffer* buffer, int socket);
 t_buffer* recibir_buffer(int socket);
 
-void enviar_codigo(int socket, op_code);
-op_code recibir_codigo(int socket);
+void enviar_codigo(int socket_receptor, op_code codigo_a_enviar);
+op_code recibir_codigo(int socket_emisor);
 
+void enviar_handshake(int socket_receptor);
+op_code recibir_handshake(int socket_emisor);
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 
 #endif /* COMUNICACION_H_ */

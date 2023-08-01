@@ -3,12 +3,33 @@
 int main(void){
 	levantar_modulo();
 	
-	while(1);
+	pthread_t t;
+	pthread_create(&t, NULL, (void *) enviar_de_new_a_ready, NULL);
+	pthread_detach(t);
+
+	pthread_t t2;
+	pthread_create(&t2, NULL, (void *) enviar_de_ready_a_exec, NULL);
+	pthread_detach(t2);
+
+	pthread_t t3;
+	pthread_create(&t3, NULL, (void *) terminar_procesos, NULL);
+	pthread_detach(t3);
 	
+	// usleep(5 * 1000000);
+
+	enviar_de_exec_a_exit("PID1");
+	enviar_de_exec_a_exit("PID2");
+	enviar_de_exec_a_exit("PID3");
+	enviar_de_exec_a_exit("PID4");
+	enviar_de_exec_a_exit("PID5");
+	enviar_de_exec_a_exit("PID6");
+	
+	log_info(logger, "Cant de consolas en ready: %d", queue_size(procesosReady));
+	log_info(logger, "Cant de consolas en new: %d", list_size(procesosNew -> elements));
+	
+	while(1);
 	return 0;
 }
-
-
 
 
 // SUBPROGRAMAS
@@ -22,7 +43,7 @@ void levantar_modulo(){
 	incializar_semaforos();
 	inicializar_recurso_nulo();
 
-	//establecer_conexiones();
+	establecer_conexiones();
 	return;
 }
 
@@ -36,20 +57,28 @@ void incializar_listas(){
 }
 
 void incializar_semaforos(){
+	// COLAS
 	pthread_mutex_init(&mutex_new, NULL);
 	pthread_mutex_init(&mutex_ready, NULL);
 	pthread_mutex_init(&mutex_blocked, NULL);
 	pthread_mutex_init(&mutex_exec, NULL);
 	pthread_mutex_init(&mutex_exit, NULL);
+	// FIN COLAS
+	
+	pthread_mutex_init(&mutex_pid_a_asignar, NULL); // para var global pid
 	
 	//para no agregar mas procesos a READY de los q permite el grado max de multi
 	sem_init(&cont_grado_max_multiprog, 0, config_kernel.grado_max_multi); 
 
-	sem_init(&cont_exit, 0, 0); //para postear cuando uno entra a exit y poder matar su consola
+	//para postear cuando uno entra a exit y poder matar su consola
+	sem_init(&cont_new, 0, 0); 
+	sem_init(&cont_ready, 0, 0);
+	sem_init(&cont_exec, 0, 0);
+	sem_init(&cont_exit, 0, 0);
 
+
+	// Para ver si el procesador esta libre para mandar un proceso a ejecucion
 	sem_init(&cont_procesador_libre, 0, 1);
-	//Semaforos conexiones y recibos/envios
-	//sem_init(&conexion_consola, 0, 0);
 }
 
 void finalizar_modulo(){
@@ -159,14 +188,21 @@ void establecer_conexiones()
 	socket_cpu = crear_conexion(config_kernel.ip_cpu, config_kernel.puerto_cpu);
 	if (socket_cpu >= 0){			
 		log_info(logger,"Conectado con cpu");
-		pthread_t conexion_cpu;
-		pthread_create(&conexion_cpu, NULL, (void *) manejar_conexion_con_cpu, NULL);
-		pthread_detach(conexion_cpu);
+
+		enviar_handshake(socket_cpu);
+		if (recibir_handshake(socket_cpu) == HANDSHAKE){
+			log_info(logger, "Handshake con CPU realizado.");
+			pthread_t conexion_cpu;
+			pthread_create(&conexion_cpu, NULL, (void *) manejar_conexion_con_cpu, NULL);
+			pthread_detach(conexion_cpu);
+			
+		}else
+			log_info(logger, "Ocurio un error al realizar el handshake con CPU.");
 	}
 	else
 		log_info(logger,"Error al conectar con cpu");
-
 	*/
+	
 
 	/*
 	socket_file_system = crear_conexion(config_kernel.ip_file_system, config_kernel.puerto_file_system);
@@ -188,15 +224,23 @@ void establecer_conexiones()
 }
 
 void esperar_consolas(){
-	//thread para espersar clientes
+	//thread para esperar clientes
 	while(1){
 		int socket = esperar_cliente(server_fd, logger);
 
-		pthread_t t;
-		pthread_create(&t, NULL, (void *) recepcionar_proceso, (void *) &socket);
-		pthread_detach(t);
+		if (recibir_handshake(socket) == HANDSHAKE){
+			enviar_handshake(socket);
+			log_info(logger, "Handshake con Consola realizado.");
+			
+			pthread_t admitir_consolas;
+			pthread_create(&admitir_consolas, NULL, (void *) recepcionar_proceso, (void *) &socket);
+			pthread_detach(admitir_consolas);
+		}else
+			log_info(logger, "Ocurio un error al realizar el handshake con Consola.");
+
 	}
 }
+
 // FIN UTILS CONEXIONES -----------------------------------------------------------------
 
 
@@ -221,11 +265,14 @@ void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex){
 // TRANSICIONES CORTO PLAZO -------------------------------------------------------------
 void enviar_de_ready_a_exec(){
 	while(1){
+		sem_wait(&cont_ready);
 		sem_wait(&cont_procesador_libre);
 		t_pcb* pcb_a_exec = retirar_pcb_de_ready_segun_algoritmo();
 		agregar_pcb_a(procesosExec, pcb_a_exec, &mutex_exec);
+		sem_post(&cont_exec);
+		log_info(logger, "PID: %d - Estado anterior: READY - Estado actual: EXEC", pcb_a_exec->cde->pid); //OBLIGATORIO
 		
-		log_info(logger, "PID: %d	-	Estado anterior: READY	-	Estado actual: EXEC", pcb_a_exec->cde->pid); //OBLIGATORIO
+		// Falta enviar CDE a CPU
 
 	}
 }
@@ -233,37 +280,42 @@ void enviar_de_ready_a_exec(){
 void enviar_de_exec_a_psedudoblock(char* razon){ // SOLO PARA WAIT, por ARCHIVOS y por (IO -> va a ser un hilo aparte)
 	// razones: "nombre de recurso" || "nombre de archivo" |||||| io va aparte
 	t_pcb* pcb_a_blocked = retirar_pcb_de(procesosExec, &mutex_blocked);
-	log_info(logger, "PID: %d	-	Estado anterior: EXEC	-	Estado actual: BLOCK", pcb_a_blocked->cde->pid); //OBLIGATORIO
-	log_info("PID: %d	-	Bloqueado por: %s", pcb_a_blocked->cde->pid, razon);
+	log_info(logger, "PID: %d - Estado anterior: EXEC -	Estado actual: BLOCK", pcb_a_blocked->cde->pid); //OBLIGATORIO
+	log_info("PID: %d -	Bloqueado por: %s", pcb_a_blocked->cde->pid, razon);
 }
 
 void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
 	t_pcb* pcb_a_ready = retirar_pcb_de(procesosExec, &mutex_exec);
 	sem_post(&cont_procesador_libre);
 	agregar_pcb_a(procesosReady, pcb_a_ready, &mutex_exec);
-	log_info(logger, "Cola ready %s :");
-	//mostrar_pids(pcb_a_ready->cde->lista_de_instrucciones);
+	sem_post(&cont_ready);
+	// log_info(logger, "Cola ready %s :");
+	// mostrar_pids(pcb_a_ready->cde->lista_de_instrucciones);
 }
 
 void enviar_de_pseudoblock_a_ready(t_pcb* pcb){
 		agregar_pcb_a(procesosReady, pcb, &mutex_ready);
-		log_info(logger, "PID: %d	-	Estado anterior: BLOCK	-	Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
+		log_info(logger, "PID: %d -	Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
+		sem_post(&cont_ready);
 }
 
 void enviar_de_exec_a_exit(char* razon){
+	sem_wait(&cont_exec);
 	t_pcb* pcb_retirado = retirar_pcb_de(procesosExec, &mutex_exec);
 	sem_post(&cont_procesador_libre); // se libera el procesador
 
 	agregar_pcb_a(procesosExit, pcb_retirado, &mutex_exit);
+	log_info(logger, "PID: %d -	Estado anterior: EXEC - Estado actual: EXIT", pcb_retirado->cde->pid); //OBLIGATORIO
+	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb_retirado->cde->pid, razon);
 	sem_post(&cont_exit); // se agrega uno a procesosExit
 	sem_post(&cont_grado_max_multiprog);
-	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb_retirado->cde->pid, razon);
 }
 // FIN TRANSICIONES CORTO PLAZO ---------------------------------------------------------
 
 // TRANSICIONES LARGO PLAZO -------------------------------------------------------------
 void enviar_de_new_a_ready(){
 	while(1){
+		sem_wait(&cont_new);
 		sem_wait(&cont_grado_max_multiprog);
 		// falta un semaforo por si procesosNew esta vacia
 		t_pcb* pcb_a_ready = retirar_pcb_de(procesosNew, &mutex_new);
@@ -275,6 +327,9 @@ void enviar_de_new_a_ready(){
 
 		//MEMORIA nos tiene que mandar la tabla de segmentos inicial para guardarla en el PCB !!!!
 		agregar_pcb_a(procesosReady, pcb_a_ready, &mutex_ready);
+		log_info(logger, "PID: %d -	Estado anterior: NEW - Estado actual: READY", pcb_a_ready->cde->pid); //OBLIGATORIO
+		sem_post(&cont_ready);
+
 		
 	}
 }
@@ -288,15 +343,16 @@ void recepcionar_proceso(void* arg){
 	t_buffer* buffer = recibir_buffer(socket_a_atender);
 
 	t_list* lista_instrucciones = buffer_read_lista_instrucciones(buffer);
-
+	/*
 	log_info(logger, "Mostrando instrucciones recibidas:");
-
 	mostrar_instrucciones(logger, lista_instrucciones);
+	*/
 
 	t_pcb* pcb_recibido = crear_pcb(lista_instrucciones, socket_a_atender);
 
 	agregar_pcb_a(procesosNew, pcb_recibido, &mutex_new);
 	log_info(logger, "Se crea el proceso %d en NEW", pcb_recibido->cde->pid);
+	sem_post(&cont_new);
 }
 
 void terminar_procesos(){
@@ -309,15 +365,17 @@ void terminar_procesos(){
 		//liberar recursos asignados
 		//liberar_todos_recursos(pcb);
 		//avisar a memoria para liberar estructuras		
-		op_code aviso_de_fin_a_memoria = FIN_PROCESO_MEMORIA;
+		//op_code aviso_de_fin_a_memoria = FIN_PROCESO_MEMORIA;
 		//enviar_codigo(socket_memoria, aviso_de_fin_a_memoria);
+		
+		log_info(logger, "PID Terminado: %d", pcb->cde->pid);
 
 		//avisar a consola para matar conexion
 		op_code terminar_consola = FIN_PROCESO_CONSOLA;
-		enviar_codigo(pcb->socket_consola, terminar_consola);
+		//enviar_codigo(pcb->socket_consola, terminar_consola);
 
 
-		destruir_pcb(pcb);
+		//destruir_pcb(pcb);
 	}
 }
 // FIN TRANSICIONES LARGO PLAZO ---------------------------------------------------------
@@ -470,14 +528,12 @@ void desbloquear_proceso(char* recurso_libearado){
 
 // UTILS PARA SACAR DE READY ------------------------------------------------------------
 t_pcb* elegido_por_FIFO(){
-	t_pcb* pcb;
-
-	return pcb;
+	return retirar_pcb_de(procesosReady, &mutex_ready);
 }
 
 t_pcb* elegido_por_HRRN(){
 	t_pcb* pcb;
-
+	
 	return pcb;
 }
 
@@ -497,7 +553,13 @@ t_pcb* retirar_pcb_de_ready_segun_algoritmo(){
 t_cde* crear_cde(t_list* instrucciones){
 	t_cde* cde = malloc(sizeof(t_cde));
 
+
+	pthread_mutex_lock(&mutex_pid_a_asignar);
 	cde->pid = pid;
+	pid++;
+	pthread_mutex_unlock(&mutex_pid_a_asignar);
+	
+	
 	cde->lista_de_instrucciones = instrucciones;
 	cde->program_counter = 0;
 	cde->registros_cpu = inicializar_registros();
@@ -511,8 +573,7 @@ t_pcb* crear_pcb(t_list *instrucciones, int socket_con){
 	t_pcb* pcb = malloc(sizeof(t_pcb));
 	
 	pcb->cde = crear_cde(instrucciones);
-	pid++;
-
+	
 	pcb->estimado_prox_rafaga = config_kernel.est_inicial;
 	pcb->tiempo_llegada_ready = -1;
 

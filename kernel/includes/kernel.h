@@ -10,6 +10,7 @@
 #include <commons/config.h>
 #include <commons/memory.h>
 #include <pthread.h>
+#include <time.h>
 #include <semaphore.h>
 #include <unistd.h>
 #include "comunicacion.h"
@@ -67,10 +68,17 @@ pthread_mutex_t mutex_ready;
 pthread_mutex_t mutex_blocked;
 pthread_mutex_t mutex_exec;
 pthread_mutex_t mutex_exit;
+pthread_mutex_t mutex_pid_a_asignar;
+
 
 // Contadores
 // Importante ver si es puntero o no para ponerle el & (o no)
+sem_t cont_new;
+sem_t cont_ready;
+sem_t cont_exec;
 sem_t cont_exit;
+
+
 sem_t cont_grado_max_multiprog;
 sem_t cont_procesador_libre;
 
