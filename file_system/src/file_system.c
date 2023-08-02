@@ -15,6 +15,20 @@ int main(void){
 }
 
 // SUBPROGRAMAS
+
+// lee archivo desde pos el size pedido
+void * leerArchivo(char* nombre, int pos, int size){
+	void* leido=malloc(size);
+	strcpy(buscado,nombre);
+	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
+	int tam_restante = seleccionado->file_size - pos ;
+	div_t start_pos = div(pos, superbloque.block_size);
+	int puntero = start_pos.quot;
+	int offset = start_pos.rem;
+
+
+}
+//devuelve bloque libre del bitarray
 uint32_t bloqueLibre(){
 	uint32_t offset=-1;
 	for(uint32_t i = 0;i<bitarray_size;i++){
@@ -27,6 +41,7 @@ uint32_t bloqueLibre(){
 	return offset;
 }
 
+//libera bloque del bitarray
 int liberarBloque(uint32_t bit){
 	if(bitarray_test_bit(bitarray,bit)==0) {
 		bitarray_set_bit(bitarray,bit);
@@ -34,6 +49,7 @@ int liberarBloque(uint32_t bit){
 	return 0;
 }
 
+//agrega una cantidad de  bloques aoartir del ultimo bloque
 int agregarBloques(int agregar, FCB* seleccionado){
 	void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
 	int pos_nuevos = (seleccionado->file_size/superbloque.block_size);
@@ -45,6 +61,7 @@ int agregarBloques(int agregar, FCB* seleccionado){
 	return 0;
 
 }
+//elimina una cantidad de bloques apartir del ultimo bloque
 int eliminarBloques(int eliminar,FCB* seleccionado){
 	void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
 	int pos_viejos = (seleccionado->file_size/superbloque.block_size)-2;
@@ -56,11 +73,12 @@ int eliminarBloques(int eliminar,FCB* seleccionado){
 		return 0;
 }
 
+// reduce o extiende fcb segun lo pedido
 int truncarArchivo(char* nombre, int size){
 	strcpy(buscado,nombre);
 	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
 	if(seleccionado){
-	int bloques_restantes = (size +63)/superbloque.block_size;
+	int bloques_restantes = (size +superbloque.block_size -1)/superbloque.block_size;
 	int tam_viejo=seleccionado->file_size/superbloque.block_size;
 	if(bloques_restantes==0){
 			liberarBloque(seleccionado->direct_pointer);
@@ -98,7 +116,7 @@ int truncarArchivo(char* nombre, int size){
 
 }
 
-
+// busca FCB por nombre
 bool igualBuscado(void * ptr){
 	FCB* seleccionado = (FCB*) ptr;
 	if (strcmp(seleccionado->file_name,buscado)==0){
@@ -106,6 +124,7 @@ bool igualBuscado(void * ptr){
 	} else return 0;
 
 }
+// verifica existencia de archivo
 int abrirArchivo(char* nombre){
 	strcpy(buscado,nombre);
 	bool resultado = list_any_satisfy(fcb_list,igualBuscado);
@@ -117,6 +136,7 @@ int abrirArchivo(char* nombre){
 	return resultado;
 
 }
+//crea archivo fcb  y lo carga a la lista de FCBs
 int crearArchivo(char* nombre){
 	FCB *fcb_nuevo;
 	fcb_nuevo=malloc(sizeof(FCB));
@@ -140,6 +160,8 @@ int crearArchivo(char* nombre){
 	return 0;
 
 }
+
+//abre superbloque, bitarray, FCBs y archivo de bloques
 int crearEstructuras(){
 	//superbloque
 	t_config* superbloque_config;
@@ -208,6 +230,7 @@ int crearEstructuras(){
     return 0;
 }
 
+// cierra mmaps de bitarray y archivo de bloques
 int cerrarEstructuras(){
 	int sync = msync(bitarray_pointer, bitarray_size, MS_SYNC);
 	    if(sync == -1) printf("Error syncing bitarray");
