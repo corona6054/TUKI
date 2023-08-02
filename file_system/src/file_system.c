@@ -9,6 +9,10 @@ int main(void){
 	abrirArchivo("hola");
 	truncarArchivo("hola",100);
 	leerArchivo("hola",30,70);
+	char* texto= malloc(70);
+	*texto = "hola \0";
+	escribirArchivo("hola",30,70,texto);
+
 	cerrarEstructuras();
 
 	finalizar_modulo();
@@ -17,12 +21,53 @@ int main(void){
 
 // SUBPROGRAMAS
 
+int escribirArchivo(char* nombre, int pos, int size, void*datos){
+	int offset=0;
+		strcpy(buscado,nombre);
+		FCB* seleccionado = (FCB*)list_find(fcb_list,igualBuscado);
+		int tam_restante = seleccionado->file_size - pos ;
+			if(size < tam_restante){
+				div_t start_pos = div(pos, superbloque.block_size);
+				int nro_bloque = start_pos.quot;
+				int tam_escrito = superbloque.block_size - start_pos.rem;
+				void * bloque_destino;
+				if(nro_bloque == 0){
+						bloque_destino =archivobloques_pointer +seleccionado->direct_pointer*superbloque.block_size+start_pos.rem;
+						memcpy(bloque_destino,datos,tam_escrito);
+						offset=offset+tam_escrito;
+						tam_restante = size- tam_escrito;
+
+					}
+				void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
+					uint32_t* destination = (uint32_t*)bloque_punteros;
+					if(nro_bloque>0){
+						bloque_destino =archivobloques_pointer +destination[nro_bloque]*superbloque.block_size+start_pos.rem;
+						memcpy(bloque_destino,datos,tam_escrito);
+						offset=offset+tam_escrito;
+						tam_restante = size- tam_escrito;
+					}
+					if(tam_restante>0){
+							int bloques_restantes= tam_restante/superbloque.block_size;
+								  for(int i = nro_bloque;i<bloques_restantes;i++){
+									  bloque_destino =archivobloques_pointer +destination[i]*superbloque.block_size;
+									  memcpy(bloque_destino,datos+offset,superbloque.block_size);
+									  offset=offset+superbloque.block_size;
+									  tam_restante=tam_restante-superbloque.block_size;
+								  }
+								  bloque_destino =archivobloques_pointer +destination[bloques_restantes]*superbloque.block_size;
+								  memcpy(bloque_destino,datos+offset,tam_restante);
+						}
+				return 0;
+			} else return -1;
+
+}
+
 // lee archivo desde pos el size pedido
 void * leerArchivo(char* nombre, int pos, int size){
 	void* leido=malloc(size);
 	int offset=0;
 	strcpy(buscado,nombre);
-	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
+	FCB* seleccionado = (FCB*)list_find(fcb_list,igualBuscado);
 	int tam_restante = seleccionado->file_size - pos ;
 	if(size < tam_restante){
 	div_t start_pos = div(pos, superbloque.block_size);
@@ -36,15 +81,15 @@ void * leerArchivo(char* nombre, int pos, int size){
 		tam_restante = size- tam_leido;
 
 	}
+	void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
+	uint32_t* destination = (uint32_t*)bloque_punteros;
+	if(nro_bloque>0){
+		bloque_leido =archivobloques_pointer +destination[nro_bloque]*superbloque.block_size+start_pos.rem;
+		memcpy(leido,bloque_leido,tam_leido);
+		offset=offset+tam_leido;
+		tam_restante = size- tam_leido;
+	}
 	if(tam_restante>0){
-		void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
-		uint32_t* destination = (uint32_t*)bloque_punteros;
-		if(nro_bloque>0){
-			bloque_leido =archivobloques_pointer +destination[nro_bloque]*superbloque.block_size+start_pos.rem;
-			memcpy(leido,bloque_leido,tam_leido);
-			offset=offset+tam_leido;
-			tam_restante = size- tam_leido;
-			}
 		int bloques_restantes= tam_restante/superbloque.block_size;
 			  for(int i = nro_bloque;i<bloques_restantes;i++){
 				  bloque_leido =archivobloques_pointer +destination[i]*superbloque.block_size;
