@@ -8,6 +8,7 @@ int main(void){
 	//crearArchivo("hola");
 	abrirArchivo("hola");
 	truncarArchivo("hola",100);
+	leerArchivo("hola",30,70);
 	cerrarEstructuras();
 
 	finalizar_modulo();
@@ -19,13 +20,44 @@ int main(void){
 // lee archivo desde pos el size pedido
 void * leerArchivo(char* nombre, int pos, int size){
 	void* leido=malloc(size);
+	int offset=0;
 	strcpy(buscado,nombre);
 	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
 	int tam_restante = seleccionado->file_size - pos ;
+	if(size < tam_restante){
 	div_t start_pos = div(pos, superbloque.block_size);
-	int puntero = start_pos.quot;
-	int offset = start_pos.rem;
+	int nro_bloque = start_pos.quot;
+	int tam_leido = superbloque.block_size - start_pos.rem;
+	void * bloque_leido;
+	if(nro_bloque == 0){
+		bloque_leido =archivobloques_pointer +seleccionado->direct_pointer*superbloque.block_size+start_pos.rem;
+		memcpy(leido,bloque_leido,tam_leido);
+		offset=offset+tam_leido;
+		tam_restante = size- tam_leido;
 
+	}
+	if(tam_restante>0){
+		void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
+		uint32_t* destination = (uint32_t*)bloque_punteros;
+		if(nro_bloque>0){
+			bloque_leido =archivobloques_pointer +destination[nro_bloque]*superbloque.block_size+start_pos.rem;
+			memcpy(leido,bloque_leido,tam_leido);
+			offset=offset+tam_leido;
+			tam_restante = size- tam_leido;
+			}
+		int bloques_restantes= tam_restante/superbloque.block_size;
+			  for(int i = nro_bloque;i<bloques_restantes;i++){
+				  bloque_leido =archivobloques_pointer +destination[i]*superbloque.block_size;
+				  memcpy(leido+offset,bloque_leido,superbloque.block_size);
+				  offset=offset+superbloque.block_size;
+				  tam_restante=tam_restante-superbloque.block_size;
+			  }
+			  bloque_leido =archivobloques_pointer +destination[bloques_restantes]*superbloque.block_size;
+			  memcpy(leido+offset,bloque_leido,tam_restante);
+	}
+	return leido;
+	}
+	else return -1;
 
 }
 //devuelve bloque libre del bitarray

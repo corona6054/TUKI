@@ -187,3 +187,8 @@
 [INFO] 20:31:44:070 FileSystem/(13307:13307): Estructuras creadas
 [INFO] 20:31:44:470 FileSystem/(13307:13307): Abrir Archivo: hola
 [INFO] 20:33:39:721 FileSystem/(13307:13307): Estructuras terminadas
+[INFO] 19:12:59:447 FileSystem/(24361:24361): Estructuras creadas
+[INFO] 19:12:59:862 FileSystem/(24361:24361): Abrir Archivo: hola
+[INFO] 19:23:57:406 FileSystem/(25229:25229): Estructuras creadas
+[INFO] 19:23:57:650 FileSystem/(25229:25229): Abrir Archivo: hola
+[INFO] 19:27:40:997 FileSystem/(25229:25229): Estructuras terminadas

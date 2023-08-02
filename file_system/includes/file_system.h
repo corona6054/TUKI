@@ -82,6 +82,7 @@ bool igualBuscado(void * ptr);
 uint32_t  bloqueLibre();
 int liberarBloque(uint32_t bit);
 int truncarArchivo(char* nombre, int size);
+void * leerArchivo(char* nombre, int pos, int size);
 
 
 // FIN DE PROTOTIPOS DE FUNCIONES ---------------------------------------------
