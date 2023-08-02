@@ -2,14 +2,64 @@
 
 // usleep(5 * 1000000);
 
+t_instruction* inicializar_instruccion(InstructionType codigo, char* str1, char* str2){
+	t_instruction* instr = malloc(sizeof(t_instruction));
+
+	instr -> instruccion = codigo;
+
+	int tam1 = 0;
+	while(str1[tam1] != NULL)
+		tam1++;
+
+	instr->string1 = malloc(tam1);
+	strcpy(instr->string1, str1);
+
+
+	int tam2 = 0;
+		while(str1[tam1] != NULL)
+			tam2++;
+		instr->string2 = malloc(tam2);
+		strcpy(instr->string2, str2);
+
+	return instr;
+}
+
+t_list* instruccion_prueba(){
+	t_list* lista_prueba = list_create();
+
+	list_add(lista_prueba, inicializar_instruccion(SET, "AX", "AAAA"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "BX", "BBBB"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "CX", "CCCC"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "DX", "DDDD"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "EAX", "AAAAAAAA"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "EBX", "BBBBBBBB"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "ECX", "CCCCCCCC"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "EDX", "DDDDDDDD"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RAX", "AAAAAAAAAAAA"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RBX", "BBBBBBBBBBBB"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RCX", "CCCCCCCCCCCC"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RDX", "DDDDDDDDDDDD"));
+	list_add(lista_prueba, inicializar_instruccion(YIELD, "v", "v"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RAX", "TCHOUAMENIAFUERA"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RBX", "SEGUNDO_FRANCIA_"));
+	list_add(lista_prueba, inicializar_instruccion(EXIT, "v", "v"));
+
+	return lista_prueba;
+}
+
 int main(void){
+
 	levantar_modulo();
-	
-	// PRUEBA Q CDE SE ENVIE BIEN A CPU
+	t_list* lista_instrucciones_prueba = instruccion_prueba();
 
-	// FIN PRUEBA Q CDE SE ENVIE BIEN A CPU
+	t_pcb*  pcb = crear_pcb(lista_instrucciones_prueba, 25);
 
-	//planificadores();
+	log_info(logger, "Por agregar  PCB a cola NEW");
+	agregar_pcb_a(procesosNew, pcb, &mutex_new);
+	sem_post(&cont_new);
+
+	log_info(logger, "Por iniciar los planificadores");
+	planificadores();
 
 	//time_t tiempo_actual = time(NULL);
 	//log_info(logger, "Tiempo actual: %lf", tiempo_actual);
@@ -66,8 +116,11 @@ void incializar_semaforos(){
 	sem_init(&cont_exec, 0, 0);
 	sem_init(&cont_exit, 0, 0);
 
-	sem_init(&bin1_envio_cde, 0, 0);
+	sem_init(&bin1_envio_cde, 0, 1);
 	sem_init(&bin2_recibir_cde, 0, 0);
+
+	sem_init(&necesito_enviar_cde, 0, 0);
+
 	// Para ver si el procesador esta libre para mandar un proceso a ejecucion
 	sem_init(&cont_procesador_libre, 0, 1);
 }
@@ -147,12 +200,7 @@ void manejar_conexion_con_memoria(){
 }
 
 void manejar_conexion_con_cpu(){
-	t_list* lista_de_prueba = list_create();
-
-	pcb_en_ejecucion = crear_pcb(lista_de_prueba, 25);
-
 	
-	sem_post(&bin1_envio_cde);
 	pthread_t p1;
 	pthread_create(&p1, NULL, (void*) enviar_cde_a_cpu, NULL);
 	pthread_detach(p1);
@@ -190,16 +238,13 @@ void establecer_conexiones()
 		if (recibir_handshake(socket_cpu) == HANDSHAKE){
 			log_info(logger, "Handshake con CPU realizado.");
 
-			pthread_t conexion_cpu;
-			pthread_create(&conexion_cpu, NULL, (void *) manejar_conexion_con_cpu, NULL);
-			pthread_detach(conexion_cpu);
-			
+			manejar_conexion_con_cpu();
+
 		}else
 			log_info(logger, "Ocurio un error al realizar el handshake con CPU.");
 	}
 	else
 		log_info(logger,"Error al conectar con cpu");
-
 
 	/*
 	socket_file_system = crear_conexion(config_kernel.ip_file_system, config_kernel.puerto_file_system);
@@ -243,11 +288,22 @@ void recibir_cde_de_cpu(){
 	while(1){
 		sem_wait(&bin2_recibir_cde);
 		log_info(logger, "A punto de recibir buffer");;
-		t_buffer* buffer = recibir_buffer(socket_cpu);
+
+		t_buffer* buffer = crear_buffer_nuestro();
+
+		// Recibo el codigo del buffer
+		recv(socket, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL);
+
+		// Recibo el tamanio del buffer y reservo espacio en memoria
+		recv(socket, &(buffer -> size), sizeof(uint32_t), MSG_WAITALL);
+		buffer -> stream = malloc(buffer -> size);
+
+		// Recibo stream del buffer
+		recv(socket, buffer -> stream, buffer -> size, MSG_WAITALL);
+
 		log_info(logger, "Buffer Recibido");
 		t_cde cde = buffer_read_cde(buffer);
-
-		
+		log_info(logger, "Buffer leido");
 
 		pcb_en_ejecucion -> cde -> pid = cde.pid;
 		pcb_en_ejecucion -> cde -> lista_de_instrucciones = cde.lista_de_instrucciones;
@@ -256,19 +312,19 @@ void recibir_cde_de_cpu(){
 		pcb_en_ejecucion -> cde -> tabla_segmentos = cde.tabla_segmentos;
 
 		log_info(logger, "Proceso en ejecucion: %d", pcb_en_ejecucion->cde->pid);
-		pcb_en_ejecucion->cde->pid++;
-		//evaluar_instruccion(); // aca posteo envio_cde
+		sem_post(&bin1_envio_cde);
+		evaluar_instruccion(); // aca posteo necesito_enviar_cde
 	}
 }
 
 void enviar_cde_a_cpu(){
 	while(1){
+		sem_wait(&necesito_enviar_cde);
 		sem_wait(&bin1_envio_cde);
 		t_buffer* buffer = crear_buffer_nuestro();
 		buffer_write_cde(buffer, *(pcb_en_ejecucion->cde));
 		enviar_buffer(buffer, socket_cpu);
 		log_info(logger, "Envie cde a cpu");
-		// Si lo mande => espero a que vuelva
 		sem_post(&bin2_recibir_cde);
 	}
 }
@@ -298,8 +354,7 @@ void enviar_de_ready_a_exec(){
 	while(1){
 		sem_wait(&cont_ready);
 		sem_wait(&cont_procesador_libre);
-		//t_pcb* pcb_a_exec = retirar_pcb_de_ready_segun_algoritmo();
-		//agregar_pcb_a(procesosExec, pcb_a_exec, &mutex_exec);
+
 		pthread_mutex_lock(&mutex_exec);
 		pcb_en_ejecucion = retirar_pcb_de_ready_segun_algoritmo();
 		pthread_mutex_unlock(&mutex_exec);
@@ -307,8 +362,8 @@ void enviar_de_ready_a_exec(){
 		sem_post(&cont_exec);
 		log_info(logger, "PID: %d - Estado anterior: READY - Estado actual: EXEC", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
 		
-		// Se envia por primera vez
-		enviar_cde_a_cpu();
+		// Primer post de ese semaforo ya que se envia por primera vez
+		sem_post(&necesito_enviar_cde);
 	}
 }
 
@@ -320,9 +375,11 @@ void enviar_de_exec_a_psedudoblock(char* razon){ // SOLO PARA WAIT, por ARCHIVOS
 }
 
 void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
-	sem_post(&cont_procesador_libre);
 	agregar_pcb_a(procesosReady, pcb_en_ejecucion, &mutex_exec);
+	log_info(logger, "PID: %d -	Estado anterior: EXEC - Estado actual: READY", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+	sem_post(&cont_procesador_libre);
 	sem_post(&cont_ready);
+
 	// log_info(logger, "Cola ready %s :");
 	// mostrar_pids(pcb_a_ready->cde->lista_de_instrucciones);
 }
@@ -332,7 +389,6 @@ void enviar_de_pseudoblock_a_ready(t_pcb* pcb){
 	log_info(logger, "PID: %d -	Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
 	sem_post(&cont_ready);
 }
-
 void enviar_de_exec_a_exit(char* razon){
 	sem_wait(&cont_exec);
 	sem_post(&cont_procesador_libre); // se libera el procesador
@@ -384,7 +440,6 @@ void recepcionar_proceso(void* arg){
 }
 
 void terminar_procesos(){
-	//Verificar todo el tiempo si hay procesos en la lista de finalizados (x semaforos)
 	while(1){
 		// Semaforo contador de cuantos procesos hay en exit
 		sem_wait(&cont_exit);
@@ -400,7 +455,7 @@ void terminar_procesos(){
 
 		//avisar a consola para matar conexion
 		op_code terminar_consola = FIN_PROCESO_CONSOLA;
-		//enviar_codigo(pcb->socket_consola, terminar_consola);
+		enviar_codigo(pcb->socket_consola, terminar_consola);
 
 
 		//destruir_pcb(pcb);
@@ -546,10 +601,6 @@ t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener){
 	return recurso_nulo;
 }
 
-void desbloquear_proceso(char* recurso_libearado){
-
-}
-
 // FIN UTILS RECURSOS -------------------------------------------------------------------
 
 
@@ -607,18 +658,15 @@ t_pcb* retirar_pcb_de_ready_segun_algoritmo(){
 t_cde* crear_cde(t_list* instrucciones){
 	t_cde* cde = malloc(sizeof(t_cde));
 
-
 	pthread_mutex_lock(&mutex_pid_a_asignar);
-	cde->pid = 15;
-	//pid++;
+	cde->pid = pid;
+	pid++;
 	pthread_mutex_unlock(&mutex_pid_a_asignar);
-	
 	
 	cde->lista_de_instrucciones = instrucciones;
 	cde->program_counter = 0;
 	cde->registros_cpu = inicializar_registros();
     cde->tabla_segmentos = list_create();
-
 
 	return cde;
 }

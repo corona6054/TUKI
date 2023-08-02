@@ -467,3 +467,184 @@
 [INFO] 01:05:38:993 Cpu/(3648:3690): Proceso en ejecucion: 15
 [INFO] 01:05:38:993 Cpu/(3648:3690): A punto de enviar el cde a kernel
 [INFO] 01:05:38:993 Cpu/(3648:3690): Envie el cde a kernel
+[INFO] 13:08:35:888 Cpu/(2778:2778): Listo para escuchar a mi cliente
+[INFO] 13:08:44:427 Cpu/(2778:2778): Conectado con kernel
+[INFO] 13:08:44:427 Cpu/(2778:2778): Handshake con CPU realizado.
+[INFO] 13:08:44:471 Cpu/(2778:2813): Proceso en ejecucion: 15
+[INFO] 13:08:44:471 Cpu/(2778:2813): A punto de enviar el cde a kernel
+[INFO] 13:08:44:471 Cpu/(2778:2813): Envie el cde a kernel
+[INFO] 13:09:51:807 Cpu/(2847:2847): Listo para escuchar a mi cliente
+[INFO] 13:09:59:919 Cpu/(2847:2847): Conectado con kernel
+[INFO] 13:09:59:919 Cpu/(2847:2847): Handshake con CPU realizado.
+[INFO] 13:09:59:966 Cpu/(2847:2864): Proceso en ejecucion: 15
+[INFO] 13:09:59:966 Cpu/(2847:2864): A punto de enviar el cde a kernel
+[INFO] 13:09:59:966 Cpu/(2847:2864): Envie el cde a kernel
+[INFO] 13:10:00:053 Cpu/(2847:2864): Proceso en ejecucion: 17
+[INFO] 13:10:00:054 Cpu/(2847:2864): A punto de enviar el cde a kernel
+[INFO] 13:10:00:054 Cpu/(2847:2864): Envie el cde a kernel
+[INFO] 13:12:26:175 Cpu/(2886:2886): Listo para escuchar a mi cliente
+[INFO] 13:14:59:529 Cpu/(2933:2933): Listo para escuchar a mi cliente
+[INFO] 13:15:07:660 Cpu/(2933:2933): Conectado con kernel
+[INFO] 13:15:07:660 Cpu/(2933:2933): Handshake con CPU realizado.
+[INFO] 13:15:07:702 Cpu/(2933:2952): Proceso en ejecucion: 15
+[INFO] 13:15:07:702 Cpu/(2933:2952): A punto de enviar el cde a kernel
+[INFO] 13:15:07:702 Cpu/(2933:2952): Envie el cde a kernel
+[INFO] 13:15:07:794 Cpu/(2933:2952): Proceso en ejecucion: 17
+[INFO] 13:15:07:794 Cpu/(2933:2952): A punto de enviar el cde a kernel
+[INFO] 13:15:07:794 Cpu/(2933:2952): Envie el cde a kernel
+[INFO] 13:15:07:881 Cpu/(2933:2952): Proceso en ejecucion: 19
+[INFO] 13:15:07:881 Cpu/(2933:2952): A punto de enviar el cde a kernel
+[INFO] 13:15:07:881 Cpu/(2933:2952): Envie el cde a kernel
+[INFO] 13:32:01:588 Cpu/(3077:3077): Listo para escuchar a mi cliente
+[INFO] 13:32:11:431 Cpu/(3077:3077): Conectado con kernel
+[INFO] 13:32:11:432 Cpu/(3077:3077): Handshake con CPU realizado.
+[INFO] 13:34:00:695 Cpu/(3157:3157): Listo para escuchar a mi cliente
+[INFO] 13:34:11:575 Cpu/(3157:3157): Conectado con kernel
+[INFO] 13:34:11:575 Cpu/(3157:3157): Handshake con CPU realizado.
+[INFO] 13:35:53:453 Cpu/(3225:3225): Listo para escuchar a mi cliente
+[INFO] 13:36:15:497 Cpu/(3225:3225): Conectado con kernel
+[INFO] 13:36:15:497 Cpu/(3225:3225): Handshake con CPU realizado.
+[INFO] 13:36:44:758 Cpu/(3225:3286): Proceso en ejecucion: 15
+[INFO] 13:36:44:758 Cpu/(3225:3286): A punto de enviar el cde a kernel
+[INFO] 13:36:44:758 Cpu/(3225:3286): Envie el cde a kernel
+[INFO] 13:46:15:302 Cpu/(3538:3538): Listo para escuchar a mi cliente
+[INFO] 13:46:56:151 Cpu/(3538:3538): Conectado con kernel
+[INFO] 13:46:56:151 Cpu/(3538:3538): Handshake con Kernel realizado.
+[INFO] 13:47:11:899 Cpu/(3538:3555): Proceso en ejecucion: 15
+[INFO] 13:50:23:634 Cpu/(3596:3596): Listo para escuchar a mi cliente
+[INFO] 13:50:34:250 Cpu/(3596:3596): Conectado con kernel
+[INFO] 13:50:34:250 Cpu/(3596:3596): Handshake con Kernel realizado.
+[INFO] 13:50:42:391 Cpu/(3596:3614): Proceso en ejecucion: 15
+[INFO] 13:52:36:271 Cpu/(3671:3671): Listo para escuchar a mi cliente
+[INFO] 13:53:02:736 Cpu/(3671:3671): Conectado con kernel
+[INFO] 13:53:08:109 Cpu/(3671:3671): Handshake con Kernel realizado.
+[INFO] 13:59:12:257 Cpu/(3954:3954): Listo para escuchar a mi cliente
+[INFO] 13:59:34:100 Cpu/(3954:3954): Conectado con kernel
+[INFO] 13:59:44:718 Cpu/(3954:3954): Handshake con Kernel realizado.
+[INFO] 14:14:51:004 Cpu/(5084:5084): Listo para escuchar a mi cliente
+[INFO] 14:15:47:159 Cpu/(5146:5146): Listo para escuchar a mi cliente
+[INFO] 14:15:54:534 Cpu/(5146:5146): Conectado con kernel
+[INFO] 14:15:54:535 Cpu/(5146:5146): Handshake con Kernel realizado.
+[INFO] 14:16:08:817 Cpu/(5146:5182): Proceso en ejecucion: 0
+[INFO] 14:18:01:339 Cpu/(5234:5234): Listo para escuchar a mi cliente
+[INFO] 14:18:09:835 Cpu/(5234:5234): Conectado con kernel
+[INFO] 14:18:09:835 Cpu/(5234:5234): Handshake con Kernel realizado.
+[INFO] 14:18:18:549 Cpu/(5234:5252): Proceso en ejecucion: 0
+[INFO] 14:29:09:331 Cpu/(5670:5670): Listo para escuchar a mi cliente
+[INFO] 14:29:16:557 Cpu/(5670:5670): Conectado con kernel
+[INFO] 14:29:16:557 Cpu/(5670:5670): Handshake con Kernel realizado.
+[INFO] 14:29:33:149 Cpu/(5670:5704): Proceso en ejecucion: 0
+[INFO] 14:30:09:007 Cpu/(5734:5734): Listo para escuchar a mi cliente
+[INFO] 14:32:02:879 Cpu/(5920:5920): Listo para escuchar a mi cliente
+[INFO] 14:32:09:436 Cpu/(5920:5920): Conectado con kernel
+[INFO] 14:32:09:436 Cpu/(5920:5920): Handshake con Kernel realizado.
+[INFO] 14:33:10:594 Cpu/(5920:5938): Proceso en ejecucion: 0
+[INFO] 14:33:30:390 Cpu/(6096:6096): Listo para escuchar a mi cliente
+[INFO] 14:34:23:454 Cpu/(6125:6125): Listo para escuchar a mi cliente
+[INFO] 14:34:40:381 Cpu/(6125:6125): Conectado con kernel
+[INFO] 14:34:40:381 Cpu/(6125:6125): Handshake con Kernel realizado.
+[INFO] 14:36:24:366 Cpu/(6125:6143): Proceso en ejecucion: 0
+[INFO] 14:38:03:487 Cpu/(6365:6365): Listo para escuchar a mi cliente
+[INFO] 14:38:11:654 Cpu/(6365:6365): Conectado con kernel
+[INFO] 14:38:11:655 Cpu/(6365:6365): Handshake con Kernel realizado.
+[INFO] 14:38:25:062 Cpu/(6365:6385): Proceso en ejecucion: 0
+[INFO] 14:44:14:355 Cpu/(6554:6554): Listo para escuchar a mi cliente
+[INFO] 14:44:23:994 Cpu/(6554:6554): Conectado con kernel
+[INFO] 14:44:23:994 Cpu/(6554:6554): Handshake con Kernel realizado.
+[INFO] 14:45:03:755 Cpu/(6620:6620): Listo para escuchar a mi cliente
+[INFO] 14:56:27:396 Cpu/(6692:6692): Listo para escuchar a mi cliente
+[INFO] 14:56:34:092 Cpu/(6692:6692): Conectado con kernel
+[INFO] 14:56:34:093 Cpu/(6692:6692): Handshake con Kernel realizado.
+[INFO] 14:56:44:398 Cpu/(6692:6711): Proceso en ejecucion: 0
+[INFO] 15:56:28:751 Cpu/(8715:8715): Listo para escuchar a mi cliente
+[INFO] 15:57:35:324 Cpu/(8909:8909): Listo para escuchar a mi cliente
+[INFO] 15:58:31:119 Cpu/(8909:8909): Conectado con kernel
+[INFO] 15:58:35:288 Cpu/(8909:8909): Handshake con Kernel realizado.
+[INFO] 16:06:01:201 Cpu/(9231:9231): Listo para escuchar a mi cliente
+[INFO] 16:06:13:685 Cpu/(9231:9231): Conectado con kernel
+[INFO] 16:06:13:685 Cpu/(9231:9231): Handshake con Kernel realizado.
+[INFO] 16:07:04:450 Cpu/(9304:9304): Listo para escuchar a mi cliente
+[INFO] 16:07:14:870 Cpu/(9304:9304): Conectado con kernel
+[INFO] 16:07:14:870 Cpu/(9304:9304): Handshake con Kernel realizado.
+[INFO] 16:08:32:251 Cpu/(9378:9378): Listo para escuchar a mi cliente
+[INFO] 16:08:53:328 Cpu/(9378:9378): Conectado con kernel
+[INFO] 16:08:57:127 Cpu/(9378:9378): Handshake con Kernel realizado.
+[INFO] 16:52:17:409 Cpu/(10062:10062): Listo para escuchar a mi cliente
+[INFO] 16:53:38:526 Cpu/(10062:10062): Conectado con kernel
+[INFO] 16:53:38:526 Cpu/(10062:10062): Handshake con Kernel realizado.
+[INFO] 16:53:38:590 Cpu/(10062:10101): Proceso en ejecucion: 0
+[INFO] 16:59:45:173 Cpu/(10238:10238): Listo para escuchar a mi cliente
+[INFO] 16:59:53:382 Cpu/(10238:10238): Conectado con kernel
+[INFO] 16:59:53:383 Cpu/(10238:10238): Handshake con Kernel realizado.
+[INFO] 16:59:53:426 Cpu/(10238:10257): Proceso en ejecucion: 0
+[INFO] 16:59:53:426 Cpu/(10238:10259): Evaluadndo instruccion: 0
+[INFO] 16:59:53:426 Cpu/(10238:10258): A punto de enviar el cde a kernel
+[INFO] 17:03:40:778 Cpu/(10347:10347): Listo para escuchar a mi cliente
+[INFO] 17:03:58:907 Cpu/(10347:10347): Conectado con kernel
+[INFO] 17:03:58:907 Cpu/(10347:10347): Handshake con Kernel realizado.
+[INFO] 17:03:58:966 Cpu/(10347:10382): Proceso en ejecucion: 0
+[INFO] 17:03:58:966 Cpu/(10347:10386): Evaluadndo instruccion: 0
+[INFO] 17:03:58:966 Cpu/(10347:10383): A punto de enviar el cde a kernel
+[INFO] 17:05:33:532 Cpu/(10474:10474): Listo para escuchar a mi cliente
+[INFO] 17:05:46:124 Cpu/(10474:10474): Conectado con kernel
+[INFO] 17:05:46:124 Cpu/(10474:10474): Handshake con Kernel realizado.
+[INFO] 17:05:46:183 Cpu/(10474:10495): Proceso en ejecucion: 0
+[INFO] 17:05:46:183 Cpu/(10474:10497): Evaluando instruccion Nro: 0  de 0
+[INFO] 17:05:46:183 Cpu/(10474:10497): Por evaluar instruccion
+[INFO] 17:07:13:776 Cpu/(10592:10592): Listo para escuchar a mi cliente
+[INFO] 17:07:18:068 Cpu/(10592:10592): Conectado con kernel
+[INFO] 17:07:18:069 Cpu/(10592:10592): Handshake con Kernel realizado.
+[INFO] 17:07:18:126 Cpu/(10592:10612): Proceso en ejecucion: 0
+[INFO] 17:07:18:126 Cpu/(10592:10614): A punto de enviar el cde a kernel
+[INFO] 17:07:18:126 Cpu/(10592:10614): Envie el cde a kernel
+[INFO] 17:07:18:126 Cpu/(10592:10615): Evaluando instruccion Nro: 0  de 0
+[INFO] 17:07:18:128 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:129 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 17:07:18:130 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:130 Cpu/(10592:10615): Evaluando instruccion Nro: 1  de 0
+[INFO] 17:07:18:130 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:130 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 17:07:18:133 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:133 Cpu/(10592:10615): Evaluando instruccion Nro: 2  de 0
+[INFO] 17:07:18:133 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:133 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 17:07:18:134 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:134 Cpu/(10592:10615): Evaluando instruccion Nro: 3  de 0
+[INFO] 17:07:18:134 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:134 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 17:07:18:135 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:136 Cpu/(10592:10615): Evaluando instruccion Nro: 4  de 0
+[INFO] 17:07:18:136 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:136 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 17:07:18:141 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:141 Cpu/(10592:10615): Evaluando instruccion Nro: 5  de 0
+[INFO] 17:07:18:141 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:141 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 17:07:18:150 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:150 Cpu/(10592:10615): Evaluando instruccion Nro: 6  de 0
+[INFO] 17:07:18:150 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:150 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 17:07:18:154 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:154 Cpu/(10592:10615): Evaluando instruccion Nro: 7  de 0
+[INFO] 17:07:18:154 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:154 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 17:07:18:160 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:160 Cpu/(10592:10615): Evaluando instruccion Nro: 8  de 0
+[INFO] 17:07:18:160 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:160 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAA )
+[INFO] 17:07:18:162 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:162 Cpu/(10592:10615): Evaluando instruccion Nro: 9  de 0
+[INFO] 17:07:18:162 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:162 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBB )
+[INFO] 17:07:18:163 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:163 Cpu/(10592:10615): Evaluando instruccion Nro: 10  de 0
+[INFO] 17:07:18:163 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:163 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCC )
+[INFO] 17:07:18:164 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:164 Cpu/(10592:10615): Evaluando instruccion Nro: 11  de 0
+[INFO] 17:07:18:164 Cpu/(10592:10615): Por evaluar instruccion: 2
+[INFO] 17:07:18:164 Cpu/(10592:10615): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDD )
+[INFO] 17:07:18:165 Cpu/(10592:10615): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 17:07:18:165 Cpu/(10592:10615): Evaluando instruccion Nro: 12  de 0
+[INFO] 17:07:18:165 Cpu/(10592:10615): Por evaluar instruccion: 14
+[INFO] 17:07:18:165 Cpu/(10592:10615): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()

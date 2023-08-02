@@ -60,8 +60,8 @@ t_instruction* cambiarStruct(Instruction_consola instruccion_a_cambiar){
     instruccion_cambiada -> numero1 = instruccion_a_cambiar.numero1;
     instruccion_cambiada -> numero2 = instruccion_a_cambiar.numero2;
     
-    int tam1 = get_tamanio_char_array(instruccion_a_cambiar.string1, 15);
-    int tam2 = get_tamanio_char_array(instruccion_a_cambiar.string2, 15);
+    int tam1 = get_tamanio_char_array(instruccion_a_cambiar.string1, 20);
+    int tam2 = get_tamanio_char_array(instruccion_a_cambiar.string2, 20);
     
     instruccion_cambiada -> string1 = malloc(tam1);
     for(int i = 0; i < tam1 + 1; i++)
@@ -251,7 +251,7 @@ void readIntegerFromFile(FILE *file, int index)
 }
 void readNextWordFromFile(FILE *file, int index)
 {
-    char buffer[15];
+    char buffer[20];
     fscanf(file, "%s", buffer);
     if (index == 1)
         strcpy(instructions[instructionCount].string1, buffer);

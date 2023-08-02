@@ -24,8 +24,13 @@ typedef struct{
 
 // Variables globales
 // Semaforos
-sem_t espero_cde;
-sem_t leer_siguiente_instruccion; // Se va usar como un pseudo-semaforo
+sem_t leer_siguiente_instruccion; // Se va usar como un pseudo-semaforo (medio bool)
+
+sem_t necesito_enviar_cde;
+
+//Binarios
+sem_t bin1_envio_cde;
+sem_t bin2_recibir_cde;
 
 
 Config_cpu config_cpu;

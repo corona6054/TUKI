@@ -13,7 +13,7 @@ int main(void){
 	return 0;
 }
 
-// SUBPROGRAMAS
+
 // UTILS INICIAR MODULO -----------------------------------------------------------------
 void levantar_modulo(){
 	logger = iniciar_logger();
@@ -25,21 +25,27 @@ void levantar_modulo(){
 }
 
 void inicializar_semaforos(){
-	sem_init(&espero_cde, 0, 1);
+	sem_init(&necesito_enviar_cde, 0, 0);
 	sem_init(&leer_siguiente_instruccion, 0 , 0);
+
+	sem_init(&bin1_envio_cde, 0, 0);
+	sem_init(&bin2_recibir_cde, 0, 1);
 }
 
 void iniciar_modulo(){
-	pthread_t conexion_kernel;
-	pthread_create(&conexion_kernel, NULL, (void *) recibir_cde, NULL);
-	pthread_detach(conexion_kernel);
-	
-	/*
+	pthread_t recibir_cde_kernel;
+	pthread_create(&recibir_cde_kernel, NULL, (void *) recibir_cde, NULL);
+	pthread_detach(recibir_cde_kernel);
+
+	pthread_t envio_cde_kernel;
+	pthread_create(&envio_cde_kernel, NULL, (void *) enviar_cde, NULL);
+	pthread_detach(envio_cde_kernel);
+
 	pthread_t ejecucion;
 	pthread_create(&ejecucion, NULL, (void *) ejecutar_proceso, NULL);
 	pthread_detach(ejecucion);
-	*/
 }
+
 void finalizar_modulo(){
 	log_destroy(logger);
 	config_destroy(config);
@@ -105,10 +111,9 @@ void establecer_conexiones(){
 		log_info(logger, "Conectado con kernel");
 		if (recibir_handshake(kernel_fd) == HANDSHAKE){
 			enviar_handshake(kernel_fd);
-			log_info(logger, "Handshake con CPU realizado.");
+			log_info(logger, "Handshake con Kernel realizado.");
 
-			sem_post(&espero_cde);
-			log_info(logger, "Posteo(espero_cde)");
+			sem_post(&necesito_enviar_cde);
 		}
 	}else
 		log_info(logger, "Error al conectar con kernel");
@@ -116,24 +121,26 @@ void establecer_conexiones(){
 
 void recibir_cde(){
 	while(1){
-		sem_wait(&espero_cde);
+		sem_wait(&bin2_recibir_cde);
 		t_buffer* buffer = recibir_buffer(kernel_fd);
 		cde_en_ejecucion = 	buffer_read_cde(buffer);
 		log_info(logger, "Proceso en ejecucion: %d", cde_en_ejecucion.pid);
-		cde_en_ejecucion.pid++;
-
-		enviar_cde();
-		//sem_post(&leer_siguiente_instruccion);
+		sem_post(&leer_siguiente_instruccion);
+		sem_post(&bin1_envio_cde);
 	}
 }
 
 void enviar_cde(){
-	t_buffer* buffer = crear_buffer_nuestro();
-	buffer_write_cde(buffer, cde_en_ejecucion);
-	log_info(logger, "A punto de enviar el cde a kernel");
-	enviar_buffer(buffer, kernel_fd);
-	log_info(logger, "Envie el cde a kernel");
-	sem_post(&espero_cde);
+	while(1){
+		sem_wait(&necesito_enviar_cde);
+		sem_wait(&bin1_envio_cde);
+		t_buffer* buffer = crear_buffer_nuestro();
+		buffer_write_cde(buffer, cde_en_ejecucion);
+		log_info(logger, "A punto de enviar el cde a kernel");
+		enviar_buffer(buffer, kernel_fd);
+		log_info(logger, "Envie el cde a kernel");
+		sem_post(&bin2_recibir_cde);
+	}
 }
 // UTILS FIN CONEXIONES -----------------------------------------------------------------
 
@@ -143,14 +150,13 @@ void ejecutar_proceso(){
 	while(1){
 		sem_wait(&leer_siguiente_instruccion);
 		int indice = cde_en_ejecucion.program_counter;
-		t_instruction* instruccion_actual = (cde_en_ejecucion.lista_de_instrucciones, indice);
+		log_info(logger, "Evaluando instruccion Nro: %d  de %d", indice, cde_en_ejecucion.pid);
+		t_instruction* instruccion_actual = list_get(cde_en_ejecucion.lista_de_instrucciones, indice);
+		log_info(logger, "Por evaluar instruccion: %d", instruccion_actual->instruccion);
 		evaluar_instruccion(instruccion_actual);
 		cde_en_ejecucion.program_counter++;
 	}
 }
-
-
-
 
 void evaluar_instruccion(t_instruction* instruccion){
 	t_buffer* buffer = crear_buffer_nuestro();
@@ -179,66 +185,66 @@ void evaluar_instruccion(t_instruction* instruccion){
 		break;
 		case YIELD:
 			log_info(logger, "PID: %d - EJECUTANDO : YIELD - PARAMETROS: ()", cde_en_ejecucion.pid);
-			enviar_cde();
-		break;
+			sem_post(&necesito_enviar_cde);
+			break;
 		case EXIT:
 			log_info(logger, "PID: %d - EJECUTANDO : EXIT - PARAMETROS: ()", cde_en_ejecucion.pid);
-			enviar_cde();	
+			sem_post(&necesito_enviar_cde);
 		break;
 		case IO:
 			log_info(logger, "PID: %d - EJECUTANDO : IO - PARAMETROS: ()", cde_en_ejecucion.pid);
 		
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case SIGNAL:
 			log_info(logger, "PID: %d - EJECUTANDO : SIGNAL - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case WAIT:
 			log_info(logger, "PID: %d - EJECUTANDO : WAIT - PARAMETROS: ()", cde_en_ejecucion.pid);
 			
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case F_OPEN:
 			log_info(logger, "PID: %d - EJECUTANDO : F_OPEN - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case F_CLOSE:
 			log_info(logger, "PID: %d - EJECUTANDO : F_CLOSE - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case F_SEEK:
 			log_info(logger, "PID: %d - EJECUTANDO : F_SEEK - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case F_READ:
 			log_info(logger, "PID: %d - EJECUTANDO : F_READ - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case F_WRITE:
 			log_info(logger, "PID: %d - EJECUTANDO : F_WRITE - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case F_TRUNCATE:
 			log_info(logger, "PID: %d - EJECUTANDO : F_TRUNCATE - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case CREATE_SEGMENT:
 			log_info(logger, "PID: %d - EJECUTANDO : CREATE_SEGMENT - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 		case DELETE_SEGMENT:
 			log_info(logger, "PID: %d - EJECUTANDO : DELETE_SEGMENT - PARAMETROS: ()", cde_en_ejecucion.pid);
 
-			enviar_cde();
+			sem_post(&necesito_enviar_cde);
 		break;
 	}
 }

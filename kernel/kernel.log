@@ -3789,3 +3789,275 @@
 [INFO] 01:05:38:791 Kernel/(3685:3693): A punto de recibir buffer
 [INFO] 01:05:39:035 Kernel/(3685:3693): Buffer Recibido
 [INFO] 01:05:39:035 Kernel/(3685:3693): Proceso en ejecucion: 16
+[INFO] 13:08:44:427 Kernel/(2807:2807): Conectado con cpu
+[INFO] 13:08:44:427 Kernel/(2807:2807): Handshake con CPU realizado.
+[INFO] 13:08:44:429 Kernel/(2807:2815): Envie cde a cpu
+[INFO] 13:08:44:431 Kernel/(2807:2816): A punto de recibir buffer
+[INFO] 13:08:44:514 Kernel/(2807:2816): Buffer Recibido
+[INFO] 13:08:44:514 Kernel/(2807:2816): Proceso en ejecucion: 16
+[INFO] 13:08:44:514 Kernel/(2807:2815): Envie cde a cpu
+[INFO] 13:08:44:514 Kernel/(2807:2816): A punto de recibir buffer
+[INFO] 13:08:45:005 Kernel/(2807:2816): Buffer Recibido
+[INFO] 13:09:59:919 Kernel/(2858:2858): Conectado con cpu
+[INFO] 13:09:59:919 Kernel/(2858:2858): Handshake con CPU realizado.
+[INFO] 13:09:59:922 Kernel/(2858:2866): Envie cde a cpu
+[INFO] 13:09:59:922 Kernel/(2858:2867): A punto de recibir buffer
+[INFO] 13:10:00:009 Kernel/(2858:2867): Buffer Recibido
+[INFO] 13:10:00:010 Kernel/(2858:2867): Proceso en ejecucion: 16
+[INFO] 13:10:00:011 Kernel/(2858:2866): Envie cde a cpu
+[INFO] 13:10:00:012 Kernel/(2858:2867): A punto de recibir buffer
+[INFO] 13:10:00:098 Kernel/(2858:2867): Buffer Recibido
+[INFO] 13:10:00:098 Kernel/(2858:2867): Proceso en ejecucion: 18
+[INFO] 13:12:33:591 Kernel/(2915:2915): Conectado con cpu
+[INFO] 13:12:33:592 Kernel/(2915:2915): Handshake con CPU realizado.
+[INFO] 13:12:33:595 Kernel/(2915:2921): Envie cde a cpu
+[INFO] 13:12:33:596 Kernel/(2915:2922): A punto de recibir buffer
+[INFO] 13:12:33:596 Kernel/(2915:2922): Buffer Recibido
+[INFO] 13:15:07:660 Kernel/(2947:2947): Conectado con cpu
+[INFO] 13:15:07:660 Kernel/(2947:2947): Handshake con CPU realizado.
+[INFO] 13:15:07:661 Kernel/(2947:2955): Envie cde a cpu
+[INFO] 13:15:07:663 Kernel/(2947:2956): A punto de recibir buffer
+[INFO] 13:15:07:745 Kernel/(2947:2956): Buffer Recibido
+[INFO] 13:15:07:746 Kernel/(2947:2956): Proceso en ejecucion: 16
+[INFO] 13:15:07:746 Kernel/(2947:2955): Envie cde a cpu
+[INFO] 13:15:07:746 Kernel/(2947:2956): A punto de recibir buffer
+[INFO] 13:15:07:838 Kernel/(2947:2956): Buffer Recibido
+[INFO] 13:15:07:838 Kernel/(2947:2956): Proceso en ejecucion: 18
+[INFO] 13:15:07:838 Kernel/(2947:2955): Envie cde a cpu
+[INFO] 13:15:07:838 Kernel/(2947:2956): A punto de recibir buffer
+[INFO] 13:15:07:930 Kernel/(2947:2956): Buffer Recibido
+[INFO] 13:15:07:930 Kernel/(2947:2956): Proceso en ejecucion: 20
+[INFO] 13:32:11:432 Kernel/(3106:3106): Conectado con cpu
+[INFO] 13:32:11:441 Kernel/(3106:3106): Handshake con CPU realizado.
+[INFO] 13:32:11:442 Kernel/(3106:3106): Listo para escuchar a mi cliente
+[INFO] 13:32:26:028 Kernel/(3106:3116): Handshake con Consola realizado.
+[INFO] 13:32:26:083 Kernel/(3106:3145): Se crea el proceso 15 en NEW
+[INFO] 13:34:11:575 Kernel/(3168:3168): Conectado con cpu
+[INFO] 13:34:11:587 Kernel/(3168:3168): Handshake con CPU realizado.
+[INFO] 13:34:11:587 Kernel/(3168:3168): Listo para escuchar a mi cliente
+[INFO] 13:36:15:497 Kernel/(3281:3281): Conectado con cpu
+[INFO] 13:36:15:497 Kernel/(3281:3281): Handshake con CPU realizado.
+[INFO] 13:36:15:497 Kernel/(3281:3281): Listo para escuchar a mi cliente
+[INFO] 13:36:44:673 Kernel/(3281:3289): Handshake con Consola realizado.
+[INFO] 13:36:44:714 Kernel/(3281:3314): Se crea el proceso 15 en NEW
+[INFO] 13:36:44:715 Kernel/(3281:3290): PID: 15 - Estado anterior: NEW - Estado actual: READY
+[INFO] 13:36:44:715 Kernel/(3281:3292): PID: 15 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 13:36:44:715 Kernel/(3281:3293): Envie cde a cpu
+[INFO] 13:36:44:715 Kernel/(3281:3294): A punto de recibir buffer
+[INFO] 13:36:44:758 Kernel/(3281:3294): Buffer Recibido
+[INFO] 13:36:44:758 Kernel/(3281:3294): Proceso en ejecucion: 16
+[INFO] 13:46:56:150 Kernel/(3550:3550): Conectado con cpu
+[INFO] 13:46:56:151 Kernel/(3550:3550): Handshake con CPU realizado.
+[INFO] 13:46:56:151 Kernel/(3550:3550): Listo para escuchar a mi cliente
+[INFO] 13:47:11:720 Kernel/(3550:3558): Handshake con Consola realizado.
+[INFO] 13:47:11:853 Kernel/(3550:3574): Se crea el proceso 15 en NEW
+[INFO] 13:47:11:853 Kernel/(3550:3559): PID: 15 - Estado anterior: NEW - Estado actual: READY
+[INFO] 13:47:11:853 Kernel/(3550:3561): PID: 15 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 13:47:11:853 Kernel/(3550:3562): Envie cde a cpu
+[INFO] 13:47:11:853 Kernel/(3550:3563): A punto de recibir buffer
+[INFO] 13:47:12:020 Kernel/(3550:3563): Buffer Recibido
+[INFO] 13:50:34:250 Kernel/(3609:3609): Conectado con cpu
+[INFO] 13:50:34:265 Kernel/(3609:3609): Handshake con CPU realizado.
+[INFO] 13:50:34:266 Kernel/(3609:3609): Listo para escuchar a mi cliente
+[INFO] 13:50:42:226 Kernel/(3609:3618): Handshake con Consola realizado.
+[INFO] 13:50:42:344 Kernel/(3609:3636): Se crea el proceso 15 en NEW
+[INFO] 13:50:42:345 Kernel/(3609:3620): PID: 15 - Estado anterior: NEW - Estado actual: READY
+[INFO] 13:50:42:345 Kernel/(3609:3622): PID: 15 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 13:50:42:345 Kernel/(3609:3617): Envie cde a cpu
+[INFO] 13:50:42:345 Kernel/(3609:3619): A punto de recibir buffer
+[INFO] 13:50:42:509 Kernel/(3609:3619): Buffer Recibido
+[INFO] 13:52:52:049 Kernel/(3708:3708): Conectado con cpu
+[INFO] 13:53:15:954 Kernel/(3708:3708): Handshake con CPU realizado.
+[INFO] 13:53:21:714 Kernel/(3708:3708): Listo para escuchar a mi cliente
+[INFO] 13:54:42:904 Kernel/(3708:3825): Handshake con Consola realizado.
+[INFO] 13:59:24:984 Kernel/(4003:4003): Conectado con cpu
+[INFO] 14:00:16:589 Kernel/(4003:4003): Handshake con CPU realizado.
+[INFO] 14:00:22:514 Kernel/(4003:4003): Listo para escuchar a mi cliente
+[INFO] 14:01:48:980 Kernel/(4003:4128): Handshake con Consola realizado.
+[INFO] 14:03:42:932 Kernel/(4263:4263): Listo para escuchar a mi cliente
+[INFO] 14:03:46:775 Kernel/(4263:4269): Handshake con Consola realizado.
+[INFO] 14:03:46:927 Kernel/(4263:4284): Se crea el proceso 15 en NEW
+[INFO] 14:03:46:927 Kernel/(4263:4270): PID: 15 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:03:46:927 Kernel/(4263:4272): PID: 15 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:14:57:004 Kernel/(5112:5112): Listo para escuchar a mi cliente
+[INFO] 14:15:54:534 Kernel/(5174:5174): Conectado con cpu
+[INFO] 14:15:54:535 Kernel/(5174:5174): Handshake con CPU realizado.
+[INFO] 14:15:54:535 Kernel/(5174:5174): Listo para escuchar a mi cliente
+[INFO] 14:16:08:727 Kernel/(5174:5185): Handshake con Consola realizado.
+[INFO] 14:16:08:770 Kernel/(5174:5202): Se crea el proceso 0 en NEW
+[INFO] 14:16:08:770 Kernel/(5174:5187): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:16:08:770 Kernel/(5174:5189): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:16:08:770 Kernel/(5174:5184): Envie cde a cpu
+[INFO] 14:16:08:770 Kernel/(5174:5186): A punto de recibir buffer
+[INFO] 14:16:08:938 Kernel/(5174:5186): Buffer Recibido
+[INFO] 14:18:09:835 Kernel/(5246:5246): Conectado con cpu
+[INFO] 14:18:09:845 Kernel/(5246:5246): Handshake con CPU realizado.
+[INFO] 14:18:09:846 Kernel/(5246:5246): Listo para escuchar a mi cliente
+[INFO] 14:18:18:459 Kernel/(5246:5255): Handshake con Consola realizado.
+[INFO] 14:18:18:506 Kernel/(5246:5272): Se crea el proceso 0 en NEW
+[INFO] 14:18:18:506 Kernel/(5246:5256): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:18:18:506 Kernel/(5246:5258): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:18:18:506 Kernel/(5246:5259): Envie cde a cpu
+[INFO] 14:18:18:506 Kernel/(5246:5260): A punto de recibir buffer
+[INFO] 14:18:18:668 Kernel/(5246:5260): Buffer Recibido
+[INFO] 14:21:09:581 Kernel/(5319:5319): Listo para escuchar a mi cliente
+[INFO] 14:21:13:802 Kernel/(5319:5325): Handshake con Consola realizado.
+[INFO] 14:21:13:846 Kernel/(5319:5340): Se crea el proceso 0 en NEW
+[INFO] 14:21:13:846 Kernel/(5319:5326): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:21:13:846 Kernel/(5319:5328): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:22:43:164 Kernel/(5428:5428): Listo para escuchar a mi cliente
+[INFO] 14:22:50:852 Kernel/(5428:5434): Handshake con Consola realizado.
+[INFO] 14:22:50:894 Kernel/(5428:5449): Se crea el proceso 0 en NEW
+[INFO] 14:22:50:895 Kernel/(5428:5435): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:22:50:895 Kernel/(5428:5437): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:26:49:085 Kernel/(5561:5561): Listo para escuchar a mi cliente
+[INFO] 14:26:52:800 Kernel/(5561:5567): Handshake con Consola realizado.
+[INFO] 14:26:52:842 Kernel/(5561:5582): Se crea el proceso 0 en NEW
+[INFO] 14:26:52:842 Kernel/(5561:5568): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:26:52:842 Kernel/(5561:5570): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:26:52:843 Kernel/(5561:5561): PID: 0 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 14:26:52:843 Kernel/(5561:5561): Finaliza el proceso 0 - Motivo: Pinto
+[INFO] 14:26:52:843 Kernel/(5561:5569): PID Terminado: 0
+[INFO] 14:27:29:974 Kernel/(5615:5615): Listo para escuchar a mi cliente
+[INFO] 14:27:33:787 Kernel/(5615:5621): Handshake con Consola realizado.
+[INFO] 14:27:33:829 Kernel/(5615:5636): Se crea el proceso 0 en NEW
+[INFO] 14:27:33:830 Kernel/(5615:5622): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:27:33:830 Kernel/(5615:5624): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:27:33:830 Kernel/(5615:5615): PID: 0 -	Estado anterior: EXEC - Estado actual: EXIT
+[INFO] 14:27:33:830 Kernel/(5615:5615): Finaliza el proceso 0 - Motivo: Pinto
+[INFO] 14:27:33:831 Kernel/(5615:5623): PID Terminado: 0
+[INFO] 14:29:16:557 Kernel/(5698:5698): Conectado con cpu
+[INFO] 14:29:16:557 Kernel/(5698:5698): Handshake con CPU realizado.
+[INFO] 14:29:16:557 Kernel/(5698:5698): Listo para escuchar a mi cliente
+[INFO] 14:29:32:963 Kernel/(5698:5709): Handshake con Consola realizado.
+[INFO] 14:29:33:100 Kernel/(5698:5725): Se crea el proceso 0 en NEW
+[INFO] 14:29:33:100 Kernel/(5698:5710): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:29:33:100 Kernel/(5698:5712): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:29:33:100 Kernel/(5698:5707): Envie cde a cpu
+[INFO] 14:29:33:100 Kernel/(5698:5708): A punto de recibir buffer
+[INFO] 14:29:33:292 Kernel/(5698:5708): Buffer Recibido
+[INFO] 14:30:17:115 Kernel/(5746:5746): Conectado con cpu
+[INFO] 14:30:17:115 Kernel/(5746:5746): Handshake con CPU realizado.
+[INFO] 14:30:17:115 Kernel/(5746:5746): Listo para escuchar a mi cliente
+[INFO] 14:31:06:280 Kernel/(5746:5753): Handshake con Consola realizado.
+[INFO] 14:31:28:265 Kernel/(5746:5813): Se crea el proceso 0 en NEW
+[INFO] 14:31:28:265 Kernel/(5746:5755): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:31:28:265 Kernel/(5746:5758): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:31:28:265 Kernel/(5746:5754): Envie cde a cpu
+[INFO] 14:31:28:265 Kernel/(5746:5757): A punto de recibir buffer
+[INFO] 14:31:28:265 Kernel/(5746:5757): Buffer Recibido
+[INFO] 14:32:09:436 Kernel/(5931:5931): Conectado con cpu
+[INFO] 14:32:09:436 Kernel/(5931:5931): Handshake con CPU realizado.
+[INFO] 14:32:09:436 Kernel/(5931:5931): Listo para escuchar a mi cliente
+[INFO] 14:32:35:401 Kernel/(5931:5940): Handshake con Consola realizado.
+[INFO] 14:33:10:551 Kernel/(5931:5993): Se crea el proceso 0 en NEW
+[INFO] 14:33:10:551 Kernel/(5931:5941): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:33:10:552 Kernel/(5931:5944): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:33:10:552 Kernel/(5931:5942): Envie cde a cpu
+[INFO] 14:33:10:552 Kernel/(5931:5945): A punto de recibir buffer
+[INFO] 14:33:10:714 Kernel/(5931:5945): Buffer Recibido
+[INFO] 14:33:43:124 Kernel/(6107:6107): Conectado con cpu
+[INFO] 14:33:43:124 Kernel/(6107:6107): Handshake con CPU realizado.
+[INFO] 14:33:43:124 Kernel/(6107:6107): Listo para escuchar a mi cliente
+[INFO] 14:34:40:381 Kernel/(6137:6137): Conectado con cpu
+[INFO] 14:34:40:390 Kernel/(6137:6137): Handshake con CPU realizado.
+[INFO] 14:34:40:390 Kernel/(6137:6137): Listo para escuchar a mi cliente
+[INFO] 14:35:30:310 Kernel/(6137:6148): Handshake con Consola realizado.
+[INFO] 14:36:24:321 Kernel/(6137:6197): Se crea el proceso 0 en NEW
+[INFO] 14:36:24:321 Kernel/(6137:6149): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:36:24:321 Kernel/(6137:6151): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:36:24:321 Kernel/(6137:6146): Envie cde a cpu
+[INFO] 14:36:24:321 Kernel/(6137:6147): A punto de recibir buffer
+[INFO] 14:36:24:505 Kernel/(6137:6147): Buffer Recibido
+[INFO] 14:38:11:654 Kernel/(6376:6376): Conectado con cpu
+[INFO] 14:38:11:655 Kernel/(6376:6376): Handshake con CPU realizado.
+[INFO] 14:38:11:655 Kernel/(6376:6376): Listo para escuchar a mi cliente
+[INFO] 14:38:24:974 Kernel/(6376:6386): Handshake con Consola realizado.
+[INFO] 14:38:25:018 Kernel/(6376:6422): Se crea el proceso 0 en NEW
+[INFO] 14:38:25:018 Kernel/(6376:6387): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:38:25:018 Kernel/(6376:6390): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:38:25:018 Kernel/(6376:6383): Envie cde a cpu
+[INFO] 14:38:25:018 Kernel/(6376:6384): A punto de recibir buffer
+[INFO] 14:38:25:201 Kernel/(6376:6384): Buffer Recibido
+[INFO] 14:44:23:994 Kernel/(6582:6582): Conectado con cpu
+[INFO] 14:44:24:006 Kernel/(6582:6582): Handshake con CPU realizado.
+[INFO] 14:44:24:006 Kernel/(6582:6582): Listo para escuchar a mi cliente
+[INFO] 14:45:10:854 Kernel/(6632:6632): Conectado con cpu
+[INFO] 14:45:10:854 Kernel/(6632:6632): Handshake con CPU realizado.
+[INFO] 14:45:10:856 Kernel/(6632:6632): Listo para escuchar a mi cliente
+[INFO] 14:56:34:092 Kernel/(6705:6705): Conectado con cpu
+[INFO] 14:56:34:093 Kernel/(6705:6705): Handshake con CPU realizado.
+[INFO] 14:56:34:093 Kernel/(6705:6705): Listo para escuchar a mi cliente
+[INFO] 14:56:44:310 Kernel/(6705:6716): Handshake con Consola realizado.
+[INFO] 14:56:44:354 Kernel/(6705:6751): Se crea el proceso 0 en NEW
+[INFO] 14:56:44:354 Kernel/(6705:6717): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 14:56:44:354 Kernel/(6705:6719): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 14:56:44:354 Kernel/(6705:6714): Envie cde a cpu
+[INFO] 14:56:44:354 Kernel/(6705:6715): A punto de recibir buffer
+[INFO] 14:56:44:531 Kernel/(6705:6715): Buffer Recibido
+[INFO] 15:58:14:400 Kernel/(9016:9016): Conectado con cpu
+[INFO] 15:58:32:633 Kernel/(9016:9016): Handshake con CPU realizado.
+[INFO] 16:06:13:685 Kernel/(9265:9265): Conectado con cpu
+[INFO] 16:06:13:685 Kernel/(9265:9265): Handshake con CPU realizado.
+[INFO] 16:07:14:869 Kernel/(9333:9333): Conectado con cpu
+[INFO] 16:07:14:870 Kernel/(9333:9333): Handshake con CPU realizado.
+[INFO] 16:08:43:988 Kernel/(9416:9416): Conectado con cpu
+[INFO] 16:09:10:922 Kernel/(9416:9416): Handshake con CPU realizado.
+[INFO] 16:50:32:674 Kernel/(9960:9960): Por agregar  PCB a cola NEW
+[INFO] 16:50:37:085 Kernel/(9960:9960): Por iniciar los planificadores
+[INFO] 16:50:37:975 Kernel/(9960:10043): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 16:50:37:975 Kernel/(9960:10045): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 16:53:38:526 Kernel/(10094:10094): Conectado con cpu
+[INFO] 16:53:38:527 Kernel/(10094:10094): Handshake con CPU realizado.
+[INFO] 16:53:38:527 Kernel/(10094:10094): Por agregar  PCB a cola NEW
+[INFO] 16:53:38:527 Kernel/(10094:10094): Por iniciar los planificadores
+[INFO] 16:53:38:528 Kernel/(10094:10106): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 16:53:38:542 Kernel/(10094:10108): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 16:53:38:543 Kernel/(10094:10104): Envie cde a cpu
+[INFO] 16:53:38:543 Kernel/(10094:10105): A punto de recibir buffer
+[INFO] 16:53:38:719 Kernel/(10094:10105): Buffer Recibido
+[INFO] 16:59:39:245 Kernel/(10203:10203): Conectado con cpu
+[INFO] 16:59:39:245 Kernel/(10203:10203): Handshake con CPU realizado.
+[INFO] 16:59:39:245 Kernel/(10203:10203): Por agregar  PCB a cola NEW
+[INFO] 16:59:39:245 Kernel/(10203:10203): Por iniciar los planificadores
+[INFO] 16:59:39:246 Kernel/(10203:10211): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 16:59:39:246 Kernel/(10203:10213): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 16:59:39:247 Kernel/(10203:10209): Envie cde a cpu
+[INFO] 16:59:39:247 Kernel/(10203:10210): A punto de recibir buffer
+[INFO] 16:59:39:247 Kernel/(10203:10210): Buffer Recibido
+[INFO] 16:59:53:382 Kernel/(10251:10251): Conectado con cpu
+[INFO] 16:59:53:383 Kernel/(10251:10251): Handshake con CPU realizado.
+[INFO] 16:59:53:383 Kernel/(10251:10251): Por agregar  PCB a cola NEW
+[INFO] 16:59:53:383 Kernel/(10251:10251): Por iniciar los planificadores
+[INFO] 16:59:53:383 Kernel/(10251:10262): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 16:59:53:385 Kernel/(10251:10264): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 16:59:53:386 Kernel/(10251:10260): Envie cde a cpu
+[INFO] 16:59:53:386 Kernel/(10251:10261): A punto de recibir buffer
+[INFO] 16:59:53:553 Kernel/(10251:10261): Buffer Recibido
+[INFO] 17:03:58:907 Kernel/(10376:10376): Conectado con cpu
+[INFO] 17:03:58:907 Kernel/(10376:10376): Handshake con CPU realizado.
+[INFO] 17:03:58:907 Kernel/(10376:10376): Por agregar  PCB a cola NEW
+[INFO] 17:03:58:907 Kernel/(10376:10376): Por iniciar los planificadores
+[INFO] 17:03:58:922 Kernel/(10376:10387): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 17:03:58:922 Kernel/(10376:10389): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:03:58:923 Kernel/(10376:10384): Envie cde a cpu
+[INFO] 17:03:58:923 Kernel/(10376:10385): A punto de recibir buffer
+[INFO] 17:03:58:923 Kernel/(10376:10385): Buffer Recibido
+[INFO] 17:05:46:124 Kernel/(10489:10489): Conectado con cpu
+[INFO] 17:05:46:135 Kernel/(10489:10489): Handshake con CPU realizado.
+[INFO] 17:05:46:135 Kernel/(10489:10489): Por agregar  PCB a cola NEW
+[INFO] 17:05:46:135 Kernel/(10489:10489): Por iniciar los planificadores
+[INFO] 17:05:46:137 Kernel/(10489:10500): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 17:05:46:138 Kernel/(10489:10502): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:05:46:139 Kernel/(10489:10498): Envie cde a cpu
+[INFO] 17:05:46:139 Kernel/(10489:10499): A punto de recibir buffer
+[INFO] 17:05:46:139 Kernel/(10489:10499): Buffer Recibido
+[INFO] 17:07:18:068 Kernel/(10604:10604): Conectado con cpu
+[INFO] 17:07:18:069 Kernel/(10604:10604): Handshake con CPU realizado.
+[INFO] 17:07:18:069 Kernel/(10604:10604): Por agregar  PCB a cola NEW
+[INFO] 17:07:18:069 Kernel/(10604:10604): Por iniciar los planificadores
+[INFO] 17:07:18:069 Kernel/(10604:10616): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 17:07:18:084 Kernel/(10604:10618): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 17:07:18:084 Kernel/(10604:10611): Envie cde a cpu
+[INFO] 17:07:18:084 Kernel/(10604:10613): A punto de recibir buffer
+[INFO] 17:07:18:084 Kernel/(10604:10613): Buffer Recibido

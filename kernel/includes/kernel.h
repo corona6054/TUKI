@@ -80,6 +80,8 @@ sem_t cont_exit;
 sem_t cont_grado_max_multiprog;
 sem_t cont_procesador_libre;
 
+sem_t necesito_enviar_cde;
+
 //Binarios
 sem_t bin1_envio_cde;
 sem_t bin2_recibir_cde;
@@ -176,7 +178,6 @@ int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb);
 int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar); // FUNCIONA
 void liberar_todos_recursos(t_pcb* pcb);
 t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNCIONA
-void desbloquear_proceso(char* recurso_libearado);
 // FIN UTILS RECURSOS -------------------------------------------------------------------
 
 
