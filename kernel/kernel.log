@@ -3574,3 +3574,218 @@
 [INFO] 17:16:52:177 Kernel/(10686:10691): Handshake con Consola realizado.
 [INFO] 17:16:52:228 Kernel/(10686:10798): Se crea el proceso 8 en NEW
 [INFO] 17:16:52:228 Kernel/(10686:10692): PID: 8 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 20:38:34:829 Kernel/(5521:5521): Tiempo actual: 1690922314.000000
+[INFO] 20:39:49:495 Kernel/(5639:5639): Tiempo actual: 1690922389.000000
+[INFO] 20:59:52:029 Kernel/(6705:6705): Conectado con cpu
+[INFO] 20:59:52:029 Kernel/(6705:6705): Handshake con CPU realizado.
+[INFO] 21:01:07:222 Kernel/(6838:6838): Conectado con cpu
+[INFO] 21:01:07:223 Kernel/(6838:6838): Handshake con CPU realizado.
+[INFO] 21:01:55:328 Kernel/(6992:6992): Conectado con cpu
+[INFO] 21:01:55:328 Kernel/(6992:6992): Handshake con CPU realizado.
+[INFO] 21:04:29:864 Kernel/(7309:7309): Conectado con cpu
+[INFO] 21:04:29:865 Kernel/(7309:7309): Handshake con CPU realizado.
+[INFO] 21:05:02:452 Kernel/(7429:7429): Conectado con cpu
+[INFO] 21:05:02:453 Kernel/(7429:7429): Handshake con CPU realizado.
+[INFO] 21:05:41:397 Kernel/(7515:7515): Conectado con cpu
+[INFO] 21:05:41:398 Kernel/(7515:7515): Handshake con CPU realizado.
+[INFO] 21:13:12:608 Kernel/(8187:8187): Conectado con cpu
+[INFO] 21:13:12:618 Kernel/(8187:8187): Handshake con CPU realizado.
+[INFO] 21:14:20:925 Kernel/(8248:8248): Conectado con cpu
+[INFO] 21:14:33:448 Kernel/(8248:8248): Handshake con CPU realizado.
+[INFO] 21:16:10:656 Kernel/(8473:8473): Conectado con cpu
+[INFO] 21:16:10:656 Kernel/(8473:8473): Handshake con CPU realizado.
+[INFO] 21:17:38:856 Kernel/(8563:8563): Conectado con cpu
+[INFO] 21:17:38:873 Kernel/(8563:8563): Handshake con CPU realizado.
+[INFO] 22:56:58:288 Kernel/(2752:2752): Conectado con cpu
+[INFO] 22:56:58:294 Kernel/(2752:2752): Handshake con CPU realizado.
+[INFO] 22:56:58:295 Kernel/(2752:2752): Listo para escuchar a mi cliente
+[INFO] 22:57:37:886 Kernel/(2752:2759): Handshake con Consola realizado.
+[INFO] 22:59:51:382 Kernel/(2944:2944): Listo para escuchar a mi cliente
+[INFO] 23:00:00:243 Kernel/(2944:2949): Handshake con Consola realizado.
+[INFO] 23:00:49:519 Kernel/(3042:3042): Listo para escuchar a mi cliente
+[INFO] 23:00:57:373 Kernel/(3042:3047): Handshake con Consola realizado.
+[INFO] 23:02:04:915 Kernel/(3114:3114): Listo para escuchar a mi cliente
+[INFO] 23:02:57:861 Kernel/(3114:3201): Handshake con Consola realizado.
+[INFO] 23:08:45:794 Kernel/(3438:3438): Listo para escuchar a mi cliente
+[INFO] 23:12:20:797 Kernel/(3438:3519): Handshake con Consola realizado.
+[INFO] 23:14:46:374 Kernel/(3438:3702): Mostrando instrucciones recibidas:
+[INFO] 23:14:47:787 Kernel/(3438:3702): Codigo de instruccion: 2 
+[INFO] 23:14:47:787 Kernel/(3438:3702): String1: AX 
+[INFO] 23:14:47:787 Kernel/(3438:3702): String2: 10 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 4 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero1: 120 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: AX 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 9 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: DISCO 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 8 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero1: 10 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 10 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: DISCO 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 3 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero1: 120 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: BX 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 11 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: ARCHIVO 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 14 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 5 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero1: 64 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: ARCHIVO 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 6 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero1: 10 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: ARCHIVO 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 7 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero1: 1 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero2: 128 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 1 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero1: 4 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Numero2: 4 
+[INFO] 23:14:47:788 Kernel/(3438:3702): String1: ARCHIVO 
+[INFO] 23:14:47:788 Kernel/(3438:3702): Codigo de instruccion: 0 
+[INFO] 23:14:47:789 Kernel/(3438:3702): Numero1: 16 
+[INFO] 23:14:47:789 Kernel/(3438:3702): Numero2: 4 
+[INFO] 23:14:47:789 Kernel/(3438:3702): String1: ARCHIVO 
+[INFO] 23:14:47:789 Kernel/(3438:3702): Codigo de instruccion: 13 
+[INFO] 23:14:47:789 Kernel/(3438:3702): Numero1: 1 
+[INFO] 23:14:47:789 Kernel/(3438:3702): Codigo de instruccion: 12 
+[INFO] 23:14:47:789 Kernel/(3438:3702): String1: ARCHIVO 
+[INFO] 23:14:47:789 Kernel/(3438:3702): Codigo de instruccion: 15 
+[INFO] 23:14:55:359 Kernel/(3438:3702): Se crea el proceso 0 en NEW
+[INFO] 23:15:39:993 Kernel/(3851:3851): Listo para escuchar a mi cliente
+[INFO] 23:16:54:876 Kernel/(3912:3912): Listo para escuchar a mi cliente
+[INFO] 23:17:04:302 Kernel/(3912:3920): Handshake con Consola realizado.
+[INFO] 23:18:32:337 Kernel/(4030:4030): Listo para escuchar a mi cliente
+[INFO] 23:19:47:437 Kernel/(4030:4114): Handshake con Consola realizado.
+[INFO] 23:22:57:383 Kernel/(4356:4356): Listo para escuchar a mi cliente
+[INFO] 23:23:08:441 Kernel/(4356:4361): Handshake con Consola realizado.
+[INFO] 23:23:54:067 Kernel/(4447:4447): Listo para escuchar a mi cliente
+[INFO] 23:24:06:209 Kernel/(4447:4453): Handshake con Consola realizado.
+[INFO] 23:24:06:408 Kernel/(4447:4486): Mostrando instrucciones recibidas:
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 2 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String1: AX 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String2: 10 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 4 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Numero1: 120 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String1: AX 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 9 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String1: DISCO 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 8 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Numero1: 10 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 10 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String1: DISCO 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 3 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Numero1: 120 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String1: BX 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 11 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String1: ARCHIVO 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 14 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 5 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Numero1: 64 
+[INFO] 23:24:06:408 Kernel/(4447:4486): String1: ARCHIVO 
+[INFO] 23:24:06:408 Kernel/(4447:4486): Codigo de instruccion: 6 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero1: 10 
+[INFO] 23:24:06:409 Kernel/(4447:4486): String1: ARCHIVO 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Codigo de instruccion: 7 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero1: 1 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero2: 128 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Codigo de instruccion: 1 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero1: 4 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero2: 4 
+[INFO] 23:24:06:409 Kernel/(4447:4486): String1: ARCHIVO 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Codigo de instruccion: 0 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero1: 16 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero2: 4 
+[INFO] 23:24:06:409 Kernel/(4447:4486): String1: ARCHIVO 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Codigo de instruccion: 13 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Numero1: 1 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Codigo de instruccion: 12 
+[INFO] 23:24:06:409 Kernel/(4447:4486): String1: ARCHIVO 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Codigo de instruccion: 15 
+[INFO] 23:24:06:409 Kernel/(4447:4486): Se crea el proceso 0 en NEW
+[INFO] 23:24:59:650 Kernel/(4595:4595): Listo para escuchar a mi cliente
+[INFO] 23:26:09:570 Kernel/(4704:4704): Conectado con cpu
+[INFO] 23:26:09:572 Kernel/(4704:4704): Handshake con CPU realizado.
+[INFO] 23:26:09:573 Kernel/(4704:4704): Listo para escuchar a mi cliente
+[INFO] 23:26:37:472 Kernel/(4704:4713): Handshake con Consola realizado.
+[INFO] 23:26:37:565 Kernel/(4704:4742): Se crea el proceso 0 en NEW
+[INFO] 23:38:40:933 Kernel/(5218:5218): Conectado con cpu
+[INFO] 23:38:40:941 Kernel/(5218:5218): Handshake con CPU realizado.
+[INFO] 23:38:40:942 Kernel/(5218:5218): Listo para escuchar a mi cliente
+[INFO] 23:38:59:356 Kernel/(5218:5227): Handshake con Consola realizado.
+[INFO] 23:38:59:406 Kernel/(5218:5264): Se crea el proceso 0 en NEW
+[INFO] 23:38:59:406 Kernel/(5218:5228): PID: 0 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 23:38:59:406 Kernel/(5218:5230): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 23:42:16:822 Kernel/(5415:5415): Conectado con cpu
+[INFO] 23:42:16:836 Kernel/(5415:5415): Handshake con CPU realizado.
+[INFO] 23:42:16:837 Kernel/(5415:5415): Listo para escuchar a mi cliente
+[INFO] 23:42:39:012 Kernel/(5415:5423): Handshake con Consola realizado.
+[INFO] 23:42:39:060 Kernel/(5415:5450): Se crea el proceso 0 en NEW
+[INFO] 23:42:39:061 Kernel/(5415:5424): PID: 0 -	Estado anterior: NEW - Estado actual: READY
+[INFO] 23:42:39:061 Kernel/(5415:5426): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 23:53:09:299 Kernel/(5792:5792): Conectado con cpu
+[INFO] 23:53:55:849 Kernel/(5792:5792): Handshake con CPU realizado.
+[INFO] 23:54:02:757 Kernel/(5792:5792): Listo para escuchar a mi cliente
+[INFO] 23:55:32:122 Kernel/(5792:5933): Handshake con Consola realizado.
+[INFO] 23:56:50:554 Kernel/(5792:6673): Se crea el proceso 0 en NEW
+[INFO] 23:57:30:654 Kernel/(5792:5939): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 23:57:30:654 Kernel/(5792:5941): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 00:01:44:784 Kernel/(6983:6983): Conectado con cpu
+[INFO] 00:01:44:785 Kernel/(6983:6983): Handshake con CPU realizado.
+[INFO] 00:01:44:785 Kernel/(6983:6983): Listo para escuchar a mi cliente
+[INFO] 00:03:37:719 Kernel/(7041:7041): Conectado con cpu
+[INFO] 00:03:37:720 Kernel/(7041:7041): Handshake con CPU realizado.
+[INFO] 00:03:37:720 Kernel/(7041:7041): Listo para escuchar a mi cliente
+[INFO] 00:03:51:938 Kernel/(7041:7049): Handshake con Consola realizado.
+[INFO] 00:03:51:984 Kernel/(7041:7078): Se crea el proceso 0 en NEW
+[INFO] 00:03:51:984 Kernel/(7041:7050): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 00:03:51:984 Kernel/(7041:7052): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 00:04:04:090 Kernel/(7041:7049): Handshake con Consola realizado.
+[INFO] 00:04:04:136 Kernel/(7041:7103): Se crea el proceso 1 en NEW
+[INFO] 00:11:52:773 Kernel/(7481:7481): Conectado con cpu
+[INFO] 00:11:52:781 Kernel/(7481:7481): Handshake con CPU realizado.
+[INFO] 00:12:51:637 Kernel/(7590:7590): Conectado con cpu
+[INFO] 00:12:51:637 Kernel/(7590:7590): Handshake con CPU realizado.
+[INFO] 00:13:31:877 Kernel/(7634:7634): Conectado con cpu
+[INFO] 00:13:31:878 Kernel/(7634:7634): Handshake con CPU realizado.
+[INFO] 00:20:12:919 Kernel/(7850:7850): Conectado con cpu
+[INFO] 00:20:12:933 Kernel/(7850:7850): Handshake con CPU realizado.
+[INFO] 00:21:49:849 Kernel/(7957:7957): Conectado con cpu
+[INFO] 00:21:49:849 Kernel/(7957:7957): Handshake con CPU realizado.
+[INFO] 00:23:36:164 Kernel/(8050:8050): Conectado con cpu
+[INFO] 00:23:36:168 Kernel/(8050:8050): Handshake con CPU realizado.
+[INFO] 00:23:36:179 Kernel/(8050:8056): Por recibir el cde de CPU
+[INFO] 00:27:16:759 Kernel/(8206:8206): Conectado con cpu
+[INFO] 00:27:16:761 Kernel/(8206:8206): Handshake con CPU realizado.
+[INFO] 00:27:16:762 Kernel/(8206:8211): Por recibir el cde de CPU
+[INFO] 00:29:03:836 Kernel/(8248:8248): Conectado con cpu
+[INFO] 00:29:03:847 Kernel/(8248:8248): Handshake con CPU realizado.
+[INFO] 00:29:03:848 Kernel/(8248:8255): Por recibir el cde de CPU
+[INFO] 00:31:18:578 Kernel/(1852:1852): Conectado con cpu
+[INFO] 00:31:18:579 Kernel/(1852:1852): Handshake con CPU realizado.
+[INFO] 00:31:18:580 Kernel/(1852:1857): Por recibir el cde de CPU
+[INFO] 00:31:34:355 Kernel/(1879:1879): Conectado con cpu
+[INFO] 00:31:34:365 Kernel/(1879:1879): Handshake con CPU realizado.
+[INFO] 00:31:34:395 Kernel/(1879:1885): Por recibir el cde de CPU
+[INFO] 00:32:54:259 Kernel/(2274:2274): Conectado con cpu
+[INFO] 00:32:54:268 Kernel/(2274:2274): Handshake con CPU realizado.
+[INFO] 00:32:54:271 Kernel/(2274:2279): Por recibir el cde de CPU
+[INFO] 00:32:54:364 Kernel/(2274:2279): Proceso en ejecucion: 16
+[INFO] 00:32:54:364 Kernel/(2274:2279): Ya recibi el cde de CPU
+[INFO] 00:43:57:074 Kernel/(2724:2724): Conectado con cpu
+[INFO] 00:43:57:087 Kernel/(2724:2724): Handshake con CPU realizado.
+[INFO] 00:47:21:654 Kernel/(2834:2834): Conectado con cpu
+[INFO] 00:47:21:659 Kernel/(2834:2834): Handshake con CPU realizado.
+[INFO] 00:49:55:125 Kernel/(3033:3033): Conectado con cpu
+[INFO] 00:49:55:130 Kernel/(3033:3033): Handshake con CPU realizado.
+[INFO] 00:49:55:145 Kernel/(3033:3040): Envie cde a cpu
+[INFO] 00:53:23:101 Kernel/(3201:3201): Conectado con cpu
+[INFO] 00:53:23:115 Kernel/(3201:3201): Handshake con CPU realizado.
+[INFO] 00:53:23:122 Kernel/(3201:3209): Envie cde a cpu
+[INFO] 01:02:42:198 Kernel/(3585:3585): Conectado con cpu
+[INFO] 01:02:42:215 Kernel/(3585:3585): Handshake con CPU realizado.
+[INFO] 01:02:42:248 Kernel/(3585:3593): Envie cde a cpu
+[INFO] 01:05:38:766 Kernel/(3685:3685): Conectado con cpu
+[INFO] 01:05:38:775 Kernel/(3685:3685): Handshake con CPU realizado.
+[INFO] 01:05:38:791 Kernel/(3685:3692): Envie cde a cpu
+[INFO] 01:05:38:791 Kernel/(3685:3693): A punto de recibir buffer
+[INFO] 01:05:39:035 Kernel/(3685:3693): Buffer Recibido
+[INFO] 01:05:39:035 Kernel/(3685:3693): Proceso en ejecucion: 16

@@ -9,10 +9,11 @@
 #include <commons/collections/queue.h>
 #include <commons/config.h>
 #include <commons/memory.h>
-#include <pthread.h>
 #include <time.h>
+#include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
+#include "serializacion.h"
 #include "comunicacion.h"
 
 typedef enum{
@@ -72,16 +73,16 @@ pthread_mutex_t mutex_pid_a_asignar;
 
 
 // Contadores
-// Importante ver si es puntero o no para ponerle el & (o no)
 sem_t cont_new;
 sem_t cont_ready;
 sem_t cont_exec;
 sem_t cont_exit;
-
-
 sem_t cont_grado_max_multiprog;
 sem_t cont_procesador_libre;
 
+//Binarios
+sem_t bin1_envio_cde;
+sem_t bin2_recibir_cde;
 
 // CONEXIONES
 sem_t* conexion_consola;
@@ -94,19 +95,23 @@ t_queue* procesosNew;
 t_queue* procesosReady;
 t_queue* procesosBlocked; // probablemente no la usemos
 t_queue* procesosExec;
+t_pcb* pcb_en_ejecucion;
 t_queue* procesosExit;
-
 
 t_recurso* recurso_nulo;
 
 // Prototipos funciones
+
+// UTILS INICIAR MODULO -----------------------------------------------------------------
 void levantar_modulo();
 void finalizar_modulo();
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();
+// FIN UTILS INICIAR MODULO -------------------------------------------------------------
 
+// UTILS CONEXIONES ---------------------------------------------------------------------
 void manejar_conexion_con_memoria();
 void manejar_conexion_con_cpu();
 void manejar_conexioncon_file_system();
@@ -116,43 +121,54 @@ void establecer_conexiones();
 void esperar_consolas();
 t_list* recibir_paquete(int);
 
+void recibir_cde_de_cpu();
+void enviar_cde_a_cpu();
+// FIN UTILS CONEXIONES -----------------------------------------------------------------
+
+// PLANIFICADORES -----------------------------------------------------------------------
+void planificadores();
 void planificadorLargoPlazo();
 void planificadorCortoPlazo();
+// FIN PLANIFICADORES -------------------------------------------------------------------
+
+// UTLIS CREAR --------------------------------------------------------------------------
+t_pcb* crear_pcb(t_list* lista_instrucciones, int socket);
+t_cde* crear_cde(t_list* lista_instrucciones);
 t_registros inicializar_registros();
-t_pcb* crear_pcb(t_list*, int);
+// FIN UTILS CREAR ----------------------------------------------------------------------
 
-void planificacionFIFO();
-void planificacionHRRN();
 
-void serializar_cde(contexto_de_ejecucion);
-int tamanio_cde_serializado(Cde_serializado);
 
-void deserializar_cde();
-
-// Subprogramas planificador corto plazo
+// ------------------------------------ TRANSICIONES ------------------------------------
+// TRANSICIONES CORTO PLAZO -------------------------------------------------------------
 void enviar_de_pseudoblock_a_ready(t_pcb* pcb); // 
 void enviar_de_exec_a_psedudoblock(char* razon_de_block); // Para wait
 void enviar_de_exec_a_ready(); // Para yield
 void enviar_de_ready_a_exec(); // hilo | se libera cuando no hay ningun proceso en ejecucion
 void enviar_de_exec_a_exit(char* razon_de_exit); //
+// FIN TRANSICIONES CORTO PLAZO ---------------------------------------------------------
 
-// Subprogramas planificador largo plazo
+// TRANSICIONES LARGO PLAZO -------------------------------------------------------------
 void enviar_de_new_a_ready();
 void terminar_procesos();
 void recepcionar_proceso(void* argumento);
+// FIN TRANSICIONES LARGO PLAZO ---------------------------------------------------------
+// ---------------------------------- FIN TRANSICIONES ----------------------------------
 
-t_pcb* crear_pcb(t_list* lista_instrucciones, int socket);
-t_cde* crear_cde(t_list* lista_instrucciones);
 
-//Agregar y retirar pcbs de las funciones seguramente
+// UTILS MOVIMIENTO PCB SEGUROS (MUTEX) -------------------------------------------------
 t_pcb* retirar_pcb_de(t_queue* cola, pthread_mutex_t* mutex);
 void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex);
+// FIN UTILS MOVIMIENTO PCB SEGUROS (MUTEX) ---------------------------------------------
 
+
+// UTILS PARA SACAR DE READY ------------------------------------------------------------
 t_pcb* elegido_por_FIFO();
 t_pcb* elegido_por_HRRN();
 t_pcb* retirar_pcb_de_ready_segun_algoritmo();
+// FIN UTILS PARA SACAR DE READY --------------------------------------------------------
 
-// Utils recursos
+// UTILS RECURSOS -----------------------------------------------------------------------
 t_recurso* inicializar_recurso(char* nombre_recu, int instancias_tot); // FUNCIONA
 void inicializar_recurso_nulo(); // FUNCIONA
 int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb); // FUNCIONA
@@ -161,10 +177,13 @@ int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar); // FUNCION
 void liberar_todos_recursos(t_pcb* pcb);
 t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNCIONA
 void desbloquear_proceso(char* recurso_libearado);
+// FIN UTILS RECURSOS -------------------------------------------------------------------
 
 
-// Utils instrucciones (particular)
+// UTILS INSTRUCCIONES ------------------------------------------------------------------
+void evaluar_instruccion();
 void administrar_io(t_pcb* pcb_a_dormir, int tiempo_siesta);
 void dormir_proceso(void* args);
+// FIN UTILS INSTRUCCIONES --------------------------------------------------------------
 
 #endif /* INCLUDES_KERNEL_H_ */

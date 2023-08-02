@@ -60,15 +60,21 @@ t_list* mapearLista();
 t_instruction* cambiarStruct(Instruction_consola);
 int get_tamanio_char_array(char [], int);
 
+// UTILS INICIAR MODULO -----------------------------------------------------------------
 void levantar_modulo(char*);
 void finalizar_modulo();
 
 t_log* iniciar_logger(void);
 t_config* iniciar_config(char* );
 void levantar_config();
+// FIN UTILS INICIAR MODULO -------------------------------------------------------------
 
+// UTILS CONEXIONES ---------------------------------------------------------------------
 void establecer_conexiones();
 void conectarse_con_kernel();
+// FIN UTILS CONEXIONES -----------------------------------------------------------------
+
+// UTILS PARSER -------------------------------------------------------------------------
 
 InstructionType getNextInstruction(FILE *file);
 
@@ -81,5 +87,6 @@ int crearLista(char* filename);
 
 void destruir_lista(t_list* lista_instrucciones);
 void inicializar_instruccion();
+// FIN UTILS PARSER ---------------------------------------------------------------------
 
 #endif /* INCLUDES_CONSOLA_H_ */

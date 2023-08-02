@@ -1,39 +1,25 @@
 #include "../includes/kernel.h"
 
+// usleep(5 * 1000000);
+
 int main(void){
 	levantar_modulo();
 	
-	pthread_t t;
-	pthread_create(&t, NULL, (void *) enviar_de_new_a_ready, NULL);
-	pthread_detach(t);
+	// PRUEBA Q CDE SE ENVIE BIEN A CPU
 
-	pthread_t t2;
-	pthread_create(&t2, NULL, (void *) enviar_de_ready_a_exec, NULL);
-	pthread_detach(t2);
+	// FIN PRUEBA Q CDE SE ENVIE BIEN A CPU
 
-	pthread_t t3;
-	pthread_create(&t3, NULL, (void *) terminar_procesos, NULL);
-	pthread_detach(t3);
-	
-	// usleep(5 * 1000000);
+	//planificadores();
 
-	enviar_de_exec_a_exit("PID1");
-	enviar_de_exec_a_exit("PID2");
-	enviar_de_exec_a_exit("PID3");
-	enviar_de_exec_a_exit("PID4");
-	enviar_de_exec_a_exit("PID5");
-	enviar_de_exec_a_exit("PID6");
-	
-	log_info(logger, "Cant de consolas en ready: %d", queue_size(procesosReady));
-	log_info(logger, "Cant de consolas en new: %d", list_size(procesosNew -> elements));
-	
+	//time_t tiempo_actual = time(NULL);
+	//log_info(logger, "Tiempo actual: %lf", tiempo_actual);
+
 	while(1);
 	return 0;
 }
 
 
 // SUBPROGRAMAS
-
 void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
@@ -43,6 +29,7 @@ void levantar_modulo(){
 	incializar_semaforos();
 	inicializar_recurso_nulo();
 
+	
 	establecer_conexiones();
 	return;
 }
@@ -53,6 +40,9 @@ void incializar_listas(){
 	procesosExec = queue_create();
 	procesosBlocked = queue_create();
 	procesosExit = queue_create();
+
+	pcb_en_ejecucion = malloc(sizeof(t_pcb));
+
 	return;
 }
 
@@ -76,7 +66,8 @@ void incializar_semaforos(){
 	sem_init(&cont_exec, 0, 0);
 	sem_init(&cont_exit, 0, 0);
 
-
+	sem_init(&bin1_envio_cde, 0, 0);
+	sem_init(&bin2_recibir_cde, 0, 0);
 	// Para ver si el procesador esta libre para mandar un proceso a ejecucion
 	sem_init(&cont_procesador_libre, 0, 1);
 }
@@ -156,12 +147,19 @@ void manejar_conexion_con_memoria(){
 }
 
 void manejar_conexion_con_cpu(){
-	// Este haria el ida y vuelta del CDE
-	t_buffer* buffer = crear_buffer_nuestro();
-	while(recv(socket_cpu, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL) > 0){
-		
-	}
+	t_list* lista_de_prueba = list_create();
 
+	pcb_en_ejecucion = crear_pcb(lista_de_prueba, 25);
+
+	
+	sem_post(&bin1_envio_cde);
+	pthread_t p1;
+	pthread_create(&p1, NULL, (void*) enviar_cde_a_cpu, NULL);
+	pthread_detach(p1);
+
+	pthread_t p2;
+	pthread_create(&p2, NULL, (void*) recibir_cde_de_cpu, NULL);
+	pthread_detach(p2);
 }
 
 void manejar_conexion_con_file_system(){
@@ -184,7 +182,6 @@ void establecer_conexiones()
 		log_info(logger,"Error al conectar con memoria");
 	*/
 
-	/*
 	socket_cpu = crear_conexion(config_kernel.ip_cpu, config_kernel.puerto_cpu);
 	if (socket_cpu >= 0){			
 		log_info(logger,"Conectado con cpu");
@@ -192,6 +189,7 @@ void establecer_conexiones()
 		enviar_handshake(socket_cpu);
 		if (recibir_handshake(socket_cpu) == HANDSHAKE){
 			log_info(logger, "Handshake con CPU realizado.");
+
 			pthread_t conexion_cpu;
 			pthread_create(&conexion_cpu, NULL, (void *) manejar_conexion_con_cpu, NULL);
 			pthread_detach(conexion_cpu);
@@ -201,8 +199,7 @@ void establecer_conexiones()
 	}
 	else
 		log_info(logger,"Error al conectar con cpu");
-	*/
-	
+
 
 	/*
 	socket_file_system = crear_conexion(config_kernel.ip_file_system, config_kernel.puerto_file_system);
@@ -215,12 +212,13 @@ void establecer_conexiones()
 		log_info(logger,"Error al conectar con file system");
 	*/
 
-
+	/*
 	server_fd = iniciar_servidor(logger, config_kernel.puerto_escucha);
 	
 	pthread_t manejo_consolas;
 	pthread_create(&manejo_consolas, NULL, (void *) esperar_consolas, NULL);
 	pthread_detach(manejo_consolas);
+	*/
 }
 
 void esperar_consolas(){
@@ -241,6 +239,39 @@ void esperar_consolas(){
 	}
 }
 
+void recibir_cde_de_cpu(){
+	while(1){
+		sem_wait(&bin2_recibir_cde);
+		log_info(logger, "A punto de recibir buffer");;
+		t_buffer* buffer = recibir_buffer(socket_cpu);
+		log_info(logger, "Buffer Recibido");
+		t_cde cde = buffer_read_cde(buffer);
+
+		
+
+		pcb_en_ejecucion -> cde -> pid = cde.pid;
+		pcb_en_ejecucion -> cde -> lista_de_instrucciones = cde.lista_de_instrucciones;
+		pcb_en_ejecucion -> cde -> program_counter = cde.program_counter;
+		pcb_en_ejecucion -> cde -> registros_cpu = cde.registros_cpu;
+		pcb_en_ejecucion -> cde -> tabla_segmentos = cde.tabla_segmentos;
+
+		log_info(logger, "Proceso en ejecucion: %d", pcb_en_ejecucion->cde->pid);
+		pcb_en_ejecucion->cde->pid++;
+		//evaluar_instruccion(); // aca posteo envio_cde
+	}
+}
+
+void enviar_cde_a_cpu(){
+	while(1){
+		sem_wait(&bin1_envio_cde);
+		t_buffer* buffer = crear_buffer_nuestro();
+		buffer_write_cde(buffer, *(pcb_en_ejecucion->cde));
+		enviar_buffer(buffer, socket_cpu);
+		log_info(logger, "Envie cde a cpu");
+		// Si lo mande => espero a que vuelva
+		sem_post(&bin2_recibir_cde);
+	}
+}
 // FIN UTILS CONEXIONES -----------------------------------------------------------------
 
 
@@ -267,46 +298,48 @@ void enviar_de_ready_a_exec(){
 	while(1){
 		sem_wait(&cont_ready);
 		sem_wait(&cont_procesador_libre);
-		t_pcb* pcb_a_exec = retirar_pcb_de_ready_segun_algoritmo();
-		agregar_pcb_a(procesosExec, pcb_a_exec, &mutex_exec);
-		sem_post(&cont_exec);
-		log_info(logger, "PID: %d - Estado anterior: READY - Estado actual: EXEC", pcb_a_exec->cde->pid); //OBLIGATORIO
-		
-		// Falta enviar CDE a CPU
+		//t_pcb* pcb_a_exec = retirar_pcb_de_ready_segun_algoritmo();
+		//agregar_pcb_a(procesosExec, pcb_a_exec, &mutex_exec);
+		pthread_mutex_lock(&mutex_exec);
+		pcb_en_ejecucion = retirar_pcb_de_ready_segun_algoritmo();
+		pthread_mutex_unlock(&mutex_exec);
 
+		sem_post(&cont_exec);
+		log_info(logger, "PID: %d - Estado anterior: READY - Estado actual: EXEC", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+		
+		// Se envia por primera vez
+		enviar_cde_a_cpu();
 	}
 }
 
 void enviar_de_exec_a_psedudoblock(char* razon){ // SOLO PARA WAIT, por ARCHIVOS y por (IO -> va a ser un hilo aparte)
 	// razones: "nombre de recurso" || "nombre de archivo" |||||| io va aparte
-	t_pcb* pcb_a_blocked = retirar_pcb_de(procesosExec, &mutex_blocked);
-	log_info(logger, "PID: %d - Estado anterior: EXEC -	Estado actual: BLOCK", pcb_a_blocked->cde->pid); //OBLIGATORIO
-	log_info("PID: %d -	Bloqueado por: %s", pcb_a_blocked->cde->pid, razon);
+	sem_post(&cont_procesador_libre);
+	log_info(logger, "PID: %d - Estado anterior: EXEC -	Estado actual: BLOCK", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+	log_info("PID: %d -	Bloqueado por: %s", pcb_en_ejecucion->cde->pid, razon);
 }
 
 void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
-	t_pcb* pcb_a_ready = retirar_pcb_de(procesosExec, &mutex_exec);
 	sem_post(&cont_procesador_libre);
-	agregar_pcb_a(procesosReady, pcb_a_ready, &mutex_exec);
+	agregar_pcb_a(procesosReady, pcb_en_ejecucion, &mutex_exec);
 	sem_post(&cont_ready);
 	// log_info(logger, "Cola ready %s :");
 	// mostrar_pids(pcb_a_ready->cde->lista_de_instrucciones);
 }
 
 void enviar_de_pseudoblock_a_ready(t_pcb* pcb){
-		agregar_pcb_a(procesosReady, pcb, &mutex_ready);
-		log_info(logger, "PID: %d -	Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
-		sem_post(&cont_ready);
+	agregar_pcb_a(procesosReady, pcb, &mutex_ready);
+	log_info(logger, "PID: %d -	Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
+	sem_post(&cont_ready);
 }
 
 void enviar_de_exec_a_exit(char* razon){
 	sem_wait(&cont_exec);
-	t_pcb* pcb_retirado = retirar_pcb_de(procesosExec, &mutex_exec);
 	sem_post(&cont_procesador_libre); // se libera el procesador
 
-	agregar_pcb_a(procesosExit, pcb_retirado, &mutex_exit);
-	log_info(logger, "PID: %d -	Estado anterior: EXEC - Estado actual: EXIT", pcb_retirado->cde->pid); //OBLIGATORIO
-	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb_retirado->cde->pid, razon);
+	agregar_pcb_a(procesosExit, pcb_en_ejecucion, &mutex_exit);
+	log_info(logger, "PID: %d -	Estado anterior: EXEC - Estado actual: EXIT", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb_en_ejecucion->cde->pid, razon);
 	sem_post(&cont_exit); // se agrega uno a procesosExit
 	sem_post(&cont_grado_max_multiprog);
 }
@@ -314,7 +347,7 @@ void enviar_de_exec_a_exit(char* razon){
 
 // TRANSICIONES LARGO PLAZO -------------------------------------------------------------
 void enviar_de_new_a_ready(){
-	while(1){
+	//while(1){
 		sem_wait(&cont_new);
 		sem_wait(&cont_grado_max_multiprog);
 		// falta un semaforo por si procesosNew esta vacia
@@ -327,26 +360,21 @@ void enviar_de_new_a_ready(){
 
 		//MEMORIA nos tiene que mandar la tabla de segmentos inicial para guardarla en el PCB !!!!
 		agregar_pcb_a(procesosReady, pcb_a_ready, &mutex_ready);
-		log_info(logger, "PID: %d -	Estado anterior: NEW - Estado actual: READY", pcb_a_ready->cde->pid); //OBLIGATORIO
+		log_info(logger, "PID: %d - Estado anterior: NEW - Estado actual: READY", pcb_a_ready->cde->pid); //OBLIGATORIO
 		sem_post(&cont_ready);
 
 		
-	}
+	//}
 }
 
 void recepcionar_proceso(void* arg){
 	int* p = (int*) arg;
 	int socket_a_atender = *p;
 
-	
 	// Recibe lista de instrucciones de la consola y arma el PCB
 	t_buffer* buffer = recibir_buffer(socket_a_atender);
 
 	t_list* lista_instrucciones = buffer_read_lista_instrucciones(buffer);
-	/*
-	log_info(logger, "Mostrando instrucciones recibidas:");
-	mostrar_instrucciones(logger, lista_instrucciones);
-	*/
 
 	t_pcb* pcb_recibido = crear_pcb(lista_instrucciones, socket_a_atender);
 
@@ -381,37 +409,36 @@ void terminar_procesos(){
 // FIN TRANSICIONES LARGO PLAZO ---------------------------------------------------------
 // ---------------------------------- FIN TRANSICIONES ----------------------------------
 
-
 // PLANIFICADORES -----------------------------------------------------------------------
-void planificadorCortoPlazo(){ 
-	pthread_t poner_en_ejecucion;
-	pthread_create(&poner_en_ejecucion, NULL, (void *) enviar_de_ready_a_exec, NULL);
-	pthread_detach(poner_en_ejecucion);
-
-	// hilo para enviar_de_exec_a_block()??
-	
-	// hilo para enviar_de_exec_a_ready()?? SOLO PARA YIELD
-
-	// hilo para enviar_de_block_a_ready()
-	/*
-	pthread_t poner_en_listo;
-	pthread_create(&poner_en_listo, NULL, (void *) enviar_de_block_a_ready, NULL);
-	pthread_detach(poner_en_listo);
-	*/
-	pthread_t matar_procesos;
-	pthread_create(&matar_procesos, NULL, (void *) terminar_procesos, NULL);
-	pthread_detach(matar_procesos);
+void planificadores(){
+	planificadorLargoPlazo();
+	planificadorCortoPlazo();
 }
 
 void planificadorLargoPlazo(){
 	pthread_t hiloNew;
 	pthread_t hiloExit;
+
 	pthread_create(&hiloNew, NULL, (void *) enviar_de_new_a_ready, NULL);
 	pthread_create(&hiloExit, NULL, (void *) terminar_procesos, NULL);
 
 	pthread_detach(hiloNew);
 	pthread_detach(hiloExit);
 }
+
+void planificadorCortoPlazo(){ 
+	pthread_t poner_en_ejecucion;
+	pthread_create(&poner_en_ejecucion, NULL, (void *) enviar_de_ready_a_exec, NULL);
+	pthread_detach(poner_en_ejecucion);
+
+	// Solo tiene 1 hilo el corto plazo
+	// enviar_de_exec_a_pseudoblock se llama cuando se bloquea un proc
+	// enviar_de_exec_a_ready solo para YIELD
+	// enviar_de_pseudoblock_a_ready cuando se libera un recurso, etc (se desbloquea el proc)
+	// enviar_de_exec_a_exit cuando finaliza x error o por EXIT ;)
+
+}
+
 // FIN PLANIFICADORES -------------------------------------------------------------------
 
 
@@ -531,10 +558,37 @@ t_pcb* elegido_por_FIFO(){
 	return retirar_pcb_de(procesosReady, &mutex_ready);
 }
 
+double calcular_response_ratio(t_pcb *pcb){
+	double wait_time = -1; // cuanto tiempo espero en ready
+	double expected_next_round = -1; // cuanto tiempo se estima que va a tardar la proxima rafaga de ejecucion
+	double rr = -1; // response ratio
+
+	double tiempo_actual = (double)time(NULL);
+
+	wait_time = 
+
+	// rr = (wait_time + expected_next_round) / expected_next_round
+
+	wait_time = tiempo_actual - pcb->tiempo_llegada_ready;
+
+	return rr;
+}
+
+bool maximo_response_ratio(t_pcb* pcb1, t_pcb* pcb2){
+	if (calcular_response_ratio(pcb1) > calcular_response_ratio(pcb2))
+		return true;
+	else
+		return false;
+}
+
 t_pcb* elegido_por_HRRN(){
-	t_pcb* pcb;
+	pthread_mutex_lock(&mutex_ready);
+	list_sort(procesosReady->elements, (void*)maximo_response_ratio);
+	pthread_mutex_unlock(&mutex_ready);
+
+	t_pcb* pcb_elegido = retirar_pcb_de(procesosReady, &mutex_ready);
 	
-	return pcb;
+	return pcb_elegido;
 }
 
 t_pcb* retirar_pcb_de_ready_segun_algoritmo(){
@@ -555,8 +609,8 @@ t_cde* crear_cde(t_list* instrucciones){
 
 
 	pthread_mutex_lock(&mutex_pid_a_asignar);
-	cde->pid = pid;
-	pid++;
+	cde->pid = 15;
+	//pid++;
 	pthread_mutex_unlock(&mutex_pid_a_asignar);
 	
 	
@@ -613,20 +667,12 @@ t_registros inicializar_registros(){
 // FIN UTILS CREAR ----------------------------------------------------------------------
 
 
-
-void ejecutarProceso(){
-	// Arma el cde
-	// Se lo envia a CPU
-	// CPU ejecuta instrucciones y si necesita devuelve el CDE (do while de ulima instruccion != exit)
-	// Cuando recibe el CDE, evalua la instruccion actual
-	// Si la instruccion actual bloquea el proceso, lo saca de la colaExec
-	// Llama al subprograma que bloquea.
-	return;
-}
-
 // UTILS INSTRUCCIONES ------------------------------------------------------------------
-void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
+void evaluar_instruccion(){
 	// La evalua cuando vuelve de CPU
+	int indice = pcb_en_ejecucion->cde->program_counter;
+	t_list* lista_instrucciones = pcb_en_ejecucion->cde->lista_de_instrucciones;
+	t_instruction* instruccion_actual = list_get(lista_instrucciones, indice);
 	switch(instruccion_actual->instruccion){
 		case F_READ:
 			break;
@@ -639,12 +685,12 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 		case CREATE_SEGMENT:
 			break;
 		case IO:
-			log_info(logger,"PID: %d - Bloqueado por: %s", pcb->cde->pid, "IO");
-			log_info(logger,"PID: %d - Ejecuta IO: %d", pcb->cde-> pid, instruccion_actual->numero1);
-			administrar_io(pcb, instruccion_actual->numero1);
+			log_info(logger,"PID: %d - Bloqueado por: %s", pcb_en_ejecucion->cde->pid, "IO");
+			log_info(logger,"PID: %d - Ejecuta IO: %d", pcb_en_ejecucion->cde-> pid, instruccion_actual->numero1);
+			administrar_io(pcb_en_ejecucion, instruccion_actual->numero1);
 			break;
 		case WAIT:
-			switch(asignar_instancia_recurso(instruccion_actual -> string1, pcb)){
+			switch(asignar_instancia_recurso(instruccion_actual -> string1, pcb_en_ejecucion)){
 				case RECURSO_INVALIDO:
 					enviar_de_exec_a_exit("INVALID_RESOURCE");
 					break;
@@ -657,7 +703,7 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 			}
 			break;
 		case SIGNAL:
-			switch(liberar_instancia_recurso(instruccion_actual -> string1, pcb)){
+			switch(liberar_instancia_recurso(instruccion_actual -> string1, pcb_en_ejecucion)){
 				case RECURSO_INVALIDO:
 					enviar_de_exec_a_exit("INVALID_RESOURCE");
 					break;
@@ -665,7 +711,6 @@ void evaluar_instruccion(t_instruction* instruccion_actual, t_pcb* pcb){
 					// Lo unico que tendria que hacer es el log_info que esta adentro de liberar_instancia_recurso
 					break;
 			}
-
 			break;
 		case F_OPEN:
 			break;

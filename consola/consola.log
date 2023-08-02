@@ -3095,3 +3095,120 @@
 [INFO] 17:16:52:179 Consola/(10793:10793): Lista enviada
 [INFO] 17:16:52:179 Consola/(10793:10793): Lista destruida
 [INFO] 17:18:24:670 Consola/(10793:10793): Codigo recibido: 22026
+[INFO] 22:57:37:871 Consola/(2803:2803): Conectado con kernel
+[INFO] 22:57:37:887 Consola/(2803:2803): Handshake con Kernel realizado.
+[INFO] 22:57:37:888 Consola/(2803:2803): Instrucciones leidas
+[INFO] 22:57:37:889 Consola/(2803:2803): Lista mapeada
+[INFO] 22:57:37:889 Consola/(2803:2803): Escribi en el buffer la lista de instrucciones
+[INFO] 22:57:37:889 Consola/(2803:2803): Lista enviada
+[INFO] 22:57:37:889 Consola/(2803:2803): Lista destruida
+[INFO] 22:58:36:938 Consola/(2803:2803): Codigo recibido: 21905
+[INFO] 23:00:00:242 Consola/(2962:2962): Conectado con kernel
+[INFO] 23:00:00:243 Consola/(2962:2962): Handshake con Kernel realizado.
+[INFO] 23:00:00:244 Consola/(2962:2962): Instrucciones leidas
+[INFO] 23:00:00:244 Consola/(2962:2962): Lista mapeada
+[INFO] 23:00:00:244 Consola/(2962:2962): Escribi en el buffer la lista de instrucciones
+[INFO] 23:00:00:244 Consola/(2962:2962): Lista enviada
+[INFO] 23:00:00:244 Consola/(2962:2962): Lista destruida
+[INFO] 23:00:57:372 Consola/(3066:3066): Conectado con kernel
+[INFO] 23:00:57:373 Consola/(3066:3066): Handshake con Kernel realizado.
+[INFO] 23:00:57:374 Consola/(3066:3066): Instrucciones leidas
+[INFO] 23:00:57:374 Consola/(3066:3066): Lista mapeada
+[INFO] 23:00:57:374 Consola/(3066:3066): Escribi en el buffer la lista de instrucciones
+[INFO] 23:00:57:374 Consola/(3066:3066): Lista enviada
+[INFO] 23:00:57:374 Consola/(3066:3066): Lista destruida
+[INFO] 23:02:18:977 Consola/(3165:3165): Conectado con kernel
+[INFO] 23:02:44:742 Consola/(3165:3165): Handshake con Kernel realizado.
+[INFO] 23:03:35:906 Consola/(3165:3165): Instrucciones leidas
+[INFO] 23:03:37:086 Consola/(3165:3165): Lista mapeada
+[INFO] 23:03:38:482 Consola/(3165:3165): Escribi en el buffer la lista de instrucciones
+[INFO] 23:03:42:129 Consola/(3165:3165): Lista enviada
+[INFO] 23:10:33:388 Consola/(3479:3479): Conectado con kernel
+[INFO] 23:12:16:513 Consola/(3479:3479): Handshake con Kernel realizado.
+[INFO] 23:12:27:400 Consola/(3479:3479): Instrucciones leidas
+[INFO] 23:12:28:468 Consola/(3479:3479): Lista mapeada
+[INFO] 23:12:59:679 Consola/(3479:3479): Escribi en el buffer la lista de instrucciones
+[INFO] 23:14:11:008 Consola/(3479:3479): Lista enviada
+[INFO] 23:14:12:330 Consola/(3479:3479): Lista destruida
+[INFO] 23:15:51:191 Consola/(3875:3875): Conectado con kernel
+[INFO] 23:15:51:191 Consola/(3875:3875): Handshake con Kernel realizado.
+[INFO] 23:15:51:191 Consola/(3875:3875): Instrucciones leidas
+[INFO] 23:15:51:191 Consola/(3875:3875): Lista mapeada
+[INFO] 23:15:51:191 Consola/(3875:3875): Escribi en el buffer la lista de instrucciones
+[INFO] 23:15:51:191 Consola/(3875:3875): Lista enviada
+[INFO] 23:15:51:191 Consola/(3875:3875): Lista destruida
+[INFO] 23:15:51:191 Consola/(3875:3875): Codigo recibido: 21924
+[INFO] 23:17:04:301 Consola/(3935:3935): Conectado con kernel
+[INFO] 23:17:04:302 Consola/(3935:3935): Handshake con Kernel realizado.
+[INFO] 23:17:04:302 Consola/(3935:3935): Instrucciones leidas
+[INFO] 23:17:04:302 Consola/(3935:3935): Lista mapeada
+[INFO] 23:17:04:302 Consola/(3935:3935): Escribi en el buffer la lista de instrucciones
+[INFO] 23:17:04:302 Consola/(3935:3935): Lista enviada
+[INFO] 23:17:04:303 Consola/(3935:3935): Lista destruida
+[INFO] 23:19:03:616 Consola/(4081:4081): Conectado con kernel
+[INFO] 23:19:44:418 Consola/(4081:4081): Handshake con Kernel realizado.
+[INFO] 23:20:22:543 Consola/(4081:4081): Instrucciones leidas
+[INFO] 23:20:23:543 Consola/(4081:4081): Lista mapeada
+[INFO] 23:20:24:762 Consola/(4081:4081): Escribi en el buffer la lista de instrucciones
+[INFO] 23:20:49:728 Consola/(4081:4081): Lista enviada
+[INFO] 23:20:50:857 Consola/(4081:4081): Lista destruida
+[INFO] 23:23:08:441 Consola/(4380:4380): Conectado con kernel
+[INFO] 23:23:08:441 Consola/(4380:4380): Handshake con Kernel realizado.
+[INFO] 23:23:08:441 Consola/(4380:4380): Instrucciones leidas
+[INFO] 23:23:08:441 Consola/(4380:4380): Lista mapeada
+[INFO] 23:23:08:441 Consola/(4380:4380): Escribi en el buffer la lista de instrucciones
+[INFO] 23:23:08:441 Consola/(4380:4380): Lista enviada
+[INFO] 23:23:08:441 Consola/(4380:4380): Lista destruida
+[INFO] 23:24:06:209 Consola/(4480:4480): Conectado con kernel
+[INFO] 23:24:06:210 Consola/(4480:4480): Handshake con Kernel realizado.
+[INFO] 23:24:06:210 Consola/(4480:4480): Instrucciones leidas
+[INFO] 23:24:06:210 Consola/(4480:4480): Lista mapeada
+[INFO] 23:24:06:210 Consola/(4480:4480): Escribi en el buffer la lista de instrucciones
+[INFO] 23:24:06:210 Consola/(4480:4480): Lista enviada
+[INFO] 23:24:06:210 Consola/(4480:4480): Lista destruida
+[INFO] 23:24:11:198 Consola/(4480:4480): Codigo recibido: 22090
+[INFO] 23:26:37:471 Consola/(4737:4737): Conectado con kernel
+[INFO] 23:26:37:472 Consola/(4737:4737): Handshake con Kernel realizado.
+[INFO] 23:26:37:472 Consola/(4737:4737): Instrucciones leidas
+[INFO] 23:26:37:472 Consola/(4737:4737): Lista mapeada
+[INFO] 23:26:37:472 Consola/(4737:4737): Escribi en el buffer la lista de instrucciones
+[INFO] 23:26:37:472 Consola/(4737:4737): Lista enviada
+[INFO] 23:26:37:472 Consola/(4737:4737): Lista destruida
+[INFO] 23:26:47:428 Consola/(4737:4737): Codigo recibido: 21948
+[INFO] 23:38:59:356 Consola/(5260:5260): Conectado con kernel
+[INFO] 23:38:59:362 Consola/(5260:5260): Handshake con Kernel realizado.
+[INFO] 23:38:59:362 Consola/(5260:5260): Instrucciones leidas
+[INFO] 23:38:59:362 Consola/(5260:5260): Lista mapeada
+[INFO] 23:38:59:362 Consola/(5260:5260): Escribi en el buffer la lista de instrucciones
+[INFO] 23:38:59:362 Consola/(5260:5260): Lista enviada
+[INFO] 23:38:59:362 Consola/(5260:5260): Lista destruida
+[INFO] 23:40:12:657 Consola/(5260:5260): Codigo recibido: 21921
+[INFO] 23:42:39:010 Consola/(5445:5445): Conectado con kernel
+[INFO] 23:42:39:013 Consola/(5445:5445): Handshake con Kernel realizado.
+[INFO] 23:42:39:013 Consola/(5445:5445): Instrucciones leidas
+[INFO] 23:42:39:013 Consola/(5445:5445): Lista mapeada
+[INFO] 23:42:39:013 Consola/(5445:5445): Escribi en el buffer la lista de instrucciones
+[INFO] 23:42:39:015 Consola/(5445:5445): Lista enviada
+[INFO] 23:42:39:015 Consola/(5445:5445): Lista destruida
+[INFO] 23:43:12:371 Consola/(5445:5445): Codigo recibido: 21896
+[INFO] 23:54:39:752 Consola/(5974:5974): Conectado con kernel
+[INFO] 23:55:10:691 Consola/(5974:5974): Handshake con Kernel realizado.
+[INFO] 23:56:06:547 Consola/(5974:5974): Instrucciones leidas
+[INFO] 23:56:07:235 Consola/(5974:5974): Lista mapeada
+[INFO] 23:56:09:848 Consola/(5974:5974): Escribi en el buffer la lista de instrucciones
+[INFO] 23:56:11:667 Consola/(5974:5974): Lista enviada
+[INFO] 00:03:51:937 Consola/(7072:7072): Conectado con kernel
+[INFO] 00:03:51:938 Consola/(7072:7072): Handshake con Kernel realizado.
+[INFO] 00:03:51:938 Consola/(7072:7072): Instrucciones leidas
+[INFO] 00:03:51:938 Consola/(7072:7072): Lista mapeada
+[INFO] 00:03:51:938 Consola/(7072:7072): Escribi en el buffer la lista de instrucciones
+[INFO] 00:03:51:938 Consola/(7072:7072): Lista enviada
+[INFO] 00:03:51:938 Consola/(7072:7072): Lista destruida
+[INFO] 00:04:04:088 Consola/(7097:7097): Conectado con kernel
+[INFO] 00:04:04:090 Consola/(7097:7097): Handshake con Kernel realizado.
+[INFO] 00:04:04:090 Consola/(7097:7097): Instrucciones leidas
+[INFO] 00:04:04:094 Consola/(7097:7097): Lista mapeada
+[INFO] 00:04:04:094 Consola/(7097:7097): Escribi en el buffer la lista de instrucciones
+[INFO] 00:04:04:095 Consola/(7097:7097): Lista enviada
+[INFO] 00:04:04:095 Consola/(7097:7097): Lista destruida
+[INFO] 00:04:14:387 Consola/(7097:7097): Codigo recibido: 22093

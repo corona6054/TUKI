@@ -10,6 +10,9 @@
 #include <semaphore.h>
 #include <math.h>
 #include "serializacion.h"
+#include "comunicacion.h"
+
+
 typedef struct{
 	int retardo;
 	char *ip_memoria;
@@ -20,30 +23,55 @@ typedef struct{
 
 
 // Variables globales
+// Semaforos
+sem_t espero_cde;
+sem_t leer_siguiente_instruccion; // Se va usar como un pseudo-semaforo
+
+
 Config_cpu config_cpu;
 t_log* logger;
 t_config* config;
 
-sem_t *sem_conexion;
-sem_t *prueba1cpu;
 
 int kernel_fd;
 int socket_memoria;
 
 int server_fd;
 
-// Prototipos funciones
+t_cde cde_en_ejecucion;
+
+// UTILS INICIAR MODULO -----------------------------------------------------------------
 void levantar_modulo();
 void finalizar_modulo();
-
+void inicializar_semaforos();
+void iniciar_modulo();
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();
+// FIN UTILS INICIAR MODULO -------------------------------------------------------------
 
+// UTILS CONEXIONES ---------------------------------------------------------------------
 void conectarse_con_memoria();
 void establecer_conexiones();
+void crear_conexion_con_kernel();
+void recibir_cde();
+void enviar_cde();
+// UTILS FIN CONEXIONES -----------------------------------------------------------------
 
-void ejecutar_set(char[], char[], int, t_registros*);
+// UTILS INSTRUCCIONES (GENERAL) --------------------------------------------------------
+void ejecutar_proceso();
+void evaluar_instruccion(t_instruction* instruccion);
+// FIN UTILS INSTRUCCIONES (GENERAL) ----------------------------------------------------
+
+// UTILS INSTRUCCIONES (PARTICULAR) -----------------------------------------------------
+void ejecutar_set(char*, char*, t_registros);
+void ejecutar_move_in(char*, uint32_t); 
+void ejecutar_move_out(char*, uint32_t);
+
+int calcular_dir_fisica(int dir_logica,int tamanio);
+int tamanioRegistro(char *registro);
+void sacar_de_registro(char registro[],int dir_fisica, int tamanio, t_registros *registros, int pid);
+
 void ejecutar_exit();
 void ejecutar_yield();
 void ejecutar_io(int);
@@ -57,10 +85,8 @@ void ejecutar_fseek(/*archivo, int */);
 void ejecutar_ftruncate(/*archivo, int */);
 void ejecutar_createsegment(/*int , int*/ );
 void ejecutar_deletesegment(/*int */);
+// FIN UTILS INSTRUCCIONES (PARTICULAR) -------------------------------------------------
 
-void switch_instruccion(t_instruction* instruccion, t_cde cde);
-int calcular_dir_fisica(int dir_logica, t_cde cde,int tamanio);
-int tamanioRegistro(char *registro);
-void sacar_de_registro(char registro[],int dir_fisica, int tamanio, t_registros *registros, int pid);
+
 
 #endif /* INCLUDES_CPU_H_ */

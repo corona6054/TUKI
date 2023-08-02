@@ -353,3 +353,117 @@
 [INFO] 00:38:45:354 Cpu/(5520:5520): HOLA123
 [INFO] 00:38:45:354 Cpu/(5520:5520): 10
 [INFO] 01:47:22:067 Cpu/(6322:6322): Listo para escuchar a mi cliente
+[INFO] 20:59:37:012 Cpu/(6657:6657): Listo para escuchar a mi cliente
+[INFO] 21:00:59:527 Cpu/(6784:6784): Listo para escuchar a mi cliente
+[INFO] 21:01:45:963 Cpu/(6956:6956): Listo para escuchar a mi cliente
+[INFO] 21:04:23:805 Cpu/(7272:7272): Listo para escuchar a mi cliente
+[INFO] 21:05:09:318 Cpu/(7469:7469): Listo para escuchar a mi cliente
+[INFO] 21:05:32:999 Cpu/(7490:7490): Listo para escuchar a mi cliente
+[INFO] 21:06:57:939 Cpu/(7584:7584): Listo para escuchar a mi cliente
+[INFO] 21:11:21:115 Cpu/(8022:8022): Listo para escuchar a mi cliente
+[INFO] 21:13:07:482 Cpu/(8174:8174): Listo para escuchar a mi cliente
+[INFO] 21:13:46:836 Cpu/(8216:8216): Listo para escuchar a mi cliente
+[INFO] 21:16:03:671 Cpu/(8460:8460): Listo para escuchar a mi cliente
+[INFO] 21:17:31:801 Cpu/(8551:8551): Listo para escuchar a mi cliente
+[INFO] 21:17:38:867 Cpu/(8551:8551): Se conecto un cliente!
+[INFO] 21:17:38:869 Cpu/(8551:8551): Conectado con kernel
+[INFO] 21:17:38:871 Cpu/(8551:8551): Handshake con CPU realizado.
+[INFO] 22:56:51:425 Cpu/(2716:2716): Listo para escuchar a mi cliente
+[INFO] 22:56:58:285 Cpu/(2716:2716): Conectado con kernel
+[INFO] 22:56:58:290 Cpu/(2716:2716): Handshake con CPU realizado.
+[INFO] 23:24:44:582 Cpu/(4554:4554): Listo para escuchar a mi cliente
+[INFO] 23:25:56:761 Cpu/(4657:4657): Listo para escuchar a mi cliente
+[INFO] 23:26:09:571 Cpu/(4657:4657): Conectado con kernel
+[INFO] 23:26:09:572 Cpu/(4657:4657): Handshake con CPU realizado.
+[INFO] 23:38:15:229 Cpu/(5142:5142): Listo para escuchar a mi cliente
+[INFO] 23:38:40:933 Cpu/(5142:5142): Conectado con kernel
+[INFO] 23:38:40:933 Cpu/(5142:5142): Handshake con CPU realizado.
+[INFO] 23:42:08:589 Cpu/(5381:5381): Listo para escuchar a mi cliente
+[INFO] 23:42:16:821 Cpu/(5381:5381): Conectado con kernel
+[INFO] 23:42:16:822 Cpu/(5381:5381): Handshake con CPU realizado.
+[INFO] 23:43:43:777 Cpu/(5524:5524): Listo para escuchar a mi cliente
+[INFO] 23:52:09:433 Cpu/(5747:5747): Listo para escuchar a mi cliente
+[INFO] 23:52:59:664 Cpu/(5747:5747): Conectado con kernel
+[INFO] 23:53:22:713 Cpu/(5747:5747): Handshake con CPU realizado.
+[INFO] 00:01:22:803 Cpu/(6934:6934): Listo para escuchar a mi cliente
+[INFO] 00:01:31:936 Cpu/(6960:6960): Listo para escuchar a mi cliente
+[INFO] 00:03:29:550 Cpu/(7015:7015): Listo para escuchar a mi cliente
+[INFO] 00:03:37:719 Cpu/(7015:7015): Conectado con kernel
+[INFO] 00:03:37:719 Cpu/(7015:7015): Handshake con CPU realizado.
+[INFO] 00:11:39:305 Cpu/(7449:7449): Listo para escuchar a mi cliente
+[INFO] 00:11:52:773 Cpu/(7449:7449): Conectado con kernel
+[INFO] 00:11:52:773 Cpu/(7449:7449): Handshake con CPU realizado.
+[INFO] 00:11:52:773 Cpu/(7449:7449): Posteo(espero_cde)
+[INFO] 00:11:52:844 Cpu/(7449:7487): Proceso en ejecucion: 0
+[INFO] 00:12:45:910 Cpu/(7541:7541): Listo para escuchar a mi cliente
+[INFO] 00:13:27:460 Cpu/(7616:7616): Listo para escuchar a mi cliente
+[INFO] 00:13:31:877 Cpu/(7616:7616): Conectado con kernel
+[INFO] 00:13:31:877 Cpu/(7616:7616): Handshake con CPU realizado.
+[INFO] 00:13:31:878 Cpu/(7616:7616): Posteo(espero_cde)
+[INFO] 00:13:31:920 Cpu/(7616:7640): Proceso en ejecucion: 15
+[INFO] 00:20:07:348 Cpu/(7815:7815): Listo para escuchar a mi cliente
+[INFO] 00:20:12:919 Cpu/(7815:7815): Conectado con kernel
+[INFO] 00:20:12:920 Cpu/(7815:7815): Handshake con CPU realizado.
+[INFO] 00:20:12:920 Cpu/(7815:7815): Posteo(espero_cde)
+[INFO] 00:20:12:972 Cpu/(7815:7855): Proceso en ejecucion: 15
+[INFO] 00:21:44:088 Cpu/(7929:7929): Listo para escuchar a mi cliente
+[INFO] 00:23:31:247 Cpu/(8022:8022): Listo para escuchar a mi cliente
+[INFO] 00:23:36:162 Cpu/(8022:8022): Conectado con kernel
+[INFO] 00:23:36:164 Cpu/(8022:8022): Handshake con CPU realizado.
+[INFO] 00:23:36:165 Cpu/(8022:8022): Posteo(espero_cde)
+[INFO] 00:23:36:226 Cpu/(8022:8055): Proceso en ejecucion: 15
+[INFO] 00:27:10:655 Cpu/(8178:8178): Listo para escuchar a mi cliente
+[INFO] 00:28:57:633 Cpu/(8235:8235): Listo para escuchar a mi cliente
+[INFO] 00:29:03:835 Cpu/(8235:8235): Conectado con kernel
+[INFO] 00:29:03:836 Cpu/(8235:8235): Handshake con CPU realizado.
+[INFO] 00:29:03:836 Cpu/(8235:8235): Posteo(espero_cde)
+[INFO] 00:29:03:897 Cpu/(8235:8254): Proceso en ejecucion: 15
+[INFO] 00:31:29:005 Cpu/(1868:1868): Listo para escuchar a mi cliente
+[INFO] 00:31:34:348 Cpu/(1868:1868): Conectado con kernel
+[INFO] 00:31:34:355 Cpu/(1868:1868): Handshake con CPU realizado.
+[INFO] 00:31:34:356 Cpu/(1868:1868): Posteo(espero_cde)
+[INFO] 00:31:34:439 Cpu/(1868:1884): Proceso en ejecucion: 15
+[INFO] 00:32:48:490 Cpu/(2252:2252): Listo para escuchar a mi cliente
+[INFO] 00:32:54:259 Cpu/(2252:2252): Conectado con kernel
+[INFO] 00:32:54:259 Cpu/(2252:2252): Handshake con CPU realizado.
+[INFO] 00:32:54:259 Cpu/(2252:2252): Posteo(espero_cde)
+[INFO] 00:32:54:316 Cpu/(2252:2277): Proceso en ejecucion: 15
+[INFO] 00:43:51:508 Cpu/(2691:2691): Listo para escuchar a mi cliente
+[INFO] 00:43:57:074 Cpu/(2691:2691): Conectado con kernel
+[INFO] 00:43:57:075 Cpu/(2691:2691): Handshake con CPU realizado.
+[INFO] 00:43:57:076 Cpu/(2691:2691): Posteo(espero_cde)
+[INFO] 00:43:57:139 Cpu/(2691:2731): Proceso en ejecucion: 15
+[INFO] 00:43:57:140 Cpu/(2691:2731): Proceso en ejecucion: 15
+[INFO] 00:47:16:898 Cpu/(2806:2806): Listo para escuchar a mi cliente
+[INFO] 00:47:21:654 Cpu/(2806:2806): Conectado con kernel
+[INFO] 00:47:21:655 Cpu/(2806:2806): Handshake con CPU realizado.
+[INFO] 00:47:21:655 Cpu/(2806:2806): Posteo(espero_cde)
+[INFO] 00:47:21:737 Cpu/(2806:2839): Proceso en ejecucion: 15
+[INFO] 00:49:50:417 Cpu/(3004:3004): Listo para escuchar a mi cliente
+[INFO] 00:49:55:125 Cpu/(3004:3004): Conectado con kernel
+[INFO] 00:49:55:127 Cpu/(3004:3004): Handshake con CPU realizado.
+[INFO] 00:49:55:127 Cpu/(3004:3004): Posteo(espero_cde)
+[INFO] 00:49:55:187 Cpu/(3004:3038): Proceso en ejecucion: 15
+[INFO] 00:49:55:187 Cpu/(3004:3038): A punto de enviar el cde a kernel
+[INFO] 00:49:55:187 Cpu/(3004:3038): Envie el cde a kernel
+[INFO] 00:53:17:695 Cpu/(3169:3169): Listo para escuchar a mi cliente
+[INFO] 00:53:23:101 Cpu/(3169:3169): Conectado con kernel
+[INFO] 00:53:23:102 Cpu/(3169:3169): Handshake con CPU realizado.
+[INFO] 00:53:23:102 Cpu/(3169:3169): Posteo(espero_cde)
+[INFO] 00:53:23:168 Cpu/(3169:3207): Proceso en ejecucion: 15
+[INFO] 00:53:23:168 Cpu/(3169:3207): A punto de enviar el cde a kernel
+[INFO] 00:53:23:168 Cpu/(3169:3207): Envie el cde a kernel
+[INFO] 01:01:37:244 Cpu/(3479:3479): Listo para escuchar a mi cliente
+[INFO] 01:02:42:198 Cpu/(3479:3479): Conectado con kernel
+[INFO] 01:02:42:199 Cpu/(3479:3479): Handshake con CPU realizado.
+[INFO] 01:02:42:199 Cpu/(3479:3479): Posteo(espero_cde)
+[INFO] 01:02:42:292 Cpu/(3479:3591): Proceso en ejecucion: 15
+[INFO] 01:02:42:292 Cpu/(3479:3591): A punto de enviar el cde a kernel
+[INFO] 01:02:42:292 Cpu/(3479:3591): Envie el cde a kernel
+[INFO] 01:05:33:896 Cpu/(3648:3648): Listo para escuchar a mi cliente
+[INFO] 01:05:38:766 Cpu/(3648:3648): Conectado con kernel
+[INFO] 01:05:38:766 Cpu/(3648:3648): Handshake con CPU realizado.
+[INFO] 01:05:38:766 Cpu/(3648:3648): Posteo(espero_cde)
+[INFO] 01:05:38:993 Cpu/(3648:3690): Proceso en ejecucion: 15
+[INFO] 01:05:38:993 Cpu/(3648:3690): A punto de enviar el cde a kernel
+[INFO] 01:05:38:993 Cpu/(3648:3690): Envie el cde a kernel

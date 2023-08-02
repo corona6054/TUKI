@@ -7,6 +7,9 @@
         "config.h": "c",
         "cpu.h": "c",
         "stdlib.h": "c",
-        "list.h": "c"
+        "list.h": "c",
+        "kernel.h": "c",
+        "queue.h": "c",
+        "struct_timespec.h": "c"
     }
 }

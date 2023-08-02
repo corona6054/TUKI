@@ -40,8 +40,6 @@ int esperar_cliente(int socket_servidor, t_log* logger)
 {
 	int socket_cliente;
 	socket_cliente = accept(socket_servidor, NULL, NULL);
-	log_info(logger, "Se conecto un cliente!");
-
 	return socket_cliente;
 }
 
@@ -74,11 +72,10 @@ int crear_conexion(char *ip, int puerto)
 
 // UTILS BUFFER
 t_buffer* recibir_buffer(int socket)
-{
-	// Esta funcion desarma el paquete y arma el buffer que luego sera deserializado
+{	
 	t_buffer* buffer = crear_buffer_nuestro();
 
-	// Recibo que hay en el buffer
+	// Recibo el codigo del buffer
 	recv(socket, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL);
 
 	// Recibo el tamanio del buffer y reservo espacio en memoria

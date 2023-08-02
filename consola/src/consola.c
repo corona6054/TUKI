@@ -9,7 +9,6 @@ int main(int argc, char** argv){
 	crear_array_de_instrucciones(instruccion_path);
 	log_info(logger,"Instrucciones leidas");
 
-
     t_list* listaAEnviar = mapearLista();
     log_info(logger,"Lista mapeada");
     
@@ -96,18 +95,21 @@ void enviarLista(t_buffer* buffer, t_list* listaAEnviar){
 }
 
 
-void levantar_modulo(char* config_path){
-	logger = iniciar_logger();
-	config = iniciar_config(config_path);
-	levantar_config();
-	establecer_conexiones();
-}
+
 
 void finalizar_modulo(){
 	log_destroy(logger);
 	config_destroy(config);
 	close(socket_kernel);
 	return;
+}
+
+// UTILS INICIAR MODULO -----------------------------------------------------------------
+void levantar_modulo(char* config_path){
+	logger = iniciar_logger();
+	config = iniciar_config(config_path);
+	levantar_config();
+	establecer_conexiones();
 }
 
 t_log* iniciar_logger(void)
@@ -143,6 +145,9 @@ void levantar_config(){
 	config_consola.puerto_kernel = config_get_int_value(config,"PUERTO_KERNEL");
 }
 
+// FIN UTILS INICIAR MODULO -------------------------------------------------------------
+
+// UTILS CONEXIONES ---------------------------------------------------------------------
 void establecer_conexiones()
 {
 	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
@@ -158,8 +163,9 @@ void establecer_conexiones()
 	else
 		log_info(logger,"Error al conectar con kernel");
 }
+// FIN UTILS CONEXIONES -----------------------------------------------------------------
 
-
+// UTILS PARSER -------------------------------------------------------------------------
 InstructionType getNextInstruction(FILE *file)
 {
     char instruction[20];
@@ -381,3 +387,4 @@ void inicializar_instruccion(){
     instructions[instructionCount].numero1 = INT_VACIO;
     instructions[instructionCount].numero2 = INT_VACIO;
 }
+// FIN UTILS PARSER ---------------------------------------------------------------------
