@@ -145,14 +145,13 @@ void establecer_conexiones(){
 void recibir_cde(){
 	while(1){
 		sem_wait(&bin2_recibir_cde);
-		log_info(logger, "A punto de recibir buffer.");
+
 		t_buffer* buffer = recibir_buffer(kernel_fd);
 		log_info(logger, "Recibi buffer.");
+
 		cde_en_ejecucion = 	buffer_read_cde(buffer);
-		log_info(logger, "CDE recibido, PC %d", cde_en_ejecucion->program_counter);
 
 		destruir_buffer_nuestro(buffer);
-		log_info(logger, "Destrui buffer recibido");
 
 		sem_post(&leer_siguiente_instruccion);
 		sem_post(&bin1_envio_cde);
@@ -163,15 +162,13 @@ void enviar_cde(){
 	while(1){
 		sem_wait(&necesito_enviar_cde);
 		sem_wait(&bin1_envio_cde);
+		
 		t_buffer* buffer = crear_buffer_nuestro();
 		buffer_write_cde(buffer, *cde_en_ejecucion);
-		log_info(logger, "A punto de enviar el cde a kernel, PC: %d", cde_en_ejecucion->program_counter);
 		enviar_buffer(buffer, kernel_fd);
 		log_info(logger, "Envie el cde a kernel");
 		
 		destruir_buffer_nuestro(buffer);
-		log_info(logger, "Destrui buffer enviado");
-
 		
 		destruir_cde(cde_en_ejecucion);
 		
@@ -186,7 +183,6 @@ void ejecutar_proceso(){
 	while(1){
 		sem_wait(&leer_siguiente_instruccion);
 		int indice = cde_en_ejecucion->program_counter;
-		log_info(logger, "Evaluando instruccion Nro: %d  de %d", indice, cde_en_ejecucion->pid);
 		t_instruction* instruccion_actual = list_get(cde_en_ejecucion->lista_de_instrucciones, indice);
 		evaluar_instruccion(instruccion_actual);
 		cde_en_ejecucion->program_counter++;
@@ -211,25 +207,25 @@ void evaluar_instruccion(t_instruction* instruccion){
 			sem_post(&leer_siguiente_instruccion);
 		break;
 		case YIELD:
-			log_info(logger, "PID: %d - EJECUTANDO : YIELD - PARAMETROS: ()", cde_en_ejecucion->pid);
+			log_info(logger, "PID: %d - EJECUTANDO : YIELD - PARAMETROS: (%s)", cde_en_ejecucion->pid, instruccion->string1);
 			sem_post(&necesito_enviar_cde);
 			break;
 		case EXIT:
-			log_info(logger, "PID: %d - EJECUTANDO : EXIT - PARAMETROS: ()", cde_en_ejecucion->pid);
+			log_info(logger, "PID: %d - EJECUTANDO : EXIT", cde_en_ejecucion->pid);
 			sem_post(&necesito_enviar_cde);
 		break;
 		case IO:
-			log_info(logger, "PID: %d - EJECUTANDO : IO - PARAMETROS: ()", cde_en_ejecucion->pid);
+			log_info(logger, "PID: %d - EJECUTANDO : IO - PARAMETROS: (%d)", cde_en_ejecucion->pid, instruccion->numero1);
 		
 			sem_post(&necesito_enviar_cde);
 		break;
 		case SIGNAL:
-			log_info(logger, "PID: %d - EJECUTANDO : SIGNAL - PARAMETROS: ()", cde_en_ejecucion->pid);
+			log_info(logger, "PID: %d - EJECUTANDO : SIGNAL - PARAMETROS: (%s)", cde_en_ejecucion->pid, instruccion->string1);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case WAIT:
-			log_info(logger, "PID: %d - EJECUTANDO : WAIT - PARAMETROS: ()", cde_en_ejecucion->pid);
+			log_info(logger, "PID: %d - EJECUTANDO : WAIT - PARAMETROS: (%s)", cde_en_ejecucion->pid, instruccion->string1);
 			
 			sem_post(&necesito_enviar_cde);
 		break;

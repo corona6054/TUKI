@@ -48,6 +48,7 @@ t_list* instruccion_prueba(){
 int main(void){
 
 	levantar_modulo();
+	planificadores();
 
 	/*
 	t_list* lista_instrucciones_prueba = instruccion_prueba();
@@ -60,10 +61,6 @@ int main(void){
 
 	log_info(logger, "Por iniciar los planificadores");
 	*/
-	planificadores();
-
-	//time_t tiempo_actual = time(NULL);
-	//log_info(logger, "Tiempo actual: %lf", tiempo_actual);
 
 	while(1);
 	return 0;
@@ -80,7 +77,6 @@ void levantar_modulo(){
 	incializar_semaforos();
 	inicializar_recurso_nulo();
 
-	
 	establecer_conexiones();
 	return;
 }
@@ -89,11 +85,9 @@ void incializar_listas(){
 	procesosNew = queue_create();
 	procesosReady = queue_create();
 	procesosExec = queue_create();
-	procesosBlocked = queue_create();
 	procesosExit = queue_create();
 
-	pcb_en_ejecucion = malloc(sizeof(t_pcb));
-
+	archivos_abiertos_global = list_create();
 	return;
 }
 
@@ -286,7 +280,6 @@ void esperar_consolas(){
 void recibir_cde_de_cpu(){
 	while(1){
 		sem_wait(&bin2_recibir_cde);
-		log_info(logger, "A punto de recibir buffer");;
 
 		t_buffer* buffer = recibir_buffer(socket_cpu);
 
@@ -294,11 +287,8 @@ void recibir_cde_de_cpu(){
 		pthread_mutex_lock(&mutex_exec);
 		pcb_en_ejecucion->cde = buffer_read_cde(buffer);
 		pthread_mutex_unlock(&mutex_exec);
-		log_info(logger, "Buffer leido");
 	
 		destruir_buffer_nuestro(buffer);
-		log_info(logger, "Destrui buffer recibido");
-
 		log_info(logger, "Proceso en ejecucion: %d", pcb_en_ejecucion->cde->pid);
 		evaluar_instruccion(); // aca posteo necesito_enviar_cde
 		sem_post(&bin1_envio_cde);
@@ -315,7 +305,6 @@ void enviar_cde_a_cpu(){
 		log_info(logger, "Envie cde a cpu");
 
 		destruir_buffer_nuestro(buffer);
-		log_info(logger, "Destrui buffer enviado");
 		
 		destruir_cde(pcb_en_ejecucion->cde);
 		sem_post(&bin2_recibir_cde);
@@ -350,6 +339,7 @@ void enviar_de_ready_a_exec(){
 
 		pthread_mutex_lock(&mutex_exec);
 		pcb_en_ejecucion = retirar_pcb_de_ready_segun_algoritmo();
+		pcb_en_ejecucion->tiempo_llegada_exec = time(NULL);
 		pthread_mutex_unlock(&mutex_exec);
 
 		sem_post(&cont_exec);
@@ -364,9 +354,9 @@ void enviar_de_exec_a_psedudoblock(char* razon){ // SOLO PARA WAIT, por ARCHIVOS
 	// razones: "nombre de recurso" || "nombre de archivo" |||||| io va aparte
 	sem_wait(&cont_exec);
 	
-	log_info(logger, "PID: %d - Estado anterior: EXEC -	Estado actual: BLOCK", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+	log_info(logger, "PID: %d - Estado anterior: EXEC - Estado actual: BLOCK", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
 	log_info("PID: %d -	Bloqueado por: %s", pcb_en_ejecucion->cde->pid, razon);
-	
+	pcb_en_ejecucion->tiempo_salida_exec = time(NULL);
 	pcb_en_ejecucion = NULL;
 	
 	sem_post(&cont_procesador_libre);
@@ -375,7 +365,9 @@ void enviar_de_exec_a_psedudoblock(char* razon){ // SOLO PARA WAIT, por ARCHIVOS
 void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
 	sem_wait(&cont_exec);
 	agregar_pcb_a(procesosReady, pcb_en_ejecucion, &mutex_ready);
-	
+	pcb_en_ejecucion->tiempo_salida_exec = time(NULL);
+	pcb_en_ejecucion->tiempo_llegada_ready = time(NULL);
+
 	log_info(logger, "PID: %d - Estado anterior: EXEC - Estado actual: READY", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
 	
 	pcb_en_ejecucion = NULL;
@@ -388,6 +380,7 @@ void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
 }
 
 void enviar_de_pseudoblock_a_ready(t_pcb* pcb){
+	pcb->tiempo_llegada_ready = time(NULL);
 	agregar_pcb_a(procesosReady, pcb, &mutex_ready);
 	log_info(logger, "PID: %d - Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
 	sem_post(&cont_ready);
@@ -396,7 +389,8 @@ void enviar_de_exec_a_exit(char* razon){
 	sem_wait(&cont_exec);
 
 	agregar_pcb_a(procesosExit, pcb_en_ejecucion, &mutex_exit);
-	log_info(logger, "PID: %d -	Estado anterior: EXEC - Estado actual: EXIT", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+	pcb_en_ejecucion->tiempo_salida_exec = time(NULL);
+	log_info(logger, "PID: %d - Estado anterior: EXEC - Estado actual: EXIT", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
 	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb_en_ejecucion->cde->pid, razon);
 	
 	pcb_en_ejecucion = NULL;
@@ -409,24 +403,28 @@ void enviar_de_exec_a_exit(char* razon){
 
 // TRANSICIONES LARGO PLAZO -------------------------------------------------------------
 void enviar_de_new_a_ready(){
-	//while(1){
+	while(1){
 		sem_wait(&cont_new);
 		sem_wait(&cont_grado_max_multiprog);
 		// falta un semaforo por si procesosNew esta vacia
+		log_info(logger, "Retirando PCB de NEW");
 		t_pcb* pcb_a_ready = retirar_pcb_de(procesosNew, &mutex_new);
-		
+		log_info(logger, "Ya retire PCB de NEW");
+
 		// mandarle a memoria para que inicialize las estructuras necesarias, y tabla de segmentos para alm en pcb.
 		
 		//op_code inicio_memoria = INICIO_PROCESO_MEMORIA;
 		//enviar_codigo(socket_memoria, inicio_memoria);
 
 		//MEMORIA nos tiene que mandar la tabla de segmentos inicial para guardarla en el PCB !!!!
+		pcb_a_ready->tiempo_llegada_ready = time(NULL);
 		agregar_pcb_a(procesosReady, pcb_a_ready, &mutex_ready);
+
 		log_info(logger, "PID: %d - Estado anterior: NEW - Estado actual: READY", pcb_a_ready->cde->pid); //OBLIGATORIO
 		sem_post(&cont_ready);
 
 		
-	//}
+	}
 }
 
 void recepcionar_proceso(void* arg){
@@ -454,7 +452,7 @@ void terminar_procesos(){
 		t_pcb* pcb = retirar_pcb_de(procesosExit, &mutex_exit);
 
 		//liberar recursos asignados
-		//liberar_todos_recursos(pcb);
+		liberar_todos_recursos(pcb);
 		//avisar a memoria para liberar estructuras		
 		//op_code aviso_de_fin_a_memoria = FIN_PROCESO_MEMORIA;
 		//enviar_codigo(socket_memoria, aviso_de_fin_a_memoria);
@@ -537,7 +535,6 @@ int asignar_instancia_recurso(char* nombre_recurso_a_asignar, t_pcb* pcb){
 	if(recurso->instancias_disponibles <= 0){
 		list_add(recurso->cola_de_espera, pcb);
 		recurso->instancias_disponibles--;
-		// agregar en lista de pcb?
 		return EN_ESPERA;
 	}
 	// Si sigue de largo de este if(el de arriba) es porque hay instancias disponibles
@@ -551,7 +548,6 @@ int asignar_instancia_recurso(char* nombre_recurso_a_asignar, t_pcb* pcb){
 	char* nombre = malloc(tam);
 	strcpy(nombre, recurso -> nombre_recurso);
 	list_add(pcb->recursos_asignados, nombre);
-	log_info(logger, "Wait: “PID: %d - Wait: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_disponibles);
 	return RECURSO_ASIGNADO;
 }
 
@@ -572,9 +568,8 @@ int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb){
 		if(recurso->instancias_disponibles < 0){
 			t_pcb* pcb_a_desbloquear = queue_pop(recurso -> cola_de_espera);
 			asignar_instancia_recurso(nombre_recurso_a_liberar, pcb_a_desbloquear);
-			agregar_pcb_a(procesosReady, pcb_a_desbloquear, &mutex_ready);
+			enviar_de_pseudoblock_a_ready(pcb_a_desbloquear);
 		}
-		log_info(logger, "Wait: “PID: %d - Signal: %s - Instancias: %d", pcb -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_disponibles);
 		return RECURSO_LIBERADO;
 	}
 }
@@ -612,31 +607,18 @@ t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener){
 
 
 // UTILS PARA SACAR DE READY ------------------------------------------------------------
+t_pcb* retirar_pcb_de_ready_segun_algoritmo(){
+	if (strcmp(config_kernel.algoritmo, "FIFO") == 0)
+		return elegido_por_FIFO();
+	else if(strcmp(config_kernel.algoritmo, "HRRN") == 0)
+		return elegido_por_HRRN();
+	
+	log_info(logger, "Algoritmo no reconocido.");
+	exit(3);
+}
+
 t_pcb* elegido_por_FIFO(){
 	return retirar_pcb_de(procesosReady, &mutex_ready);
-}
-
-double calcular_response_ratio(t_pcb *pcb){
-	double wait_time = -1; // cuanto tiempo espero en ready
-	double expected_next_round = -1; // cuanto tiempo se estima que va a tardar la proxima rafaga de ejecucion
-	double rr = -1; // response ratio
-
-	double tiempo_actual = (double)time(NULL);
-
-	wait_time = 
-
-	// rr = (wait_time + expected_next_round) / expected_next_round
-
-	wait_time = tiempo_actual - pcb->tiempo_llegada_ready;
-
-	return rr;
-}
-
-bool maximo_response_ratio(t_pcb* pcb1, t_pcb* pcb2){
-	if (calcular_response_ratio(pcb1) > calcular_response_ratio(pcb2))
-		return true;
-	else
-		return false;
 }
 
 t_pcb* elegido_por_HRRN(){
@@ -648,17 +630,41 @@ t_pcb* elegido_por_HRRN(){
 	
 	return pcb_elegido;
 }
-
-t_pcb* retirar_pcb_de_ready_segun_algoritmo(){
-	if (strcmp(config_kernel.algoritmo, "FIFO") == 0)
-		return elegido_por_FIFO();
-	else if(strcmp(config_kernel.algoritmo, "HRRN") == 0)
-		return elegido_por_HRRN();
-	
-	log_info(logger, "Algoritmo no reconocido.");
-	exit(3);
-}
 // FIN UTILS PARA SACAR DE READY --------------------------------------------------------
+
+
+// UTILS HRRN ---------------------------------------------------------------------------
+double calcular_estimacion_proxima_rafaga(t_pcb* pcb){
+	time_t tiempo_actual = time(NULL);
+	double estimacion_proxima_rafaga = -1;
+	double tiempo_ejecucion_actual = difftime(tiempo_actual, pcb->tiempo_llegada_exec);
+
+	estimacion_proxima_rafaga = (config_kernel.alpha_hrrn * tiempo_ejecucion_actual) + (1 - config_kernel.alpha_hrrn) * pcb->estimado_prox_rafaga;
+
+	return estimacion_proxima_rafaga;
+}
+
+double calcular_response_ratio(t_pcb *pcb){
+	double wait_time = -1; // cuanto tiempo espero en ready
+	double expected_next_round = -1; // cuanto tiempo se estima que va a tardar la proxima rafaga de ejecucion
+	double rr = -1; // response ratio
+
+	time_t tiempo_actual = time(NULL);
+
+	wait_time = difftime(tiempo_actual, pcb->tiempo_llegada_ready); //funcion q resta dos time_t y devuelve double
+	expected_next_round = calcular_estimacion_proxima_rafaga(pcb);
+
+	// rr = (wait_time + expected_next_round) / expected_next_round
+	return rr;
+}
+
+bool maximo_response_ratio(t_pcb* pcb1, t_pcb* pcb2){
+	if (calcular_response_ratio(pcb1) > calcular_response_ratio(pcb2))
+		return true;
+	else
+		return false;
+}
+// FIN UTILS HRRN -----------------------------------------------------------------------
 
 
 // UTLIS CREAR --------------------------------------------------------------------------
@@ -768,7 +774,8 @@ void evaluar_instruccion(){
 					enviar_de_exec_a_psedudoblock(instruccion_actual -> string1);
 					break;
 				case RECURSO_ASIGNADO:
-					// Lo unico que tendria que hacer es el log_info que esta adentro de asignar_instancia_recurso
+					t_recurso* recurso = encontrar_recurso_por_nombre(instruccion_actual->string1);
+					log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb_en_ejecucion->cde->pid, recurso -> nombre_recurso, recurso -> instancias_disponibles);
 					sem_post(&necesito_enviar_cde);
 					break;
 			}
@@ -779,7 +786,8 @@ void evaluar_instruccion(){
 					enviar_de_exec_a_exit("INVALID_RESOURCE");
 					break;
 				case RECURSO_LIBERADO:
-					// Lo unico que tendria que hacer es el log_info que esta adentro de liberar_instancia_recurso
+					t_recurso* recurso = encontrar_recurso_por_nombre(instruccion_actual->string1);
+					log_info(logger, "PID: %d - Signal: %s - Instancias: %d", pcb_en_ejecucion -> cde -> pid, recurso -> nombre_recurso, recurso -> instancias_disponibles);
 					sem_post(&necesito_enviar_cde);
 					break;
 			}
@@ -791,7 +799,6 @@ void evaluar_instruccion(){
 		case DELETE_SEGMENT:
 			break;
 		case YIELD:
-			log_info(logger, "Entre a yield");
 			enviar_de_exec_a_ready();
 			break;
 		case EXIT:

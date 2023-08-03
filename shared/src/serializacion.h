@@ -12,6 +12,8 @@
 #include <sys/socket.h>
 #include <netdb.h>
 
+#include <time.h>
+
 #include <commons/log.h>
 #include <commons/collections/list.h>
 #include <commons/config.h>
@@ -111,7 +113,9 @@ typedef struct{
     int socket_consola;
 
     uint32_t estimado_prox_rafaga;
-    uint32_t tiempo_llegada_ready;
+    time_t tiempo_llegada_ready;
+    time_t tiempo_llegada_exec;
+    time_t tiempo_salida_exec;
     
     t_list* archivos_abiertos;
     t_list* recursos_asignados; // lista de char*

@@ -9,7 +9,6 @@
 #include <commons/collections/queue.h>
 #include <commons/config.h>
 #include <commons/memory.h>
-#include <time.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
@@ -53,7 +52,7 @@ typedef struct{
 Config_kernel config_kernel;
 t_log* logger;
 t_config* config;
-
+t_list* archivos_abiertos_global;
 
 int socket_memoria;
 int socket_file_system;
@@ -95,7 +94,7 @@ int ejecutando = 0;
 
 t_queue* procesosNew;
 t_queue* procesosReady;
-t_queue* procesosBlocked; // probablemente no la usemos
+//t_queue* procesosBlocked; // probablemente no la usemos
 t_queue* procesosExec;
 t_pcb* pcb_en_ejecucion;
 t_queue* procesosExit;
@@ -165,10 +164,17 @@ void agregar_pcb_a(t_queue* cola, t_pcb* pcb_a_agregar, pthread_mutex_t* mutex);
 
 
 // UTILS PARA SACAR DE READY ------------------------------------------------------------
+t_pcb* retirar_pcb_de_ready_segun_algoritmo();
 t_pcb* elegido_por_FIFO();
 t_pcb* elegido_por_HRRN();
-t_pcb* retirar_pcb_de_ready_segun_algoritmo();
 // FIN UTILS PARA SACAR DE READY --------------------------------------------------------
+double calcular_estimacion_proxima_rafaga(t_pcb* pcb);
+double calcular_response_ratio(t_pcb *pcb);
+bool maximo_response_ratio(t_pcb* pcb1, t_pcb* pcb2);
+// UTILS HRRN ---------------------------------------------------------------------------
+
+// FIN UTILS HRRN -----------------------------------------------------------------------
+
 
 // UTILS RECURSOS -----------------------------------------------------------------------
 t_recurso* inicializar_recurso(char* nombre_recu, int instancias_tot); // FUNCIONA
