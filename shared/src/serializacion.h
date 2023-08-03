@@ -86,9 +86,9 @@ typedef struct
 } t_instruction;
 
 typedef struct{
-	char AX[4], BX[4], CX[4], DX[4];
-	char EAX[8], EBX[8], ECX[8], EDX[8];
-	char RAX[16], RBX[16], RCX[16], RDX[16];
+	char AX[5], BX[5], CX[5], DX[5];
+	char EAX[9], EBX[9], ECX[9], EDX[9];
+	char RAX[17], RBX[17], RCX[17], RDX[17];
 }t_registros;
 
 typedef struct{
@@ -129,6 +129,7 @@ void enviar_paquete(t_paquete*, int);
 void* serializar_paquete(t_paquete*, int);
 
 t_buffer* crear_buffer_nuestro();
+void destruir_buffer_nuestro(t_buffer* buffer);
 
 void buffer_write_uint32(t_buffer*, uint32_t);
 uint32_t buffer_read_uint32(t_buffer*);
@@ -156,7 +157,7 @@ void buffer_write_tabla_segmentos(t_buffer*, t_list*);
 t_list* buffer_read_tabla_segmentos(t_buffer*);
 
 void buffer_write_cde(t_buffer*, t_cde);
-t_cde buffer_read_cde(t_buffer*);
+t_cde* buffer_read_cde(t_buffer*);
 
 void mostrar_instrucciones(t_log*, t_list*);
 void mostrar_instruccion(t_log*, t_instruction*);
@@ -168,8 +169,6 @@ void destruir_pcb(t_pcb* pcb);
 void destruir_lista_instrucciones(t_list* lista_instrucciones);
 void destruir_instruccion(t_instruction* instruccion);
 void destruir_lista_char(t_list* lista_char_asterisco);
-
-char* motivo_exit_a_string(motivo_exit motivo);
 // FIN DE PROTOTIPOS DE FUNCIONES ------------------------------------------
 
 #endif /* SERIALIZACION_H_ */

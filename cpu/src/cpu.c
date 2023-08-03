@@ -1,12 +1,36 @@
 #include "../includes/cpu.h"
 
+t_registros inicializar_registros(){
+	t_registros registros;
+
+	for(int i=0;i<4;i++){
+		registros.AX[i] = 'x';
+		registros.BX[i] = 'x';
+		registros.CX[i] = 'x';
+		registros.DX[i] = 'x';
+	}
+	
+	for(int i=0;i<8;i++){
+		registros.EAX[i] = 'x';
+		registros.EBX[i] = 'x';
+		registros.ECX[i] = 'x';
+		registros.EDX[i] = 'x';
+	}
+
+	for(int i=0;i<16;i++){
+		registros.RAX[i] = 'x';
+		registros.RBX[i] = 'x';
+		registros.RCX[i] = 'x';
+		registros.RDX[i] = 'x';
+	}
+
+	return registros;
+}
 
 int main(void){
-
 	levantar_modulo();
-	
-	iniciar_modulo();
 
+	iniciar_modulo();
 
 
 	while(1);
@@ -113,7 +137,6 @@ void establecer_conexiones(){
 			enviar_handshake(kernel_fd);
 			log_info(logger, "Handshake con Kernel realizado.");
 
-			sem_post(&necesito_enviar_cde);
 		}
 	}else
 		log_info(logger, "Error al conectar con kernel");
@@ -122,9 +145,15 @@ void establecer_conexiones(){
 void recibir_cde(){
 	while(1){
 		sem_wait(&bin2_recibir_cde);
+		log_info(logger, "A punto de recibir buffer.");
 		t_buffer* buffer = recibir_buffer(kernel_fd);
+		log_info(logger, "Recibi buffer.");
 		cde_en_ejecucion = 	buffer_read_cde(buffer);
-		log_info(logger, "Proceso en ejecucion: %d", cde_en_ejecucion.pid);
+		log_info(logger, "CDE recibido, PC %d", cde_en_ejecucion->program_counter);
+
+		destruir_buffer_nuestro(buffer);
+		log_info(logger, "Destrui buffer recibido");
+
 		sem_post(&leer_siguiente_instruccion);
 		sem_post(&bin1_envio_cde);
 	}
@@ -135,10 +164,17 @@ void enviar_cde(){
 		sem_wait(&necesito_enviar_cde);
 		sem_wait(&bin1_envio_cde);
 		t_buffer* buffer = crear_buffer_nuestro();
-		buffer_write_cde(buffer, cde_en_ejecucion);
-		log_info(logger, "A punto de enviar el cde a kernel");
+		buffer_write_cde(buffer, *cde_en_ejecucion);
+		log_info(logger, "A punto de enviar el cde a kernel, PC: %d", cde_en_ejecucion->program_counter);
 		enviar_buffer(buffer, kernel_fd);
 		log_info(logger, "Envie el cde a kernel");
+		
+		destruir_buffer_nuestro(buffer);
+		log_info(logger, "Destrui buffer enviado");
+
+		
+		destruir_cde(cde_en_ejecucion);
+		
 		sem_post(&bin2_recibir_cde);
 	}
 }
@@ -149,100 +185,91 @@ void enviar_cde(){
 void ejecutar_proceso(){
 	while(1){
 		sem_wait(&leer_siguiente_instruccion);
-		int indice = cde_en_ejecucion.program_counter;
-		log_info(logger, "Evaluando instruccion Nro: %d  de %d", indice, cde_en_ejecucion.pid);
-		t_instruction* instruccion_actual = list_get(cde_en_ejecucion.lista_de_instrucciones, indice);
-		log_info(logger, "Por evaluar instruccion: %d", instruccion_actual->instruccion);
+		int indice = cde_en_ejecucion->program_counter;
+		log_info(logger, "Evaluando instruccion Nro: %d  de %d", indice, cde_en_ejecucion->pid);
+		t_instruction* instruccion_actual = list_get(cde_en_ejecucion->lista_de_instrucciones, indice);
 		evaluar_instruccion(instruccion_actual);
-		cde_en_ejecucion.program_counter++;
+		cde_en_ejecucion->program_counter++;
 	}
 }
 
 void evaluar_instruccion(t_instruction* instruccion){
-	t_buffer* buffer = crear_buffer_nuestro();
 	switch(instruccion->instruccion){
 		case SET:
-			log_info(logger, "PID: %d - EJECUTANDO : SET - PARAMETROS: ( %s , %s )", cde_en_ejecucion.pid, instruccion->string1, instruccion->string2);
-			ejecutar_set(instruccion->string1,instruccion->string2, cde_en_ejecucion.registros_cpu);
-			t_registros registros = cde_en_ejecucion.registros_cpu;
-			log_info(logger, "%s", registros.RAX);	
-			
+			log_info(logger, "PID: %d - EJECUTANDO : SET - PARAMETROS: ( %s , %s )", cde_en_ejecucion->pid, instruccion->string1, instruccion->string2);
+			ejecutar_set(instruccion->string1,instruccion->string2, cde_en_ejecucion->registros_cpu);			
 			sem_post(&leer_siguiente_instruccion);
 		break;
 		case MOV_IN:
-			log_info(logger, "PID: %d - EJECUTANDO : MOVE IN - PARAMETROS: ( %s , %d )", cde_en_ejecucion.pid, instruccion->string1, instruccion->numero1);
-			ejecutar_move_in(instruccion->string1, instruccion->numero1);
-			t_registros registros2 = cde_en_ejecucion.registros_cpu;
-			log_info(logger, "%s", registros2.RAX);
-			
+			log_info(logger, "PID: %d - EJECUTANDO : MOVE IN - PARAMETROS: ( %s , %d )", cde_en_ejecucion->pid, instruccion->string1, instruccion->numero1);
+			ejecutar_move_in(instruccion->string1, instruccion->numero1);			
 			sem_post(&leer_siguiente_instruccion);
 		break;
 		case MOV_OUT:
-			log_info(logger, "PID: %d - EJECUTANDO : MOVE OUT - PARAMETROS: ( %d , %s )", cde_en_ejecucion.pid, instruccion->numero1, instruccion->string1);
+			log_info(logger, "PID: %d - EJECUTANDO : MOVE OUT - PARAMETROS: ( %d , %s )", cde_en_ejecucion->pid, instruccion->numero1, instruccion->string1);
 			ejecutar_move_out(instruccion->string1, instruccion->numero1);
-			
 			sem_post(&leer_siguiente_instruccion);
 		break;
 		case YIELD:
-			log_info(logger, "PID: %d - EJECUTANDO : YIELD - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : YIELD - PARAMETROS: ()", cde_en_ejecucion->pid);
 			sem_post(&necesito_enviar_cde);
 			break;
 		case EXIT:
-			log_info(logger, "PID: %d - EJECUTANDO : EXIT - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : EXIT - PARAMETROS: ()", cde_en_ejecucion->pid);
 			sem_post(&necesito_enviar_cde);
 		break;
 		case IO:
-			log_info(logger, "PID: %d - EJECUTANDO : IO - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : IO - PARAMETROS: ()", cde_en_ejecucion->pid);
 		
 			sem_post(&necesito_enviar_cde);
 		break;
 		case SIGNAL:
-			log_info(logger, "PID: %d - EJECUTANDO : SIGNAL - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : SIGNAL - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case WAIT:
-			log_info(logger, "PID: %d - EJECUTANDO : WAIT - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : WAIT - PARAMETROS: ()", cde_en_ejecucion->pid);
 			
 			sem_post(&necesito_enviar_cde);
 		break;
 		case F_OPEN:
-			log_info(logger, "PID: %d - EJECUTANDO : F_OPEN - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : F_OPEN - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case F_CLOSE:
-			log_info(logger, "PID: %d - EJECUTANDO : F_CLOSE - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : F_CLOSE - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case F_SEEK:
-			log_info(logger, "PID: %d - EJECUTANDO : F_SEEK - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : F_SEEK - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case F_READ:
-			log_info(logger, "PID: %d - EJECUTANDO : F_READ - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : F_READ - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case F_WRITE:
-			log_info(logger, "PID: %d - EJECUTANDO : F_WRITE - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : F_WRITE - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case F_TRUNCATE:
-			log_info(logger, "PID: %d - EJECUTANDO : F_TRUNCATE - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : F_TRUNCATE - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case CREATE_SEGMENT:
-			log_info(logger, "PID: %d - EJECUTANDO : CREATE_SEGMENT - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : CREATE_SEGMENT - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
 		case DELETE_SEGMENT:
-			log_info(logger, "PID: %d - EJECUTANDO : DELETE_SEGMENT - PARAMETROS: ()", cde_en_ejecucion.pid);
+			log_info(logger, "PID: %d - EJECUTANDO : DELETE_SEGMENT - PARAMETROS: ()", cde_en_ejecucion->pid);
 
 			sem_post(&necesito_enviar_cde);
 		break;
@@ -268,9 +295,6 @@ void ejecutar_set(char* registro, char* valor, t_registros registros){
 	if (strcmp(registro,"RDX") == 0) {strcpy(registros.RDX, valor);}
 }
 
-
-
-
 int tamanioRegistro(char* registro){
 	if(strcmp(registro,"AX") == 0 || strcmp(registro,"BX") == 0 || strcmp(registro,"CX") == 0 || strcmp(registro,"DX") == 0)
 		return 4;
@@ -281,33 +305,16 @@ int tamanioRegistro(char* registro){
 	else return -1;
 }
 
-/*void sacar_de_registro(char registro[], int dir_fisica, t_registros *registros, int pid){
-	if (strcmp(registro,"AX") == 0)  { }
-	if (strcmp(registro,"BX") == 0)  { }
-	if (strcmp(registro,"CX") == 0)  { }
-	if (strcmp(registro,"DX") == 0)  { }
-	if (strcmp(registro,"EAX") == 0) { }
-	if (strcmp(registro,"EBX") == 0) { }
-	if (strcmp(registro,"ECX") == 0) { }
-	if (strcmp(registro,"EDX") == 0) { }
-	if (strcmp(registro,"RAX") == 0) { }
-	if (strcmp(registro,"RBX") == 0) { }
-	if (strcmp(registro,"ECX") == 0) { }
-	if (strcmp(registro,"RDX") == 0) { }
-}*/
-
-
 int calcular_dir_fisica(int dir_logica, int tamanio){
 	int tam_max_segmento = config_cpu.tam_max_segmento;
 	int num_seg = floor(dir_logica/tam_max_segmento);
 	int desplaz_segmento = dir_logica % tam_max_segmento;
 
-	t_segmento* segmento = list_get(cde_en_ejecucion.tabla_segmentos, num_seg);
+	t_segmento* segmento = list_get(cde_en_ejecucion->tabla_segmentos, num_seg);
 
 	if (segmento->tamanio_segmentos < desplaz_segmento + tamanio){return -1;}
 
 	return segmento->direccion_base + desplaz_segmento;
-
 }
 
 void ejecutar_move_in(char* registro, uint32_t dir_logica){
@@ -315,13 +322,13 @@ void ejecutar_move_in(char* registro, uint32_t dir_logica){
 	printf("%d\n",tamanio);
 	int dir_fisica = calcular_dir_fisica(dir_logica, tamanio);
 	if (dir_fisica == -1){
-		log_info(logger, "PID: %d - Error SEG_FAULT - Segmento:", cde_en_ejecucion.pid);
+		log_info(logger, "PID: %d - Error SEG_FAULT - Segmento:", cde_en_ejecucion->pid);
 		//mando a kernel el contexto de ejecucion
 	}else {
 		printf("%d\n", dir_fisica);/*Aca mando a memoria la info*/
 
 		char* a_guardar = "HOLA-SOY-NICOLAS"; // = lo que me llega de memoria
-		ejecutar_set(registro, a_guardar, cde_en_ejecucion.registros_cpu);
+		ejecutar_set(registro, a_guardar, cde_en_ejecucion->registros_cpu);
 	}
 }
 
@@ -337,143 +344,4 @@ void ejecutar_move_out(char* registro, uint32_t dir_logica){
 		//hago la funcion para enviar la info
 	}
 }
-
-void ejecutar_exit(){
-	//int terminalo = 5
-	//send(socket_kernel, &contexto_ejecucion, sizeof(), NULL);
-	//send(socket_kernel, &terminalo, sizeof(int), NULL);
-	//Envio el contexto de ejecucion y un valor para que el kernel sepa que tiene que mandar terminar la conexion
-
-	//contexto_de_ejecucion.estados = EXIT
-	//esta es una opcion o mande un mensaje para que kernel cambie el estado a exit (el enunciado dice que es un syscall)
-
-	//enviar_contexto_de_ejecucion();
-
-}
-
-
-void ejecutar_yield(){
-	//int mandalo_al_final = 5
-		//send(socket_kernel, &contexto_ejecucion, sizeof(), NULL);
-		//send(socket_kernel, &mandalo_al_final, sizeof(int), NULL);
-	//Envio el contexto de ejecucion y un valor para que el kernel sepa que tiene que mandar la instruccion al final de la cola
-
-	/*switch(contexto.algoritmo){
-		case FIFO:
-		//int valorandasaber
-		//send(socket_kernel, &valorandasaber, sizeof(), NULL);
-	}Esto es en caso de que que  me mande si es FIFO, HRRN, etc*/
-
-	//creo que tengo que mandar un mensaje para ver que tienen que hacer
-}
-
-void ejecutar_io(int tiempo_bloqueo){
-	//yo cambio el estado a bloqueado o mando el contexto con el tiempo de bloqueo y lo cambia el kernel
-	//como mando el tiempo de bloqueo??
-
-}
-
-void ejecutar_signal(/*recurso*/){
-	//tengo que tener los recursos en un struct o es un tipo de variable?
-	//como le mandamos a kernel el recurso, como mensaje simple?
-
-}
-
-void ejecutar_wait(/*recurso*/){
-	//tengo que tener los recursos en un struct o es un tipo de variable?
-	//como le mandamos a kernel el recurso, como mensaje simple?
-}
-
-void ejecutar_fopen(/*archivo*/){
-
-}
-void ejecutar_fclose(/*archivo*/){
-
-}
-void ejecutar_fread(/*archivo, int direccion_logica, int cant_bytes*/){
-
-}
-void ejecutar_fwrite(/*archivo, int direccion_logica, int cant_bytes*/){
-
-}
-void ejecutar_fseek(/*archivo, int posicion*/){
-
-}
-void ejecutar_ftruncate(/*archivo, int tamanio*/){
-
-}
-void ejecutar_createsegment(/*int id_segmento, int tamanio*/){
-
-}
-void ejecutar_deletesegment(/*int id_segmento*/){
-
-}
 // FIN UTILS INSTRUCCIONES --------------------------------------------------------------
-
-	/*t_instruction *inst1 ;
-	inst1 = malloc(sizeof(t_instruction));
-	inst1->instruccion = MOV_IN;
-	inst1->string1 = malloc(sizeof("AX"));
-	inst1->string2 = malloc(sizeof("HOLA"));
-	strcpy(inst1->string1,"RAX");
-	strcpy(inst1->string2,"HOLA-SOY-NICOLAS");
-
-
-	t_list* instrucciones = list_create();
-	list_add(instrucciones,inst1);
-
-	t_instruction *inst2 ;
-	inst2 = malloc(sizeof(t_instruction));
-	inst2->instruccion = IO;
-
-	list_add(instrucciones,inst2);
-
-	t_registros registros;
-
-	ejecutar_set("AX", "XXXX", 4, &registros);
-	ejecutar_set("BX", "1XX1", 4, &registros);
-	ejecutar_set("CX", "XXX2", 4, &registros);
-	ejecutar_set("DX", "XXX3", 4, &registros);
-	ejecutar_set("EAX", "XXXXXXX4", 4, &registros);
-	ejecutar_set("EBX", "XXXXXXX5", 4, &registros);
-	ejecutar_set("ECX", "XXXXXXX6", 4, &registros);
-	ejecutar_set("EDX", "XXXXXXX7", 4, &registros);
-	ejecutar_set("RAX", "XXXXXXXXXXX8", 4, &registros);
-	ejecutar_set("RBX", "XXXXXXXXXXX9", 4, &registros);
-	ejecutar_set("RCX", "XXXXXXXXXX10", 4, &registros);
-	ejecutar_set("RDX", "XXXXXXXXXX11", 4, &registros);
-
-
-
-	t_segmento *segmento1;
-	segmento1 = malloc(sizeof(t_segmento));
-	segmento1->id = 1;
-	segmento1->direccion_base = 0;
-	segmento1->tamanio_segmentos = 137;
-
-	t_segmento *segmento2;
-		segmento2 = malloc(sizeof(t_segmento));
-		segmento2->id = 2;
-		segmento2->direccion_base = 100;
-		segmento2->tamanio_segmentos = 19;
-
-	t_list* segmentos = list_create();
-	list_add(segmentos, segmento1);
-	list_add(segmentos, segmento2);
-
-	t_cde cde_recibido = {
-				1,
-				instrucciones,
-				0,
-				registros,
-				segmentos
-	};
-
-
-
-
-
-	//printf("%d", dir_fisica);
-	//Instruction* contexto_instruccion = list_get(cde_recibido.lista_de_instrucciones, cde_recibido.program_counter);
-	//switch_instruccion(contexto_instruccion, cde_recibido);
-*/

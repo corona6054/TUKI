@@ -39,15 +39,18 @@ void* serializar_paquete(t_paquete* paquete, int tam_paquete)
 	return paquete_serializado;
 }
 
-
-
-
 t_buffer* crear_buffer_nuestro(){
 	t_buffer* b = malloc(sizeof(t_buffer));
 	b->size = 0;
 	b->stream = NULL;
 	b->offset = 0;
 	return b;
+}
+
+void destruir_buffer_nuestro(t_buffer* buffer){
+	free(buffer->stream);
+	free(buffer);
+	return;
 }
 
 // UINT32
@@ -216,21 +219,23 @@ void buffer_write_Registros(t_buffer* buffer, t_registros registros){
 
 t_registros buffer_read_Registros(t_buffer* buffer){
 	t_registros regis;
+	int* tam = malloc(sizeof(int));
 
-	strcpy(regis.AX, buffer_read_string(buffer));
-	strcpy(regis.BX, buffer_read_string(buffer));
-	strcpy(regis.CX, buffer_read_string(buffer));
-	strcpy(regis.DX, buffer_read_string(buffer));
 
-	strcpy(regis.EAX, buffer_read_string(buffer));
-	strcpy(regis.EBX, buffer_read_string(buffer));
-	strcpy(regis.ECX, buffer_read_string(buffer));
-	strcpy(regis.EDX, buffer_read_string(buffer));
+	strcpy(regis.AX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.BX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.CX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.DX, buffer_read_stringV2(buffer, tam));
 
-	strcpy(regis.RAX, buffer_read_string(buffer));
-	strcpy(regis.RBX, buffer_read_string(buffer));
-	strcpy(regis.RCX, buffer_read_string(buffer));
-	strcpy(regis.RDX, buffer_read_string(buffer));
+	strcpy(regis.EAX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.EBX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.ECX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.EDX, buffer_read_stringV2(buffer, tam));
+
+	strcpy(regis.RAX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.RBX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.RCX, buffer_read_stringV2(buffer, tam));
+	strcpy(regis.RDX, buffer_read_stringV2(buffer, tam));
 
 	return regis;
 }
@@ -295,21 +300,22 @@ void buffer_write_cde(t_buffer* buffer, t_cde cde){
 	buffer_write_tabla_segmentos(buffer, cde.tabla_segmentos);
 }
 
-t_cde buffer_read_cde(t_buffer* buffer){
-	t_cde cde;
+t_cde* buffer_read_cde(t_buffer* buffer){
+	t_cde* cde;
 
-	cde.pid = buffer_read_uint32(buffer);
-	cde.lista_de_instrucciones = buffer_read_lista_instrucciones(buffer);
-	cde.program_counter = buffer_read_uint32(buffer);;
-	cde.registros_cpu = buffer_read_Registros(buffer);
-	cde.tabla_segmentos = buffer_read_tabla_segmentos(buffer);
+	cde = malloc(sizeof(t_cde));
+	
+	cde->pid = buffer_read_uint32(buffer);
+	cde->lista_de_instrucciones = buffer_read_lista_instrucciones(buffer);
+	cde->program_counter = buffer_read_uint32(buffer);;
+	cde->registros_cpu = buffer_read_Registros(buffer);
+	cde->tabla_segmentos = buffer_read_tabla_segmentos(buffer);
 
 	return cde;
 }
 
 
 // UTILS DE LECTURA DE INSTRUCCIONES ----------------------------------------------------
-
 void mostrar_instrucciones(t_log* logger,t_list* lista_instrucciones){
 	for(int i = 0; i < list_size(lista_instrucciones); i++){
 		t_instruction* instruccion = list_get(lista_instrucciones, i);
@@ -343,8 +349,10 @@ void destruir_cde(t_cde* cde){
 
 void destruir_pcb(t_pcb* pcb){
 	destruir_cde(pcb -> cde);
-	destruir_lista_char(pcb -> recursos_asignados);
-	destruir_lista_char(pcb -> archivos_abiertos);
+	//destruir_lista_char(pcb -> recursos_asignados);
+	//destruir_lista_char(pcb -> archivos_abiertos);
+	list_destroy(pcb->recursos_asignados);
+	list_destroy(pcb->archivos_abiertos);
 	free(pcb);
 }
 
@@ -371,20 +379,3 @@ void destruir_lista_char(t_list* lista_char_asterisco){
 	list_destroy(lista_char_asterisco);
 }
 // FIN UTILS DESTRUIR -------------------------------------------------------------------
-
-char* motivo_exit_a_string(motivo_exit motivo){
-	switch(motivo){
-		case SUCCESS:
-			return "SUCCESS";
-			break;
-		case SEG_FAULT:
-			return "SEG_FAULT";
-			break;
-		case INVALID_RESOURCE:
-			return "INVALID_RESOURCE";
-			break;
-		case OUT_OF_MEMORY:
-			return "OUT_OF_MEMORY";
-			break;
-	}
-}

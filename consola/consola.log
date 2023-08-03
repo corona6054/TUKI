@@ -3355,3 +3355,11 @@
 [INFO] 14:56:44:311 Consola/(6745:6745): Lista enviada
 [INFO] 14:56:44:311 Consola/(6745:6745): Lista destruida
 [INFO] 14:56:44:654 Consola/(6745:6745): Codigo recibido: 21891
+[INFO] 20:42:43:546 Consola/(78335:78335): Conectado con kernel
+[INFO] 20:42:43:554 Consola/(78335:78335): Handshake con Kernel realizado.
+[INFO] 20:42:43:554 Consola/(78335:78335): Escribi en el buffer la lista de instrucciones
+[INFO] 20:42:43:903 Consola/(78335:78335): Codigo recibido: 21979
+[INFO] 12:15:54:723 Consola/(3096:3096): Conectado con kernel
+[INFO] 12:15:54:725 Consola/(3096:3096): Handshake con Kernel realizado.
+[INFO] 12:15:54:725 Consola/(3096:3096): Escribi en el buffer la lista de instrucciones
+[INFO] 12:15:55:114 Consola/(3096:3096): Fin proceso consola: 7

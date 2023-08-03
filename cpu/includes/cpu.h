@@ -43,7 +43,7 @@ int socket_memoria;
 
 int server_fd;
 
-t_cde cde_en_ejecucion;
+t_cde* cde_en_ejecucion;
 
 // UTILS INICIAR MODULO -----------------------------------------------------------------
 void levantar_modulo();
@@ -76,20 +76,6 @@ void ejecutar_move_out(char*, uint32_t);
 int calcular_dir_fisica(int dir_logica,int tamanio);
 int tamanioRegistro(char *registro);
 void sacar_de_registro(char registro[],int dir_fisica, int tamanio, t_registros *registros, int pid);
-
-void ejecutar_exit();
-void ejecutar_yield();
-void ejecutar_io(int);
-void ejecutar_signal(/*recurso*/);
-void ejecutar_wait(/*recurso*/);
-void ejecutar_fopen(/*archivo*/);
-void ejecutar_fclose(/*archivo*/);
-void ejecutar_fread(/*archivo, int , int */);
-void ejecutar_fwrite(/*archivo, int , int */);
-void ejecutar_fseek(/*archivo, int */);
-void ejecutar_ftruncate(/*archivo, int */);
-void ejecutar_createsegment(/*int , int*/ );
-void ejecutar_deletesegment(/*int */);
 // FIN UTILS INSTRUCCIONES (PARTICULAR) -------------------------------------------------
 
 

@@ -10,16 +10,14 @@ t_instruction* inicializar_instruccion(InstructionType codigo, char* str1, char*
 	int tam1 = 0;
 	while(str1[tam1] != NULL)
 		tam1++;
-
 	instr->string1 = malloc(tam1);
 	strcpy(instr->string1, str1);
 
-
 	int tam2 = 0;
-		while(str1[tam1] != NULL)
-			tam2++;
-		instr->string2 = malloc(tam2);
-		strcpy(instr->string2, str2);
+	while(str1[tam1] != NULL)
+		tam2++;
+	instr->string2 = malloc(tam2);
+	strcpy(instr->string2, str2);
 
 	return instr;
 }
@@ -35,10 +33,10 @@ t_list* instruccion_prueba(){
 	list_add(lista_prueba, inicializar_instruccion(SET, "EBX", "BBBBBBBB"));
 	list_add(lista_prueba, inicializar_instruccion(SET, "ECX", "CCCCCCCC"));
 	list_add(lista_prueba, inicializar_instruccion(SET, "EDX", "DDDDDDDD"));
-	list_add(lista_prueba, inicializar_instruccion(SET, "RAX", "AAAAAAAAAAAA"));
-	list_add(lista_prueba, inicializar_instruccion(SET, "RBX", "BBBBBBBBBBBB"));
-	list_add(lista_prueba, inicializar_instruccion(SET, "RCX", "CCCCCCCCCCCC"));
-	list_add(lista_prueba, inicializar_instruccion(SET, "RDX", "DDDDDDDDDDDD"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RAX", "AAAAAAAAAAAAAAAA"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RBX", "BBBBBBBBBBBBBBBB"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RCX", "CCCCCCCCCCCCCCCC"));
+	list_add(lista_prueba, inicializar_instruccion(SET, "RDX", "DDDDDDDDDDDDDDDD"));
 	list_add(lista_prueba, inicializar_instruccion(YIELD, "v", "v"));
 	list_add(lista_prueba, inicializar_instruccion(SET, "RAX", "TCHOUAMENIAFUERA"));
 	list_add(lista_prueba, inicializar_instruccion(SET, "RBX", "SEGUNDO_FRANCIA_"));
@@ -50,6 +48,8 @@ t_list* instruccion_prueba(){
 int main(void){
 
 	levantar_modulo();
+
+	/*
 	t_list* lista_instrucciones_prueba = instruccion_prueba();
 
 	t_pcb*  pcb = crear_pcb(lista_instrucciones_prueba, 25);
@@ -59,6 +59,7 @@ int main(void){
 	sem_post(&cont_new);
 
 	log_info(logger, "Por iniciar los planificadores");
+	*/
 	planificadores();
 
 	//time_t tiempo_actual = time(NULL);
@@ -200,7 +201,6 @@ void manejar_conexion_con_memoria(){
 }
 
 void manejar_conexion_con_cpu(){
-	
 	pthread_t p1;
 	pthread_create(&p1, NULL, (void*) enviar_cde_a_cpu, NULL);
 	pthread_detach(p1);
@@ -257,13 +257,12 @@ void establecer_conexiones()
 		log_info(logger,"Error al conectar con file system");
 	*/
 
-	/*
+	
 	server_fd = iniciar_servidor(logger, config_kernel.puerto_escucha);
 	
 	pthread_t manejo_consolas;
 	pthread_create(&manejo_consolas, NULL, (void *) esperar_consolas, NULL);
 	pthread_detach(manejo_consolas);
-	*/
 }
 
 void esperar_consolas(){
@@ -289,31 +288,20 @@ void recibir_cde_de_cpu(){
 		sem_wait(&bin2_recibir_cde);
 		log_info(logger, "A punto de recibir buffer");;
 
-		t_buffer* buffer = crear_buffer_nuestro();
-
-		// Recibo el codigo del buffer
-		recv(socket, &(buffer -> codigo), sizeof(uint8_t), MSG_WAITALL);
-
-		// Recibo el tamanio del buffer y reservo espacio en memoria
-		recv(socket, &(buffer -> size), sizeof(uint32_t), MSG_WAITALL);
-		buffer -> stream = malloc(buffer -> size);
-
-		// Recibo stream del buffer
-		recv(socket, buffer -> stream, buffer -> size, MSG_WAITALL);
+		t_buffer* buffer = recibir_buffer(socket_cpu);
 
 		log_info(logger, "Buffer Recibido");
-		t_cde cde = buffer_read_cde(buffer);
+		pthread_mutex_lock(&mutex_exec);
+		pcb_en_ejecucion->cde = buffer_read_cde(buffer);
+		pthread_mutex_unlock(&mutex_exec);
 		log_info(logger, "Buffer leido");
-
-		pcb_en_ejecucion -> cde -> pid = cde.pid;
-		pcb_en_ejecucion -> cde -> lista_de_instrucciones = cde.lista_de_instrucciones;
-		pcb_en_ejecucion -> cde -> program_counter = cde.program_counter;
-		pcb_en_ejecucion -> cde -> registros_cpu = cde.registros_cpu;
-		pcb_en_ejecucion -> cde -> tabla_segmentos = cde.tabla_segmentos;
+	
+		destruir_buffer_nuestro(buffer);
+		log_info(logger, "Destrui buffer recibido");
 
 		log_info(logger, "Proceso en ejecucion: %d", pcb_en_ejecucion->cde->pid);
-		sem_post(&bin1_envio_cde);
 		evaluar_instruccion(); // aca posteo necesito_enviar_cde
+		sem_post(&bin1_envio_cde);
 	}
 }
 
@@ -325,6 +313,11 @@ void enviar_cde_a_cpu(){
 		buffer_write_cde(buffer, *(pcb_en_ejecucion->cde));
 		enviar_buffer(buffer, socket_cpu);
 		log_info(logger, "Envie cde a cpu");
+
+		destruir_buffer_nuestro(buffer);
+		log_info(logger, "Destrui buffer enviado");
+		
+		destruir_cde(pcb_en_ejecucion->cde);
 		sem_post(&bin2_recibir_cde);
 	}
 }
@@ -369,14 +362,24 @@ void enviar_de_ready_a_exec(){
 
 void enviar_de_exec_a_psedudoblock(char* razon){ // SOLO PARA WAIT, por ARCHIVOS y por (IO -> va a ser un hilo aparte)
 	// razones: "nombre de recurso" || "nombre de archivo" |||||| io va aparte
-	sem_post(&cont_procesador_libre);
+	sem_wait(&cont_exec);
+	
 	log_info(logger, "PID: %d - Estado anterior: EXEC -	Estado actual: BLOCK", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
 	log_info("PID: %d -	Bloqueado por: %s", pcb_en_ejecucion->cde->pid, razon);
+	
+	pcb_en_ejecucion = NULL;
+	
+	sem_post(&cont_procesador_libre);
 }
 
 void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
-	agregar_pcb_a(procesosReady, pcb_en_ejecucion, &mutex_exec);
-	log_info(logger, "PID: %d -	Estado anterior: EXEC - Estado actual: READY", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+	sem_wait(&cont_exec);
+	agregar_pcb_a(procesosReady, pcb_en_ejecucion, &mutex_ready);
+	
+	log_info(logger, "PID: %d - Estado anterior: EXEC - Estado actual: READY", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
+	
+	pcb_en_ejecucion = NULL;
+	
 	sem_post(&cont_procesador_libre);
 	sem_post(&cont_ready);
 
@@ -386,18 +389,21 @@ void enviar_de_exec_a_ready(){ // SOLO PARA YIELD (se llama al ejecutar yield)
 
 void enviar_de_pseudoblock_a_ready(t_pcb* pcb){
 	agregar_pcb_a(procesosReady, pcb, &mutex_ready);
-	log_info(logger, "PID: %d -	Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
+	log_info(logger, "PID: %d - Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
 	sem_post(&cont_ready);
 }
 void enviar_de_exec_a_exit(char* razon){
 	sem_wait(&cont_exec);
-	sem_post(&cont_procesador_libre); // se libera el procesador
 
 	agregar_pcb_a(procesosExit, pcb_en_ejecucion, &mutex_exit);
 	log_info(logger, "PID: %d -	Estado anterior: EXEC - Estado actual: EXIT", pcb_en_ejecucion->cde->pid); //OBLIGATORIO
 	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb_en_ejecucion->cde->pid, razon);
+	
+	pcb_en_ejecucion = NULL;
+	
+	sem_post(&cont_procesador_libre); // se libera el procesador
 	sem_post(&cont_exit); // se agrega uno a procesosExit
-	sem_post(&cont_grado_max_multiprog);
+	sem_post(&cont_grado_max_multiprog); // Habilita uno para que venga de NEW a READY
 }
 // FIN TRANSICIONES CORTO PLAZO ---------------------------------------------------------
 
@@ -432,6 +438,8 @@ void recepcionar_proceso(void* arg){
 
 	t_list* lista_instrucciones = buffer_read_lista_instrucciones(buffer);
 
+	destruir_buffer_nuestro(buffer);
+
 	t_pcb* pcb_recibido = crear_pcb(lista_instrucciones, socket_a_atender);
 
 	agregar_pcb_a(procesosNew, pcb_recibido, &mutex_new);
@@ -451,14 +459,13 @@ void terminar_procesos(){
 		//op_code aviso_de_fin_a_memoria = FIN_PROCESO_MEMORIA;
 		//enviar_codigo(socket_memoria, aviso_de_fin_a_memoria);
 		
-		log_info(logger, "PID Terminado: %d", pcb->cde->pid);
 
 		//avisar a consola para matar conexion
 		op_code terminar_consola = FIN_PROCESO_CONSOLA;
 		enviar_codigo(pcb->socket_consola, terminar_consola);
 
-
-		//destruir_pcb(pcb);
+		log_info(logger, "PID Terminado: %d", pcb->cde->pid);
+		destruir_pcb(pcb);
 	}
 }
 // FIN TRANSICIONES LARGO PLAZO ---------------------------------------------------------
@@ -695,6 +702,12 @@ t_registros inicializar_registros(){
 		registros.CX[i] = 'x';
 		registros.DX[i] = 'x';
 	}
+
+	registros.AX[4] = '\0';
+	registros.BX[4] = '\0';
+	registros.CX[4] = '\0';
+	registros.DX[4] = '\0';
+
 	
 	for(int i=0;i<8;i++){
 		registros.EAX[i] = 'x';
@@ -702,6 +715,11 @@ t_registros inicializar_registros(){
 		registros.ECX[i] = 'x';
 		registros.EDX[i] = 'x';
 	}
+	registros.EAX[8] = '\0';
+	registros.EBX[8] = '\0';
+	registros.ECX[8] = '\0';
+	registros.EDX[8] = '\0';
+
 
 	for(int i=0;i<16;i++){
 		registros.RAX[i] = 'x';
@@ -709,6 +727,10 @@ t_registros inicializar_registros(){
 		registros.RCX[i] = 'x';
 		registros.RDX[i] = 'x';
 	}
+	registros.RAX[16] = '\0';
+	registros.RBX[16] = '\0';
+	registros.RCX[16] = '\0';
+	registros.RDX[16] = '\0';
 
 	return registros;
 }
@@ -718,7 +740,7 @@ t_registros inicializar_registros(){
 // UTILS INSTRUCCIONES ------------------------------------------------------------------
 void evaluar_instruccion(){
 	// La evalua cuando vuelve de CPU
-	int indice = pcb_en_ejecucion->cde->program_counter;
+	int indice = pcb_en_ejecucion->cde->program_counter - 1;
 	t_list* lista_instrucciones = pcb_en_ejecucion->cde->lista_de_instrucciones;
 	t_instruction* instruccion_actual = list_get(lista_instrucciones, indice);
 	switch(instruccion_actual->instruccion){
@@ -747,6 +769,7 @@ void evaluar_instruccion(){
 					break;
 				case RECURSO_ASIGNADO:
 					// Lo unico que tendria que hacer es el log_info que esta adentro de asignar_instancia_recurso
+					sem_post(&necesito_enviar_cde);
 					break;
 			}
 			break;
@@ -757,6 +780,7 @@ void evaluar_instruccion(){
 					break;
 				case RECURSO_LIBERADO:
 					// Lo unico que tendria que hacer es el log_info que esta adentro de liberar_instancia_recurso
+					sem_post(&necesito_enviar_cde);
 					break;
 			}
 			break;
@@ -767,12 +791,14 @@ void evaluar_instruccion(){
 		case DELETE_SEGMENT:
 			break;
 		case YIELD:
+			log_info(logger, "Entre a yield");
 			enviar_de_exec_a_ready();
 			break;
 		case EXIT:
 			enviar_de_exec_a_exit("SUCCES");
 			break;
 		default:
+			log_info(logger, "Error: Instruccion no reconocida.");
 			break;
 	}
 }

@@ -1,148 +1,152 @@
 #include "../includes/consola.h"
 
+int main(int argc, char **argv)
+{
+    char *config_path = argv[1];
+    char *instruccion_path = argv[2];
+    levantar_modulo(config_path);
 
-int main(int argc, char** argv){
-	char* config_path=argv[1];
-	char* instruccion_path=argv[2];
-	levantar_modulo(config_path);
+    crear_array_de_instrucciones(instruccion_path);
 
-	crear_array_de_instrucciones(instruccion_path);
-	log_info(logger,"Instrucciones leidas");
+    t_list *listaAEnviar = mapearLista();
 
-    t_list* listaAEnviar = mapearLista();
-    log_info(logger,"Lista mapeada");
-    
-    t_buffer* buffer = crear_buffer_nuestro();
-	
+    t_buffer *buffer = crear_buffer_nuestro();
+
     enviarLista(buffer, listaAEnviar);
-    log_info(logger,"Lista enviada");
+
+    destruir_buffer_nuestro(buffer);
 
     destruir_lista(listaAEnviar);
-    log_info(logger,"Lista destruida");
 
-    
     op_code codigo = recibir_codigo(socket_kernel);
 
-    if (codigo == FIN_PROCESO_CONSOLA){
+    if (codigo == FIN_PROCESO_CONSOLA)
+    {
         log_info(logger, "Fin proceso consola: %d", codigo);
-        finalizar_modulo();    
+        finalizar_modulo();
         return 0;
     }
-    else{
+    else
+    {
         log_info(logger, "Codigo recibido: %d", codigo);
         finalizar_modulo();
         return -2;
     }
 }
 
-
 // SUBPROGRAMAS
 
-t_list* mapearLista(){
+t_list *mapearLista()
+{
 
-    t_list* listaAEnviar = list_create();
-    
-    for(int i = 0; i < instructionCount; i++){
-        t_instruction* instruccion = cambiarStruct(instructions[i]);
+    t_list *listaAEnviar = list_create();
+
+    for (int i = 0; i < instructionCount; i++)
+    {
+        t_instruction *instruccion = cambiarStruct(instructions[i]);
         list_add(listaAEnviar, instruccion);
     }
 
     return listaAEnviar;
 }
 
-t_instruction* cambiarStruct(Instruction_consola instruccion_a_cambiar){
+t_instruction *cambiarStruct(Instruction_consola instruccion_a_cambiar)
+{
 
-    t_instruction* instruccion_cambiada = NULL;
-    
+    t_instruction *instruccion_cambiada = NULL;
+
     instruccion_cambiada = malloc(sizeof(t_instruction));
 
-    instruccion_cambiada -> instruccion = instruccion_a_cambiar.instruccion;
-    instruccion_cambiada -> numero1 = instruccion_a_cambiar.numero1;
-    instruccion_cambiada -> numero2 = instruccion_a_cambiar.numero2;
-    
+    instruccion_cambiada->instruccion = instruccion_a_cambiar.instruccion;
+    instruccion_cambiada->numero1 = instruccion_a_cambiar.numero1;
+    instruccion_cambiada->numero2 = instruccion_a_cambiar.numero2;
+
     int tam1 = get_tamanio_char_array(instruccion_a_cambiar.string1, 20);
     int tam2 = get_tamanio_char_array(instruccion_a_cambiar.string2, 20);
-    
-    instruccion_cambiada -> string1 = malloc(tam1);
-    for(int i = 0; i < tam1 + 1; i++)
-        *(instruccion_cambiada -> string1 + i) = instruccion_a_cambiar.string1[i];
-    
-    instruccion_cambiada -> string2 = malloc(tam2);
-    for(int j = 0; j < tam2 + 1; j++)
-        *(instruccion_cambiada -> string2 + j) = instruccion_a_cambiar.string2[j];
+
+    instruccion_cambiada->string1 = malloc(tam1);
+    for (int i = 0; i < tam1 + 1; i++)
+        *(instruccion_cambiada->string1 + i) = instruccion_a_cambiar.string1[i];
+
+    instruccion_cambiada->string2 = malloc(tam2);
+    for (int j = 0; j < tam2 + 1; j++)
+        *(instruccion_cambiada->string2 + j) = instruccion_a_cambiar.string2[j];
 
     return instruccion_cambiada;
 }
 
-int get_tamanio_char_array(char a[], int tamanioFisico){
+int get_tamanio_char_array(char a[], int tamanioFisico)
+{
     int tamanioLogico = 0;
-    
-    for(int i = 0; i < tamanioFisico; i++){
-        if(a[i] != '\0')
+
+    for (int i = 0; i < tamanioFisico; i++)
+    {
+        if (a[i] != '\0')
             tamanioLogico++;
     }
 
     return tamanioLogico;
 }
 
-
-void enviarLista(t_buffer* buffer, t_list* listaAEnviar){
+void enviarLista(t_buffer *buffer, t_list *listaAEnviar)
+{
 
     buffer_write_lista_instrucciones(buffer, listaAEnviar);
     log_info(logger, "Escribi en el buffer la lista de instrucciones");
-    
+
     enviar_buffer(buffer, socket_kernel);
 }
 
-
-
-
-void finalizar_modulo(){
-	log_destroy(logger);
-	config_destroy(config);
-	close(socket_kernel);
-	return;
+void finalizar_modulo()
+{
+    log_destroy(logger);
+    config_destroy(config);
+    close(socket_kernel);
+    return;
 }
 
 // UTILS INICIAR MODULO -----------------------------------------------------------------
-void levantar_modulo(char* config_path){
-	logger = iniciar_logger();
-	config = iniciar_config(config_path);
-	levantar_config();
-	establecer_conexiones();
-}
-
-t_log* iniciar_logger(void)
+void levantar_modulo(char *config_path)
 {
-	t_log* nuevo_logger;
-	nuevo_logger = log_create("consola.log", "Consola", true, LOG_LEVEL_INFO);
-
-	if (nuevo_logger == NULL)
-	{
-		printf("Error al crear el logger\n");
-		exit(1);
-	}
-
-	return nuevo_logger;
+    logger = iniciar_logger();
+    config = iniciar_config(config_path);
+    levantar_config();
+    establecer_conexiones();
 }
 
-t_config* iniciar_config(char* config_path)
+t_log *iniciar_logger(void)
 {
-	t_config* nuevo_config;
+    t_log *nuevo_logger;
+    nuevo_logger = log_create("consola.log", "Consola", true, LOG_LEVEL_INFO);
 
-	nuevo_config = config_create(config_path);
+    if (nuevo_logger == NULL)
+    {
+        printf("Error al crear el logger\n");
+        exit(1);
+    }
 
-	if (nuevo_config == NULL){
-		printf("Error al crear el nuevo config\n");
-		exit(2);
-	}
-
-	return nuevo_config;
+    return nuevo_logger;
 }
 
-void levantar_config(){
-	config_consola.ip_kernel = config_get_string_value(config,"IP_KERNEL");
-	config_consola.puerto_kernel = config_get_int_value(config,"PUERTO_KERNEL");
+t_config *iniciar_config(char *config_path)
+{
+    t_config *nuevo_config;
+
+    nuevo_config = config_create(config_path);
+
+    if (nuevo_config == NULL)
+    {
+        printf("Error al crear el nuevo config\n");
+        exit(2);
+    }
+
+    return nuevo_config;
+}
+
+void levantar_config()
+{
+    config_consola.ip_kernel = config_get_string_value(config, "IP_KERNEL");
+    config_consola.puerto_kernel = config_get_int_value(config, "PUERTO_KERNEL");
 }
 
 // FIN UTILS INICIAR MODULO -------------------------------------------------------------
@@ -150,18 +154,21 @@ void levantar_config(){
 // UTILS CONEXIONES ---------------------------------------------------------------------
 void establecer_conexiones()
 {
-	socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
-	if (socket_kernel >= 0){
-        log_info(logger,"Conectado con kernel");
-        //Realizamos el handshake
-		enviar_handshake(socket_kernel);
-		if (recibir_handshake(socket_kernel) == HANDSHAKE){
-			log_info(logger, "Handshake con Kernel realizado.");			
-		}else
-			log_info(logger, "Ocurio un error al realizar el handshake con Kernel.");
-	}
-	else
-		log_info(logger,"Error al conectar con kernel");
+    socket_kernel = crear_conexion(config_consola.ip_kernel, config_consola.puerto_kernel);
+    if (socket_kernel >= 0)
+    {
+        log_info(logger, "Conectado con kernel");
+        // Realizamos el handshake
+        enviar_handshake(socket_kernel);
+        if (recibir_handshake(socket_kernel) == HANDSHAKE)
+        {
+            log_info(logger, "Handshake con Kernel realizado.");
+        }
+        else
+            log_info(logger, "Ocurio un error al realizar el handshake con Kernel.");
+    }
+    else
+        log_info(logger, "Error al conectar con kernel");
 }
 // FIN UTILS CONEXIONES -----------------------------------------------------------------
 
@@ -320,7 +327,7 @@ void parseInstructions(FILE *file)
             readNextWordFromFile(file, 1);
             break;
         case DELETE_SEGMENT:
-        	readIntegerFromFile(file, 1);
+            readIntegerFromFile(file, 1);
             break;
         case EXIT:
             instructionCount++;
@@ -349,7 +356,7 @@ void error()
     exit(1);
 }
 
-int crear_array_de_instrucciones(char* filename)
+int crear_array_de_instrucciones(char *filename)
 {
     FILE *file = fopen(filename, "r");
     if (file == NULL)
@@ -358,30 +365,26 @@ int crear_array_de_instrucciones(char* filename)
         return 1;
     }
     parseInstructions(file);
-    
+
     fclose(file);
     return 0;
 }
 
+void destruir_lista(t_list *lista_instrucciones)
+{
 
-
-void destruir_lista(t_list* lista_instrucciones){
-
-	int cant_instrucciones = list_size(lista_instrucciones);
-	
+    int cant_instrucciones = list_size(lista_instrucciones);
     /*
     for(int i = 0; i < cant_instrucciones; i++){
-		t_instruction* instruccion = list_remove(lista_instrucciones, i);
-        free(instruccion->string1);
-        free(instruccion->string2);
-        free(instruccion);
-        instruccion = NULL;
-	}*/
-    
-	list_destroy(lista_instrucciones);
+        t_instruction* instruccion = list_get(lista_instrucciones, i);
+        destruir_instruccion(instruccion);
+    }
+    */
+    list_destroy(lista_instrucciones);
 }
 
-void inicializar_instruccion(){
+void inicializar_instruccion()
+{
     strcpy(instructions[instructionCount].string1, CHAR_VACIO);
     strcpy(instructions[instructionCount].string2, CHAR_VACIO);
     instructions[instructionCount].numero1 = INT_VACIO;

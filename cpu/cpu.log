@@ -648,3 +648,1681 @@
 [INFO] 17:07:18:165 Cpu/(10592:10615): Evaluando instruccion Nro: 12  de 0
 [INFO] 17:07:18:165 Cpu/(10592:10615): Por evaluar instruccion: 14
 [INFO] 17:07:18:165 Cpu/(10592:10615): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 19:14:34:382 Cpu/(2690:2690): Listo para escuchar a mi cliente
+[INFO] 19:14:46:741 Cpu/(2690:2690): Conectado con kernel
+[INFO] 19:14:46:741 Cpu/(2690:2690): Handshake con Kernel realizado.
+[INFO] 19:14:46:802 Cpu/(2690:2711): Proceso en ejecucion: 0
+[INFO] 19:14:46:802 Cpu/(2690:2713): Evaluando instruccion Nro: 0  de 0
+[INFO] 19:14:46:803 Cpu/(2690:2712): A punto de enviar el cde a kernel
+[INFO] 19:14:46:803 Cpu/(2690:2713): Por evaluar instruccion: 2
+[INFO] 19:14:46:803 Cpu/(2690:2713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 19:14:46:803 Cpu/(2690:2712): Envie el cde a kernel
+[INFO] 19:14:46:804 Cpu/(2690:2713): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:14:46:804 Cpu/(2690:2713): Evaluando instruccion Nro: 1  de 0
+[INFO] 19:14:46:804 Cpu/(2690:2713): Por evaluar instruccion: 2
+[INFO] 19:14:46:804 Cpu/(2690:2713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 19:14:46:806 Cpu/(2690:2713): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:14:46:806 Cpu/(2690:2713): Evaluando instruccion Nro: 2  de 0
+[INFO] 19:14:46:806 Cpu/(2690:2713): Por evaluar instruccion: 2
+[INFO] 19:14:46:806 Cpu/(2690:2713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 19:14:46:871 Cpu/(2690:2713): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:14:46:871 Cpu/(2690:2713): Evaluando instruccion Nro: 3  de 0
+[INFO] 19:14:46:871 Cpu/(2690:2713): Por evaluar instruccion: 2
+[INFO] 19:14:46:871 Cpu/(2690:2713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 19:14:46:886 Cpu/(2690:2713): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:14:46:887 Cpu/(2690:2713): Evaluando instruccion Nro: 4  de 0
+[INFO] 19:14:46:887 Cpu/(2690:2713): Por evaluar instruccion: 2
+[INFO] 19:14:46:887 Cpu/(2690:2713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 19:14:46:899 Cpu/(2690:2713): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:19:901 Cpu/(40225:40225): Listo para escuchar a mi cliente
+[INFO] 19:34:31:620 Cpu/(40225:40225): Conectado con kernel
+[INFO] 19:34:31:623 Cpu/(40225:40225): Handshake con Kernel realizado.
+[INFO] 19:34:31:695 Cpu/(40225:41072): Proceso en ejecucion: 0
+[INFO] 19:34:31:695 Cpu/(40225:41074): Evaluando instruccion Nro: 0  de 0
+[INFO] 19:34:31:695 Cpu/(40225:41073): A punto de enviar el cde a kernel
+[INFO] 19:34:31:695 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:695 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 19:34:31:695 Cpu/(40225:41073): Envie el cde a kernel
+[INFO] 19:34:31:699 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:699 Cpu/(40225:41074): Evaluando instruccion Nro: 1  de 0
+[INFO] 19:34:31:699 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:700 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 19:34:31:703 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:703 Cpu/(40225:41074): Evaluando instruccion Nro: 2  de 0
+[INFO] 19:34:31:704 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:704 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 19:34:31:705 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:705 Cpu/(40225:41074): Evaluando instruccion Nro: 3  de 0
+[INFO] 19:34:31:705 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:705 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 19:34:31:709 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:709 Cpu/(40225:41074): Evaluando instruccion Nro: 4  de 0
+[INFO] 19:34:31:710 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:710 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 19:34:31:717 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:717 Cpu/(40225:41074): Evaluando instruccion Nro: 5  de 0
+[INFO] 19:34:31:717 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:717 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 19:34:31:719 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:719 Cpu/(40225:41074): Evaluando instruccion Nro: 6  de 0
+[INFO] 19:34:31:719 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:719 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 19:34:31:747 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:747 Cpu/(40225:41074): Evaluando instruccion Nro: 7  de 0
+[INFO] 19:34:31:747 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:747 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 19:34:31:748 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:749 Cpu/(40225:41074): Evaluando instruccion Nro: 8  de 0
+[INFO] 19:34:31:749 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:749 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAA )
+[INFO] 19:34:31:771 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:772 Cpu/(40225:41074): Evaluando instruccion Nro: 9  de 0
+[INFO] 19:34:31:773 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:773 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBB )
+[INFO] 19:34:31:789 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:790 Cpu/(40225:41074): Evaluando instruccion Nro: 10  de 0
+[INFO] 19:34:31:790 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:790 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCC )
+[INFO] 19:34:31:792 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:793 Cpu/(40225:41074): Evaluando instruccion Nro: 11  de 0
+[INFO] 19:34:31:793 Cpu/(40225:41074): Por evaluar instruccion: 2
+[INFO] 19:34:31:793 Cpu/(40225:41074): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDD )
+[INFO] 19:34:31:810 Cpu/(40225:41074): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:34:31:810 Cpu/(40225:41074): Evaluando instruccion Nro: 12  de 0
+[INFO] 19:34:31:810 Cpu/(40225:41074): Por evaluar instruccion: 14
+[INFO] 19:34:31:810 Cpu/(40225:41074): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 19:38:11:037 Cpu/(75827:75827): Listo para escuchar a mi cliente
+[INFO] 19:38:19:597 Cpu/(75827:75827): Conectado con kernel
+[INFO] 19:38:19:599 Cpu/(75827:75827): Handshake con Kernel realizado.
+[INFO] 19:38:19:669 Cpu/(75827:75861): Proceso en ejecucion: 0
+[INFO] 19:38:19:669 Cpu/(75827:75863): Evaluando instruccion Nro: 0  de 0
+[INFO] 19:38:19:669 Cpu/(75827:75862): A punto de enviar el cde a kernel
+[INFO] 19:38:19:669 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:669 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 19:38:19:669 Cpu/(75827:75862): Envie el cde a kernel
+[INFO] 19:38:19:672 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:672 Cpu/(75827:75863): Evaluando instruccion Nro: 1  de 0
+[INFO] 19:38:19:672 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:672 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 19:38:19:677 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:678 Cpu/(75827:75863): Evaluando instruccion Nro: 2  de 0
+[INFO] 19:38:19:678 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:678 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 19:38:19:682 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:682 Cpu/(75827:75863): Evaluando instruccion Nro: 3  de 0
+[INFO] 19:38:19:682 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:682 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 19:38:19:688 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:688 Cpu/(75827:75863): Evaluando instruccion Nro: 4  de 0
+[INFO] 19:38:19:688 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:688 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 19:38:19:689 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:690 Cpu/(75827:75863): Evaluando instruccion Nro: 5  de 0
+[INFO] 19:38:19:690 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:690 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 19:38:19:692 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:692 Cpu/(75827:75863): Evaluando instruccion Nro: 6  de 0
+[INFO] 19:38:19:692 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:692 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 19:38:19:696 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:696 Cpu/(75827:75863): Evaluando instruccion Nro: 7  de 0
+[INFO] 19:38:19:696 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:696 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 19:38:19:697 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:697 Cpu/(75827:75863): Evaluando instruccion Nro: 8  de 0
+[INFO] 19:38:19:697 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:697 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAA )
+[INFO] 19:38:19:702 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:702 Cpu/(75827:75863): Evaluando instruccion Nro: 9  de 0
+[INFO] 19:38:19:702 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:702 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBB )
+[INFO] 19:38:19:705 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:705 Cpu/(75827:75863): Evaluando instruccion Nro: 10  de 0
+[INFO] 19:38:19:705 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:705 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCC )
+[INFO] 19:38:19:708 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:708 Cpu/(75827:75863): Evaluando instruccion Nro: 11  de 0
+[INFO] 19:38:19:708 Cpu/(75827:75863): Por evaluar instruccion: 2
+[INFO] 19:38:19:708 Cpu/(75827:75863): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDD )
+[INFO] 19:38:19:719 Cpu/(75827:75863): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:38:19:719 Cpu/(75827:75863): Evaluando instruccion Nro: 12  de 0
+[INFO] 19:38:19:719 Cpu/(75827:75863): Por evaluar instruccion: 14
+[INFO] 19:38:19:719 Cpu/(75827:75863): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 19:44:56:210 Cpu/(75985:75985): Listo para escuchar a mi cliente
+[INFO] 19:46:28:917 Cpu/(76044:76044): Listo para escuchar a mi cliente
+[INFO] 19:46:34:219 Cpu/(76044:76044): Conectado con kernel
+[INFO] 19:46:34:220 Cpu/(76044:76044): Handshake con Kernel realizado.
+[INFO] 19:46:34:282 Cpu/(76044:76062): Proceso en ejecucion: 0
+[INFO] 19:46:34:283 Cpu/(76044:76064): Evaluando instruccion Nro: 0  de 0
+[INFO] 19:46:34:283 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:283 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 19:46:34:286 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:286 Cpu/(76044:76064): Evaluando instruccion Nro: 1  de 0
+[INFO] 19:46:34:286 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:286 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 19:46:34:289 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:289 Cpu/(76044:76064): Evaluando instruccion Nro: 2  de 0
+[INFO] 19:46:34:290 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:291 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 19:46:34:295 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:296 Cpu/(76044:76064): Evaluando instruccion Nro: 3  de 0
+[INFO] 19:46:34:296 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:296 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 19:46:34:297 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:297 Cpu/(76044:76064): Evaluando instruccion Nro: 4  de 0
+[INFO] 19:46:34:297 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:297 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 19:46:34:303 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:303 Cpu/(76044:76064): Evaluando instruccion Nro: 5  de 0
+[INFO] 19:46:34:303 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:303 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 19:46:34:305 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:305 Cpu/(76044:76064): Evaluando instruccion Nro: 6  de 0
+[INFO] 19:46:34:305 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:305 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 19:46:34:306 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:307 Cpu/(76044:76064): Evaluando instruccion Nro: 7  de 0
+[INFO] 19:46:34:307 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:307 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 19:46:34:313 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:313 Cpu/(76044:76064): Evaluando instruccion Nro: 8  de 0
+[INFO] 19:46:34:313 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:313 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAA )
+[INFO] 19:46:34:314 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:316 Cpu/(76044:76064): Evaluando instruccion Nro: 9  de 0
+[INFO] 19:46:34:316 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:316 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBB )
+[INFO] 19:46:34:320 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:320 Cpu/(76044:76064): Evaluando instruccion Nro: 10  de 0
+[INFO] 19:46:34:320 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:320 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCC )
+[INFO] 19:46:34:321 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:322 Cpu/(76044:76064): Evaluando instruccion Nro: 11  de 0
+[INFO] 19:46:34:322 Cpu/(76044:76064): Por evaluar instruccion: 2
+[INFO] 19:46:34:322 Cpu/(76044:76064): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDD )
+[INFO] 19:46:34:324 Cpu/(76044:76064): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:46:34:324 Cpu/(76044:76064): Evaluando instruccion Nro: 12  de 0
+[INFO] 19:46:34:324 Cpu/(76044:76064): Por evaluar instruccion: 14
+[INFO] 19:46:34:324 Cpu/(76044:76064): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 19:46:34:324 Cpu/(76044:76063): A punto de enviar el cde a kernel
+[INFO] 19:46:34:325 Cpu/(76044:76063): Envie el cde a kernel
+[INFO] 19:51:20:445 Cpu/(76183:76183): Listo para escuchar a mi cliente
+[INFO] 19:51:26:344 Cpu/(76183:76183): Conectado con kernel
+[INFO] 19:51:26:344 Cpu/(76183:76183): Handshake con Kernel realizado.
+[INFO] 19:51:26:409 Cpu/(76183:76218): Proceso en ejecucion: 0
+[INFO] 19:51:26:410 Cpu/(76183:76220): Evaluando instruccion Nro: 0  de 0
+[INFO] 19:51:26:410 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:410 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 19:51:26:413 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:413 Cpu/(76183:76220): Evaluando instruccion Nro: 1  de 0
+[INFO] 19:51:26:414 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:414 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 19:51:26:415 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:415 Cpu/(76183:76220): Evaluando instruccion Nro: 2  de 0
+[INFO] 19:51:26:415 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:415 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 19:51:26:419 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:419 Cpu/(76183:76220): Evaluando instruccion Nro: 3  de 0
+[INFO] 19:51:26:419 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:419 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 19:51:26:421 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:421 Cpu/(76183:76220): Evaluando instruccion Nro: 4  de 0
+[INFO] 19:51:26:421 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:421 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 19:51:26:424 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:424 Cpu/(76183:76220): Evaluando instruccion Nro: 5  de 0
+[INFO] 19:51:26:424 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:424 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 19:51:26:426 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:426 Cpu/(76183:76220): Evaluando instruccion Nro: 6  de 0
+[INFO] 19:51:26:426 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:427 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 19:51:26:429 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:429 Cpu/(76183:76220): Evaluando instruccion Nro: 7  de 0
+[INFO] 19:51:26:429 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:429 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 19:51:26:431 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:431 Cpu/(76183:76220): Evaluando instruccion Nro: 8  de 0
+[INFO] 19:51:26:431 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:431 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAA )
+[INFO] 19:51:26:433 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:434 Cpu/(76183:76220): Evaluando instruccion Nro: 9  de 0
+[INFO] 19:51:26:434 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:434 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBB )
+[INFO] 19:51:26:435 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:435 Cpu/(76183:76220): Evaluando instruccion Nro: 10  de 0
+[INFO] 19:51:26:435 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:435 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCC )
+[INFO] 19:51:26:437 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:438 Cpu/(76183:76220): Evaluando instruccion Nro: 11  de 0
+[INFO] 19:51:26:438 Cpu/(76183:76220): Por evaluar instruccion: 2
+[INFO] 19:51:26:438 Cpu/(76183:76220): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDD )
+[INFO] 19:51:26:440 Cpu/(76183:76220): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:51:26:442 Cpu/(76183:76220): Evaluando instruccion Nro: 12  de 0
+[INFO] 19:51:26:442 Cpu/(76183:76220): Por evaluar instruccion: 14
+[INFO] 19:51:26:443 Cpu/(76183:76220): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 19:51:26:443 Cpu/(76183:76219): A punto de enviar el cde a kernel
+[INFO] 19:51:26:444 Cpu/(76183:76219): Envie el cde a kernel
+[INFO] 19:51:56:967 Cpu/(76250:76250): Listo para escuchar a mi cliente
+[INFO] 19:52:03:586 Cpu/(76250:76250): Conectado con kernel
+[INFO] 19:52:03:594 Cpu/(76250:76250): Handshake con Kernel realizado.
+[INFO] 19:52:03:646 Cpu/(76250:76284): Proceso en ejecucion: 0
+[INFO] 19:52:03:651 Cpu/(76250:76286): Evaluando instruccion Nro: 0  de 0
+[INFO] 19:52:03:653 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:653 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 19:52:03:656 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:656 Cpu/(76250:76286): Evaluando instruccion Nro: 1  de 0
+[INFO] 19:52:03:656 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:656 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 19:52:03:665 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:665 Cpu/(76250:76286): Evaluando instruccion Nro: 2  de 0
+[INFO] 19:52:03:665 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:665 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 19:52:03:668 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:669 Cpu/(76250:76286): Evaluando instruccion Nro: 3  de 0
+[INFO] 19:52:03:669 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:669 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 19:52:03:760 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:760 Cpu/(76250:76286): Evaluando instruccion Nro: 4  de 0
+[INFO] 19:52:03:760 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:760 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 19:52:03:771 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:771 Cpu/(76250:76286): Evaluando instruccion Nro: 5  de 0
+[INFO] 19:52:03:771 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:771 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 19:52:03:775 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:775 Cpu/(76250:76286): Evaluando instruccion Nro: 6  de 0
+[INFO] 19:52:03:775 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:775 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 19:52:03:776 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:777 Cpu/(76250:76286): Evaluando instruccion Nro: 7  de 0
+[INFO] 19:52:03:777 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:777 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 19:52:03:778 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:778 Cpu/(76250:76286): Evaluando instruccion Nro: 8  de 0
+[INFO] 19:52:03:778 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:778 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAA )
+[INFO] 19:52:03:781 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:781 Cpu/(76250:76286): Evaluando instruccion Nro: 9  de 0
+[INFO] 19:52:03:781 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:781 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBB )
+[INFO] 19:52:03:793 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:793 Cpu/(76250:76286): Evaluando instruccion Nro: 10  de 0
+[INFO] 19:52:03:793 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:793 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCC )
+[INFO] 19:52:03:796 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:796 Cpu/(76250:76286): Evaluando instruccion Nro: 11  de 0
+[INFO] 19:52:03:796 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:796 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDD )
+[INFO] 19:52:03:798 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:798 Cpu/(76250:76286): Evaluando instruccion Nro: 12  de 0
+[INFO] 19:52:03:798 Cpu/(76250:76286): Por evaluar instruccion: 14
+[INFO] 19:52:03:798 Cpu/(76250:76286): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 19:52:03:799 Cpu/(76250:76285): A punto de enviar el cde a kernel
+[INFO] 19:52:03:799 Cpu/(76250:76285): Envie el cde a kernel
+[INFO] 19:52:03:842 Cpu/(76250:76284): Proceso en ejecucion: 0
+[INFO] 19:52:03:842 Cpu/(76250:76286): Evaluando instruccion Nro: 13  de 0
+[INFO] 19:52:03:842 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:842 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 19:52:03:845 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:846 Cpu/(76250:76286): Evaluando instruccion Nro: 14  de 0
+[INFO] 19:52:03:846 Cpu/(76250:76286): Por evaluar instruccion: 2
+[INFO] 19:52:03:846 Cpu/(76250:76286): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 19:52:03:849 Cpu/(76250:76286): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 19:52:03:849 Cpu/(76250:76286): Evaluando instruccion Nro: 15  de 0
+[INFO] 19:52:03:849 Cpu/(76250:76286): Por evaluar instruccion: 15
+[INFO] 19:52:03:849 Cpu/(76250:76286): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 19:52:03:849 Cpu/(76250:76285): A punto de enviar el cde a kernel
+[INFO] 19:52:03:850 Cpu/(76250:76285): Envie el cde a kernel
+[INFO] 20:00:43:795 Cpu/(76494:76494): Listo para escuchar a mi cliente
+[INFO] 20:00:48:427 Cpu/(76494:76494): Conectado con kernel
+[INFO] 20:00:48:429 Cpu/(76494:76494): Handshake con Kernel realizado.
+[INFO] 20:00:48:438 Cpu/(76494:76528): A punto de recibir buffer.
+[INFO] 20:00:48:505 Cpu/(76494:76528): Recibi buffer.
+[INFO] 20:00:48:505 Cpu/(76494:76530): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:00:48:505 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:505 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:00:48:507 Cpu/(76494:76530): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:00:48:507 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:507 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:00:48:511 Cpu/(76494:76530): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:00:48:512 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:512 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:00:48:515 Cpu/(76494:76530): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:00:48:515 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:515 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:00:48:521 Cpu/(76494:76530): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:00:48:522 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:522 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:00:48:531 Cpu/(76494:76530): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:00:48:531 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:531 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:00:48:537 Cpu/(76494:76530): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:00:48:537 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:537 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:00:48:541 Cpu/(76494:76530): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:00:48:541 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:541 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:00:48:542 Cpu/(76494:76530): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:00:48:542 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:542 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:00:48:544 Cpu/(76494:76530): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:00:48:544 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:544 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:00:48:547 Cpu/(76494:76530): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:00:48:547 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:547 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:00:48:552 Cpu/(76494:76530): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:00:48:552 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:552 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:00:48:554 Cpu/(76494:76530): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:00:48:554 Cpu/(76494:76530): Por evaluar instruccion: 14
+[INFO] 20:00:48:554 Cpu/(76494:76530): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:00:48:554 Cpu/(76494:76529): A punto de enviar el cde a kernel
+[INFO] 20:00:48:554 Cpu/(76494:76529): Envie el cde a kernel
+[INFO] 20:00:48:554 Cpu/(76494:76528): A punto de recibir buffer.
+[INFO] 20:00:48:675 Cpu/(76494:76528): Recibi buffer.
+[INFO] 20:00:48:675 Cpu/(76494:76530): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:00:48:675 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:675 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:00:48:677 Cpu/(76494:76530): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:00:48:677 Cpu/(76494:76530): Por evaluar instruccion: 2
+[INFO] 20:00:48:677 Cpu/(76494:76530): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:00:48:679 Cpu/(76494:76530): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:00:48:679 Cpu/(76494:76530): Por evaluar instruccion: 15
+[INFO] 20:00:48:679 Cpu/(76494:76530): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:00:48:679 Cpu/(76494:76529): A punto de enviar el cde a kernel
+[INFO] 20:00:48:679 Cpu/(76494:76529): Envie el cde a kernel
+[INFO] 20:00:48:679 Cpu/(76494:76528): A punto de recibir buffer.
+[INFO] 20:00:48:871 Cpu/(76494:76528): Recibi buffer.
+[INFO] 20:22:21:981 Cpu/(77013:77013): Listo para escuchar a mi cliente
+[INFO] 20:22:27:490 Cpu/(77013:77013): Conectado con kernel
+[INFO] 20:22:27:495 Cpu/(77013:77013): Handshake con Kernel realizado.
+[INFO] 20:22:27:514 Cpu/(77013:77046): A punto de recibir buffer.
+[INFO] 20:22:27:557 Cpu/(77013:77046): Recibi buffer.
+[INFO] 20:22:27:557 Cpu/(77013:77046): CDE recibido, PC 0
+[INFO] 20:22:27:558 Cpu/(77013:77048): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:22:27:558 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:558 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:22:27:561 Cpu/(77013:77048): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:22:27:561 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:561 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:22:27:562 Cpu/(77013:77048): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:22:27:563 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:563 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:22:27:568 Cpu/(77013:77048): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:22:27:568 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:568 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:22:27:569 Cpu/(77013:77048): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:22:27:569 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:569 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:22:27:573 Cpu/(77013:77048): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:22:27:573 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:573 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:22:27:577 Cpu/(77013:77048): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:22:27:578 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:578 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:22:27:588 Cpu/(77013:77048): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:22:27:591 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:591 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:22:27:594 Cpu/(77013:77048): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:22:27:594 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:594 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:22:27:596 Cpu/(77013:77048): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:22:27:596 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:597 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:22:27:598 Cpu/(77013:77048): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:22:27:598 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:599 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:22:27:603 Cpu/(77013:77048): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:22:27:603 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:603 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:22:27:605 Cpu/(77013:77048): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:22:27:605 Cpu/(77013:77048): Por evaluar instruccion: 14
+[INFO] 20:22:27:605 Cpu/(77013:77048): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:22:27:605 Cpu/(77013:77047): A punto de enviar el cde a kernel
+[INFO] 20:22:27:605 Cpu/(77013:77047): Envie el cde a kernel
+[INFO] 20:22:27:605 Cpu/(77013:77046): A punto de recibir buffer.
+[INFO] 20:22:27:651 Cpu/(77013:77046): Recibi buffer.
+[INFO] 20:22:27:651 Cpu/(77013:77046): CDE recibido, PC 13
+[INFO] 20:22:27:651 Cpu/(77013:77048): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:22:27:651 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:652 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:22:27:653 Cpu/(77013:77048): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:22:27:653 Cpu/(77013:77048): Por evaluar instruccion: 2
+[INFO] 20:22:27:653 Cpu/(77013:77048): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:22:27:656 Cpu/(77013:77048): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:22:27:656 Cpu/(77013:77048): Por evaluar instruccion: 15
+[INFO] 20:22:27:656 Cpu/(77013:77048): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:22:27:656 Cpu/(77013:77047): A punto de enviar el cde a kernel
+[INFO] 20:22:27:656 Cpu/(77013:77047): Envie el cde a kernel
+[INFO] 20:22:27:657 Cpu/(77013:77046): A punto de recibir buffer.
+[INFO] 20:22:27:815 Cpu/(77013:77046): Recibi buffer.
+[INFO] 20:25:49:055 Cpu/(77155:77155): Listo para escuchar a mi cliente
+[INFO] 20:25:54:793 Cpu/(77155:77155): Conectado con kernel
+[INFO] 20:25:54:793 Cpu/(77155:77155): Handshake con Kernel realizado.
+[INFO] 20:25:54:829 Cpu/(77155:77179): A punto de recibir buffer.
+[INFO] 20:25:54:874 Cpu/(77155:77179): Recibi buffer.
+[INFO] 20:25:54:874 Cpu/(77155:77179): CDE recibido, PC 0
+[INFO] 20:25:54:875 Cpu/(77155:77181): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:25:54:875 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:875 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:25:54:877 Cpu/(77155:77181): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:25:54:877 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:877 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:25:54:879 Cpu/(77155:77181): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:25:54:879 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:879 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:25:54:883 Cpu/(77155:77181): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:25:54:884 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:884 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:25:54:890 Cpu/(77155:77181): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:25:54:890 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:890 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:25:54:895 Cpu/(77155:77181): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:25:54:898 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:898 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:25:54:901 Cpu/(77155:77181): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:25:54:901 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:901 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:25:54:906 Cpu/(77155:77181): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:25:54:906 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:906 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:25:54:907 Cpu/(77155:77181): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:25:54:908 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:908 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:25:54:909 Cpu/(77155:77181): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:25:54:909 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:910 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:25:54:912 Cpu/(77155:77181): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:25:54:913 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:913 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:25:54:918 Cpu/(77155:77181): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:25:54:918 Cpu/(77155:77181): Por evaluar instruccion: 2
+[INFO] 20:25:54:918 Cpu/(77155:77181): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:25:54:919 Cpu/(77155:77181): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:25:54:922 Cpu/(77155:77181): Por evaluar instruccion: 14
+[INFO] 20:25:54:922 Cpu/(77155:77181): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:25:54:925 Cpu/(77155:77180): A punto de enviar el cde a kernel
+[INFO] 20:25:54:932 Cpu/(77155:77180): Envie el cde a kernel
+[INFO] 20:25:54:932 Cpu/(77155:77179): A punto de recibir buffer.
+[INFO] 20:25:55:132 Cpu/(77155:77179): Recibi buffer.
+[INFO] 20:31:27:415 Cpu/(77374:77374): Listo para escuchar a mi cliente
+[INFO] 20:31:46:364 Cpu/(77374:77374): Conectado con kernel
+[INFO] 20:31:46:365 Cpu/(77374:77374): Handshake con Kernel realizado.
+[INFO] 20:31:46:372 Cpu/(77374:77408): A punto de recibir buffer.
+[INFO] 20:31:46:439 Cpu/(77374:77408): Recibi buffer.
+[INFO] 20:31:46:441 Cpu/(77374:77408): CDE recibido, PC 0
+[INFO] 20:31:46:441 Cpu/(77374:77410): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:31:46:441 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:441 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:31:46:443 Cpu/(77374:77410): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:31:46:443 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:443 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:31:46:445 Cpu/(77374:77410): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:31:46:446 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:446 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:31:46:448 Cpu/(77374:77410): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:31:46:448 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:448 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:31:46:451 Cpu/(77374:77410): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:31:46:451 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:451 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:31:46:453 Cpu/(77374:77410): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:31:46:454 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:454 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:31:46:456 Cpu/(77374:77410): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:31:46:456 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:456 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:31:46:457 Cpu/(77374:77410): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:31:46:458 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:458 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:31:46:459 Cpu/(77374:77410): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:31:46:459 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:459 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:31:46:461 Cpu/(77374:77410): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:31:46:461 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:461 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:31:46:464 Cpu/(77374:77410): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:31:46:464 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:464 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:31:46:465 Cpu/(77374:77410): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:31:46:466 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:466 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:31:46:468 Cpu/(77374:77410): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:31:46:468 Cpu/(77374:77410): Por evaluar instruccion: 14
+[INFO] 20:31:46:468 Cpu/(77374:77410): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:31:46:468 Cpu/(77374:77409): A punto de enviar el cde a kernel
+[INFO] 20:31:46:469 Cpu/(77374:77409): Envie el cde a kernel
+[INFO] 20:31:46:469 Cpu/(77374:77408): A punto de recibir buffer.
+[INFO] 20:31:46:557 Cpu/(77374:77408): Recibi buffer.
+[INFO] 20:31:46:558 Cpu/(77374:77408): CDE recibido, PC 13
+[INFO] 20:31:46:558 Cpu/(77374:77410): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:31:46:558 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:558 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:31:46:560 Cpu/(77374:77410): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:31:46:560 Cpu/(77374:77410): Por evaluar instruccion: 2
+[INFO] 20:31:46:560 Cpu/(77374:77410): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:31:46:564 Cpu/(77374:77410): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:31:46:564 Cpu/(77374:77410): Por evaluar instruccion: 15
+[INFO] 20:31:46:564 Cpu/(77374:77410): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:31:46:564 Cpu/(77374:77409): A punto de enviar el cde a kernel
+[INFO] 20:31:46:564 Cpu/(77374:77409): Envie el cde a kernel
+[INFO] 20:31:46:564 Cpu/(77374:77408): A punto de recibir buffer.
+[INFO] 20:31:46:749 Cpu/(77374:77408): Recibi buffer.
+[INFO] 20:31:55:748 Cpu/(77423:77423): Listo para escuchar a mi cliente
+[INFO] 20:32:06:140 Cpu/(77423:77423): Conectado con kernel
+[INFO] 20:32:06:174 Cpu/(77423:77423): Handshake con Kernel realizado.
+[INFO] 20:32:06:192 Cpu/(77423:77447): A punto de recibir buffer.
+[INFO] 20:32:06:416 Cpu/(77423:77447): Recibi buffer.
+[INFO] 20:32:06:416 Cpu/(77423:77447): CDE recibido, PC 0
+[INFO] 20:32:06:416 Cpu/(77423:77449): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:32:06:416 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:416 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:32:06:421 Cpu/(77423:77449): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:32:06:421 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:421 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:32:06:423 Cpu/(77423:77449): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:32:06:424 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:424 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:32:06:425 Cpu/(77423:77449): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:32:06:426 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:426 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:32:06:431 Cpu/(77423:77449): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:32:06:431 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:431 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:32:06:432 Cpu/(77423:77449): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:32:06:432 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:432 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:32:06:434 Cpu/(77423:77449): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:32:06:434 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:434 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:32:06:442 Cpu/(77423:77449): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:32:06:442 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:442 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:32:06:452 Cpu/(77423:77449): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:32:06:452 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:452 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:32:06:453 Cpu/(77423:77449): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:32:06:453 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:453 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:32:06:456 Cpu/(77423:77449): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:32:06:456 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:456 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:32:06:462 Cpu/(77423:77449): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:32:06:462 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:462 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:32:06:464 Cpu/(77423:77449): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:32:06:464 Cpu/(77423:77449): Por evaluar instruccion: 14
+[INFO] 20:32:06:464 Cpu/(77423:77449): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:32:06:465 Cpu/(77423:77448): A punto de enviar el cde a kernel
+[INFO] 20:32:06:465 Cpu/(77423:77448): Envie el cde a kernel
+[INFO] 20:32:06:465 Cpu/(77423:77447): A punto de recibir buffer.
+[INFO] 20:32:06:495 Cpu/(77423:77447): Recibi buffer.
+[INFO] 20:32:06:496 Cpu/(77423:77447): CDE recibido, PC 13
+[INFO] 20:32:06:496 Cpu/(77423:77449): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:32:06:496 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:496 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:32:06:498 Cpu/(77423:77449): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:32:06:498 Cpu/(77423:77449): Por evaluar instruccion: 2
+[INFO] 20:32:06:498 Cpu/(77423:77449): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:32:06:500 Cpu/(77423:77449): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:32:06:501 Cpu/(77423:77449): Por evaluar instruccion: 15
+[INFO] 20:32:06:501 Cpu/(77423:77449): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:32:06:501 Cpu/(77423:77448): A punto de enviar el cde a kernel
+[INFO] 20:32:06:501 Cpu/(77423:77448): Envie el cde a kernel
+[INFO] 20:32:06:503 Cpu/(77423:77447): A punto de recibir buffer.
+[INFO] 20:32:40:999 Cpu/(77423:77447): Recibi buffer.
+[INFO] 20:34:14:647 Cpu/(77548:77548): Listo para escuchar a mi cliente
+[INFO] 20:34:22:787 Cpu/(77548:77548): Conectado con kernel
+[INFO] 20:34:22:788 Cpu/(77548:77548): Handshake con Kernel realizado.
+[INFO] 20:34:22:794 Cpu/(77548:77567): A punto de recibir buffer.
+[INFO] 20:34:22:855 Cpu/(77548:77567): Recibi buffer.
+[INFO] 20:34:22:855 Cpu/(77548:77567): CDE recibido, PC 0
+[INFO] 20:34:22:855 Cpu/(77548:77569): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:34:22:856 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:856 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:34:22:861 Cpu/(77548:77569): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:34:22:862 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:862 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:34:22:868 Cpu/(77548:77569): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:34:22:868 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:868 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:34:22:872 Cpu/(77548:77569): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:34:22:872 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:872 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:34:22:873 Cpu/(77548:77569): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:34:22:874 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:874 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:34:22:882 Cpu/(77548:77569): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:34:22:883 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:883 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:34:22:893 Cpu/(77548:77569): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:34:22:894 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:894 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:34:22:900 Cpu/(77548:77569): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:34:22:900 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:900 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:34:22:903 Cpu/(77548:77569): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:34:22:903 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:903 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:34:22:917 Cpu/(77548:77569): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:34:22:923 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:923 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:34:22:927 Cpu/(77548:77569): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:34:22:927 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:927 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:34:22:930 Cpu/(77548:77569): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:34:22:930 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:930 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:34:22:934 Cpu/(77548:77569): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:34:22:934 Cpu/(77548:77569): Por evaluar instruccion: 14
+[INFO] 20:34:22:934 Cpu/(77548:77569): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:34:22:934 Cpu/(77548:77568): A punto de enviar el cde a kernel
+[INFO] 20:34:22:934 Cpu/(77548:77568): Envie el cde a kernel
+[INFO] 20:34:22:934 Cpu/(77548:77567): A punto de recibir buffer.
+[INFO] 20:34:22:979 Cpu/(77548:77567): Recibi buffer.
+[INFO] 20:34:22:979 Cpu/(77548:77567): CDE recibido, PC 13
+[INFO] 20:34:22:982 Cpu/(77548:77569): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:34:22:982 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:982 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:34:22:986 Cpu/(77548:77569): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:34:22:987 Cpu/(77548:77569): Por evaluar instruccion: 2
+[INFO] 20:34:22:987 Cpu/(77548:77569): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:34:22:991 Cpu/(77548:77569): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:34:22:991 Cpu/(77548:77569): Por evaluar instruccion: 15
+[INFO] 20:34:22:991 Cpu/(77548:77569): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:34:22:991 Cpu/(77548:77568): A punto de enviar el cde a kernel
+[INFO] 20:34:22:991 Cpu/(77548:77568): Envie el cde a kernel
+[INFO] 20:34:22:992 Cpu/(77548:77567): A punto de recibir buffer.
+[INFO] 20:34:23:184 Cpu/(77548:77567): Recibi buffer.
+[INFO] 20:34:42:690 Cpu/(77611:77611): Listo para escuchar a mi cliente
+[INFO] 20:34:47:785 Cpu/(77611:77611): Conectado con kernel
+[INFO] 20:34:47:789 Cpu/(77611:77611): Handshake con Kernel realizado.
+[INFO] 20:34:47:799 Cpu/(77611:77645): A punto de recibir buffer.
+[INFO] 20:34:47:854 Cpu/(77611:77645): Recibi buffer.
+[INFO] 20:34:47:854 Cpu/(77611:77645): CDE recibido, PC 0
+[INFO] 20:34:47:854 Cpu/(77611:77647): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:34:47:855 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:855 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:34:47:856 Cpu/(77611:77647): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:34:47:856 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:857 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:34:47:905 Cpu/(77611:77647): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:34:47:917 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:917 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:34:47:921 Cpu/(77611:77647): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:34:47:921 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:921 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:34:47:923 Cpu/(77611:77647): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:34:47:923 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:923 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:34:47:926 Cpu/(77611:77647): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:34:47:927 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:927 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:34:47:929 Cpu/(77611:77647): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:34:47:929 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:929 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:34:47:930 Cpu/(77611:77647): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:34:47:931 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:931 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:34:47:936 Cpu/(77611:77647): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:34:47:937 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:937 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:34:47:942 Cpu/(77611:77647): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:34:47:942 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:942 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:34:47:949 Cpu/(77611:77647): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:34:47:954 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:954 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:34:47:956 Cpu/(77611:77647): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:34:47:956 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:47:956 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:34:47:957 Cpu/(77611:77647): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:34:47:957 Cpu/(77611:77647): Por evaluar instruccion: 14
+[INFO] 20:34:47:957 Cpu/(77611:77647): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:34:47:959 Cpu/(77611:77646): A punto de enviar el cde a kernel
+[INFO] 20:34:47:959 Cpu/(77611:77646): Envie el cde a kernel
+[INFO] 20:34:47:959 Cpu/(77611:77645): A punto de recibir buffer.
+[INFO] 20:34:48:004 Cpu/(77611:77645): Recibi buffer.
+[INFO] 20:34:48:004 Cpu/(77611:77645): CDE recibido, PC 13
+[INFO] 20:34:48:004 Cpu/(77611:77647): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:34:48:004 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:48:004 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:34:48:009 Cpu/(77611:77647): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:34:48:009 Cpu/(77611:77647): Por evaluar instruccion: 2
+[INFO] 20:34:48:009 Cpu/(77611:77647): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:34:48:016 Cpu/(77611:77647): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:34:48:019 Cpu/(77611:77647): Por evaluar instruccion: 15
+[INFO] 20:34:48:020 Cpu/(77611:77647): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:34:48:021 Cpu/(77611:77646): A punto de enviar el cde a kernel
+[INFO] 20:34:48:021 Cpu/(77611:77646): Envie el cde a kernel
+[INFO] 20:34:48:021 Cpu/(77611:77645): A punto de recibir buffer.
+[INFO] 20:34:48:180 Cpu/(77611:77645): Recibi buffer.
+[INFO] 20:34:58:486 Cpu/(77660:77660): Listo para escuchar a mi cliente
+[INFO] 20:35:06:027 Cpu/(77660:77660): Conectado con kernel
+[INFO] 20:35:06:067 Cpu/(77660:77660): Handshake con Kernel realizado.
+[INFO] 20:35:06:068 Cpu/(77660:77681): A punto de recibir buffer.
+[INFO] 20:35:06:338 Cpu/(77660:77681): Recibi buffer.
+[INFO] 20:35:06:338 Cpu/(77660:77681): CDE recibido, PC 0
+[INFO] 20:35:06:338 Cpu/(77660:77683): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:35:06:338 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:338 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:35:06:349 Cpu/(77660:77683): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:35:06:353 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:356 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:35:06:358 Cpu/(77660:77683): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:35:06:359 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:359 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:35:06:360 Cpu/(77660:77683): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:35:06:361 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:361 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:35:06:363 Cpu/(77660:77683): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:35:06:363 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:363 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:35:06:368 Cpu/(77660:77683): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:35:06:368 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:368 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:35:06:370 Cpu/(77660:77683): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:35:06:370 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:370 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:35:06:382 Cpu/(77660:77683): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:35:06:384 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:387 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:35:06:390 Cpu/(77660:77683): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:35:06:390 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:390 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:35:06:395 Cpu/(77660:77683): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:35:06:395 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:395 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:35:06:397 Cpu/(77660:77683): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:35:06:397 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:397 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:35:06:476 Cpu/(77660:77683): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:35:06:476 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:476 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:35:06:482 Cpu/(77660:77683): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:35:06:482 Cpu/(77660:77683): Por evaluar instruccion: 14
+[INFO] 20:35:06:482 Cpu/(77660:77683): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:35:06:482 Cpu/(77660:77682): A punto de enviar el cde a kernel
+[INFO] 20:35:06:482 Cpu/(77660:77682): Envie el cde a kernel
+[INFO] 20:35:06:483 Cpu/(77660:77681): A punto de recibir buffer.
+[INFO] 20:35:06:539 Cpu/(77660:77681): Recibi buffer.
+[INFO] 20:35:06:539 Cpu/(77660:77681): CDE recibido, PC 13
+[INFO] 20:35:06:539 Cpu/(77660:77683): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:35:06:539 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:539 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:35:06:541 Cpu/(77660:77683): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:35:06:541 Cpu/(77660:77683): Por evaluar instruccion: 2
+[INFO] 20:35:06:541 Cpu/(77660:77683): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:35:06:542 Cpu/(77660:77683): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:35:06:542 Cpu/(77660:77683): Por evaluar instruccion: 15
+[INFO] 20:35:06:542 Cpu/(77660:77683): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:35:06:542 Cpu/(77660:77682): A punto de enviar el cde a kernel
+[INFO] 20:35:06:542 Cpu/(77660:77682): Envie el cde a kernel
+[INFO] 20:35:06:543 Cpu/(77660:77681): A punto de recibir buffer.
+[INFO] 20:38:15:413 Cpu/(77766:77766): Listo para escuchar a mi cliente
+[INFO] 20:38:20:039 Cpu/(77766:77766): Conectado con kernel
+[INFO] 20:38:20:039 Cpu/(77766:77766): Handshake con Kernel realizado.
+[INFO] 20:38:20:046 Cpu/(77766:77801): A punto de recibir buffer.
+[INFO] 20:38:20:093 Cpu/(77766:77801): Recibi buffer.
+[INFO] 20:38:20:093 Cpu/(77766:77801): CDE recibido, PC 0
+[INFO] 20:38:20:093 Cpu/(77766:77803): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:38:20:093 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:093 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:38:20:095 Cpu/(77766:77803): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:38:20:095 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:095 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:38:20:100 Cpu/(77766:77803): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:38:20:100 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:100 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:38:20:102 Cpu/(77766:77803): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:38:20:102 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:102 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:38:20:103 Cpu/(77766:77803): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:38:20:103 Cpu/(77766:77803): Por evaluar instruccion: 14
+[INFO] 20:38:20:103 Cpu/(77766:77803): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:38:20:103 Cpu/(77766:77802): A punto de enviar el cde a kernel
+[INFO] 20:38:20:103 Cpu/(77766:77802): Envie el cde a kernel
+[INFO] 20:38:20:103 Cpu/(77766:77801): A punto de recibir buffer.
+[INFO] 20:38:20:191 Cpu/(77766:77801): Recibi buffer.
+[INFO] 20:38:20:191 Cpu/(77766:77801): CDE recibido, PC 5
+[INFO] 20:38:20:191 Cpu/(77766:77803): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:38:20:191 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:191 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:38:20:194 Cpu/(77766:77803): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:38:20:194 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:194 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:38:20:196 Cpu/(77766:77803): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:38:20:196 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:196 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:38:20:202 Cpu/(77766:77803): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:38:20:202 Cpu/(77766:77803): Por evaluar instruccion: 2
+[INFO] 20:38:20:202 Cpu/(77766:77803): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:38:20:206 Cpu/(77766:77803): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:38:20:206 Cpu/(77766:77803): Por evaluar instruccion: 15
+[INFO] 20:38:20:206 Cpu/(77766:77803): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:38:20:206 Cpu/(77766:77802): A punto de enviar el cde a kernel
+[INFO] 20:38:20:207 Cpu/(77766:77802): Envie el cde a kernel
+[INFO] 20:38:20:207 Cpu/(77766:77801): A punto de recibir buffer.
+[INFO] 20:38:20:415 Cpu/(77766:77801): Recibi buffer.
+[INFO] 20:40:21:915 Cpu/(78118:78118): Listo para escuchar a mi cliente
+[INFO] 20:40:28:304 Cpu/(78118:78118): Conectado con kernel
+[INFO] 20:40:28:305 Cpu/(78118:78118): Handshake con Kernel realizado.
+[INFO] 20:40:28:325 Cpu/(78118:78133): A punto de recibir buffer.
+[INFO] 20:40:28:404 Cpu/(78118:78133): Recibi buffer.
+[INFO] 20:40:28:409 Cpu/(78118:78133): CDE recibido, PC 0
+[INFO] 20:40:28:410 Cpu/(78118:78135): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:40:28:410 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:410 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:40:28:411 Cpu/(78118:78135): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:40:28:411 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:411 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:40:28:413 Cpu/(78118:78135): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:40:28:413 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:413 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:40:28:444 Cpu/(78118:78135): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:40:28:446 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:446 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:40:28:448 Cpu/(78118:78135): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:40:28:448 Cpu/(78118:78135): Por evaluar instruccion: 14
+[INFO] 20:40:28:448 Cpu/(78118:78135): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:40:28:449 Cpu/(78118:78134): A punto de enviar el cde a kernel
+[INFO] 20:40:28:450 Cpu/(78118:78134): Envie el cde a kernel
+[INFO] 20:40:28:450 Cpu/(78118:78133): A punto de recibir buffer.
+[INFO] 20:40:28:516 Cpu/(78118:78133): Recibi buffer.
+[INFO] 20:40:28:516 Cpu/(78118:78133): CDE recibido, PC 5
+[INFO] 20:40:28:516 Cpu/(78118:78135): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:40:28:516 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:516 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:40:28:520 Cpu/(78118:78135): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:40:28:521 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:521 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:40:28:524 Cpu/(78118:78135): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:40:28:524 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:524 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:40:28:534 Cpu/(78118:78135): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:40:28:534 Cpu/(78118:78135): Por evaluar instruccion: 2
+[INFO] 20:40:28:534 Cpu/(78118:78135): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:40:28:540 Cpu/(78118:78135): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:40:28:540 Cpu/(78118:78135): Por evaluar instruccion: 15
+[INFO] 20:40:28:540 Cpu/(78118:78135): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:40:28:540 Cpu/(78118:78134): A punto de enviar el cde a kernel
+[INFO] 20:40:28:540 Cpu/(78118:78134): Envie el cde a kernel
+[INFO] 20:40:28:540 Cpu/(78118:78133): A punto de recibir buffer.
+[INFO] 20:40:28:878 Cpu/(78118:78133): Recibi buffer.
+[INFO] 20:42:03:851 Cpu/(78268:78268): Listo para escuchar a mi cliente
+[INFO] 20:42:30:135 Cpu/(78268:78268): Conectado con kernel
+[INFO] 20:42:30:135 Cpu/(78268:78268): Handshake con Kernel realizado.
+[INFO] 20:42:30:140 Cpu/(78268:78303): A punto de recibir buffer.
+[INFO] 20:42:43:646 Cpu/(78268:78303): Recibi buffer.
+[INFO] 20:42:43:646 Cpu/(78268:78303): CDE recibido, PC 0
+[INFO] 20:42:43:647 Cpu/(78268:78305): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:42:43:647 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:647 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:42:43:650 Cpu/(78268:78305): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:42:43:651 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:651 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:42:43:652 Cpu/(78268:78305): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:42:43:653 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:653 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:42:43:660 Cpu/(78268:78305): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:42:43:663 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:663 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:42:43:666 Cpu/(78268:78305): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:42:43:666 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:666 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 20:42:43:669 Cpu/(78268:78305): Evaluando instruccion Nro: 5  de 0
+[INFO] 20:42:43:669 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:669 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 20:42:43:671 Cpu/(78268:78305): Evaluando instruccion Nro: 6  de 0
+[INFO] 20:42:43:671 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:671 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 20:42:43:672 Cpu/(78268:78305): Evaluando instruccion Nro: 7  de 0
+[INFO] 20:42:43:672 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:672 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 20:42:43:678 Cpu/(78268:78305): Evaluando instruccion Nro: 8  de 0
+[INFO] 20:42:43:680 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:680 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 20:42:43:681 Cpu/(78268:78305): Evaluando instruccion Nro: 9  de 0
+[INFO] 20:42:43:681 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:681 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 20:42:43:684 Cpu/(78268:78305): Evaluando instruccion Nro: 10  de 0
+[INFO] 20:42:43:684 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:684 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 20:42:43:688 Cpu/(78268:78305): Evaluando instruccion Nro: 11  de 0
+[INFO] 20:42:43:688 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:688 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 20:42:43:690 Cpu/(78268:78305): Evaluando instruccion Nro: 12  de 0
+[INFO] 20:42:43:690 Cpu/(78268:78305): Por evaluar instruccion: 14
+[INFO] 20:42:43:690 Cpu/(78268:78305): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:42:43:690 Cpu/(78268:78304): A punto de enviar el cde a kernel
+[INFO] 20:42:43:690 Cpu/(78268:78304): Envie el cde a kernel
+[INFO] 20:42:43:690 Cpu/(78268:78303): A punto de recibir buffer.
+[INFO] 20:42:43:690 Cpu/(78268:78303): Recibi buffer.
+[INFO] 20:42:43:690 Cpu/(78268:78303): CDE recibido, PC 13
+[INFO] 20:42:43:690 Cpu/(78268:78305): Evaluando instruccion Nro: 13  de 0
+[INFO] 20:42:43:690 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:690 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 20:42:43:692 Cpu/(78268:78305): Evaluando instruccion Nro: 14  de 0
+[INFO] 20:42:43:692 Cpu/(78268:78305): Por evaluar instruccion: 2
+[INFO] 20:42:43:696 Cpu/(78268:78305): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 20:42:43:697 Cpu/(78268:78305): Evaluando instruccion Nro: 15  de 0
+[INFO] 20:42:43:698 Cpu/(78268:78305): Por evaluar instruccion: 15
+[INFO] 20:42:43:698 Cpu/(78268:78305): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 20:42:43:698 Cpu/(78268:78304): A punto de enviar el cde a kernel
+[INFO] 20:42:43:698 Cpu/(78268:78304): Envie el cde a kernel
+[INFO] 20:42:43:698 Cpu/(78268:78303): A punto de recibir buffer.
+[INFO] 20:42:43:903 Cpu/(78268:78303): Recibi buffer.
+[INFO] 20:46:36:987 Cpu/(78488:78488): Listo para escuchar a mi cliente
+[INFO] 20:47:24:186 Cpu/(78488:78488): Conectado con kernel
+[INFO] 20:47:36:145 Cpu/(78488:78488): Handshake con Kernel realizado.
+[INFO] 20:50:30:593 Cpu/(78488:78696): A punto de recibir buffer.
+[INFO] 20:50:33:540 Cpu/(78488:78696): Recibi buffer.
+[INFO] 20:50:33:540 Cpu/(78488:78696): CDE recibido, PC 0
+[INFO] 20:50:41:588 Cpu/(78488:78703): Evaluando instruccion Nro: 0  de 0
+[INFO] 20:50:41:588 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 20:50:41:588 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 20:50:41:605 Cpu/(78488:78703): Evaluando instruccion Nro: 1  de 0
+[INFO] 20:50:41:605 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 20:50:41:605 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 20:50:42:699 Cpu/(78488:78703): Evaluando instruccion Nro: 2  de 0
+[INFO] 20:50:42:700 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 20:50:42:700 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 20:50:42:702 Cpu/(78488:78703): Evaluando instruccion Nro: 3  de 0
+[INFO] 20:50:42:702 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 20:50:42:702 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 20:50:42:705 Cpu/(78488:78703): Evaluando instruccion Nro: 4  de 0
+[INFO] 20:50:42:705 Cpu/(78488:78703): Por evaluar instruccion: 14
+[INFO] 20:50:42:705 Cpu/(78488:78703): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 20:50:42:706 Cpu/(78488:78702): A punto de enviar el cde a kernel
+[INFO] 20:50:42:706 Cpu/(78488:78702): Envie el cde a kernel
+[INFO] 21:00:42:698 Cpu/(78488:78696): A punto de recibir buffer.
+[INFO] 21:00:42:698 Cpu/(78488:78696): Recibi buffer.
+[INFO] 21:00:42:698 Cpu/(78488:78696): CDE recibido, PC 5
+[INFO] 21:00:42:703 Cpu/(78488:78703): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:00:42:704 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 21:00:42:704 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:00:42:705 Cpu/(78488:78703): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:00:42:705 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 21:00:42:705 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:03:07:165 Cpu/(78488:78703): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:03:08:294 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 21:03:09:271 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:03:13:084 Cpu/(78488:78703): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:03:14:853 Cpu/(78488:78703): Por evaluar instruccion: 2
+[INFO] 21:03:15:546 Cpu/(78488:78703): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:03:22:613 Cpu/(78488:78703): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:03:26:127 Cpu/(78488:78703): Por evaluar instruccion: 15
+[INFO] 21:03:45:131 Cpu/(78488:78703): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:03:52:371 Cpu/(78488:78702): A punto de enviar el cde a kernel
+[INFO] 21:03:52:372 Cpu/(78488:78702): Envie el cde a kernel
+[INFO] 21:03:52:372 Cpu/(78488:78696): A punto de recibir buffer.
+[INFO] 21:08:02:646 Cpu/(79035:79035): Listo para escuchar a mi cliente
+[INFO] 21:15:57:224 Cpu/(79149:79149): Listo para escuchar a mi cliente
+[INFO] 21:16:05:238 Cpu/(79149:79149): Conectado con kernel
+[INFO] 21:16:05:239 Cpu/(79149:79149): Handshake con Kernel realizado.
+[INFO] 21:16:05:239 Cpu/(79149:79166): A punto de recibir buffer.
+[INFO] 21:16:05:302 Cpu/(79149:79166): Recibi buffer.
+[INFO] 21:16:05:302 Cpu/(79149:79166): CDE recibido, PC 0
+[INFO] 21:16:05:302 Cpu/(79149:79168): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:16:05:302 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:302 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:16:05:304 Cpu/(79149:79168): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:16:05:305 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:305 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:16:05:306 Cpu/(79149:79168): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:16:05:306 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:306 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:16:05:308 Cpu/(79149:79168): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:16:05:308 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:309 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:16:05:310 Cpu/(79149:79168): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:16:05:310 Cpu/(79149:79168): Por evaluar instruccion: 14
+[INFO] 21:16:05:310 Cpu/(79149:79168): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:16:05:310 Cpu/(79149:79167): A punto de enviar el cde a kernel, PC: 5
+[INFO] 21:16:05:311 Cpu/(79149:79167): Envie el cde a kernel
+[INFO] 21:16:05:311 Cpu/(79149:79166): A punto de recibir buffer.
+[INFO] 21:16:05:399 Cpu/(79149:79166): Recibi buffer.
+[INFO] 21:16:05:402 Cpu/(79149:79166): CDE recibido, PC 5
+[INFO] 21:16:05:402 Cpu/(79149:79168): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:16:05:402 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:402 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:16:05:404 Cpu/(79149:79168): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:16:05:404 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:404 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:16:05:405 Cpu/(79149:79168): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:16:05:405 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:405 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:16:05:408 Cpu/(79149:79168): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:16:05:408 Cpu/(79149:79168): Por evaluar instruccion: 2
+[INFO] 21:16:05:408 Cpu/(79149:79168): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:16:05:409 Cpu/(79149:79168): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:16:05:409 Cpu/(79149:79168): Por evaluar instruccion: 15
+[INFO] 21:16:05:409 Cpu/(79149:79168): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:16:05:409 Cpu/(79149:79167): A punto de enviar el cde a kernel, PC: 10
+[INFO] 21:16:05:409 Cpu/(79149:79167): Envie el cde a kernel
+[INFO] 21:16:05:410 Cpu/(79149:79166): A punto de recibir buffer.
+[INFO] 21:16:05:589 Cpu/(79149:79166): Recibi buffer.
+[INFO] 21:16:41:776 Cpu/(79232:79232): Listo para escuchar a mi cliente
+[INFO] 21:16:49:210 Cpu/(79232:79232): Conectado con kernel
+[INFO] 21:16:49:210 Cpu/(79232:79232): Handshake con Kernel realizado.
+[INFO] 21:16:49:215 Cpu/(79232:79265): A punto de recibir buffer.
+[INFO] 21:16:49:277 Cpu/(79232:79265): Recibi buffer.
+[INFO] 21:16:49:278 Cpu/(79232:79265): CDE recibido, PC 0
+[INFO] 21:16:49:279 Cpu/(79232:79267): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:16:49:279 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:279 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:16:49:281 Cpu/(79232:79267): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:16:49:281 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:281 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:16:49:283 Cpu/(79232:79267): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:16:49:283 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:283 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:16:49:285 Cpu/(79232:79267): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:16:49:285 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:285 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:16:49:287 Cpu/(79232:79267): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:16:49:287 Cpu/(79232:79267): Por evaluar instruccion: 14
+[INFO] 21:16:49:287 Cpu/(79232:79267): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:16:49:287 Cpu/(79232:79266): A punto de enviar el cde a kernel, PC: 5
+[INFO] 21:16:49:287 Cpu/(79232:79266): Envie el cde a kernel
+[INFO] 21:16:49:287 Cpu/(79232:79265): A punto de recibir buffer.
+[INFO] 21:16:49:382 Cpu/(79232:79265): Recibi buffer.
+[INFO] 21:16:49:382 Cpu/(79232:79265): CDE recibido, PC 5
+[INFO] 21:16:49:382 Cpu/(79232:79267): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:16:49:382 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:382 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:16:49:384 Cpu/(79232:79267): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:16:49:384 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:384 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:16:49:387 Cpu/(79232:79267): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:16:49:387 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:387 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:16:49:391 Cpu/(79232:79267): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:16:49:391 Cpu/(79232:79267): Por evaluar instruccion: 2
+[INFO] 21:16:49:391 Cpu/(79232:79267): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:16:49:393 Cpu/(79232:79267): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:16:49:393 Cpu/(79232:79267): Por evaluar instruccion: 15
+[INFO] 21:16:49:393 Cpu/(79232:79267): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:16:49:393 Cpu/(79232:79266): A punto de enviar el cde a kernel, PC: 10
+[INFO] 21:16:49:393 Cpu/(79232:79266): Envie el cde a kernel
+[INFO] 21:16:49:393 Cpu/(79232:79265): A punto de recibir buffer.
+[INFO] 21:16:49:577 Cpu/(79232:79265): Recibi buffer.
+[INFO] 21:24:39:094 Cpu/(79678:79678): Listo para escuchar a mi cliente
+[INFO] 21:24:53:400 Cpu/(79678:79678): Conectado con kernel
+[INFO] 21:24:53:401 Cpu/(79678:79678): Handshake con Kernel realizado.
+[INFO] 21:24:53:415 Cpu/(79678:79711): A punto de recibir buffer.
+[INFO] 21:24:53:462 Cpu/(79678:79711): Recibi buffer.
+[INFO] 21:24:53:463 Cpu/(79678:79711): CDE recibido, PC 0
+[INFO] 21:24:53:463 Cpu/(79678:79711): Destrui buffer recibido
+[INFO] 21:24:53:463 Cpu/(79678:79713): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:24:53:463 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:24:53:480 Cpu/(79678:79713): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:24:53:481 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:24:53:482 Cpu/(79678:79713): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:24:53:483 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:24:53:488 Cpu/(79678:79713): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:24:53:488 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:24:53:497 Cpu/(79678:79713): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:24:53:497 Cpu/(79678:79713): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:24:53:497 Cpu/(79678:79712): A punto de enviar el cde a kernel, PC: 5
+[INFO] 21:24:53:498 Cpu/(79678:79712): Destrui buffer enviado
+[INFO] 21:24:53:498 Cpu/(79678:79712): Envie el cde a kernel
+[INFO] 21:24:53:498 Cpu/(79678:79711): A punto de recibir buffer.
+[INFO] 21:24:53:602 Cpu/(79678:79711): Recibi buffer.
+[INFO] 21:24:53:602 Cpu/(79678:79711): CDE recibido, PC 5
+[INFO] 21:24:53:602 Cpu/(79678:79711): Destrui buffer recibido
+[INFO] 21:24:53:603 Cpu/(79678:79713): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:24:53:603 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:24:53:604 Cpu/(79678:79713): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:24:53:605 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:24:53:608 Cpu/(79678:79713): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:24:53:608 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:24:53:609 Cpu/(79678:79713): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:24:53:609 Cpu/(79678:79713): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:24:53:611 Cpu/(79678:79713): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:24:53:611 Cpu/(79678:79713): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:24:53:611 Cpu/(79678:79712): A punto de enviar el cde a kernel, PC: 10
+[INFO] 21:24:53:611 Cpu/(79678:79712): Destrui buffer enviado
+[INFO] 21:24:53:611 Cpu/(79678:79712): Envie el cde a kernel
+[INFO] 21:24:53:611 Cpu/(79678:79711): A punto de recibir buffer.
+[INFO] 21:24:53:867 Cpu/(79678:79711): Recibi buffer.
+[INFO] 21:25:40:064 Cpu/(79730:79730): Listo para escuchar a mi cliente
+[INFO] 21:25:48:076 Cpu/(79730:79730): Conectado con kernel
+[INFO] 21:25:48:115 Cpu/(79730:79730): Handshake con Kernel realizado.
+[INFO] 21:25:48:116 Cpu/(79730:79756): A punto de recibir buffer.
+[INFO] 21:25:48:414 Cpu/(79730:79756): Recibi buffer.
+[INFO] 21:25:48:415 Cpu/(79730:79756): CDE recibido, PC 0
+[INFO] 21:25:48:415 Cpu/(79730:79756): Destrui buffer recibido
+[INFO] 21:25:48:415 Cpu/(79730:79758): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:25:48:415 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:25:48:419 Cpu/(79730:79758): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:25:48:419 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:25:48:425 Cpu/(79730:79758): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:25:48:425 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:25:48:428 Cpu/(79730:79758): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:25:48:428 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:25:48:441 Cpu/(79730:79758): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:25:48:441 Cpu/(79730:79758): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:25:48:441 Cpu/(79730:79757): A punto de enviar el cde a kernel, PC: 5
+[INFO] 21:25:48:441 Cpu/(79730:79757): Destrui buffer enviado
+[INFO] 21:25:48:441 Cpu/(79730:79757): Envie el cde a kernel
+[INFO] 21:25:48:441 Cpu/(79730:79756): A punto de recibir buffer.
+[INFO] 21:25:48:513 Cpu/(79730:79756): Recibi buffer.
+[INFO] 21:25:48:514 Cpu/(79730:79756): CDE recibido, PC 5
+[INFO] 21:25:48:514 Cpu/(79730:79756): Destrui buffer recibido
+[INFO] 21:25:48:514 Cpu/(79730:79758): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:25:48:514 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:25:48:516 Cpu/(79730:79758): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:25:48:516 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:25:48:518 Cpu/(79730:79758): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:25:48:518 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:25:48:520 Cpu/(79730:79758): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:25:48:520 Cpu/(79730:79758): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:25:48:525 Cpu/(79730:79758): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:25:48:525 Cpu/(79730:79758): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:25:48:525 Cpu/(79730:79757): A punto de enviar el cde a kernel, PC: 10
+[INFO] 21:25:48:525 Cpu/(79730:79757): Destrui buffer enviado
+[INFO] 21:25:48:525 Cpu/(79730:79757): Envie el cde a kernel
+[INFO] 21:25:48:526 Cpu/(79730:79756): A punto de recibir buffer.
+[INFO] 21:27:15:359 Cpu/(79730:79756): Recibi buffer.
+[INFO] 21:38:20:679 Cpu/(80164:80164): Listo para escuchar a mi cliente
+[INFO] 21:40:54:673 Cpu/(80313:80313): Listo para escuchar a mi cliente
+[INFO] 21:40:59:925 Cpu/(80313:80313): Conectado con kernel
+[INFO] 21:40:59:926 Cpu/(80313:80313): Handshake con Kernel realizado.
+[INFO] 21:40:59:941 Cpu/(80313:80345): A punto de recibir buffer.
+[INFO] 21:41:00:002 Cpu/(80313:80345): Recibi buffer.
+[INFO] 21:41:43:593 Cpu/(80420:80420): Listo para escuchar a mi cliente
+[INFO] 21:45:07:946 Cpu/(80487:80487): Listo para escuchar a mi cliente
+[INFO] 21:45:13:478 Cpu/(80487:80487): Conectado con kernel
+[INFO] 21:45:13:478 Cpu/(80487:80487): Handshake con Kernel realizado.
+[INFO] 21:45:13:481 Cpu/(80487:80501): A punto de recibir buffer.
+[INFO] 21:45:13:543 Cpu/(80487:80501): Recibi buffer.
+[INFO] 21:46:30:779 Cpu/(80639:80639): Listo para escuchar a mi cliente
+[INFO] 21:46:36:131 Cpu/(80639:80639): Conectado con kernel
+[INFO] 21:46:36:136 Cpu/(80639:80639): Handshake con Kernel realizado.
+[INFO] 21:46:36:141 Cpu/(80639:80672): A punto de recibir buffer.
+[INFO] 21:46:36:200 Cpu/(80639:80672): Recibi buffer.
+[INFO] 21:46:36:202 Cpu/(80639:80672): CDE recibido, PC 0
+[INFO] 21:46:36:202 Cpu/(80639:80672): Destrui buffer recibido
+[INFO] 21:46:36:202 Cpu/(80639:80674): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:46:36:202 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:46:36:204 Cpu/(80639:80674): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:46:36:204 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:46:36:206 Cpu/(80639:80674): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:46:36:206 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:46:36:210 Cpu/(80639:80674): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:46:36:210 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:46:36:212 Cpu/(80639:80674): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:46:36:213 Cpu/(80639:80674): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:46:36:213 Cpu/(80639:80673): A punto de enviar el cde a kernel, PC: 5
+[INFO] 21:46:36:213 Cpu/(80639:80673): Destrui buffer enviado
+[INFO] 21:46:36:213 Cpu/(80639:80673): Envie el cde a kernel
+[INFO] 21:46:36:213 Cpu/(80639:80672): A punto de recibir buffer.
+[INFO] 21:46:36:314 Cpu/(80639:80672): Recibi buffer.
+[INFO] 21:46:36:314 Cpu/(80639:80672): CDE recibido, PC 5
+[INFO] 21:46:36:314 Cpu/(80639:80672): Destrui buffer recibido
+[INFO] 21:46:36:314 Cpu/(80639:80674): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:46:36:314 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:46:36:316 Cpu/(80639:80674): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:46:36:316 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:46:36:328 Cpu/(80639:80674): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:46:36:332 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:46:36:335 Cpu/(80639:80674): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:46:36:336 Cpu/(80639:80674): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:46:36:338 Cpu/(80639:80674): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:46:36:338 Cpu/(80639:80674): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:46:36:338 Cpu/(80639:80673): A punto de enviar el cde a kernel, PC: 10
+[INFO] 21:46:36:338 Cpu/(80639:80673): Destrui buffer enviado
+[INFO] 21:46:36:339 Cpu/(80639:80673): Envie el cde a kernel
+[INFO] 21:46:36:339 Cpu/(80639:80672): A punto de recibir buffer.
+[INFO] 21:46:36:491 Cpu/(80639:80672): Recibi buffer.
+[INFO] 21:47:53:272 Cpu/(80698:80698): Listo para escuchar a mi cliente
+[INFO] 21:47:58:300 Cpu/(80698:80698): Conectado con kernel
+[INFO] 21:47:58:300 Cpu/(80698:80698): Handshake con Kernel realizado.
+[INFO] 21:47:58:301 Cpu/(80698:80735): A punto de recibir buffer.
+[INFO] 21:47:59:071 Cpu/(80698:80735): Recibi buffer.
+[INFO] 21:47:59:071 Cpu/(80698:80735): CDE recibido, PC 0
+[INFO] 21:47:59:071 Cpu/(80698:80735): Destrui buffer recibido
+[INFO] 21:47:59:077 Cpu/(80698:80737): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:47:59:077 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:47:59:079 Cpu/(80698:80737): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:47:59:079 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:47:59:083 Cpu/(80698:80737): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:47:59:087 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:47:59:089 Cpu/(80698:80737): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:47:59:090 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:47:59:091 Cpu/(80698:80737): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:47:59:092 Cpu/(80698:80737): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:47:59:092 Cpu/(80698:80736): A punto de enviar el cde a kernel, PC: 5
+[INFO] 21:47:59:092 Cpu/(80698:80736): Destrui buffer enviado
+[INFO] 21:47:59:092 Cpu/(80698:80736): Envie el cde a kernel
+[INFO] 21:47:59:092 Cpu/(80698:80735): A punto de recibir buffer.
+[INFO] 21:47:59:180 Cpu/(80698:80735): Recibi buffer.
+[INFO] 21:47:59:180 Cpu/(80698:80735): CDE recibido, PC 5
+[INFO] 21:47:59:180 Cpu/(80698:80735): Destrui buffer recibido
+[INFO] 21:47:59:180 Cpu/(80698:80737): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:47:59:180 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:47:59:182 Cpu/(80698:80737): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:47:59:183 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:47:59:184 Cpu/(80698:80737): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:47:59:185 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:47:59:186 Cpu/(80698:80737): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:47:59:186 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:47:59:190 Cpu/(80698:80737): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:47:59:190 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 21:47:59:193 Cpu/(80698:80737): Evaluando instruccion Nro: 10  de 0
+[INFO] 21:47:59:193 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 21:47:59:196 Cpu/(80698:80737): Evaluando instruccion Nro: 11  de 0
+[INFO] 21:47:59:196 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 21:47:59:200 Cpu/(80698:80737): Evaluando instruccion Nro: 12  de 0
+[INFO] 21:47:59:200 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 21:47:59:203 Cpu/(80698:80737): Evaluando instruccion Nro: 13  de 0
+[INFO] 21:47:59:203 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 21:47:59:214 Cpu/(80698:80737): Evaluando instruccion Nro: 14  de 0
+[INFO] 21:47:59:214 Cpu/(80698:80737): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 21:47:59:216 Cpu/(80698:80737): Evaluando instruccion Nro: 15  de 0
+[INFO] 21:47:59:216 Cpu/(80698:80737): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:47:59:216 Cpu/(80698:80736): A punto de enviar el cde a kernel, PC: 15
+[INFO] 21:47:59:216 Cpu/(80698:80736): Destrui buffer enviado
+[INFO] 21:47:59:216 Cpu/(80698:80736): Envie el cde a kernel
+[INFO] 21:47:59:218 Cpu/(80698:80735): A punto de recibir buffer.
+[INFO] 21:47:59:460 Cpu/(80698:80735): Recibi buffer.
+[INFO] 21:48:40:139 Cpu/(80818:80818): Listo para escuchar a mi cliente
+[INFO] 21:48:44:775 Cpu/(80818:80818): Conectado con kernel
+[INFO] 21:48:44:779 Cpu/(80818:80818): Handshake con Kernel realizado.
+[INFO] 21:48:44:779 Cpu/(80818:80850): A punto de recibir buffer.
+[INFO] 21:48:44:846 Cpu/(80818:80850): Recibi buffer.
+[INFO] 21:48:44:848 Cpu/(80818:80850): CDE recibido, PC 0
+[INFO] 21:48:44:848 Cpu/(80818:80850): Destrui buffer recibido
+[INFO] 21:48:44:848 Cpu/(80818:80852): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:48:44:848 Cpu/(80818:80852): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:48:44:850 Cpu/(80818:80852): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:48:44:850 Cpu/(80818:80852): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:48:44:851 Cpu/(80818:80852): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:48:44:852 Cpu/(80818:80852): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:48:44:855 Cpu/(80818:80852): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:48:44:855 Cpu/(80818:80852): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:48:44:858 Cpu/(80818:80852): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:48:44:858 Cpu/(80818:80852): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:48:44:858 Cpu/(80818:80851): A punto de enviar el cde a kernel, PC: 5
+[INFO] 21:48:44:858 Cpu/(80818:80851): Destrui buffer enviado
+[INFO] 21:48:44:858 Cpu/(80818:80851): Envie el cde a kernel
+[INFO] 21:48:44:858 Cpu/(80818:80850): A punto de recibir buffer.
+[INFO] 21:48:45:019 Cpu/(80818:80850): Recibi buffer.
+[INFO] 21:49:33:441 Cpu/(80888:80888): Listo para escuchar a mi cliente
+[INFO] 21:49:40:889 Cpu/(80888:80888): Conectado con kernel
+[INFO] 21:49:40:890 Cpu/(80888:80888): Handshake con Kernel realizado.
+[INFO] 21:49:40:896 Cpu/(80888:80921): A punto de recibir buffer.
+[INFO] 21:49:40:974 Cpu/(80888:80921): Recibi buffer.
+[INFO] 21:49:40:974 Cpu/(80888:80921): CDE recibido, PC 0
+[INFO] 21:49:40:974 Cpu/(80888:80921): Destrui buffer recibido
+[INFO] 21:49:40:978 Cpu/(80888:80923): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:49:40:978 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:49:40:982 Cpu/(80888:80923): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:49:40:982 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:49:40:985 Cpu/(80888:80923): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:49:40:985 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:49:40:988 Cpu/(80888:80923): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:49:40:988 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:49:40:990 Cpu/(80888:80923): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:49:40:990 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:49:40:992 Cpu/(80888:80923): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:49:40:993 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:49:40:995 Cpu/(80888:80923): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:49:40:995 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:49:40:998 Cpu/(80888:80923): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:49:40:998 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:49:41:003 Cpu/(80888:80923): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:49:41:004 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 21:49:41:006 Cpu/(80888:80923): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:49:41:006 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 21:49:41:010 Cpu/(80888:80923): Evaluando instruccion Nro: 10  de 0
+[INFO] 21:49:41:011 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 21:49:41:014 Cpu/(80888:80923): Evaluando instruccion Nro: 11  de 0
+[INFO] 21:49:41:014 Cpu/(80888:80923): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 21:49:41:018 Cpu/(80888:80923): Evaluando instruccion Nro: 12  de 0
+[INFO] 21:49:41:018 Cpu/(80888:80923): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:49:41:018 Cpu/(80888:80922): A punto de enviar el cde a kernel, PC: 13
+[INFO] 21:49:41:018 Cpu/(80888:80922): Destrui buffer enviado
+[INFO] 21:49:41:018 Cpu/(80888:80922): Envie el cde a kernel
+[INFO] 21:49:41:019 Cpu/(80888:80921): A punto de recibir buffer.
+[INFO] 21:49:41:062 Cpu/(80888:80921): Recibi buffer.
+[INFO] 21:50:32:610 Cpu/(80991:80991): Listo para escuchar a mi cliente
+[INFO] 21:51:17:886 Cpu/(81042:81042): Listo para escuchar a mi cliente
+[INFO] 21:51:21:826 Cpu/(81042:81042): Conectado con kernel
+[INFO] 21:51:21:827 Cpu/(81042:81042): Handshake con Kernel realizado.
+[INFO] 21:51:21:827 Cpu/(81042:81058): A punto de recibir buffer.
+[INFO] 21:51:21:884 Cpu/(81042:81058): Recibi buffer.
+[INFO] 21:51:21:884 Cpu/(81042:81058): CDE recibido, PC 0
+[INFO] 21:51:21:884 Cpu/(81042:81058): Destrui buffer recibido
+[INFO] 21:51:21:884 Cpu/(81042:81060): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:51:21:884 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:51:21:886 Cpu/(81042:81060): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:51:21:886 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:51:21:888 Cpu/(81042:81060): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:51:21:888 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:51:21:889 Cpu/(81042:81060): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:51:21:889 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:51:21:891 Cpu/(81042:81060): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:51:21:891 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:51:21:893 Cpu/(81042:81060): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:51:21:893 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:51:21:898 Cpu/(81042:81060): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:51:21:902 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:51:21:907 Cpu/(81042:81060): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:51:21:907 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:51:21:912 Cpu/(81042:81060): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:51:21:912 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 21:51:21:915 Cpu/(81042:81060): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:51:21:915 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 21:51:21:917 Cpu/(81042:81060): Evaluando instruccion Nro: 10  de 0
+[INFO] 21:51:21:918 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 21:51:21:921 Cpu/(81042:81060): Evaluando instruccion Nro: 11  de 0
+[INFO] 21:51:21:921 Cpu/(81042:81060): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 21:51:22:175 Cpu/(81042:81060): Evaluando instruccion Nro: 12  de 0
+[INFO] 21:51:22:187 Cpu/(81042:81060): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:51:22:188 Cpu/(81042:81059): A punto de enviar el cde a kernel, PC: 13
+[INFO] 21:51:22:188 Cpu/(81042:81059): Destrui buffer enviado
+[INFO] 21:51:22:188 Cpu/(81042:81059): Envie el cde a kernel
+[INFO] 21:51:22:189 Cpu/(81042:81058): A punto de recibir buffer.
+[INFO] 21:51:22:243 Cpu/(81042:81058): Recibi buffer.
+[INFO] 21:51:52:418 Cpu/(81078:81078): Listo para escuchar a mi cliente
+[INFO] 21:53:30:002 Cpu/(81118:81118): Listo para escuchar a mi cliente
+[INFO] 21:53:42:124 Cpu/(81118:81118): Conectado con kernel
+[INFO] 21:53:42:128 Cpu/(81118:81118): Handshake con Kernel realizado.
+[INFO] 21:53:42:194 Cpu/(81118:81139): A punto de recibir buffer.
+[INFO] 21:53:42:200 Cpu/(81118:81139): Recibi buffer.
+[INFO] 21:53:42:211 Cpu/(81118:81139): CDE recibido, PC 0
+[INFO] 21:53:42:231 Cpu/(81118:81139): Destrui buffer recibido
+[INFO] 21:53:42:232 Cpu/(81118:81141): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:53:42:233 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:53:42:239 Cpu/(81118:81141): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:53:42:240 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:53:42:247 Cpu/(81118:81141): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:53:42:248 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:53:42:249 Cpu/(81118:81141): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:53:42:250 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:53:42:274 Cpu/(81118:81141): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:53:42:274 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:53:42:280 Cpu/(81118:81141): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:53:42:281 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:53:42:286 Cpu/(81118:81141): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:53:42:286 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:53:42:295 Cpu/(81118:81141): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:53:42:296 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:53:42:804 Cpu/(81118:81141): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:53:42:805 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 21:53:42:807 Cpu/(81118:81141): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:53:42:808 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 21:53:42:810 Cpu/(81118:81141): Evaluando instruccion Nro: 10  de 0
+[INFO] 21:53:42:810 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 21:53:42:813 Cpu/(81118:81141): Evaluando instruccion Nro: 11  de 0
+[INFO] 21:53:42:813 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 21:53:42:815 Cpu/(81118:81141): Evaluando instruccion Nro: 12  de 0
+[INFO] 21:53:42:815 Cpu/(81118:81141): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:53:42:820 Cpu/(81118:81140): A punto de enviar el cde a kernel, PC: 13
+[INFO] 21:53:42:824 Cpu/(81118:81140): Destrui buffer enviado
+[INFO] 21:53:42:824 Cpu/(81118:81140): Envie el cde a kernel
+[INFO] 21:53:42:827 Cpu/(81118:81139): A punto de recibir buffer.
+[INFO] 21:53:42:869 Cpu/(81118:81139): Recibi buffer.
+[INFO] 21:53:42:870 Cpu/(81118:81139): CDE recibido, PC 13
+[INFO] 21:53:42:870 Cpu/(81118:81139): Destrui buffer recibido
+[INFO] 21:53:42:870 Cpu/(81118:81141): Evaluando instruccion Nro: 13  de 0
+[INFO] 21:53:42:870 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 21:53:42:878 Cpu/(81118:81141): Evaluando instruccion Nro: 14  de 0
+[INFO] 21:53:42:878 Cpu/(81118:81141): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 21:53:42:881 Cpu/(81118:81141): Evaluando instruccion Nro: 15  de 0
+[INFO] 21:53:42:881 Cpu/(81118:81141): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:53:42:882 Cpu/(81118:81140): A punto de enviar el cde a kernel, PC: 16
+[INFO] 21:53:42:882 Cpu/(81118:81140): Destrui buffer enviado
+[INFO] 21:53:42:882 Cpu/(81118:81140): Envie el cde a kernel
+[INFO] 21:53:42:883 Cpu/(81118:81139): A punto de recibir buffer.
+[INFO] 21:53:43:130 Cpu/(81118:81139): Recibi buffer.
+[INFO] 21:53:43:133 Cpu/(81118:81139): CDE recibido, PC 0
+[INFO] 21:53:43:134 Cpu/(81118:81139): Destrui buffer recibido
+[INFO] 21:53:43:135 Cpu/(81118:81141): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:55:24:733 Cpu/(81281:81281): Listo para escuchar a mi cliente
+[INFO] 21:55:32:075 Cpu/(81281:81281): Conectado con kernel
+[INFO] 21:55:32:107 Cpu/(81281:81281): Handshake con Kernel realizado.
+[INFO] 21:55:32:154 Cpu/(81281:81303): A punto de recibir buffer.
+[INFO] 21:55:32:432 Cpu/(81281:81303): Recibi buffer.
+[INFO] 21:55:32:453 Cpu/(81281:81303): CDE recibido, PC 0
+[INFO] 21:55:32:455 Cpu/(81281:81303): Destrui buffer recibido
+[INFO] 21:55:32:463 Cpu/(81281:81306): Evaluando instruccion Nro: 0  de 0
+[INFO] 21:55:32:465 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 21:55:32:485 Cpu/(81281:81306): Evaluando instruccion Nro: 1  de 0
+[INFO] 21:55:32:516 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 21:55:32:526 Cpu/(81281:81306): Evaluando instruccion Nro: 2  de 0
+[INFO] 21:55:32:526 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 21:55:32:531 Cpu/(81281:81306): Evaluando instruccion Nro: 3  de 0
+[INFO] 21:55:32:532 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 21:55:32:534 Cpu/(81281:81306): Evaluando instruccion Nro: 4  de 0
+[INFO] 21:55:32:543 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 21:55:32:546 Cpu/(81281:81306): Evaluando instruccion Nro: 5  de 0
+[INFO] 21:55:32:547 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 21:55:32:558 Cpu/(81281:81306): Evaluando instruccion Nro: 6  de 0
+[INFO] 21:55:32:558 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 21:55:32:561 Cpu/(81281:81306): Evaluando instruccion Nro: 7  de 0
+[INFO] 21:55:32:561 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 21:55:32:564 Cpu/(81281:81306): Evaluando instruccion Nro: 8  de 0
+[INFO] 21:55:32:564 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 21:55:32:566 Cpu/(81281:81306): Evaluando instruccion Nro: 9  de 0
+[INFO] 21:55:32:567 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 21:55:32:582 Cpu/(81281:81306): Evaluando instruccion Nro: 10  de 0
+[INFO] 21:55:32:582 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 21:55:32:586 Cpu/(81281:81306): Evaluando instruccion Nro: 11  de 0
+[INFO] 21:55:32:586 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 21:55:32:589 Cpu/(81281:81306): Evaluando instruccion Nro: 12  de 0
+[INFO] 21:55:32:590 Cpu/(81281:81306): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 21:55:32:595 Cpu/(81281:81305): A punto de enviar el cde a kernel, PC: 13
+[INFO] 21:55:32:596 Cpu/(81281:81305): Destrui buffer enviado
+[INFO] 21:55:32:615 Cpu/(81281:81305): Envie el cde a kernel
+[INFO] 21:55:32:617 Cpu/(81281:81303): A punto de recibir buffer.
+[INFO] 21:55:32:621 Cpu/(81281:81303): Recibi buffer.
+[INFO] 21:55:32:622 Cpu/(81281:81303): CDE recibido, PC 13
+[INFO] 21:55:32:623 Cpu/(81281:81303): Destrui buffer recibido
+[INFO] 21:55:32:623 Cpu/(81281:81306): Evaluando instruccion Nro: 13  de 0
+[INFO] 21:55:32:623 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 21:55:32:627 Cpu/(81281:81306): Evaluando instruccion Nro: 14  de 0
+[INFO] 21:55:32:627 Cpu/(81281:81306): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 21:55:32:630 Cpu/(81281:81306): Evaluando instruccion Nro: 15  de 0
+[INFO] 21:55:32:631 Cpu/(81281:81306): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 21:55:32:632 Cpu/(81281:81305): A punto de enviar el cde a kernel, PC: 16
+[INFO] 21:55:32:632 Cpu/(81281:81305): Destrui buffer enviado
+[INFO] 21:55:32:632 Cpu/(81281:81305): Envie el cde a kernel
+[INFO] 21:55:32:633 Cpu/(81281:81303): A punto de recibir buffer.
+[INFO] 22:17:23:121 Cpu/(81832:81832): Listo para escuchar a mi cliente
+[INFO] 22:17:36:942 Cpu/(81832:81832): Conectado con kernel
+[INFO] 22:17:36:942 Cpu/(81832:81832): Handshake con Kernel realizado.
+[INFO] 22:17:36:985 Cpu/(81832:81832): AX: 
+[INFO] 22:18:07:303 Cpu/(81931:81931): Listo para escuchar a mi cliente
+[INFO] 22:20:47:514 Cpu/(82051:82051): Listo para escuchar a mi cliente
+[INFO] 22:20:54:423 Cpu/(82051:82051): Conectado con kernel
+[INFO] 22:20:54:423 Cpu/(82051:82051): Handshake con Kernel realizado.
+[INFO] 22:20:54:472 Cpu/(82051:82051): AX: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[INFO] 22:26:08:634 Cpu/(82451:82451): Listo para escuchar a mi cliente
+[INFO] 22:27:03:599 Cpu/(82502:82502): Listo para escuchar a mi cliente
+[INFO] 22:27:09:499 Cpu/(82502:82502): Conectado con kernel
+[INFO] 22:27:09:500 Cpu/(82502:82502): Handshake con Kernel realizado.
+[INFO] 22:27:09:541 Cpu/(82502:82502): AX: xxxx›xxxx›xxxxxxxx,xxxxxxxx‡xxxxxxxx‡xxxxxxxx‡xxxxxxxx‡xxxxxxxxxxxxxxxx
+[INFO] 22:33:44:506 Cpu/(82833:82833): Listo para escuchar a mi cliente
+[INFO] 22:33:52:290 Cpu/(82833:82833): Conectado con kernel
+[INFO] 22:33:52:291 Cpu/(82833:82833): Handshake con Kernel realizado.
+[INFO] 22:34:14:168 Cpu/(82882:82882): Listo para escuchar a mi cliente
+[INFO] 22:35:36:985 Cpu/(82928:82928): Listo para escuchar a mi cliente
+[INFO] 22:35:44:970 Cpu/(82928:82928): Conectado con kernel
+[INFO] 22:35:44:970 Cpu/(82928:82928): Handshake con Kernel realizado.
+[INFO] 22:40:47:248 Cpu/(83138:83138): Listo para escuchar a mi cliente
+[INFO] 22:41:01:997 Cpu/(83138:83138): Conectado con kernel
+[INFO] 22:41:01:998 Cpu/(83138:83138): Handshake con Kernel realizado.
+[INFO] 22:41:02:045 Cpu/(83138:83138): AX: xxxx
+[INFO] 22:44:21:895 Cpu/(83343:83343): Listo para escuchar a mi cliente
+[INFO] 22:44:27:937 Cpu/(83343:83343): Conectado con kernel
+[INFO] 22:44:27:937 Cpu/(83343:83343): Handshake con Kernel realizado.
+[INFO] 22:44:27:982 Cpu/(83343:83343): tamanio:  160
+[INFO] 22:44:27:982 Cpu/(83343:83343): AX: xxxx
+[INFO] 22:45:57:184 Cpu/(83487:83487): Listo para escuchar a mi cliente
+[INFO] 22:46:04:410 Cpu/(83487:83487): Conectado con kernel
+[INFO] 22:46:04:411 Cpu/(83487:83487): Handshake con Kernel realizado.
+[INFO] 22:46:04:415 Cpu/(83487:83522): A punto de recibir buffer.
+[INFO] 22:46:35:301 Cpu/(83487:83522): Recibi buffer.
+[INFO] 12:03:13:374 Cpu/(2443:2443): Listo para escuchar a mi cliente
+[INFO] 12:03:21:158 Cpu/(2443:2443): Conectado con kernel
+[INFO] 12:03:21:160 Cpu/(2443:2443): Handshake con Kernel realizado.
+[INFO] 12:03:21:160 Cpu/(2443:2474): A punto de recibir buffer.
+[INFO] 12:03:40:326 Cpu/(2443:2474): Recibi buffer.
+[INFO] 12:05:09:377 Cpu/(2594:2594): Listo para escuchar a mi cliente
+[INFO] 12:06:00:954 Cpu/(2653:2653): Listo para escuchar a mi cliente
+[INFO] 12:06:07:850 Cpu/(2653:2653): Conectado con kernel
+[INFO] 12:06:07:850 Cpu/(2653:2653): Handshake con Kernel realizado.
+[INFO] 12:06:07:865 Cpu/(2653:2688): A punto de recibir buffer.
+[INFO] 12:06:07:916 Cpu/(2653:2688): Recibi buffer.
+[INFO] 12:06:07:936 Cpu/(2653:2688): CDE recibido, PC 0
+[INFO] 12:06:07:936 Cpu/(2653:2688): Destrui buffer recibido
+[INFO] 12:06:07:937 Cpu/(2653:2691): Evaluando instruccion Nro: 0  de 0
+[INFO] 12:06:07:937 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 12:06:07:944 Cpu/(2653:2691): Evaluando instruccion Nro: 1  de 0
+[INFO] 12:06:07:945 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 12:06:07:952 Cpu/(2653:2691): Evaluando instruccion Nro: 2  de 0
+[INFO] 12:06:07:952 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 12:06:07:955 Cpu/(2653:2691): Evaluando instruccion Nro: 3  de 0
+[INFO] 12:06:07:955 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 12:06:07:957 Cpu/(2653:2691): Evaluando instruccion Nro: 4  de 0
+[INFO] 12:06:07:957 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 12:06:07:958 Cpu/(2653:2691): Evaluando instruccion Nro: 5  de 0
+[INFO] 12:06:07:958 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 12:06:07:962 Cpu/(2653:2691): Evaluando instruccion Nro: 6  de 0
+[INFO] 12:06:07:962 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 12:06:07:972 Cpu/(2653:2691): Evaluando instruccion Nro: 7  de 0
+[INFO] 12:06:07:974 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 12:06:07:977 Cpu/(2653:2691): Evaluando instruccion Nro: 8  de 0
+[INFO] 12:06:07:981 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 12:06:07:988 Cpu/(2653:2691): Evaluando instruccion Nro: 9  de 0
+[INFO] 12:06:07:988 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 12:06:07:990 Cpu/(2653:2691): Evaluando instruccion Nro: 10  de 0
+[INFO] 12:06:08:008 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 12:06:08:017 Cpu/(2653:2691): Evaluando instruccion Nro: 11  de 0
+[INFO] 12:06:08:018 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 12:06:08:028 Cpu/(2653:2691): Evaluando instruccion Nro: 12  de 0
+[INFO] 12:06:08:028 Cpu/(2653:2691): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 12:06:08:028 Cpu/(2653:2690): A punto de enviar el cde a kernel, PC: 13
+[INFO] 12:06:08:028 Cpu/(2653:2690): Envie el cde a kernel
+[INFO] 12:06:08:028 Cpu/(2653:2690): Destrui buffer enviado
+[INFO] 12:06:08:028 Cpu/(2653:2688): A punto de recibir buffer.
+[INFO] 12:06:08:161 Cpu/(2653:2688): Recibi buffer.
+[INFO] 12:06:08:161 Cpu/(2653:2688): CDE recibido, PC 13
+[INFO] 12:06:08:161 Cpu/(2653:2688): Destrui buffer recibido
+[INFO] 12:06:08:161 Cpu/(2653:2691): Evaluando instruccion Nro: 13  de 0
+[INFO] 12:06:08:161 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 12:06:08:164 Cpu/(2653:2691): Evaluando instruccion Nro: 14  de 0
+[INFO] 12:06:08:164 Cpu/(2653:2691): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 12:06:08:168 Cpu/(2653:2691): Evaluando instruccion Nro: 15  de 0
+[INFO] 12:06:08:168 Cpu/(2653:2691): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 12:06:08:168 Cpu/(2653:2690): A punto de enviar el cde a kernel, PC: 16
+[INFO] 12:06:08:169 Cpu/(2653:2690): Envie el cde a kernel
+[INFO] 12:06:08:169 Cpu/(2653:2690): Destrui buffer enviado
+[INFO] 12:06:08:169 Cpu/(2653:2688): A punto de recibir buffer.
+[INFO] 12:09:22:851 Cpu/(2776:2776): Listo para escuchar a mi cliente
+[INFO] 12:09:27:384 Cpu/(2776:2776): Conectado con kernel
+[INFO] 12:09:27:384 Cpu/(2776:2776): Handshake con Kernel realizado.
+[INFO] 12:09:27:399 Cpu/(2776:2810): A punto de recibir buffer.
+[INFO] 12:09:28:572 Cpu/(2776:2810): Recibi buffer.
+[INFO] 12:09:28:572 Cpu/(2776:2810): CDE recibido, PC 0
+[INFO] 12:09:28:572 Cpu/(2776:2810): Destrui buffer recibido
+[INFO] 12:09:28:572 Cpu/(2776:2812): Evaluando instruccion Nro: 0  de 0
+[INFO] 12:09:28:572 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 12:09:28:574 Cpu/(2776:2812): Evaluando instruccion Nro: 1  de 0
+[INFO] 12:09:28:574 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 12:09:28:577 Cpu/(2776:2812): Evaluando instruccion Nro: 2  de 0
+[INFO] 12:09:28:577 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 12:09:28:579 Cpu/(2776:2812): Evaluando instruccion Nro: 3  de 0
+[INFO] 12:09:28:579 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 12:09:28:581 Cpu/(2776:2812): Evaluando instruccion Nro: 4  de 0
+[INFO] 12:09:28:581 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 12:09:28:584 Cpu/(2776:2812): Evaluando instruccion Nro: 5  de 0
+[INFO] 12:09:28:584 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 12:09:28:588 Cpu/(2776:2812): Evaluando instruccion Nro: 6  de 0
+[INFO] 12:09:28:588 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 12:09:28:590 Cpu/(2776:2812): Evaluando instruccion Nro: 7  de 0
+[INFO] 12:09:28:590 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 12:09:28:591 Cpu/(2776:2812): Evaluando instruccion Nro: 8  de 0
+[INFO] 12:09:28:591 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 12:09:28:593 Cpu/(2776:2812): Evaluando instruccion Nro: 9  de 0
+[INFO] 12:09:28:593 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 12:09:28:594 Cpu/(2776:2812): Evaluando instruccion Nro: 10  de 0
+[INFO] 12:09:28:596 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 12:09:28:599 Cpu/(2776:2812): Evaluando instruccion Nro: 11  de 0
+[INFO] 12:09:28:599 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 12:09:28:600 Cpu/(2776:2812): Evaluando instruccion Nro: 12  de 0
+[INFO] 12:09:28:601 Cpu/(2776:2812): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 12:09:28:603 Cpu/(2776:2811): A punto de enviar el cde a kernel, PC: 13
+[INFO] 12:09:28:604 Cpu/(2776:2811): Envie el cde a kernel
+[INFO] 12:09:28:604 Cpu/(2776:2811): Destrui buffer enviado
+[INFO] 12:09:28:604 Cpu/(2776:2810): A punto de recibir buffer.
+[INFO] 12:09:28:649 Cpu/(2776:2810): Recibi buffer.
+[INFO] 12:09:28:649 Cpu/(2776:2810): CDE recibido, PC 13
+[INFO] 12:09:28:649 Cpu/(2776:2810): Destrui buffer recibido
+[INFO] 12:09:28:650 Cpu/(2776:2812): Evaluando instruccion Nro: 13  de 0
+[INFO] 12:09:28:650 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 12:09:28:651 Cpu/(2776:2812): Evaluando instruccion Nro: 14  de 0
+[INFO] 12:09:28:651 Cpu/(2776:2812): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 12:09:28:653 Cpu/(2776:2812): Evaluando instruccion Nro: 15  de 0
+[INFO] 12:09:28:653 Cpu/(2776:2812): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 12:09:28:653 Cpu/(2776:2811): A punto de enviar el cde a kernel, PC: 16
+[INFO] 12:09:28:654 Cpu/(2776:2811): Envie el cde a kernel
+[INFO] 12:09:28:654 Cpu/(2776:2811): Destrui buffer enviado
+[INFO] 12:09:28:654 Cpu/(2776:2810): A punto de recibir buffer.
+[INFO] 12:09:52:750 Cpu/(2776:2810): Recibi buffer.
+[INFO] 12:15:12:709 Cpu/(3019:3019): Listo para escuchar a mi cliente
+[INFO] 12:15:42:094 Cpu/(3019:3019): Conectado con kernel
+[INFO] 12:15:42:094 Cpu/(3019:3019): Handshake con Kernel realizado.
+[INFO] 12:15:42:108 Cpu/(3019:3055): A punto de recibir buffer.
+[INFO] 12:15:54:944 Cpu/(3019:3055): Recibi buffer.
+[INFO] 12:15:54:945 Cpu/(3019:3055): CDE recibido, PC 0
+[INFO] 12:15:54:945 Cpu/(3019:3055): Destrui buffer recibido
+[INFO] 12:15:54:945 Cpu/(3019:3057): Evaluando instruccion Nro: 0  de 0
+[INFO] 12:15:54:946 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( AX , AAAA )
+[INFO] 12:15:54:956 Cpu/(3019:3057): Evaluando instruccion Nro: 1  de 0
+[INFO] 12:15:54:957 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( BX , BBBB )
+[INFO] 12:15:54:958 Cpu/(3019:3057): Evaluando instruccion Nro: 2  de 0
+[INFO] 12:15:54:958 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( CX , CCCC )
+[INFO] 12:15:54:960 Cpu/(3019:3057): Evaluando instruccion Nro: 3  de 0
+[INFO] 12:15:54:960 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( DX , DDDD )
+[INFO] 12:15:54:966 Cpu/(3019:3057): Evaluando instruccion Nro: 4  de 0
+[INFO] 12:15:54:974 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EAX , AAAAAAAA )
+[INFO] 12:15:54:975 Cpu/(3019:3057): Evaluando instruccion Nro: 5  de 0
+[INFO] 12:15:54:976 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EBX , BBBBBBBB )
+[INFO] 12:15:54:977 Cpu/(3019:3057): Evaluando instruccion Nro: 6  de 0
+[INFO] 12:15:54:977 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( ECX , CCCCCCCC )
+[INFO] 12:15:54:980 Cpu/(3019:3057): Evaluando instruccion Nro: 7  de 0
+[INFO] 12:15:54:980 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( EDX , DDDDDDDD )
+[INFO] 12:15:54:988 Cpu/(3019:3057): Evaluando instruccion Nro: 8  de 0
+[INFO] 12:15:54:988 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , AAAAAAAAAAAAAAAA )
+[INFO] 12:15:54:992 Cpu/(3019:3057): Evaluando instruccion Nro: 9  de 0
+[INFO] 12:15:54:992 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , BBBBBBBBBBBBBBBB )
+[INFO] 12:15:55:001 Cpu/(3019:3057): Evaluando instruccion Nro: 10  de 0
+[INFO] 12:15:55:004 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RCX , CCCCCCCCCCCCCCCC )
+[INFO] 12:15:55:023 Cpu/(3019:3057): Evaluando instruccion Nro: 11  de 0
+[INFO] 12:15:55:023 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RDX , DDDDDDDDDDDDDDDD )
+[INFO] 12:15:55:036 Cpu/(3019:3057): Evaluando instruccion Nro: 12  de 0
+[INFO] 12:15:55:037 Cpu/(3019:3057): PID: 0 - EJECUTANDO : YIELD - PARAMETROS: ()
+[INFO] 12:15:55:037 Cpu/(3019:3056): A punto de enviar el cde a kernel, PC: 13
+[INFO] 12:15:55:037 Cpu/(3019:3056): Envie el cde a kernel
+[INFO] 12:15:55:037 Cpu/(3019:3056): Destrui buffer enviado
+[INFO] 12:15:55:039 Cpu/(3019:3055): A punto de recibir buffer.
+[INFO] 12:15:55:039 Cpu/(3019:3055): Recibi buffer.
+[INFO] 12:15:55:039 Cpu/(3019:3055): CDE recibido, PC 13
+[INFO] 12:15:55:039 Cpu/(3019:3055): Destrui buffer recibido
+[INFO] 12:15:55:039 Cpu/(3019:3057): Evaluando instruccion Nro: 13  de 0
+[INFO] 12:15:55:039 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RAX , TCHOUAMENIAFUERA )
+[INFO] 12:15:55:041 Cpu/(3019:3057): Evaluando instruccion Nro: 14  de 0
+[INFO] 12:15:55:041 Cpu/(3019:3057): PID: 0 - EJECUTANDO : SET - PARAMETROS: ( RBX , SEGUNDO_FRANCIA_ )
+[INFO] 12:15:55:052 Cpu/(3019:3057): Evaluando instruccion Nro: 15  de 0
+[INFO] 12:15:55:052 Cpu/(3019:3057): PID: 0 - EJECUTANDO : EXIT - PARAMETROS: ()
+[INFO] 12:15:55:052 Cpu/(3019:3056): A punto de enviar el cde a kernel, PC: 16
+[INFO] 12:15:55:052 Cpu/(3019:3056): Envie el cde a kernel
+[INFO] 12:15:55:052 Cpu/(3019:3056): Destrui buffer enviado
+[INFO] 12:15:55:052 Cpu/(3019:3055): A punto de recibir buffer.
+[INFO] 12:20:58:680 Cpu/(3019:3055): Recibi buffer.
