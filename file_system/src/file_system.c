@@ -33,30 +33,45 @@ int escribirArchivo(char* nombre, int pos, int size, void*datos){
 				void * bloque_destino;
 				if(nro_bloque == 0){
 						bloque_destino =archivobloques_pointer +seleccionado->direct_pointer*superbloque.block_size+start_pos.rem;
+						usleep(config_file_system.retardo_acceso_bloque);
 						memcpy(bloque_destino,datos,tam_escrito);
 						offset=offset+tam_escrito;
 						tam_restante = size- tam_escrito;
+					    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_destino,tam_escrito);
 
 					}
 				void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
-					uint32_t* destination = (uint32_t*)bloque_punteros;
+				uint32_t* destination = (uint32_t*)bloque_punteros;
 					if(nro_bloque>0){
+						usleep(config_file_system.retardo_acceso_bloque);
 						bloque_destino =archivobloques_pointer +destination[nro_bloque]*superbloque.block_size+start_pos.rem;
+						usleep(config_file_system.retardo_acceso_bloque);
 						memcpy(bloque_destino,datos,tam_escrito);
 						offset=offset+tam_escrito;
 						tam_restante = size- tam_escrito;
+					    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_destino,tam_escrito);
 					}
 					if(tam_restante>0){
 							int bloques_restantes= tam_restante/superbloque.block_size;
 								  for(int i = nro_bloque;i<bloques_restantes;i++){
+									usleep(config_file_system.retardo_acceso_bloque);
 									  bloque_destino =archivobloques_pointer +destination[i]*superbloque.block_size;
+										usleep(config_file_system.retardo_acceso_bloque);
 									  memcpy(bloque_destino,datos+offset,superbloque.block_size);
 									  offset=offset+superbloque.block_size;
 									  tam_restante=tam_restante-superbloque.block_size;
+									    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,i,bloque_destino,superbloque.block_size);
+
 								  }
+									usleep(config_file_system.retardo_acceso_bloque);
 								  bloque_destino =archivobloques_pointer +destination[bloques_restantes]*superbloque.block_size;
+									usleep(config_file_system.retardo_acceso_bloque);
 								  memcpy(bloque_destino,datos+offset,tam_restante);
+								    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,bloques_restantes+1,bloque_destino,tam_restante);
+
 						}
+					int sync = msync(archivobloques_pointer, archivobloques_size, MS_SYNC);
+					if(sync == -1) printf("Error syncing archivobloques");
 				return 0;
 			} else return -1;
 
@@ -75,31 +90,47 @@ void * leerArchivo(char* nombre, int pos, int size){
 	int tam_leido = superbloque.block_size - start_pos.rem;
 	void * bloque_leido;
 	if(nro_bloque == 0){
+		usleep(config_file_system.retardo_acceso_bloque);
 		bloque_leido =archivobloques_pointer +seleccionado->direct_pointer*superbloque.block_size+start_pos.rem;
+		usleep(config_file_system.retardo_acceso_bloque);
 		memcpy(leido,bloque_leido,tam_leido);
 		offset=offset+tam_leido;
 		tam_restante = size- tam_leido;
+	    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_leido,tam_leido);
 
 	}
 	void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
 	uint32_t* destination = (uint32_t*)bloque_punteros;
 	if(nro_bloque>0){
+		usleep(config_file_system.retardo_acceso_bloque);
 		bloque_leido =archivobloques_pointer +destination[nro_bloque]*superbloque.block_size+start_pos.rem;
+		usleep(config_file_system.retardo_acceso_bloque);
 		memcpy(leido,bloque_leido,tam_leido);
 		offset=offset+tam_leido;
 		tam_restante = size- tam_leido;
+	    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_leido,tam_leido);
 	}
 	if(tam_restante>0){
 		int bloques_restantes= tam_restante/superbloque.block_size;
 			  for(int i = nro_bloque;i<bloques_restantes;i++){
+				usleep(config_file_system.retardo_acceso_bloque);
 				  bloque_leido =archivobloques_pointer +destination[i]*superbloque.block_size;
+					usleep(config_file_system.retardo_acceso_bloque);
 				  memcpy(leido+offset,bloque_leido,superbloque.block_size);
 				  offset=offset+superbloque.block_size;
 				  tam_restante=tam_restante-superbloque.block_size;
+				    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_leido,superbloque.block_size);
+
 			  }
+				usleep(config_file_system.retardo_acceso_bloque);
 			  bloque_leido =archivobloques_pointer +destination[bloques_restantes]*superbloque.block_size;
+				usleep(config_file_system.retardo_acceso_bloque);
 			  memcpy(leido+offset,bloque_leido,tam_restante);
+			    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,bloques_restantes+1,bloque_leido,tam_restante);
+
 	}
+	int sync = msync(archivobloques_pointer, archivobloques_size, MS_SYNC);
+	if(sync == -1) printf("Error syncing archivobloques");
 	return leido;
 	}
 	else return -1;
@@ -109,20 +140,27 @@ void * leerArchivo(char* nombre, int pos, int size){
 uint32_t bloqueLibre(){
 	uint32_t offset=-1;
 	for(uint32_t i = 0;i<bitarray_size;i++){
-			if(bitarray_test_bit(bitarray,i)==1){
-				bitarray_clean_bit(bitarray,i);
+			if(bitarray_test_bit(bitarray,i)==0){
+				bitarray_set_bit(bitarray,i);
 				offset = i;
 				i= bitarray_size;
 			}
 			}
+	int sync = msync(bitarray_pointer, bitarray_size, MS_SYNC);
+	if(sync == -1) printf("Error syncing bitarray");
+    log_info(logger,"Acceso a Bitmap - Bloque: %d - Estado: %d", offset,1);
 	return offset;
 }
 
 //libera bloque del bitarray
 int liberarBloque(uint32_t bit){
 	if(bitarray_test_bit(bitarray,bit)==0) {
-		bitarray_set_bit(bitarray,bit);
+		bitarray_clean_bit(bitarray,bit);
 	}
+	int sync = msync(bitarray_pointer, bitarray_size, MS_SYNC);
+	if(sync == -1) printf("Error syncing bitarray");
+    log_info(logger,"Acceso a Bitmap - Bloque: %d - Estado: %d", bit,0);
+
 	return 0;
 }
 
@@ -188,6 +226,7 @@ int truncarArchivo(char* nombre, int size){
 	       fprintf(fcb_file, "PUNTERO_INDIRECTO=%u\n", seleccionado->indirect_pointer);
 	       fclose(fcb_file);
 	list_add(fcb_list,seleccionado);
+    log_info(logger,"Truncar Archivo: %s - Tamaño: %d", nombre,size);
 	return 0;
 	}
 
@@ -252,7 +291,7 @@ int crearEstructuras(){
 	    size_t num_bytes = superbloque.block_count / 8;
 	    unsigned char* buffer = (unsigned char*)malloc(num_bytes);
 	    for (size_t i = 0; i < num_bytes; i++) {
-	           buffer[i] = 0xFF;
+	           buffer[i] = 0x00;
 	       }
 	    fwrite(buffer, sizeof(unsigned char), num_bytes, bitarray_file);
 	    free(buffer);

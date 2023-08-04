@@ -203,3 +203,61 @@
 [INFO] 20:43:06:305 FileSystem/(28125:28125): Abrir Archivo: hola
 [INFO] 20:43:47:352 FileSystem/(28170:28170): Estructuras creadas
 [INFO] 20:43:48:127 FileSystem/(28170:28170): Abrir Archivo: hola
+[INFO] 14:11:05:657 FileSystem/(36943:36943): Estructuras creadas
+[INFO] 14:11:07:513 FileSystem/(36943:36943): Abrir Archivo: hola
+[INFO] 14:11:08:395 FileSystem/(36943:36943): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:11:48:793 FileSystem/(36943:36943): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:13:16:984 FileSystem/(37187:37187): Estructuras creadas
+[INFO] 14:13:17:816 FileSystem/(37187:37187): Abrir Archivo: hola
+[INFO] 14:13:19:076 FileSystem/(37187:37187): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:13:19:920 FileSystem/(37187:37187): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:13:19:952 FileSystem/(37187:37187): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:13:40:659 FileSystem/(37187:37187): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:13:40:690 FileSystem/(37187:37187): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:13:46:101 FileSystem/(37187:37187): Estructuras terminadas
+[INFO] 14:15:35:614 FileSystem/(37333:37333): Estructuras creadas
+[INFO] 14:15:36:104 FileSystem/(37333:37333): Abrir Archivo: hola
+[INFO] 14:15:36:453 FileSystem/(37333:37333): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:15:36:748 FileSystem/(37333:37333): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:15:36:779 FileSystem/(37333:37333): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:15:38:026 FileSystem/(37333:37333): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:15:38:057 FileSystem/(37333:37333): Escribir Archivo: hola - Puntero: 0 - Memoria: (nil) - Tamaño: 36
+[INFO] 14:15:38:264 FileSystem/(37333:37333): Estructuras terminadas
+[INFO] 14:18:02:884 FileSystem/(37585:37585): Estructuras creadas
+[INFO] 14:18:03:203 FileSystem/(37585:37585): Abrir Archivo: hola
+[INFO] 14:18:03:526 FileSystem/(37585:37585): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:18:03:741 FileSystem/(37585:37585): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:18:03:772 FileSystem/(37585:37585): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:18:04:382 FileSystem/(37585:37585): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:18:04:416 FileSystem/(37585:37585): Escribir Archivo: hola - Puntero: 0 - Memoria: (nil) - Tamaño: 36
+[INFO] 14:27:01:239 FileSystem/(37748:37748): Estructuras creadas
+[INFO] 14:27:01:721 FileSystem/(37748:37748): Abrir Archivo: hola
+[INFO] 14:27:02:058 FileSystem/(37748:37748): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:27:02:325 FileSystem/(37748:37748): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:27:02:356 FileSystem/(37748:37748): Leer Archivo: hola - Puntero: 1 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:27:03:723 FileSystem/(37748:37748): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:27:03:754 FileSystem/(37748:37748): Escribir Archivo: hola - Puntero: 1 - Memoria: (nil) - Tamaño: 36
+[INFO] 14:29:11:912 FileSystem/(37840:37840): Estructuras creadas
+[INFO] 14:29:12:113 FileSystem/(37840:37840): Abrir Archivo: hola
+[INFO] 14:29:12:278 FileSystem/(37840:37840): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:29:12:650 FileSystem/(37840:37840): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:29:12:682 FileSystem/(37840:37840): Leer Archivo: hola - Puntero: 1 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:29:13:180 FileSystem/(37840:37840): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:29:13:212 FileSystem/(37840:37840): Escribir Archivo: hola - Puntero: 1 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:29:13:380 FileSystem/(37840:37840): Estructuras terminadas
+[INFO] 14:32:32:842 FileSystem/(38111:38111): Estructuras creadas
+[INFO] 14:32:33:116 FileSystem/(38111:38111): Abrir Archivo: hola
+[INFO] 14:32:33:387 FileSystem/(38111:38111): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:32:33:634 FileSystem/(38111:38111): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:32:33:664 FileSystem/(38111:38111): Leer Archivo: hola - Puntero: 1 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:32:34:325 FileSystem/(38111:38111): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:32:34:355 FileSystem/(38111:38111): Escribir Archivo: hola - Puntero: 1 - Memoria: 0x7ffff79714c0 - Tamaño: 36
+[INFO] 14:32:34:579 FileSystem/(38111:38111): Estructuras terminadas
+[INFO] 14:33:41:286 FileSystem/(38222:38222): Estructuras creadas
+[INFO] 14:33:41:497 FileSystem/(38222:38222): Abrir Archivo: hola
+[INFO] 14:33:41:751 FileSystem/(38222:38222): Truncar Archivo: hola - Tamaño: 100
+[INFO] 14:33:41:993 FileSystem/(38222:38222): Leer Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:33:42:026 FileSystem/(38222:38222): Leer Archivo: hola - Puntero: 1 - Memoria: 0x7ffff7971000 - Tamaño: 36
+[INFO] 14:33:42:978 FileSystem/(38222:38222): Escribir Archivo: hola - Puntero: 0 - Memoria: 0x7ffff797145e - Tamaño: 34
+[INFO] 14:33:43:010 FileSystem/(38222:38222): Escribir Archivo: hola - Puntero: 1 - Memoria: 0x7ffff7971000 - Tamaño: 36
+[INFO] 14:33:43:259 FileSystem/(38222:38222): Estructuras terminadas
