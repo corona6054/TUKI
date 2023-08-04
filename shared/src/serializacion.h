@@ -24,12 +24,6 @@
 
 // STRUCTS NECESARIOS ------------------------------------------------------
 
-typedef enum{
-	SUCCESS,
-	SEG_FAULT,
-	INVALID_RESOURCE,
-	OUT_OF_MEMORY,
-}motivo_exit;
 
 typedef enum
 {
@@ -43,12 +37,20 @@ typedef enum
 
     CONTEXTO_DE_EJECUCION,
 
+    SEGMENTATION_FAULT,
+    SOLICITUD_MOVE_IN,
+    RTA_MOVE_IN,
+    SOLICITUD_MOVE_OUT,
+    RTA_MOVE_OUT,
+
+
 	SOLICITUD_INICIO_PROCESO_MEMORIA, // aviso a memoria para que inicialice las estructuras del proceso
     INICIO_EXITOSO_PROCESO_MEMORIA,
     INICIO_FALLIDO_PROCESO_MEMORIA,
     SOLICITUD_CREATE_SEGMENT,
     CREATE_SEGMENT_EXITOSO,
     CREATE_SEGMENT_FALLIDO,
+    CREATE_SEGMENT_COMPACTACION,
     SOLICITUD_DELETE_SEGMENT,
     DELETE_SEGMENT_EXITOSO,
     DELETE_SEGMENT_FALLIDO,
@@ -113,7 +115,7 @@ typedef struct{
 typedef struct{
 	uint32_t id;
 	uint32_t direccion_base;
-	uint32_t tamanio_segmentos;
+	uint32_t tamanio_segmento;
 }t_segmento;
 
 
@@ -122,7 +124,7 @@ typedef struct{
     t_list* lista_de_instrucciones;
     uint32_t program_counter;
 	t_registros registros_cpu;
-	t_list* tabla_segmentos;
+	t_list* tabla_segmentos; // tabla de t_segmento
 }t_cde;
 
 typedef struct{

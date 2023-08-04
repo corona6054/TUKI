@@ -214,8 +214,8 @@ void manejar_conexion_con_memoria(){
 	/*
 	pthread_t recepcion_mensaje;
 	pthread_create(&recepcion_mensaje, NULL, (void*) recibir_mensaje_de_memoria, NULL);
-	pthread_detach(recepcion_mensaje);
-	*/
+	pthread_detach(recepcion_mensaje);*/
+	
 }
 
 void manejar_conexion_con_cpu(){
@@ -352,13 +352,14 @@ void enviar_cde_a_cpu(){
 
 		t_buffer* buffer = recibir_buffer(socket_memoria);
 
-		switch(buffer->codigo){	
-				case INICIAR:
-					recibir_asdfas_();
-				break;
+		switch(buffer->codigo){
+
+				default:
+					log_info(logger, "Codigo recibido de memoria no reconocido (DEFAULT)");
+					break;
+
 		}
 
-		sem_post(&recepcion_exitosa_de_memoria);
 	}
 }*/
 
@@ -373,12 +374,17 @@ t_list* recibir_tabla_segmentos_inicial(uint32_t pid){
 	
 	buffer = recibir_buffer(socket_memoria);
 	log_info(logger, "Buffer recibido");
-	t_list* tabla_inicial = buffer_read_tabla_segmentos(buffer);
-	log_info(logger, "Buffer recibido");
+	if(buffer->codigo == INICIO_EXITOSO_PROCESO_MEMORIA){
+		t_list* tabla_inicial = buffer_read_tabla_segmentos(buffer);
+		log_info(logger, "Buffer recibido");
+		destruir_buffer_nuestro(buffer);
+		return tabla_inicial;
+	}
+	else{
+		log_info(logger, "Error al inciar procesos en memoria");
+		destruir_buffer_nuestro(buffer);
+	}
 
-
-	destruir_buffer_nuestro(buffer);
-	return tabla_inicial;
 }
 
 
@@ -647,8 +653,9 @@ int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb){
 		recurso->instancias_disponibles++;
 		sacar_recurso(pcb -> recursos_asignados, nombre_recurso_a_liberar);
 		
-		// En caso de que corresponda, desbloquea al primer proceso de la cola de bloqueados de ese recurso
-		if(recurso->instancias_disponibles < 0){
+		// El igual va ya que si era (-1), con el ++ de arriba lo transforme en 0 y
+		// => hay un recurso que estaba solicito el proceso que se libero
+		if(recurso->instancias_disponibles <= 0){
 			t_pcb* pcb_a_desbloquear = queue_pop(recurso -> cola_de_espera);
 			asignar_instancia_recurso(nombre_recurso_a_liberar, pcb_a_desbloquear);
 			enviar_de_pseudoblock_a_ready(pcb_a_desbloquear);
@@ -657,7 +664,7 @@ int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb){
 	}
 }
 
-int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar){
+void sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar){
 	for(int i = 0; i < list_size(recursos_asignados); i++){
 		char* recurso = list_get(recursos_asignados, i);
 		if(strcmp(recurso, recurso_a_sacar) == 0){
@@ -842,6 +849,12 @@ void evaluar_instruccion(){
 		case F_SEEK:
 			break;
 		case CREATE_SEGMENT:
+			// Se mantiene el proc en exec
+			enviar_solicitud_create_segment(instruccion_actual);
+			analizar_respuesta_create_segment();
+			break;
+		case DELETE_SEGMENT:
+			enviar_solicitud_delete_segment(instruccion_actual);
 			break;
 		case IO:
 			log_info(logger,"PID: %d - Bloqueado por: %s", pcb_en_ejecucion->cde->pid, "IO");
@@ -879,8 +892,6 @@ void evaluar_instruccion(){
 			break;
 		case F_CLOSE:
 			break;
-		case DELETE_SEGMENT:
-			break;
 		case YIELD:
 			enviar_de_exec_a_ready();
 			break;
@@ -890,6 +901,71 @@ void evaluar_instruccion(){
 		default:
 			log_info(logger, "Error: Instruccion no reconocida.");
 			break;
+	}
+}
+
+void enviar_solicitud_create_segment(t_instruction* instruccion){
+	// Enviar solicitud
+	t_buffer* buffer = crear_buffer_nuestro();
+	buffer->codigo = SOLICITUD_CREATE_SEGMENT; // le envio el pid, el segm_id y el tam del seg
+	buffer_write_uint32(buffer, pcb_en_ejecucion->cde->pid);
+	buffer_write_uint32(buffer, instruccion->numero1); // segm_id
+	buffer_write_uint32(buffer, instruccion->numero2); // tam_segm
+	
+	enviar_buffer(buffer, socket_memoria);
+
+	destruir_buffer_nuestro(buffer);
+}
+
+void analizar_respuesta_create_segment(){
+	t_buffer* buffer_recibido = recibir_buffer(socket_memoria);
+	switch (buffer_recibido->codigo){
+	case CREATE_SEGMENT_EXITOSO:
+		t_segmento* segm_a_agregar = buffer_read_segmento(buffer_recibido);
+		destruir_buffer_nuestro(buffer_recibido);
+		list_add(pcb_en_ejecucion->cde->tabla_segmentos, segm_a_agregar);
+		log_info(logger, "PID: %d - Crear Segmento - Id: %d - Tamaño: %d", pcb_en_ejecucion->cde->pid, segm_a_agregar->id, segm_a_agregar->direccion_base);
+		log_info(logger, "recibi de memoria un segmento de base %d", segm_a_agregar->direccion_base);
+		break;
+	case CREATE_SEGMENT_COMPACTACION:
+		// Validar que no haya operaciones ejecutando entre FS y memoria
+
+		break;
+	case CREATE_SEGMENT_FALLIDO:
+		// por out of memory entonces se va a exit
+		enviar_de_exec_a_exit("Out of memory");
+		destruir_buffer_nuestro(buffer_recibido);
+		break;
+	default:
+		log_info(logger, "analizar_respuesta_create_segment entro en default");
+		break;
+	}
+}
+
+void enviar_solicitud_delete_segment(t_instruction* instruccion){
+	// Enviar solicitud
+	t_buffer* buffer = crear_buffer_nuestro();
+	buffer->codigo = SOLICITUD_DELETE_SEGMENT; 
+	// le envio el pid del procesos q tiene q eliminar un segm y el id del segmento a eliminar de ese proceso
+	buffer_write_uint32(buffer, pcb_en_ejecucion->cde->pid);
+	buffer_write_uint32(buffer, instruccion->numero1);
+	
+	enviar_buffer(buffer, socket_memoria);
+
+	destruir_buffer_nuestro(buffer);
+}
+
+void analizar_respuesta_delete_segment(){
+	t_buffer* buffer_recibido = recibir_buffer(socket_memoria);
+	switch (buffer_recibido->codigo){
+		case DELETE_SEGMENT_EXITOSO:
+			pcb_en_ejecucion->cde->tabla_segmentos = buffer_read_tabla_segmentos(buffer_recibido);
+			break;
+		case DELETE_SEGMENT_FALLIDO:
+			log_info(logger, "Delete segment fallido");
+			break;
+		default:
+			log_info(logger, "Entre a default en analizar_respuesta_delete_segment");
 	}
 }
 

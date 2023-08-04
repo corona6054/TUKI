@@ -9,6 +9,12 @@ t_registros inicializar_registros(){
 		registros.CX[i] = 'x';
 		registros.DX[i] = 'x';
 	}
+
+	registros.AX[4] = '\0';
+	registros.BX[4] = '\0';
+	registros.CX[4] = '\0';
+	registros.DX[4] = '\0';
+
 	
 	for(int i=0;i<8;i++){
 		registros.EAX[i] = 'x';
@@ -16,6 +22,11 @@ t_registros inicializar_registros(){
 		registros.ECX[i] = 'x';
 		registros.EDX[i] = 'x';
 	}
+	registros.EAX[8] = '\0';
+	registros.EBX[8] = '\0';
+	registros.ECX[8] = '\0';
+	registros.EDX[8] = '\0';
+
 
 	for(int i=0;i<16;i++){
 		registros.RAX[i] = 'x';
@@ -23,16 +34,31 @@ t_registros inicializar_registros(){
 		registros.RCX[i] = 'x';
 		registros.RDX[i] = 'x';
 	}
+	registros.RAX[16] = '\0';
+	registros.RBX[16] = '\0';
+	registros.RCX[16] = '\0';
+	registros.RDX[16] = '\0';
 
 	return registros;
 }
 
+
 int main(void){
 	levantar_modulo();
 
-	iniciar_modulo();
+	cde_en_ejecucion = malloc(sizeof(t_cde));
+	cde_en_ejecucion->pid = 10;
+	cde_en_ejecucion->registros_cpu = inicializar_registros();
+	
+	ejecutar_set("AX", "HOLA");
+	log_info(logger, "AX: %s", cde_en_ejecucion->registros_cpu.AX);
 
+	ejecutar_move_out("AX",150);
+	log_info(logger, "Ya ejecute el move_out");
 
+	ejecutar_move_in("BX",150);
+	log_info(logger, "BX: %s", cde_en_ejecucion->registros_cpu.BX);
+	//iniciar_modulo();
 	while(1);
 	return 0;
 }
@@ -126,7 +152,19 @@ void establecer_conexiones(){
 	pthread_create(&conexion_memoria, NULL, (void *) conectarse_con_memoria, NULL);
 	pthread_detach(conexion_memoria);
 	*/
-
+	socket_memoria = crear_conexion(config_cpu.ip_memoria, config_cpu.puerto_memoria);
+	if (socket_memoria >= 0){
+		log_info(logger,"Conectado con MEMORIA");
+		enviar_handshake(socket_memoria);
+		if (recibir_handshake(socket_memoria) == HANDSHAKE){
+			log_info(logger, "Handshake con MEMORIA realizado.");
+		}else
+			log_info(logger, "Ocurio un error al realizar el handshake con MEMORIA.");
+	}
+	else
+		log_info(logger,"Error al conectar con MEMORIA");
+	
+	/*
 	server_fd = iniciar_servidor(logger,config_cpu.puerto_escucha);
 
 	kernel_fd = esperar_cliente(server_fd, logger);
@@ -140,6 +178,7 @@ void establecer_conexiones(){
 		}
 	}else
 		log_info(logger, "Error al conectar con kernel");
+	*/
 }
 
 void recibir_cde(){
@@ -193,18 +232,36 @@ void evaluar_instruccion(t_instruction* instruccion){
 	switch(instruccion->instruccion){
 		case SET:
 			log_info(logger, "PID: %d - EJECUTANDO : SET - PARAMETROS: ( %s , %s )", cde_en_ejecucion->pid, instruccion->string1, instruccion->string2);
-			ejecutar_set(instruccion->string1,instruccion->string2, cde_en_ejecucion->registros_cpu);			
+			ejecutar_set(instruccion->string1,instruccion->string2);			
 			sem_post(&leer_siguiente_instruccion);
 		break;
 		case MOV_IN:
 			log_info(logger, "PID: %d - EJECUTANDO : MOVE IN - PARAMETROS: ( %s , %d )", cde_en_ejecucion->pid, instruccion->string1, instruccion->numero1);
-			ejecutar_move_in(instruccion->string1, instruccion->numero1);			
-			sem_post(&leer_siguiente_instruccion);
+			switch(analizar_mov_in_o_out(instruccion->string1, instruccion->numero1)){
+				case PUEDE_EJECUTAR:
+					ejecutar_move_in(instruccion->string1, instruccion->numero1);			
+					sem_post(&leer_siguiente_instruccion);
+					break;
+				case SEGM_FAULT:
+					op_code segm_fault_mov_in = SEGMENTATION_FAULT;
+					enviar_codigo(kernel_fd, segm_fault_mov_in);
+					sem_post(&necesito_enviar_cde);
+					break;
+			}
 		break;
 		case MOV_OUT:
 			log_info(logger, "PID: %d - EJECUTANDO : MOVE OUT - PARAMETROS: ( %d , %s )", cde_en_ejecucion->pid, instruccion->numero1, instruccion->string1);
-			ejecutar_move_out(instruccion->string1, instruccion->numero1);
-			sem_post(&leer_siguiente_instruccion);
+			switch(analizar_mov_in_o_out(instruccion->string1, instruccion->numero1)){
+				case PUEDE_EJECUTAR:
+					ejecutar_move_out(instruccion->string1, instruccion->numero1);		
+					sem_post(&leer_siguiente_instruccion);
+					break;
+				case SEGM_FAULT:
+					op_code segm_fault_mov_out = SEGMENTATION_FAULT;
+					enviar_codigo(kernel_fd, segm_fault_mov_out);
+					sem_post(&necesito_enviar_cde);
+					break;
+			}
 		break;
 		case YIELD:
 			log_info(logger, "PID: %d - EJECUTANDO : YIELD - PARAMETROS: (%s)", cde_en_ejecucion->pid, instruccion->string1);
@@ -261,7 +318,6 @@ void evaluar_instruccion(t_instruction* instruccion){
 		break;
 		case CREATE_SEGMENT:
 			log_info(logger, "PID: %d - EJECUTANDO : CREATE_SEGMENT - PARAMETROS: ()", cde_en_ejecucion->pid);
-
 			sem_post(&necesito_enviar_cde);
 		break;
 		case DELETE_SEGMENT:
@@ -275,23 +331,53 @@ void evaluar_instruccion(t_instruction* instruccion){
 
 
 // UTILS INSTRUCCIONES (PARTICULAR) -----------------------------------------------------
-void ejecutar_set(char* registro, char* valor, t_registros registros){
-	usleep(config_cpu.retardo);
-	if (strcmp(registro,"AX") == 0)  {strcpy(registros.AX, valor);}
-	if (strcmp(registro,"BX") == 0)  {strcpy(registros.BX, valor);}
-	if (strcmp(registro,"CX") == 0)  {strcpy(registros.CX, valor);}
-	if (strcmp(registro,"DX") == 0)  {strcpy(registros.DX, valor);}
-	if (strcmp(registro,"EAX") == 0) {strcpy(registros.EAX, valor);}
-	if (strcmp(registro,"EBX") == 0) {strcpy(registros.EBX, valor);}
-	if (strcmp(registro,"ECX") == 0) {strcpy(registros.ECX, valor);}
-	if (strcmp(registro,"EDX") == 0) {strcpy(registros.EDX, valor);}
-	if (strcmp(registro,"RAX") == 0) {strcpy(registros.RAX, valor);}
-	if (strcmp(registro,"RBX") == 0) {strcpy(registros.RBX, valor);}
-	if (strcmp(registro,"ECX") == 0) {strcpy(registros.RCX, valor);}
-	if (strcmp(registro,"RDX") == 0) {strcpy(registros.RDX, valor);}
+Rta_mov_in_o_out analizar_mov_in_o_out(char* registro, uint32_t dir_logica){
+	
+	int num_seg = floor(dir_logica / config_cpu.tam_max_segmento);
+	
+	t_segmento* segm = encontrar_segmento_por_id(cde_en_ejecucion->tabla_segmentos, num_seg); 
+	int desplaz_segmento = dir_logica % segm->tamanio_segmento;
+
+	int tamanio_reg = tamanioRegistro(registro);
+
+	if(desplaz_segmento + tamanio_reg > segm->tamanio_segmento){
+		log_info(logger, "PID: %d - Error SEG_FAULT- Segmento: %d - Offset: %d - Tamanio: %d", cde_en_ejecucion->pid, num_seg, desplaz_segmento, segm->tamanio_segmento);
+		return SEGM_FAULT;
+	}
+	
+	return PUEDE_EJECUTAR;
 }
 
-int tamanioRegistro(char* registro){
+
+void ejecutar_set(char* registro, char* valor){
+	usleep(config_cpu.retardo);
+	if (strcmp(registro,"AX") == 0)  
+		strcpy(cde_en_ejecucion->registros_cpu.AX, valor);
+	if (strcmp(registro,"BX") == 0)  
+		strcpy(cde_en_ejecucion->registros_cpu.BX, valor);
+	if (strcmp(registro,"CX") == 0)  
+		strcpy(cde_en_ejecucion->registros_cpu.CX, valor);
+	if (strcmp(registro,"DX") == 0)  
+		strcpy(cde_en_ejecucion->registros_cpu.DX, valor);
+	if (strcmp(registro,"EAX") == 0) 
+		strcpy(cde_en_ejecucion->registros_cpu.EAX, valor);
+	if (strcmp(registro,"EBX") == 0) 
+		strcpy(cde_en_ejecucion->registros_cpu.EBX, valor);
+	if (strcmp(registro,"ECX") == 0) 
+		strcpy(cde_en_ejecucion->registros_cpu.ECX, valor);
+	if (strcmp(registro,"EDX") == 0) 
+		strcpy(cde_en_ejecucion->registros_cpu.EDX, valor);
+	if (strcmp(registro,"RAX") == 0) 
+		strcpy(cde_en_ejecucion->registros_cpu.RAX, valor);
+	if (strcmp(registro,"RBX") == 0) 
+		strcpy(cde_en_ejecucion->registros_cpu.RBX, valor);
+	if (strcmp(registro,"ECX") == 0) 
+		strcpy(cde_en_ejecucion->registros_cpu.RCX, valor);
+	if (strcmp(registro,"RDX") == 0)
+		strcpy(cde_en_ejecucion->registros_cpu.RDX, valor);
+}
+
+uint32_t tamanioRegistro(char* registro){
 	if(strcmp(registro,"AX") == 0 || strcmp(registro,"BX") == 0 || strcmp(registro,"CX") == 0 || strcmp(registro,"DX") == 0)
 		return 4;
 	else if(strcmp(registro,"EAX") == 0 || strcmp(registro,"EBX") == 0 || strcmp(registro,"ECX") == 0 || strcmp(registro,"EDX") == 0)
@@ -301,43 +387,110 @@ int tamanioRegistro(char* registro){
 	else return -1;
 }
 
-int calcular_dir_fisica(int dir_logica, int tamanio){
-	int tam_max_segmento = config_cpu.tam_max_segmento;
-	int num_seg = floor(dir_logica/tam_max_segmento);
-	int desplaz_segmento = dir_logica % tam_max_segmento;
-
-	t_segmento* segmento = list_get(cde_en_ejecucion->tabla_segmentos, num_seg);
-
-	if (segmento->tamanio_segmentos < desplaz_segmento + tamanio){return -1;}
-
+uint32_t calcular_dir_fisica(uint32_t dir_logica, uint32_t tamanio){
+	uint32_t tam_max_segmento = config_cpu.tam_max_segmento;
+	
+	uint32_t num_seg = floor(dir_logica/tam_max_segmento);
+	t_segmento* segmento = encontrar_segmento_por_id(cde_en_ejecucion->tabla_segmentos, num_seg);
+	
+	uint32_t desplaz_segmento = dir_logica % segmento->tamanio_segmento;
+	
 	return segmento->direccion_base + desplaz_segmento;
 }
 
-void ejecutar_move_in(char* registro, uint32_t dir_logica){
-	int tamanio = tamanioRegistro(registro);
-	printf("%d\n",tamanio);
-	int dir_fisica = calcular_dir_fisica(dir_logica, tamanio);
-	if (dir_fisica == -1){
-		log_info(logger, "PID: %d - Error SEG_FAULT - Segmento:", cde_en_ejecucion->pid);
-		//mando a kernel el contexto de ejecucion
-	}else {
-		printf("%d\n", dir_fisica);/*Aca mando a memoria la info*/
 
-		char* a_guardar = "HOLA-SOY-NICOLAS"; // = lo que me llega de memoria
-		ejecutar_set(registro, a_guardar, cde_en_ejecucion->registros_cpu);
-	}
+// Lee el contenido de la direccion logica en el registro
+void ejecutar_move_in(char* nombre_registro, uint32_t dir_logica){
+	uint32_t tamanio = tamanioRegistro(nombre_registro);
+	uint32_t dir_fisica = 300;
+			//calcular_dir_fisica(dir_logica, tamanio);
+	uint32_t num_seg = floor(dir_logica / config_cpu.tam_max_segmento);
+
+	t_buffer* buffer = crear_buffer_nuestro();
+
+	buffer->codigo = SOLICITUD_MOVE_IN;
+	buffer_write_uint32(buffer, cde_en_ejecucion->pid);
+	buffer_write_uint32(buffer, dir_fisica); // La va usar memoria como indice para escribir en la memoria principal
+	buffer_write_uint32(buffer, tamanio);
+	enviar_buffer(buffer, socket_memoria);
+
+	destruir_buffer_nuestro(buffer);
+
+	buffer = recibir_buffer(socket_memoria);
+	uint32_t tam = 0;
+	char* valor_leido = buffer_read_stringV2(buffer, &tam);
+	destruir_buffer_nuestro(buffer);
+
+	log_info(logger, "PID: %d - Accion: LEER - Segmento: %d - Direccion Fisica: %d - Valor: %s", cde_en_ejecucion->pid, num_seg, dir_fisica, valor_leido);
+	
+	ejecutar_set(nombre_registro, valor_leido);
 }
 
-void ejecutar_move_out(char* registro, uint32_t dir_logica){
-	int tamanio = tamanioRegistro(registro);
-	printf("%d\n",tamanio);
-	int dir_fisica = calcular_dir_fisica(dir_logica,tamanio);
-	if (dir_fisica == -1){
-		printf("Segmentation fault");
-		//mando a kernel el contexto de ejecucion
-	}else {
-		printf("%d\n", dir_fisica);
-		//hago la funcion para enviar la info
-	}
+// Escribe el contenido del registro en la direccion logica
+void ejecutar_move_out(char* registro, uint32_t dir_logica){  
+	uint32_t tamanio = tamanioRegistro(registro);
+	uint32_t dir_fisica = 300;
+			//calcular_dir_fisica(dir_logica,tamanio);
+	int num_seg = floor(dir_logica / config_cpu.tam_max_segmento);
+
+	t_buffer* buffer = crear_buffer_nuestro();
+	
+	log_info(logger, "Por obtener el contenido de %s", registro);
+	char* valor_a_escribir = devolver_contenido_registro(registro);
+	log_info(logger, "Contenido: %s = %s", registro, valor_a_escribir);
+
+
+	buffer->codigo = SOLICITUD_MOVE_OUT;
+	buffer_write_uint32(buffer, cde_en_ejecucion->pid);
+	buffer_write_uint32(buffer, dir_fisica);
+	buffer_write_string(buffer, valor_a_escribir);
+
+	enviar_buffer(buffer, socket_memoria);
+	destruir_buffer_nuestro(buffer);
+
+	if(recibir_codigo(socket_memoria) == RTA_MOVE_OUT)
+		log_info(logger, "PID: %d - Accion: ESCRIBIR - Segmento: %d - Direccion Fisica: %d - Valor: %s", cde_en_ejecucion->pid, num_seg, dir_fisica, valor_a_escribir);
+	else
+		log_info(logger, "Error al recibir respuesta de mov_out");
+
+}
+
+
+char* devolver_contenido_registro(char* nombre_registro){
+	if (strcmp(nombre_registro, "AX") == 0)
+		return cde_en_ejecucion->registros_cpu.AX;
+
+	if (strcmp(nombre_registro, "BX") == 0)
+		return cde_en_ejecucion->registros_cpu.BX;
+
+	if (strcmp(nombre_registro, "CX") == 0)
+		return cde_en_ejecucion->registros_cpu.CX;
+
+	if (strcmp(nombre_registro, "DX") == 0)
+		return cde_en_ejecucion->registros_cpu.DX;
+
+	if (strcmp(nombre_registro, "EAX") == 0)
+		return cde_en_ejecucion->registros_cpu.EAX;
+
+	if (strcmp(nombre_registro, "EBX") == 0)
+		return cde_en_ejecucion->registros_cpu.EBX;
+
+	if (strcmp(nombre_registro, "ECX") == 0)
+		return cde_en_ejecucion->registros_cpu.ECX;
+
+	if (strcmp(nombre_registro, "EDX") == 0)
+		return cde_en_ejecucion->registros_cpu.EDX;
+
+	if (strcmp(nombre_registro, "RAX") == 0)
+		return cde_en_ejecucion->registros_cpu.RAX;
+
+	if (strcmp(nombre_registro, "RBX") == 0)
+		return cde_en_ejecucion->registros_cpu.RBX;
+
+	if (strcmp(nombre_registro, "RCX") == 0)
+		return cde_en_ejecucion->registros_cpu.RCX;
+
+	if (strcmp(nombre_registro, "RDX") == 0)
+		return cde_en_ejecucion->registros_cpu.RDX;
 }
 // FIN UTILS INSTRUCCIONES --------------------------------------------------------------

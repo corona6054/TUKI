@@ -10,7 +10,11 @@
 #include "serializacion.h"
 #include "comunicacion.h"
 
-
+typedef enum{
+	EXITOSO,
+	OUT_OF_MEMORY,
+	COMPACTACION
+} Rta_crear_segmento;
 
 typedef enum {
     FIRST,
@@ -26,7 +30,7 @@ typedef struct{
 
 typedef struct{
 	uint32_t pid;
-	t_list* tabla_segmentos;
+	t_list* tabla_segmentos; // tabla de t_segmento*
 }t_tabla_segmentos_por_proceso;
 
 
@@ -39,6 +43,12 @@ typedef struct{
 	int retardo_compactacion;
 	int algoritmos_asignacion;
 }Config_memoria;
+
+typedef struct{
+	int direccion_base;
+	int tamanio;
+}t_hueco;
+
 
 
 // Variables globales
@@ -53,23 +63,25 @@ int fileSystem_fd;
 int kernel_fd;
 
 void *memoria_principal;
-t_list* espacios_libres;
-t_list* tabla_segmentos_global;
+
+t_list* espacios_libres; // No va mas
+t_list* tabla_segmentos_global; // lista de t_tabla_segmentos_por_proceso*
+t_list* huecos_libres; // lista de t_hueco*
+
 t_segmento* segmento0;
 int *needed_memory;
 Segment *seg_anterior;
 int *seg_maxsize;
 void* mem_auxiliar;
-int *contador_procesos;
 
 // Prototipos funciones
+// UTILS INICIAR MODULO -----------------------------------------------------------------
 void levantar_modulo();
 void finalizar_modulo();
-
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void levantar_config();;
-
+// FIN UTILS INICIAR MODULO -------------------------------------------------------------
 
 void  ResultadoCompactacion (void* ptr);
 void  DestroyList (void* ptr);
@@ -82,7 +94,7 @@ void compactarMemoria();
 void  addSeg0 (void* ptr);
 void  removeSeg0 (void* ptr);
 Algorithm selectAlgorithm(char* input);
-int crearEstructuras();
+int crear_estructuras();
 int terminarEstructuras();
 bool FirstFit(void* data);
 bool AdyacenteIzquierda(void* data);
@@ -93,15 +105,46 @@ void crearSegmento(int id,int index, int size);
 void eliminarSegmento(int id, int index);
 void agregarSegmento(Segment *nuevo);
 void liberarSegmento(Segment *viejo);
-t_tabla_segmentos_por_proceso* crearProceso(uint32_t pid_a_crear);
+t_tabla_segmentos_por_proceso* crear_proceso(uint32_t pid_a_crear);
 void *pedidoLectura(int *direccion, int size);
 int pedidoEscritura(int *direccion, int size, void*nuevo_dato);
 
+// UTILS TABLA DE SEGMENTOS -------------------------------------------------------------
 t_tabla_segmentos_por_proceso* encontrar_tabla_por_pid(uint32_t pid_a_buscar);
+void destruir_tabla_segmentos_por_proceso(t_tabla_segmentos_por_proceso*);
+// FIN UTILS TABLA DE SEGMENTOS ---------------------------------------------------------
 
+// UTILS CONEXIONES ---------------------------------------------------------------------
 void manejar_conexion_con_kernel();
-
+void manejar_conexion_con_cpu();
 void levantar_modulo();
 void establecer_conexiones();
+// FIN UTILS CONEXIONES -----------------------------------------------------------------
+
+// UTILS ESCRITURA Y LECTURA ------------------------------------------------------------
+void* leer_memoria(uint32_t dir_fisica, uint32_t tamanio);
+void escribir_memoria(uint32_t dir_fisica, char* valor_a_escribir, uint32_t tamanio);
+// FIN UTILS ESCRITURA Y LECTURA --------------------------------------------------------
+
+t_hueco* retirar_hueco_por_base(uint32_t);
+
+// UTILS INSTRUCCIONES ------------------------------------------------------------------
+void atender_delete_segment(uint32_t pid, uint32_t id_segm_a_eliminar);
+Rta_crear_segmento atender_create_segment(uint32_t pid, uint32_t id_segmento, uint32_t tamanio_segmento);
+// FIN UTILS INTRUCCIONES ---------------------------------------------------------------
+
+// UTILS ORDENAR LISTA SEGMENTOS --------------------------------------------------------
+bool por_menor_base_segmento(t_segmento* segm1, t_segmento* segm2);
+// FIN UTILS ORDENAR LISTA SEGMENTOS ----------------------------------------------------
+
+// UTILS ORDENAR LISTA HUECOS -----------------------------------------------------------
+bool por_menor_base(t_hueco* hl1, t_hueco* hl2);
+bool de_menor_a_mayor_tamanio(t_hueco* hueco1, t_hueco* hueco2);
+// FIN UTILS ORDENAR LISTA HUECOS -------------------------------------------------------
+
+// UTILS HUECOS LIBRE -------------------------------------------------------------------
+void agregar_hueco_libre(uint32_t base, uint32_t tam);
+void union_huecos_libres_contiguos(uint32_t posicion);
+// FIN DE UTILS HUECOS LIBRES -----------------------------------------------------------
 
 #endif /* INCLUDES_MEMORIA_H_ */

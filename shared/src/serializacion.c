@@ -245,7 +245,7 @@ t_registros buffer_read_Registros(t_buffer* buffer){
 void buffer_write_segmento(t_buffer* buffer, t_segmento segm){
 	buffer_write_uint32(buffer, segm.id);
 	buffer_write_uint32(buffer, segm.direccion_base);
-	buffer_write_uint32(buffer, segm.tamanio_segmentos);
+	buffer_write_uint32(buffer, segm.tamanio_segmento);
 }
 
 
@@ -254,7 +254,7 @@ t_segmento* buffer_read_segmento(t_buffer* buffer){
 
 	seg->id = buffer_read_uint32(buffer);
 	seg->direccion_base = buffer_read_uint32(buffer);
-	seg->tamanio_segmentos = buffer_read_uint32(buffer);
+	seg->tamanio_segmento = buffer_read_uint32(buffer);
 
 	return seg;
 }
@@ -380,3 +380,12 @@ void destruir_lista_char(t_list* lista_char_asterisco){
 	list_destroy(lista_char_asterisco);
 }
 // FIN UTILS DESTRUIR -------------------------------------------------------------------
+
+// Supongo que el segmento ya existe en la lista
+t_segmento* encontrar_segmento_por_id(t_list* tabla_segmentos, uint32_t id_segmento_buscado){
+	for(int i = 0; i < list_size(tabla_segmentos); i++){
+		t_segmento* segm = list_get(tabla_segmentos, i);
+		if (segm->id == id_segmento_buscado)
+			return segm;
+	}
+}

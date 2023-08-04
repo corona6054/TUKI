@@ -110,3 +110,183 @@
 [INFO] 17:52:36:799 Cpu/(3896:3939): PID: 0 - EJECUTANDO : EXIT
 [INFO] 17:52:36:799 Cpu/(3896:3938): Envie el cde a kernel
 [INFO] 17:54:06:642 Cpu/(3896:3937): Recibi buffer.
+[INFO] 18:27:35:266 Cpu/(3944:3949): Conectado con memoria
+[INFO] 18:30:19:930 Cpu/(4108:4108): Conectado con MEMORIA
+[INFO] 18:30:19:940 Cpu/(4108:4108): Handshake con MEMORIA realizado.
+[INFO] 18:33:18:395 Cpu/(4423:4423): Conectado con MEMORIA
+[INFO] 18:33:37:570 Cpu/(4423:4423): Handshake con MEMORIA realizado.
+[INFO] 18:37:29:678 Cpu/(4755:4755): Conectado con MEMORIA
+[INFO] 18:37:29:697 Cpu/(4755:4755): Handshake con MEMORIA realizado.
+[INFO] 18:44:39:128 Cpu/(5180:5180): Conectado con MEMORIA
+[INFO] 18:44:39:135 Cpu/(5180:5180): Handshake con MEMORIA realizado.
+[INFO] 18:45:32:229 Cpu/(5209:5209): Conectado con MEMORIA
+[INFO] 18:45:32:230 Cpu/(5209:5209): Handshake con MEMORIA realizado.
+[INFO] 18:46:25:051 Cpu/(5313:5313): Conectado con MEMORIA
+[INFO] 18:46:25:053 Cpu/(5313:5313): Handshake con MEMORIA realizado.
+[INFO] 18:46:25:102 Cpu/(5313:5313): Codigo recibido: 10
+[INFO] 18:49:54:488 Cpu/(5510:5510): Conectado con MEMORIA
+[INFO] 18:49:54:498 Cpu/(5510:5510): Handshake con MEMORIA realizado.
+[INFO] 18:49:54:543 Cpu/(5510:5510): Codigo recibido: 10
+[INFO] 18:50:47:508 Cpu/(5621:5621): Conectado con MEMORIA
+[INFO] 18:50:47:518 Cpu/(5621:5621): Handshake con MEMORIA realizado.
+[INFO] 18:50:47:562 Cpu/(5621:5621): Codigo recibido: 10
+[INFO] 18:52:59:012 Cpu/(5734:5734): Conectado con MEMORIA
+[INFO] 18:52:59:021 Cpu/(5734:5734): Handshake con MEMORIA realizado.
+[INFO] 18:52:59:069 Cpu/(5734:5734): Codigo recibido: 10
+[INFO] 18:56:43:632 Cpu/(5863:5863): Conectado con MEMORIA
+[INFO] 18:56:43:647 Cpu/(5863:5863): Handshake con MEMORIA realizado.
+[INFO] 18:56:43:691 Cpu/(5863:5863): Codigo recibido: 10
+[INFO] 18:56:43:691 Cpu/(5863:5863): Buffer enviado
+[INFO] 18:56:43:778 Cpu/(5863:5863): Buffer recibido
+[INFO] 18:56:43:778 Cpu/(5863:5863): Valor leido: Saæa
+[INFO] 18:58:29:543 Cpu/(6011:6011): Conectado con MEMORIA
+[INFO] 18:58:29:544 Cpu/(6011:6011): Handshake con MEMORIA realizado.
+[INFO] 18:58:29:900 Cpu/(6011:6011): Codigo recibido: 10
+[INFO] 18:58:29:900 Cpu/(6011:6011): Buffer enviado
+[INFO] 18:58:29:992 Cpu/(6011:6011): Buffer recibido
+[INFO] 18:58:29:996 Cpu/(6011:6011): Valor leido: WcÕ¯:
+[INFO] 19:00:28:383 Cpu/(6126:6126): Conectado con MEMORIA
+[INFO] 19:00:28:384 Cpu/(6126:6126): Handshake con MEMORIA realizado.
+[INFO] 19:00:28:440 Cpu/(6126:6126): Codigo recibido: 10
+[INFO] 19:00:28:440 Cpu/(6126:6126): Buffer enviado
+[INFO] 19:00:28:526 Cpu/(6126:6126): Buffer recibido
+[INFO] 19:00:28:527 Cpu/(6126:6126): Valor leido: HOl>á
+[INFO] 19:03:56:012 Cpu/(6325:6325): Conectado con MEMORIA
+[INFO] 19:03:56:013 Cpu/(6325:6325): Handshake con MEMORIA realizado.
+[INFO] 19:03:56:063 Cpu/(6325:6325): Codigo recibido: 10
+[INFO] 19:03:56:063 Cpu/(6325:6325): Buffer enviado
+[INFO] 19:03:56:151 Cpu/(6325:6325): Buffer recibido
+[INFO] 19:03:56:151 Cpu/(6325:6325): Valor leido: HO“Ì
+[INFO] 19:04:31:551 Cpu/(6398:6398): Conectado con MEMORIA
+[INFO] 19:04:31:554 Cpu/(6398:6398): Handshake con MEMORIA realizado.
+[INFO] 19:04:31:598 Cpu/(6398:6398): Codigo recibido: 10
+[INFO] 19:04:31:598 Cpu/(6398:6398): Buffer enviado
+[INFO] 19:04:31:686 Cpu/(6398:6398): Buffer recibido
+[INFO] 19:04:31:687 Cpu/(6398:6398): Valor leido: HO
+[INFO] 19:06:04:368 Cpu/(6463:6463): Conectado con MEMORIA
+[INFO] 19:06:04:383 Cpu/(6463:6463): Handshake con MEMORIA realizado.
+[INFO] 19:06:04:431 Cpu/(6463:6463): Codigo recibido: 10
+[INFO] 19:06:04:433 Cpu/(6463:6463): Buffer enviado
+[INFO] 19:06:04:518 Cpu/(6463:6463): Buffer recibido
+[INFO] 19:06:04:518 Cpu/(6463:6463): Valor leido: HO
+[INFO] 19:06:48:743 Cpu/(6562:6562): Conectado con MEMORIA
+[INFO] 19:06:48:743 Cpu/(6562:6562): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 19:06:48:743 Cpu/(6562:6562): Codigo recibido: 4
+[INFO] 19:06:48:743 Cpu/(6562:6562): Buffer enviado
+[INFO] 19:06:48:743 Cpu/(6562:6562): Buffer recibido
+[INFO] 19:09:12:416 Cpu/(6696:6696): Conectado con MEMORIA
+[INFO] 19:09:12:426 Cpu/(6696:6696): Handshake con MEMORIA realizado.
+[INFO] 19:09:12:497 Cpu/(6696:6696): Codigo recibido: 10
+[INFO] 19:09:12:498 Cpu/(6696:6696): Buffer enviado
+[INFO] 19:09:12:582 Cpu/(6696:6696): Buffer recibido
+[INFO] 19:09:12:582 Cpu/(6696:6696): Valor leido: HOLA
+[INFO] 19:10:10:746 Cpu/(6798:6798): Conectado con MEMORIA
+[INFO] 19:10:10:747 Cpu/(6798:6798): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 19:10:10:747 Cpu/(6798:6798): Codigo recibido: 4
+[INFO] 19:10:10:748 Cpu/(6798:6798): Buffer enviado
+[INFO] 19:10:10:748 Cpu/(6798:6798): Buffer recibido
+[INFO] 19:11:33:160 Cpu/(6830:6830): Conectado con MEMORIA
+[INFO] 19:11:33:171 Cpu/(6830:6830): Handshake con MEMORIA realizado.
+[INFO] 19:11:33:227 Cpu/(6830:6830): Codigo recibido: 10
+[INFO] 19:11:33:228 Cpu/(6830:6830): Buffer enviado
+[INFO] 19:11:33:318 Cpu/(6830:6830): Buffer recibido
+[INFO] 19:11:33:318 Cpu/(6830:6830): Valor leido: HOLA
+[INFO] 19:25:58:650 Cpu/(7513:7513): Conectado con MEMORIA
+[INFO] 19:25:58:651 Cpu/(7513:7513): Handshake con MEMORIA realizado.
+[INFO] 19:25:58:654 Cpu/(7513:7513): AX: HOLA
+[INFO] 19:27:06:754 Cpu/(7608:7608): Conectado con MEMORIA
+[INFO] 19:27:06:759 Cpu/(7608:7608): Handshake con MEMORIA realizado.
+[INFO] 19:27:06:760 Cpu/(7608:7608): AX: HOLA
+[INFO] 19:28:47:520 Cpu/(7699:7699): Conectado con MEMORIA
+[INFO] 19:28:47:527 Cpu/(7699:7699): Handshake con MEMORIA realizado.
+[INFO] 19:28:47:529 Cpu/(7699:7699): AX: HOLA
+[INFO] 19:29:59:432 Cpu/(7742:7742): Conectado con MEMORIA
+[INFO] 19:30:06:790 Cpu/(7742:7742): Handshake con MEMORIA realizado.
+[INFO] 19:32:05:021 Cpu/(7742:7742): AX: HOLA
+[INFO] 19:34:29:090 Cpu/(7883:7883): Conectado con MEMORIA
+[INFO] 19:34:29:107 Cpu/(7883:7883): Handshake con MEMORIA realizado.
+[INFO] 19:34:29:118 Cpu/(7883:7883): AX: HOLA
+[INFO] 19:34:29:118 Cpu/(7883:7883): Por obtener el contenido de AX
+[INFO] 19:34:29:118 Cpu/(7883:7883): Contenido: AX = HOLA
+[INFO] 19:34:29:284 Cpu/(7883:7883): Error al recibir respuesta de mov_out
+[INFO] 19:34:29:284 Cpu/(7883:7883): Ya ejecute el move_out
+[INFO] 19:35:35:543 Cpu/(7941:7941): Conectado con MEMORIA
+[INFO] 19:35:35:543 Cpu/(7941:7941): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 19:35:35:545 Cpu/(7941:7941): AX: HOLA
+[INFO] 19:35:35:545 Cpu/(7941:7941): Por obtener el contenido de AX
+[INFO] 19:35:35:545 Cpu/(7941:7941): Contenido: AX = HOLA
+[INFO] 19:35:35:545 Cpu/(7941:7941): Error al recibir respuesta de mov_out
+[INFO] 19:35:35:545 Cpu/(7941:7941): Ya ejecute el move_out
+[INFO] 19:37:08:415 Cpu/(8006:8006): Conectado con MEMORIA
+[INFO] 19:37:29:400 Cpu/(8006:8006): Handshake con MEMORIA realizado.
+[INFO] 19:38:01:482 Cpu/(8006:8006): AX: HOLA
+[INFO] 19:38:22:124 Cpu/(8006:8006): Por obtener el contenido de AX
+[INFO] 19:38:30:049 Cpu/(8006:8006): Contenido: AX = HOLA
+[INFO] 19:41:12:330 Cpu/(8326:8326): Conectado con MEMORIA
+[INFO] 19:42:51:391 Cpu/(8457:8457): Conectado con MEMORIA
+[INFO] 19:42:51:394 Cpu/(8457:8457): Handshake con MEMORIA realizado.
+[INFO] 19:43:12:325 Cpu/(8457:8457): AX: HOLA
+[INFO] 19:43:23:340 Cpu/(8457:8457): Por obtener el contenido de AX
+[INFO] 19:43:25:617 Cpu/(8457:8457): Contenido: AX = HOLA
+[INFO] 19:46:25:960 Cpu/(8685:8685): Conectado con MEMORIA
+[INFO] 19:46:25:960 Cpu/(8685:8685): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 19:46:25:962 Cpu/(8685:8685): AX: HOLA
+[INFO] 19:46:25:962 Cpu/(8685:8685): Por obtener el contenido de AX
+[INFO] 19:46:25:962 Cpu/(8685:8685): Contenido: AX = HOLA
+[INFO] 19:46:25:962 Cpu/(8685:8685): Error al recibir respuesta de mov_out
+[INFO] 19:46:25:962 Cpu/(8685:8685): Ya ejecute el move_out
+[INFO] 19:48:07:490 Cpu/(8761:8761): Conectado con MEMORIA
+[INFO] 19:48:07:490 Cpu/(8761:8761): Handshake con MEMORIA realizado.
+[INFO] 19:48:07:492 Cpu/(8761:8761): AX: HOLA
+[INFO] 19:48:07:492 Cpu/(8761:8761): Por obtener el contenido de AX
+[INFO] 19:48:07:492 Cpu/(8761:8761): Contenido: AX = HOLA
+[INFO] 19:48:07:559 Cpu/(8761:8761): PID: 10 - Accion: ESCRIBIR - Segmento: 1 - Direccion Fisica: 300 - Valor: AX
+[INFO] 19:48:07:559 Cpu/(8761:8761): Ya ejecute el move_out
+[INFO] 19:50:36:700 Cpu/(8872:8872): Conectado con MEMORIA
+[INFO] 19:50:36:700 Cpu/(8872:8872): Handshake con MEMORIA realizado.
+[INFO] 19:50:36:702 Cpu/(8872:8872): AX: HOLA
+[INFO] 19:50:36:702 Cpu/(8872:8872): Por obtener el contenido de AX
+[INFO] 19:50:36:702 Cpu/(8872:8872): Contenido: AX = HOLA
+[INFO] 19:50:36:750 Cpu/(8872:8872): PID: 10 - Accion: ESCRIBIR - Segmento: 1 - Direccion Fisica: 300 - Valor: HOLA
+[INFO] 19:50:36:750 Cpu/(8872:8872): Ya ejecute el move_out
+[INFO] 19:50:36:846 Cpu/(8872:8872): PID: 10 - Accion: LEER - Segmento: 1 - Direccion Fisica: 300 - Valor: 
+[INFO] 19:50:36:851 Cpu/(8872:8872): BX: 
+[INFO] 19:56:33:736 Cpu/(9174:9174): Conectado con MEMORIA
+[INFO] 19:56:33:737 Cpu/(9174:9174): Handshake con MEMORIA realizado.
+[INFO] 19:56:41:256 Cpu/(9174:9174): AX: HOLA
+[INFO] 19:56:41:256 Cpu/(9174:9174): Por obtener el contenido de AX
+[INFO] 19:56:41:256 Cpu/(9174:9174): Contenido: AX = HOLA
+[INFO] 19:58:15:654 Cpu/(9174:9174): PID: 10 - Accion: ESCRIBIR - Segmento: 1 - Direccion Fisica: 300 - Valor: HOLA
+[INFO] 19:58:15:654 Cpu/(9174:9174): Ya ejecute el move_out
+[INFO] 20:01:47:598 Cpu/(9358:9358): Conectado con MEMORIA
+[INFO] 20:01:47:598 Cpu/(9358:9358): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 20:01:47:600 Cpu/(9358:9358): AX: HOLA
+[INFO] 20:01:47:601 Cpu/(9358:9358): Por obtener el contenido de AX
+[INFO] 20:01:47:601 Cpu/(9358:9358): Contenido: AX = HOLA
+[INFO] 20:01:47:601 Cpu/(9358:9358): Error al recibir respuesta de mov_out
+[INFO] 20:01:47:601 Cpu/(9358:9358): Ya ejecute el move_out
+[INFO] 20:02:55:780 Cpu/(9387:9387): Conectado con MEMORIA
+[INFO] 20:02:55:781 Cpu/(9387:9387): Handshake con MEMORIA realizado.
+[INFO] 20:02:55:782 Cpu/(9387:9387): AX: HOLA
+[INFO] 20:02:55:782 Cpu/(9387:9387): Por obtener el contenido de AX
+[INFO] 20:02:55:782 Cpu/(9387:9387): Contenido: AX = HOLA
+[INFO] 20:02:55:848 Cpu/(9387:9387): PID: 10 - Accion: ESCRIBIR - Segmento: 1 - Direccion Fisica: 300 - Valor: HOLA
+[INFO] 20:02:55:848 Cpu/(9387:9387): Ya ejecute el move_out
+[INFO] 20:02:55:974 Cpu/(9387:9387): PID: 10 - Accion: LEER - Segmento: 1 - Direccion Fisica: 300 - Valor: 
+[INFO] 20:02:55:976 Cpu/(9387:9387): BX: 
+[INFO] 20:03:52:028 Cpu/(9448:9448): Conectado con MEMORIA
+[INFO] 20:03:52:028 Cpu/(9448:9448): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 20:03:52:030 Cpu/(9448:9448): AX: HOLA
+[INFO] 20:03:52:030 Cpu/(9448:9448): Por obtener el contenido de AX
+[INFO] 20:03:52:031 Cpu/(9448:9448): Contenido: AX = HOLA
+[INFO] 20:03:52:031 Cpu/(9448:9448): Error al recibir respuesta de mov_out
+[INFO] 20:03:52:031 Cpu/(9448:9448): Ya ejecute el move_out
+[INFO] 20:07:49:202 Cpu/(9633:9633): Conectado con MEMORIA
+[INFO] 20:07:49:203 Cpu/(9633:9633): Handshake con MEMORIA realizado.
+[INFO] 20:07:49:210 Cpu/(9633:9633): AX: HOLA
+[INFO] 20:07:49:210 Cpu/(9633:9633): Por obtener el contenido de AX
+[INFO] 20:07:49:210 Cpu/(9633:9633): Contenido: AX = HOLA
+[INFO] 20:07:49:260 Cpu/(9633:9633): PID: 10 - Accion: ESCRIBIR - Segmento: 1 - Direccion Fisica: 300 - Valor: HOLA
+[INFO] 20:07:49:260 Cpu/(9633:9633): Ya ejecute el move_out
+[INFO] 20:07:49:351 Cpu/(9633:9633): PID: 10 - Accion: LEER - Segmento: 1 - Direccion Fisica: 300 - Valor: HOLA
+[INFO] 20:07:49:356 Cpu/(9633:9633): BX: HOLA

@@ -80,11 +80,13 @@ t_buffer* recibir_buffer(int socket)
 
 	// Recibo el tamanio del buffer y reservo espacio en memoria
 	recv(socket, &(buffer -> size), sizeof(uint32_t), MSG_WAITALL);
-	buffer -> stream = malloc(buffer -> size);
+	
+	if(buffer->size != 0){
+		buffer -> stream = malloc(buffer -> size);
 
-	// Recibo stream del buffer
-	recv(socket, buffer -> stream, buffer -> size, MSG_WAITALL);
-
+		// Recibo stream del buffer
+		recv(socket, buffer -> stream, buffer -> size, MSG_WAITALL);
+	}
 	return buffer;
 }
 
@@ -94,9 +96,11 @@ void enviar_buffer(t_buffer* buffer, int socket){
 
     // Enviamos el tamanio del buffer
     send(socket, &(buffer->size), sizeof(uint32_t), 0);
-
-    // Enviamos el stream del buffer
-    send(socket, buffer->stream, buffer->size, 0);
+	
+	if (buffer->size != 0){
+    	// Enviamos el stream del buffer
+    	send(socket, buffer->stream, buffer->size, 0);
+	}
 }
 
 // UTILS CODIGO

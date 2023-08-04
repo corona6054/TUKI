@@ -12,6 +12,10 @@
 #include "serializacion.h"
 #include "comunicacion.h"
 
+typedef enum{
+	PUEDE_EJECUTAR,
+	SEGM_FAULT
+}Rta_mov_in_o_out;
 
 typedef struct{
 	int retardo;
@@ -20,7 +24,6 @@ typedef struct{
 	int puerto_escucha;
 	int tam_max_segmento;
 }Config_cpu;
-
 
 // Variables globales
 // Semaforos
@@ -68,14 +71,16 @@ void ejecutar_proceso();
 void evaluar_instruccion(t_instruction* instruccion);
 // FIN UTILS INSTRUCCIONES (GENERAL) ----------------------------------------------------
 
+
 // UTILS INSTRUCCIONES (PARTICULAR) -----------------------------------------------------
-void ejecutar_set(char*, char*, t_registros);
+Rta_mov_in_o_out analizar_mov_in_o_out(char* registro, uint32_t dir_logica);
+void ejecutar_set(char*, char*);
 void ejecutar_move_in(char*, uint32_t); 
 void ejecutar_move_out(char*, uint32_t);
 
-int calcular_dir_fisica(int dir_logica,int tamanio);
-int tamanioRegistro(char *registro);
-void sacar_de_registro(char registro[],int dir_fisica, int tamanio, t_registros *registros, int pid);
+uint32_t calcular_dir_fisica(uint32_t dir_logica, uint32_t tamanio);
+uint32_t tamanioRegistro(char *registro);
+char* devolver_contenido_registro(char* nombre_registro);
 // FIN UTILS INSTRUCCIONES (PARTICULAR) -------------------------------------------------
 
 

@@ -188,7 +188,7 @@ t_recurso* inicializar_recurso(char* nombre_recu, int instancias_tot); // FUNCIO
 void inicializar_recurso_nulo(); // FUNCIONA
 int asignar_instancia_recurso(char* nombre_recurso_a_actualizar, t_pcb* pcb); // FUNCIONA
 int liberar_instancia_recurso(char* nombre_recurso_a_liberar, t_pcb* pcb);
-int sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar); // FUNCIONA
+void sacar_recurso(t_list* recursos_asignados, char* recurso_a_sacar); // FUNCIONA
 void liberar_todos_recursos(t_pcb* pcb);
 t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNCIONA
 // FIN UTILS RECURSOS -------------------------------------------------------------------
@@ -196,6 +196,10 @@ t_recurso* encontrar_recurso_por_nombre(char* nombre_recurso_a_obtener); // FUNC
 
 // UTILS INSTRUCCIONES ------------------------------------------------------------------
 void evaluar_instruccion();
+void enviar_solicitud_create_segment(t_instruction* instruccion);
+void analizar_respuesta_create_segment();
+void enviar_solicitud_delete_segment();
+void analizar_respuesta_delete_segment();
 void administrar_io(t_pcb* pcb_a_dormir, int tiempo_siesta);
 void dormir_proceso(void* args);
 // FIN UTILS INSTRUCCIONES --------------------------------------------------------------
