@@ -53,6 +53,8 @@ Config_kernel config_kernel;
 t_log* logger;
 t_config* config;
 t_list* archivos_abiertos_global;
+t_list* tabla_segmentos_global;
+
 
 int socket_memoria;
 int socket_file_system;
@@ -79,14 +81,16 @@ sem_t cont_exit;
 sem_t cont_grado_max_multiprog;
 sem_t cont_procesador_libre;
 
+sem_t puedo_recibir_de_memoria;
+sem_t recepcion_exitosa_de_memoria;
+
 sem_t necesito_enviar_cde;
 
 //Binarios
 sem_t bin1_envio_cde;
 sem_t bin2_recibir_cde;
 
-// CONEXIONES
-sem_t* conexion_consola;
+
 
 int pid = 0;
 
@@ -124,6 +128,9 @@ t_list* recibir_paquete(int);
 
 void recibir_cde_de_cpu();
 void enviar_cde_a_cpu();
+
+//void recibir_mensaje_de_memoria();
+t_list* recibir_tabla_segmentos_inicial(uint32_t pid);
 // FIN UTILS CONEXIONES -----------------------------------------------------------------
 
 // PLANIFICADORES -----------------------------------------------------------------------

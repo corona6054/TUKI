@@ -207,3 +207,170 @@
 [INFO] 17:52:36:845 Kernel/(3926:3941): PID: 0 - Estado anterior: EXEC - Estado actual: EXIT
 [INFO] 17:52:36:845 Kernel/(3926:3941): Finaliza el proceso 0 - Motivo: SUCCES
 [INFO] 17:52:36:845 Kernel/(3926:3944): PID Terminado: 0
+[INFO] 19:00:35:477 Kernel/(5660:5660): Conectado con MEMORIA
+[INFO] 19:00:35:487 Kernel/(5660:5660): Handshake con MEMORIA realizado.
+[INFO] 20:23:19:925 Kernel/(7089:7089): Conectado con MEMORIA
+[INFO] 20:23:19:932 Kernel/(7089:7089): Handshake con MEMORIA realizado.
+[INFO] 20:23:19:932 Kernel/(7089:7089): Por agregar  PCB a cola NEW
+[INFO] 20:23:19:932 Kernel/(7089:7089): Por iniciar los planificadores
+[INFO] 20:23:19:933 Kernel/(7089:7096): Por recibir tabla de segmentos
+[INFO] 20:24:58:187 Kernel/(7147:7147): Conectado con MEMORIA
+[INFO] 20:24:58:194 Kernel/(7147:7147): Handshake con MEMORIA realizado.
+[INFO] 20:24:58:194 Kernel/(7147:7147): Por agregar  PCB a cola NEW
+[INFO] 20:24:58:195 Kernel/(7147:7147): Por iniciar los planificadores
+[INFO] 20:24:58:199 Kernel/(7147:7154): Por recibir tabla de segmentos
+[INFO] 20:35:32:183 Kernel/(7392:7392): Conectado con MEMORIA
+[INFO] 20:35:32:190 Kernel/(7392:7392): Handshake con MEMORIA realizado.
+[INFO] 20:35:32:191 Kernel/(7392:7392): Por agregar  PCB a cola NEW
+[INFO] 20:35:32:191 Kernel/(7392:7392): Por iniciar los planificadores
+[INFO] 20:35:32:192 Kernel/(7392:7399): Por recibir tabla de segmentos
+[INFO] 20:35:32:192 Kernel/(7392:7399): Solicitud enviada
+[INFO] 20:35:32:335 Kernel/(7392:7399): Buffer recibido
+[INFO] 20:38:00:365 Kernel/(7470:7470): Conectado con MEMORIA
+[INFO] 20:38:00:366 Kernel/(7470:7470): Handshake con MEMORIA realizado.
+[INFO] 20:38:00:366 Kernel/(7470:7470): Por agregar  PCB a cola NEW
+[INFO] 20:38:00:366 Kernel/(7470:7470): Por iniciar los planificadores
+[INFO] 20:38:00:381 Kernel/(7470:7476): Por recibir tabla de segmentos
+[INFO] 20:38:00:381 Kernel/(7470:7476): Solicitud enviada
+[INFO] 20:38:00:513 Kernel/(7470:7476): Buffer recibido
+[INFO] 20:38:43:324 Kernel/(7553:7553): Conectado con MEMORIA
+[INFO] 20:38:43:325 Kernel/(7553:7553): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 20:38:43:325 Kernel/(7553:7553): Por agregar  PCB a cola NEW
+[INFO] 20:38:43:325 Kernel/(7553:7553): Por iniciar los planificadores
+[INFO] 20:38:43:331 Kernel/(7553:7559): Por recibir tabla de segmentos
+[INFO] 20:38:43:331 Kernel/(7553:7559): Solicitud enviada
+[INFO] 20:38:43:331 Kernel/(7553:7559): Buffer recibido
+[INFO] 20:42:19:511 Kernel/(7766:7766): Conectado con MEMORIA
+[INFO] 20:42:45:912 Kernel/(7766:7766): Handshake con MEMORIA realizado.
+[INFO] 20:42:57:982 Kernel/(7766:7766): Por agregar  PCB a cola NEW
+[INFO] 20:43:02:966 Kernel/(7766:7766): Por iniciar los planificadores
+[INFO] 20:43:30:044 Kernel/(7766:7864): Por recibir tabla de segmentos
+[INFO] 20:43:30:044 Kernel/(7766:7864): Solicitud enviada
+[INFO] 20:57:55:626 Kernel/(8574:8574): Conectado con MEMORIA
+[INFO] 20:57:55:633 Kernel/(8574:8574): Handshake con MEMORIA realizado.
+[INFO] 20:57:55:633 Kernel/(8574:8574): Por agregar  PCB a cola NEW
+[INFO] 20:57:55:633 Kernel/(8574:8574): Por iniciar los planificadores
+[INFO] 20:57:55:644 Kernel/(8574:8581): Por recibir tabla de segmentos
+[INFO] 20:57:55:644 Kernel/(8574:8581): Solicitud enviada
+[INFO] 20:57:55:791 Kernel/(8574:8581): Buffer recibido
+[INFO] 21:05:04:598 Kernel/(8790:8790): Id Leido: 15
+[INFO] 21:07:13:057 Kernel/(9024:9024): Conectado con MEMORIA
+[INFO] 21:07:13:057 Kernel/(9024:9024): Handshake con MEMORIA realizado.
+[INFO] 21:08:14:395 Kernel/(9103:9103): Conectado con MEMORIA
+[INFO] 21:09:41:524 Kernel/(9213:9213): Conectado con MEMORIA
+[INFO] 21:10:07:448 Kernel/(9213:9213): Handshake con MEMORIA realizado.
+[INFO] 21:13:50:865 Kernel/(9579:9579): Conectado con MEMORIA
+[INFO] 21:14:07:774 Kernel/(9579:9579): Handshake con MEMORIA realizado.
+[INFO] 21:18:10:603 Kernel/(9797:9797): Conectado con MEMORIA
+[INFO] 21:18:10:603 Kernel/(9797:9797): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 21:18:51:933 Kernel/(9831:9831): Conectado con MEMORIA
+[INFO] 21:18:51:934 Kernel/(9831:9831): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 21:21:12:655 Kernel/(9974:9974): Conectado con MEMORIA
+[INFO] 21:21:12:655 Kernel/(9974:9974): Handshake con MEMORIA realizado.
+[INFO] 21:48:41:364 Kernel/(2448:2448): Conectado con MEMORIA
+[INFO] 21:48:41:375 Kernel/(2448:2448): Handshake con MEMORIA realizado.
+[INFO] 21:48:41:375 Kernel/(2448:2448): Por agregar  PCB a cola NEW
+[INFO] 21:48:41:376 Kernel/(2448:2448): Por iniciar los planificadores
+[INFO] 21:48:41:391 Kernel/(2448:2454): Por recibir tabla de segmentos
+[INFO] 21:48:41:427 Kernel/(2448:2454): Solicitud enviada
+[INFO] 21:48:41:677 Kernel/(2448:2454): Buffer recibido
+[INFO] 21:51:37:655 Kernel/(2602:2602): Conectado con MEMORIA
+[INFO] 21:51:37:667 Kernel/(2602:2602): Handshake con MEMORIA realizado.
+[INFO] 21:51:37:668 Kernel/(2602:2602): Por agregar  PCB a cola NEW
+[INFO] 21:51:37:668 Kernel/(2602:2602): Por iniciar los planificadores
+[INFO] 21:51:37:766 Kernel/(2602:2609): Por recibir tabla de segmentos
+[INFO] 21:51:37:766 Kernel/(2602:2609): Solicitud enviada
+[INFO] 21:51:37:863 Kernel/(2602:2609): Buffer recibido
+[INFO] 21:51:37:863 Kernel/(2602:2609): Buffer recibido
+[INFO] 21:51:37:863 Kernel/(2602:2609): Tabla de segmentos recibida
+[INFO] 21:51:37:863 Kernel/(2602:2609): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 23:06:15:446 Kernel/(4034:4034): Conectado con MEMORIA
+[INFO] 23:06:15:451 Kernel/(4034:4034): Handshake con MEMORIA realizado.
+[INFO] 23:06:15:451 Kernel/(4034:4034): Por agregar  PCB a cola NEW
+[INFO] 23:06:15:451 Kernel/(4034:4034): Por iniciar los planificadores
+[INFO] 23:06:15:465 Kernel/(4034:4041): Por recibir tabla de segmentos
+[INFO] 23:06:15:465 Kernel/(4034:4041): Solicitud enviada
+[INFO] 23:06:15:558 Kernel/(4034:4041): Buffer recibido
+[INFO] 23:06:15:558 Kernel/(4034:4041): Buffer recibido
+[INFO] 23:06:15:558 Kernel/(4034:4041): Tabla de segmentos recibida
+[INFO] 23:06:15:558 Kernel/(4034:4041): PID: 0 - Estado anterior: NEW - Estado actual: READY
+[INFO] 23:06:15:558 Kernel/(4034:4043): PID: 0 - Estado anterior: READY - Estado actual: EXEC
+[INFO] 23:23:25:879 Kernel/(2441:2441): Conectado con MEMORIA
+[INFO] 23:23:25:895 Kernel/(2441:2441): Handshake con MEMORIA realizado.
+[INFO] 23:23:25:895 Kernel/(2441:2441): Por agregar  PCB a cola Exit
+[INFO] 23:23:25:895 Kernel/(2441:2441): Por iniciar los planificadores
+[INFO] 23:32:08:464 Kernel/(2643:2643): Conectado con MEMORIA
+[INFO] 23:32:08:466 Kernel/(2643:2643): Handshake con MEMORIA realizado.
+[INFO] 23:32:08:467 Kernel/(2643:2643): Por agregar  PCB a cola Exit
+[INFO] 23:32:08:467 Kernel/(2643:2643): Por iniciar los planificadores
+[INFO] 23:32:16:895 Kernel/(2643:2651): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:34:11:629 Kernel/(2818:2818): Conectado con MEMORIA
+[INFO] 23:34:11:642 Kernel/(2818:2818): Handshake con MEMORIA realizado.
+[INFO] 23:34:11:642 Kernel/(2818:2818): Por agregar  PCB a cola Exit
+[INFO] 23:34:11:642 Kernel/(2818:2818): Por iniciar los planificadores
+[INFO] 23:34:11:659 Kernel/(2818:2825): Por retirar PCB de EXIT
+[INFO] 23:34:12:104 Kernel/(2818:2825): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:37:12:717 Kernel/(3038:3038): Conectado con MEMORIA
+[INFO] 23:37:12:720 Kernel/(3038:3038): Handshake con MEMORIA realizado.
+[INFO] 23:37:12:721 Kernel/(3038:3038): Por agregar  PCB a cola Exit
+[INFO] 23:37:12:721 Kernel/(3038:3038): Por iniciar los planificadores
+[INFO] 23:37:12:732 Kernel/(3038:3046): Por retirar PCB de EXIT
+[INFO] 23:37:12:896 Kernel/(3038:3046): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:39:03:557 Kernel/(3199:3199): Conectado con MEMORIA
+[INFO] 23:39:03:570 Kernel/(3199:3199): Handshake con MEMORIA realizado.
+[INFO] 23:39:03:570 Kernel/(3199:3199): Por agregar  PCB a cola Exit
+[INFO] 23:39:03:570 Kernel/(3199:3199): Por iniciar los planificadores
+[INFO] 23:39:03:582 Kernel/(3199:3207): Por retirar PCB de EXIT
+[INFO] 23:39:03:752 Kernel/(3199:3207): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:39:55:640 Kernel/(3270:3270): Conectado con MEMORIA
+[INFO] 23:39:55:640 Kernel/(3270:3270): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 23:39:55:641 Kernel/(3270:3270): Por agregar  PCB a cola Exit
+[INFO] 23:39:55:641 Kernel/(3270:3270): Por iniciar los planificadores
+[INFO] 23:39:55:641 Kernel/(3270:3276): Por retirar PCB de EXIT
+[INFO] 23:39:55:642 Kernel/(3270:3276): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:40:45:457 Kernel/(3298:3298): Conectado con MEMORIA
+[INFO] 23:40:45:457 Kernel/(3298:3298): Ocurio un error al realizar el handshake con MEMORIA.
+[INFO] 23:40:45:457 Kernel/(3298:3298): Por agregar  PCB a cola Exit
+[INFO] 23:40:45:457 Kernel/(3298:3298): Por iniciar los planificadores
+[INFO] 23:40:45:464 Kernel/(3298:3304): Por retirar PCB de EXIT
+[INFO] 23:40:45:465 Kernel/(3298:3304): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:41:43:640 Kernel/(3388:3388): Conectado con MEMORIA
+[INFO] 23:41:43:652 Kernel/(3388:3388): Handshake con MEMORIA realizado.
+[INFO] 23:41:43:653 Kernel/(3388:3388): Por agregar  PCB a cola Exit
+[INFO] 23:41:43:653 Kernel/(3388:3388): Por iniciar los planificadores
+[INFO] 23:41:43:655 Kernel/(3388:3395): Por retirar PCB de EXIT
+[INFO] 23:41:45:574 Kernel/(3388:3395): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:44:28:812 Kernel/(3508:3508): Conectado con MEMORIA
+[INFO] 23:44:28:824 Kernel/(3508:3508): Handshake con MEMORIA realizado.
+[INFO] 23:44:28:825 Kernel/(3508:3508): Por agregar  PCB a cola Exit
+[INFO] 23:44:28:825 Kernel/(3508:3508): Por iniciar los planificadores
+[INFO] 23:44:28:828 Kernel/(3508:3514): Por retirar PCB de EXIT
+[INFO] 23:44:28:979 Kernel/(3508:3514): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:46:12:767 Kernel/(3604:3604): Conectado con MEMORIA
+[INFO] 23:46:12:777 Kernel/(3604:3604): Handshake con MEMORIA realizado.
+[INFO] 23:46:12:779 Kernel/(3604:3604): Por agregar  PCB a cola Exit
+[INFO] 23:46:12:779 Kernel/(3604:3604): Por iniciar los planificadores
+[INFO] 23:46:12:790 Kernel/(3604:3612): Por retirar PCB de EXIT
+[INFO] 23:46:12:990 Kernel/(3604:3612): Codigo recibido: 4
+[INFO] 23:46:12:990 Kernel/(3604:3612): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:55:29:960 Kernel/(2277:2277): Conectado con MEMORIA
+[INFO] 23:55:29:971 Kernel/(2277:2277): Handshake con MEMORIA realizado.
+[INFO] 23:55:29:972 Kernel/(2277:2277): Por agregar  PCB a cola Exit
+[INFO] 23:55:29:972 Kernel/(2277:2277): Por iniciar los planificadores
+[INFO] 23:55:29:988 Kernel/(2277:2284): Por retirar PCB de EXIT
+[INFO] 23:55:30:234 Kernel/(2277:2284): Codigo recibido: 4
+[INFO] 23:55:30:235 Kernel/(2277:2284): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 23:57:33:434 Kernel/(2463:2463): Conectado con MEMORIA
+[INFO] 23:57:33:448 Kernel/(2463:2463): Handshake con MEMORIA realizado.
+[INFO] 23:57:33:448 Kernel/(2463:2463): Por agregar  PCB a cola Exit
+[INFO] 23:57:33:448 Kernel/(2463:2463): Por iniciar los planificadores
+[INFO] 23:57:33:457 Kernel/(2463:2471): Por retirar PCB de EXIT
+[INFO] 23:57:33:701 Kernel/(2463:2471): Codigo recibido: 4
+[INFO] 23:57:33:701 Kernel/(2463:2471): Error al liberar estructuras de memoria al terminar proceso 0
+[INFO] 00:04:45:015 Kernel/(2902:2902): Conectado con MEMORIA
+[INFO] 00:04:45:022 Kernel/(2902:2902): Handshake con MEMORIA realizado.
+[INFO] 00:04:45:023 Kernel/(2902:2902): Por agregar  PCB a cola Exit
+[INFO] 00:04:45:023 Kernel/(2902:2902): Por iniciar los planificadores
+[INFO] 00:04:45:026 Kernel/(2902:2910): Por retirar PCB de EXIT
+[INFO] 00:04:45:075 Kernel/(2902:2910): Codigo recibido: 16
+[INFO] 00:04:45:075 Kernel/(2902:2910): PID Terminado: 0

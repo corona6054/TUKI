@@ -33,15 +33,32 @@ typedef enum{
 
 typedef enum
 {
-	HANDSHAKE,
-    CONTEXTO_DE_EJECUCION,
 	MENSAJE,
 	PAQUETE,
+	
+    HANDSHAKE,
     LISTA_INSTRUCCIONES,
-	INICIO_PROCESO_MEMORIA, // aviso a memoria para que inicialice las estructuras del proceso
-	FIN_PROCESO_MEMORIA, //para dar aviso que tiene uqe liberar las estructuras
-	FIN_PROCESO_CONSOLA //aviso a consola para finalizacion del procesos
+	
+    FIN_PROCESO_CONSOLA, //aviso a consola para finalizacion del procesos
+
+    CONTEXTO_DE_EJECUCION,
+
+	SOLICITUD_INICIO_PROCESO_MEMORIA, // aviso a memoria para que inicialice las estructuras del proceso
+    INICIO_EXITOSO_PROCESO_MEMORIA,
+    INICIO_FALLIDO_PROCESO_MEMORIA,
+    SOLICITUD_CREATE_SEGMENT,
+    CREATE_SEGMENT_EXITOSO,
+    CREATE_SEGMENT_FALLIDO,
+    SOLICITUD_DELETE_SEGMENT,
+    DELETE_SEGMENT_EXITOSO,
+    DELETE_SEGMENT_FALLIDO,
+
+	SOLICITUD_FIN_PROCESO_MEMORIA,
+    FIN_EXITOSO_PROCESO_MEMORIA,
+    FIN_FALLIDO_PROCESO_MEMORIA
 }op_code;
+
+
 
 typedef struct
 {

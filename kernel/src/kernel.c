@@ -48,20 +48,38 @@ t_list* instruccion_prueba(){
 int main(void){
 
 	levantar_modulo();
-	planificadores();
 
 	/*
+	t_list* t_s = list_create();
+	
+	t_segmento* segmento = malloc(sizeof(t_segmento));
+	
+	segmento->id = 15;
+	segmento->direccion_base = 150;
+	segmento->tamanio_segmentos = 300;
+	
+	list_add(t_s, segmento);
+	
+	t_buffer* buffer = crear_buffer_nuestro();
+	buffer_write_tabla_segmentos(buffer, t_s);
+	
+	enviar_buffer(buffer, socket_memoria);
+	*/
+	/*
+	*/
 	t_list* lista_instrucciones_prueba = instruccion_prueba();
 
 	t_pcb*  pcb = crear_pcb(lista_instrucciones_prueba, 25);
 
-	log_info(logger, "Por agregar  PCB a cola NEW");
-	agregar_pcb_a(procesosNew, pcb, &mutex_new);
-	sem_post(&cont_new);
+	log_info(logger, "Por agregar  PCB a cola Exit");
+	agregar_pcb_a(procesosExit, pcb, &mutex_new);
+	sem_post(&cont_exit);
+
+	
 
 	log_info(logger, "Por iniciar los planificadores");
-	*/
-
+	
+	planificadores();
 	while(1);
 	return 0;
 }
@@ -116,6 +134,8 @@ void incializar_semaforos(){
 
 	sem_init(&necesito_enviar_cde, 0, 0);
 
+	sem_init(&puedo_recibir_de_memoria, 0, 0);
+	sem_init(&recepcion_exitosa_de_memoria, 0, 0);
 	// Para ver si el procesador esta libre para mandar un proceso a ejecucion
 	sem_init(&cont_procesador_libre, 0, 1);
 }
@@ -191,17 +211,21 @@ void levantar_config(){
 
 // UTILS CONEXIONES ---------------------------------------------------------------------
 void manejar_conexion_con_memoria(){
-
+	/*
+	pthread_t recepcion_mensaje;
+	pthread_create(&recepcion_mensaje, NULL, (void*) recibir_mensaje_de_memoria, NULL);
+	pthread_detach(recepcion_mensaje);
+	*/
 }
 
 void manejar_conexion_con_cpu(){
-	pthread_t p1;
-	pthread_create(&p1, NULL, (void*) enviar_cde_a_cpu, NULL);
-	pthread_detach(p1);
+	pthread_t envio_cde;
+	pthread_create(&envio_cde, NULL, (void*) enviar_cde_a_cpu, NULL);
+	pthread_detach(envio_cde);
 
-	pthread_t p2;
-	pthread_create(&p2, NULL, (void*) recibir_cde_de_cpu, NULL);
-	pthread_detach(p2);
+	pthread_t recepcion_cde;
+	pthread_create(&recepcion_cde, NULL, (void*) recibir_cde_de_cpu, NULL);
+	pthread_detach(recepcion_cde);
 }
 
 void manejar_conexion_con_file_system(){
@@ -210,20 +234,20 @@ void manejar_conexion_con_file_system(){
 
 void establecer_conexiones()
 {
-	/*
 	socket_memoria = crear_conexion(config_kernel.ip_memoria, config_kernel.puerto_memoria);
 	if (socket_memoria >= 0){
-		log_info(logger,"Conectado con memoria");
-		//realizar handshake;
-		
-		pthread_t conexion_memoria;
-		pthread_create(&conexion_memoria, NULL, (void *) manejar_conexion_con_memoria, NULL);
-		pthread_detach(conexion_memoria);
+		log_info(logger,"Conectado con MEMORIA");
+		enviar_handshake(socket_memoria);
+		if (recibir_handshake(socket_memoria) == HANDSHAKE){
+			log_info(logger, "Handshake con MEMORIA realizado.");
+		}else
+			log_info(logger, "Ocurio un error al realizar el handshake con MEMORIA.");
 	}
 	else
-		log_info(logger,"Error al conectar con memoria");
-	*/
+		log_info(logger,"Error al conectar con MEMORIA");
+	
 
+	/*
 	socket_cpu = crear_conexion(config_kernel.ip_cpu, config_kernel.puerto_cpu);
 	if (socket_cpu >= 0){			
 		log_info(logger,"Conectado con cpu");
@@ -239,6 +263,7 @@ void establecer_conexiones()
 	}
 	else
 		log_info(logger,"Error al conectar con cpu");
+	*/
 
 	/*
 	socket_file_system = crear_conexion(config_kernel.ip_file_system, config_kernel.puerto_file_system);
@@ -251,14 +276,18 @@ void establecer_conexiones()
 		log_info(logger,"Error al conectar con file system");
 	*/
 
-	
+	/*
 	server_fd = iniciar_servidor(logger, config_kernel.puerto_escucha);
 	
 	pthread_t manejo_consolas;
 	pthread_create(&manejo_consolas, NULL, (void *) esperar_consolas, NULL);
 	pthread_detach(manejo_consolas);
+	*/
 }
+// FIN UTILS CONEXIONES -----------------------------------------------------------------
 
+
+// UTILS CONSOLA ------------------------------------------------------------------------
 void esperar_consolas(){
 	//thread para esperar clientes
 	while(1){
@@ -276,7 +305,10 @@ void esperar_consolas(){
 
 	}
 }
+// FIN UTILS CONSOLA --------------------------------------------------------------------
 
+
+// UTILS CPU ----------------------------------------------------------------------------
 void recibir_cde_de_cpu(){
 	while(1){
 		sem_wait(&bin2_recibir_cde);
@@ -310,8 +342,47 @@ void enviar_cde_a_cpu(){
 		sem_post(&bin2_recibir_cde);
 	}
 }
-// FIN UTILS CONEXIONES -----------------------------------------------------------------
+// FIN UTILS CPU ------------------------------------------------------------------------
 
+
+// UTILS MEMORIA ------------------------------------------------------------------------
+/*void recibir_mensaje_de_memoria(){
+	while(1){
+		sem_wait(&puedo_recibir_de_memoria);
+
+		t_buffer* buffer = recibir_buffer(socket_memoria);
+
+		switch(buffer->codigo){	
+				case INICIAR:
+					recibir_asdfas_();
+				break;
+		}
+
+		sem_post(&recepcion_exitosa_de_memoria);
+	}
+}*/
+
+t_list* recibir_tabla_segmentos_inicial(uint32_t pid){
+	t_buffer* buffer = crear_buffer_nuestro();
+	buffer->codigo = SOLICITUD_INICIO_PROCESO_MEMORIA;
+	
+	buffer_write_uint32(buffer, pid);
+	enviar_buffer(buffer, socket_memoria);
+	log_info(logger, "Solicitud enviada");
+	destruir_buffer_nuestro(buffer);
+	
+	buffer = recibir_buffer(socket_memoria);
+	log_info(logger, "Buffer recibido");
+	t_list* tabla_inicial = buffer_read_tabla_segmentos(buffer);
+	log_info(logger, "Buffer recibido");
+
+
+	destruir_buffer_nuestro(buffer);
+	return tabla_inicial;
+}
+
+
+// FIN UTILS MEMORIA --------------------------------------------------------------------
 
 // UTILS MOVIMIENTO PCB SEGUROS (MUTEX) -------------------------------------------------
 t_pcb* retirar_pcb_de(t_queue* cola, pthread_mutex_t* mutex){
@@ -383,6 +454,8 @@ void enviar_de_pseudoblock_a_ready(t_pcb* pcb){
 	pcb->tiempo_llegada_ready = time(NULL);
 	agregar_pcb_a(procesosReady, pcb, &mutex_ready);
 	log_info(logger, "PID: %d - Estado anterior: BLOCK - Estado actual: READY", pcb->cde->pid); //OBLIGATORIO
+	log_info(logger, "Cola ready - %s - ", config_kernel.algoritmo); //OBLIGATORIO
+
 	sem_post(&cont_ready);
 }
 void enviar_de_exec_a_exit(char* razon){
@@ -406,24 +479,18 @@ void enviar_de_new_a_ready(){
 	while(1){
 		sem_wait(&cont_new);
 		sem_wait(&cont_grado_max_multiprog);
-		// falta un semaforo por si procesosNew esta vacia
-		log_info(logger, "Retirando PCB de NEW");
-		t_pcb* pcb_a_ready = retirar_pcb_de(procesosNew, &mutex_new);
-		log_info(logger, "Ya retire PCB de NEW");
-
-		// mandarle a memoria para que inicialize las estructuras necesarias, y tabla de segmentos para alm en pcb.
 		
-		//op_code inicio_memoria = INICIO_PROCESO_MEMORIA;
-		//enviar_codigo(socket_memoria, inicio_memoria);
+		t_pcb* pcb_a_ready = retirar_pcb_de(procesosNew, &mutex_new);
 
-		//MEMORIA nos tiene que mandar la tabla de segmentos inicial para guardarla en el PCB !!!!
+		log_info(logger, "Por recibir tabla de segmentos");
+		pcb_a_ready->cde->tabla_segmentos = recibir_tabla_segmentos_inicial(pcb_a_ready->cde->pid);
+		log_info(logger, "Tabla de segmentos recibida");
+
 		pcb_a_ready->tiempo_llegada_ready = time(NULL);
 		agregar_pcb_a(procesosReady, pcb_a_ready, &mutex_ready);
 
 		log_info(logger, "PID: %d - Estado anterior: NEW - Estado actual: READY", pcb_a_ready->cde->pid); //OBLIGATORIO
 		sem_post(&cont_ready);
-
-		
 	}
 }
 
@@ -449,21 +516,37 @@ void terminar_procesos(){
 	while(1){
 		// Semaforo contador de cuantos procesos hay en exit
 		sem_wait(&cont_exit);
+		log_info(logger, "Por retirar PCB de EXIT");
 		t_pcb* pcb = retirar_pcb_de(procesosExit, &mutex_exit);
 
-		//liberar recursos asignados
+		// Liberar recursos asignados
 		liberar_todos_recursos(pcb);
-		//avisar a memoria para liberar estructuras		
-		//op_code aviso_de_fin_a_memoria = FIN_PROCESO_MEMORIA;
-		//enviar_codigo(socket_memoria, aviso_de_fin_a_memoria);
+
+		// Avisar a memoria para liberar estructuras		
+			// Primero le envio el codigo de solicitid de fin + el pid a destruir por "parametro"
+		t_buffer* buffer = crear_buffer_nuestro();
+
+		buffer->codigo = SOLICITUD_FIN_PROCESO_MEMORIA;
 		
+		buffer_write_uint32(buffer, pcb->cde->pid);
 
-		//avisar a consola para matar conexion
-		op_code terminar_consola = FIN_PROCESO_CONSOLA;
-		enviar_codigo(pcb->socket_consola, terminar_consola);
+		enviar_buffer(buffer, socket_memoria);
+		
+		destruir_buffer_nuestro(buffer);
+		
+		// Ahora recibo que la destruccion fue EXITOSO	
+		op_code codigo = recibir_codigo(socket_memoria);
+		log_info(logger, "Codigo recibido: %d", codigo);
+		if(codigo == FIN_EXITOSO_PROCESO_MEMORIA){
+				// Si fue exitoso liberar memoria => avisar a consola para matar conexion, etc
+			op_code terminar_consola = FIN_PROCESO_CONSOLA;
+			enviar_codigo(pcb->socket_consola, terminar_consola);
+			log_info(logger, "PID Terminado: %d", pcb->cde->pid);
+			destruir_pcb(pcb);
+		}
+		else
+			log_info(logger, "Error al liberar estructuras de memoria al terminar proceso %d", pcb->cde->pid);
 
-		log_info(logger, "PID Terminado: %d", pcb->cde->pid);
-		destruir_pcb(pcb);
 	}
 }
 // FIN TRANSICIONES LARGO PLAZO ---------------------------------------------------------

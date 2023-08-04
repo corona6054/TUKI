@@ -2,20 +2,10 @@
 
 int main(void){
 	levantar_modulo();
-	crearEstructuras();
-	crearProceso();
-	crearProceso();
-	crearSegmento(0,1,64);
-	crearSegmento(0,2,32);
 
-	crearSegmento(1,1,32);
-
-
-	eliminarSegmento(0,2);
-	eliminarSegmento(0,1);
-
-
-
+	
+	while(1);
+	
 	//list_iterate(tabla_segmentos,printList);
 	//list_iterate(espacios_libres,printElement);
 
@@ -30,8 +20,7 @@ int main(void){
 	terminarEstructuras();
 
 
-	//while(1);
-	finalizar_modulo();
+	while(1);
 	return 0;
 }
 
@@ -40,19 +29,19 @@ int main(void){
 //crea memoria auxiliar y realoca segmentos ahi
 void compactarMemoria(){
 	log_info(logger,"Solicitud Compactación");
-	list_iterate(tabla_segmentos,removeSeg0);
+	list_iterate(tabla_segmentos_global, removeSeg0);
 	void* mem_auxiliar = malloc(config_memoria.tam_memoria);
-	memcpy(mem_auxiliar,segmento0->start,segmento0->size);
-	segmento0->start= mem_auxiliar;
-	seg_anterior->start=segmento0->start;
-	seg_anterior->size=segmento0->size;
-	list_iterate(tabla_segmentos,realocarLista);
+	memcpy(mem_auxiliar,segmento0->direccion_base,segmento0->tamanio_segmentos);
+	segmento0->direccion_base= mem_auxiliar;
+	seg_anterior->start=segmento0->direccion_base;
+	seg_anterior->size=segmento0->direccion_base;
+	list_iterate(tabla_segmentos_global,realocarLista);
 	*needed_memory=128;
-	list_iterate(tabla_segmentos,GetTotalSize);
-	list_iterate(tabla_segmentos,addSeg0);
+	list_iterate(tabla_segmentos_global,GetTotalSize);
+	list_iterate(tabla_segmentos_global,addSeg0);
 	list_clean_and_destroy_elements(espacios_libres,DestroySegment);
 	Segment *inicial;
-	inicial = malloc(sizeof(struct Segment));
+	inicial = malloc(sizeof(Segment));
 	inicial->start =(void *)((intptr_t) mem_auxiliar+*needed_memory);
 	inicial->size =config_memoria.tam_memoria-*needed_memory;
 	list_add(espacios_libres,inicial);
@@ -60,7 +49,7 @@ void compactarMemoria(){
 	memoria_principal=mem_auxiliar;
 	//list_iterate(espacios_libres,printElement);
 	*needed_memory=0;
-	list_iterate(tabla_segmentos,ResultadoCompactacion);
+	list_iterate(tabla_segmentos_global,ResultadoCompactacion);
 
 }
 
@@ -137,41 +126,38 @@ int pedidoEscritura(int *direccion, int size, void*nuevo_dato){
 
 
 // crea un nuevo proceso y le asigna segmento0
-void crearProceso(){
-	t_list* proceso_nuevo= list_create();
-	list_add(proceso_nuevo,segmento0);
-	Segment* seg_nuevo;
-	for(int i =1;i<config_memoria.cant_segmentos; i++){
-		seg_nuevo=malloc(sizeof(Segment));
-		seg_nuevo->start =0;
-		seg_nuevo->size =0;
-		list_add(proceso_nuevo,seg_nuevo);
-	}
-	list_add(tabla_segmentos,proceso_nuevo);
-	log_info(logger,"Creación Proceso PID: %d",*contador_procesos);
-	(*contador_procesos)++;
+t_tabla_segmentos_por_proceso* crearProceso(uint32_t pid_a_crear){
+	t_tabla_segmentos_por_proceso* tabla_segmentos_proceso_nuevo = malloc(sizeof(t_tabla_segmentos_por_proceso));
+	tabla_segmentos_proceso_nuevo->tabla_segmentos = list_create();
+	tabla_segmentos_proceso_nuevo->pid = pid_a_crear;
+	list_add(tabla_segmentos_proceso_nuevo->tabla_segmentos, segmento0);
+
+	list_add(tabla_segmentos_global, tabla_segmentos_proceso_nuevo);
+
+	log_info(logger,"Creacion Proceso PID: %d", pid_a_crear);
+	return tabla_segmentos_proceso_nuevo;
 }
 
 
 //crea y elimina segmentos
 void crearSegmento(int id,int index, int size){
-	t_list* proceso=list_get(tabla_segmentos,id);
+	t_list* proceso=list_get(tabla_segmentos_global,id);
 	Segment* seg_nuevo;
 	seg_nuevo =(Segment*)list_get(proceso,index);
-	if (seg_nuevo->size==0&&index<16){
+	if (seg_nuevo->size == 0 && index < 16){
 		seg_nuevo->size = size;
 		agregarSegmento(seg_nuevo);
 		list_replace(proceso,index,seg_nuevo);
-		log_info(logger,"PID: %d - CrearSeg: %d - Base: %p - TAMAÑO: %d",id,index,seg_nuevo->start,size);
+		log_info(logger,"PID: %d - CrearSeg: %d - Base: %p - TAMANIO: %d",id,index,seg_nuevo->start,size);
 		}
 	}
 
 void eliminarSegmento(int id, int index){
-	t_list* proceso=list_get(tabla_segmentos,id);
+	t_list* proceso=list_get(tabla_segmentos_global,id);
 	Segment* seg_viejo;
 	seg_viejo =(Segment*)list_get(proceso,index);
 	liberarSegmento(seg_viejo);
-	log_info(logger,"PID: %d - EliminarSeg: %d - Base: %p - TAMAÑO: %d",id,index,seg_viejo->start,seg_viejo->size);
+	log_info(logger,"PID: %d - EliminarSeg: %d - Base: %p - TAMANIO: %d",id,index,seg_viejo->start,seg_viejo->size);
 	seg_viejo->start = NULL;
 	seg_viejo->size =0;
 	list_replace(proceso,index,seg_viejo);
@@ -215,23 +201,34 @@ void printElement(void* ptr) {
     printf("size: %d\n", seleccionado->size);
 }
 
+/*
+int pedidoSegmento(int size){
+	*needed_memory = 0;
+	seleccionado = (Segment*) list_find(espacios_libres,FirstFit);
+	if(seleccionado){
+		agregarSegmento()
+	}
+	list_iterate(espacios_libres,getEachSize);
+	if(size>)
+}
+*/
 // agrega  segmento segun algoritmo elegido
 void agregarSegmento(Segment *nuevo){
 	*needed_memory = nuevo->size;
 	Segment *seleccionado;
 	switch(config_memoria.algoritmos_asignacion){
 		case FIRST:
-		seleccionado=(Segment*)list_remove_by_condition(espacios_libres,FirstFit);
+		seleccionado = (Segment*)list_remove_by_condition(espacios_libres,FirstFit);
 		break;
 		case BEST:
-		seleccionado=(Segment*)list_get_maximum(espacios_libres,BestFit);
+		seleccionado = (Segment*)list_get_maximum(espacios_libres,BestFit);
 		seg_anterior->start=seleccionado->start;
-		seleccionado=(Segment*)list_remove_by_condition(espacios_libres,Equivalente);
+		seleccionado = (Segment*)list_remove_by_condition(espacios_libres,Equivalente);
 		break;
 		case WORST:
-		seleccionado=(Segment*)list_get_minimum(espacios_libres,WorstFit);
+		seleccionado = (Segment*)list_get_minimum(espacios_libres,WorstFit);
 		seg_anterior->start=seleccionado->start;
-		seleccionado=(Segment*)list_remove_by_condition(espacios_libres,Equivalente);
+		seleccionado= (Segment*)list_remove_by_condition(espacios_libres,Equivalente);
 		break;
 	}
 	nuevo->start = seleccionado->start;
@@ -262,7 +259,7 @@ void liberarSegmento(Segment *viejo){
 	Segment *seg_izquierda;
 	seg_derecha=(Segment*)list_remove_by_condition(espacios_libres,AdyacenteDerecha);
 	seg_izquierda=(Segment*)list_remove_by_condition(espacios_libres,AdyacenteIzquierda);
-	if(seg_derecha!=NULL&&seg_izquierda!=NULL){
+	if(seg_derecha!=NULL && seg_izquierda!=NULL){
 		seg_izquierda->size+=seg_derecha->size +viejo->size;
 		list_add(espacios_libres,seg_izquierda);
 	}else
@@ -286,22 +283,30 @@ void liberarSegmento(Segment *viejo){
 // crea segmento0, memoria principal y agrega segmento0
 int crearEstructuras(){
 	memoria_principal = malloc(config_memoria.tam_memoria);
-	segmento0 = malloc(sizeof(struct Segment));
-	needed_memory = malloc(sizeof(int));
-	seg_anterior= malloc(sizeof(struct Segment));
-	seg_maxsize= malloc(sizeof(int));
-	contador_procesos= malloc(sizeof(int));
-	*seg_maxsize= 128;
-	*contador_procesos=0;
-	tabla_segmentos = list_create();
+	
+	segmento0 = malloc(sizeof(t_segmento));
+	segmento0->id = 0;
+	segmento0->direccion_base = 0;
+ 	segmento0->tamanio_segmentos = config_memoria.tam_segmento_0;
+	
+	tabla_segmentos_global = list_create();
+	//agregarSegmento(segmento0);
+	
 	espacios_libres = list_create();
+
+	needed_memory = malloc(sizeof(int));
+	seg_anterior= malloc(sizeof(Segment));
+	
+	seg_maxsize= malloc(sizeof(int));
+	*seg_maxsize= 128;
+
 	Segment *inicial;
-	inicial = malloc(sizeof(struct Segment));
+	inicial = malloc(sizeof(Segment));
 	inicial->start =memoria_principal;
 	inicial->size =config_memoria.tam_memoria;
+
 	list_add(espacios_libres,inicial);
-	segmento0->size = config_memoria.tam_segmento_0;
-	agregarSegmento(segmento0);
+	
 	log_info(logger,"Estructuras creadas");
 	return 0;
 }
@@ -320,7 +325,8 @@ void levantar_modulo(){
 	logger = iniciar_logger();
 	config = iniciar_config();
 	levantar_config();
-	//establecer_conexiones();
+	crearEstructuras();
+	establecer_conexiones();
 }
 void finalizar_modulo(){
 	log_destroy(logger);
@@ -382,7 +388,82 @@ void establecer_conexiones()
 {
 	server_fd = iniciar_servidor(logger, config_memoria.puerto_escucha);
 
-	cpu_fd = esperar_cliente(server_fd, logger);
-	fileSystem_fd = esperar_cliente(server_fd, logger);
+	//cpu_fd = esperar_cliente(server_fd, logger);
+	//fileSystem_fd = esperar_cliente(server_fd, logger);
 	kernel_fd = esperar_cliente(server_fd, logger);
+	if (kernel_fd >= 0){
+		log_info(logger, "Conectado con KERNEL");
+		if (recibir_handshake(kernel_fd) == HANDSHAKE){
+			enviar_handshake(kernel_fd);
+			log_info(logger, "Handshake con KERNEL realizado.");
+
+			
+			pthread_t comunicacion_kernel;
+			pthread_create(&comunicacion_kernel, NULL, (void* ) manejar_conexion_con_kernel, NULL);
+			pthread_detach(comunicacion_kernel);
+			
+		}
+		else
+			log_info(logger, "Ocurio un error al realizar el handshake con KERNEL.");
+	}else
+		log_info(logger, "Error al conectar con KERNEL");
+
+
+	
+}
+
+void manejar_conexion_con_kernel(){
+	while(1){
+		t_buffer* buffer_recibido = recibir_buffer(kernel_fd);
+		log_info(logger, "Buffer recibido");
+		switch(buffer_recibido->codigo){
+			case SOLICITUD_INICIO_PROCESO_MEMORIA:
+				uint32_t pid_a_crear = buffer_read_uint32(buffer_recibido);
+				destruir_buffer_nuestro(buffer_recibido);
+				
+				t_tabla_segmentos_por_proceso* tabla_segmentos_inicial_nueva = crearProceso(pid_a_crear);
+
+				t_buffer* buffer_a_enviar = crear_buffer_nuestro();
+				buffer_write_tabla_segmentos(buffer_a_enviar, tabla_segmentos_inicial_nueva->tabla_segmentos);
+				buffer_a_enviar->codigo = INICIO_EXITOSO_PROCESO_MEMORIA;
+				
+				enviar_buffer(buffer_a_enviar, kernel_fd);
+				log_info(logger, "Buffer enviado");
+				destruir_buffer_nuestro(buffer_a_enviar);
+
+				break;
+			case SOLICITUD_FIN_PROCESO_MEMORIA:
+
+				uint32_t pid_a_destruir = buffer_read_uint32(buffer_recibido);
+				destruir_buffer_nuestro(buffer_recibido);
+				t_tabla_segmentos_por_proceso* tabla_a_destruir = encontrar_tabla_por_pid(pid_a_destruir);
+
+				destruir_tabla_segmentos_por_proceso(tabla_a_destruir);
+				
+				log_info(logger, "Elminacion de proceso PID: %d", tabla_a_destruir->pid);
+				op_code fin_proceso = FIN_EXITOSO_PROCESO_MEMORIA;
+				enviar_codigo(kernel_fd, fin_proceso);
+				break;
+			default:
+				log_info(logger, "Default");
+				break;
+			}
+			
+	}		
+}
+// Supongo que existe la tabla del proceso a buscar
+// FALTA PROBARRR !!!!!
+t_tabla_segmentos_por_proceso* encontrar_tabla_por_pid(uint32_t pid_a_buscar){
+	for(int i = 0; i < list_size(tabla_segmentos_global); i++){
+		t_tabla_segmentos_por_proceso* tabla = list_get(tabla_segmentos_global, i);
+		if (tabla->pid == pid_a_buscar)
+			log_info(logger, "Tabla encontrada");
+			return tabla;
+	}
+}
+
+void destruir_tabla_segmentos_por_proceso(t_tabla_segmentos_por_proceso* tabla_segmentos_por_proceso){
+	list_destroy(tabla_segmentos_por_proceso->tabla_segmentos);
+	free(tabla_segmentos_por_proceso);
+	return;
 }

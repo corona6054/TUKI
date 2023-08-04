@@ -44,6 +44,7 @@ t_buffer* crear_buffer_nuestro(){
 	b->size = 0;
 	b->stream = NULL;
 	b->offset = 0;
+	b->codigo = PAQUETE;
 	return b;
 }
 
@@ -359,7 +360,7 @@ void destruir_pcb(t_pcb* pcb){
 void destruir_lista_instrucciones(t_list* lista_instrucciones){
 	t_instruction* instruccion;
 	for(int i = 0; i < list_size(lista_instrucciones); i++){
-		 instruccion = list_get(lista_instrucciones, i);
+		instruccion = list_get(lista_instrucciones, i);
 		destruir_instruccion(instruccion);
 	}
 	list_destroy(lista_instrucciones);
