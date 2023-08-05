@@ -6,13 +6,14 @@
 #include "commons/config.h"
 #include "commons/log.h"
 #include "commons/bitarray.h"
-#include "comunicacion.h"
 #include <pthread.h>
-#include "serializacion.h"
 #include <sys/mman.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <dirent.h>
+#include "comunicacion.h"
+
+
 
 
 typedef struct {
@@ -62,10 +63,10 @@ superBloque superbloque;
 
 // PROTOTIPOS DE FUNCIONES ----------------------------------------------------
 // Inicializaciones
-void levantar_modulo();
+void levantar_modulo(char*config_path);
 void finalizar_modulo();
 t_log* iniciar_logger();
-t_config* iniciar_config();
+t_config* iniciar_config(char*config_path);
 void levantar_config();
 
 // Conexiones
@@ -73,16 +74,18 @@ void conectarse_con_memoria();
 void establecer_conexiones();
 
 // Subprogramas generales
-int eliminarBloques(int eliminar,FCB* seleccionado);
-int crearEstructuras();
-int cerrarEstructuras();
-int crearArchivo(char* nombre);
-int abrirArchivo(char* nombre);
+uint32_t eliminarBloques(int eliminar,FCB* seleccionado);
+uint32_t crearEstructuras();
+uint32_t cerrarEstructuras();
+uint32_t crearArchivo(char* nombre);
+uint32_t abrirArchivo(char* nombre);
 bool igualBuscado(void * ptr);
 uint32_t  bloqueLibre();
-int liberarBloque(uint32_t bit);
-int truncarArchivo(char* nombre, int size);
-void * leerArchivo(char* nombre, int pos, int size);
+uint32_t liberarBloque(uint32_t bit);
+uint32_t truncarArchivo(char* nombre, int size);
+char * leerArchivo(char* nombre, int pos, int size);
+uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos);
+void manejar_conexion_con_kernel();
 
 
 // FIN DE PROTOTIPOS DE FUNCIONES ---------------------------------------------
