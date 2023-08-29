@@ -4,33 +4,35 @@
 int main(int argc, char **argv){
 
     char *config_path = argv[1];
-	levantar_modulo(*config_path);
+	levantar_modulo(config_path);
 	crearEstructuras();
 
+
+/*
 	enviar_codigo(socket_memoria, HANDSHAKE);
 			op_code handshake = recibir_handshake(socket_memoria);
 			if(handshake=HANDSHAKE){
 				manejar_conexion_con_kernel();
 			}
+*/
 
-	/*
-	//crearArchivo("hola");
-		abrirArchivo("hola");
-		truncarArchivo("hola",100);
-		leerArchivo("hola",30,70);
-		char* texto= malloc(70);
+	crearArchivo("Videogames");
+		abrirArchivo("Videogames");
+		truncarArchivo("Videogames",256);
+		char* texto= malloc(16);
 		*texto = "hola \0";
-		escribirArchivo("hola",30,70,texto);
+		escribirArchivo("Videogames",0,16,texto,0);
+		leerArchivo("Videogames",0,16,0);
 
 
-		*/
+
 	finalizar_modulo();
 	return 0;
 }
 
 // SUBPROGRAMAS
 
-uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos){
+uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos,uint32_t memoria){
 	int offset=0;
 		strcpy(buscado,nombre);
 		FCB* seleccionado = (FCB*)list_find(fcb_list,igualBuscado);
@@ -39,6 +41,7 @@ uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos){
 				div_t start_pos = div(pos, superbloque.block_size);
 				int nro_bloque = start_pos.quot;
 				int tam_escrito = superbloque.block_size - start_pos.rem;
+				if(tam_escrito>size)tam_escrito=size;
 				void * bloque_destino;
 				if(nro_bloque == 0){
 						bloque_destino =archivobloques_pointer +seleccionado->direct_pointer*superbloque.block_size+start_pos.rem;
@@ -46,7 +49,7 @@ uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos){
 						memcpy(bloque_destino,datos,tam_escrito);
 						offset=offset+tam_escrito;
 						tam_restante = size- tam_escrito;
-					    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_destino,tam_escrito);
+					    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,nro_bloque,memoria,tam_escrito);
 
 					}
 				void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
@@ -58,7 +61,7 @@ uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos){
 						memcpy(bloque_destino,datos,tam_escrito);
 						offset=offset+tam_escrito;
 						tam_restante = size- tam_escrito;
-					    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_destino,tam_escrito);
+					    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,nro_bloque,memoria,tam_escrito);
 					}
 					if(tam_restante>0){
 							int bloques_restantes= tam_restante/superbloque.block_size;
@@ -69,14 +72,14 @@ uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos){
 									  memcpy(bloque_destino,datos+offset,superbloque.block_size);
 									  offset=offset+superbloque.block_size;
 									  tam_restante=tam_restante-superbloque.block_size;
-									    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,i,bloque_destino,superbloque.block_size);
+									    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,i,memoria,superbloque.block_size);
 
 								  }
 									usleep(config_file_system.retardo_acceso_bloque);
 								  bloque_destino =archivobloques_pointer +destination[bloques_restantes]*superbloque.block_size;
 									usleep(config_file_system.retardo_acceso_bloque);
 								  memcpy(bloque_destino,datos+offset,tam_restante);
-								    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,bloques_restantes+1,bloque_destino,tam_restante);
+								    log_info(logger,"Escribir Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,bloques_restantes+1,memoria,tam_restante);
 
 						}
 					int sync = msync(archivobloques_pointer, archivobloques_size, MS_SYNC);
@@ -87,7 +90,7 @@ uint32_t escribirArchivo(char* nombre, int pos, int size, char*datos){
 }
 
 // lee archivo desde pos el size pedido
-char * leerArchivo(char* nombre, int pos, int size){
+char * leerArchivo(char* nombre, int pos, int size,uint32_t memoria){
 	char* leido=malloc(size);
 	int offset=0;
 	strcpy(buscado,nombre);
@@ -97,6 +100,8 @@ char * leerArchivo(char* nombre, int pos, int size){
 	div_t start_pos = div(pos, superbloque.block_size);
 	int nro_bloque = start_pos.quot;
 	int tam_leido = superbloque.block_size - start_pos.rem;
+	if(tam_leido>size)tam_leido=size;
+
 	void * bloque_leido;
 	if(nro_bloque == 0){
 		usleep(config_file_system.retardo_acceso_bloque);
@@ -105,7 +110,7 @@ char * leerArchivo(char* nombre, int pos, int size){
 		memcpy(leido,bloque_leido,tam_leido);
 		offset=offset+tam_leido;
 		tam_restante = size- tam_leido;
-	    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_leido,tam_leido);
+	    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,nro_bloque,memoria,tam_leido);
 
 	}
 	void * bloque_punteros =archivobloques_pointer +seleccionado->indirect_pointer*superbloque.block_size;
@@ -117,7 +122,7 @@ char * leerArchivo(char* nombre, int pos, int size){
 		memcpy(leido,bloque_leido,tam_leido);
 		offset=offset+tam_leido;
 		tam_restante = size- tam_leido;
-	    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_leido,tam_leido);
+	    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,nro_bloque,memoria,tam_leido);
 	}
 	if(tam_restante>0){
 		int bloques_restantes= tam_restante/superbloque.block_size;
@@ -128,14 +133,14 @@ char * leerArchivo(char* nombre, int pos, int size){
 				  memcpy(leido+offset,bloque_leido,superbloque.block_size);
 				  offset=offset+superbloque.block_size;
 				  tam_restante=tam_restante-superbloque.block_size;
-				    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,nro_bloque,bloque_leido,superbloque.block_size);
+				    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,nro_bloque,memoria,superbloque.block_size);
 
 			  }
 				usleep(config_file_system.retardo_acceso_bloque);
 			  bloque_leido =archivobloques_pointer +destination[bloques_restantes]*superbloque.block_size;
 				usleep(config_file_system.retardo_acceso_bloque);
 			  memcpy(leido+offset,bloque_leido,tam_restante);
-			    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", seleccionado->file_name,bloques_restantes+1,bloque_leido,tam_restante);
+			    log_info(logger,"Leer Archivo: %s - Puntero: %d - Memoria: %d - Tamaño: %d", seleccionado->file_name,bloques_restantes+1,memoria,tam_restante);
 
 	}
 	int sync = msync(archivobloques_pointer, archivobloques_size, MS_SYNC);
@@ -225,7 +230,7 @@ uint32_t truncarArchivo(char* nombre, int size){
 		int eliminar = tam_viejo-bloques_restantes;
 		eliminarBloques(eliminar,seleccionado);
 	}
-	seleccionado->file_size= bloques_restantes*superbloque.block_size;
+	seleccionado->file_size= size;
     char file_path[256];
 	snprintf(file_path, sizeof(file_path), "%s/%s.dat", config_file_system.path_fcb, nombre);
 	FILE * fcb_file = fopen(file_path,"w");
@@ -281,7 +286,12 @@ uint32_t crearArchivo(char* nombre){
        fprintf(fcb_file, "PUNTERO_DIRECTO=%u\n", fcb_nuevo->direct_pointer);
        fprintf(fcb_file, "PUNTERO_INDIRECTO=%u\n", fcb_nuevo->indirect_pointer);
        fclose(fcb_file);
-       list_add(fcb_list,fcb_nuevo);
+       strcpy(buscado,nombre);
+       	FCB* seleccionado = (FCB*)list_remove_by_condition(fcb_list,igualBuscado);
+       	if(seleccionado){
+       		free(seleccionado);
+       	}
+       	list_add(fcb_list,fcb_nuevo);
        log_info(logger,"Crear archivo: %s", nombre);
 	return 0;
 
@@ -374,127 +384,156 @@ uint32_t cerrarEstructuras(){
 	    return 0;
 }
 
-void manejar_conexion_con_kernel(){
-		while(1){
-		t_buffer* buffer = recibir_buffer(kernel_fd);
-				log_info(logger, "Buffer recibido");
-				switch(buffer->codigo){
-				case SOLICITUD_ABRIR_ARCHIVO:
+void manejar_conexion_con_kernel()
+{
+		while (1)
+		{
+			t_buffer *buffer = recibir_buffer(kernel_fd);
+			log_info(logger, "Buffer recibido");
+			switch (buffer->codigo)
+			{
+			case SOLICITUD_ABRIR_ARCHIVO:
 
-					char* nombre_archivo_abrir = buffer_read_string(buffer);
-					uint32_t resultado_abrir =abrirArchivo(nombre_archivo_abrir);
-					destruir_buffer_nuestro(buffer);
+				char *nombre_archivo_abrir = buffer_read_string(buffer);
+				uint32_t resultado_abrir = abrirArchivo(nombre_archivo_abrir);
+				destruir_buffer_nuestro(buffer);
 
-					buffer = crear_buffer_nuestro();
-					buffer_write_uint32(buffer, resultado_abrir);
-
-					enviar_buffer(buffer, kernel_fd);
-
-					log_info(logger, "Buffer enviado");
-					destruir_buffer_nuestro(buffer);
-				break;
-				case SOLICITUD_CREAR_ARCHIVO:
-
-					char* nombre_archivo_crear = buffer_read_string(buffer);
-					uint32_t resultado_crear =crearArchivo(nombre_archivo_crear);
-					destruir_buffer_nuestro(buffer);
-
-					buffer = crear_buffer_nuestro();
-					buffer_write_uint32(buffer, resultado_crear);
-
-					enviar_buffer(buffer, kernel_fd);
-
-					log_info(logger, "Buffer enviado");
-					destruir_buffer_nuestro(buffer);
-
-				break;
-
-				case SOLICITUD_TRUNCAR_ARCHIVO:
-
-					char* nombre_archivo_truncar = buffer_read_string(buffer);
-					uint32_t tamanio_truncar = buffer_read_uint32(buffer);
-					uint32_t resultado =truncarArchivo(nombre_archivo_truncar,tamanio_truncar);
-					destruir_buffer_nuestro(buffer);
-
-					buffer = crear_buffer_nuestro();
-					buffer_write_uint32(buffer, resultado);
-
-					enviar_buffer(buffer, kernel_fd);
-
-					log_info(logger, "Buffer enviado");
-					destruir_buffer_nuestro(buffer);
-
-				break;
-
-				case SOLICITUD_LEER_ARCHIVO:
-					char* nombre_archivo_leer = buffer_read_string(buffer);
-					uint32_t posicion_leer = buffer_read_uint32(buffer);
-										uint32_t tamanio_leer = buffer_read_uint32(buffer);
-									destruir_buffer_nuestro(buffer);
-
-										char* resultado_leer=leerArchivo(nombre_archivo_leer,posicion_leer,tamanio_leer);
-										buffer_write_string(buffer,resultado_leer);
-										enviar_buffer(buffer, socket_memoria);
-										destruir_buffer_nuestro(buffer);
-
-										buffer = recibir_buffer(socket_memoria);
-										log_info(logger, "Buffer recibido");
-
-										enviar_buffer(buffer, kernel_fd);
-
-										log_info(logger, "Buffer enviado");
-										destruir_buffer_nuestro(buffer);
-				break;
-
-				case SOLICITUD_ESCRIBIR_ARCHIVO:
-
-					char* nombre_archivo_escribir = buffer_read_string(buffer);
-										uint32_t posicion_escribir = buffer_read_uint32(buffer);
-															uint32_t tamanio_escribir = buffer_read_uint32(buffer);
-															uint32_t direccion_memoria_escribir = buffer_read_uint32(buffer);
-														destruir_buffer_nuestro(buffer);
-
-															buffer = crear_buffer_nuestro();
-															buffer_write_uint32(buffer, direccion_memoria_escribir);
-															enviar_buffer(buffer, socket_memoria);
-															destruir_buffer_nuestro(buffer);
-
-
-															buffer = recibir_buffer(socket_memoria);
-															log_info(logger, "Buffer recibido");
-															char* datos_escribir = buffer_read_string(buffer);
-															destruir_buffer_nuestro(buffer);
-
-															uint32_t resultado_escribir =escribirArchivo(nombre_archivo_escribir,posicion_escribir,tamanio_escribir,datos_escribir);
-
-															buffer = crear_buffer_nuestro();
-
-															log_info(logger, "Buffer recibido");
-															buffer_write_uint32(buffer, resultado_escribir);
-															enviar_buffer(buffer, kernel_fd);
-
-															log_info(logger, "Buffer enviado");
-															destruir_buffer_nuestro(buffer);
-				break;
-
-				default:
-
-					log_info(logger, "Default");
-
-					break;
-
+				buffer = crear_buffer_nuestro();
+				if (resultado_abrir == 0)
+				{
+					buffer->codigo = F_OPEN_OK;
+				}
+				else
+				{
+					buffer->codigo = F_OPEN_FAIL;
 				}
 
-	}
+				enviar_buffer(buffer, kernel_fd);
 
-	}
+				log_info(logger, "Buffer enviado");
+				destruir_buffer_nuestro(buffer);
+				break;
+			case SOLICITUD_CREAR_ARCHIVO:
 
+				char *nombre_archivo_crear = buffer_read_string(buffer);
+				uint32_t resultado_crear = crearArchivo(nombre_archivo_crear);
+				destruir_buffer_nuestro(buffer);
+
+				buffer = crear_buffer_nuestro();
+				if (resultado_crear == 0)
+				{
+					buffer->codigo = F_CREATE_OK;
+				}
+				else
+				{
+					buffer->codigo = F_CREATE_FAIL;
+				}
+				log_info(logger, "Buffer enviado");
+				destruir_buffer_nuestro(buffer);
+
+				break;
+
+			case SOLICITUD_TRUNCAR_ARCHIVO:
+
+				char *nombre_archivo_truncar = buffer_read_string(buffer);
+				uint32_t tamanio_truncar = buffer_read_uint32(buffer);
+				uint32_t resultado_truncar = truncarArchivo(nombre_archivo_truncar, tamanio_truncar);
+				destruir_buffer_nuestro(buffer);
+
+				buffer = crear_buffer_nuestro();
+				if (resultado_truncar == 0)
+				{
+					buffer->codigo = F_TRUNCATE_OK;
+				}
+				else
+				{
+					buffer->codigo = F_TRUNCATE_FAIL;
+				}
+
+				enviar_buffer(buffer, kernel_fd);
+
+				log_info(logger, "Buffer enviado");
+				destruir_buffer_nuestro(buffer);
+
+				break;
+
+			case SOLICITUD_LEER_ARCHIVO:
+				char *nombre_archivo_leer = buffer_read_string(buffer);
+				uint32_t posicion_leer = buffer_read_uint32(buffer);
+				uint32_t tamanio_leer = buffer_read_uint32(buffer);
+				uint32_t direccion_memoria_leer = buffer_read_uint32(buffer);
+
+				destruir_buffer_nuestro(buffer);
+
+				char *resultado_leer = leerArchivo(nombre_archivo_leer, posicion_leer, tamanio_leer,direccion_memoria_leer);
+
+				buffer->codigo = F_READ_MEMORIA;
+				buffer_write_uint32(buffer, direccion_memoria_leer);
+				buffer_write_string(buffer, resultado_leer);
+				enviar_buffer(buffer, socket_memoria);
+				destruir_buffer_nuestro(buffer);
+
+				buffer = recibir_buffer(socket_memoria);
+				log_info(logger, "Buffer recibido");
+
+				enviar_buffer(buffer, kernel_fd);
+
+				log_info(logger, "Buffer enviado");
+				destruir_buffer_nuestro(buffer);
+				break;
+
+			case SOLICITUD_ESCRIBIR_ARCHIVO:
+
+				char *nombre_archivo_escribir = buffer_read_string(buffer);
+				uint32_t posicion_escribir = buffer_read_uint32(buffer);
+				uint32_t tamanio_escribir = buffer_read_uint32(buffer);
+				uint32_t direccion_memoria_escribir = buffer_read_uint32(buffer);
+				destruir_buffer_nuestro(buffer);
+
+				buffer = crear_buffer_nuestro();
+
+				buffer->codigo = F_WRITE_MEMORIA;
+				buffer_write_uint32(buffer, direccion_memoria_escribir);
+				enviar_buffer(buffer, socket_memoria);
+				destruir_buffer_nuestro(buffer);
+
+				buffer = recibir_buffer(socket_memoria);
+				log_info(logger, "Buffer recibido");
+				char *datos_escribir = buffer_read_string(buffer);
+				destruir_buffer_nuestro(buffer);
+
+				uint32_t resultado_escribir = escribirArchivo(nombre_archivo_escribir, posicion_escribir, tamanio_escribir, datos_escribir,direccion_memoria_escribir);
+
+				buffer = crear_buffer_nuestro();
+
+				if (resultado_escribir == 0)
+				{
+					buffer->codigo = F_WRITE_OK;
+				}
+				else
+				{
+					buffer->codigo = F_WRITE_FAIL;
+				}
+				enviar_buffer(buffer, kernel_fd);
+
+				log_info(logger, "Buffer enviado");
+				destruir_buffer_nuestro(buffer);
+				break;
+
+			default:
+
+				log_info(logger, "Default");
+
+				break;
+			}
+		}
+}
 
 void levantar_modulo(char*config_path){
 	logger = iniciar_logger();
 	config = iniciar_config(config_path);
 	levantar_config();
-	establecer_conexiones();
+	//establecer_conexiones();
 }
 void finalizar_modulo(){
 	log_destroy(logger);
